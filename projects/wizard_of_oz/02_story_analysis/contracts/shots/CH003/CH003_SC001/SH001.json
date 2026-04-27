@@ -42,29 +42,33 @@
   "subject_blocking": [
     "seated",
     "seated near clothing",
+    "munchkin_country_farms",
     "dorothy remains readable within the active playing space.",
     "toto remains readable within the active playing space."
   ],
   "camera_relative_positions": [
     "Camera anchors the action inside the munchkin_country_farms.",
-    "Background depth should keep munchkin_country_farms legible as the location anchor."
+    "Background depth should keep munchkin_country_farms legible as the location anchor.",
+    "Subject 1: dorothy remains visually readable against the environment scale.",
+    "Subject 2: toto remains visually readable against the environment scale."
   ],
   "gaze_directions": [
     "dorothy focuses toward the active scene action."
   ],
   "environment_subzone": "munchkin_country_farms",
   "key_visible_environment_features": [
-    "munchkin_country_farms"
+    "munchkin_country_farms",
+    "Chapter-local environment alias match for 'Dorothy's temporary quarters/Munchkin Country outskirts' (key_overlap=2, l..."
   ],
   "continuity_from_previous_shot": "Dorothy in temporary quarters, preparing her new attire.",
   "continuity_to_next_shot": "BT002",
   "pose_anchor_frame": "feet bare or in old clothes",
   "pose_end_frame": "silver shoes on feet",
-  "shot_title": "Reaction Closeup 1: Dressing and shoe discovery",
-  "shot_type": "reaction_closeup",
-  "camera_description": "Close framing that isolates reaction and emotional emphasis.",
-  "composition": "Intimate composition that isolates dorothy, toto against munchkin_country_farms to capture the beat's emotional turn.",
-  "target_seconds": 5.5,
+  "shot_title": "Handoff Medium 1: Dressing and shoe discovery",
+  "shot_type": "handoff_medium",
+  "camera_description": "Stable readable framing built from the beat requirement.",
+  "composition": "Readable medium composition in munchkin_country_farms featuring dorothy, toto.",
+  "target_seconds": 7.0,
   "characters_in_frame": [
     {
       "label": "Dorothy",
@@ -102,9 +106,11 @@
   ],
   "continuity_constraints": [
     "Perfect fit and luster of silver shoes",
-    "Absolute cleanliness of the gingham dress"
+    "Absolute cleanliness of the gingham dress",
+    "Dressing and shoe discovery",
+    "Resolve Local Munchkins (background/extras) -> Local Munchkins (background/extras)"
   ],
-  "prompt_seed": "Reaction Closeup 1: Dressing and shoe discovery. reaction_closeup. size=close_up. angle=low_angle. lens=portrait. motion=locked_off. zoom=none. focus=shallow_subject. lighting=soft_even. visibility=on_screen. subject_angle=front. Close framing that isolates reaction and emotional emphasis. Intimate composition that...",
+  "prompt_seed": "Handoff Medium 1: Dressing and shoe discovery. handoff_medium. size=close_up. angle=low_angle. lens=portrait. motion=locked_off. zoom=none. focus=shallow_subject. lighting=soft_even. visibility=on_screen. subject_angle=front. Stable readable framing built from the beat requirement. Readable medium composition in mun...",
   "shot_notes": "Dressing and shoe discovery",
   "evidence_refs": [
     {
@@ -169,18 +175,34 @@
     "Dorothy in temporary quarters, preparing her new attire.",
     "Dorothy walking away from camera into the Munchkin landscape.",
     "Dorothy dresses and sets out on a walk through prosperous farmland.",
-    "dorothy | Dorothy is a young human girl characterized by an expressive face and the appearance of a weary traveler. Her visual identity evolves during her journey, transitioning from previously green clothing to a white dress or clothing. She is most notabl...",
-    "toto | Toto is a small quadruped dog characterized by a compact build and consistent black fur. The character possesses an alert physical presence with keen, observant eyes suitable for a companion animal. | black fur. | companion animal; alert.",
+    "dorothy | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md] Costume/Silhouette: Unknown. No specific clothing details are provided in this chapter. [source:C:/FilmCreator/projects/wizard_of_oz/02_...",
+    "toto | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/toto.md] Costume/Silhouette: Small quadruped with black fur. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapte...",
     "munchkin_country_farms | An idyllic landscape characterized by low-slung, rounded architecture. The environment features repetitive patterns of blue domes integrated with domestic farm structures, suggesting a prosperous and communal settlement. | Low-slung...",
     "yellow_brick_road | No specific visual descriptors are provided in the current evidence. The environment functions primarily as a transit setting. | Unknown. | Unknown. | Unknown."
   ],
+  "coverage_density": "medium",
+  "coverage_profile": "classic_adventure",
+  "coverage_intent": "wonder_reveal",
+  "coverage_role": "handoff_medium",
+  "beat_type": "transition_handoff",
+  "coverage_importance": "major",
+  "coverage_blueprint_source": "deterministic_v1",
+  "coverage_classification": {
+    "beat_id": "BT001",
+    "beat_type": "transition_handoff",
+    "importance": "major",
+    "confidence": 0.55,
+    "reasons": [
+      "importance = major"
+    ]
+  },
   "metadata": {
     "artifact_id": "CH003_SC001_SH001_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "af21c5bbce08fa865da760a10137d2da131635a1",
+    "source_fingerprint": "984e623ac88e318f1a1898d9f8f245ab0d650333",
     "created_at_utc": "2026-04-27T09:48:06.832637+00:00",
-    "updated_at_utc": "2026-04-27T14:52:41.918555+00:00",
+    "updated_at_utc": "2026-04-27T20:54:24.932871+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
@@ -195,7 +217,7 @@
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH003_SC001",
-        "version": "f5e23a7d0f05423485ddeb307aea2b7ae95095c3"
+        "version": "741e23a1503ce4d11f67dc11c48d4ccaa5df0a5b"
       }
     ],
     "locked_fields": {},
@@ -210,6 +232,16 @@
         "timestamp_utc": "2026-04-27T14:53:56.870292+00:00",
         "action": "synthesized",
         "source_fingerprint": "af21c5bbce08fa865da760a10137d2da131635a1"
+      },
+      {
+        "timestamp_utc": "2026-04-27T20:53:28.355475+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "984e623ac88e318f1a1898d9f8f245ab0d650333"
+      },
+      {
+        "timestamp_utc": "2026-04-27T20:54:25.375275+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "984e623ac88e318f1a1898d9f8f245ab0d650333"
       }
     ]
   }

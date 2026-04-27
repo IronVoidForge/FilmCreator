@@ -5,82 +5,72 @@
   "shot_order": 2,
   "previous_shot_id": "SH001",
   "next_shot_id": "SH003",
-  "primary_subject": "fighting_forest canopy",
+  "primary_subject": "dorothy",
   "secondary_subjects": [
-    "dorothy",
+    "the_scarecrow",
     "tin_woodman"
   ],
-  "shot_moment_summary": "branches move like limbs",
-  "start_state": "still trees",
-  "end_state": "moving branches",
-  "action_during_shot": "branches lunge downward",
+  "shot_moment_summary": "Group enters the dense forest",
+  "start_state": "calm walking through foliage",
+  "end_state": "steady movement continues",
+  "action_during_shot": "Group enters the dense forest",
   "action_continues_from": "walking continues",
-  "action_hands_off_to": "BT003",
+  "action_hands_off_to": "BT002",
   "shot_size": "medium",
-  "camera_angle": "low_angle",
-  "lens_family": "wide",
-  "camera_motion": "pan",
+  "camera_angle": "eye_level",
+  "lens_family": "normal",
+  "camera_motion": "locked_off",
   "zoom_behavior": "none",
-  "focus_strategy": "environment_priority",
-  "lighting_style": "diffuse_ambient",
+  "focus_strategy": "deep_focus",
+  "lighting_style": "hard_directional",
   "subject_visibility": "on_screen",
   "narration_mode": "none",
-  "primary_subject_angle": "front",
-  "visible_primary_subject_id": "the_scarecrow",
+  "primary_subject_angle": "front_three_quarter_left",
+  "visible_primary_subject_id": "dorothy",
   "visible_secondary_subject_ids": [
-    "dorothy",
+    "the_scarecrow",
     "tin_woodman"
   ],
-  "primary_subject_frame_position": "foreground right within fighting_forest canopy/limb zone",
+  "primary_subject_frame_position": "foreground right within forest floor",
   "primary_subject_scale_relation": "preserve readable body-to-environment scale in frame",
-  "primary_subject_facing_direction": "facing directly toward camera",
-  "primary_subject_pose_description": "still trees",
-  "subject_relation_summary": "fighting_forest canopy plays against dorothy, tin_woodman in the same frame",
-  "required_environment_anchor_1": "fighting_forest canopy/limb zone",
+  "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+  "primary_subject_pose_description": "calm walking through foliage",
+  "subject_relation_summary": "dorothy plays against the_scarecrow, tin_woodman in the same frame",
+  "required_environment_anchor_1": "forest floor",
   "required_subject_anchor_1": "",
   "required_celestial_anchor_1": "",
   "required_scale_proof_detail": "preserve readable body-to-environment scale in frame",
-  "camera_package_description": "medium, low angle, wide lens, pan, environment priority, diffuse ambient",
+  "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
   "subject_blocking": [
-    "vertical descent",
-    "limbs descending from above",
-    "fighting_forest limb zone",
-    "the_scarecrow remains readable within the active playing space.",
-    "dorothy remains readable within the active playing space."
+    "group in a loose line or cluster",
+    "fighting_forest floor",
+    "dorothy remains readable within the active playing space.",
+    "the_scarecrow remains readable within the active playing space."
   ],
   "camera_relative_positions": [
-    "Camera anchors the action inside the fighting_forest canopy/limb zone.",
+    "Camera anchors the action inside the forest floor.",
     "Background depth should keep fighting_forest legible as the location anchor.",
-    "Subject 1: the_scarecrow remains visually readable against the environment scale.",
-    "Subject 2: dorothy remains visually readable against the environment scale."
+    "Subject 1: dorothy remains visually readable against the environment scale.",
+    "Subject 2: the_scarecrow remains visually readable against the environment scale."
   ],
   "gaze_directions": [
-    "fighting_forest canopy focuses toward the active scene action."
+    "dorothy focuses toward the active scene action."
   ],
-  "environment_subzone": "fighting_forest canopy/limb zone",
+  "environment_subzone": "forest floor",
   "key_visible_environment_features": [
-    "fighting_forest canopy/limb zone"
+    "forest floor",
+    "Chapter-local beat subzone match for 'forest floor'."
   ],
   "continuity_from_previous_shot": "walking continues",
-  "continuity_to_next_shot": "BT003",
-  "pose_anchor_frame": "still trees",
-  "pose_end_frame": "moving branches",
-  "shot_title": "Action 2: The ambush begins",
-  "shot_type": "action",
-  "camera_description": "Active camera with tracking energy and clear spatial orientation.",
-  "composition": "Dynamic composition in fighting_forest with clear pursuit vectors and readable movement for the_scarecrow, dorothy, tin_woodman.",
-  "target_seconds": 5.8,
+  "continuity_to_next_shot": "BT002",
+  "pose_anchor_frame": "calm walking through foliage",
+  "pose_end_frame": "steady movement continues",
+  "shot_title": "Authority Single 2: Group enters the dense forest",
+  "shot_type": "authority_single",
+  "camera_description": "Stable readable framing built from the beat requirement.",
+  "composition": "Readable medium composition in fighting_forest featuring dorothy, the_scarecrow, tin_woodman.",
+  "target_seconds": 6.5,
   "characters_in_frame": [
-    {
-      "label": "Scarecrow",
-      "canonical_id": "the_scarecrow",
-      "display_name": "the_scarecrow",
-      "status": "canonical",
-      "entity_kind": "individual",
-      "resolution_score": 186,
-      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH019/the_scarecrow.md",
-      "notes": "asset id exactly matches canonical id | query matches alias 'scarecrow'"
-    },
     {
       "label": "Dorothy",
       "canonical_id": "dorothy",
@@ -90,6 +80,16 @@
       "resolution_score": 138,
       "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH019/dorothy.md",
       "notes": "Direct registry match for 'dorothy'."
+    },
+    {
+      "label": "Scarecrow",
+      "canonical_id": "the_scarecrow",
+      "display_name": "the_scarecrow",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 186,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH019/the_scarecrow.md",
+      "notes": "asset id exactly matches canonical id | query matches alias 'scarecrow'"
     },
     {
       "label": "Tin Woodman",
@@ -110,18 +110,18 @@
     "entity_kind": "environment",
     "resolution_score": null,
     "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH019/fighting_forest.md",
-    "notes": "Chapter-local beat subzone match for 'fighting_forest canopy/limb zone'."
+    "notes": "Chapter-local beat subzone match for 'forest floor'."
   },
   "beat_ids": [
-    "BT002"
+    "BT001"
   ],
   "continuity_constraints": [
     "Specific branch grip points on characters",
     "Character positions during the scramble",
-    "The ambush begins"
+    "Group enters the dense forest"
   ],
-  "prompt_seed": "Action 2: The ambush begins. action. size=medium. angle=low_angle. lens=wide. motion=pan. zoom=none. focus=environment_priority. lighting=diffuse_ambient. visibility=on_screen. subject_angle=front. Active camera with tracking energy and clear spatial orientation. Dynamic composition in fighting_forest with clear pur...",
-  "shot_notes": "The ambush begins",
+  "prompt_seed": "Authority Single 2: Group enters the dense forest. authority_single. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Readable me...",
+  "shot_notes": "Group enters the dense forest",
   "evidence_refs": [
     {
       "source": "scene_contract",
@@ -190,13 +190,30 @@
     "tin_woodman | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH005/tin_woodman.md] Costume/Silhouette: Entirely metallic (tin) body; carries an axe. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis...",
     "fighting_forest | No specific visual descriptors are provided in the current evidence. The environment functions as a narrative obstacle within the forest setting. | Unknown. | Unknown. | Unknown."
   ],
+  "coverage_density": "medium",
+  "coverage_profile": "classic_adventure",
+  "coverage_intent": "adventure_action",
+  "coverage_role": "authority_single",
+  "beat_type": "dialogue_council_or_court",
+  "coverage_importance": "normal",
+  "coverage_blueprint_source": "deterministic_v1",
+  "coverage_classification": {
+    "beat_id": "BT001",
+    "beat_type": "dialogue_council_or_court",
+    "importance": "normal",
+    "confidence": 0.82,
+    "reasons": [
+      "court/council authority language",
+      "importance = normal"
+    ]
+  },
   "metadata": {
     "artifact_id": "CH019_SC003_SH002_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "a9ea82295ccfc913cb205cd15746d99ddd57be92",
+    "source_fingerprint": "c5c193b71c37352dd17b3c724a73e7b44ec18569",
     "created_at_utc": "2026-04-27T19:26:54.672682+00:00",
-    "updated_at_utc": "2026-04-27T19:26:54.672682+00:00",
+    "updated_at_utc": "2026-04-27T20:55:07.143318+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
@@ -211,7 +228,7 @@
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH019_SC003",
-        "version": "c6f6650525c1a09e85de8c92eca1d04aed523f04"
+        "version": "41bda7f332776c3bb25040588ccc4c51d4832bd7"
       }
     ],
     "locked_fields": {},
@@ -221,6 +238,16 @@
         "timestamp_utc": "2026-04-27T19:28:03.549464+00:00",
         "action": "synthesized",
         "source_fingerprint": "a9ea82295ccfc913cb205cd15746d99ddd57be92"
+      },
+      {
+        "timestamp_utc": "2026-04-27T20:54:07.831228+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "c5c193b71c37352dd17b3c724a73e7b44ec18569"
+      },
+      {
+        "timestamp_utc": "2026-04-27T20:55:07.144319+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "c5c193b71c37352dd17b3c724a73e7b44ec18569"
       }
     ]
   }

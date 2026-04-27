@@ -5,83 +5,72 @@
   "shot_order": 2,
   "previous_shot_id": "",
   "next_shot_id": "",
-  "primary_subject": "cowardly_lion",
+  "primary_subject": "dorothy",
   "secondary_subjects": [
-    "dorothy",
-    "the_scarecrow"
+    "the_scarecrow",
+    "tin_woodman"
   ],
-  "shot_moment_summary": "lion leaps across the gap",
-  "start_state": "lion at near edge",
-  "end_state": "lion landing on far edge",
-  "action_during_shot": "leaping across void",
+  "shot_moment_summary": "Encountering the chasm",
+  "start_state": "group walking through forest",
+  "end_state": "group stopping at edge",
+  "action_during_shot": "Encountering the chasm",
   "action_continues_from": "group frozen at edge",
-  "action_hands_off_to": "BT003",
-  "shot_size": "full",
+  "action_hands_off_to": "BT002",
+  "shot_size": "medium",
   "camera_angle": "eye_level",
-  "lens_family": "wide",
-  "camera_motion": "track",
+  "lens_family": "normal",
+  "camera_motion": "locked_off",
   "zoom_behavior": "none",
-  "focus_strategy": "shallow_subject",
-  "lighting_style": "diffuse_ambient",
+  "focus_strategy": "deep_focus",
+  "lighting_style": "hard_directional",
   "subject_visibility": "on_screen",
   "narration_mode": "none",
-  "primary_subject_angle": "profile_right",
-  "visible_primary_subject_id": "cowardly_lion",
+  "primary_subject_angle": "front_three_quarter_left",
+  "visible_primary_subject_id": "dorothy",
   "visible_secondary_subject_ids": [
-    "dorothy",
-    "the_scarecrow"
+    "the_scarecrow",
+    "tin_woodman"
   ],
-  "primary_subject_frame_position": "foreground right within chasm_void",
-  "primary_subject_scale_relation": "distance between edges",
-  "primary_subject_facing_direction": "profile right toward the scene action",
-  "primary_subject_pose_description": "lion at near edge",
-  "subject_relation_summary": "cowardly_lion plays against dorothy, the_scarecrow in the same frame",
-  "required_environment_anchor_1": "chasm_void",
+  "primary_subject_frame_position": "foreground right within near_edge_rim",
+  "primary_subject_scale_relation": "The vertical depth of the ditch relative to character height.",
+  "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+  "primary_subject_pose_description": "group walking through forest",
+  "subject_relation_summary": "dorothy plays against the_scarecrow, tin_woodman in the same frame",
+  "required_environment_anchor_1": "near_edge_rim",
   "required_subject_anchor_1": "",
   "required_celestial_anchor_1": "",
-  "required_scale_proof_detail": "distance between edges",
-  "camera_package_description": "full, eye level, wide lens, track, shallow subject, diffuse ambient",
+  "required_scale_proof_detail": "The vertical depth of the ditch relative to character height.",
+  "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
   "subject_blocking": [
-    "mid-air trajectory",
-    "characters looking at lion for leadership",
+    "characters clustered at the rim looking down",
     "near_edge_rim",
-    "cowardly_lion remains readable within the active playing space.",
-    "dorothy remains readable within the active playing space."
+    "dorothy remains readable within the active playing space.",
+    "the_scarecrow remains readable within the active playing space."
   ],
   "camera_relative_positions": [
     "Camera anchors the action inside the near_edge_rim.",
     "Background depth should keep arizona_dense_forest_and_ditches legible as the location anchor.",
-    "Subject 1: cowardly_lion remains visually readable against the environment scale.",
-    "Subject 2: dorothy remains visually readable against the environment scale."
+    "Subject 1: dorothy remains visually readable against the environment scale.",
+    "Subject 2: the_scarecrow remains visually readable against the environment scale."
   ],
   "gaze_directions": [
-    "cowardly_lion focuses toward the active scene action."
+    "dorothy focuses toward the active scene action."
   ],
-  "environment_subzone": "chasm_void",
+  "environment_subzone": "near_edge_rim",
   "key_visible_environment_features": [
     "near_edge_rim",
-    "Chasm void depth"
+    "Chapter-local environment alias match for 'Deep Forest Chasm/Ditch' (key_overlap=1, label_overlap=4, context_overlap=4)."
   ],
   "continuity_from_previous_shot": "group frozen at edge",
-  "continuity_to_next_shot": "BT003",
-  "pose_anchor_frame": "lion at near edge",
-  "pose_end_frame": "lion landing on far edge",
-  "shot_title": "Medium 2: Assessing the gap",
-  "shot_type": "medium",
-  "camera_description": "Stable medium framing that keeps action and character readable.",
-  "composition": "Readable medium composition in arizona_dense_forest_and_ditches featuring cowardly_lion, dorothy, the_scarecrow.",
-  "target_seconds": 5.3,
+  "continuity_to_next_shot": "BT002",
+  "pose_anchor_frame": "group walking through forest",
+  "pose_end_frame": "group stopping at edge",
+  "shot_title": "Authority Single 2: Encountering the chasm",
+  "shot_type": "authority_single",
+  "camera_description": "Stable readable framing built from the beat requirement.",
+  "composition": "Readable medium composition in arizona_dense_forest_and_ditches featuring dorothy, the_scarecrow, tin_woodman.",
+  "target_seconds": 7.0,
   "characters_in_frame": [
-    {
-      "label": "Cowardly Lion",
-      "canonical_id": "cowardly_lion",
-      "display_name": "cowardly_lion",
-      "status": "canonical",
-      "entity_kind": "individual",
-      "resolution_score": 138,
-      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH007/cowardly_lion.md",
-      "notes": "Direct registry match for 'cowardly_lion'."
-    },
     {
       "label": "Dorothy",
       "canonical_id": "dorothy",
@@ -101,6 +90,16 @@
       "resolution_score": 186,
       "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH007/the_scarecrow.md",
       "notes": "asset id exactly matches canonical id | query matches alias 'scarecrow'"
+    },
+    {
+      "label": "Tin Woodman",
+      "canonical_id": "tin_woodman",
+      "display_name": "tin_woodman",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH007/tin_woodman.md",
+      "notes": "Direct registry match for 'tin_woodman'."
     }
   ],
   "environment": {
@@ -114,15 +113,15 @@
     "notes": "Chapter-local environment alias match for 'Deep Forest Chasm/Ditch' (key_overlap=1, label_overlap=4, context_overlap=4)."
   },
   "beat_ids": [
-    "BT002"
+    "BT001"
   ],
   "continuity_constraints": [
     "Chasm width and depth must remain constant across all leap sequences",
     "Character ferry order must be strictly maintained for logical progression",
-    "Assessing the gap"
+    "Encountering the chasm"
   ],
-  "prompt_seed": "Medium 2: Assessing the gap. medium. size=full. angle=eye_level. lens=wide. motion=track. zoom=none. focus=shallow_subject. lighting=diffuse_ambient. visibility=on_screen. subject_angle=profile_right. Stable medium framing that keeps action and character readable. Readable medium composition in arizona_dense_forest_...",
-  "shot_notes": "Assessing the gap",
+  "prompt_seed": "Authority Single 2: Encountering the chasm. authority_single. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Readable medium co...",
+  "shot_notes": "Encountering the chasm",
   "evidence_refs": [
     {
       "source": "scene_contract",
@@ -191,13 +190,30 @@
     "tin_woodman | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH005/tin_woodman.md] Costume/Silhouette: Entirely metallic (tin) body; carries an axe. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis...",
     "arizona_dense_forest_and_ditches | A dense forest environment located in Arizona, characterized by the presence of ditches. | Contains forested areas and ditch structures. | unknown | unknown"
   ],
+  "coverage_density": "medium",
+  "coverage_profile": "classic_adventure",
+  "coverage_intent": "economical_storybook",
+  "coverage_role": "authority_single",
+  "beat_type": "dialogue_council_or_court",
+  "coverage_importance": "major",
+  "coverage_blueprint_source": "deterministic_v1",
+  "coverage_classification": {
+    "beat_id": "BT001",
+    "beat_type": "dialogue_council_or_court",
+    "importance": "major",
+    "confidence": 0.82,
+    "reasons": [
+      "court/council authority language",
+      "importance = major"
+    ]
+  },
   "metadata": {
     "artifact_id": "CH007_SC002_SH002_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "0d5c2ae02a247f2ac88c64da4c19da1fdf135db3",
+    "source_fingerprint": "d0dd56036457fbbfa23f7b788755ac185915f558",
     "created_at_utc": "2026-04-27T16:00:29.158168+00:00",
-    "updated_at_utc": "2026-04-27T16:00:29.158168+00:00",
+    "updated_at_utc": "2026-04-27T20:54:35.424905+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
@@ -212,7 +228,7 @@
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH007_SC002",
-        "version": "33bb410d33ecfcea97ea3b80de920416e2ab671b"
+        "version": "97aa21169672a56aea4b3d203c960cf7a38ca500"
       }
     ],
     "locked_fields": {},
@@ -222,6 +238,16 @@
         "timestamp_utc": "2026-04-27T16:01:44.128462+00:00",
         "action": "synthesized",
         "source_fingerprint": "0d5c2ae02a247f2ac88c64da4c19da1fdf135db3"
+      },
+      {
+        "timestamp_utc": "2026-04-27T20:53:38.140766+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "d0dd56036457fbbfa23f7b788755ac185915f558"
+      },
+      {
+        "timestamp_utc": "2026-04-27T20:54:35.425905+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "d0dd56036457fbbfa23f7b788755ac185915f558"
       }
     ]
   }

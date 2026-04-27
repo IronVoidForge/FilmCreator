@@ -4,52 +4,51 @@
   "chapter_id": "CH020",
   "shot_order": 3,
   "previous_shot_id": "SH002",
-  "next_shot_id": "",
+  "next_shot_id": "SH004",
   "primary_subject": "dorothy",
   "secondary_subjects": [
     "the_scarecrow",
     "tin_woodman"
   ],
-  "shot_moment_summary": "group looking back at the land",
-  "start_state": "group cresting wall",
-  "end_state": "group looking back",
-  "action_during_shot": "looking back",
-  "action_continues_from": "church shattered",
-  "action_hands_off_to": "end_of_scene",
-  "shot_size": "wide",
-  "camera_angle": "high_angle",
-  "lens_family": "ultra_wide",
-  "camera_motion": "pull_back",
+  "shot_moment_summary": "The group climbs The far wall with urgency",
+  "start_state": "group reaches base of wall",
+  "end_state": "characters mid-climb",
+  "action_during_shot": "The group climbs The far wall with urgency",
+  "action_continues_from": "characters mid-climb",
+  "action_hands_off_to": "BT002",
+  "shot_size": "medium",
+  "camera_angle": "eye_level",
+  "lens_family": "normal",
+  "camera_motion": "locked_off",
   "zoom_behavior": "none",
   "focus_strategy": "deep_focus",
-  "lighting_style": "diffuse_ambient",
+  "lighting_style": "hard_directional",
   "subject_visibility": "on_screen",
   "narration_mode": "none",
-  "primary_subject_angle": "back",
+  "primary_subject_angle": "front_three_quarter_left",
   "visible_primary_subject_id": "dorothy",
   "visible_secondary_subject_ids": [
     "the_scarecrow",
     "tin_woodman"
   ],
-  "primary_subject_frame_position": "midground inside dainty_china_country exterior",
-  "primary_subject_scale_relation": "view of the tiny china houses from above/outside",
-  "primary_subject_facing_direction": "back to camera with head turned toward the action",
-  "primary_subject_pose_description": "group cresting wall",
+  "primary_subject_frame_position": "foreground right within The far wall",
+  "primary_subject_scale_relation": "Tiny china houses vs. the massive scale of The far wall.",
+  "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+  "primary_subject_pose_description": "group reaches base of wall",
   "subject_relation_summary": "dorothy plays against the_scarecrow, tin_woodman in the same frame",
   "required_environment_anchor_1": "The far wall",
-  "required_subject_anchor_1": "back to camera with head turned toward the action",
+  "required_subject_anchor_1": "vertical ascent along the surface",
   "required_celestial_anchor_1": "",
-  "required_scale_proof_detail": "view of the tiny china houses from above/outside",
-  "camera_package_description": "wide, high angle, ultra-wide lens, pull back, deep focus, diffuse ambient",
+  "required_scale_proof_detail": "Tiny china houses vs. the massive scale of The far wall.",
+  "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
   "subject_blocking": [
-    "standing on edge of boundary",
-    "standing on the boundary edge",
-    "The far wall exit point",
+    "vertical ascent along the surface",
+    "The far wall",
     "dorothy remains readable within the active playing space.",
     "the_scarecrow remains readable within the active playing space."
   ],
   "camera_relative_positions": [
-    "Camera anchors the action inside the dainty_china_country exterior.",
+    "Camera anchors the action inside the The far wall.",
     "Background depth should keep dainty_china_country legible as the location anchor.",
     "Subject 1: dorothy remains visually readable against the environment scale.",
     "Subject 2: the_scarecrow remains visually readable against the environment scale."
@@ -57,19 +56,20 @@
   "gaze_directions": [
     "dorothy focuses toward the active scene action."
   ],
-  "environment_subzone": "dainty_china_country exterior",
+  "environment_subzone": "The far wall",
   "key_visible_environment_features": [
-    "dainty_china_country exterior"
+    "The far wall",
+    "Chapter-local environment alias match for 'the exit point of China Country' (key_overlap=2, label_overlap=2, context_..."
   ],
-  "continuity_from_previous_shot": "church shattered",
-  "continuity_to_next_shot": "end_of_scene",
-  "pose_anchor_frame": "group cresting wall",
-  "pose_end_frame": "group looking back",
-  "shot_title": "Establishing Wide 3: The group scales the wall and exits the country",
-  "shot_type": "establishing_wide",
-  "camera_description": "Wide establishing frame with a steady or lightly drifting camera.",
-  "composition": "Wide composition across dainty_china_country with dorothy, the_scarecrow, tin_woodman placed for immediate spatial orientation.",
-  "target_seconds": 5.1,
+  "continuity_from_previous_shot": "characters mid-climb",
+  "continuity_to_next_shot": "BT002",
+  "pose_anchor_frame": "group reaches base of wall",
+  "pose_end_frame": "characters mid-climb",
+  "shot_title": "Subject Pov 3: The group climbs The far wall with urgency",
+  "shot_type": "subject_pov",
+  "camera_description": "Stable readable framing built from the beat requirement.",
+  "composition": "Readable medium composition in dainty_china_country featuring dorothy, the_scarecrow, tin_woodman.",
+  "target_seconds": 7.5,
   "characters_in_frame": [
     {
       "label": "Dorothy",
@@ -103,25 +103,26 @@
     }
   ],
   "environment": {
-    "label": "dainty_china_country",
+    "label": "the exit point of China Country",
     "canonical_id": "dainty_china_country",
     "display_name": "dainty_china_country",
     "status": "canonical",
     "entity_kind": "environment",
-    "resolution_score": null,
+    "resolution_score": 92,
     "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH020/dainty_china_country.md",
-    "notes": "Chapter-local beat subzone match for 'dainty_china_country exterior'."
+    "notes": "Chapter-local environment alias match for 'the exit point of China Country' (key_overlap=2, label_overlap=2, context_overlap=4)."
   },
   "beat_ids": [
-    "BT003"
+    "BT001"
   ],
   "continuity_constraints": [
     "Church state must transition from intact to broken/smashed",
     "Character physical positions must align with the scaling of The far wall",
-    "The group scales the wall and exits the country"
+    "The group climbs The far wall with urgency",
+    "Resolve The far wall -> The far wall"
   ],
-  "prompt_seed": "Establishing Wide 3: The group scales the wall and exits the country. establishing_wide. size=wide. angle=high_angle. lens=ultra_wide. motion=pull_back. zoom=none. focus=deep_focus. lighting=diffuse_ambient. visibility=on_screen. subject_angle=back. Wide establishing frame with a steady or lightly drifting camera.",
-  "shot_notes": "The group scales the wall and exits the country",
+  "prompt_seed": "Subject Pov 3: The group climbs The far wall with urgency. subject_pov. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Readable...",
+  "shot_notes": "The group climbs The far wall with urgency",
   "evidence_refs": [
     {
       "source": "scene_contract",
@@ -190,13 +191,30 @@
     "tin_woodman | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH005/tin_woodman.md] Costume/Silhouette: Entirely metallic (tin) body; carries an axe. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis...",
     "dainty_china_country | A miniature-scale environment characterized by extreme fragility. The landscape is defined by a smooth, seamless white ground plane and high perimeter walls that enclose the territory. All surfaces are highly polished, contributing to..."
   ],
+  "coverage_density": "medium",
+  "coverage_profile": "classic_adventure",
+  "coverage_intent": "montage_travel",
+  "coverage_role": "subject_pov_or_reaction",
+  "beat_type": "establishing_arrival",
+  "coverage_importance": "set_piece",
+  "coverage_blueprint_source": "deterministic_v1",
+  "coverage_classification": {
+    "beat_id": "BT001",
+    "beat_type": "establishing_arrival",
+    "importance": "set_piece",
+    "confidence": 0.72,
+    "reasons": [
+      "arrival/entry verb",
+      "importance = set_piece"
+    ]
+  },
   "metadata": {
     "artifact_id": "CH020_SC005_SH003_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "f260ed7e075eae1ae353f529d765de6318fb44a6",
+    "source_fingerprint": "dfcceeeb22f06a4523b5864157c8025af92c8d82",
     "created_at_utc": "2026-04-27T19:53:27.550904+00:00",
-    "updated_at_utc": "2026-04-27T19:53:27.550904+00:00",
+    "updated_at_utc": "2026-04-27T20:55:10.953919+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
@@ -211,7 +229,7 @@
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH020_SC005",
-        "version": "9c54efdc32d926140ba5788bc06d7e3e4ad09393"
+        "version": "e0117f9d849e2e478661f66f93170724f28140d4"
       }
     ],
     "locked_fields": {},
@@ -221,6 +239,16 @@
         "timestamp_utc": "2026-04-27T19:54:40.694847+00:00",
         "action": "synthesized",
         "source_fingerprint": "f260ed7e075eae1ae353f529d765de6318fb44a6"
+      },
+      {
+        "timestamp_utc": "2026-04-27T20:54:11.322417+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "dfcceeeb22f06a4523b5864157c8025af92c8d82"
+      },
+      {
+        "timestamp_utc": "2026-04-27T20:55:10.953919+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "dfcceeeb22f06a4523b5864157c8025af92c8d82"
       }
     ]
   }

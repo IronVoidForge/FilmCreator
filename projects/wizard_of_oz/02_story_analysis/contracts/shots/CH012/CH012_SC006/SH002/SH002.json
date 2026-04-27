@@ -7,59 +7,61 @@
   "next_shot_id": "SH003",
   "primary_subject": "dorothy",
   "secondary_subjects": [],
-  "shot_moment_summary": "Dorothy running through the castle",
-  "start_state": "Dorothy standing",
-  "end_state": "Dorothy approaching friends",
-  "action_during_shot": "running",
+  "shot_moment_summary": "Dorothy retrieves the Silver Shoe",
+  "start_state": "Dorothy spotting the shoe",
+  "end_state": "Shoe is secured",
+  "action_during_shot": "Dorothy retrieves the Silver Shoe",
   "action_continues_from": "Dorothy securing shoe",
-  "action_hands_off_to": "BT003",
-  "shot_size": "full",
+  "action_hands_off_to": "BT002",
+  "shot_size": "medium",
   "camera_angle": "eye_level",
-  "lens_family": "wide",
-  "camera_motion": "track",
+  "lens_family": "normal",
+  "camera_motion": "locked_off",
   "zoom_behavior": "none",
   "focus_strategy": "deep_focus",
-  "lighting_style": "high_contrast_ceremonial",
+  "lighting_style": "hard_directional",
   "subject_visibility": "on_screen",
   "narration_mode": "none",
-  "primary_subject_angle": "profile_left",
+  "primary_subject_angle": "front_three_quarter_left",
   "visible_primary_subject_id": "dorothy",
   "visible_secondary_subject_ids": [],
-  "primary_subject_frame_position": "foreground right within wicked_witch_castle_courtyard_prison",
+  "primary_subject_frame_position": "foreground right within wicked_witch_castle_courtyard_retrieval",
   "primary_subject_scale_relation": "Character scale shifts from individual retrieval to group reunion.",
-  "primary_subject_facing_direction": "profile left toward the scene action",
-  "primary_subject_pose_description": "Dorothy standing",
+  "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+  "primary_subject_pose_description": "Dorothy spotting the shoe",
   "subject_relation_summary": "dorothy carries the frame alone",
-  "required_environment_anchor_1": "Prison bars/gates",
+  "required_environment_anchor_1": "wicked_witch_castle_courtyard_retrieval",
   "required_subject_anchor_1": "",
   "required_celestial_anchor_1": "",
   "required_scale_proof_detail": "Character scale shifts from individual retrieval to group reunion.",
-  "camera_package_description": "full, eye level, wide lens, track, deep focus, high contrast ceremonial",
+  "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
   "subject_blocking": [
-    "running through corridors",
-    "running past structures",
-    "castle corridors/courtyard"
+    "crouched near ground",
+    "retrieval area",
+    "dorothy remains readable within the active playing space."
   ],
   "camera_relative_positions": [
-    "Camera anchors the action inside the wicked_witch_castle_courtyard_prison.",
-    "Background depth should keep wicked_witch_castle_courtyard legible as the location anchor."
+    "Camera anchors the action inside the wicked_witch_castle_courtyard_retrieval.",
+    "Background depth should keep wicked_witch_castle_courtyard legible as the location anchor.",
+    "Subject 1: dorothy remains visually readable against the environment scale."
   ],
   "gaze_directions": [
     "dorothy focuses toward the active scene action."
   ],
-  "environment_subzone": "wicked_witch_castle_courtyard_prison",
+  "environment_subzone": "wicked_witch_castle_courtyard_retrieval",
   "key_visible_environment_features": [
-    "wicked_witch_castle_courtyard_prison"
+    "wicked_witch_castle_courtyard_retrieval",
+    "Chapter-local beat subzone match for 'wicked_witch_castle_courtyard_retrieval'."
   ],
   "continuity_from_previous_shot": "Dorothy securing shoe",
-  "continuity_to_next_shot": "BT003",
-  "pose_anchor_frame": "Dorothy standing",
-  "pose_end_frame": "Dorothy approaching friends",
-  "shot_title": "Action 2: Dorothy rushes through the castle",
-  "shot_type": "action",
-  "camera_description": "Active camera with tracking energy and clear spatial orientation.",
-  "composition": "Dynamic composition in wicked_witch_castle_courtyard with clear pursuit vectors and readable movement for dorothy.",
-  "target_seconds": 5.8,
+  "continuity_to_next_shot": "BT002",
+  "pose_anchor_frame": "Dorothy spotting the shoe",
+  "pose_end_frame": "Shoe is secured",
+  "shot_title": "Transition Wide 2: Dorothy retrieves the Silver Shoe",
+  "shot_type": "transition_wide",
+  "camera_description": "Stable readable framing built from the beat requirement.",
+  "composition": "Readable medium composition in wicked_witch_castle_courtyard featuring dorothy.",
+  "target_seconds": 10.8,
   "characters_in_frame": [
     {
       "label": "Dorothy",
@@ -80,17 +82,20 @@
     "entity_kind": "environment",
     "resolution_score": null,
     "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH012/wicked_witch_castle_courtyard.md",
-    "notes": "Chapter-local beat subzone match for 'wicked_witch_castle_courtyard_prison'."
+    "notes": "Chapter-local beat subzone match for 'wicked_witch_castle_courtyard_retrieval'."
   },
   "beat_ids": [
-    "BT002"
+    "BT001"
   ],
   "continuity_constraints": [
     "Silver Shoe must be visible on Dorothy's foot/hand after retrieval",
-    "Dorothy's clothing state (white dress)"
+    "Scarecrow and Tin Woodman physical condition (wear/damage)",
+    "Dorothy's clothing state (white dress)",
+    "Dorothy retrieves the Silver Shoe",
+    "Resolve Scarecrow (brief) -> Scarecrow (brief)"
   ],
-  "prompt_seed": "Action 2: Dorothy rushes through the castle. action. size=full. angle=eye_level. lens=wide. motion=track. zoom=none. focus=deep_focus. lighting=high_contrast_ceremonial. visibility=on_screen. subject_angle=profile_left. Active camera with tracking energy and clear spatial orientation. Dynamic composition in wicked_w...",
-  "shot_notes": "Dorothy rushes through the castle",
+  "prompt_seed": "Transition Wide 2: Dorothy retrieves the Silver Shoe. transition_wide. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Readable...",
+  "shot_notes": "Dorothy retrieves the Silver Shoe",
   "evidence_refs": [
     {
       "source": "scene_contract",
@@ -158,13 +163,29 @@
     "cowardly_lion | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH008/cowardly_lion.md] Physical Description: Large animal; too heavy to be carried by the others. [source:C:/FilmCreator/projects/wizard_of_oz/02_s...",
     "wicked_witch_castle_courtyard | No specific visual descriptors are provided in the current evidence. The location serves as a secondary setting utilized for imprisonment. | Unknown. | Unknown. | Unknown."
   ],
+  "coverage_density": "medium",
+  "coverage_profile": "classic_adventure",
+  "coverage_intent": "ceremonial_tableau",
+  "coverage_role": "transition_wide",
+  "beat_type": "transition_handoff",
+  "coverage_importance": "major",
+  "coverage_blueprint_source": "deterministic_v1",
+  "coverage_classification": {
+    "beat_id": "BT001",
+    "beat_type": "transition_handoff",
+    "importance": "major",
+    "confidence": 0.55,
+    "reasons": [
+      "importance = major"
+    ]
+  },
   "metadata": {
     "artifact_id": "CH012_SC006_SH002_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "d038c89e6cda432473fcca76acdfc25e83887e9b",
+    "source_fingerprint": "12721894f25d2bb59e8b251205ce4fc61a40bf99",
     "created_at_utc": "2026-04-27T17:40:33.026761+00:00",
-    "updated_at_utc": "2026-04-27T17:40:33.026761+00:00",
+    "updated_at_utc": "2026-04-27T20:54:51.798358+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
@@ -179,7 +200,7 @@
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH012_SC006",
-        "version": "1e3ecd1430d3cbad9fb3df1d07f83680ae7f51ef"
+        "version": "c6843b12ebffef29afa5292e567ac902672f33f5"
       }
     ],
     "locked_fields": {},
@@ -189,6 +210,16 @@
         "timestamp_utc": "2026-04-27T17:41:38.691989+00:00",
         "action": "synthesized",
         "source_fingerprint": "d038c89e6cda432473fcca76acdfc25e83887e9b"
+      },
+      {
+        "timestamp_utc": "2026-04-27T20:53:53.493049+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "12721894f25d2bb59e8b251205ce4fc61a40bf99"
+      },
+      {
+        "timestamp_utc": "2026-04-27T20:54:51.798859+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "12721894f25d2bb59e8b251205ce4fc61a40bf99"
       }
     ]
   }

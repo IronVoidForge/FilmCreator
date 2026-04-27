@@ -31,18 +31,19 @@
       "cowardly_lion"
     ],
     "primary_subject_frame_position": "midground inside audience_chamber_center",
-    "primary_subject_scale_relation": "lion silhouette vs fire diameter",
+    "primary_subject_scale_relation": "preserve readable body-to-environment scale in frame",
     "primary_subject_facing_direction": "facing directly toward camera",
     "primary_subject_pose_description": "darkness",
     "subject_relation_summary": "the_great_oz plays against cowardly_lion in the same frame",
     "required_environment_anchor_1": "audience_chamber_center",
     "required_subject_anchor_1": "",
     "required_celestial_anchor_1": "",
-    "required_scale_proof_detail": "lion silhouette vs fire diameter",
+    "required_scale_proof_detail": "preserve readable body-to-environment scale in frame",
     "camera_package_description": "wide, low angle, wide lens, push in, deep focus, torch firelight",
     "subject_blocking": [
       "lion enters frame center",
       "lion enters from periphery toward center",
+      "audience_chamber_center",
       "the_great_oz remains readable within the active playing space.",
       "cowardly_lion remains readable within the active playing space."
     ],
@@ -57,17 +58,18 @@
     ],
     "environment_subzone": "audience_chamber_center",
     "key_visible_environment_features": [
-      "audience_chamber_center"
+      "audience_chamber_center",
+      "Chapter-local environment alias match for 'The Throne Room/Audience Chamber' (key_overlap=0, label_overlap=2, context..."
     ],
     "continuity_from_previous_shot": "cowardly_lion enters a dark, cavernous space illuminated only by flickering light.",
     "continuity_to_next_shot": "BT002",
     "pose_anchor_frame": "darkness",
     "pose_end_frame": "blinding light flare",
-    "shot_title": "Establishing Wide 1: The manifestation of the Wizard",
-    "shot_type": "establishing_wide",
-    "camera_description": "Wide establishing frame with a steady or lightly drifting camera.",
-    "composition": "Wide composition across palace_of_oz with the_great_oz, cowardly_lion placed for immediate spatial orientation.",
-    "target_seconds": 5.5,
+    "shot_title": "Ceremonial Master 1: The manifestation of the Wizard",
+    "shot_type": "ceremonial_master",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in palace_of_oz featuring the_great_oz, cowardly_lion.",
+    "target_seconds": 10.8,
     "characters_in_frame": [
       {
         "label": "The Great Oz (Ball of Fire)",
@@ -105,9 +107,10 @@
     ],
     "continuity_constraints": [
       "Light flicker intensity must sync with the_great_oz manifestation",
-      "Shadow movement across palace_of_oz surfaces relative to fire position"
+      "Shadow movement across palace_of_oz surfaces relative to fire position",
+      "The manifestation of the Wizard"
     ],
-    "prompt_seed": "Establishing Wide 1: The manifestation of the Wizard. establishing_wide. size=wide. angle=low_angle. lens=wide. motion=push_in. zoom=none. focus=deep_focus. lighting=torch_firelight. visibility=on_screen. subject_angle=front. Wide establishing frame with a steady or lightly drifting camera. Wide composition across p...",
+    "prompt_seed": "Ceremonial Master 1: The manifestation of the Wizard. ceremonial_master. size=wide. angle=low_angle. lens=wide. motion=push_in. zoom=none. focus=deep_focus. lighting=torch_firelight. visibility=on_screen. subject_angle=front. Stable readable framing built from the beat requirement. Readable medium composition in pal...",
     "shot_notes": "The manifestation of the Wizard",
     "evidence_refs": [
       {
@@ -176,13 +179,30 @@
       "cowardly_lion | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH008/cowardly_lion.md] Physical Description: Large animal; too heavy to be carried by the others. [source:C:/FilmCreator/projects/wizard_of_oz/02_s...",
       "palace_of_oz | A grandiose emerald-themed sovereign residence featuring monumental ceremonial halls and royal audience chambers. The interior is characterized by large-scale chambers designed to accommodate massive, non-human manifestations of the Wizard. |..."
     ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "wonder_reveal",
+    "coverage_role": "ceremonial_master",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT001",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "major",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = major"
+      ]
+    },
     "metadata": {
       "artifact_id": "CH011_SC006_SH001_SHOT_PACKAGE",
       "artifact_type": "shot_package",
       "status": "generated",
-      "source_fingerprint": "34c59797e92408ca1b0b9f1aedae923b97b388aa",
+      "source_fingerprint": "814d835eee67c3cee0bf40660d2a22878b141e9c",
       "created_at_utc": "2026-04-27T17:14:59.047816+00:00",
-      "updated_at_utc": "2026-04-27T17:14:59.047816+00:00",
+      "updated_at_utc": "2026-04-27T20:54:47.435192+00:00",
       "upstream_dependencies": [
         {
           "dependency_type": "scene_contract",
@@ -197,7 +217,7 @@
         {
           "dependency_type": "shot_blueprints",
           "dependency_id": "CH011_SC006",
-          "version": "53497d4668d9aaed7d0c9908f1582cbc69ba2431"
+          "version": "b79ac46efe5ee1ee4b87443684a0838b77150c12"
         }
       ],
       "locked_fields": {},
@@ -207,6 +227,16 @@
           "timestamp_utc": "2026-04-27T17:16:15.528971+00:00",
           "action": "synthesized",
           "source_fingerprint": "34c59797e92408ca1b0b9f1aedae923b97b388aa"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:53:49.850449+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "814d835eee67c3cee0bf40660d2a22878b141e9c"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:47.886906+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "814d835eee67c3cee0bf40660d2a22878b141e9c"
         }
       ]
     }
@@ -218,6 +248,1432 @@
     "shot_order": 2,
     "previous_shot_id": "SH001",
     "next_shot_id": "SH003",
+    "primary_subject": "the_great_oz",
+    "secondary_subjects": [
+      "cowardly_lion"
+    ],
+    "shot_moment_summary": "The manifestation of the Wizard",
+    "start_state": "darkness",
+    "end_state": "intense light flare",
+    "action_during_shot": "The manifestation of the Wizard",
+    "action_continues_from": "blinding light flare",
+    "action_hands_off_to": "BT002",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "the_great_oz",
+    "visible_secondary_subject_ids": [
+      "cowardly_lion"
+    ],
+    "primary_subject_frame_position": "foreground right within audience_chamber_center",
+    "primary_subject_scale_relation": "preserve readable body-to-environment scale in frame",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "darkness",
+    "subject_relation_summary": "the_great_oz plays against cowardly_lion in the same frame",
+    "required_environment_anchor_1": "audience_chamber_center",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "preserve readable body-to-environment scale in frame",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "lion enters from periphery toward center",
+      "audience_chamber_center",
+      "the_great_oz remains readable within the active playing space.",
+      "cowardly_lion remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the audience_chamber_center.",
+      "Background depth should keep palace_of_oz legible as the location anchor.",
+      "Subject 1: the_great_oz remains visually readable against the environment scale.",
+      "Subject 2: cowardly_lion remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "the_great_oz focuses toward the active scene action."
+    ],
+    "environment_subzone": "audience_chamber_center",
+    "key_visible_environment_features": [
+      "audience_chamber_center",
+      "Chapter-local environment alias match for 'The Throne Room/Audience Chamber' (key_overlap=0, label_overlap=2, context..."
+    ],
+    "continuity_from_previous_shot": "blinding light flare",
+    "continuity_to_next_shot": "BT002",
+    "pose_anchor_frame": "darkness",
+    "pose_end_frame": "intense light flare",
+    "shot_title": "Authority Single 2: The manifestation of the Wizard",
+    "shot_type": "authority_single",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in palace_of_oz featuring the_great_oz, cowardly_lion.",
+    "target_seconds": 7.0,
+    "characters_in_frame": [
+      {
+        "label": "The Great Oz (Ball of Fire)",
+        "canonical_id": "the_great_oz",
+        "display_name": "the_great_oz",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH011/the_great_oz.md",
+        "notes": "Direct registry match for 'the_great_oz'."
+      },
+      {
+        "label": "Cowardly Lion",
+        "canonical_id": "cowardly_lion",
+        "display_name": "cowardly_lion",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH011/cowardly_lion.md",
+        "notes": "Direct registry match for 'cowardly_lion'."
+      }
+    ],
+    "environment": {
+      "label": "The Throne Room/Audience Chamber",
+      "canonical_id": "palace_of_oz",
+      "display_name": "palace_of_oz",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 56,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH011/palace_of_oz.md",
+      "notes": "Chapter-local environment alias match for 'The Throne Room/Audience Chamber' (key_overlap=0, label_overlap=2, context_overlap=4)."
+    },
+    "beat_ids": [
+      "BT001"
+    ],
+    "continuity_constraints": [
+      "Light flicker intensity must sync with the_great_oz manifestation",
+      "Shadow movement across palace_of_oz surfaces relative to fire position",
+      "The manifestation of the Wizard"
+    ],
+    "prompt_seed": "Authority Single 2: The manifestation of the Wizard. authority_single. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Readable...",
+    "shot_notes": "The manifestation of the Wizard",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH011_SC006"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC006"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC006"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC006"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC006"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC006"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH011",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH011_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH011",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH011_chapter_xi.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH015",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH015_chapter_xv.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH010",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH010_chapter_x.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH011",
+        "canonical_id": "cowardly_lion"
+      }
+    ],
+    "evidence_summary": [
+      "Establish the fourth manifestation of Oz through a high-contrast lighting event. The scene must emphasize the physical mass and trembling vulnerability of the cowardly_lion against the overwhelming light source of the_great_oz to drive the emotional shift f...",
+      "The Cowardly Lion meets the Wizard, who appears as a Ball of Fire. He demands proof of the Witch's death before granting courage.",
+      "Terror $\\rightarrow$ Helplessness.",
+      "cowardly_lion enters a dark, cavernous space illuminated only by flickering light.",
+      "cowardly_lion remains frozen and small under the weight of the demand.",
+      "The Wizard demands proof of death before granting courage.",
+      "the_great_oz | [CH003] Chapter III (query appears in paragraph preview) [CH005] Chapter V (query appears in paragraph preview) [CH006] Chapter VI (query appears in paragraph preview)",
+      "cowardly_lion | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH008/cowardly_lion.md] Physical Description: Large animal; too heavy to be carried by the others. [source:C:/FilmCreator/projects/wizard_of_oz/02_s...",
+      "palace_of_oz | A grandiose emerald-themed sovereign residence featuring monumental ceremonial halls and royal audience chambers. The interior is characterized by large-scale chambers designed to accommodate massive, non-human manifestations of the Wizard. |..."
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "wonder_reveal",
+    "coverage_role": "authority_single",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT001",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "major",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = major"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH011_SC006_SH002_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "814d835eee67c3cee0bf40660d2a22878b141e9c",
+      "created_at_utc": "2026-04-27T17:16:15.530973+00:00",
+      "updated_at_utc": "2026-04-27T20:54:47.892914+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH011_SC006",
+          "version": "d8a7b4e27dbffcefcdd73182469f7c2218663e36"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH011_SC006",
+          "version": "0f97c15522845c7b884bf8797499a674874938a1"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH011_SC006",
+          "version": "b79ac46efe5ee1ee4b87443684a0838b77150c12"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T17:17:25.609817+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "34c59797e92408ca1b0b9f1aedae923b97b388aa"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:53:49.859460+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "814d835eee67c3cee0bf40660d2a22878b141e9c"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:47.893415+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "814d835eee67c3cee0bf40660d2a22878b141e9c"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH003",
+    "scene_id": "CH011_SC006",
+    "chapter_id": "CH011",
+    "shot_order": 3,
+    "previous_shot_id": "SH002",
+    "next_shot_id": "SH004",
+    "primary_subject": "the_great_oz",
+    "secondary_subjects": [
+      "cowardly_lion"
+    ],
+    "shot_moment_summary": "The manifestation of the Wizard",
+    "start_state": "darkness",
+    "end_state": "intense light flare",
+    "action_during_shot": "The manifestation of the Wizard",
+    "action_continues_from": "intense light flare",
+    "action_hands_off_to": "BT002",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "the_great_oz",
+    "visible_secondary_subject_ids": [
+      "cowardly_lion"
+    ],
+    "primary_subject_frame_position": "foreground right within audience_chamber_center",
+    "primary_subject_scale_relation": "preserve readable body-to-environment scale in frame",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "darkness",
+    "subject_relation_summary": "the_great_oz plays against cowardly_lion in the same frame",
+    "required_environment_anchor_1": "audience_chamber_center",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "preserve readable body-to-environment scale in frame",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "lion enters from periphery toward center",
+      "audience_chamber_center",
+      "the_great_oz remains readable within the active playing space.",
+      "cowardly_lion remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the audience_chamber_center.",
+      "Background depth should keep palace_of_oz legible as the location anchor.",
+      "Subject 1: the_great_oz remains visually readable against the environment scale.",
+      "Subject 2: cowardly_lion remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "the_great_oz focuses toward the active scene action."
+    ],
+    "environment_subzone": "audience_chamber_center",
+    "key_visible_environment_features": [
+      "audience_chamber_center",
+      "Chapter-local environment alias match for 'The Throne Room/Audience Chamber' (key_overlap=0, label_overlap=2, context..."
+    ],
+    "continuity_from_previous_shot": "intense light flare",
+    "continuity_to_next_shot": "BT002",
+    "pose_anchor_frame": "darkness",
+    "pose_end_frame": "intense light flare",
+    "shot_title": "Petitioner Group 3: The manifestation of the Wizard",
+    "shot_type": "petitioner_group",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in palace_of_oz featuring the_great_oz, cowardly_lion.",
+    "target_seconds": 7.0,
+    "characters_in_frame": [
+      {
+        "label": "The Great Oz (Ball of Fire)",
+        "canonical_id": "the_great_oz",
+        "display_name": "the_great_oz",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH011/the_great_oz.md",
+        "notes": "Direct registry match for 'the_great_oz'."
+      },
+      {
+        "label": "Cowardly Lion",
+        "canonical_id": "cowardly_lion",
+        "display_name": "cowardly_lion",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH011/cowardly_lion.md",
+        "notes": "Direct registry match for 'cowardly_lion'."
+      }
+    ],
+    "environment": {
+      "label": "The Throne Room/Audience Chamber",
+      "canonical_id": "palace_of_oz",
+      "display_name": "palace_of_oz",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 56,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH011/palace_of_oz.md",
+      "notes": "Chapter-local environment alias match for 'The Throne Room/Audience Chamber' (key_overlap=0, label_overlap=2, context_overlap=4)."
+    },
+    "beat_ids": [
+      "BT001"
+    ],
+    "continuity_constraints": [
+      "Light flicker intensity must sync with the_great_oz manifestation",
+      "Shadow movement across palace_of_oz surfaces relative to fire position",
+      "The manifestation of the Wizard"
+    ],
+    "prompt_seed": "Petitioner Group 3: The manifestation of the Wizard. petitioner_group. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Readable...",
+    "shot_notes": "The manifestation of the Wizard",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH011_SC006"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC006"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC006"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC006"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC006"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC006"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH011",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH011_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH011",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH011_chapter_xi.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH015",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH015_chapter_xv.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH010",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH010_chapter_x.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH011",
+        "canonical_id": "cowardly_lion"
+      }
+    ],
+    "evidence_summary": [
+      "Establish the fourth manifestation of Oz through a high-contrast lighting event. The scene must emphasize the physical mass and trembling vulnerability of the cowardly_lion against the overwhelming light source of the_great_oz to drive the emotional shift f...",
+      "The Cowardly Lion meets the Wizard, who appears as a Ball of Fire. He demands proof of the Witch's death before granting courage.",
+      "Terror $\\rightarrow$ Helplessness.",
+      "cowardly_lion enters a dark, cavernous space illuminated only by flickering light.",
+      "cowardly_lion remains frozen and small under the weight of the demand.",
+      "The Wizard demands proof of death before granting courage.",
+      "the_great_oz | [CH003] Chapter III (query appears in paragraph preview) [CH005] Chapter V (query appears in paragraph preview) [CH006] Chapter VI (query appears in paragraph preview)",
+      "cowardly_lion | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH008/cowardly_lion.md] Physical Description: Large animal; too heavy to be carried by the others. [source:C:/FilmCreator/projects/wizard_of_oz/02_s...",
+      "palace_of_oz | A grandiose emerald-themed sovereign residence featuring monumental ceremonial halls and royal audience chambers. The interior is characterized by large-scale chambers designed to accommodate massive, non-human manifestations of the Wizard. |..."
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "wonder_reveal",
+    "coverage_role": "petitioner_group",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT001",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "major",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = major"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH011_SC006_SH003_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "814d835eee67c3cee0bf40660d2a22878b141e9c",
+      "created_at_utc": "2026-04-27T17:17:25.611820+00:00",
+      "updated_at_utc": "2026-04-27T20:54:47.898914+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH011_SC006",
+          "version": "d8a7b4e27dbffcefcdd73182469f7c2218663e36"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH011_SC006",
+          "version": "0f97c15522845c7b884bf8797499a674874938a1"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH011_SC006",
+          "version": "b79ac46efe5ee1ee4b87443684a0838b77150c12"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T17:18:35.535504+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "34c59797e92408ca1b0b9f1aedae923b97b388aa"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:53:49.866971+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "814d835eee67c3cee0bf40660d2a22878b141e9c"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:47.899414+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "814d835eee67c3cee0bf40660d2a22878b141e9c"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH004",
+    "scene_id": "CH011_SC006",
+    "chapter_id": "CH011",
+    "shot_order": 4,
+    "previous_shot_id": "SH003",
+    "next_shot_id": "SH005",
+    "primary_subject": "the_great_oz",
+    "secondary_subjects": [
+      "cowardly_lion"
+    ],
+    "shot_moment_summary": "The manifestation of the Wizard",
+    "start_state": "darkness",
+    "end_state": "intense light flare",
+    "action_during_shot": "The manifestation of the Wizard",
+    "action_continues_from": "intense light flare",
+    "action_hands_off_to": "BT002",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "the_great_oz",
+    "visible_secondary_subject_ids": [
+      "cowardly_lion"
+    ],
+    "primary_subject_frame_position": "foreground right within audience_chamber_center",
+    "primary_subject_scale_relation": "preserve readable body-to-environment scale in frame",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "darkness",
+    "subject_relation_summary": "the_great_oz plays against cowardly_lion in the same frame",
+    "required_environment_anchor_1": "audience_chamber_center",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "preserve readable body-to-environment scale in frame",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "lion enters from periphery toward center",
+      "audience_chamber_center",
+      "the_great_oz remains readable within the active playing space.",
+      "cowardly_lion remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the audience_chamber_center.",
+      "Background depth should keep palace_of_oz legible as the location anchor.",
+      "Subject 1: the_great_oz remains visually readable against the environment scale.",
+      "Subject 2: cowardly_lion remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "the_great_oz focuses toward the active scene action."
+    ],
+    "environment_subzone": "audience_chamber_center",
+    "key_visible_environment_features": [
+      "audience_chamber_center",
+      "Chapter-local environment alias match for 'The Throne Room/Audience Chamber' (key_overlap=0, label_overlap=2, context..."
+    ],
+    "continuity_from_previous_shot": "intense light flare",
+    "continuity_to_next_shot": "BT002",
+    "pose_anchor_frame": "darkness",
+    "pose_end_frame": "intense light flare",
+    "shot_title": "Crowd Response 4: The manifestation of the Wizard",
+    "shot_type": "crowd_response",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in palace_of_oz featuring the_great_oz, cowardly_lion.",
+    "target_seconds": 7.0,
+    "characters_in_frame": [
+      {
+        "label": "The Great Oz (Ball of Fire)",
+        "canonical_id": "the_great_oz",
+        "display_name": "the_great_oz",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH011/the_great_oz.md",
+        "notes": "Direct registry match for 'the_great_oz'."
+      },
+      {
+        "label": "Cowardly Lion",
+        "canonical_id": "cowardly_lion",
+        "display_name": "cowardly_lion",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH011/cowardly_lion.md",
+        "notes": "Direct registry match for 'cowardly_lion'."
+      }
+    ],
+    "environment": {
+      "label": "The Throne Room/Audience Chamber",
+      "canonical_id": "palace_of_oz",
+      "display_name": "palace_of_oz",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 56,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH011/palace_of_oz.md",
+      "notes": "Chapter-local environment alias match for 'The Throne Room/Audience Chamber' (key_overlap=0, label_overlap=2, context_overlap=4)."
+    },
+    "beat_ids": [
+      "BT001"
+    ],
+    "continuity_constraints": [
+      "Light flicker intensity must sync with the_great_oz manifestation",
+      "Shadow movement across palace_of_oz surfaces relative to fire position",
+      "The manifestation of the Wizard"
+    ],
+    "prompt_seed": "Crowd Response 4: The manifestation of the Wizard. crowd_response. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Readable medi...",
+    "shot_notes": "The manifestation of the Wizard",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH011_SC006"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC006"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC006"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC006"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC006"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC006"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH011",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH011_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH011",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH011_chapter_xi.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH015",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH015_chapter_xv.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH010",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH010_chapter_x.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH011",
+        "canonical_id": "cowardly_lion"
+      }
+    ],
+    "evidence_summary": [
+      "Establish the fourth manifestation of Oz through a high-contrast lighting event. The scene must emphasize the physical mass and trembling vulnerability of the cowardly_lion against the overwhelming light source of the_great_oz to drive the emotional shift f...",
+      "The Cowardly Lion meets the Wizard, who appears as a Ball of Fire. He demands proof of the Witch's death before granting courage.",
+      "Terror $\\rightarrow$ Helplessness.",
+      "cowardly_lion enters a dark, cavernous space illuminated only by flickering light.",
+      "cowardly_lion remains frozen and small under the weight of the demand.",
+      "The Wizard demands proof of death before granting courage.",
+      "the_great_oz | [CH003] Chapter III (query appears in paragraph preview) [CH005] Chapter V (query appears in paragraph preview) [CH006] Chapter VI (query appears in paragraph preview)",
+      "cowardly_lion | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH008/cowardly_lion.md] Physical Description: Large animal; too heavy to be carried by the others. [source:C:/FilmCreator/projects/wizard_of_oz/02_s...",
+      "palace_of_oz | A grandiose emerald-themed sovereign residence featuring monumental ceremonial halls and royal audience chambers. The interior is characterized by large-scale chambers designed to accommodate massive, non-human manifestations of the Wizard. |..."
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "wonder_reveal",
+    "coverage_role": "crowd_response",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT001",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "major",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = major"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH011_SC006_SH004_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "814d835eee67c3cee0bf40660d2a22878b141e9c",
+      "created_at_utc": "2026-04-27T20:53:49.867972+00:00",
+      "updated_at_utc": "2026-04-27T20:54:47.904422+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH011_SC006",
+          "version": "d8a7b4e27dbffcefcdd73182469f7c2218663e36"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH011_SC006",
+          "version": "0f97c15522845c7b884bf8797499a674874938a1"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH011_SC006",
+          "version": "b79ac46efe5ee1ee4b87443684a0838b77150c12"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:53:49.868972+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "814d835eee67c3cee0bf40660d2a22878b141e9c"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:47.905425+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "814d835eee67c3cee0bf40660d2a22878b141e9c"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH005",
+    "scene_id": "CH011_SC006",
+    "chapter_id": "CH011",
+    "shot_order": 5,
+    "previous_shot_id": "SH004",
+    "next_shot_id": "SH006",
+    "primary_subject": "the_great_oz",
+    "secondary_subjects": [
+      "cowardly_lion"
+    ],
+    "shot_moment_summary": "The manifestation of the Wizard",
+    "start_state": "darkness",
+    "end_state": "intense light flare",
+    "action_during_shot": "The manifestation of the Wizard",
+    "action_continues_from": "intense light flare",
+    "action_hands_off_to": "BT002",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "the_great_oz",
+    "visible_secondary_subject_ids": [
+      "cowardly_lion"
+    ],
+    "primary_subject_frame_position": "foreground right within audience_chamber_center",
+    "primary_subject_scale_relation": "preserve readable body-to-environment scale in frame",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "darkness",
+    "subject_relation_summary": "the_great_oz plays against cowardly_lion in the same frame",
+    "required_environment_anchor_1": "audience_chamber_center",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "preserve readable body-to-environment scale in frame",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "lion enters from periphery toward center",
+      "audience_chamber_center",
+      "the_great_oz remains readable within the active playing space.",
+      "cowardly_lion remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the audience_chamber_center.",
+      "Background depth should keep palace_of_oz legible as the location anchor.",
+      "Subject 1: the_great_oz remains visually readable against the environment scale.",
+      "Subject 2: cowardly_lion remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "the_great_oz focuses toward the active scene action."
+    ],
+    "environment_subzone": "audience_chamber_center",
+    "key_visible_environment_features": [
+      "audience_chamber_center",
+      "Chapter-local environment alias match for 'The Throne Room/Audience Chamber' (key_overlap=0, label_overlap=2, context..."
+    ],
+    "continuity_from_previous_shot": "intense light flare",
+    "continuity_to_next_shot": "BT002",
+    "pose_anchor_frame": "darkness",
+    "pose_end_frame": "intense light flare",
+    "shot_title": "Symbol Insert 5: The manifestation of the Wizard",
+    "shot_type": "symbol_insert",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in palace_of_oz featuring the_great_oz, cowardly_lion.",
+    "target_seconds": 5.4,
+    "characters_in_frame": [
+      {
+        "label": "The Great Oz (Ball of Fire)",
+        "canonical_id": "the_great_oz",
+        "display_name": "the_great_oz",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH011/the_great_oz.md",
+        "notes": "Direct registry match for 'the_great_oz'."
+      },
+      {
+        "label": "Cowardly Lion",
+        "canonical_id": "cowardly_lion",
+        "display_name": "cowardly_lion",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH011/cowardly_lion.md",
+        "notes": "Direct registry match for 'cowardly_lion'."
+      }
+    ],
+    "environment": {
+      "label": "The Throne Room/Audience Chamber",
+      "canonical_id": "palace_of_oz",
+      "display_name": "palace_of_oz",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 56,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH011/palace_of_oz.md",
+      "notes": "Chapter-local environment alias match for 'The Throne Room/Audience Chamber' (key_overlap=0, label_overlap=2, context_overlap=4)."
+    },
+    "beat_ids": [
+      "BT001"
+    ],
+    "continuity_constraints": [
+      "Light flicker intensity must sync with the_great_oz manifestation",
+      "Shadow movement across palace_of_oz surfaces relative to fire position",
+      "The manifestation of the Wizard"
+    ],
+    "prompt_seed": "Symbol Insert 5: The manifestation of the Wizard. symbol_insert. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Readable medium...",
+    "shot_notes": "The manifestation of the Wizard",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH011_SC006"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC006"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC006"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC006"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC006"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC006"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH011",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH011_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH011",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH011_chapter_xi.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH015",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH015_chapter_xv.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH010",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH010_chapter_x.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH011",
+        "canonical_id": "cowardly_lion"
+      }
+    ],
+    "evidence_summary": [
+      "Establish the fourth manifestation of Oz through a high-contrast lighting event. The scene must emphasize the physical mass and trembling vulnerability of the cowardly_lion against the overwhelming light source of the_great_oz to drive the emotional shift f...",
+      "The Cowardly Lion meets the Wizard, who appears as a Ball of Fire. He demands proof of the Witch's death before granting courage.",
+      "Terror $\\rightarrow$ Helplessness.",
+      "cowardly_lion enters a dark, cavernous space illuminated only by flickering light.",
+      "cowardly_lion remains frozen and small under the weight of the demand.",
+      "The Wizard demands proof of death before granting courage.",
+      "the_great_oz | [CH003] Chapter III (query appears in paragraph preview) [CH005] Chapter V (query appears in paragraph preview) [CH006] Chapter VI (query appears in paragraph preview)",
+      "cowardly_lion | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH008/cowardly_lion.md] Physical Description: Large animal; too heavy to be carried by the others. [source:C:/FilmCreator/projects/wizard_of_oz/02_s...",
+      "palace_of_oz | A grandiose emerald-themed sovereign residence featuring monumental ceremonial halls and royal audience chambers. The interior is characterized by large-scale chambers designed to accommodate massive, non-human manifestations of the Wizard. |..."
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "wonder_reveal",
+    "coverage_role": "symbol_insert",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT001",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "major",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = major"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH011_SC006_SH005_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "814d835eee67c3cee0bf40660d2a22878b141e9c",
+      "created_at_utc": "2026-04-27T20:53:49.869975+00:00",
+      "updated_at_utc": "2026-04-27T20:54:47.910425+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH011_SC006",
+          "version": "d8a7b4e27dbffcefcdd73182469f7c2218663e36"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH011_SC006",
+          "version": "0f97c15522845c7b884bf8797499a674874938a1"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH011_SC006",
+          "version": "b79ac46efe5ee1ee4b87443684a0838b77150c12"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:53:49.870979+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "814d835eee67c3cee0bf40660d2a22878b141e9c"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:47.911425+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "814d835eee67c3cee0bf40660d2a22878b141e9c"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH006",
+    "scene_id": "CH011_SC006",
+    "chapter_id": "CH011",
+    "shot_order": 6,
+    "previous_shot_id": "SH005",
+    "next_shot_id": "SH007",
+    "primary_subject": "the_great_oz",
+    "secondary_subjects": [
+      "cowardly_lion"
+    ],
+    "shot_moment_summary": "The manifestation of the Wizard",
+    "start_state": "darkness",
+    "end_state": "intense light flare",
+    "action_during_shot": "The manifestation of the Wizard",
+    "action_continues_from": "intense light flare",
+    "action_hands_off_to": "BT002",
+    "shot_size": "close_up",
+    "camera_angle": "eye_level",
+    "lens_family": "portrait",
+    "camera_motion": "push_in",
+    "zoom_behavior": "subtle_in",
+    "focus_strategy": "shallow_subject",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "the_great_oz",
+    "visible_secondary_subject_ids": [
+      "cowardly_lion"
+    ],
+    "primary_subject_frame_position": "foreground inside audience_chamber_center",
+    "primary_subject_scale_relation": "preserve readable body-to-environment scale in frame",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "darkness",
+    "subject_relation_summary": "the_great_oz plays against cowardly_lion in the same frame",
+    "required_environment_anchor_1": "audience_chamber_center",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "preserve readable body-to-environment scale in frame",
+    "camera_package_description": "close-up, eye level, portrait lens, push in, zoom subtle in, shallow subject, hard directional",
+    "subject_blocking": [
+      "lion enters from periphery toward center",
+      "audience_chamber_center",
+      "the_great_oz remains readable within the active playing space.",
+      "cowardly_lion remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the audience_chamber_center.",
+      "Background depth should keep palace_of_oz legible as the location anchor.",
+      "Subject 1: the_great_oz remains visually readable against the environment scale.",
+      "Subject 2: cowardly_lion remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "the_great_oz focuses toward the active scene action."
+    ],
+    "environment_subzone": "audience_chamber_center",
+    "key_visible_environment_features": [
+      "audience_chamber_center",
+      "Chapter-local environment alias match for 'The Throne Room/Audience Chamber' (key_overlap=0, label_overlap=2, context..."
+    ],
+    "continuity_from_previous_shot": "intense light flare",
+    "continuity_to_next_shot": "BT002",
+    "pose_anchor_frame": "darkness",
+    "pose_end_frame": "intense light flare",
+    "shot_title": "Reaction Closeup 6: The manifestation of the Wizard",
+    "shot_type": "reaction_closeup",
+    "camera_description": "Close framing that isolates reaction and emotional emphasis.",
+    "composition": "Intimate composition that isolates the_great_oz, cowardly_lion against palace_of_oz to capture the beat's emotional turn.",
+    "target_seconds": 7.0,
+    "characters_in_frame": [
+      {
+        "label": "The Great Oz (Ball of Fire)",
+        "canonical_id": "the_great_oz",
+        "display_name": "the_great_oz",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH011/the_great_oz.md",
+        "notes": "Direct registry match for 'the_great_oz'."
+      },
+      {
+        "label": "Cowardly Lion",
+        "canonical_id": "cowardly_lion",
+        "display_name": "cowardly_lion",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH011/cowardly_lion.md",
+        "notes": "Direct registry match for 'cowardly_lion'."
+      }
+    ],
+    "environment": {
+      "label": "The Throne Room/Audience Chamber",
+      "canonical_id": "palace_of_oz",
+      "display_name": "palace_of_oz",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 56,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH011/palace_of_oz.md",
+      "notes": "Chapter-local environment alias match for 'The Throne Room/Audience Chamber' (key_overlap=0, label_overlap=2, context_overlap=4)."
+    },
+    "beat_ids": [
+      "BT001"
+    ],
+    "continuity_constraints": [
+      "Light flicker intensity must sync with the_great_oz manifestation",
+      "Shadow movement across palace_of_oz surfaces relative to fire position",
+      "The manifestation of the Wizard"
+    ],
+    "prompt_seed": "Reaction Closeup 6: The manifestation of the Wizard. reaction_closeup. size=close_up. angle=eye_level. lens=portrait. motion=push_in. zoom=subtle_in. focus=shallow_subject. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Close framing that isolates reaction and emotional emph...",
+    "shot_notes": "The manifestation of the Wizard",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH011_SC006"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC006"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC006"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC006"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC006"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC006"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH011",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH011_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH011",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH011_chapter_xi.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH015",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH015_chapter_xv.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH010",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH010_chapter_x.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH011",
+        "canonical_id": "cowardly_lion"
+      }
+    ],
+    "evidence_summary": [
+      "Establish the fourth manifestation of Oz through a high-contrast lighting event. The scene must emphasize the physical mass and trembling vulnerability of the cowardly_lion against the overwhelming light source of the_great_oz to drive the emotional shift f...",
+      "The Cowardly Lion meets the Wizard, who appears as a Ball of Fire. He demands proof of the Witch's death before granting courage.",
+      "Terror $\\rightarrow$ Helplessness.",
+      "cowardly_lion enters a dark, cavernous space illuminated only by flickering light.",
+      "cowardly_lion remains frozen and small under the weight of the demand.",
+      "The Wizard demands proof of death before granting courage.",
+      "the_great_oz | [CH003] Chapter III (query appears in paragraph preview) [CH005] Chapter V (query appears in paragraph preview) [CH006] Chapter VI (query appears in paragraph preview)",
+      "cowardly_lion | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH008/cowardly_lion.md] Physical Description: Large animal; too heavy to be carried by the others. [source:C:/FilmCreator/projects/wizard_of_oz/02_s...",
+      "palace_of_oz | A grandiose emerald-themed sovereign residence featuring monumental ceremonial halls and royal audience chambers. The interior is characterized by large-scale chambers designed to accommodate massive, non-human manifestations of the Wizard. |..."
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "wonder_reveal",
+    "coverage_role": "decision_closeup",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT001",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "major",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = major"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH011_SC006_SH006_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "814d835eee67c3cee0bf40660d2a22878b141e9c",
+      "created_at_utc": "2026-04-27T20:53:49.872480+00:00",
+      "updated_at_utc": "2026-04-27T20:54:47.916425+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH011_SC006",
+          "version": "d8a7b4e27dbffcefcdd73182469f7c2218663e36"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH011_SC006",
+          "version": "0f97c15522845c7b884bf8797499a674874938a1"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH011_SC006",
+          "version": "b79ac46efe5ee1ee4b87443684a0838b77150c12"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:53:49.872979+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "814d835eee67c3cee0bf40660d2a22878b141e9c"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:47.917425+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "814d835eee67c3cee0bf40660d2a22878b141e9c"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH007",
+    "scene_id": "CH011_SC006",
+    "chapter_id": "CH011",
+    "shot_order": 7,
+    "previous_shot_id": "SH006",
+    "next_shot_id": "SH008",
+    "primary_subject": "the_great_oz",
+    "secondary_subjects": [
+      "cowardly_lion"
+    ],
+    "shot_moment_summary": "The manifestation of the Wizard",
+    "start_state": "darkness",
+    "end_state": "intense light flare",
+    "action_during_shot": "The manifestation of the Wizard",
+    "action_continues_from": "intense light flare",
+    "action_hands_off_to": "BT002",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "the_great_oz",
+    "visible_secondary_subject_ids": [
+      "cowardly_lion"
+    ],
+    "primary_subject_frame_position": "foreground right within audience_chamber_center",
+    "primary_subject_scale_relation": "preserve readable body-to-environment scale in frame",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "darkness",
+    "subject_relation_summary": "the_great_oz plays against cowardly_lion in the same frame",
+    "required_environment_anchor_1": "audience_chamber_center",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "preserve readable body-to-environment scale in frame",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "lion enters from periphery toward center",
+      "audience_chamber_center",
+      "the_great_oz remains readable within the active playing space.",
+      "cowardly_lion remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the audience_chamber_center.",
+      "Background depth should keep palace_of_oz legible as the location anchor.",
+      "Subject 1: the_great_oz remains visually readable against the environment scale.",
+      "Subject 2: cowardly_lion remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "the_great_oz focuses toward the active scene action."
+    ],
+    "environment_subzone": "audience_chamber_center",
+    "key_visible_environment_features": [
+      "audience_chamber_center",
+      "Chapter-local environment alias match for 'The Throne Room/Audience Chamber' (key_overlap=0, label_overlap=2, context..."
+    ],
+    "continuity_from_previous_shot": "intense light flare",
+    "continuity_to_next_shot": "BT002",
+    "pose_anchor_frame": "darkness",
+    "pose_end_frame": "intense light flare",
+    "shot_title": "Scale Proof Wide 7: The manifestation of the Wizard",
+    "shot_type": "scale_proof_wide",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in palace_of_oz featuring the_great_oz, cowardly_lion.",
+    "target_seconds": 10.8,
+    "characters_in_frame": [
+      {
+        "label": "The Great Oz (Ball of Fire)",
+        "canonical_id": "the_great_oz",
+        "display_name": "the_great_oz",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH011/the_great_oz.md",
+        "notes": "Direct registry match for 'the_great_oz'."
+      },
+      {
+        "label": "Cowardly Lion",
+        "canonical_id": "cowardly_lion",
+        "display_name": "cowardly_lion",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH011/cowardly_lion.md",
+        "notes": "Direct registry match for 'cowardly_lion'."
+      }
+    ],
+    "environment": {
+      "label": "The Throne Room/Audience Chamber",
+      "canonical_id": "palace_of_oz",
+      "display_name": "palace_of_oz",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 56,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH011/palace_of_oz.md",
+      "notes": "Chapter-local environment alias match for 'The Throne Room/Audience Chamber' (key_overlap=0, label_overlap=2, context_overlap=4)."
+    },
+    "beat_ids": [
+      "BT001"
+    ],
+    "continuity_constraints": [
+      "Light flicker intensity must sync with the_great_oz manifestation",
+      "Shadow movement across palace_of_oz surfaces relative to fire position",
+      "The manifestation of the Wizard"
+    ],
+    "prompt_seed": "Scale Proof Wide 7: The manifestation of the Wizard. scale_proof_wide. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Readable...",
+    "shot_notes": "The manifestation of the Wizard",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH011_SC006"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC006"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC006"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC006"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC006"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC006"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH011",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH011_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH011",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH011_chapter_xi.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH015",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH015_chapter_xv.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH010",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH010_chapter_x.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH011",
+        "canonical_id": "cowardly_lion"
+      }
+    ],
+    "evidence_summary": [
+      "Establish the fourth manifestation of Oz through a high-contrast lighting event. The scene must emphasize the physical mass and trembling vulnerability of the cowardly_lion against the overwhelming light source of the_great_oz to drive the emotional shift f...",
+      "The Cowardly Lion meets the Wizard, who appears as a Ball of Fire. He demands proof of the Witch's death before granting courage.",
+      "Terror $\\rightarrow$ Helplessness.",
+      "cowardly_lion enters a dark, cavernous space illuminated only by flickering light.",
+      "cowardly_lion remains frozen and small under the weight of the demand.",
+      "The Wizard demands proof of death before granting courage.",
+      "the_great_oz | [CH003] Chapter III (query appears in paragraph preview) [CH005] Chapter V (query appears in paragraph preview) [CH006] Chapter VI (query appears in paragraph preview)",
+      "cowardly_lion | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH008/cowardly_lion.md] Physical Description: Large animal; too heavy to be carried by the others. [source:C:/FilmCreator/projects/wizard_of_oz/02_s...",
+      "palace_of_oz | A grandiose emerald-themed sovereign residence featuring monumental ceremonial halls and royal audience chambers. The interior is characterized by large-scale chambers designed to accommodate massive, non-human manifestations of the Wizard. |..."
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "wonder_reveal",
+    "coverage_role": "scale_proof_wide",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT001",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "major",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = major"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH011_SC006_SH007_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "814d835eee67c3cee0bf40660d2a22878b141e9c",
+      "created_at_utc": "2026-04-27T20:53:49.873978+00:00",
+      "updated_at_utc": "2026-04-27T20:54:47.922935+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH011_SC006",
+          "version": "d8a7b4e27dbffcefcdd73182469f7c2218663e36"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH011_SC006",
+          "version": "0f97c15522845c7b884bf8797499a674874938a1"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH011_SC006",
+          "version": "b79ac46efe5ee1ee4b87443684a0838b77150c12"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:53:49.874480+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "814d835eee67c3cee0bf40660d2a22878b141e9c"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:47.923936+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "814d835eee67c3cee0bf40660d2a22878b141e9c"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH008",
+    "scene_id": "CH011_SC006",
+    "chapter_id": "CH011",
+    "shot_order": 8,
+    "previous_shot_id": "SH007",
+    "next_shot_id": "SH009",
     "primary_subject": "cowardly_lion",
     "secondary_subjects": [
       "the_great_oz"
@@ -226,7 +1682,7 @@
     "start_state": "startled stance",
     "end_state": "cowering position",
     "action_during_shot": "trembling",
-    "action_continues_from": "blinding light flare",
+    "action_continues_from": "intense light flare",
     "action_hands_off_to": "BT003",
     "shot_size": "close_up",
     "camera_angle": "eye_level",
@@ -270,17 +1726,18 @@
     ],
     "environment_subzone": "audience_chamber_center",
     "key_visible_environment_features": [
-      "audience_chamber_center"
+      "audience_chamber_center",
+      "Chapter-local environment alias match for 'The Throne Room/Audience Chamber' (key_overlap=0, label_overlap=2, context..."
     ],
-    "continuity_from_previous_shot": "blinding light flare",
+    "continuity_from_previous_shot": "intense light flare",
     "continuity_to_next_shot": "BT003",
     "pose_anchor_frame": "startled stance",
     "pose_end_frame": "cowering position",
-    "shot_title": "Reaction Closeup 2: The demand for proof",
-    "shot_type": "reaction_closeup",
-    "camera_description": "Close framing that isolates reaction and emotional emphasis.",
-    "composition": "Intimate composition that isolates cowardly_lion, the_great_oz against palace_of_oz to capture the beat's emotional turn.",
-    "target_seconds": 5.3,
+    "shot_title": "Handoff Medium 8: The demand for proof",
+    "shot_type": "handoff_medium",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in palace_of_oz featuring cowardly_lion, the_great_oz.",
+    "target_seconds": 7.0,
     "characters_in_frame": [
       {
         "label": "Cowardly Lion",
@@ -318,9 +1775,10 @@
     ],
     "continuity_constraints": [
       "Light flicker intensity must sync with the_great_oz manifestation",
-      "Shadow movement across palace_of_oz surfaces relative to fire position"
+      "Shadow movement across palace_of_oz surfaces relative to fire position",
+      "The demand for proof"
     ],
-    "prompt_seed": "Reaction Closeup 2: The demand for proof. reaction_closeup. size=close_up. angle=eye_level. lens=portrait. motion=locked_off. zoom=subtle_in. focus=shallow_subject. lighting=high_contrast_ceremonial. visibility=on_screen. subject_angle=front_three_quarter_left. Close framing that isolates reaction and emotional emph...",
+    "prompt_seed": "Handoff Medium 8: The demand for proof. handoff_medium. size=close_up. angle=eye_level. lens=portrait. motion=locked_off. zoom=subtle_in. focus=shallow_subject. lighting=high_contrast_ceremonial. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Re...",
     "shot_notes": "The demand for proof",
     "evidence_refs": [
       {
@@ -389,13 +1847,29 @@
       "cowardly_lion | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH008/cowardly_lion.md] Physical Description: Large animal; too heavy to be carried by the others. [source:C:/FilmCreator/projects/wizard_of_oz/02_s...",
       "palace_of_oz | A grandiose emerald-themed sovereign residence featuring monumental ceremonial halls and royal audience chambers. The interior is characterized by large-scale chambers designed to accommodate massive, non-human manifestations of the Wizard. |..."
     ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "wonder_reveal",
+    "coverage_role": "handoff_medium",
+    "beat_type": "transition_handoff",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT002",
+      "beat_type": "transition_handoff",
+      "importance": "major",
+      "confidence": 0.55,
+      "reasons": [
+        "importance = major"
+      ]
+    },
     "metadata": {
-      "artifact_id": "CH011_SC006_SH002_SHOT_PACKAGE",
+      "artifact_id": "CH011_SC006_SH008_SHOT_PACKAGE",
       "artifact_type": "shot_package",
       "status": "generated",
-      "source_fingerprint": "34c59797e92408ca1b0b9f1aedae923b97b388aa",
-      "created_at_utc": "2026-04-27T17:16:15.530973+00:00",
-      "updated_at_utc": "2026-04-27T17:16:15.530973+00:00",
+      "source_fingerprint": "814d835eee67c3cee0bf40660d2a22878b141e9c",
+      "created_at_utc": "2026-04-27T20:53:49.875980+00:00",
+      "updated_at_utc": "2026-04-27T20:54:47.928936+00:00",
       "upstream_dependencies": [
         {
           "dependency_type": "scene_contract",
@@ -410,27 +1884,267 @@
         {
           "dependency_type": "shot_blueprints",
           "dependency_id": "CH011_SC006",
-          "version": "53497d4668d9aaed7d0c9908f1582cbc69ba2431"
+          "version": "b79ac46efe5ee1ee4b87443684a0838b77150c12"
         }
       ],
       "locked_fields": {},
       "manual_overrides": {},
       "revision_history": [
         {
-          "timestamp_utc": "2026-04-27T17:17:25.609817+00:00",
+          "timestamp_utc": "2026-04-27T20:53:49.876479+00:00",
           "action": "synthesized",
-          "source_fingerprint": "34c59797e92408ca1b0b9f1aedae923b97b388aa"
+          "source_fingerprint": "814d835eee67c3cee0bf40660d2a22878b141e9c"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:47.929936+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "814d835eee67c3cee0bf40660d2a22878b141e9c"
         }
       ]
     }
   },
   {
-    "shot_id": "SH003",
+    "shot_id": "SH009",
     "scene_id": "CH011_SC006",
     "chapter_id": "CH011",
-    "shot_order": 3,
-    "previous_shot_id": "SH002",
-    "next_shot_id": "",
+    "shot_order": 9,
+    "previous_shot_id": "SH008",
+    "next_shot_id": "SH010",
+    "primary_subject": "the_great_oz",
+    "secondary_subjects": [
+      "cowardly_lion"
+    ],
+    "shot_moment_summary": "The demand for proof",
+    "start_state": "fire stabilizes",
+    "end_state": "lion freezes",
+    "action_during_shot": "The demand for proof",
+    "action_continues_from": "cowering position",
+    "action_hands_off_to": "BT003",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "the_great_oz",
+    "visible_secondary_subject_ids": [
+      "cowardly_lion"
+    ],
+    "primary_subject_frame_position": "foreground right within audience_chamber_center",
+    "primary_subject_scale_relation": "preserve readable body-to-environment scale in frame",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "fire stabilizes",
+    "subject_relation_summary": "the_great_oz plays against cowardly_lion in the same frame",
+    "required_environment_anchor_1": "audience_chamber_center",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "preserve readable body-to-environment scale in frame",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "lion stands before the light",
+      "center chamber",
+      "the_great_oz remains readable within the active playing space.",
+      "cowardly_lion remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the audience_chamber_center.",
+      "Background depth should keep palace_of_oz legible as the location anchor.",
+      "Subject 1: the_great_oz remains visually readable against the environment scale.",
+      "Subject 2: cowardly_lion remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "the_great_oz focuses toward the active scene action."
+    ],
+    "environment_subzone": "audience_chamber_center",
+    "key_visible_environment_features": [
+      "audience_chamber_center",
+      "Chapter-local environment alias match for 'The Throne Room/Audience Chamber' (key_overlap=0, label_overlap=2, context..."
+    ],
+    "continuity_from_previous_shot": "cowering position",
+    "continuity_to_next_shot": "BT003",
+    "pose_anchor_frame": "fire stabilizes",
+    "pose_end_frame": "lion freezes",
+    "shot_title": "Transition Wide 9: The demand for proof",
+    "shot_type": "transition_wide",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in palace_of_oz featuring the_great_oz, cowardly_lion.",
+    "target_seconds": 10.8,
+    "characters_in_frame": [
+      {
+        "label": "The Great Oz (Ball of Fire)",
+        "canonical_id": "the_great_oz",
+        "display_name": "the_great_oz",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH011/the_great_oz.md",
+        "notes": "Direct registry match for 'the_great_oz'."
+      },
+      {
+        "label": "Cowardly Lion",
+        "canonical_id": "cowardly_lion",
+        "display_name": "cowardly_lion",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH011/cowardly_lion.md",
+        "notes": "Direct registry match for 'cowardly_lion'."
+      }
+    ],
+    "environment": {
+      "label": "The Throne Room/Audience Chamber",
+      "canonical_id": "palace_of_oz",
+      "display_name": "palace_of_oz",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 56,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH011/palace_of_oz.md",
+      "notes": "Chapter-local environment alias match for 'The Throne Room/Audience Chamber' (key_overlap=0, label_overlap=2, context_overlap=4)."
+    },
+    "beat_ids": [
+      "BT002"
+    ],
+    "continuity_constraints": [
+      "Light flicker intensity must sync with the_great_oz manifestation",
+      "Shadow movement across palace_of_oz surfaces relative to fire position",
+      "The demand for proof"
+    ],
+    "prompt_seed": "Transition Wide 9: The demand for proof. transition_wide. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Readable medium compos...",
+    "shot_notes": "The demand for proof",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH011_SC006"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC006"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC006"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC006"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC006"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC006"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH011",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH011_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH011",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH011_chapter_xi.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH015",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH015_chapter_xv.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH010",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH010_chapter_x.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH011",
+        "canonical_id": "cowardly_lion"
+      }
+    ],
+    "evidence_summary": [
+      "Establish the fourth manifestation of Oz through a high-contrast lighting event. The scene must emphasize the physical mass and trembling vulnerability of the cowardly_lion against the overwhelming light source of the_great_oz to drive the emotional shift f...",
+      "The Cowardly Lion meets the Wizard, who appears as a Ball of Fire. He demands proof of the Witch's death before granting courage.",
+      "Terror $\\rightarrow$ Helplessness.",
+      "cowardly_lion enters a dark, cavernous space illuminated only by flickering light.",
+      "cowardly_lion remains frozen and small under the weight of the demand.",
+      "The Wizard demands proof of death before granting courage.",
+      "the_great_oz | [CH003] Chapter III (query appears in paragraph preview) [CH005] Chapter V (query appears in paragraph preview) [CH006] Chapter VI (query appears in paragraph preview)",
+      "cowardly_lion | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH008/cowardly_lion.md] Physical Description: Large animal; too heavy to be carried by the others. [source:C:/FilmCreator/projects/wizard_of_oz/02_s...",
+      "palace_of_oz | A grandiose emerald-themed sovereign residence featuring monumental ceremonial halls and royal audience chambers. The interior is characterized by large-scale chambers designed to accommodate massive, non-human manifestations of the Wizard. |..."
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "wonder_reveal",
+    "coverage_role": "transition_wide",
+    "beat_type": "transition_handoff",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT002",
+      "beat_type": "transition_handoff",
+      "importance": "major",
+      "confidence": 0.55,
+      "reasons": [
+        "importance = major"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH011_SC006_SH009_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "814d835eee67c3cee0bf40660d2a22878b141e9c",
+      "created_at_utc": "2026-04-27T20:53:49.877479+00:00",
+      "updated_at_utc": "2026-04-27T20:54:47.934936+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH011_SC006",
+          "version": "d8a7b4e27dbffcefcdd73182469f7c2218663e36"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH011_SC006",
+          "version": "0f97c15522845c7b884bf8797499a674874938a1"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH011_SC006",
+          "version": "b79ac46efe5ee1ee4b87443684a0838b77150c12"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:53:49.877979+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "814d835eee67c3cee0bf40660d2a22878b141e9c"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:47.935936+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "814d835eee67c3cee0bf40660d2a22878b141e9c"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH010",
+    "scene_id": "CH011_SC006",
+    "chapter_id": "CH011",
+    "shot_order": 10,
+    "previous_shot_id": "SH009",
+    "next_shot_id": "SH011",
     "primary_subject": "cowardly_lion",
     "secondary_subjects": [
       "the_great_oz"
@@ -439,14 +2153,14 @@
     "start_state": "lion trembling",
     "end_state": "lion looking helpless",
     "action_during_shot": "The realization of stakes",
-    "action_continues_from": "cowering position",
+    "action_continues_from": "lion freezes",
     "action_hands_off_to": "end_scene",
-    "shot_size": "close_up",
+    "shot_size": "medium",
     "camera_angle": "eye_level",
-    "lens_family": "portrait",
-    "camera_motion": "push_in",
-    "zoom_behavior": "subtle_in",
-    "focus_strategy": "shallow_subject",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
     "lighting_style": "hard_directional",
     "subject_visibility": "on_screen",
     "narration_mode": "none",
@@ -455,7 +2169,7 @@
     "visible_secondary_subject_ids": [
       "the_great_oz"
     ],
-    "primary_subject_frame_position": "foreground inside audience_chamber_center",
+    "primary_subject_frame_position": "foreground right within audience_chamber_center",
     "primary_subject_scale_relation": "preserve readable body-to-environment scale in frame",
     "primary_subject_facing_direction": "front three-quarter left toward the scene action",
     "primary_subject_pose_description": "lion trembling",
@@ -464,7 +2178,7 @@
     "required_subject_anchor_1": "lion lowers head",
     "required_celestial_anchor_1": "",
     "required_scale_proof_detail": "preserve readable body-to-environment scale in frame",
-    "camera_package_description": "close-up, eye level, portrait lens, push in, zoom subtle in, shallow subject, hard directional",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
     "subject_blocking": [
       "lion lowers head",
       "center chamber",
@@ -482,17 +2196,18 @@
     ],
     "environment_subzone": "audience_chamber_center",
     "key_visible_environment_features": [
-      "audience_chamber_center"
+      "audience_chamber_center",
+      "Chapter-local environment alias match for 'The Throne Room/Audience Chamber' (key_overlap=0, label_overlap=2, context..."
     ],
-    "continuity_from_previous_shot": "cowering position",
+    "continuity_from_previous_shot": "lion freezes",
     "continuity_to_next_shot": "end_scene",
     "pose_anchor_frame": "lion trembling",
     "pose_end_frame": "lion looking helpless",
-    "shot_title": "Reaction Closeup 3: The realization of stakes",
-    "shot_type": "reaction_closeup",
-    "camera_description": "Close framing that isolates reaction and emotional emphasis.",
-    "composition": "Intimate composition that isolates cowardly_lion, the_great_oz against palace_of_oz to capture the beat's emotional turn.",
-    "target_seconds": 5.1,
+    "shot_title": "Ceremonial Master 10: The realization of stakes",
+    "shot_type": "ceremonial_master",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in palace_of_oz featuring cowardly_lion, the_great_oz.",
+    "target_seconds": 10.8,
     "characters_in_frame": [
       {
         "label": "Cowardly Lion",
@@ -530,9 +2245,10 @@
     ],
     "continuity_constraints": [
       "Light flicker intensity must sync with the_great_oz manifestation",
-      "Shadow movement across palace_of_oz surfaces relative to fire position"
+      "Shadow movement across palace_of_oz surfaces relative to fire position",
+      "The realization of stakes"
     ],
-    "prompt_seed": "Reaction Closeup 3: The realization of stakes. reaction_closeup. size=close_up. angle=eye_level. lens=portrait. motion=push_in. zoom=subtle_in. focus=shallow_subject. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Close framing that isolates reaction and emotional emphasis....",
+    "prompt_seed": "Ceremonial Master 10: The realization of stakes. ceremonial_master. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Readable med...",
     "shot_notes": "The realization of stakes",
     "evidence_refs": [
       {
@@ -601,13 +2317,30 @@
       "cowardly_lion | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH008/cowardly_lion.md] Physical Description: Large animal; too heavy to be carried by the others. [source:C:/FilmCreator/projects/wizard_of_oz/02_s...",
       "palace_of_oz | A grandiose emerald-themed sovereign residence featuring monumental ceremonial halls and royal audience chambers. The interior is characterized by large-scale chambers designed to accommodate massive, non-human manifestations of the Wizard. |..."
     ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "wonder_reveal",
+    "coverage_role": "ceremonial_master",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT003",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "major",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = major"
+      ]
+    },
     "metadata": {
-      "artifact_id": "CH011_SC006_SH003_SHOT_PACKAGE",
+      "artifact_id": "CH011_SC006_SH010_SHOT_PACKAGE",
       "artifact_type": "shot_package",
       "status": "generated",
-      "source_fingerprint": "34c59797e92408ca1b0b9f1aedae923b97b388aa",
-      "created_at_utc": "2026-04-27T17:17:25.611820+00:00",
-      "updated_at_utc": "2026-04-27T17:17:25.611820+00:00",
+      "source_fingerprint": "814d835eee67c3cee0bf40660d2a22878b141e9c",
+      "created_at_utc": "2026-04-27T20:53:49.878980+00:00",
+      "updated_at_utc": "2026-04-27T20:54:47.940947+00:00",
       "upstream_dependencies": [
         {
           "dependency_type": "scene_contract",
@@ -622,16 +2355,1437 @@
         {
           "dependency_type": "shot_blueprints",
           "dependency_id": "CH011_SC006",
-          "version": "53497d4668d9aaed7d0c9908f1582cbc69ba2431"
+          "version": "b79ac46efe5ee1ee4b87443684a0838b77150c12"
         }
       ],
       "locked_fields": {},
       "manual_overrides": {},
       "revision_history": [
         {
-          "timestamp_utc": "2026-04-27T17:18:35.535504+00:00",
+          "timestamp_utc": "2026-04-27T20:53:49.879479+00:00",
           "action": "synthesized",
-          "source_fingerprint": "34c59797e92408ca1b0b9f1aedae923b97b388aa"
+          "source_fingerprint": "814d835eee67c3cee0bf40660d2a22878b141e9c"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:47.941947+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "814d835eee67c3cee0bf40660d2a22878b141e9c"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH011",
+    "scene_id": "CH011_SC006",
+    "chapter_id": "CH011",
+    "shot_order": 11,
+    "previous_shot_id": "SH010",
+    "next_shot_id": "SH012",
+    "primary_subject": "cowardly_lion",
+    "secondary_subjects": [
+      "the_great_oz"
+    ],
+    "shot_moment_summary": "The realization of stakes",
+    "start_state": "lion trembling",
+    "end_state": "lion looking helpless",
+    "action_during_shot": "The realization of stakes",
+    "action_continues_from": "lion looking helpless",
+    "action_hands_off_to": "end_scene",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "cowardly_lion",
+    "visible_secondary_subject_ids": [
+      "the_great_oz"
+    ],
+    "primary_subject_frame_position": "foreground right within audience_chamber_center",
+    "primary_subject_scale_relation": "preserve readable body-to-environment scale in frame",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "lion trembling",
+    "subject_relation_summary": "cowardly_lion plays against the_great_oz in the same frame",
+    "required_environment_anchor_1": "audience_chamber_center",
+    "required_subject_anchor_1": "lion lowers head",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "preserve readable body-to-environment scale in frame",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "lion lowers head",
+      "center chamber",
+      "cowardly_lion remains readable within the active playing space.",
+      "the_great_oz remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the audience_chamber_center.",
+      "Background depth should keep palace_of_oz legible as the location anchor.",
+      "Subject 1: cowardly_lion remains visually readable against the environment scale.",
+      "Subject 2: the_great_oz remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "cowardly_lion focuses toward the active scene action."
+    ],
+    "environment_subzone": "audience_chamber_center",
+    "key_visible_environment_features": [
+      "audience_chamber_center",
+      "Chapter-local environment alias match for 'The Throne Room/Audience Chamber' (key_overlap=0, label_overlap=2, context..."
+    ],
+    "continuity_from_previous_shot": "lion looking helpless",
+    "continuity_to_next_shot": "end_scene",
+    "pose_anchor_frame": "lion trembling",
+    "pose_end_frame": "lion looking helpless",
+    "shot_title": "Authority Single 11: The realization of stakes",
+    "shot_type": "authority_single",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in palace_of_oz featuring cowardly_lion, the_great_oz.",
+    "target_seconds": 7.0,
+    "characters_in_frame": [
+      {
+        "label": "Cowardly Lion",
+        "canonical_id": "cowardly_lion",
+        "display_name": "cowardly_lion",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH011/cowardly_lion.md",
+        "notes": "Direct registry match for 'cowardly_lion'."
+      },
+      {
+        "label": "The Great Oz (Ball of Fire)",
+        "canonical_id": "the_great_oz",
+        "display_name": "the_great_oz",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH011/the_great_oz.md",
+        "notes": "Direct registry match for 'the_great_oz'."
+      }
+    ],
+    "environment": {
+      "label": "The Throne Room/Audience Chamber",
+      "canonical_id": "palace_of_oz",
+      "display_name": "palace_of_oz",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 56,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH011/palace_of_oz.md",
+      "notes": "Chapter-local environment alias match for 'The Throne Room/Audience Chamber' (key_overlap=0, label_overlap=2, context_overlap=4)."
+    },
+    "beat_ids": [
+      "BT003"
+    ],
+    "continuity_constraints": [
+      "Light flicker intensity must sync with the_great_oz manifestation",
+      "Shadow movement across palace_of_oz surfaces relative to fire position",
+      "The realization of stakes"
+    ],
+    "prompt_seed": "Authority Single 11: The realization of stakes. authority_single. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Readable mediu...",
+    "shot_notes": "The realization of stakes",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH011_SC006"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC006"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC006"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC006"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC006"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC006"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH011",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH011_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH011",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH011_chapter_xi.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH015",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH015_chapter_xv.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH010",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH010_chapter_x.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH011",
+        "canonical_id": "cowardly_lion"
+      }
+    ],
+    "evidence_summary": [
+      "Establish the fourth manifestation of Oz through a high-contrast lighting event. The scene must emphasize the physical mass and trembling vulnerability of the cowardly_lion against the overwhelming light source of the_great_oz to drive the emotional shift f...",
+      "The Cowardly Lion meets the Wizard, who appears as a Ball of Fire. He demands proof of the Witch's death before granting courage.",
+      "Terror $\\rightarrow$ Helplessness.",
+      "cowardly_lion enters a dark, cavernous space illuminated only by flickering light.",
+      "cowardly_lion remains frozen and small under the weight of the demand.",
+      "The Wizard demands proof of death before granting courage.",
+      "the_great_oz | [CH003] Chapter III (query appears in paragraph preview) [CH005] Chapter V (query appears in paragraph preview) [CH006] Chapter VI (query appears in paragraph preview)",
+      "cowardly_lion | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH008/cowardly_lion.md] Physical Description: Large animal; too heavy to be carried by the others. [source:C:/FilmCreator/projects/wizard_of_oz/02_s...",
+      "palace_of_oz | A grandiose emerald-themed sovereign residence featuring monumental ceremonial halls and royal audience chambers. The interior is characterized by large-scale chambers designed to accommodate massive, non-human manifestations of the Wizard. |..."
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "wonder_reveal",
+    "coverage_role": "authority_single",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT003",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "major",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = major"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH011_SC006_SH011_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "814d835eee67c3cee0bf40660d2a22878b141e9c",
+      "created_at_utc": "2026-04-27T20:53:49.880482+00:00",
+      "updated_at_utc": "2026-04-27T20:54:47.946947+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH011_SC006",
+          "version": "d8a7b4e27dbffcefcdd73182469f7c2218663e36"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH011_SC006",
+          "version": "0f97c15522845c7b884bf8797499a674874938a1"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH011_SC006",
+          "version": "b79ac46efe5ee1ee4b87443684a0838b77150c12"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:53:49.880985+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "814d835eee67c3cee0bf40660d2a22878b141e9c"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:47.947448+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "814d835eee67c3cee0bf40660d2a22878b141e9c"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH012",
+    "scene_id": "CH011_SC006",
+    "chapter_id": "CH011",
+    "shot_order": 12,
+    "previous_shot_id": "SH011",
+    "next_shot_id": "SH013",
+    "primary_subject": "cowardly_lion",
+    "secondary_subjects": [
+      "the_great_oz"
+    ],
+    "shot_moment_summary": "The realization of stakes",
+    "start_state": "lion trembling",
+    "end_state": "lion looking helpless",
+    "action_during_shot": "The realization of stakes",
+    "action_continues_from": "lion looking helpless",
+    "action_hands_off_to": "end_scene",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "cowardly_lion",
+    "visible_secondary_subject_ids": [
+      "the_great_oz"
+    ],
+    "primary_subject_frame_position": "foreground right within audience_chamber_center",
+    "primary_subject_scale_relation": "preserve readable body-to-environment scale in frame",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "lion trembling",
+    "subject_relation_summary": "cowardly_lion plays against the_great_oz in the same frame",
+    "required_environment_anchor_1": "audience_chamber_center",
+    "required_subject_anchor_1": "lion lowers head",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "preserve readable body-to-environment scale in frame",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "lion lowers head",
+      "center chamber",
+      "cowardly_lion remains readable within the active playing space.",
+      "the_great_oz remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the audience_chamber_center.",
+      "Background depth should keep palace_of_oz legible as the location anchor.",
+      "Subject 1: cowardly_lion remains visually readable against the environment scale.",
+      "Subject 2: the_great_oz remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "cowardly_lion focuses toward the active scene action."
+    ],
+    "environment_subzone": "audience_chamber_center",
+    "key_visible_environment_features": [
+      "audience_chamber_center",
+      "Chapter-local environment alias match for 'The Throne Room/Audience Chamber' (key_overlap=0, label_overlap=2, context..."
+    ],
+    "continuity_from_previous_shot": "lion looking helpless",
+    "continuity_to_next_shot": "end_scene",
+    "pose_anchor_frame": "lion trembling",
+    "pose_end_frame": "lion looking helpless",
+    "shot_title": "Petitioner Group 12: The realization of stakes",
+    "shot_type": "petitioner_group",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in palace_of_oz featuring cowardly_lion, the_great_oz.",
+    "target_seconds": 7.0,
+    "characters_in_frame": [
+      {
+        "label": "Cowardly Lion",
+        "canonical_id": "cowardly_lion",
+        "display_name": "cowardly_lion",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH011/cowardly_lion.md",
+        "notes": "Direct registry match for 'cowardly_lion'."
+      },
+      {
+        "label": "The Great Oz (Ball of Fire)",
+        "canonical_id": "the_great_oz",
+        "display_name": "the_great_oz",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH011/the_great_oz.md",
+        "notes": "Direct registry match for 'the_great_oz'."
+      }
+    ],
+    "environment": {
+      "label": "The Throne Room/Audience Chamber",
+      "canonical_id": "palace_of_oz",
+      "display_name": "palace_of_oz",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 56,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH011/palace_of_oz.md",
+      "notes": "Chapter-local environment alias match for 'The Throne Room/Audience Chamber' (key_overlap=0, label_overlap=2, context_overlap=4)."
+    },
+    "beat_ids": [
+      "BT003"
+    ],
+    "continuity_constraints": [
+      "Light flicker intensity must sync with the_great_oz manifestation",
+      "Shadow movement across palace_of_oz surfaces relative to fire position",
+      "The realization of stakes"
+    ],
+    "prompt_seed": "Petitioner Group 12: The realization of stakes. petitioner_group. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Readable mediu...",
+    "shot_notes": "The realization of stakes",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH011_SC006"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC006"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC006"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC006"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC006"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC006"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH011",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH011_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH011",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH011_chapter_xi.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH015",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH015_chapter_xv.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH010",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH010_chapter_x.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH011",
+        "canonical_id": "cowardly_lion"
+      }
+    ],
+    "evidence_summary": [
+      "Establish the fourth manifestation of Oz through a high-contrast lighting event. The scene must emphasize the physical mass and trembling vulnerability of the cowardly_lion against the overwhelming light source of the_great_oz to drive the emotional shift f...",
+      "The Cowardly Lion meets the Wizard, who appears as a Ball of Fire. He demands proof of the Witch's death before granting courage.",
+      "Terror $\\rightarrow$ Helplessness.",
+      "cowardly_lion enters a dark, cavernous space illuminated only by flickering light.",
+      "cowardly_lion remains frozen and small under the weight of the demand.",
+      "The Wizard demands proof of death before granting courage.",
+      "the_great_oz | [CH003] Chapter III (query appears in paragraph preview) [CH005] Chapter V (query appears in paragraph preview) [CH006] Chapter VI (query appears in paragraph preview)",
+      "cowardly_lion | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH008/cowardly_lion.md] Physical Description: Large animal; too heavy to be carried by the others. [source:C:/FilmCreator/projects/wizard_of_oz/02_s...",
+      "palace_of_oz | A grandiose emerald-themed sovereign residence featuring monumental ceremonial halls and royal audience chambers. The interior is characterized by large-scale chambers designed to accommodate massive, non-human manifestations of the Wizard. |..."
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "wonder_reveal",
+    "coverage_role": "petitioner_group",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT003",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "major",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = major"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH011_SC006_SH012_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "814d835eee67c3cee0bf40660d2a22878b141e9c",
+      "created_at_utc": "2026-04-27T20:53:49.881986+00:00",
+      "updated_at_utc": "2026-04-27T20:54:47.952448+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH011_SC006",
+          "version": "d8a7b4e27dbffcefcdd73182469f7c2218663e36"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH011_SC006",
+          "version": "0f97c15522845c7b884bf8797499a674874938a1"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH011_SC006",
+          "version": "b79ac46efe5ee1ee4b87443684a0838b77150c12"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:53:49.882987+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "814d835eee67c3cee0bf40660d2a22878b141e9c"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:47.953451+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "814d835eee67c3cee0bf40660d2a22878b141e9c"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH013",
+    "scene_id": "CH011_SC006",
+    "chapter_id": "CH011",
+    "shot_order": 13,
+    "previous_shot_id": "SH012",
+    "next_shot_id": "SH014",
+    "primary_subject": "cowardly_lion",
+    "secondary_subjects": [
+      "the_great_oz"
+    ],
+    "shot_moment_summary": "The realization of stakes",
+    "start_state": "lion trembling",
+    "end_state": "lion looking helpless",
+    "action_during_shot": "The realization of stakes",
+    "action_continues_from": "lion looking helpless",
+    "action_hands_off_to": "end_scene",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "cowardly_lion",
+    "visible_secondary_subject_ids": [
+      "the_great_oz"
+    ],
+    "primary_subject_frame_position": "foreground right within audience_chamber_center",
+    "primary_subject_scale_relation": "preserve readable body-to-environment scale in frame",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "lion trembling",
+    "subject_relation_summary": "cowardly_lion plays against the_great_oz in the same frame",
+    "required_environment_anchor_1": "audience_chamber_center",
+    "required_subject_anchor_1": "lion lowers head",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "preserve readable body-to-environment scale in frame",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "lion lowers head",
+      "center chamber",
+      "cowardly_lion remains readable within the active playing space.",
+      "the_great_oz remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the audience_chamber_center.",
+      "Background depth should keep palace_of_oz legible as the location anchor.",
+      "Subject 1: cowardly_lion remains visually readable against the environment scale.",
+      "Subject 2: the_great_oz remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "cowardly_lion focuses toward the active scene action."
+    ],
+    "environment_subzone": "audience_chamber_center",
+    "key_visible_environment_features": [
+      "audience_chamber_center",
+      "Chapter-local environment alias match for 'The Throne Room/Audience Chamber' (key_overlap=0, label_overlap=2, context..."
+    ],
+    "continuity_from_previous_shot": "lion looking helpless",
+    "continuity_to_next_shot": "end_scene",
+    "pose_anchor_frame": "lion trembling",
+    "pose_end_frame": "lion looking helpless",
+    "shot_title": "Crowd Response 13: The realization of stakes",
+    "shot_type": "crowd_response",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in palace_of_oz featuring cowardly_lion, the_great_oz.",
+    "target_seconds": 7.0,
+    "characters_in_frame": [
+      {
+        "label": "Cowardly Lion",
+        "canonical_id": "cowardly_lion",
+        "display_name": "cowardly_lion",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH011/cowardly_lion.md",
+        "notes": "Direct registry match for 'cowardly_lion'."
+      },
+      {
+        "label": "The Great Oz (Ball of Fire)",
+        "canonical_id": "the_great_oz",
+        "display_name": "the_great_oz",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH011/the_great_oz.md",
+        "notes": "Direct registry match for 'the_great_oz'."
+      }
+    ],
+    "environment": {
+      "label": "The Throne Room/Audience Chamber",
+      "canonical_id": "palace_of_oz",
+      "display_name": "palace_of_oz",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 56,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH011/palace_of_oz.md",
+      "notes": "Chapter-local environment alias match for 'The Throne Room/Audience Chamber' (key_overlap=0, label_overlap=2, context_overlap=4)."
+    },
+    "beat_ids": [
+      "BT003"
+    ],
+    "continuity_constraints": [
+      "Light flicker intensity must sync with the_great_oz manifestation",
+      "Shadow movement across palace_of_oz surfaces relative to fire position",
+      "The realization of stakes"
+    ],
+    "prompt_seed": "Crowd Response 13: The realization of stakes. crowd_response. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Readable medium co...",
+    "shot_notes": "The realization of stakes",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH011_SC006"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC006"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC006"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC006"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC006"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC006"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH011",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH011_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH011",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH011_chapter_xi.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH015",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH015_chapter_xv.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH010",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH010_chapter_x.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH011",
+        "canonical_id": "cowardly_lion"
+      }
+    ],
+    "evidence_summary": [
+      "Establish the fourth manifestation of Oz through a high-contrast lighting event. The scene must emphasize the physical mass and trembling vulnerability of the cowardly_lion against the overwhelming light source of the_great_oz to drive the emotional shift f...",
+      "The Cowardly Lion meets the Wizard, who appears as a Ball of Fire. He demands proof of the Witch's death before granting courage.",
+      "Terror $\\rightarrow$ Helplessness.",
+      "cowardly_lion enters a dark, cavernous space illuminated only by flickering light.",
+      "cowardly_lion remains frozen and small under the weight of the demand.",
+      "The Wizard demands proof of death before granting courage.",
+      "the_great_oz | [CH003] Chapter III (query appears in paragraph preview) [CH005] Chapter V (query appears in paragraph preview) [CH006] Chapter VI (query appears in paragraph preview)",
+      "cowardly_lion | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH008/cowardly_lion.md] Physical Description: Large animal; too heavy to be carried by the others. [source:C:/FilmCreator/projects/wizard_of_oz/02_s...",
+      "palace_of_oz | A grandiose emerald-themed sovereign residence featuring monumental ceremonial halls and royal audience chambers. The interior is characterized by large-scale chambers designed to accommodate massive, non-human manifestations of the Wizard. |..."
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "wonder_reveal",
+    "coverage_role": "crowd_response",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT003",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "major",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = major"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH011_SC006_SH013_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "814d835eee67c3cee0bf40660d2a22878b141e9c",
+      "created_at_utc": "2026-04-27T20:53:49.883486+00:00",
+      "updated_at_utc": "2026-04-27T20:54:47.958958+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH011_SC006",
+          "version": "d8a7b4e27dbffcefcdd73182469f7c2218663e36"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH011_SC006",
+          "version": "0f97c15522845c7b884bf8797499a674874938a1"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH011_SC006",
+          "version": "b79ac46efe5ee1ee4b87443684a0838b77150c12"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:53:49.884486+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "814d835eee67c3cee0bf40660d2a22878b141e9c"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:47.959458+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "814d835eee67c3cee0bf40660d2a22878b141e9c"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH014",
+    "scene_id": "CH011_SC006",
+    "chapter_id": "CH011",
+    "shot_order": 14,
+    "previous_shot_id": "SH013",
+    "next_shot_id": "SH015",
+    "primary_subject": "cowardly_lion",
+    "secondary_subjects": [
+      "the_great_oz"
+    ],
+    "shot_moment_summary": "The realization of stakes",
+    "start_state": "lion trembling",
+    "end_state": "lion looking helpless",
+    "action_during_shot": "The realization of stakes",
+    "action_continues_from": "lion looking helpless",
+    "action_hands_off_to": "end_scene",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "cowardly_lion",
+    "visible_secondary_subject_ids": [
+      "the_great_oz"
+    ],
+    "primary_subject_frame_position": "foreground right within audience_chamber_center",
+    "primary_subject_scale_relation": "preserve readable body-to-environment scale in frame",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "lion trembling",
+    "subject_relation_summary": "cowardly_lion plays against the_great_oz in the same frame",
+    "required_environment_anchor_1": "audience_chamber_center",
+    "required_subject_anchor_1": "lion lowers head",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "preserve readable body-to-environment scale in frame",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "lion lowers head",
+      "center chamber",
+      "cowardly_lion remains readable within the active playing space.",
+      "the_great_oz remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the audience_chamber_center.",
+      "Background depth should keep palace_of_oz legible as the location anchor.",
+      "Subject 1: cowardly_lion remains visually readable against the environment scale.",
+      "Subject 2: the_great_oz remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "cowardly_lion focuses toward the active scene action."
+    ],
+    "environment_subzone": "audience_chamber_center",
+    "key_visible_environment_features": [
+      "audience_chamber_center",
+      "Chapter-local environment alias match for 'The Throne Room/Audience Chamber' (key_overlap=0, label_overlap=2, context..."
+    ],
+    "continuity_from_previous_shot": "lion looking helpless",
+    "continuity_to_next_shot": "end_scene",
+    "pose_anchor_frame": "lion trembling",
+    "pose_end_frame": "lion looking helpless",
+    "shot_title": "Symbol Insert 14: The realization of stakes",
+    "shot_type": "symbol_insert",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in palace_of_oz featuring cowardly_lion, the_great_oz.",
+    "target_seconds": 5.4,
+    "characters_in_frame": [
+      {
+        "label": "Cowardly Lion",
+        "canonical_id": "cowardly_lion",
+        "display_name": "cowardly_lion",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH011/cowardly_lion.md",
+        "notes": "Direct registry match for 'cowardly_lion'."
+      },
+      {
+        "label": "The Great Oz (Ball of Fire)",
+        "canonical_id": "the_great_oz",
+        "display_name": "the_great_oz",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH011/the_great_oz.md",
+        "notes": "Direct registry match for 'the_great_oz'."
+      }
+    ],
+    "environment": {
+      "label": "The Throne Room/Audience Chamber",
+      "canonical_id": "palace_of_oz",
+      "display_name": "palace_of_oz",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 56,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH011/palace_of_oz.md",
+      "notes": "Chapter-local environment alias match for 'The Throne Room/Audience Chamber' (key_overlap=0, label_overlap=2, context_overlap=4)."
+    },
+    "beat_ids": [
+      "BT003"
+    ],
+    "continuity_constraints": [
+      "Light flicker intensity must sync with the_great_oz manifestation",
+      "Shadow movement across palace_of_oz surfaces relative to fire position",
+      "The realization of stakes"
+    ],
+    "prompt_seed": "Symbol Insert 14: The realization of stakes. symbol_insert. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Readable medium comp...",
+    "shot_notes": "The realization of stakes",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH011_SC006"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC006"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC006"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC006"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC006"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC006"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH011",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH011_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH011",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH011_chapter_xi.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH015",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH015_chapter_xv.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH010",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH010_chapter_x.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH011",
+        "canonical_id": "cowardly_lion"
+      }
+    ],
+    "evidence_summary": [
+      "Establish the fourth manifestation of Oz through a high-contrast lighting event. The scene must emphasize the physical mass and trembling vulnerability of the cowardly_lion against the overwhelming light source of the_great_oz to drive the emotional shift f...",
+      "The Cowardly Lion meets the Wizard, who appears as a Ball of Fire. He demands proof of the Witch's death before granting courage.",
+      "Terror $\\rightarrow$ Helplessness.",
+      "cowardly_lion enters a dark, cavernous space illuminated only by flickering light.",
+      "cowardly_lion remains frozen and small under the weight of the demand.",
+      "The Wizard demands proof of death before granting courage.",
+      "the_great_oz | [CH003] Chapter III (query appears in paragraph preview) [CH005] Chapter V (query appears in paragraph preview) [CH006] Chapter VI (query appears in paragraph preview)",
+      "cowardly_lion | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH008/cowardly_lion.md] Physical Description: Large animal; too heavy to be carried by the others. [source:C:/FilmCreator/projects/wizard_of_oz/02_s...",
+      "palace_of_oz | A grandiose emerald-themed sovereign residence featuring monumental ceremonial halls and royal audience chambers. The interior is characterized by large-scale chambers designed to accommodate massive, non-human manifestations of the Wizard. |..."
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "wonder_reveal",
+    "coverage_role": "symbol_insert",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT003",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "major",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = major"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH011_SC006_SH014_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "814d835eee67c3cee0bf40660d2a22878b141e9c",
+      "created_at_utc": "2026-04-27T20:53:49.885488+00:00",
+      "updated_at_utc": "2026-04-27T20:54:47.964958+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH011_SC006",
+          "version": "d8a7b4e27dbffcefcdd73182469f7c2218663e36"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH011_SC006",
+          "version": "0f97c15522845c7b884bf8797499a674874938a1"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH011_SC006",
+          "version": "b79ac46efe5ee1ee4b87443684a0838b77150c12"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:53:49.885985+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "814d835eee67c3cee0bf40660d2a22878b141e9c"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:47.965958+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "814d835eee67c3cee0bf40660d2a22878b141e9c"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH015",
+    "scene_id": "CH011_SC006",
+    "chapter_id": "CH011",
+    "shot_order": 15,
+    "previous_shot_id": "SH014",
+    "next_shot_id": "SH016",
+    "primary_subject": "cowardly_lion",
+    "secondary_subjects": [
+      "the_great_oz"
+    ],
+    "shot_moment_summary": "The realization of stakes",
+    "start_state": "lion trembling",
+    "end_state": "lion looking helpless",
+    "action_during_shot": "The realization of stakes",
+    "action_continues_from": "lion looking helpless",
+    "action_hands_off_to": "end_scene",
+    "shot_size": "close_up",
+    "camera_angle": "eye_level",
+    "lens_family": "portrait",
+    "camera_motion": "push_in",
+    "zoom_behavior": "subtle_in",
+    "focus_strategy": "shallow_subject",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "cowardly_lion",
+    "visible_secondary_subject_ids": [
+      "the_great_oz"
+    ],
+    "primary_subject_frame_position": "foreground inside audience_chamber_center",
+    "primary_subject_scale_relation": "preserve readable body-to-environment scale in frame",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "lion trembling",
+    "subject_relation_summary": "cowardly_lion plays against the_great_oz in the same frame",
+    "required_environment_anchor_1": "audience_chamber_center",
+    "required_subject_anchor_1": "lion lowers head",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "preserve readable body-to-environment scale in frame",
+    "camera_package_description": "close-up, eye level, portrait lens, push in, zoom subtle in, shallow subject, hard directional",
+    "subject_blocking": [
+      "lion lowers head",
+      "center chamber",
+      "cowardly_lion remains readable within the active playing space.",
+      "the_great_oz remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the audience_chamber_center.",
+      "Background depth should keep palace_of_oz legible as the location anchor.",
+      "Subject 1: cowardly_lion remains visually readable against the environment scale.",
+      "Subject 2: the_great_oz remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "cowardly_lion focuses toward the active scene action."
+    ],
+    "environment_subzone": "audience_chamber_center",
+    "key_visible_environment_features": [
+      "audience_chamber_center",
+      "Chapter-local environment alias match for 'The Throne Room/Audience Chamber' (key_overlap=0, label_overlap=2, context..."
+    ],
+    "continuity_from_previous_shot": "lion looking helpless",
+    "continuity_to_next_shot": "end_scene",
+    "pose_anchor_frame": "lion trembling",
+    "pose_end_frame": "lion looking helpless",
+    "shot_title": "Reaction Closeup 15: The realization of stakes",
+    "shot_type": "reaction_closeup",
+    "camera_description": "Close framing that isolates reaction and emotional emphasis.",
+    "composition": "Intimate composition that isolates cowardly_lion, the_great_oz against palace_of_oz to capture the beat's emotional turn.",
+    "target_seconds": 7.0,
+    "characters_in_frame": [
+      {
+        "label": "Cowardly Lion",
+        "canonical_id": "cowardly_lion",
+        "display_name": "cowardly_lion",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH011/cowardly_lion.md",
+        "notes": "Direct registry match for 'cowardly_lion'."
+      },
+      {
+        "label": "The Great Oz (Ball of Fire)",
+        "canonical_id": "the_great_oz",
+        "display_name": "the_great_oz",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH011/the_great_oz.md",
+        "notes": "Direct registry match for 'the_great_oz'."
+      }
+    ],
+    "environment": {
+      "label": "The Throne Room/Audience Chamber",
+      "canonical_id": "palace_of_oz",
+      "display_name": "palace_of_oz",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 56,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH011/palace_of_oz.md",
+      "notes": "Chapter-local environment alias match for 'The Throne Room/Audience Chamber' (key_overlap=0, label_overlap=2, context_overlap=4)."
+    },
+    "beat_ids": [
+      "BT003"
+    ],
+    "continuity_constraints": [
+      "Light flicker intensity must sync with the_great_oz manifestation",
+      "Shadow movement across palace_of_oz surfaces relative to fire position",
+      "The realization of stakes"
+    ],
+    "prompt_seed": "Reaction Closeup 15: The realization of stakes. reaction_closeup. size=close_up. angle=eye_level. lens=portrait. motion=push_in. zoom=subtle_in. focus=shallow_subject. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Close framing that isolates reaction and emotional emphasis....",
+    "shot_notes": "The realization of stakes",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH011_SC006"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC006"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC006"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC006"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC006"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC006"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH011",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH011_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH011",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH011_chapter_xi.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH015",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH015_chapter_xv.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH010",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH010_chapter_x.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH011",
+        "canonical_id": "cowardly_lion"
+      }
+    ],
+    "evidence_summary": [
+      "Establish the fourth manifestation of Oz through a high-contrast lighting event. The scene must emphasize the physical mass and trembling vulnerability of the cowardly_lion against the overwhelming light source of the_great_oz to drive the emotional shift f...",
+      "The Cowardly Lion meets the Wizard, who appears as a Ball of Fire. He demands proof of the Witch's death before granting courage.",
+      "Terror $\\rightarrow$ Helplessness.",
+      "cowardly_lion enters a dark, cavernous space illuminated only by flickering light.",
+      "cowardly_lion remains frozen and small under the weight of the demand.",
+      "The Wizard demands proof of death before granting courage.",
+      "the_great_oz | [CH003] Chapter III (query appears in paragraph preview) [CH005] Chapter V (query appears in paragraph preview) [CH006] Chapter VI (query appears in paragraph preview)",
+      "cowardly_lion | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH008/cowardly_lion.md] Physical Description: Large animal; too heavy to be carried by the others. [source:C:/FilmCreator/projects/wizard_of_oz/02_s...",
+      "palace_of_oz | A grandiose emerald-themed sovereign residence featuring monumental ceremonial halls and royal audience chambers. The interior is characterized by large-scale chambers designed to accommodate massive, non-human manifestations of the Wizard. |..."
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "wonder_reveal",
+    "coverage_role": "decision_closeup",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT003",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "major",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = major"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH011_SC006_SH015_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "814d835eee67c3cee0bf40660d2a22878b141e9c",
+      "created_at_utc": "2026-04-27T20:53:49.885985+00:00",
+      "updated_at_utc": "2026-04-27T20:54:47.971465+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH011_SC006",
+          "version": "d8a7b4e27dbffcefcdd73182469f7c2218663e36"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH011_SC006",
+          "version": "0f97c15522845c7b884bf8797499a674874938a1"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH011_SC006",
+          "version": "b79ac46efe5ee1ee4b87443684a0838b77150c12"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:53:49.887493+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "814d835eee67c3cee0bf40660d2a22878b141e9c"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:47.971968+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "814d835eee67c3cee0bf40660d2a22878b141e9c"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH016",
+    "scene_id": "CH011_SC006",
+    "chapter_id": "CH011",
+    "shot_order": 16,
+    "previous_shot_id": "SH015",
+    "next_shot_id": "",
+    "primary_subject": "cowardly_lion",
+    "secondary_subjects": [
+      "the_great_oz"
+    ],
+    "shot_moment_summary": "The realization of stakes",
+    "start_state": "lion trembling",
+    "end_state": "lion looking helpless",
+    "action_during_shot": "The realization of stakes",
+    "action_continues_from": "lion looking helpless",
+    "action_hands_off_to": "end_scene",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "cowardly_lion",
+    "visible_secondary_subject_ids": [
+      "the_great_oz"
+    ],
+    "primary_subject_frame_position": "foreground right within audience_chamber_center",
+    "primary_subject_scale_relation": "preserve readable body-to-environment scale in frame",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "lion trembling",
+    "subject_relation_summary": "cowardly_lion plays against the_great_oz in the same frame",
+    "required_environment_anchor_1": "audience_chamber_center",
+    "required_subject_anchor_1": "lion lowers head",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "preserve readable body-to-environment scale in frame",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "lion lowers head",
+      "center chamber",
+      "cowardly_lion remains readable within the active playing space.",
+      "the_great_oz remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the audience_chamber_center.",
+      "Background depth should keep palace_of_oz legible as the location anchor.",
+      "Subject 1: cowardly_lion remains visually readable against the environment scale.",
+      "Subject 2: the_great_oz remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "cowardly_lion focuses toward the active scene action."
+    ],
+    "environment_subzone": "audience_chamber_center",
+    "key_visible_environment_features": [
+      "audience_chamber_center",
+      "Chapter-local environment alias match for 'The Throne Room/Audience Chamber' (key_overlap=0, label_overlap=2, context..."
+    ],
+    "continuity_from_previous_shot": "lion looking helpless",
+    "continuity_to_next_shot": "end_scene",
+    "pose_anchor_frame": "lion trembling",
+    "pose_end_frame": "lion looking helpless",
+    "shot_title": "Scale Proof Wide 16: The realization of stakes",
+    "shot_type": "scale_proof_wide",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in palace_of_oz featuring cowardly_lion, the_great_oz.",
+    "target_seconds": 10.8,
+    "characters_in_frame": [
+      {
+        "label": "Cowardly Lion",
+        "canonical_id": "cowardly_lion",
+        "display_name": "cowardly_lion",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH011/cowardly_lion.md",
+        "notes": "Direct registry match for 'cowardly_lion'."
+      },
+      {
+        "label": "The Great Oz (Ball of Fire)",
+        "canonical_id": "the_great_oz",
+        "display_name": "the_great_oz",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH011/the_great_oz.md",
+        "notes": "Direct registry match for 'the_great_oz'."
+      }
+    ],
+    "environment": {
+      "label": "The Throne Room/Audience Chamber",
+      "canonical_id": "palace_of_oz",
+      "display_name": "palace_of_oz",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 56,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH011/palace_of_oz.md",
+      "notes": "Chapter-local environment alias match for 'The Throne Room/Audience Chamber' (key_overlap=0, label_overlap=2, context_overlap=4)."
+    },
+    "beat_ids": [
+      "BT003"
+    ],
+    "continuity_constraints": [
+      "Light flicker intensity must sync with the_great_oz manifestation",
+      "Shadow movement across palace_of_oz surfaces relative to fire position",
+      "The realization of stakes"
+    ],
+    "prompt_seed": "Scale Proof Wide 16: The realization of stakes. scale_proof_wide. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Readable mediu...",
+    "shot_notes": "The realization of stakes",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH011_SC006"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC006"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC006"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC006"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC006"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC006"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH011",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH011_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH011",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH011_chapter_xi.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH015",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH015_chapter_xv.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH010",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH010_chapter_x.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH011",
+        "canonical_id": "cowardly_lion"
+      }
+    ],
+    "evidence_summary": [
+      "Establish the fourth manifestation of Oz through a high-contrast lighting event. The scene must emphasize the physical mass and trembling vulnerability of the cowardly_lion against the overwhelming light source of the_great_oz to drive the emotional shift f...",
+      "The Cowardly Lion meets the Wizard, who appears as a Ball of Fire. He demands proof of the Witch's death before granting courage.",
+      "Terror $\\rightarrow$ Helplessness.",
+      "cowardly_lion enters a dark, cavernous space illuminated only by flickering light.",
+      "cowardly_lion remains frozen and small under the weight of the demand.",
+      "The Wizard demands proof of death before granting courage.",
+      "the_great_oz | [CH003] Chapter III (query appears in paragraph preview) [CH005] Chapter V (query appears in paragraph preview) [CH006] Chapter VI (query appears in paragraph preview)",
+      "cowardly_lion | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH008/cowardly_lion.md] Physical Description: Large animal; too heavy to be carried by the others. [source:C:/FilmCreator/projects/wizard_of_oz/02_s...",
+      "palace_of_oz | A grandiose emerald-themed sovereign residence featuring monumental ceremonial halls and royal audience chambers. The interior is characterized by large-scale chambers designed to accommodate massive, non-human manifestations of the Wizard. |..."
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "wonder_reveal",
+    "coverage_role": "scale_proof_wide",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT003",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "major",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = major"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH011_SC006_SH016_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "814d835eee67c3cee0bf40660d2a22878b141e9c",
+      "created_at_utc": "2026-04-27T20:53:49.888494+00:00",
+      "updated_at_utc": "2026-04-27T20:54:47.976968+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH011_SC006",
+          "version": "d8a7b4e27dbffcefcdd73182469f7c2218663e36"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH011_SC006",
+          "version": "0f97c15522845c7b884bf8797499a674874938a1"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH011_SC006",
+          "version": "b79ac46efe5ee1ee4b87443684a0838b77150c12"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:53:49.888992+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "814d835eee67c3cee0bf40660d2a22878b141e9c"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:47.977468+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "814d835eee67c3cee0bf40660d2a22878b141e9c"
         }
       ]
     }

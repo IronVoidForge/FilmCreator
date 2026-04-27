@@ -1,0 +1,21 @@
+# Scene Dialogue Index: CH010_SC002
+
+- `CH010_DLG015` -> `SH001` speaker=the woman
+- `CH010_DLG016` -> `SH001` speaker=the girl
+- `CH010_DLG017` -> `SH002` speaker=the girl
+- `CH010_DLG018` -> `SH002` speaker=the woman
+- `CH010_DLG019` -> `SH003` speaker=the woman
+- `CH010_DLG020` -> `SH003` speaker=unresolved
+- `CH010_DLG021` -> `SH004` speaker=dorothy
+- `CH010_DLG022` -> `SH005` speaker=dorothy
+- `CH010_DLG023` -> `SH005` speaker=the man
+- `CH010_DLG024` -> `SH006` speaker=the man
+- `CH010_DLG025` -> `SH006` speaker=unresolved
+- `CH010_DLG026` -> `SH007` speaker=unresolved
+- `CH010_DLG027` -> `SH007` speaker=the_scarecrow
+- `CH010_DLG028` -> `SH008` speaker=unresolved
+- `CH010_DLG029` -> `SH009` speaker=the girl
+- `CH010_DLG030` -> `SH009` speaker=the man
+- `CH010_DLG031` -> `SH010` speaker=the man
+- `CH010_DLG032` -> `SH010` speaker=dorothy
+- `CH010_DLG033` -> `SH011` speaker=dorothy

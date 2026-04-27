@@ -4,70 +4,70 @@
   "chapter_id": "CH011",
   "shot_order": 3,
   "previous_shot_id": "SH002",
-  "next_shot_id": "",
+  "next_shot_id": "SH004",
   "primary_subject": "dorothy",
   "secondary_subjects": [
-    "the_great_oz"
+    "toto"
   ],
-  "shot_moment_summary": "Dorothy hears the requirement to kill the witch",
-  "start_state": "shocked expression",
-  "end_state": "determined or despairing gaze",
-  "action_during_shot": "reacting to news",
-  "action_continues_from": "head fully visible",
-  "action_hands_off_to": "end_of_scene",
-  "shot_size": "extreme_close_up",
+  "shot_moment_summary": "Dorothy enters the audience chamber",
+  "start_state": "dorothy walking through entrance",
+  "end_state": "dorothy standing still in center",
+  "action_during_shot": "Dorothy enters the audience chamber",
+  "action_continues_from": "dorothy standing still in center",
+  "action_hands_off_to": "BT002",
+  "shot_size": "medium",
   "camera_angle": "eye_level",
-  "lens_family": "portrait",
+  "lens_family": "normal",
   "camera_motion": "locked_off",
-  "zoom_behavior": "subtle_in",
-  "focus_strategy": "shallow_subject",
-  "lighting_style": "soft_even",
+  "zoom_behavior": "none",
+  "focus_strategy": "deep_focus",
+  "lighting_style": "hard_directional",
   "subject_visibility": "on_screen",
-  "narration_mode": "in_scene_speaker",
+  "narration_mode": "none",
   "primary_subject_angle": "front_three_quarter_left",
   "visible_primary_subject_id": "dorothy",
   "visible_secondary_subject_ids": [
-    "the_great_oz"
+    "toto"
   ],
-  "primary_subject_frame_position": "foreground inside audience_chamber_floor",
+  "primary_subject_frame_position": "foreground right within audience_chamber_floor",
   "primary_subject_scale_relation": "preserve readable body-to-environment scale in frame",
   "primary_subject_facing_direction": "front three-quarter left toward the scene action",
-  "primary_subject_pose_description": "shocked expression",
-  "subject_relation_summary": "dorothy plays against the_great_oz in the same frame",
+  "primary_subject_pose_description": "dorothy walking through entrance",
+  "subject_relation_summary": "dorothy plays against toto in the same frame",
   "required_environment_anchor_1": "audience_chamber_floor",
-  "required_subject_anchor_1": "dorothy's face",
+  "required_subject_anchor_1": "",
   "required_celestial_anchor_1": "",
   "required_scale_proof_detail": "preserve readable body-to-environment scale in frame",
-  "camera_package_description": "extreme-close-up, eye level, portrait lens, locked off, zoom subtle in, shallow subject, soft even",
+  "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
   "subject_blocking": [
-    "stationary center",
-    "reaction shots between subjects",
-    "audience_chamber_floor and throne_elevation",
+    "center floor movement",
+    "audience_chamber_floor",
     "dorothy remains readable within the active playing space.",
-    "the_great_oz remains readable within the active playing space."
+    "toto remains readable within the active playing space."
   ],
   "camera_relative_positions": [
     "Camera anchors the action inside the audience_chamber_floor.",
     "Background depth should keep palace_of_oz legible as the location anchor.",
     "Subject 1: dorothy remains visually readable against the environment scale.",
-    "Subject 2: the_great_oz remains visually readable against the environment scale."
+    "Subject 2: toto remains visually readable against the environment scale."
   ],
   "gaze_directions": [
     "dorothy focuses toward the active scene action."
   ],
   "environment_subzone": "audience_chamber_floor",
   "key_visible_environment_features": [
-    "audience_chamber_floor"
+    "audience_chamber_floor",
+    "Chapter-local environment alias match for 'The Throne Room/Audience Chamber' (key_overlap=0, label_overlap=2, context..."
   ],
-  "continuity_from_previous_shot": "head fully visible",
-  "continuity_to_next_shot": "end_of_scene",
-  "pose_anchor_frame": "shocked expression",
-  "pose_end_frame": "determined or despairing gaze",
-  "shot_title": "Reaction Closeup 3: The ultimatum is delivered",
-  "shot_type": "reaction_closeup",
-  "camera_description": "Close framing that isolates reaction and emotional emphasis.",
-  "composition": "Intimate composition that isolates dorothy, the_great_oz against palace_of_oz to capture the beat's emotional turn.",
-  "target_seconds": 5.1,
+  "continuity_from_previous_shot": "dorothy standing still in center",
+  "continuity_to_next_shot": "BT002",
+  "pose_anchor_frame": "dorothy walking through entrance",
+  "pose_end_frame": "dorothy standing still in center",
+  "shot_title": "Petitioner Group 3: Dorothy enters the audience chamber",
+  "shot_type": "petitioner_group",
+  "camera_description": "Stable readable framing built from the beat requirement.",
+  "composition": "Readable medium composition in palace_of_oz featuring dorothy, toto.",
+  "target_seconds": 7.0,
   "characters_in_frame": [
     {
       "label": "Dorothy",
@@ -80,14 +80,14 @@
       "notes": "Direct registry match for 'dorothy'."
     },
     {
-      "label": "The Great Oz (Giant Head)",
-      "canonical_id": "the_great_oz",
-      "display_name": "the_great_oz",
+      "label": "Toto",
+      "canonical_id": "toto",
+      "display_name": "toto",
       "status": "canonical",
       "entity_kind": "individual",
       "resolution_score": 138,
-      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH011/the_great_oz.md",
-      "notes": "Direct registry match for 'the_great_oz'."
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH011/toto.md",
+      "notes": "Direct registry match for 'toto'."
     }
   ],
   "environment": {
@@ -101,15 +101,15 @@
     "notes": "Chapter-local environment alias match for 'The Throne Room/Audience Chamber' (key_overlap=0, label_overlap=2, context_overlap=4)."
   },
   "beat_ids": [
-    "BT003"
+    "BT001"
   ],
   "continuity_constraints": [
     "Visual effects scale of the_great_oz relative to dorothy",
     "Dorothy's clothing state (white dress/weary traveler)",
-    "The ultimatum is delivered"
+    "Dorothy enters the audience chamber"
   ],
-  "prompt_seed": "Reaction Closeup 3: The ultimatum is delivered. reaction_closeup. size=extreme_close_up. angle=eye_level. lens=portrait. motion=locked_off. zoom=subtle_in. focus=shallow_subject. lighting=soft_even. visibility=on_screen. subject_angle=front_three_quarter_left. Close framing that isolates reaction and emotional empha...",
-  "shot_notes": "The ultimatum is delivered",
+  "prompt_seed": "Petitioner Group 3: Dorothy enters the audience chamber. petitioner_group. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Reada...",
+  "shot_notes": "Dorothy enters the audience chamber",
   "evidence_refs": [
     {
       "source": "scene_contract",
@@ -178,13 +178,30 @@
     "the_great_oz | [CH003] Chapter III (query appears in paragraph preview) [CH005] Chapter V (query appears in paragraph preview) [CH006] Chapter VI (query appears in paragraph preview)",
     "palace_of_oz | A grandiose emerald-themed sovereign residence featuring monumental ceremonial halls and royal audience chambers. The interior is characterized by large-scale chambers designed to accommodate massive, non-human manifestations of the Wizard. |..."
   ],
+  "coverage_density": "medium",
+  "coverage_profile": "classic_adventure",
+  "coverage_intent": "ceremonial_tableau",
+  "coverage_role": "petitioner_group",
+  "beat_type": "dialogue_council_or_court",
+  "coverage_importance": "major",
+  "coverage_blueprint_source": "deterministic_v1",
+  "coverage_classification": {
+    "beat_id": "BT001",
+    "beat_type": "dialogue_council_or_court",
+    "importance": "major",
+    "confidence": 0.82,
+    "reasons": [
+      "court/council authority language",
+      "importance = major"
+    ]
+  },
   "metadata": {
     "artifact_id": "CH011_SC003_SH003_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "5215e9109eedb14180b4cef627e602ebb6ffbe2a",
+    "source_fingerprint": "487bda133380492839d2b618c4a71f3e59d01be7",
     "created_at_utc": "2026-04-27T17:06:05.508137+00:00",
-    "updated_at_utc": "2026-04-27T17:06:05.508137+00:00",
+    "updated_at_utc": "2026-04-27T20:54:46.103390+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
@@ -199,7 +216,7 @@
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH011_SC003",
-        "version": "04aa927c905fa88254e9d6d9f7a5ee10da247fea"
+        "version": "100021027f28e9705a77dedeabe07fdf3b9529d4"
       }
     ],
     "locked_fields": {},
@@ -209,6 +226,16 @@
         "timestamp_utc": "2026-04-27T17:07:16.497922+00:00",
         "action": "synthesized",
         "source_fingerprint": "5215e9109eedb14180b4cef627e602ebb6ffbe2a"
+      },
+      {
+        "timestamp_utc": "2026-04-27T20:53:48.367516+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "487bda133380492839d2b618c4a71f3e59d01be7"
+      },
+      {
+        "timestamp_utc": "2026-04-27T20:54:46.104398+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "487bda133380492839d2b618c4a71f3e59d01be7"
       }
     ]
   }

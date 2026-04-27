@@ -34,7 +34,7 @@
   "primary_subject_frame_position": "foreground entry line within perimeter_zone",
   "primary_subject_scale_relation": "branches pressing against character faces",
   "primary_subject_facing_direction": "front three-quarter left toward the scene action",
-  "primary_subject_pose_description": "huddled in a tight cluster",
+  "primary_subject_pose_description": "tightly enclosed space",
   "subject_relation_summary": "cowardly_lion plays against dorothy, the_scarecrow in the same frame",
   "required_environment_anchor_1": "perimeter_zone",
   "required_subject_anchor_1": "",
@@ -42,29 +42,35 @@
   "required_scale_proof_detail": "branches pressing against character faces",
   "camera_package_description": "medium-full, eye level, wide lens, handheld, shallow subject, high contrast ceremonial",
   "subject_blocking": [
+    "huddled cluster",
     "characters backing into a tight circle",
-    "huddled cluster in perimeter_zone"
+    "perimeter_zone",
+    "cowardly_lion remains readable within the active playing space.",
+    "dorothy remains readable within the active playing space."
   ],
   "camera_relative_positions": [
     "Camera anchors the action inside the perimeter_zone.",
-    "Background depth keeps fighting_forest legible as location anchor."
+    "Background depth should keep fighting_forest legible as the location anchor.",
+    "Subject 1: cowardly_lion remains visually readable against the environment scale.",
+    "Subject 2: dorothy remains visually readable against the environment scale."
   ],
   "gaze_directions": [
     "cowardly_lion focuses toward the active scene action."
   ],
   "environment_subzone": "perimeter_zone",
   "key_visible_environment_features": [
-    "aggressive_branch_perimeter"
+    "perimeter_zone",
+    "Chapter-local environment alias match for 'Dense Forest (clearing/pathway)' (key_overlap=1, label_overlap=2, context_..."
   ],
   "continuity_from_previous_shot": "Group trapped by encroaching, moving branches in a state of panic.",
   "continuity_to_next_shot": "tin_woodman intervenes",
-  "pose_anchor_frame": "huddled cluster within tight foliage",
-  "pose_end_frame": "characters recoiling from impending branch collision",
-  "shot_title": "Panic as aggressive branches close in",
-  "shot_type": "establishing_wide",
-  "camera_description": "Wide establishing frame with a steady or lightly drifting camera.",
-  "composition": "Wide composition across fighting_forest with cowardly_lion, dorothy, the_scarecrow placed for immediate spatial orientation.",
-  "target_seconds": 5.5,
+  "pose_anchor_frame": "tightly enclosed space",
+  "pose_end_frame": "impending collision",
+  "shot_title": "Ceremonial Master 1: Panic as aggressive branches close in",
+  "shot_type": "ceremonial_master",
+  "camera_description": "Stable readable framing built from the beat requirement.",
+  "composition": "Readable medium composition in fighting_forest featuring cowardly_lion, dorothy, the_scarecrow.",
+  "target_seconds": 10.8,
   "characters_in_frame": [
     {
       "label": "Cowardly Lion",
@@ -111,10 +117,11 @@
     "BT001"
   ],
   "continuity_constraints": [
-    "branch density/movement",
+    "Cumulative state of chopped branches and debris",
+    "Physical condition/edge of tin_woodman's axe",
     "Panic as aggressive branches close in"
   ],
-  "prompt_seed": "Establishing Wide 1: Panic as aggressive branches close in. establishing_wide. size=medium_full. angle=eye_level. lens=wide. motion=handheld. zoom=none. focus=shallow_subject. lighting=high_contrast_ceremonial. visibility=on_screen. subject_angle=front_three_quarter_left.",
+  "prompt_seed": "Ceremonial Master 1: Panic as aggressive branches close in. ceremonial_master. size=medium_full. angle=eye_level. lens=wide. motion=handheld. zoom=none. focus=shallow_subject. lighting=high_contrast_ceremonial. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat...",
   "shot_notes": "Panic as aggressive branches close in",
   "evidence_refs": [
     {
@@ -184,13 +191,30 @@
     "the_scarecrow | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH003/the_scarecrow.md] Physical Description: A living figure stuffed with straw. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/cha...",
     "fighting_forest | No specific visual descriptors are provided in the current evidence. The environment functions as a narrative obstacle within the forest setting. | Unknown. | Unknown. | Unknown."
   ],
+  "coverage_density": "medium",
+  "coverage_profile": "classic_adventure",
+  "coverage_intent": "adventure_action",
+  "coverage_role": "ceremonial_master",
+  "beat_type": "dialogue_council_or_court",
+  "coverage_importance": "major",
+  "coverage_blueprint_source": "deterministic_v1",
+  "coverage_classification": {
+    "beat_id": "BT001",
+    "beat_type": "dialogue_council_or_court",
+    "importance": "major",
+    "confidence": 0.82,
+    "reasons": [
+      "court/council authority language",
+      "importance = major"
+    ]
+  },
   "metadata": {
     "artifact_id": "CH019_SC004_SH001_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "e74dffc60f7d5020c7da1d2b15d507314572fa11",
+    "source_fingerprint": "5e97b857c86c25bc8f91c04853126d88084f3d70",
     "created_at_utc": "2026-04-27T19:29:12.420228+00:00",
-    "updated_at_utc": "2026-04-27T19:29:12.420228+00:00",
+    "updated_at_utc": "2026-04-27T20:55:07.293973+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
@@ -205,7 +229,7 @@
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH019_SC004",
-        "version": "c9999c279f7ceca2a5e5caaa15f0c9bf66a50f97"
+        "version": "b01e227e7802bddeea167b002b18024e430841e4"
       }
     ],
     "locked_fields": {},
@@ -215,6 +239,16 @@
         "timestamp_utc": "2026-04-27T19:30:22.886837+00:00",
         "action": "synthesized",
         "source_fingerprint": "e74dffc60f7d5020c7da1d2b15d507314572fa11"
+      },
+      {
+        "timestamp_utc": "2026-04-27T20:54:08.402589+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "5e97b857c86c25bc8f91c04853126d88084f3d70"
+      },
+      {
+        "timestamp_utc": "2026-04-27T20:55:07.775874+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "5e97b857c86c25bc8f91c04853126d88084f3d70"
       }
     ]
   }

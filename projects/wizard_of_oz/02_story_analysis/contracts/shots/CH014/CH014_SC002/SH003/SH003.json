@@ -4,61 +4,72 @@
   "chapter_id": "CH014",
   "shot_order": 3,
   "previous_shot_id": "SH002",
-  "next_shot_id": "",
+  "next_shot_id": "SH004",
   "primary_subject": "dorothy",
-  "secondary_subjects": [],
-  "shot_moment_summary": "dorothy holds and examines Golden Cap",
-  "start_state": "queen speaking",
-  "end_state": "dorothy looking at cap with hope",
-  "action_during_shot": "dorothy examines the Golden Cap",
-  "action_continues_from": "queen present",
-  "action_hands_off_to": "end_of_scene",
-  "shot_size": "insert_detail",
+  "secondary_subjects": [
+    "the_scarecrow",
+    "tin_woodman"
+  ],
+  "shot_moment_summary": "Dorothy summons the Queen",
+  "start_state": "dorothy raises whistle",
+  "end_state": "whistle sound ceases",
+  "action_during_shot": "Dorothy summons the Queen",
+  "action_continues_from": "whistle sound ceases",
+  "action_hands_off_to": "BT002",
+  "shot_size": "medium",
   "camera_angle": "eye_level",
-  "lens_family": "telephoto",
+  "lens_family": "normal",
   "camera_motion": "locked_off",
   "zoom_behavior": "none",
   "focus_strategy": "deep_focus",
-  "lighting_style": "diffuse_ambient",
+  "lighting_style": "hard_directional",
   "subject_visibility": "on_screen",
-  "narration_mode": "in_scene_speaker",
-  "primary_subject_angle": "front",
+  "narration_mode": "none",
+  "primary_subject_angle": "front_three_quarter_left",
   "visible_primary_subject_id": "dorothy",
-  "visible_secondary_subject_ids": [],
+  "visible_secondary_subject_ids": [
+    "the_scarecrow",
+    "tin_woodman"
+  ],
   "primary_subject_frame_position": "foreground right within scarlet_flower_fields",
-  "primary_subject_scale_relation": "cap size relative to hands",
-  "primary_subject_facing_direction": "facing directly toward camera",
-  "primary_subject_pose_description": "examining the Golden Cap",
-  "subject_relation_summary": "dorothy carries the frame alone",
+  "primary_subject_scale_relation": "Tiny mouse royalty vs. large human travelers.",
+  "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+  "primary_subject_pose_description": "dorothy raises whistle",
+  "subject_relation_summary": "dorothy plays against the_scarecrow, tin_woodman in the same frame",
   "required_environment_anchor_1": "scarlet_flower_fields",
   "required_subject_anchor_1": "",
   "required_celestial_anchor_1": "",
-  "required_scale_proof_detail": "cap size relative to hands",
-  "camera_package_description": "insert-detail, eye level, telephoto lens, locked off, deep focus, diffuse ambient",
+  "required_scale_proof_detail": "Tiny mouse royalty vs. large human travelers.",
+  "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
   "subject_blocking": [
-    "dorothy brings cap into frame",
-    "dorothy brings the cap into view"
+    "group huddled together in despair",
+    "scarlet_flower_fields",
+    "dorothy remains readable within the active playing space.",
+    "the_scarecrow remains readable within the active playing space."
   ],
   "camera_relative_positions": [
     "Camera anchors the action inside the scarlet_flower_fields.",
-    "Background depth keeps scarlet_flower_fields legible as location anchor."
+    "Background depth should keep scarlet_flower_fields legible as the location anchor.",
+    "Subject 1: dorothy remains visually readable against the environment scale.",
+    "Subject 2: the_scarecrow remains visually readable against the environment scale."
   ],
   "gaze_directions": [
-    "dorothy focuses toward the Golden Cap"
+    "dorothy focuses toward the active scene action."
   ],
   "environment_subzone": "scarlet_flower_fields",
   "key_visible_environment_features": [
-    "scarlet_flower_fields"
+    "scarlet_flower_fields",
+    "Chapter-local beat subzone match for 'scarlet_flower_fields'."
   ],
-  "continuity_from_previous_shot": "queen present",
-  "continuity_to_next_shot": "end_of_scene",
-  "pose_anchor_frame": "queen speaking",
-  "pose_end_frame": "dorothy looking at cap with hope",
-  "shot_title": "Insert Detail 3: Revelation of the Golden Cap's power",
-  "shot_type": "insert_detail",
-  "camera_description": "Tight detail framing focused on a single visual object or gesture.",
-  "composition": "Detail composition centered on the key physical action or prop inside scarlet_flower_fields.",
-  "target_seconds": 5.1,
+  "continuity_from_previous_shot": "whistle sound ceases",
+  "continuity_to_next_shot": "BT002",
+  "pose_anchor_frame": "dorothy raises whistle",
+  "pose_end_frame": "whistle sound ceases",
+  "shot_title": "Petitioner Group 3: Dorothy summons the Queen",
+  "shot_type": "petitioner_group",
+  "camera_description": "Stable readable framing built from the beat requirement.",
+  "composition": "Readable medium composition in scarlet_flower_fields featuring dorothy, the_scarecrow, tin_woodman.",
+  "target_seconds": 7.0,
   "characters_in_frame": [
     {
       "label": "Dorothy",
@@ -69,6 +80,26 @@
       "resolution_score": 138,
       "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH014/dorothy.md",
       "notes": "Direct registry match for 'dorothy'."
+    },
+    {
+      "label": "Scarecrow",
+      "canonical_id": "the_scarecrow",
+      "display_name": "the_scarecrow",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 186,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH014/the_scarecrow.md",
+      "notes": "asset id exactly matches canonical id | query matches alias 'scarecrow'"
+    },
+    {
+      "label": "Tin Woodman",
+      "canonical_id": "tin_woodman",
+      "display_name": "tin_woodman",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH014/tin_woodman.md",
+      "notes": "Direct registry match for 'tin_woodman'."
     }
   ],
   "environment": {
@@ -82,15 +113,15 @@
     "notes": "Chapter-local beat subzone match for 'scarlet_flower_fields'."
   },
   "beat_ids": [
-    "BT003"
+    "BT001"
   ],
   "continuity_constraints": [
     "Extreme scale difference between mice and travelers",
     "Precise placement of the Golden Cap during handling",
-    "Revelation of the Golden Cap's power"
+    "Dorothy summons the Queen"
   ],
-  "prompt_seed": "Insert Detail 3: Revelation of the Golden Cap's power. insert_detail. size=insert_detail. angle=eye_level. lens=telephoto. motion=locked_off. zoom=none. focus=deep_focus. lighting=diffuse_ambient. visibility=on_screen. subject_angle=front.",
-  "shot_notes": "Revelation of the Golden Cap's power",
+  "prompt_seed": "Petitioner Group 3: Dorothy summons the Queen. petitioner_group. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Readable medium...",
+  "shot_notes": "Dorothy summons the Queen",
   "evidence_refs": [
     {
       "source": "scene_contract",
@@ -159,13 +190,30 @@
     "tin_woodman | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH005/tin_woodman.md] Costume/Silhouette: Entirely metallic (tin) body; carries an axe. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis...",
     "scarlet_flower_fields | No specific visual descriptors are provided in the current evidence. The environment is identified as a primary setting during a lost or navigation phase of the narrative. | Unknown. | Unknown. | Unknown."
   ],
+  "coverage_density": "medium",
+  "coverage_profile": "classic_adventure",
+  "coverage_intent": "ceremonial_tableau",
+  "coverage_role": "petitioner_group",
+  "beat_type": "dialogue_council_or_court",
+  "coverage_importance": "major",
+  "coverage_blueprint_source": "deterministic_v1",
+  "coverage_classification": {
+    "beat_id": "BT001",
+    "beat_type": "dialogue_council_or_court",
+    "importance": "major",
+    "confidence": 0.82,
+    "reasons": [
+      "court/council authority language",
+      "importance = major"
+    ]
+  },
   "metadata": {
     "artifact_id": "CH014_SC002_SH003_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "cbdd004a6829dea0d397d59bda7d4fbf4a923c0b",
+    "source_fingerprint": "fc35ed5ee81f2a59c87488f7265a2845c62d3607",
     "created_at_utc": "2026-04-27T18:03:08.439014+00:00",
-    "updated_at_utc": "2026-04-27T18:03:08.439014+00:00",
+    "updated_at_utc": "2026-04-27T20:54:55.100834+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
@@ -180,7 +228,7 @@
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH014_SC002",
-        "version": "c3b72c823aa9e7f9f944fe00f11a9be6c2a8959f"
+        "version": "e46774781d08ba86695bdb01981482948fa1c61c"
       }
     ],
     "locked_fields": {},
@@ -190,6 +238,16 @@
         "timestamp_utc": "2026-04-27T18:04:13.282280+00:00",
         "action": "synthesized",
         "source_fingerprint": "cbdd004a6829dea0d397d59bda7d4fbf4a923c0b"
+      },
+      {
+        "timestamp_utc": "2026-04-27T20:53:56.708262+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "fc35ed5ee81f2a59c87488f7265a2845c62d3607"
+      },
+      {
+        "timestamp_utc": "2026-04-27T20:54:55.101832+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "fc35ed5ee81f2a59c87488f7265a2845c62d3607"
       }
     ]
   }

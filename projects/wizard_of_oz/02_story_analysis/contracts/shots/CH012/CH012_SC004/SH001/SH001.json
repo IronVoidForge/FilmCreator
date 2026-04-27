@@ -33,7 +33,7 @@
   "required_environment_anchor_1": "kitchen_work_surface",
   "required_subject_anchor_1": "kitchen_work_surface",
   "required_celestial_anchor_1": "",
-  "required_scale_proof_detail": "hands to surface ratio",
+  "required_scale_proof_detail": "Human scale domesticity vs. unseen magical presence.",
   "camera_package_description": "close-up, eye level, normal lens, locked off, shallow subject, diffuse ambient",
   "subject_blocking": [
     "standing at surface",
@@ -50,17 +50,18 @@
   ],
   "environment_subzone": "kitchen_work_surface",
   "key_visible_environment_features": [
-    "kitchen_work_surface"
+    "kitchen_work_surface",
+    "Chapter-local environment alias match for 'The Witch's Kitchen' (key_overlap=1, label_overlap=2, context_overlap=4)."
   ],
   "continuity_from_previous_shot": "Dorothy performing repetitive domestic chores in a clean kitchen environment.",
   "continuity_to_next_shot": "BT002",
   "pose_anchor_frame": "steady labor",
   "pose_end_frame": "steady labor",
-  "shot_title": "Reaction Closeup 1: Monotonous domestic labor",
-  "shot_type": "reaction_closeup",
-  "camera_description": "Close framing that isolates reaction and emotional emphasis.",
-  "composition": "Intimate composition that isolates dorothy against wicked_witch_castle_interior to capture the beat's emotional turn.",
-  "target_seconds": 5.5,
+  "shot_title": "Master Two Shot 1: Monotonous domestic labor",
+  "shot_type": "master_two_shot",
+  "camera_description": "Stable readable framing built from the beat requirement.",
+  "composition": "Readable medium composition in wicked_witch_castle_interior featuring dorothy.",
+  "target_seconds": 10.0,
   "characters_in_frame": [
     {
       "label": "Dorothy",
@@ -89,9 +90,10 @@
   "continuity_constraints": [
     "Presence/absence of exactly one silver shoe",
     "Cleanliness and state of the kitchen surfaces",
-    "Monotonous domestic labor"
+    "Monotonous domestic labor",
+    "Resolve Wicked Witch (invisible/presence) -> Wicked Witch (invisible/presence)"
   ],
-  "prompt_seed": "Reaction Closeup 1: Monotonous domestic labor. reaction_closeup. size=close_up. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=shallow_subject. lighting=diffuse_ambient. visibility=on_screen. subject_angle=front_three_quarter_left. Close framing that isolates reaction and emotional emphasis.",
+  "prompt_seed": "Master Two Shot 1: Monotonous domestic labor. master_two_shot. size=close_up. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=shallow_subject. lighting=diffuse_ambient. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Readable me...",
   "shot_notes": "Monotonous domestic labor",
   "evidence_refs": [
     {
@@ -159,13 +161,30 @@
     "dorothy | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md] Costume/Silhouette: Unknown. No specific clothing details are provided in this chapter. [source:C:/FilmCreator/projects/wizard_of_oz/02_...",
     "wicked_witch_castle_interior | No specific visual descriptors are provided in the current evidence. The location serves as a critical site for character imprisonment and the narrative climax. | Unknown. | Unknown. | Unknown."
   ],
+  "coverage_density": "medium",
+  "coverage_profile": "classic_adventure",
+  "coverage_intent": "wonder_reveal",
+  "coverage_role": "master_two_shot",
+  "beat_type": "dialogue_two_person",
+  "coverage_importance": "normal",
+  "coverage_blueprint_source": "deterministic_v1",
+  "coverage_classification": {
+    "beat_id": "BT001",
+    "beat_type": "dialogue_two_person",
+    "importance": "normal",
+    "confidence": 0.74,
+    "reasons": [
+      "dialogue verb with subject count = 1",
+      "importance = normal"
+    ]
+  },
   "metadata": {
     "artifact_id": "CH012_SC004_SH001_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "d95893c110cbd1d2696e21acb8164d183953d7ec",
+    "source_fingerprint": "4362fb3b3c44025986b1cd505f7dc71df49594db",
     "created_at_utc": "2026-04-27T17:32:23.871980+00:00",
-    "updated_at_utc": "2026-04-27T17:32:23.871980+00:00",
+    "updated_at_utc": "2026-04-27T20:54:50.540880+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
@@ -180,7 +199,7 @@
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH012_SC004",
-        "version": "f451e8513f6058acbe040a5da0e6d2562ece2b9a"
+        "version": "55ed88375c9b39de9255e1a933a0d2191587fd80"
       }
     ],
     "locked_fields": {},
@@ -190,6 +209,16 @@
         "timestamp_utc": "2026-04-27T17:33:36.804782+00:00",
         "action": "synthesized",
         "source_fingerprint": "d95893c110cbd1d2696e21acb8164d183953d7ec"
+      },
+      {
+        "timestamp_utc": "2026-04-27T20:53:52.608899+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "4362fb3b3c44025986b1cd505f7dc71df49594db"
+      },
+      {
+        "timestamp_utc": "2026-04-27T20:54:50.891165+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "4362fb3b3c44025986b1cd505f7dc71df49594db"
       }
     ]
   }

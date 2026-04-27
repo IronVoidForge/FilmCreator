@@ -10,41 +10,40 @@
     "tin_woodman",
     "dorothy"
   ],
-  "shot_moment_summary": "tracking the group through red flowers",
-  "start_state": "moving through field",
-  "end_state": "approaching edge",
-  "action_during_shot": "slow heavy walking",
+  "shot_moment_summary": "Formation of the human chair",
+  "start_state": "characters realizing immunity",
+  "end_state": "dorothy and toto are seated and stable",
+  "action_during_shot": "Formation of the human chair",
   "action_continues_from": "chair stabilized",
-  "action_hands_off_to": "BT003",
-  "shot_size": "medium_full",
+  "action_hands_off_to": "BT002",
+  "shot_size": "medium",
   "camera_angle": "eye_level",
-  "lens_family": "wide",
-  "camera_motion": "track",
+  "lens_family": "normal",
+  "camera_motion": "locked_off",
   "zoom_behavior": "none",
   "focus_strategy": "deep_focus",
-  "lighting_style": "diffuse_ambient",
+  "lighting_style": "hard_directional",
   "subject_visibility": "on_screen",
   "narration_mode": "none",
-  "primary_subject_angle": "profile_left",
+  "primary_subject_angle": "front_three_quarter_left",
   "visible_primary_subject_id": "the_scarecrow",
   "visible_secondary_subject_ids": [
     "tin_woodman",
     "dorothy"
   ],
   "primary_subject_frame_position": "foreground right within scarlet_poppy_meadow",
-  "primary_subject_scale_relation": "height of poppies relative to characters",
-  "primary_subject_facing_direction": "profile left toward the scene action",
-  "primary_subject_pose_description": "moving through field",
+  "primary_subject_scale_relation": "preserve readable body-to-environment scale in frame",
+  "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+  "primary_subject_pose_description": "characters realizing immunity",
   "subject_relation_summary": "the_scarecrow plays against tin_woodman, dorothy in the same frame",
   "required_environment_anchor_1": "scarlet_poppy_meadow",
-  "required_subject_anchor_1": "scarlet_poppy_meadow",
+  "required_subject_anchor_1": "",
   "required_celestial_anchor_1": "",
-  "required_scale_proof_detail": "height of poppies relative to characters",
-  "camera_package_description": "medium-full, eye level, wide lens, track, deep focus, diffuse ambient",
+  "required_scale_proof_detail": "preserve readable body-to-environment scale in frame",
+  "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
   "subject_blocking": [
-    "linear movement through flowers",
-    "slow linear progression",
-    "moving through scarlet poppy meadow",
+    "tight physical cluster",
+    "dense scarlet poppy meadow",
     "the_scarecrow remains readable within the active playing space.",
     "tin_woodman remains readable within the active playing space."
   ],
@@ -59,17 +58,18 @@
   ],
   "environment_subzone": "scarlet_poppy_meadow",
   "key_visible_environment_features": [
-    "scarlet_poppy_meadow"
+    "scarlet_poppy_meadow",
+    "Chapter-local beat subzone match for 'scarlet_poppy_meadow'."
   ],
   "continuity_from_previous_shot": "chair stabilized",
-  "continuity_to_next_shot": "BT003",
-  "pose_anchor_frame": "moving through field",
-  "pose_end_frame": "approaching edge",
-  "shot_title": "Medium 2: The slow trek out of the field",
-  "shot_type": "medium",
-  "camera_description": "Stable medium framing that keeps action and character readable.",
+  "continuity_to_next_shot": "BT002",
+  "pose_anchor_frame": "characters realizing immunity",
+  "pose_end_frame": "dorothy and toto are seated and stable",
+  "shot_title": "Transition Wide 2: Formation of the human chair",
+  "shot_type": "transition_wide",
+  "camera_description": "Stable readable framing built from the beat requirement.",
   "composition": "Readable medium composition in scarlet_poppy_meadow featuring the_scarecrow, tin_woodman, dorothy.",
-  "target_seconds": 5.3,
+  "target_seconds": 10.8,
   "characters_in_frame": [
     {
       "label": "Scarecrow",
@@ -113,15 +113,15 @@
     "notes": "Chapter-local beat subzone match for 'scarlet_poppy_meadow'."
   },
   "beat_ids": [
-    "BT002"
+    "BT001"
   ],
   "continuity_constraints": [
     "Physical coordination/weight distribution of the human chair",
     "Increasing distance between escaping group and cowardly_lion",
-    "The slow trek out of the field"
+    "Formation of the human chair"
   ],
-  "prompt_seed": "Medium 2: The slow trek out of the field. medium. size=medium_full. angle=eye_level. lens=wide. motion=track. zoom=none. focus=deep_focus. lighting=diffuse_ambient. visibility=on_screen. subject_angle=profile_left. Stable medium framing that keeps action and character readable. Readable medium composition in scarlet...",
-  "shot_notes": "The slow trek out of the field",
+  "prompt_seed": "Transition Wide 2: Formation of the human chair. transition_wide. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Readable mediu...",
+  "shot_notes": "Formation of the human chair",
   "evidence_refs": [
     {
       "source": "scene_contract",
@@ -190,13 +190,29 @@
     "tin_woodman | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH005/tin_woodman.md] Costume/Silhouette: Entirely metallic (tin) body; carries an axe. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis...",
     "scarlet_poppy_meadow | The environment is characterized by a field of scarlet poppies. It functions as a hazard zone within the narrative. | Unknown. | Unknown. | Unknown."
   ],
+  "coverage_density": "medium",
+  "coverage_profile": "classic_adventure",
+  "coverage_intent": "adventure_action",
+  "coverage_role": "transition_wide",
+  "beat_type": "transition_handoff",
+  "coverage_importance": "major",
+  "coverage_blueprint_source": "deterministic_v1",
+  "coverage_classification": {
+    "beat_id": "BT001",
+    "beat_type": "transition_handoff",
+    "importance": "major",
+    "confidence": 0.55,
+    "reasons": [
+      "importance = major"
+    ]
+  },
   "metadata": {
     "artifact_id": "CH008_SC005_SH002_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "d7cf69111f10550ea46478f0d97a9b3192adccc2",
+    "source_fingerprint": "9d6f1b98371e95e4b0cae456c4b1f10a8f97e458",
     "created_at_utc": "2026-04-27T16:24:56.001021+00:00",
-    "updated_at_utc": "2026-04-27T16:24:56.001021+00:00",
+    "updated_at_utc": "2026-04-27T20:54:39.520798+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
@@ -211,7 +227,7 @@
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH008_SC005",
-        "version": "c02ccc019fd60aeaa5e65b7232d7948fd08c19a3"
+        "version": "eaceeebbe6f5adee9dab7649394041622eb8ccf2"
       }
     ],
     "locked_fields": {},
@@ -221,6 +237,16 @@
         "timestamp_utc": "2026-04-27T16:26:10.443227+00:00",
         "action": "synthesized",
         "source_fingerprint": "d7cf69111f10550ea46478f0d97a9b3192adccc2"
+      },
+      {
+        "timestamp_utc": "2026-04-27T20:53:42.121191+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "9d6f1b98371e95e4b0cae456c4b1f10a8f97e458"
+      },
+      {
+        "timestamp_utc": "2026-04-27T20:54:39.521296+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "9d6f1b98371e95e4b0cae456c4b1f10a8f97e458"
       }
     ]
   }

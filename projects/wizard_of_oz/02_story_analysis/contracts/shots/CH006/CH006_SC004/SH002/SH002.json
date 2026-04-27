@@ -5,71 +5,82 @@
   "shot_order": 2,
   "previous_shot_id": "SH001",
   "next_shot_id": "SH003",
-  "primary_subject": "tin_woodman",
+  "primary_subject": "the_scarecrow",
   "secondary_subjects": [
-    "dorothy",
-    "the_scarecrow"
+    "tin_woodman",
+    "dorothy"
   ],
-  "shot_moment_summary": "The jaw begins to move freely",
-  "start_state": "oil application",
-  "end_state": "first words spoken",
-  "action_during_shot": "Woodman speaks",
+  "shot_moment_summary": "The Scarecrow attempts to lubricate the jaw",
+  "start_state": "Scarecrow holds oil-can near metal joint",
+  "end_state": "Oil is applied to the mechanism",
+  "action_during_shot": "The Scarecrow attempts to lubricate the jaw",
   "action_continues_from": "oil application begins",
-  "action_hands_off_to": "BT003",
+  "action_hands_off_to": "BT002",
   "shot_size": "medium",
   "camera_angle": "eye_level",
   "lens_family": "normal",
   "camera_motion": "locked_off",
   "zoom_behavior": "none",
   "focus_strategy": "deep_focus",
-  "lighting_style": "diffuse_ambient",
+  "lighting_style": "hard_directional",
   "subject_visibility": "on_screen",
-  "narration_mode": "in_scene_speaker",
-  "primary_subject_angle": "front",
-  "visible_primary_subject_id": "tin_woodman",
+  "narration_mode": "none",
+  "primary_subject_angle": "front_three_quarter_left",
+  "visible_primary_subject_id": "the_scarecrow",
   "visible_secondary_subject_ids": [
-    "dorothy",
-    "the_scarecrow"
+    "tin_woodman",
+    "dorothy"
   ],
   "primary_subject_frame_position": "foreground right within thick_dark_forest_path",
   "primary_subject_scale_relation": "The small scale of the oil-can application versus the large presence of the group.",
-  "primary_subject_facing_direction": "facing directly toward camera",
-  "primary_subject_pose_description": "oil application",
-  "subject_relation_summary": "tin_woodman plays against dorothy, the_scarecrow in the same frame",
+  "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+  "primary_subject_pose_description": "Scarecrow holds oil-can near metal joint",
+  "subject_relation_summary": "the_scarecrow plays against tin_woodman, dorothy in the same frame",
   "required_environment_anchor_1": "thick_dark_forest_path",
-  "required_subject_anchor_1": "tin_woodman_jaw",
+  "required_subject_anchor_1": "Scarecrow holds oil-can near metal joint",
   "required_celestial_anchor_1": "",
   "required_scale_proof_detail": "The small scale of the oil-can application versus the large presence of the group.",
-  "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, diffuse ambient",
+  "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
   "subject_blocking": [
-    "group leans in closer",
-    "Group reacts with relief",
-    "tin_woodman remains readable within the active playing space.",
-    "dorothy remains readable within the active playing space."
+    "Scarecrow hunched over Woodman's head",
+    "thick_dark_forest_path",
+    "the_scarecrow remains readable within the active playing space.",
+    "tin_woodman remains readable within the active playing space."
   ],
   "camera_relative_positions": [
     "Camera anchors the action inside the thick_dark_forest_path.",
     "Background depth should keep thick_dark_forest legible as the location anchor.",
-    "Subject 1: tin_woodman remains visually readable against the environment scale.",
-    "Subject 2: dorothy remains visually readable against the environment scale."
+    "Subject 1: the_scarecrow remains visually readable against the environment scale.",
+    "Subject 2: tin_woodman remains visually readable against the environment scale."
   ],
   "gaze_directions": [
-    "tin_woodman focuses toward the active scene action."
+    "the_scarecrow focuses toward the active scene action."
   ],
   "environment_subzone": "thick_dark_forest_path",
   "key_visible_environment_features": [
-    "thick_dark_forest_path"
+    "thick_dark_forest_path",
+    "Chapter-local beat subzone match for 'thick_dark_forest_path'."
   ],
   "continuity_from_previous_shot": "oil application begins",
-  "continuity_to_next_shot": "BT003",
-  "pose_anchor_frame": "oil application",
-  "pose_end_frame": "first words spoken",
-  "shot_title": "Medium 2: Speech is restored",
-  "shot_type": "medium",
-  "camera_description": "Stable medium framing that keeps action and character readable.",
-  "composition": "Readable medium composition in thick_dark_forest featuring tin_woodman, dorothy, the_scarecrow.",
-  "target_seconds": 5.3,
+  "continuity_to_next_shot": "BT002",
+  "pose_anchor_frame": "Scarecrow holds oil-can near metal joint",
+  "pose_end_frame": "Oil is applied to the mechanism",
+  "shot_title": "Transition Wide 2: The Scarecrow attempts to lubricate the jaw",
+  "shot_type": "transition_wide",
+  "camera_description": "Stable readable framing built from the beat requirement.",
+  "composition": "Readable medium composition in thick_dark_forest featuring the_scarecrow, tin_woodman, dorothy.",
+  "target_seconds": 10.8,
   "characters_in_frame": [
+    {
+      "label": "Scarecrow",
+      "canonical_id": "the_scarecrow",
+      "display_name": "the_scarecrow",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 186,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH006/the_scarecrow.md",
+      "notes": "asset id exactly matches canonical id | query matches alias 'scarecrow'"
+    },
     {
       "label": "Tin Woodman",
       "canonical_id": "tin_woodman",
@@ -89,16 +100,6 @@
       "resolution_score": 138,
       "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH006/dorothy.md",
       "notes": "Direct registry match for 'dorothy'."
-    },
-    {
-      "label": "Scarecrow",
-      "canonical_id": "the_scarecrow",
-      "display_name": "the_scarecrow",
-      "status": "canonical",
-      "entity_kind": "individual",
-      "resolution_score": 186,
-      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH006/the_scarecrow.md",
-      "notes": "asset id exactly matches canonical id | query matches alias 'scarecrow'"
     }
   ],
   "environment": {
@@ -112,15 +113,15 @@
     "notes": "Chapter-local beat subzone match for 'thick_dark_forest_path'."
   },
   "beat_ids": [
-    "BT002"
+    "BT001"
   ],
   "continuity_constraints": [
     "Volume of oil dispensed from the can.",
     "State of Tin Woodman's jaw (stuck vs. moving).",
-    "Speech is restored"
+    "The Scarecrow attempts to lubricate the jaw"
   ],
-  "prompt_seed": "Medium 2: Speech is restored. medium. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=diffuse_ambient. visibility=on_screen. subject_angle=front. Stable medium framing that keeps action and character readable. Readable medium composition in thick_dark_forest featur...",
-  "shot_notes": "Speech is restored",
+  "prompt_seed": "Transition Wide 2: The Scarecrow attempts to lubricate the jaw. transition_wide. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement....",
+  "shot_notes": "The Scarecrow attempts to lubricate the jaw",
   "evidence_refs": [
     {
       "source": "scene_contract",
@@ -189,13 +190,29 @@
     "dorothy | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md] Costume/Silhouette: Unknown. No specific clothing details are provided in this chapter. [source:C:/FilmCreator/projects/wizard_of_oz/02_...",
     "thick_dark_forest | No specific visual descriptors are provided in the current evidence. The environment is identified as a \"thick dark forest.\" | Unknown. | Dark (per name). | Unknown."
   ],
+  "coverage_density": "medium",
+  "coverage_profile": "classic_adventure",
+  "coverage_intent": "montage_travel",
+  "coverage_role": "transition_wide",
+  "beat_type": "transition_handoff",
+  "coverage_importance": "major",
+  "coverage_blueprint_source": "deterministic_v1",
+  "coverage_classification": {
+    "beat_id": "BT001",
+    "beat_type": "transition_handoff",
+    "importance": "major",
+    "confidence": 0.55,
+    "reasons": [
+      "importance = major"
+    ]
+  },
   "metadata": {
     "artifact_id": "CH006_SC004_SH002_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "d6b2730b2258dccd116537a891388dfcbe409d59",
+    "source_fingerprint": "663011e18dcdaf653cf1ca4be16231dc46921f6e",
     "created_at_utc": "2026-04-27T15:52:45.082427+00:00",
-    "updated_at_utc": "2026-04-27T15:52:45.082427+00:00",
+    "updated_at_utc": "2026-04-27T20:54:34.379601+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
@@ -210,7 +227,7 @@
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH006_SC004",
-        "version": "25501e044e55fe4062a088e82123adaffeaf3283"
+        "version": "151b0571f273d41b89b170235df8721203a80f07"
       }
     ],
     "locked_fields": {},
@@ -220,6 +237,16 @@
         "timestamp_utc": "2026-04-27T15:54:00.485008+00:00",
         "action": "synthesized",
         "source_fingerprint": "d6b2730b2258dccd116537a891388dfcbe409d59"
+      },
+      {
+        "timestamp_utc": "2026-04-27T20:53:37.070075+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "663011e18dcdaf653cf1ca4be16231dc46921f6e"
+      },
+      {
+        "timestamp_utc": "2026-04-27T20:54:34.380099+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "663011e18dcdaf653cf1ca4be16231dc46921f6e"
       }
     ]
   }

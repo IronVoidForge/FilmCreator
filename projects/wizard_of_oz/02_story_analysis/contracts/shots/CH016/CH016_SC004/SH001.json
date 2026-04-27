@@ -33,7 +33,7 @@
   "required_environment_anchor_1": "throne_room_of_oz (central floor)",
   "required_subject_anchor_1": "formal posture",
   "required_celestial_anchor_1": "",
-  "required_scale_proof_detail": "Wide shot showing vastness of room vs single figure",
+  "required_scale_proof_detail": "Large-scale emptiness vs. small-scale human vulnerability.",
   "camera_package_description": "wide, eye level, wide lens, locked off, deep focus, high contrast ceremonial",
   "subject_blocking": [
     "center stage",
@@ -51,17 +51,18 @@
   ],
   "environment_subzone": "throne_room_of_oz (central floor)",
   "key_visible_environment_features": [
-    "throne_room_of_oz (central floor)"
+    "throne_room_of_oz (central floor)",
+    "Chapter-local beat subzone match for 'throne_room_of_oz (central floor)'."
   ],
   "continuity_from_previous_shot": "Grand, brightly lit throne room; Oz maintains formal posture.",
   "continuity_to_next_shot": "BT002",
   "pose_anchor_frame": "formal posture",
   "pose_end_frame": "slumped shoulders",
-  "shot_title": "Establishing Wide 1: The persona drops",
-  "shot_type": "establishing_wide",
-  "camera_description": "Wide establishing frame with a steady or lightly drifting camera.",
-  "composition": "Wide composition across throne_room_of_oz with oz placed for immediate spatial orientation.",
-  "target_seconds": 5.5,
+  "shot_title": "Handoff Medium 1: The persona drops",
+  "shot_type": "handoff_medium",
+  "camera_description": "Stable readable framing built from the beat requirement.",
+  "composition": "Readable medium composition in throne_room_of_oz featuring oz.",
+  "target_seconds": 7.0,
   "characters_in_frame": [
     {
       "label": "Oz (The Wizard)",
@@ -91,7 +92,7 @@
     "Lighting state must transition from grand/ceremonial to intimate/shadowy relative to previous scenes",
     "The persona drops"
   ],
-  "prompt_seed": "Establishing Wide 1: The persona drops. establishing_wide. size=wide. angle=eye_level. lens=wide. motion=locked_off. zoom=none. focus=deep_focus. lighting=high_contrast_ceremonial. visibility=on_screen. subject_angle=front_three_quarter_right. Wide establishing frame with a steady or lightly drifting camera. Wide co...",
+  "prompt_seed": "Handoff Medium 1: The persona drops. handoff_medium. size=wide. angle=eye_level. lens=wide. motion=locked_off. zoom=none. focus=deep_focus. lighting=high_contrast_ceremonial. visibility=on_screen. subject_angle=front_three_quarter_right. Stable readable framing built from the beat requirement. Readable medium compos...",
   "shot_notes": "The persona drops",
   "evidence_refs": [
     {
@@ -159,13 +160,29 @@
     "oz | [CH002] Chapter II (book index hit) [CH010] Chapter X (book index hit) [CH011] Chapter XI (book index hit)",
     "throne_room_of_oz | No specific visual descriptors are provided in the current evidence. The location serves as a critical narrative hub for character transformations and confrontations. | Unknown. | Unknown. | Unknown."
   ],
+  "coverage_density": "medium",
+  "coverage_profile": "classic_adventure",
+  "coverage_intent": "ceremonial_tableau",
+  "coverage_role": "handoff_medium",
+  "beat_type": "transition_handoff",
+  "coverage_importance": "major",
+  "coverage_blueprint_source": "deterministic_v1",
+  "coverage_classification": {
+    "beat_id": "BT001",
+    "beat_type": "transition_handoff",
+    "importance": "major",
+    "confidence": 0.55,
+    "reasons": [
+      "importance = major"
+    ]
+  },
   "metadata": {
     "artifact_id": "CH016_SC004_SH001_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "78dc1222fbccaa63d9f6c270b2ea372a8ca1d779",
+    "source_fingerprint": "31d90327de4907e26181141f4cbed30a0d829ee7",
     "created_at_utc": "2026-04-27T18:44:35.961033+00:00",
-    "updated_at_utc": "2026-04-27T18:44:35.961033+00:00",
+    "updated_at_utc": "2026-04-27T20:55:00.840501+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
@@ -180,7 +197,7 @@
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH016_SC004",
-        "version": "dcb8ed6eb962f616e10032a8f782a284d8ef8a1a"
+        "version": "020f577619ed64deb4e13e9cf1b45952755d1625"
       }
     ],
     "locked_fields": {},
@@ -190,6 +207,16 @@
         "timestamp_utc": "2026-04-27T18:45:49.697688+00:00",
         "action": "synthesized",
         "source_fingerprint": "78dc1222fbccaa63d9f6c270b2ea372a8ca1d779"
+      },
+      {
+        "timestamp_utc": "2026-04-27T20:54:02.428837+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "31d90327de4907e26181141f4cbed30a0d829ee7"
+      },
+      {
+        "timestamp_utc": "2026-04-27T20:55:01.160435+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "31d90327de4907e26181141f4cbed30a0d829ee7"
       }
     ]
   }

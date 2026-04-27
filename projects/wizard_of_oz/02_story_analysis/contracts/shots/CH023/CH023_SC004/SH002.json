@@ -7,38 +7,37 @@
   "next_shot_id": "",
   "primary_subject": "dorothy",
   "secondary_subjects": [],
-  "shot_moment_summary": "flight through space/desert loss",
-  "start_state": "magical light",
-  "end_state": "sepia blur",
-  "action_during_shot": "rapid movement",
+  "shot_moment_summary": "The Return Command",
+  "start_state": "Dorothy stands in magical setting",
+  "end_state": "Three heel clicks completed",
+  "action_during_shot": "The Return Command",
   "action_continues_from": "heels clicking",
-  "action_hands_off_to": "BT003",
-  "shot_size": "medium_full",
+  "action_hands_off_to": "BT002",
+  "shot_size": "medium",
   "camera_angle": "eye_level",
-  "lens_family": "wide",
-  "camera_motion": "handheld",
+  "lens_family": "normal",
+  "camera_motion": "locked_off",
   "zoom_behavior": "none",
-  "focus_strategy": "environment_priority",
-  "lighting_style": "diffuse_ambient",
+  "focus_strategy": "deep_focus",
+  "lighting_style": "hard_directional",
   "subject_visibility": "on_screen",
   "narration_mode": "none",
-  "primary_subject_angle": "front_three_quarter_right",
+  "primary_subject_angle": "front_three_quarter_left",
   "visible_primary_subject_id": "dorothy",
   "visible_secondary_subject_ids": [],
   "primary_subject_frame_position": "foreground right within The Desert (transitional)",
   "primary_subject_scale_relation": "preserve readable body-to-environment scale in frame",
-  "primary_subject_facing_direction": "front three-quarter right toward the scene action",
-  "primary_subject_pose_description": "magical light",
+  "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+  "primary_subject_pose_description": "Dorothy stands in magical setting",
   "subject_relation_summary": "dorothy carries the frame alone",
   "required_environment_anchor_1": "The Desert (transitional)",
   "required_subject_anchor_1": "",
   "required_celestial_anchor_1": "",
-  "required_scale_proof_detail": "blurred motion",
-  "camera_package_description": "medium-full, eye level, wide lens, handheld, environment priority, diffuse ambient",
+  "required_scale_proof_detail": "preserve readable body-to-environment scale in frame",
+  "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
   "subject_blocking": [
-    "center frame",
-    "Rapid movement through blurred space",
-    "Transitional space",
+    "Dorothy centered, focus on feet",
+    "The Desert (transitional)",
     "dorothy remains readable within the active playing space."
   ],
   "camera_relative_positions": [
@@ -51,17 +50,18 @@
   ],
   "environment_subzone": "The Desert (transitional)",
   "key_visible_environment_features": [
-    "The Desert (transitional)"
+    "The Desert (transitional)",
+    "Chapter-local environment alias match for 'Kansas Prairie/Farmhouse' (key_overlap=2, label_overlap=3, context_overlap..."
   ],
   "continuity_from_previous_shot": "heels clicking",
-  "continuity_to_next_shot": "BT003",
-  "pose_anchor_frame": "magical light",
-  "pose_end_frame": "sepia blur",
-  "shot_title": "Action 2: The Spatial Jump",
-  "shot_type": "action",
-  "camera_description": "Active camera with tracking energy and clear spatial orientation.",
-  "composition": "Dynamic composition in kansas_prairie_farmstead with clear pursuit vectors and readable movement for dorothy.",
-  "target_seconds": 5.8,
+  "continuity_to_next_shot": "BT002",
+  "pose_anchor_frame": "Dorothy stands in magical setting",
+  "pose_end_frame": "Three heel clicks completed",
+  "shot_title": "Hands Insert 2: The Return Command",
+  "shot_type": "hands_insert",
+  "camera_description": "Stable readable framing built from the beat requirement.",
+  "composition": "Readable medium composition in kansas_prairie_farmstead featuring dorothy.",
+  "target_seconds": 5.4,
   "characters_in_frame": [
     {
       "label": "Dorothy",
@@ -85,14 +85,16 @@
     "notes": "Chapter-local environment alias match for 'Kansas Prairie/Farmhouse' (key_overlap=2, label_overlap=3, context_overlap=4)."
   },
   "beat_ids": [
-    "BT002"
+    "BT001"
   ],
   "continuity_constraints": [
     "Immediate shift from magical color palette to sepia/natural tones",
-    "Visual disappearance of Silver Shoes during transition"
+    "Visual disappearance of Silver Shoes during transition",
+    "The Return Command",
+    "Resolve The Desert (transitional) -> The Desert (transitional)"
   ],
-  "prompt_seed": "Action 2: The Spatial Jump. action. size=medium_full. angle=eye_level. lens=wide. motion=handheld. zoom=none. focus=environment_priority. lighting=diffuse_ambient. visibility=on_screen. subject_angle=front_three_quarter_right. Active camera with tracking energy and clear spatial orientation. Dynamic composition in k...",
-  "shot_notes": "The Spatial Jump",
+  "prompt_seed": "Hands Insert 2: The Return Command. hands_insert. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Readable medium composition in...",
+  "shot_notes": "The Return Command",
   "evidence_refs": [
     {
       "source": "scene_contract",
@@ -161,13 +163,30 @@
     "toto | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/toto.md] Costume/Silhouette: Small quadruped with black fur. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapte...",
     "kansas_prairie_farmstead | A vast, flat landscape defined by a wide-open horizon. The farmhouse serves as the primary structural anchor within this expansive prairie setting. The aesthetic is grounded in mundane reality, providing a sharp contrast to magica..."
   ],
+  "coverage_density": "medium",
+  "coverage_profile": "classic_adventure",
+  "coverage_intent": "wonder_reveal",
+  "coverage_role": "hands_insert",
+  "beat_type": "object_or_magic_business",
+  "coverage_importance": "major",
+  "coverage_blueprint_source": "deterministic_v1",
+  "coverage_classification": {
+    "beat_id": "BT001",
+    "beat_type": "object_or_magic_business",
+    "importance": "major",
+    "confidence": 0.72,
+    "reasons": [
+      "object, task, or magic business",
+      "importance = major"
+    ]
+  },
   "metadata": {
     "artifact_id": "CH023_SC004_SH002_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "f9d3b6d69255b66b083a679f1ef7993e6d29263d",
+    "source_fingerprint": "aa6c1f64d2784d32609bc7a934dc3a1f10dc5764",
     "created_at_utc": "2026-04-27T20:47:28.088586+00:00",
-    "updated_at_utc": "2026-04-27T20:47:28.088586+00:00",
+    "updated_at_utc": "2026-04-27T20:55:20.130734+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
@@ -182,7 +201,7 @@
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH023_SC004",
-        "version": "ed5816e972da01dc1f859fd3b71a1dbe44ab8567"
+        "version": "e42554c3eacbc288532611c6d093d66d4ac042f2"
       }
     ],
     "locked_fields": {},
@@ -192,6 +211,16 @@
         "timestamp_utc": "2026-04-27T20:48:34.085508+00:00",
         "action": "synthesized",
         "source_fingerprint": "f9d3b6d69255b66b083a679f1ef7993e6d29263d"
+      },
+      {
+        "timestamp_utc": "2026-04-27T20:54:19.330130+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "aa6c1f64d2784d32609bc7a934dc3a1f10dc5764"
+      },
+      {
+        "timestamp_utc": "2026-04-27T20:55:20.131234+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "aa6c1f64d2784d32609bc7a934dc3a1f10dc5764"
       }
     ]
   }

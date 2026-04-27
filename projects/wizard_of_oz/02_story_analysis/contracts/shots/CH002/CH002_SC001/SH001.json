@@ -42,6 +42,7 @@
   "subject_blocking": [
     "lying on ground",
     "Dorothy on ground near Toto",
+    "Flower-filled clearing",
     "dorothy remains readable within the active playing space.",
     "toto remains readable within the active playing space."
   ],
@@ -56,17 +57,18 @@
   ],
   "environment_subzone": "Flower-filled clearing",
   "key_visible_environment_features": [
-    "Flower-filled clearing"
+    "Flower-filled clearing",
+    "Low-confidence environment match requires review."
   ],
   "continuity_from_previous_shot": "Dorothy waking up in a state of confusion and physical disarray.",
   "continuity_to_next_shot": "BT002",
   "pose_anchor_frame": "eyes closed, disheveled",
   "pose_end_frame": "eyes opening, confused",
-  "shot_title": "Reaction Closeup 1: Awakening from the cyclone",
-  "shot_type": "reaction_closeup",
-  "camera_description": "Close framing that isolates reaction and emotional emphasis.",
-  "composition": "Intimate composition that isolates dorothy, toto against The exterior/immediate vicinity of Dorothy's house (Oz landscape) to capture the beat's emotional turn.",
-  "target_seconds": 5.5,
+  "shot_title": "Handoff Medium 1: Awakening from the cyclone",
+  "shot_type": "handoff_medium",
+  "camera_description": "Stable readable framing built from the beat requirement.",
+  "composition": "Readable medium composition in The exterior/immediate vicinity of Dorothy's house (Oz landscape) featuring dorothy, toto.",
+  "target_seconds": 7.0,
   "characters_in_frame": [
     {
       "label": "Dorothy",
@@ -105,9 +107,10 @@
   "continuity_constraints": [
     "Lighting shift from dark/stormy to bright/saturated",
     "Dorothy physical state must remain disheveled from cyclone",
+    "Awakening from the cyclone",
     "Resolve The exterior/immediate vicinity of Dorothy's house (Oz landscape) -> The exterior/immediate vicinity of Dorothy's house (Oz landscape)"
   ],
-  "prompt_seed": "Reaction Closeup 1: Awakening from the cyclone. reaction_closeup. size=medium_close. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=shallow_subject. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Close framing that isolates reaction and emotional emphasis....",
+  "prompt_seed": "Handoff Medium 1: Awakening from the cyclone. handoff_medium. size=medium_close. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=shallow_subject. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Readabl...",
   "shot_notes": "Awakening from the cyclone",
   "evidence_refs": [
     {
@@ -172,16 +175,32 @@
     "Dorothy waking up in a state of confusion and physical disarray.",
     "Dorothy looking out at the vibrant world in awe.",
     "Dorothy awakens and processes the sensory shift from storm to paradise.",
-    "dorothy | Dorothy is a young human girl characterized by an expressive face and the appearance of a weary traveler. Her visual identity evolves during her journey, transitioning from previously green clothing to a white dress or clothing. She is most notabl...",
-    "toto | Toto is a small quadruped dog characterized by a compact build and consistent black fur. The character possesses an alert physical presence with keen, observant eyes suitable for a companion animal. | black fur. | companion animal; alert."
+    "dorothy | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md] Costume/Silhouette: Unknown. No specific clothing details are provided in this chapter. [source:C:/FilmCreator/projects/wizard_of_oz/02_...",
+    "toto | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/toto.md] Costume/Silhouette: Small quadruped with black fur. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapte..."
   ],
+  "coverage_density": "medium",
+  "coverage_profile": "classic_adventure",
+  "coverage_intent": "wonder_reveal",
+  "coverage_role": "handoff_medium",
+  "beat_type": "transition_handoff",
+  "coverage_importance": "major",
+  "coverage_blueprint_source": "deterministic_v1",
+  "coverage_classification": {
+    "beat_id": "BT001",
+    "beat_type": "transition_handoff",
+    "importance": "major",
+    "confidence": 0.55,
+    "reasons": [
+      "importance = major"
+    ]
+  },
   "metadata": {
     "artifact_id": "CH002_SC001_SH001_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "3832b52bdf6fe37e48e1f73ba9ba2597f913df76",
+    "source_fingerprint": "defa3b76c53ed23d5e1cc596d3e3358dfa88148b",
     "created_at_utc": "2026-04-27T09:30:13.172921+00:00",
-    "updated_at_utc": "2026-04-27T14:34:09.842916+00:00",
+    "updated_at_utc": "2026-04-27T20:54:22.311829+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
@@ -196,7 +215,7 @@
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH002_SC001",
-        "version": "5494baac5cc2492aec6ba27706b113f1effbecca"
+        "version": "5a72500f802b71d99718bc3f1202f7fa947c718a"
       }
     ],
     "locked_fields": {},
@@ -211,6 +230,16 @@
         "timestamp_utc": "2026-04-27T14:35:28.107698+00:00",
         "action": "synthesized",
         "source_fingerprint": "3832b52bdf6fe37e48e1f73ba9ba2597f913df76"
+      },
+      {
+        "timestamp_utc": "2026-04-27T20:53:25.763044+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "defa3b76c53ed23d5e1cc596d3e3358dfa88148b"
+      },
+      {
+        "timestamp_utc": "2026-04-27T20:54:22.735092+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "defa3b76c53ed23d5e1cc596d3e3358dfa88148b"
       }
     ]
   }

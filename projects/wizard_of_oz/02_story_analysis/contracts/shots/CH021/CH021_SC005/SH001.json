@@ -8,8 +8,8 @@
   "primary_subject": "Lion",
   "secondary_subjects": [],
   "shot_moment_summary": "Lion launching into the air",
-  "start_state": "Lion coiled for predatory leap",
-  "end_state": "Lion airborne toward monster back",
+  "start_state": "Lion coiled",
+  "end_state": "Lion airborne",
   "action_during_shot": "Leap towards monster back",
   "action_continues_from": "Lion positioned for a predatory leap; Great Spider Monster occupies central space.",
   "action_hands_off_to": "BT002",
@@ -36,20 +36,25 @@
   "required_scale_proof_detail": "Lion size vs monster limbs",
   "camera_package_description": "full, low angle, wide lens, handheld, shallow subject, diffuse ambient",
   "subject_blocking": [
+    "Lion moves from ground to air",
     "Lion moves from ground to air trajectory",
-    "Lion remains readable within the active playing space",
-    "great_spider_monster remains readable within the active playing space"
+    "mossy forest floor towards monster",
+    "Lion remains readable within the active playing space.",
+    "great_spider_monster remains readable within the active playing space."
   ],
   "camera_relative_positions": [
-    "Camera anchors the action inside the mossy forest floor",
-    "Background depth keeps oak_grove_monstrous_lair legible"
+    "Camera anchors the action inside the mossy forest floor.",
+    "Background depth should keep oak_grove_monstrous_lair legible as the location anchor.",
+    "Subject 1: Lion remains visually readable against the environment scale.",
+    "Subject 2: great_spider_monster remains visually readable against the environment scale."
   ],
   "gaze_directions": [
-    "Lion focuses toward the active scene action"
+    "Lion focuses toward the active scene action."
   ],
   "environment_subzone": "mossy forest floor",
   "key_visible_environment_features": [
-    "mossy forest floor"
+    "mossy forest floor",
+    "Chapter-local environment alias match for 'Oak Grove' (key_overlap=2, label_overlap=2, context_overlap=4)."
   ],
   "continuity_from_previous_shot": "Lion positioned for a predatory leap; Great Spider Monster occupies central space.",
   "continuity_to_next_shot": "BT002",
@@ -58,8 +63,8 @@
   "shot_title": "Establishing Wide 1: The Leap",
   "shot_type": "establishing_wide",
   "camera_description": "Wide establishing frame with a steady or lightly drifting camera.",
-  "composition": "Wide composition across oak_grove_monstrous_lair with Lion and great_spider_monster placed for immediate spatial orientation.",
-  "target_seconds": 5.5,
+  "composition": "Wide composition across oak_grove_monstrous_lair with Lion, great_spider_monster placed for immediate spatial orientation.",
+  "target_seconds": 11.5,
   "characters_in_frame": [
     {
       "label": "Lion",
@@ -97,6 +102,9 @@
   ],
   "continuity_constraints": [
     "Lion's jump trajectory relative to monster back",
+    "Blood and impact effect timing",
+    "Position of monster limbs during strike",
+    "The Leap",
     "Resolve Lion -> Lion"
   ],
   "prompt_seed": "Establishing Wide 1: The Leap. establishing_wide. size=full. angle=low_angle. lens=wide. motion=handheld. zoom=none. focus=shallow_subject. lighting=diffuse_ambient. visibility=on_screen. subject_angle=profile_left. Wide establishing frame with a steady or lightly drifting camera. Wide composition across oak_grove_m...",
@@ -167,13 +175,30 @@
     "great_spider_monster | [CH021] Chapter XXI (book index hit) [CH001] Chapter I (book index hit) [CH002] Chapter II (book index hit)",
     "oak_grove_monstrous_lair | No specific visual descriptors are provided in the current evidence. The location serves as a secondary setting and is identified as the site of the story's climax. | Unknown. | Unknown. | Unknown."
   ],
+  "coverage_density": "medium",
+  "coverage_profile": "classic_adventure",
+  "coverage_intent": "economical_storybook",
+  "coverage_role": "establishing_wide",
+  "beat_type": "establishing_arrival",
+  "coverage_importance": "set_piece",
+  "coverage_blueprint_source": "deterministic_v1",
+  "coverage_classification": {
+    "beat_id": "BT001",
+    "beat_type": "establishing_arrival",
+    "importance": "set_piece",
+    "confidence": 0.72,
+    "reasons": [
+      "arrival/entry verb",
+      "importance = set_piece"
+    ]
+  },
   "metadata": {
     "artifact_id": "CH021_SC005_SH001_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "3a6ad22dc4062b33ce5fecffc908fbaf871d6a10",
+    "source_fingerprint": "5304bd686840ef3a164384b05c907e370061979c",
     "created_at_utc": "2026-04-27T20:09:10.850425+00:00",
-    "updated_at_utc": "2026-04-27T20:09:10.850425+00:00",
+    "updated_at_utc": "2026-04-27T20:55:13.310456+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
@@ -188,7 +213,7 @@
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH021_SC005",
-        "version": "0c980b600ad70d7d3fed9ccb90da53198628b2cf"
+        "version": "1519df3479c9d74c2cc4dab73aaf1000fac2ba4d"
       }
     ],
     "locked_fields": {},
@@ -198,6 +223,16 @@
         "timestamp_utc": "2026-04-27T20:10:24.625161+00:00",
         "action": "synthesized",
         "source_fingerprint": "3a6ad22dc4062b33ce5fecffc908fbaf871d6a10"
+      },
+      {
+        "timestamp_utc": "2026-04-27T20:54:13.864341+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "5304bd686840ef3a164384b05c907e370061979c"
+      },
+      {
+        "timestamp_utc": "2026-04-27T20:55:13.774851+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "5304bd686840ef3a164384b05c907e370061979c"
       }
     ]
   }

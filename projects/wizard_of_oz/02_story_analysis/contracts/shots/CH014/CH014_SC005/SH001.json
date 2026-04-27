@@ -43,28 +43,34 @@
   "camera_package_description": "extreme-wide, high angle, ultra-wide lens, track, environment priority, diffuse ambient",
   "subject_blocking": [
     "winged_monkeys carrying group across frame",
-    "group moving through sky towards destination"
+    "group moving through sky towards destination",
+    "aerial_landscape_transit",
+    "winged_monkeys remains readable within the active playing space.",
+    "dorothy remains readable within the active playing space."
   ],
   "camera_relative_positions": [
     "Camera anchors the action inside the aerial_landscape_transit.",
-    "Background depth should keep aerial_landscape_transit legible as the location anchor."
+    "Background depth should keep aerial_landscape_transit legible as the location anchor.",
+    "Subject 1: winged_monkeys remains visually readable against the environment scale.",
+    "Subject 2: dorothy remains visually readable against the environment scale."
   ],
   "gaze_directions": [
     "aerial_landscape_transit focuses toward the active scene action."
   ],
   "environment_subzone": "aerial_landscape_transit",
   "key_visible_environment_features": [
-    "aerial_landscape_transit"
+    "aerial_landscape_transit",
+    "Chapter-local beat subzone match for 'aerial_landscape_transit'."
   ],
   "continuity_from_previous_shot": "Aerial view approaching the city over vast landscapes.",
   "continuity_to_next_shot": "BT002",
   "pose_anchor_frame": "distant horizon view",
   "pose_end_frame": "approaching city gates",
-  "shot_title": "Action 1: Aerial approach to the city",
-  "shot_type": "action",
-  "camera_description": "Active camera with tracking energy and clear spatial orientation.",
-  "composition": "Dynamic composition in aerial_landscape_transit with clear pursuit vectors and readable movement for winged_monkeys, dorothy, the_scarecrow.",
-  "target_seconds": 6.0,
+  "shot_title": "Handoff Medium 1: Aerial approach to the city",
+  "shot_type": "handoff_medium",
+  "camera_description": "Stable readable framing built from the beat requirement.",
+  "composition": "Readable medium composition in aerial_landscape_transit featuring winged_monkeys, dorothy, the_scarecrow.",
+  "target_seconds": 7.0,
   "characters_in_frame": [
     {
       "label": "Winged Monkeys",
@@ -112,9 +118,11 @@
   ],
   "continuity_constraints": [
     "Visual appearance and scale of The Gates of the Emerald City",
-    "Physical transition from flight mechanics to ground contact/landing"
+    "Physical transition from flight mechanics to ground contact/landing",
+    "Aerial approach to the city",
+    "Resolve The Gates of the Emerald City -> The Gates of the Emerald City"
   ],
-  "prompt_seed": "Action 1: Aerial approach to the city. action. size=extreme_wide. angle=high_angle. lens=ultra_wide. motion=track. zoom=none. focus=environment_priority. lighting=diffuse_ambient. visibility=on_screen. subject_angle=rear_three_quarter_left. Active camera with tracking energy and clear spatial orientation. Dynamic co...",
+  "prompt_seed": "Handoff Medium 1: Aerial approach to the city. handoff_medium. size=extreme_wide. angle=high_angle. lens=ultra_wide. motion=track. zoom=none. focus=environment_priority. lighting=diffuse_ambient. visibility=on_screen. subject_angle=rear_three_quarter_left. Stable readable framing built from the beat requirement. Rea...",
   "shot_notes": "Aerial approach to the city",
   "evidence_refs": [
     {
@@ -184,13 +192,29 @@
     "the_scarecrow | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH003/the_scarecrow.md] Physical Description: A living figure stuffed with straw. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/cha...",
     "aerial_landscape_transit | An aerial landscape utilized as a transit setting during flight phases. Specific visual characteristics of the terrain or sky are not detailed in the current evidence. | Spatial configuration is defined by movement through an aeri..."
   ],
+  "coverage_density": "medium",
+  "coverage_profile": "classic_adventure",
+  "coverage_intent": "economical_storybook",
+  "coverage_role": "handoff_medium",
+  "beat_type": "transition_handoff",
+  "coverage_importance": "major",
+  "coverage_blueprint_source": "deterministic_v1",
+  "coverage_classification": {
+    "beat_id": "BT001",
+    "beat_type": "transition_handoff",
+    "importance": "major",
+    "confidence": 0.55,
+    "reasons": [
+      "importance = major"
+    ]
+  },
   "metadata": {
     "artifact_id": "CH014_SC005_SH001_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "492f5264ab94f49c89ac2eb5021ad499e1cf81fb",
+    "source_fingerprint": "8e24235bdaaa226769a3c3de80d06ae741ac2c1f",
     "created_at_utc": "2026-04-27T18:11:39.545734+00:00",
-    "updated_at_utc": "2026-04-27T18:11:39.545734+00:00",
+    "updated_at_utc": "2026-04-27T20:54:56.285582+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
@@ -205,7 +229,7 @@
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH014_SC005",
-        "version": "9d9232a0e10de40ec05d97aba211d998529a4593"
+        "version": "341a754d80c268f2f7a63e851e01966556ff8354"
       }
     ],
     "locked_fields": {},
@@ -215,6 +239,16 @@
         "timestamp_utc": "2026-04-27T18:12:52.901900+00:00",
         "action": "synthesized",
         "source_fingerprint": "492f5264ab94f49c89ac2eb5021ad499e1cf81fb"
+      },
+      {
+        "timestamp_utc": "2026-04-27T20:53:58.150467+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "8e24235bdaaa226769a3c3de80d06ae741ac2c1f"
+      },
+      {
+        "timestamp_utc": "2026-04-27T20:54:56.636590+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "8e24235bdaaa226769a3c3de80d06ae741ac2c1f"
       }
     ]
   }

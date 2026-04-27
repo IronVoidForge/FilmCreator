@@ -5,65 +5,83 @@
   "shot_order": 3,
   "previous_shot_id": "",
   "next_shot_id": "",
-  "primary_subject": "dorothy",
+  "primary_subject": "winged_monkeys",
   "secondary_subjects": [
+    "dorothy",
     "the_scarecrow"
   ],
-  "shot_moment_summary": "group landing and reacting with relief",
-  "start_state": "moment of ground contact",
-  "end_state": "standing in relief",
-  "action_during_shot": "landing and exhaling/reacting",
-  "action_continues_from": "feet approaching ground",
-  "action_hands_off_to": "end_of_scene",
-  "shot_size": "close_up",
-  "camera_angle": "eye_level",
-  "lens_family": "portrait",
-  "camera_motion": "locked_off",
+  "shot_moment_summary": "descending toward the gates",
+  "start_state": "mid-air descent",
+  "end_state": "feet approaching ground",
+  "action_during_shot": "descending tracking movement",
+  "action_continues_from": "city gates visible on horizon",
+  "action_hands_off_to": "BT003",
+  "shot_size": "wide",
+  "camera_angle": "high_angle",
+  "lens_family": "wide",
+  "camera_motion": "crane",
   "zoom_behavior": "none",
   "focus_strategy": "shallow_subject",
-  "lighting_style": "soft_even",
+  "lighting_style": "diffuse_ambient",
   "subject_visibility": "on_screen",
   "narration_mode": "none",
-  "primary_subject_angle": "front",
-  "visible_primary_subject_id": "dorothy",
+  "primary_subject_angle": "front_three_quarter_right",
+  "visible_primary_subject_id": "winged_monkeys",
   "visible_secondary_subject_ids": [
+    "dorothy",
     "the_scarecrow"
   ],
-  "primary_subject_frame_position": "foreground inside The Gates of the Emerald City",
-  "primary_subject_scale_relation": "characters small against gate structure",
-  "primary_subject_facing_direction": "facing directly toward camera",
-  "primary_subject_pose_description": "moment of ground contact",
-  "subject_relation_summary": "dorothy plays against the_scarecrow in the same frame",
+  "primary_subject_frame_position": "midground inside The Gates of the Emerald City",
+  "primary_subject_scale_relation": "gates growing in frame size",
+  "primary_subject_facing_direction": "front three-quarter right toward the scene action",
+  "primary_subject_pose_description": "mid-air descent",
+  "subject_relation_summary": "winged_monkeys plays against dorothy, the_scarecrow in the same frame",
   "required_environment_anchor_1": "The Gates of the Emerald City",
   "required_subject_anchor_1": "",
   "required_celestial_anchor_1": "",
-  "required_scale_proof_detail": "characters small against gate structure",
-  "camera_package_description": "close-up, eye level, portrait lens, locked off, shallow subject, soft even",
+  "required_scale_proof_detail": "gates growing in frame size",
+  "camera_package_description": "wide, high angle, wide lens, crane, shallow subject, diffuse ambient",
   "subject_blocking": [
-    "group settles on ground near gates",
-    "group settles in front of gates"
+    "group descending vertically toward gates",
+    "vertical descent path",
+    "transition from air to gate proximity",
+    "winged_monkeys remains readable within the active playing space.",
+    "dorothy remains readable within the active playing space."
   ],
   "camera_relative_positions": [
     "Camera anchors the action inside the The Gates of the Emerald City.",
-    "Background depth should keep aerial_landscape_transit legible as the location anchor."
+    "Background depth should keep aerial_landscape_transit legible as the location anchor.",
+    "Subject 1: winged_monkeys remains visually readable against the environment scale.",
+    "Subject 2: dorothy remains visually readable against the environment scale."
   ],
   "gaze_directions": [
-    "dorothy focuses toward the active scene action."
+    "winged_monkeys focuses toward the active scene action."
   ],
   "environment_subzone": "The Gates of the Emerald City",
   "key_visible_environment_features": [
-    "The Gates of the Emerald City"
+    "The Gates of the Emerald City",
+    "Chapter-local environment alias match for 'Aerial view approaching the city' (key_overlap=1, label_overlap=2, context..."
   ],
-  "continuity_from_previous_shot": "feet approaching ground",
-  "continuity_to_next_shot": "end_of_scene",
-  "pose_anchor_frame": "moment of ground contact",
-  "pose_end_frame": "standing in relief",
-  "shot_title": "Reaction Closeup 3: Safe landing and relief",
-  "shot_type": "reaction_closeup",
-  "camera_description": "Close framing that isolates reaction and emotional emphasis.",
-  "composition": "Intimate composition that isolates dorothy, the_scarecrow against aerial_landscape_transit to capture the beat's emotional turn.",
-  "target_seconds": 5.1,
+  "continuity_from_previous_shot": "city gates visible on horizon",
+  "continuity_to_next_shot": "BT003",
+  "pose_anchor_frame": "mid-air descent",
+  "pose_end_frame": "feet approaching ground",
+  "shot_title": "Ceremonial Master 3: Descent toward the gates",
+  "shot_type": "ceremonial_master",
+  "camera_description": "Stable readable framing built from the beat requirement.",
+  "composition": "Readable medium composition in aerial_landscape_transit featuring winged_monkeys, dorothy, the_scarecrow.",
+  "target_seconds": 10.0,
   "characters_in_frame": [
+    {
+      "label": "Winged Monkeys",
+      "canonical_id": "winged_monkeys",
+      "display_name": "winged_monkeys",
+      "status": "canonical",
+      "entity_kind": "group",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH014/winged_monkeys.md",
+      "notes": "Direct registry match for 'winged_monkeys'."
+    },
     {
       "label": "Dorothy",
       "canonical_id": "dorothy",
@@ -96,14 +114,16 @@
     "notes": "Chapter-local environment alias match for 'Aerial view approaching the city' (key_overlap=1, label_overlap=2, context_overlap=4)."
   },
   "beat_ids": [
-    "BT003"
+    "BT002"
   ],
   "continuity_constraints": [
     "Visual appearance and scale of The Gates of the Emerald City",
-    "Physical transition from flight mechanics to ground contact/landing"
+    "Physical transition from flight mechanics to ground contact/landing",
+    "Descent toward the gates",
+    "Resolve The Gates of the Emerald City -> The Gates of the Emerald City"
   ],
-  "prompt_seed": "Reaction Closeup 3: Safe landing and relief. reaction_closeup. size=close_up. angle=eye_level. lens=portrait. motion=locked_off. zoom=none. focus=shallow_subject. lighting=soft_even. visibility=on_screen. subject_angle=front. Close framing that isolates reaction and emotional emphasis. Intimate composition that isol...",
-  "shot_notes": "Safe landing and relief",
+  "prompt_seed": "Ceremonial Master 3: Descent toward the gates. ceremonial_master. size=wide. angle=high_angle. lens=wide. motion=crane. zoom=none. focus=shallow_subject. lighting=diffuse_ambient. visibility=on_screen. subject_angle=front_three_quarter_right. Stable readable framing built from the beat requirement. Readable medium c...",
+  "shot_notes": "Descent toward the gates",
   "evidence_refs": [
     {
       "source": "scene_contract",
@@ -172,13 +192,30 @@
     "the_scarecrow | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH003/the_scarecrow.md] Physical Description: A living figure stuffed with straw. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/cha...",
     "aerial_landscape_transit | An aerial landscape utilized as a transit setting during flight phases. Specific visual characteristics of the terrain or sky are not detailed in the current evidence. | Spatial configuration is defined by movement through an aeri..."
   ],
+  "coverage_density": "medium",
+  "coverage_profile": "classic_adventure",
+  "coverage_intent": "economical_storybook",
+  "coverage_role": "ceremonial_master",
+  "beat_type": "dialogue_council_or_court",
+  "coverage_importance": "normal",
+  "coverage_blueprint_source": "deterministic_v1",
+  "coverage_classification": {
+    "beat_id": "BT002",
+    "beat_type": "dialogue_council_or_court",
+    "importance": "normal",
+    "confidence": 0.82,
+    "reasons": [
+      "court/council authority language",
+      "importance = normal"
+    ]
+  },
   "metadata": {
     "artifact_id": "CH014_SC005_SH003_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "492f5264ab94f49c89ac2eb5021ad499e1cf81fb",
+    "source_fingerprint": "8e24235bdaaa226769a3c3de80d06ae741ac2c1f",
     "created_at_utc": "2026-04-27T18:14:05.740868+00:00",
-    "updated_at_utc": "2026-04-27T18:14:05.740868+00:00",
+    "updated_at_utc": "2026-04-27T20:54:56.650108+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
@@ -193,7 +230,7 @@
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH014_SC005",
-        "version": "9d9232a0e10de40ec05d97aba211d998529a4593"
+        "version": "341a754d80c268f2f7a63e851e01966556ff8354"
       }
     ],
     "locked_fields": {},
@@ -203,6 +240,16 @@
         "timestamp_utc": "2026-04-27T18:15:11.533531+00:00",
         "action": "synthesized",
         "source_fingerprint": "492f5264ab94f49c89ac2eb5021ad499e1cf81fb"
+      },
+      {
+        "timestamp_utc": "2026-04-27T20:53:58.163983+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "8e24235bdaaa226769a3c3de80d06ae741ac2c1f"
+      },
+      {
+        "timestamp_utc": "2026-04-27T20:54:56.650609+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "8e24235bdaaa226769a3c3de80d06ae741ac2c1f"
       }
     ]
   }

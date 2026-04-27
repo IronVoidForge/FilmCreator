@@ -4,44 +4,45 @@
   "chapter_id": "CH015",
   "shot_order": 3,
   "previous_shot_id": "SH002",
-  "next_shot_id": "",
+  "next_shot_id": "SH004",
   "primary_subject": "dorothy",
   "secondary_subjects": [
-    "the_scarecrow"
+    "the_scarecrow",
+    "tin_woodman"
   ],
-  "shot_moment_summary": "terror on faces",
-  "start_state": "static terror",
-  "end_state": "peak terror",
-  "action_during_shot": "reacting to illusions",
-  "action_continues_from": "massive illusion looming over characters",
-  "action_hands_off_to": "end_of_scene",
-  "shot_size": "extreme_close_up",
+  "shot_moment_summary": "Travelers enter the throne room",
+  "start_state": "travelers walking into hall",
+  "end_state": "travelers halt in center",
+  "action_during_shot": "Travelers enter the throne room",
+  "action_continues_from": "travelers halt in center",
+  "action_hands_off_to": "BT002",
+  "shot_size": "medium",
   "camera_angle": "eye_level",
-  "lens_family": "portrait",
+  "lens_family": "normal",
   "camera_motion": "locked_off",
   "zoom_behavior": "none",
-  "focus_strategy": "shallow_subject",
-  "lighting_style": "high_contrast_ceremonial",
+  "focus_strategy": "deep_focus",
+  "lighting_style": "hard_directional",
   "subject_visibility": "on_screen",
-  "narration_mode": "in_scene_speaker",
-  "primary_subject_angle": "front",
+  "narration_mode": "none",
+  "primary_subject_angle": "front_three_quarter_left",
   "visible_primary_subject_id": "dorothy",
   "visible_secondary_subject_ids": [
-    "the_scarecrow"
+    "the_scarecrow",
+    "tin_woodman"
   ],
-  "primary_subject_frame_position": "foreground inside throne_room_grand_hall_center",
+  "primary_subject_frame_position": "foreground right within throne_room_grand_hall_center",
   "primary_subject_scale_relation": "Massive illusion height vs. small human travelers.",
-  "primary_subject_facing_direction": "facing directly toward camera",
-  "primary_subject_pose_description": "static terror",
-  "subject_relation_summary": "dorothy plays against the_scarecrow in the same frame",
+  "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+  "primary_subject_pose_description": "travelers walking into hall",
+  "subject_relation_summary": "dorothy plays against the_scarecrow, tin_woodman in the same frame",
   "required_environment_anchor_1": "throne_room_grand_hall_center",
   "required_subject_anchor_1": "",
   "required_celestial_anchor_1": "",
   "required_scale_proof_detail": "Massive illusion height vs. small human travelers.",
-  "camera_package_description": "extreme-close-up, eye level, portrait lens, locked off, shallow subject, high contrast ceremonial",
+  "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
   "subject_blocking": [
-    "characters recoiling",
-    "lion breaks from group to roar",
+    "group clustered together",
     "throne_room_grand_hall_center",
     "dorothy remains readable within the active playing space.",
     "the_scarecrow remains readable within the active playing space."
@@ -57,17 +58,18 @@
   ],
   "environment_subzone": "throne_room_grand_hall_center",
   "key_visible_environment_features": [
-    "throne_room_grand_hall_center"
+    "throne_room_grand_hall_center",
+    "Chapter-local beat subzone match for 'throne_room_grand_hall_center'."
   ],
-  "continuity_from_previous_shot": "massive illusion looming over characters",
-  "continuity_to_next_shot": "end_of_scene",
-  "pose_anchor_frame": "static terror",
-  "pose_end_frame": "peak terror",
-  "shot_title": "Reaction Closeup 3: The Lion's roar breaks the tension",
-  "shot_type": "reaction_closeup",
-  "camera_description": "Close framing that isolates reaction and emotional emphasis.",
-  "composition": "Intimate composition that isolates dorothy, the_scarecrow against throne_room_grand_hall to capture the beat's emotional turn.",
-  "target_seconds": 5.1,
+  "continuity_from_previous_shot": "travelers halt in center",
+  "continuity_to_next_shot": "BT002",
+  "pose_anchor_frame": "travelers walking into hall",
+  "pose_end_frame": "travelers halt in center",
+  "shot_title": "Petitioner Group 3: Travelers enter the throne room",
+  "shot_type": "petitioner_group",
+  "camera_description": "Stable readable framing built from the beat requirement.",
+  "composition": "Readable medium composition in throne_room_grand_hall featuring dorothy, the_scarecrow, tin_woodman.",
+  "target_seconds": 7.0,
   "characters_in_frame": [
     {
       "label": "Dorothy",
@@ -88,6 +90,16 @@
       "resolution_score": 186,
       "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH003/the_scarecrow.md",
       "notes": "asset id exactly matches canonical id | query matches alias 'scarecrow'"
+    },
+    {
+      "label": "Tin Woodman",
+      "canonical_id": "tin_woodman",
+      "display_name": "tin_woodman",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH015/tin_woodman.md",
+      "notes": "Direct registry match for 'tin_woodman'."
     }
   ],
   "environment": {
@@ -101,15 +113,16 @@
     "notes": "Chapter-local beat subzone match for 'throne_room_grand_hall_center'."
   },
   "beat_ids": [
-    "BT003"
+    "BT001"
   ],
   "continuity_constraints": [
     "Illusion scale relative to characters",
     "Lighting shifts during magical displays",
-    "The Lion's roar breaks the tension"
+    "Travelers enter the throne room",
+    "Resolve The Wizard (as Illusions) -> The Wizard (as Illusions)"
   ],
-  "prompt_seed": "Reaction Closeup 3: The Lion's roar breaks the tension. reaction_closeup. size=extreme_close_up. angle=eye_level. lens=portrait. motion=locked_off. zoom=none. focus=shallow_subject. lighting=high_contrast_ceremonial. visibility=on_screen. subject_angle=front. Close framing that isolates reaction and emotional emphas...",
-  "shot_notes": "The Lion's roar breaks the tension",
+  "prompt_seed": "Petitioner Group 3: Travelers enter the throne room. petitioner_group. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Readable...",
+  "shot_notes": "Travelers enter the throne room",
   "evidence_refs": [
     {
       "source": "scene_contract",
@@ -178,13 +191,30 @@
     "tin_woodman | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH005/tin_woodman.md] Costume/Silhouette: Entirely metallic (tin) body; carries an axe. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis...",
     "throne_room_grand_hall | A massive, cavernous hall defined by intimidating grand architecture and a vast vaulted dome. The space functions as an illusionist's stage, featuring a central stage area designed for the Wizard's manifestations. The scale is overw..."
   ],
+  "coverage_density": "medium",
+  "coverage_profile": "classic_adventure",
+  "coverage_intent": "ceremonial_tableau",
+  "coverage_role": "petitioner_group",
+  "beat_type": "dialogue_council_or_court",
+  "coverage_importance": "major",
+  "coverage_blueprint_source": "deterministic_v1",
+  "coverage_classification": {
+    "beat_id": "BT001",
+    "beat_type": "dialogue_council_or_court",
+    "importance": "major",
+    "confidence": 0.82,
+    "reasons": [
+      "court/council authority language",
+      "importance = major"
+    ]
+  },
   "metadata": {
     "artifact_id": "CH015_SC003_SH003_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "74fb7e3beccd40dc03ebd839a16cddbce2462cbb",
+    "source_fingerprint": "d7119aea4f6b86324c0fea4159c9d44bb8d921c5",
     "created_at_utc": "2026-04-27T18:25:16.173158+00:00",
-    "updated_at_utc": "2026-04-27T18:25:16.173158+00:00",
+    "updated_at_utc": "2026-04-27T20:54:58.155224+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
@@ -199,7 +229,7 @@
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH015_SC003",
-        "version": "1199c7a4c99286de94361367cfe74a3489261587"
+        "version": "1cbf6ceba128f054d05691611b6057c740fde82e"
       }
     ],
     "locked_fields": {},
@@ -209,6 +239,16 @@
         "timestamp_utc": "2026-04-27T18:26:30.498841+00:00",
         "action": "synthesized",
         "source_fingerprint": "74fb7e3beccd40dc03ebd839a16cddbce2462cbb"
+      },
+      {
+        "timestamp_utc": "2026-04-27T20:53:59.653973+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "d7119aea4f6b86324c0fea4159c9d44bb8d921c5"
+      },
+      {
+        "timestamp_utc": "2026-04-27T20:54:58.156220+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "d7119aea4f6b86324c0fea4159c9d44bb8d921c5"
       }
     ]
   }

@@ -10,7 +10,7 @@
     "secondary_subjects": [
       "cowardly_lion"
     ],
-    "shot_moment_summary": "Oz presents the carved dish containing green liquid to the Lion.",
+    "shot_moment_summary": "Oz presents the green liquid",
     "start_state": "oz holds out dish",
     "end_state": "dish is held before lion",
     "action_during_shot": "Oz presents the green liquid",
@@ -18,53 +18,57 @@
     "action_hands_off_to": "dish is held before lion",
     "shot_size": "medium",
     "camera_angle": "eye_level",
-    "lens_family": "portrait",
+    "lens_family": "normal",
     "camera_motion": "locked_off",
     "zoom_behavior": "none",
-    "focus_strategy": "shallow_subject",
+    "focus_strategy": "deep_focus",
     "lighting_style": "hard_directional",
     "subject_visibility": "on_screen",
     "narration_mode": "none",
-    "primary_subject_angle": "front_three_quarter_right",
+    "primary_subject_angle": "front_three_quarter_left",
     "visible_primary_subject_id": "oz",
     "visible_secondary_subject_ids": [
       "cowardly_lion"
     ],
     "primary_subject_frame_position": "foreground entry line within throne_room_of_oz",
     "primary_subject_scale_relation": "preserve readable body-to-environment scale in frame",
-    "primary_subject_facing_direction": "angled toward the scene action",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
     "primary_subject_pose_description": "oz holds out dish",
     "subject_relation_summary": "oz plays against cowardly_lion in the same frame",
     "required_environment_anchor_1": "throne_room_of_oz",
     "required_subject_anchor_1": "",
     "required_celestial_anchor_1": "",
-    "required_scale_proof_detail": "dish size relative to oz hands",
-    "camera_package_description": "medium, eye level, portrait lens, locked off, shallow subject, hard directional",
+    "required_scale_proof_detail": "preserve readable body-to-environment scale in frame",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
     "subject_blocking": [
       "oz stands authoritative, lion is low/slumped",
+      "center of throne room",
       "oz remains readable within the active playing space.",
       "cowardly_lion remains readable within the active playing space."
     ],
     "camera_relative_positions": [
       "Camera anchors the action inside the throne_room_of_oz.",
-      "Background depth should keep throne_room_of_oz legible as the location anchor."
+      "Background depth should keep throne_room_of_oz legible as the location anchor.",
+      "Subject 1: oz remains visually readable against the environment scale.",
+      "Subject 2: cowardly_lion remains visually readable against the environment scale."
     ],
     "gaze_directions": [
       "oz focuses toward the active scene action."
     ],
     "environment_subzone": "throne_room_of_oz",
     "key_visible_environment_features": [
-      "throne_room_of_oz"
+      "throne_room_of_oz",
+      "Chapter-local beat subzone match for 'throne_room_of_oz'."
     ],
     "continuity_from_previous_shot": "cowardly_lion is slumped and trembling with anxiety.",
     "continuity_to_next_shot": "dish is held before lion",
     "pose_anchor_frame": "oz holds out dish",
     "pose_end_frame": "dish is held before lion",
-    "shot_title": "Insert Detail 1: Oz presents the green liquid",
-    "shot_type": "insert_detail",
-    "camera_description": "Tight detail framing focused on a single visual object or gesture.",
-    "composition": "Detail composition centered on the key physical action or prop inside throne_room_of_oz.",
-    "target_seconds": 5.5,
+    "shot_title": "Handoff Medium 1: Oz presents the green liquid",
+    "shot_type": "handoff_medium",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in throne_room_of_oz featuring oz, cowardly_lion.",
+    "target_seconds": 6.0,
     "characters_in_frame": [
       {
         "label": "Oz (The Wizard)",
@@ -105,7 +109,7 @@
       "Lion's posture shift from slumped to upright",
       "Oz presents the green liquid"
     ],
-    "prompt_seed": "Insert Detail 1: Oz presents the green liquid. insert_detail. size=medium. angle=eye_level. lens=portrait. motion=locked_off. zoom=none. focus=shallow_subject. lighting=hard_directional. visibility=on_screen. subject_angle=unspecified. Tight detail framing focused on a single visual object or gesture. Detail composi...",
+    "prompt_seed": "Handoff Medium 1: Oz presents the green liquid. handoff_medium. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Readable medium...",
     "shot_notes": "Oz presents the green liquid",
     "evidence_refs": [
       {
@@ -174,13 +178,29 @@
       "cowardly_lion | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH008/cowardly_lion.md] Physical Description: Large animal; too heavy to be carried by the others. [source:C:/FilmCreator/projects/wizard_of_oz/02_s...",
       "throne_room_of_oz | No specific visual descriptors are provided in the current evidence. The location serves as a critical narrative hub for character transformations and confrontations. | Unknown. | Unknown. | Unknown."
     ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "ceremonial_tableau",
+    "coverage_role": "handoff_medium",
+    "beat_type": "transition_handoff",
+    "coverage_importance": "minor",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT001",
+      "beat_type": "transition_handoff",
+      "importance": "minor",
+      "confidence": 0.55,
+      "reasons": [
+        "importance = minor"
+      ]
+    },
     "metadata": {
       "artifact_id": "CH016_SC003_SH001_SHOT_PACKAGE",
       "artifact_type": "shot_package",
       "status": "generated",
-      "source_fingerprint": "87f55d9f367f9f4c9c1bbfc4b714f5d62183a523",
+      "source_fingerprint": "ac331a41098b6f68baf1be5ea52150982bb8405e",
       "created_at_utc": "2026-04-27T18:41:06.909962+00:00",
-      "updated_at_utc": "2026-04-27T18:41:06.909962+00:00",
+      "updated_at_utc": "2026-04-27T20:55:00.342978+00:00",
       "upstream_dependencies": [
         {
           "dependency_type": "scene_contract",
@@ -195,7 +215,7 @@
         {
           "dependency_type": "shot_blueprints",
           "dependency_id": "CH016_SC003",
-          "version": "af7cbbc0ae9102855cc0206c945625fbcd7181c0"
+          "version": "d8f4f45e643510e628b1d5a485bbd042d4f33108"
         }
       ],
       "locked_fields": {},
@@ -205,6 +225,16 @@
           "timestamp_utc": "2026-04-27T18:42:21.134090+00:00",
           "action": "synthesized",
           "source_fingerprint": "87f55d9f367f9f4c9c1bbfc4b714f5d62183a523"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:02.039951+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "ac331a41098b6f68baf1be5ea52150982bb8405e"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:55:00.733436+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "ac331a41098b6f68baf1be5ea52150982bb8405e"
         }
       ]
     }
@@ -216,11 +246,251 @@
     "shot_order": 2,
     "previous_shot_id": "SH001",
     "next_shot_id": "SH003",
+    "primary_subject": "oz",
+    "secondary_subjects": [
+      "cowardly_lion"
+    ],
+    "shot_moment_summary": "Oz presents the green liquid",
+    "start_state": "oz holds out dish",
+    "end_state": "dish is held before lion",
+    "action_during_shot": "Oz presents the green liquid",
+    "action_continues_from": "dish is held before lion",
+    "action_hands_off_to": "dish is held before lion",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "oz",
+    "visible_secondary_subject_ids": [
+      "cowardly_lion"
+    ],
+    "primary_subject_frame_position": "foreground right within throne_room_of_oz",
+    "primary_subject_scale_relation": "preserve readable body-to-environment scale in frame",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "oz holds out dish",
+    "subject_relation_summary": "oz plays against cowardly_lion in the same frame",
+    "required_environment_anchor_1": "throne_room_of_oz",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "preserve readable body-to-environment scale in frame",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "oz stands authoritative, lion is low/slumped",
+      "center of throne room",
+      "oz remains readable within the active playing space.",
+      "cowardly_lion remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the throne_room_of_oz.",
+      "Background depth should keep throne_room_of_oz legible as the location anchor.",
+      "Subject 1: oz remains visually readable against the environment scale.",
+      "Subject 2: cowardly_lion remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "oz focuses toward the active scene action."
+    ],
+    "environment_subzone": "throne_room_of_oz",
+    "key_visible_environment_features": [
+      "throne_room_of_oz",
+      "Chapter-local beat subzone match for 'throne_room_of_oz'."
+    ],
+    "continuity_from_previous_shot": "dish is held before lion",
+    "continuity_to_next_shot": "dish is held before lion",
+    "pose_anchor_frame": "oz holds out dish",
+    "pose_end_frame": "dish is held before lion",
+    "shot_title": "Transition Wide 2: Oz presents the green liquid",
+    "shot_type": "transition_wide",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in throne_room_of_oz featuring oz, cowardly_lion.",
+    "target_seconds": 9.2,
+    "characters_in_frame": [
+      {
+        "label": "Oz (The Wizard)",
+        "canonical_id": "oz",
+        "display_name": "oz",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH016/oz_the_wizard.md",
+        "notes": "Direct registry match for 'oz_the_wizard'."
+      },
+      {
+        "label": "The Cowardly Lion",
+        "canonical_id": "cowardly_lion",
+        "display_name": "cowardly_lion",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH016/cowardly_lion.md",
+        "notes": "Direct registry match for 'cowardly_lion'."
+      }
+    ],
+    "environment": {
+      "label": "throne_room_of_oz",
+      "canonical_id": "throne_room_of_oz",
+      "display_name": "throne_room_of_oz",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": null,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH016/throne_room_of_oz.md",
+      "notes": "Chapter-local beat subzone match for 'throne_room_of_oz'."
+    },
+    "beat_ids": [
+      "BT001"
+    ],
+    "continuity_constraints": [
+      "Liquid level in the carved dish",
+      "Lion's posture shift from slumped to upright",
+      "Oz presents the green liquid"
+    ],
+    "prompt_seed": "Transition Wide 2: Oz presents the green liquid. transition_wide. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Readable mediu...",
+    "shot_notes": "Oz presents the green liquid",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH016_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH016",
+        "scene_id": "CH016_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH016",
+        "scene_id": "CH016_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH016",
+        "scene_id": "CH016_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH016",
+        "scene_id": "CH016_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH016",
+        "scene_id": "CH016_SC003"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH016",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH016_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH011",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH011_chapter_xi.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH015",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH015_chapter_xv.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH010",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH010_chapter_x.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH016",
+        "canonical_id": "cowardly_lion"
+      }
+    ],
+    "evidence_summary": [
+      "Establish the Wizard's use of psychological placebo by providing a green liquid to the Cowardly Lion. The scene must visually track the transition from physical trembling and slumped posture to an upright, bravado-filled stance following the ingestion of th...",
+      "The Cowardly Lion seeks courage. Oz provides a green liquid in a dish, claiming it must be swallowed to work. The Lion drinks it and immediately feels transformed by the perceived power of the potion.",
+      "Fear/Anxiety $\\rightarrow$ Hesitation $\\rightarrow$ Sudden Bravado.",
+      "cowardly_lion is slumped and trembling with anxiety.",
+      "cowardly_lion stands upright with sudden bravado.",
+      "The Lion drinks the green liquid and undergoes a psychological transformation.",
+      "oz | [CH002] Chapter II (book index hit) [CH010] Chapter X (book index hit) [CH011] Chapter XI (book index hit)",
+      "cowardly_lion | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH008/cowardly_lion.md] Physical Description: Large animal; too heavy to be carried by the others. [source:C:/FilmCreator/projects/wizard_of_oz/02_s...",
+      "throne_room_of_oz | No specific visual descriptors are provided in the current evidence. The location serves as a critical narrative hub for character transformations and confrontations. | Unknown. | Unknown. | Unknown."
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "ceremonial_tableau",
+    "coverage_role": "transition_wide",
+    "beat_type": "transition_handoff",
+    "coverage_importance": "minor",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT001",
+      "beat_type": "transition_handoff",
+      "importance": "minor",
+      "confidence": 0.55,
+      "reasons": [
+        "importance = minor"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH016_SC003_SH002_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "ac331a41098b6f68baf1be5ea52150982bb8405e",
+      "created_at_utc": "2026-04-27T18:42:21.135090+00:00",
+      "updated_at_utc": "2026-04-27T20:55:00.739399+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH016_SC003",
+          "version": "7ee0bc5a4fefa400d2b2398d6a4df8a50ebf7e77"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH016_SC003",
+          "version": "1351c550413009fa15d840103a1425f2857085d6"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH016_SC003",
+          "version": "d8f4f45e643510e628b1d5a485bbd042d4f33108"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T18:43:28.600691+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "87f55d9f367f9f4c9c1bbfc4b714f5d62183a523"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:02.046955+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "ac331a41098b6f68baf1be5ea52150982bb8405e"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:55:00.739898+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "ac331a41098b6f68baf1be5ea52150982bb8405e"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH003",
+    "scene_id": "CH016_SC003",
+    "chapter_id": "CH016",
+    "shot_order": 3,
+    "previous_shot_id": "SH002",
+    "next_shot_id": "SH004",
     "primary_subject": "cowardly_lion",
     "secondary_subjects": [
       "oz"
     ],
-    "shot_moment_summary": "The Lion approaches and drinks the green liquid from the dish.",
+    "shot_moment_summary": "The Lion drinks the potion",
     "start_state": "lion approaches dish",
     "end_state": "dish is emptied/lowered",
     "action_during_shot": "The Lion drinks the potion",
@@ -228,53 +498,55 @@
     "action_hands_off_to": "dish is emptied/lowered",
     "shot_size": "medium",
     "camera_angle": "eye_level",
-    "lens_family": "portrait",
+    "lens_family": "normal",
     "camera_motion": "locked_off",
     "zoom_behavior": "none",
-    "focus_strategy": "shallow_subject",
+    "focus_strategy": "deep_focus",
     "lighting_style": "hard_directional",
     "subject_visibility": "on_screen",
     "narration_mode": "none",
-    "primary_subject_angle": "front",
+    "primary_subject_angle": "front_three_quarter_left",
     "visible_primary_subject_id": "cowardly_lion",
     "visible_secondary_subject_ids": [
       "oz"
     ],
     "primary_subject_frame_position": "foreground right within throne_room_of_oz central area",
     "primary_subject_scale_relation": "preserve readable body-to-environment scale in frame",
-    "primary_subject_facing_direction": "angled toward the scene action",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
     "primary_subject_pose_description": "lion approaches dish",
     "subject_relation_summary": "cowardly_lion plays against oz in the same frame",
     "required_environment_anchor_1": "throne_room_of_oz central area",
-    "required_subject_anchor_1": "lion's head moves toward the dish",
+    "required_subject_anchor_1": "lion's head moves toward the dish | environment_subzone=throne_room_of_oz",
     "required_celestial_anchor_1": "",
     "required_scale_proof_detail": "preserve readable body-to-environment scale in frame",
-    "camera_package_description": "medium, eye level, portrait lens, locked off, shallow subject, hard directional",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
     "subject_blocking": [
-      "lion's head moves toward the dish",
+      "lion's head moves toward the dish | environment_subzone=throne_room_of_oz",
       "interaction over the dish",
       "cowardly_lion remains readable within the active playing space.",
       "oz remains readable within the active playing space."
     ],
     "camera_relative_positions": [
-      "Background depth should keep throne_room_of_oz legible as the location anchor."
+      "Background depth should keep throne_room_of_oz legible as the location anchor.",
+      "Subject 1: cowardly_lion remains visually readable against the environment scale.",
+      "Subject 2: oz remains visually readable against the environment scale."
     ],
     "gaze_directions": [
       "cowardly_lion focuses toward the active scene action."
     ],
     "environment_subzone": "throne_room_of_oz central area",
     "key_visible_environment_features": [
-      "throne_room_of_oz"
+      "Direct registry match for 'throne_room_of_oz'."
     ],
     "continuity_from_previous_shot": "dish is held before lion",
     "continuity_to_next_shot": "dish is emptied/lowered",
     "pose_anchor_frame": "lion approaches dish",
     "pose_end_frame": "dish is emptied/lowered",
-    "shot_title": "Insert Detail 2: The Lion drinks the potion",
-    "shot_type": "insert_detail",
-    "camera_description": "Tight detail framing focused on a single visual object or gesture.",
-    "composition": "Detail composition centered on the key physical action or prop inside throne_room_of_oz.",
-    "target_seconds": 5.3,
+    "shot_title": "Ceremonial Master 3: The Lion drinks the potion",
+    "shot_type": "ceremonial_master",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in throne_room_of_oz featuring cowardly_lion, oz.",
+    "target_seconds": 10.0,
     "characters_in_frame": [
       {
         "label": "The Cowardly Lion",
@@ -315,7 +587,7 @@
       "Lion's posture shift from slumped to upright",
       "The Lion drinks the potion"
     ],
-    "prompt_seed": "Insert Detail 2: The Lion drinks the potion. insert_detail. size=medium. angle=eye_level. lens=portrait. motion=locked_off. zoom=none. focus=shallow_subject. lighting=hard_directional. visibility=on_screen. subject_angle=unspecified. Tight detail framing focused on a single visual object or gesture. Detail compositi...",
+    "prompt_seed": "Ceremonial Master 3: The Lion drinks the potion. ceremonial_master. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Readable med...",
     "shot_notes": "The Lion drinks the potion",
     "evidence_refs": [
       {
@@ -384,13 +656,30 @@
       "cowardly_lion | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH008/cowardly_lion.md] Physical Description: Large animal; too heavy to be carried by the others. [source:C:/FilmCreator/projects/wizard_of_oz/02_s...",
       "throne_room_of_oz | No specific visual descriptors are provided in the current evidence. The location serves as a critical narrative hub for character transformations and confrontations. | Unknown. | Unknown. | Unknown."
     ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "ceremonial_tableau",
+    "coverage_role": "ceremonial_master",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "normal",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT002",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "normal",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = normal"
+      ]
+    },
     "metadata": {
-      "artifact_id": "CH016_SC003_SH002_SHOT_PACKAGE",
+      "artifact_id": "CH016_SC003_SH003_SHOT_PACKAGE",
       "artifact_type": "shot_package",
       "status": "generated",
-      "source_fingerprint": "87f55d9f367f9f4c9c1bbfc4b714f5d62183a523",
-      "created_at_utc": "2026-04-27T18:42:21.135090+00:00",
-      "updated_at_utc": "2026-04-27T18:42:21.135090+00:00",
+      "source_fingerprint": "ac331a41098b6f68baf1be5ea52150982bb8405e",
+      "created_at_utc": "2026-04-27T18:43:28.602690+00:00",
+      "updated_at_utc": "2026-04-27T20:55:00.745399+00:00",
       "upstream_dependencies": [
         {
           "dependency_type": "scene_contract",
@@ -405,37 +694,983 @@
         {
           "dependency_type": "shot_blueprints",
           "dependency_id": "CH016_SC003",
-          "version": "af7cbbc0ae9102855cc0206c945625fbcd7181c0"
+          "version": "d8f4f45e643510e628b1d5a485bbd042d4f33108"
         }
       ],
       "locked_fields": {},
       "manual_overrides": {},
       "revision_history": [
         {
-          "timestamp_utc": "2026-04-27T18:43:28.600691+00:00",
+          "timestamp_utc": "2026-04-27T18:44:35.939034+00:00",
           "action": "synthesized",
           "source_fingerprint": "87f55d9f367f9f4c9c1bbfc4b714f5d62183a523"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:02.053463+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "ac331a41098b6f68baf1be5ea52150982bb8405e"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:55:00.746399+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "ac331a41098b6f68baf1be5ea52150982bb8405e"
         }
       ]
     }
   },
   {
-    "shot_id": "SH003",
+    "shot_id": "SH004",
     "scene_id": "CH016_SC003",
     "chapter_id": "CH016",
-    "shot_order": 3,
-    "previous_shot_id": "SH002",
-    "next_shot_id": "",
+    "shot_order": 4,
+    "previous_shot_id": "SH003",
+    "next_shot_id": "SH005",
     "primary_subject": "cowardly_lion",
     "secondary_subjects": [
       "oz"
     ],
-    "shot_moment_summary": "The Lion finishes drinking and shifts from a slumped posture to an upright, brave stance.",
-    "start_state": "lion finishes drinking",
-    "end_state": "lion stands in bravado pose",
-    "action_during_shot": "The transformation occurs",
+    "shot_moment_summary": "The Lion drinks the potion",
+    "start_state": "lion approaches dish",
+    "end_state": "dish is emptied/lowered",
+    "action_during_shot": "The Lion drinks the potion",
     "action_continues_from": "dish is emptied/lowered",
-    "action_hands_off_to": "lion stands in bravado pose",
+    "action_hands_off_to": "dish is emptied/lowered",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "cowardly_lion",
+    "visible_secondary_subject_ids": [
+      "oz"
+    ],
+    "primary_subject_frame_position": "foreground right within throne_room_of_oz central area",
+    "primary_subject_scale_relation": "preserve readable body-to-environment scale in frame",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "lion approaches dish",
+    "subject_relation_summary": "cowardly_lion plays against oz in the same frame",
+    "required_environment_anchor_1": "throne_room_of_oz central area",
+    "required_subject_anchor_1": "lion's head moves toward the dish | environment_subzone=throne_room_of_oz",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "preserve readable body-to-environment scale in frame",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "lion's head moves toward the dish | environment_subzone=throne_room_of_oz",
+      "interaction over the dish",
+      "cowardly_lion remains readable within the active playing space.",
+      "oz remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Background depth should keep throne_room_of_oz legible as the location anchor.",
+      "Subject 1: cowardly_lion remains visually readable against the environment scale.",
+      "Subject 2: oz remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "cowardly_lion focuses toward the active scene action."
+    ],
+    "environment_subzone": "throne_room_of_oz central area",
+    "key_visible_environment_features": [
+      "Direct registry match for 'throne_room_of_oz'."
+    ],
+    "continuity_from_previous_shot": "dish is emptied/lowered",
+    "continuity_to_next_shot": "dish is emptied/lowered",
+    "pose_anchor_frame": "lion approaches dish",
+    "pose_end_frame": "dish is emptied/lowered",
+    "shot_title": "Authority Single 4: The Lion drinks the potion",
+    "shot_type": "authority_single",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in throne_room_of_oz featuring cowardly_lion, oz.",
+    "target_seconds": 6.5,
+    "characters_in_frame": [
+      {
+        "label": "The Cowardly Lion",
+        "canonical_id": "cowardly_lion",
+        "display_name": "cowardly_lion",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH016/cowardly_lion.md",
+        "notes": "Direct registry match for 'cowardly_lion'."
+      },
+      {
+        "label": "Oz (The Wizard)",
+        "canonical_id": "oz",
+        "display_name": "oz",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH016/oz_the_wizard.md",
+        "notes": "Direct registry match for 'oz_the_wizard'."
+      }
+    ],
+    "environment": {
+      "label": "The Throne Room of Oz",
+      "canonical_id": "throne_room_of_oz",
+      "display_name": "throne_room_of_oz",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH016/throne_room_of_oz.md",
+      "notes": "Direct registry match for 'throne_room_of_oz'."
+    },
+    "beat_ids": [
+      "BT002"
+    ],
+    "continuity_constraints": [
+      "Liquid level in the carved dish",
+      "Lion's posture shift from slumped to upright",
+      "The Lion drinks the potion"
+    ],
+    "prompt_seed": "Authority Single 4: The Lion drinks the potion. authority_single. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Readable mediu...",
+    "shot_notes": "The Lion drinks the potion",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH016_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH016",
+        "scene_id": "CH016_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH016",
+        "scene_id": "CH016_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH016",
+        "scene_id": "CH016_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH016",
+        "scene_id": "CH016_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH016",
+        "scene_id": "CH016_SC003"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH016",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH016_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH011",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH011_chapter_xi.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH015",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH015_chapter_xv.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH010",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH010_chapter_x.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH016",
+        "canonical_id": "cowardly_lion"
+      }
+    ],
+    "evidence_summary": [
+      "Establish the Wizard's use of psychological placebo by providing a green liquid to the Cowardly Lion. The scene must visually track the transition from physical trembling and slumped posture to an upright, bravado-filled stance following the ingestion of th...",
+      "The Cowardly Lion seeks courage. Oz provides a green liquid in a dish, claiming it must be swallowed to work. The Lion drinks it and immediately feels transformed by the perceived power of the potion.",
+      "Fear/Anxiety $\\rightarrow$ Hesitation $\\rightarrow$ Sudden Bravado.",
+      "cowardly_lion is slumped and trembling with anxiety.",
+      "cowardly_lion stands upright with sudden bravado.",
+      "The Lion drinks the green liquid and undergoes a psychological transformation.",
+      "oz | [CH002] Chapter II (book index hit) [CH010] Chapter X (book index hit) [CH011] Chapter XI (book index hit)",
+      "cowardly_lion | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH008/cowardly_lion.md] Physical Description: Large animal; too heavy to be carried by the others. [source:C:/FilmCreator/projects/wizard_of_oz/02_s...",
+      "throne_room_of_oz | No specific visual descriptors are provided in the current evidence. The location serves as a critical narrative hub for character transformations and confrontations. | Unknown. | Unknown. | Unknown."
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "ceremonial_tableau",
+    "coverage_role": "authority_single",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "normal",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT002",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "normal",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = normal"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH016_SC003_SH004_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "ac331a41098b6f68baf1be5ea52150982bb8405e",
+      "created_at_utc": "2026-04-27T20:54:02.054970+00:00",
+      "updated_at_utc": "2026-04-27T20:55:00.751404+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH016_SC003",
+          "version": "7ee0bc5a4fefa400d2b2398d6a4df8a50ebf7e77"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH016_SC003",
+          "version": "1351c550413009fa15d840103a1425f2857085d6"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH016_SC003",
+          "version": "d8f4f45e643510e628b1d5a485bbd042d4f33108"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:54:02.055468+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "ac331a41098b6f68baf1be5ea52150982bb8405e"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:55:00.752406+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "ac331a41098b6f68baf1be5ea52150982bb8405e"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH005",
+    "scene_id": "CH016_SC003",
+    "chapter_id": "CH016",
+    "shot_order": 5,
+    "previous_shot_id": "SH004",
+    "next_shot_id": "SH006",
+    "primary_subject": "cowardly_lion",
+    "secondary_subjects": [
+      "oz"
+    ],
+    "shot_moment_summary": "The Lion drinks the potion",
+    "start_state": "lion approaches dish",
+    "end_state": "dish is emptied/lowered",
+    "action_during_shot": "The Lion drinks the potion",
+    "action_continues_from": "dish is emptied/lowered",
+    "action_hands_off_to": "dish is emptied/lowered",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "cowardly_lion",
+    "visible_secondary_subject_ids": [
+      "oz"
+    ],
+    "primary_subject_frame_position": "foreground right within throne_room_of_oz central area",
+    "primary_subject_scale_relation": "preserve readable body-to-environment scale in frame",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "lion approaches dish",
+    "subject_relation_summary": "cowardly_lion plays against oz in the same frame",
+    "required_environment_anchor_1": "throne_room_of_oz central area",
+    "required_subject_anchor_1": "lion's head moves toward the dish | environment_subzone=throne_room_of_oz",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "preserve readable body-to-environment scale in frame",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "lion's head moves toward the dish | environment_subzone=throne_room_of_oz",
+      "interaction over the dish",
+      "cowardly_lion remains readable within the active playing space.",
+      "oz remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Background depth should keep throne_room_of_oz legible as the location anchor.",
+      "Subject 1: cowardly_lion remains visually readable against the environment scale.",
+      "Subject 2: oz remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "cowardly_lion focuses toward the active scene action."
+    ],
+    "environment_subzone": "throne_room_of_oz central area",
+    "key_visible_environment_features": [
+      "Direct registry match for 'throne_room_of_oz'."
+    ],
+    "continuity_from_previous_shot": "dish is emptied/lowered",
+    "continuity_to_next_shot": "dish is emptied/lowered",
+    "pose_anchor_frame": "lion approaches dish",
+    "pose_end_frame": "dish is emptied/lowered",
+    "shot_title": "Petitioner Group 5: The Lion drinks the potion",
+    "shot_type": "petitioner_group",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in throne_room_of_oz featuring cowardly_lion, oz.",
+    "target_seconds": 6.5,
+    "characters_in_frame": [
+      {
+        "label": "The Cowardly Lion",
+        "canonical_id": "cowardly_lion",
+        "display_name": "cowardly_lion",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH016/cowardly_lion.md",
+        "notes": "Direct registry match for 'cowardly_lion'."
+      },
+      {
+        "label": "Oz (The Wizard)",
+        "canonical_id": "oz",
+        "display_name": "oz",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH016/oz_the_wizard.md",
+        "notes": "Direct registry match for 'oz_the_wizard'."
+      }
+    ],
+    "environment": {
+      "label": "The Throne Room of Oz",
+      "canonical_id": "throne_room_of_oz",
+      "display_name": "throne_room_of_oz",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH016/throne_room_of_oz.md",
+      "notes": "Direct registry match for 'throne_room_of_oz'."
+    },
+    "beat_ids": [
+      "BT002"
+    ],
+    "continuity_constraints": [
+      "Liquid level in the carved dish",
+      "Lion's posture shift from slumped to upright",
+      "The Lion drinks the potion"
+    ],
+    "prompt_seed": "Petitioner Group 5: The Lion drinks the potion. petitioner_group. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Readable mediu...",
+    "shot_notes": "The Lion drinks the potion",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH016_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH016",
+        "scene_id": "CH016_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH016",
+        "scene_id": "CH016_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH016",
+        "scene_id": "CH016_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH016",
+        "scene_id": "CH016_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH016",
+        "scene_id": "CH016_SC003"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH016",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH016_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH011",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH011_chapter_xi.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH015",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH015_chapter_xv.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH010",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH010_chapter_x.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH016",
+        "canonical_id": "cowardly_lion"
+      }
+    ],
+    "evidence_summary": [
+      "Establish the Wizard's use of psychological placebo by providing a green liquid to the Cowardly Lion. The scene must visually track the transition from physical trembling and slumped posture to an upright, bravado-filled stance following the ingestion of th...",
+      "The Cowardly Lion seeks courage. Oz provides a green liquid in a dish, claiming it must be swallowed to work. The Lion drinks it and immediately feels transformed by the perceived power of the potion.",
+      "Fear/Anxiety $\\rightarrow$ Hesitation $\\rightarrow$ Sudden Bravado.",
+      "cowardly_lion is slumped and trembling with anxiety.",
+      "cowardly_lion stands upright with sudden bravado.",
+      "The Lion drinks the green liquid and undergoes a psychological transformation.",
+      "oz | [CH002] Chapter II (book index hit) [CH010] Chapter X (book index hit) [CH011] Chapter XI (book index hit)",
+      "cowardly_lion | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH008/cowardly_lion.md] Physical Description: Large animal; too heavy to be carried by the others. [source:C:/FilmCreator/projects/wizard_of_oz/02_s...",
+      "throne_room_of_oz | No specific visual descriptors are provided in the current evidence. The location serves as a critical narrative hub for character transformations and confrontations. | Unknown. | Unknown. | Unknown."
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "ceremonial_tableau",
+    "coverage_role": "petitioner_group",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "normal",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT002",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "normal",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = normal"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH016_SC003_SH005_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "ac331a41098b6f68baf1be5ea52150982bb8405e",
+      "created_at_utc": "2026-04-27T20:54:02.056468+00:00",
+      "updated_at_utc": "2026-04-27T20:55:00.757416+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH016_SC003",
+          "version": "7ee0bc5a4fefa400d2b2398d6a4df8a50ebf7e77"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH016_SC003",
+          "version": "1351c550413009fa15d840103a1425f2857085d6"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH016_SC003",
+          "version": "d8f4f45e643510e628b1d5a485bbd042d4f33108"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:54:02.056967+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "ac331a41098b6f68baf1be5ea52150982bb8405e"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:55:00.758415+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "ac331a41098b6f68baf1be5ea52150982bb8405e"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH006",
+    "scene_id": "CH016_SC003",
+    "chapter_id": "CH016",
+    "shot_order": 6,
+    "previous_shot_id": "SH005",
+    "next_shot_id": "SH007",
+    "primary_subject": "cowardly_lion",
+    "secondary_subjects": [
+      "oz"
+    ],
+    "shot_moment_summary": "The Lion drinks the potion",
+    "start_state": "lion approaches dish",
+    "end_state": "dish is emptied/lowered",
+    "action_during_shot": "The Lion drinks the potion",
+    "action_continues_from": "dish is emptied/lowered",
+    "action_hands_off_to": "dish is emptied/lowered",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "cowardly_lion",
+    "visible_secondary_subject_ids": [
+      "oz"
+    ],
+    "primary_subject_frame_position": "foreground right within throne_room_of_oz central area",
+    "primary_subject_scale_relation": "preserve readable body-to-environment scale in frame",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "lion approaches dish",
+    "subject_relation_summary": "cowardly_lion plays against oz in the same frame",
+    "required_environment_anchor_1": "throne_room_of_oz central area",
+    "required_subject_anchor_1": "lion's head moves toward the dish | environment_subzone=throne_room_of_oz",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "preserve readable body-to-environment scale in frame",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "lion's head moves toward the dish | environment_subzone=throne_room_of_oz",
+      "interaction over the dish",
+      "cowardly_lion remains readable within the active playing space.",
+      "oz remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Background depth should keep throne_room_of_oz legible as the location anchor.",
+      "Subject 1: cowardly_lion remains visually readable against the environment scale.",
+      "Subject 2: oz remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "cowardly_lion focuses toward the active scene action."
+    ],
+    "environment_subzone": "throne_room_of_oz central area",
+    "key_visible_environment_features": [
+      "Direct registry match for 'throne_room_of_oz'."
+    ],
+    "continuity_from_previous_shot": "dish is emptied/lowered",
+    "continuity_to_next_shot": "dish is emptied/lowered",
+    "pose_anchor_frame": "lion approaches dish",
+    "pose_end_frame": "dish is emptied/lowered",
+    "shot_title": "Crowd Response 6: The Lion drinks the potion",
+    "shot_type": "crowd_response",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in throne_room_of_oz featuring cowardly_lion, oz.",
+    "target_seconds": 6.5,
+    "characters_in_frame": [
+      {
+        "label": "The Cowardly Lion",
+        "canonical_id": "cowardly_lion",
+        "display_name": "cowardly_lion",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH016/cowardly_lion.md",
+        "notes": "Direct registry match for 'cowardly_lion'."
+      },
+      {
+        "label": "Oz (The Wizard)",
+        "canonical_id": "oz",
+        "display_name": "oz",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH016/oz_the_wizard.md",
+        "notes": "Direct registry match for 'oz_the_wizard'."
+      }
+    ],
+    "environment": {
+      "label": "The Throne Room of Oz",
+      "canonical_id": "throne_room_of_oz",
+      "display_name": "throne_room_of_oz",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH016/throne_room_of_oz.md",
+      "notes": "Direct registry match for 'throne_room_of_oz'."
+    },
+    "beat_ids": [
+      "BT002"
+    ],
+    "continuity_constraints": [
+      "Liquid level in the carved dish",
+      "Lion's posture shift from slumped to upright",
+      "The Lion drinks the potion"
+    ],
+    "prompt_seed": "Crowd Response 6: The Lion drinks the potion. crowd_response. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Readable medium co...",
+    "shot_notes": "The Lion drinks the potion",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH016_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH016",
+        "scene_id": "CH016_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH016",
+        "scene_id": "CH016_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH016",
+        "scene_id": "CH016_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH016",
+        "scene_id": "CH016_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH016",
+        "scene_id": "CH016_SC003"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH016",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH016_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH011",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH011_chapter_xi.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH015",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH015_chapter_xv.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH010",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH010_chapter_x.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH016",
+        "canonical_id": "cowardly_lion"
+      }
+    ],
+    "evidence_summary": [
+      "Establish the Wizard's use of psychological placebo by providing a green liquid to the Cowardly Lion. The scene must visually track the transition from physical trembling and slumped posture to an upright, bravado-filled stance following the ingestion of th...",
+      "The Cowardly Lion seeks courage. Oz provides a green liquid in a dish, claiming it must be swallowed to work. The Lion drinks it and immediately feels transformed by the perceived power of the potion.",
+      "Fear/Anxiety $\\rightarrow$ Hesitation $\\rightarrow$ Sudden Bravado.",
+      "cowardly_lion is slumped and trembling with anxiety.",
+      "cowardly_lion stands upright with sudden bravado.",
+      "The Lion drinks the green liquid and undergoes a psychological transformation.",
+      "oz | [CH002] Chapter II (book index hit) [CH010] Chapter X (book index hit) [CH011] Chapter XI (book index hit)",
+      "cowardly_lion | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH008/cowardly_lion.md] Physical Description: Large animal; too heavy to be carried by the others. [source:C:/FilmCreator/projects/wizard_of_oz/02_s...",
+      "throne_room_of_oz | No specific visual descriptors are provided in the current evidence. The location serves as a critical narrative hub for character transformations and confrontations. | Unknown. | Unknown. | Unknown."
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "ceremonial_tableau",
+    "coverage_role": "crowd_response",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "normal",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT002",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "normal",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = normal"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH016_SC003_SH006_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "ac331a41098b6f68baf1be5ea52150982bb8405e",
+      "created_at_utc": "2026-04-27T20:54:02.057969+00:00",
+      "updated_at_utc": "2026-04-27T20:55:00.763915+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH016_SC003",
+          "version": "7ee0bc5a4fefa400d2b2398d6a4df8a50ebf7e77"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH016_SC003",
+          "version": "1351c550413009fa15d840103a1425f2857085d6"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH016_SC003",
+          "version": "d8f4f45e643510e628b1d5a485bbd042d4f33108"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:54:02.058467+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "ac331a41098b6f68baf1be5ea52150982bb8405e"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:55:00.764415+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "ac331a41098b6f68baf1be5ea52150982bb8405e"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH007",
+    "scene_id": "CH016_SC003",
+    "chapter_id": "CH016",
+    "shot_order": 7,
+    "previous_shot_id": "SH006",
+    "next_shot_id": "SH008",
+    "primary_subject": "cowardly_lion",
+    "secondary_subjects": [
+      "oz"
+    ],
+    "shot_moment_summary": "The Lion drinks the potion",
+    "start_state": "lion approaches dish",
+    "end_state": "dish is emptied/lowered",
+    "action_during_shot": "The Lion drinks the potion",
+    "action_continues_from": "dish is emptied/lowered",
+    "action_hands_off_to": "dish is emptied/lowered",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "cowardly_lion",
+    "visible_secondary_subject_ids": [
+      "oz"
+    ],
+    "primary_subject_frame_position": "foreground right within throne_room_of_oz central area",
+    "primary_subject_scale_relation": "preserve readable body-to-environment scale in frame",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "lion approaches dish",
+    "subject_relation_summary": "cowardly_lion plays against oz in the same frame",
+    "required_environment_anchor_1": "throne_room_of_oz central area",
+    "required_subject_anchor_1": "lion's head moves toward the dish | environment_subzone=throne_room_of_oz",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "preserve readable body-to-environment scale in frame",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "lion's head moves toward the dish | environment_subzone=throne_room_of_oz",
+      "interaction over the dish",
+      "cowardly_lion remains readable within the active playing space.",
+      "oz remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Background depth should keep throne_room_of_oz legible as the location anchor.",
+      "Subject 1: cowardly_lion remains visually readable against the environment scale.",
+      "Subject 2: oz remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "cowardly_lion focuses toward the active scene action."
+    ],
+    "environment_subzone": "throne_room_of_oz central area",
+    "key_visible_environment_features": [
+      "Direct registry match for 'throne_room_of_oz'."
+    ],
+    "continuity_from_previous_shot": "dish is emptied/lowered",
+    "continuity_to_next_shot": "dish is emptied/lowered",
+    "pose_anchor_frame": "lion approaches dish",
+    "pose_end_frame": "dish is emptied/lowered",
+    "shot_title": "Symbol Insert 7: The Lion drinks the potion",
+    "shot_type": "symbol_insert",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in throne_room_of_oz featuring cowardly_lion, oz.",
+    "target_seconds": 5.0,
+    "characters_in_frame": [
+      {
+        "label": "The Cowardly Lion",
+        "canonical_id": "cowardly_lion",
+        "display_name": "cowardly_lion",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH016/cowardly_lion.md",
+        "notes": "Direct registry match for 'cowardly_lion'."
+      },
+      {
+        "label": "Oz (The Wizard)",
+        "canonical_id": "oz",
+        "display_name": "oz",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH016/oz_the_wizard.md",
+        "notes": "Direct registry match for 'oz_the_wizard'."
+      }
+    ],
+    "environment": {
+      "label": "The Throne Room of Oz",
+      "canonical_id": "throne_room_of_oz",
+      "display_name": "throne_room_of_oz",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH016/throne_room_of_oz.md",
+      "notes": "Direct registry match for 'throne_room_of_oz'."
+    },
+    "beat_ids": [
+      "BT002"
+    ],
+    "continuity_constraints": [
+      "Liquid level in the carved dish",
+      "Lion's posture shift from slumped to upright",
+      "The Lion drinks the potion"
+    ],
+    "prompt_seed": "Symbol Insert 7: The Lion drinks the potion. symbol_insert. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Readable medium comp...",
+    "shot_notes": "The Lion drinks the potion",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH016_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH016",
+        "scene_id": "CH016_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH016",
+        "scene_id": "CH016_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH016",
+        "scene_id": "CH016_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH016",
+        "scene_id": "CH016_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH016",
+        "scene_id": "CH016_SC003"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH016",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH016_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH011",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH011_chapter_xi.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH015",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH015_chapter_xv.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH010",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH010_chapter_x.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH016",
+        "canonical_id": "cowardly_lion"
+      }
+    ],
+    "evidence_summary": [
+      "Establish the Wizard's use of psychological placebo by providing a green liquid to the Cowardly Lion. The scene must visually track the transition from physical trembling and slumped posture to an upright, bravado-filled stance following the ingestion of th...",
+      "The Cowardly Lion seeks courage. Oz provides a green liquid in a dish, claiming it must be swallowed to work. The Lion drinks it and immediately feels transformed by the perceived power of the potion.",
+      "Fear/Anxiety $\\rightarrow$ Hesitation $\\rightarrow$ Sudden Bravado.",
+      "cowardly_lion is slumped and trembling with anxiety.",
+      "cowardly_lion stands upright with sudden bravado.",
+      "The Lion drinks the green liquid and undergoes a psychological transformation.",
+      "oz | [CH002] Chapter II (book index hit) [CH010] Chapter X (book index hit) [CH011] Chapter XI (book index hit)",
+      "cowardly_lion | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH008/cowardly_lion.md] Physical Description: Large animal; too heavy to be carried by the others. [source:C:/FilmCreator/projects/wizard_of_oz/02_s...",
+      "throne_room_of_oz | No specific visual descriptors are provided in the current evidence. The location serves as a critical narrative hub for character transformations and confrontations. | Unknown. | Unknown. | Unknown."
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "ceremonial_tableau",
+    "coverage_role": "symbol_insert",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "normal",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT002",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "normal",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = normal"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH016_SC003_SH007_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "ac331a41098b6f68baf1be5ea52150982bb8405e",
+      "created_at_utc": "2026-04-27T20:54:02.059468+00:00",
+      "updated_at_utc": "2026-04-27T20:55:00.768920+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH016_SC003",
+          "version": "7ee0bc5a4fefa400d2b2398d6a4df8a50ebf7e77"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH016_SC003",
+          "version": "1351c550413009fa15d840103a1425f2857085d6"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH016_SC003",
+          "version": "d8f4f45e643510e628b1d5a485bbd042d4f33108"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:54:02.059967+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "ac331a41098b6f68baf1be5ea52150982bb8405e"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:55:00.769929+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "ac331a41098b6f68baf1be5ea52150982bb8405e"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH008",
+    "scene_id": "CH016_SC003",
+    "chapter_id": "CH016",
+    "shot_order": 8,
+    "previous_shot_id": "SH007",
+    "next_shot_id": "SH009",
+    "primary_subject": "cowardly_lion",
+    "secondary_subjects": [
+      "oz"
+    ],
+    "shot_moment_summary": "The Lion drinks the potion",
+    "start_state": "lion approaches dish",
+    "end_state": "dish is emptied/lowered",
+    "action_during_shot": "The Lion drinks the potion",
+    "action_continues_from": "dish is emptied/lowered",
+    "action_hands_off_to": "dish is emptied/lowered",
     "shot_size": "close_up",
     "camera_angle": "eye_level",
     "lens_family": "portrait",
@@ -453,38 +1688,274 @@
     "primary_subject_frame_position": "foreground inside throne_room_of_oz central area",
     "primary_subject_scale_relation": "preserve readable body-to-environment scale in frame",
     "primary_subject_facing_direction": "front three-quarter left toward the scene action",
-    "primary_subject_pose_description": "lion finishes drinking",
+    "primary_subject_pose_description": "lion approaches dish",
     "subject_relation_summary": "cowardly_lion plays against oz in the same frame",
     "required_environment_anchor_1": "throne_room_of_oz central area",
-    "required_subject_anchor_1": "lion shifts from slumped to upright predator silhouette",
+    "required_subject_anchor_1": "lion's head moves toward the dish | environment_subzone=throne_room_of_oz",
     "required_celestial_anchor_1": "",
-    "required_scale_proof_detail": "lion's upright predator silhouette",
+    "required_scale_proof_detail": "preserve readable body-to-environment scale in frame",
     "camera_package_description": "close-up, eye level, portrait lens, push in, zoom subtle in, shallow subject, hard directional",
     "subject_blocking": [
-      "lion shifts from slumped to upright predator silhouette",
-      "throne room center",
+      "lion's head moves toward the dish | environment_subzone=throne_room_of_oz",
+      "interaction over the dish",
       "cowardly_lion remains readable within the active playing space.",
       "oz remains readable within the active playing space."
     ],
     "camera_relative_positions": [
-      "Background depth should keep throne_room_of_oz legible as the location anchor."
+      "Background depth should keep throne_room_of_oz legible as the location anchor.",
+      "Subject 1: cowardly_lion remains visually readable against the environment scale.",
+      "Subject 2: oz remains visually readable against the environment scale."
     ],
     "gaze_directions": [
       "cowardly_lion focuses toward the active scene action."
     ],
     "environment_subzone": "throne_room_of_oz central area",
     "key_visible_environment_features": [
-      "throne_room_of_oz"
+      "Direct registry match for 'throne_room_of_oz'."
+    ],
+    "continuity_from_previous_shot": "dish is emptied/lowered",
+    "continuity_to_next_shot": "dish is emptied/lowered",
+    "pose_anchor_frame": "lion approaches dish",
+    "pose_end_frame": "dish is emptied/lowered",
+    "shot_title": "Reaction Closeup 8: The Lion drinks the potion",
+    "shot_type": "reaction_closeup",
+    "camera_description": "Close framing that isolates reaction and emotional emphasis.",
+    "composition": "Intimate composition that isolates cowardly_lion, oz against throne_room_of_oz to capture the beat's emotional turn.",
+    "target_seconds": 6.5,
+    "characters_in_frame": [
+      {
+        "label": "The Cowardly Lion",
+        "canonical_id": "cowardly_lion",
+        "display_name": "cowardly_lion",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH016/cowardly_lion.md",
+        "notes": "Direct registry match for 'cowardly_lion'."
+      },
+      {
+        "label": "Oz (The Wizard)",
+        "canonical_id": "oz",
+        "display_name": "oz",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH016/oz_the_wizard.md",
+        "notes": "Direct registry match for 'oz_the_wizard'."
+      }
+    ],
+    "environment": {
+      "label": "The Throne Room of Oz",
+      "canonical_id": "throne_room_of_oz",
+      "display_name": "throne_room_of_oz",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH016/throne_room_of_oz.md",
+      "notes": "Direct registry match for 'throne_room_of_oz'."
+    },
+    "beat_ids": [
+      "BT002"
+    ],
+    "continuity_constraints": [
+      "Liquid level in the carved dish",
+      "Lion's posture shift from slumped to upright",
+      "The Lion drinks the potion"
+    ],
+    "prompt_seed": "Reaction Closeup 8: The Lion drinks the potion. reaction_closeup. size=close_up. angle=eye_level. lens=portrait. motion=push_in. zoom=subtle_in. focus=shallow_subject. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Close framing that isolates reaction and emotional emphasis....",
+    "shot_notes": "The Lion drinks the potion",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH016_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH016",
+        "scene_id": "CH016_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH016",
+        "scene_id": "CH016_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH016",
+        "scene_id": "CH016_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH016",
+        "scene_id": "CH016_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH016",
+        "scene_id": "CH016_SC003"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH016",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH016_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH011",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH011_chapter_xi.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH015",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH015_chapter_xv.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH010",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH010_chapter_x.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH016",
+        "canonical_id": "cowardly_lion"
+      }
+    ],
+    "evidence_summary": [
+      "Establish the Wizard's use of psychological placebo by providing a green liquid to the Cowardly Lion. The scene must visually track the transition from physical trembling and slumped posture to an upright, bravado-filled stance following the ingestion of th...",
+      "The Cowardly Lion seeks courage. Oz provides a green liquid in a dish, claiming it must be swallowed to work. The Lion drinks it and immediately feels transformed by the perceived power of the potion.",
+      "Fear/Anxiety $\\rightarrow$ Hesitation $\\rightarrow$ Sudden Bravado.",
+      "cowardly_lion is slumped and trembling with anxiety.",
+      "cowardly_lion stands upright with sudden bravado.",
+      "The Lion drinks the green liquid and undergoes a psychological transformation.",
+      "oz | [CH002] Chapter II (book index hit) [CH010] Chapter X (book index hit) [CH011] Chapter XI (book index hit)",
+      "cowardly_lion | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH008/cowardly_lion.md] Physical Description: Large animal; too heavy to be carried by the others. [source:C:/FilmCreator/projects/wizard_of_oz/02_s...",
+      "throne_room_of_oz | No specific visual descriptors are provided in the current evidence. The location serves as a critical narrative hub for character transformations and confrontations. | Unknown. | Unknown. | Unknown."
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "ceremonial_tableau",
+    "coverage_role": "decision_closeup",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "normal",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT002",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "normal",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = normal"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH016_SC003_SH008_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "ac331a41098b6f68baf1be5ea52150982bb8405e",
+      "created_at_utc": "2026-04-27T20:54:02.060968+00:00",
+      "updated_at_utc": "2026-04-27T20:55:00.774934+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH016_SC003",
+          "version": "7ee0bc5a4fefa400d2b2398d6a4df8a50ebf7e77"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH016_SC003",
+          "version": "1351c550413009fa15d840103a1425f2857085d6"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH016_SC003",
+          "version": "d8f4f45e643510e628b1d5a485bbd042d4f33108"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:54:02.061469+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "ac331a41098b6f68baf1be5ea52150982bb8405e"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:55:00.775934+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "ac331a41098b6f68baf1be5ea52150982bb8405e"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH009",
+    "scene_id": "CH016_SC003",
+    "chapter_id": "CH016",
+    "shot_order": 9,
+    "previous_shot_id": "SH008",
+    "next_shot_id": "SH010",
+    "primary_subject": "cowardly_lion",
+    "secondary_subjects": [
+      "oz"
+    ],
+    "shot_moment_summary": "The transformation occurs",
+    "start_state": "lion finishes drinking",
+    "end_state": "lion stands in bravado pose",
+    "action_during_shot": "The transformation occurs",
+    "action_continues_from": "dish is emptied/lowered",
+    "action_hands_off_to": "lion stands in bravado pose",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "cowardly_lion",
+    "visible_secondary_subject_ids": [
+      "oz"
+    ],
+    "primary_subject_frame_position": "foreground right within throne_room_of_oz central area",
+    "primary_subject_scale_relation": "preserve readable body-to-environment scale in frame",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "lion finishes drinking",
+    "subject_relation_summary": "cowardly_lion plays against oz in the same frame",
+    "required_environment_anchor_1": "throne_room_of_oz central area",
+    "required_subject_anchor_1": "lion shifts from slumped to upright predator silhouette | environment_subzone=throne_room_of_oz",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "preserve readable body-to-environment scale in frame",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "lion shifts from slumped to upright predator silhouette | environment_subzone=throne_room_of_oz",
+      "throne room center",
+      "cowardly_lion remains readable within the active playing space.",
+      "oz remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Background depth should keep throne_room_of_oz legible as the location anchor.",
+      "Subject 1: cowardly_lion remains visually readable against the environment scale.",
+      "Subject 2: oz remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "cowardly_lion focuses toward the active scene action."
+    ],
+    "environment_subzone": "throne_room_of_oz central area",
+    "key_visible_environment_features": [
+      "Chapter-local beat subzone match for 'BT003'."
     ],
     "continuity_from_previous_shot": "dish is emptied/lowered",
     "continuity_to_next_shot": "lion stands in bravado pose",
     "pose_anchor_frame": "lion finishes drinking",
     "pose_end_frame": "lion stands in bravado pose",
-    "shot_title": "Reaction Closeup 3: The transformation occurs",
-    "shot_type": "reaction_closeup",
-    "camera_description": "Close framing that isolates reaction and emotional emphasis.",
-    "composition": "Intimate composition that isolates cowardly_lion, oz against throne_room_of_oz to capture the beat's emotional turn.",
-    "target_seconds": 5.1,
+    "shot_title": "Ceremonial Master 9: The transformation occurs",
+    "shot_type": "ceremonial_master",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in throne_room_of_oz featuring cowardly_lion, oz.",
+    "target_seconds": 10.0,
     "characters_in_frame": [
       {
         "label": "The Cowardly Lion",
@@ -525,7 +1996,7 @@
       "Lion's posture shift from slumped to upright",
       "The transformation occurs"
     ],
-    "prompt_seed": "Reaction Closeup 3: The transformation occurs. reaction_closeup. size=close_up. angle=eye_level. lens=portrait. motion=push_in. zoom=subtle_in. focus=shallow_subject. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Close framing that isolates reaction and emotional emphasis....",
+    "prompt_seed": "Ceremonial Master 9: The transformation occurs. ceremonial_master. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Readable medi...",
     "shot_notes": "The transformation occurs",
     "evidence_refs": [
       {
@@ -594,13 +2065,30 @@
       "cowardly_lion | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH008/cowardly_lion.md] Physical Description: Large animal; too heavy to be carried by the others. [source:C:/FilmCreator/projects/wizard_of_oz/02_s...",
       "throne_room_of_oz | No specific visual descriptors are provided in the current evidence. The location serves as a critical narrative hub for character transformations and confrontations. | Unknown. | Unknown. | Unknown."
     ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "ceremonial_tableau",
+    "coverage_role": "ceremonial_master",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "normal",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT003",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "normal",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = normal"
+      ]
+    },
     "metadata": {
-      "artifact_id": "CH016_SC003_SH003_SHOT_PACKAGE",
+      "artifact_id": "CH016_SC003_SH009_SHOT_PACKAGE",
       "artifact_type": "shot_package",
       "status": "generated",
-      "source_fingerprint": "87f55d9f367f9f4c9c1bbfc4b714f5d62183a523",
-      "created_at_utc": "2026-04-27T18:43:28.602690+00:00",
-      "updated_at_utc": "2026-04-27T18:43:28.602690+00:00",
+      "source_fingerprint": "ac331a41098b6f68baf1be5ea52150982bb8405e",
+      "created_at_utc": "2026-04-27T20:54:02.062467+00:00",
+      "updated_at_utc": "2026-04-27T20:55:00.780932+00:00",
       "upstream_dependencies": [
         {
           "dependency_type": "scene_contract",
@@ -615,16 +2103,1191 @@
         {
           "dependency_type": "shot_blueprints",
           "dependency_id": "CH016_SC003",
-          "version": "af7cbbc0ae9102855cc0206c945625fbcd7181c0"
+          "version": "d8f4f45e643510e628b1d5a485bbd042d4f33108"
         }
       ],
       "locked_fields": {},
       "manual_overrides": {},
       "revision_history": [
         {
-          "timestamp_utc": "2026-04-27T18:44:35.939034+00:00",
+          "timestamp_utc": "2026-04-27T20:54:02.062467+00:00",
           "action": "synthesized",
-          "source_fingerprint": "87f55d9f367f9f4c9c1bbfc4b714f5d62183a523"
+          "source_fingerprint": "ac331a41098b6f68baf1be5ea52150982bb8405e"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:55:00.781433+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "ac331a41098b6f68baf1be5ea52150982bb8405e"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH010",
+    "scene_id": "CH016_SC003",
+    "chapter_id": "CH016",
+    "shot_order": 10,
+    "previous_shot_id": "SH009",
+    "next_shot_id": "SH011",
+    "primary_subject": "cowardly_lion",
+    "secondary_subjects": [
+      "oz"
+    ],
+    "shot_moment_summary": "The transformation occurs",
+    "start_state": "lion finishes drinking",
+    "end_state": "lion stands in bravado pose",
+    "action_during_shot": "The transformation occurs",
+    "action_continues_from": "lion stands in bravado pose",
+    "action_hands_off_to": "lion stands in bravado pose",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "cowardly_lion",
+    "visible_secondary_subject_ids": [
+      "oz"
+    ],
+    "primary_subject_frame_position": "foreground right within throne_room_of_oz central area",
+    "primary_subject_scale_relation": "preserve readable body-to-environment scale in frame",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "lion finishes drinking",
+    "subject_relation_summary": "cowardly_lion plays against oz in the same frame",
+    "required_environment_anchor_1": "throne_room_of_oz central area",
+    "required_subject_anchor_1": "lion shifts from slumped to upright predator silhouette | environment_subzone=throne_room_of_oz",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "preserve readable body-to-environment scale in frame",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "lion shifts from slumped to upright predator silhouette | environment_subzone=throne_room_of_oz",
+      "throne room center",
+      "cowardly_lion remains readable within the active playing space.",
+      "oz remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Background depth should keep throne_room_of_oz legible as the location anchor.",
+      "Subject 1: cowardly_lion remains visually readable against the environment scale.",
+      "Subject 2: oz remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "cowardly_lion focuses toward the active scene action."
+    ],
+    "environment_subzone": "throne_room_of_oz central area",
+    "key_visible_environment_features": [
+      "Chapter-local beat subzone match for 'BT003'."
+    ],
+    "continuity_from_previous_shot": "lion stands in bravado pose",
+    "continuity_to_next_shot": "lion stands in bravado pose",
+    "pose_anchor_frame": "lion finishes drinking",
+    "pose_end_frame": "lion stands in bravado pose",
+    "shot_title": "Authority Single 10: The transformation occurs",
+    "shot_type": "authority_single",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in throne_room_of_oz featuring cowardly_lion, oz.",
+    "target_seconds": 6.5,
+    "characters_in_frame": [
+      {
+        "label": "The Cowardly Lion",
+        "canonical_id": "cowardly_lion",
+        "display_name": "cowardly_lion",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH016/cowardly_lion.md",
+        "notes": "Direct registry match for 'cowardly_lion'."
+      },
+      {
+        "label": "Oz (The Wizard)",
+        "canonical_id": "oz",
+        "display_name": "oz",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH016/oz_the_wizard.md",
+        "notes": "Direct registry match for 'oz_the_wizard'."
+      }
+    ],
+    "environment": {
+      "label": "throne_room_of_oz",
+      "canonical_id": "throne_room_of_oz",
+      "display_name": "throne_room_of_oz",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": null,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH016/throne_room_of_oz.md",
+      "notes": "Chapter-local beat subzone match for 'BT003'."
+    },
+    "beat_ids": [
+      "BT003"
+    ],
+    "continuity_constraints": [
+      "Liquid level in the carved dish",
+      "Lion's posture shift from slumped to upright",
+      "The transformation occurs"
+    ],
+    "prompt_seed": "Authority Single 10: The transformation occurs. authority_single. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Readable mediu...",
+    "shot_notes": "The transformation occurs",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH016_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH016",
+        "scene_id": "CH016_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH016",
+        "scene_id": "CH016_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH016",
+        "scene_id": "CH016_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH016",
+        "scene_id": "CH016_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH016",
+        "scene_id": "CH016_SC003"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH016",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH016_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH011",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH011_chapter_xi.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH015",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH015_chapter_xv.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH010",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH010_chapter_x.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH016",
+        "canonical_id": "cowardly_lion"
+      }
+    ],
+    "evidence_summary": [
+      "Establish the Wizard's use of psychological placebo by providing a green liquid to the Cowardly Lion. The scene must visually track the transition from physical trembling and slumped posture to an upright, bravado-filled stance following the ingestion of th...",
+      "The Cowardly Lion seeks courage. Oz provides a green liquid in a dish, claiming it must be swallowed to work. The Lion drinks it and immediately feels transformed by the perceived power of the potion.",
+      "Fear/Anxiety $\\rightarrow$ Hesitation $\\rightarrow$ Sudden Bravado.",
+      "cowardly_lion is slumped and trembling with anxiety.",
+      "cowardly_lion stands upright with sudden bravado.",
+      "The Lion drinks the green liquid and undergoes a psychological transformation.",
+      "oz | [CH002] Chapter II (book index hit) [CH010] Chapter X (book index hit) [CH011] Chapter XI (book index hit)",
+      "cowardly_lion | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH008/cowardly_lion.md] Physical Description: Large animal; too heavy to be carried by the others. [source:C:/FilmCreator/projects/wizard_of_oz/02_s...",
+      "throne_room_of_oz | No specific visual descriptors are provided in the current evidence. The location serves as a critical narrative hub for character transformations and confrontations. | Unknown. | Unknown. | Unknown."
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "ceremonial_tableau",
+    "coverage_role": "authority_single",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "normal",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT003",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "normal",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = normal"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH016_SC003_SH010_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "ac331a41098b6f68baf1be5ea52150982bb8405e",
+      "created_at_utc": "2026-04-27T20:54:02.063975+00:00",
+      "updated_at_utc": "2026-04-27T20:55:00.785938+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH016_SC003",
+          "version": "7ee0bc5a4fefa400d2b2398d6a4df8a50ebf7e77"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH016_SC003",
+          "version": "1351c550413009fa15d840103a1425f2857085d6"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH016_SC003",
+          "version": "d8f4f45e643510e628b1d5a485bbd042d4f33108"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:54:02.064475+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "ac331a41098b6f68baf1be5ea52150982bb8405e"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:55:00.787445+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "ac331a41098b6f68baf1be5ea52150982bb8405e"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH011",
+    "scene_id": "CH016_SC003",
+    "chapter_id": "CH016",
+    "shot_order": 11,
+    "previous_shot_id": "SH010",
+    "next_shot_id": "SH012",
+    "primary_subject": "cowardly_lion",
+    "secondary_subjects": [
+      "oz"
+    ],
+    "shot_moment_summary": "The transformation occurs",
+    "start_state": "lion finishes drinking",
+    "end_state": "lion stands in bravado pose",
+    "action_during_shot": "The transformation occurs",
+    "action_continues_from": "lion stands in bravado pose",
+    "action_hands_off_to": "lion stands in bravado pose",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "cowardly_lion",
+    "visible_secondary_subject_ids": [
+      "oz"
+    ],
+    "primary_subject_frame_position": "foreground right within throne_room_of_oz central area",
+    "primary_subject_scale_relation": "preserve readable body-to-environment scale in frame",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "lion finishes drinking",
+    "subject_relation_summary": "cowardly_lion plays against oz in the same frame",
+    "required_environment_anchor_1": "throne_room_of_oz central area",
+    "required_subject_anchor_1": "lion shifts from slumped to upright predator silhouette | environment_subzone=throne_room_of_oz",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "preserve readable body-to-environment scale in frame",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "lion shifts from slumped to upright predator silhouette | environment_subzone=throne_room_of_oz",
+      "throne room center",
+      "cowardly_lion remains readable within the active playing space.",
+      "oz remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Background depth should keep throne_room_of_oz legible as the location anchor.",
+      "Subject 1: cowardly_lion remains visually readable against the environment scale.",
+      "Subject 2: oz remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "cowardly_lion focuses toward the active scene action."
+    ],
+    "environment_subzone": "throne_room_of_oz central area",
+    "key_visible_environment_features": [
+      "Chapter-local beat subzone match for 'BT003'."
+    ],
+    "continuity_from_previous_shot": "lion stands in bravado pose",
+    "continuity_to_next_shot": "lion stands in bravado pose",
+    "pose_anchor_frame": "lion finishes drinking",
+    "pose_end_frame": "lion stands in bravado pose",
+    "shot_title": "Petitioner Group 11: The transformation occurs",
+    "shot_type": "petitioner_group",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in throne_room_of_oz featuring cowardly_lion, oz.",
+    "target_seconds": 6.5,
+    "characters_in_frame": [
+      {
+        "label": "The Cowardly Lion",
+        "canonical_id": "cowardly_lion",
+        "display_name": "cowardly_lion",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH016/cowardly_lion.md",
+        "notes": "Direct registry match for 'cowardly_lion'."
+      },
+      {
+        "label": "Oz (The Wizard)",
+        "canonical_id": "oz",
+        "display_name": "oz",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH016/oz_the_wizard.md",
+        "notes": "Direct registry match for 'oz_the_wizard'."
+      }
+    ],
+    "environment": {
+      "label": "throne_room_of_oz",
+      "canonical_id": "throne_room_of_oz",
+      "display_name": "throne_room_of_oz",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": null,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH016/throne_room_of_oz.md",
+      "notes": "Chapter-local beat subzone match for 'BT003'."
+    },
+    "beat_ids": [
+      "BT003"
+    ],
+    "continuity_constraints": [
+      "Liquid level in the carved dish",
+      "Lion's posture shift from slumped to upright",
+      "The transformation occurs"
+    ],
+    "prompt_seed": "Petitioner Group 11: The transformation occurs. petitioner_group. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Readable mediu...",
+    "shot_notes": "The transformation occurs",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH016_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH016",
+        "scene_id": "CH016_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH016",
+        "scene_id": "CH016_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH016",
+        "scene_id": "CH016_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH016",
+        "scene_id": "CH016_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH016",
+        "scene_id": "CH016_SC003"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH016",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH016_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH011",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH011_chapter_xi.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH015",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH015_chapter_xv.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH010",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH010_chapter_x.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH016",
+        "canonical_id": "cowardly_lion"
+      }
+    ],
+    "evidence_summary": [
+      "Establish the Wizard's use of psychological placebo by providing a green liquid to the Cowardly Lion. The scene must visually track the transition from physical trembling and slumped posture to an upright, bravado-filled stance following the ingestion of th...",
+      "The Cowardly Lion seeks courage. Oz provides a green liquid in a dish, claiming it must be swallowed to work. The Lion drinks it and immediately feels transformed by the perceived power of the potion.",
+      "Fear/Anxiety $\\rightarrow$ Hesitation $\\rightarrow$ Sudden Bravado.",
+      "cowardly_lion is slumped and trembling with anxiety.",
+      "cowardly_lion stands upright with sudden bravado.",
+      "The Lion drinks the green liquid and undergoes a psychological transformation.",
+      "oz | [CH002] Chapter II (book index hit) [CH010] Chapter X (book index hit) [CH011] Chapter XI (book index hit)",
+      "cowardly_lion | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH008/cowardly_lion.md] Physical Description: Large animal; too heavy to be carried by the others. [source:C:/FilmCreator/projects/wizard_of_oz/02_s...",
+      "throne_room_of_oz | No specific visual descriptors are provided in the current evidence. The location serves as a critical narrative hub for character transformations and confrontations. | Unknown. | Unknown. | Unknown."
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "ceremonial_tableau",
+    "coverage_role": "petitioner_group",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "normal",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT003",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "normal",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = normal"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH016_SC003_SH011_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "ac331a41098b6f68baf1be5ea52150982bb8405e",
+      "created_at_utc": "2026-04-27T20:54:02.065474+00:00",
+      "updated_at_utc": "2026-04-27T20:55:00.792444+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH016_SC003",
+          "version": "7ee0bc5a4fefa400d2b2398d6a4df8a50ebf7e77"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH016_SC003",
+          "version": "1351c550413009fa15d840103a1425f2857085d6"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH016_SC003",
+          "version": "d8f4f45e643510e628b1d5a485bbd042d4f33108"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:54:02.065974+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "ac331a41098b6f68baf1be5ea52150982bb8405e"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:55:00.793445+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "ac331a41098b6f68baf1be5ea52150982bb8405e"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH012",
+    "scene_id": "CH016_SC003",
+    "chapter_id": "CH016",
+    "shot_order": 12,
+    "previous_shot_id": "SH011",
+    "next_shot_id": "SH013",
+    "primary_subject": "cowardly_lion",
+    "secondary_subjects": [
+      "oz"
+    ],
+    "shot_moment_summary": "The transformation occurs",
+    "start_state": "lion finishes drinking",
+    "end_state": "lion stands in bravado pose",
+    "action_during_shot": "The transformation occurs",
+    "action_continues_from": "lion stands in bravado pose",
+    "action_hands_off_to": "lion stands in bravado pose",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "cowardly_lion",
+    "visible_secondary_subject_ids": [
+      "oz"
+    ],
+    "primary_subject_frame_position": "foreground right within throne_room_of_oz central area",
+    "primary_subject_scale_relation": "preserve readable body-to-environment scale in frame",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "lion finishes drinking",
+    "subject_relation_summary": "cowardly_lion plays against oz in the same frame",
+    "required_environment_anchor_1": "throne_room_of_oz central area",
+    "required_subject_anchor_1": "lion shifts from slumped to upright predator silhouette | environment_subzone=throne_room_of_oz",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "preserve readable body-to-environment scale in frame",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "lion shifts from slumped to upright predator silhouette | environment_subzone=throne_room_of_oz",
+      "throne room center",
+      "cowardly_lion remains readable within the active playing space.",
+      "oz remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Background depth should keep throne_room_of_oz legible as the location anchor.",
+      "Subject 1: cowardly_lion remains visually readable against the environment scale.",
+      "Subject 2: oz remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "cowardly_lion focuses toward the active scene action."
+    ],
+    "environment_subzone": "throne_room_of_oz central area",
+    "key_visible_environment_features": [
+      "Chapter-local beat subzone match for 'BT003'."
+    ],
+    "continuity_from_previous_shot": "lion stands in bravado pose",
+    "continuity_to_next_shot": "lion stands in bravado pose",
+    "pose_anchor_frame": "lion finishes drinking",
+    "pose_end_frame": "lion stands in bravado pose",
+    "shot_title": "Crowd Response 12: The transformation occurs",
+    "shot_type": "crowd_response",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in throne_room_of_oz featuring cowardly_lion, oz.",
+    "target_seconds": 6.5,
+    "characters_in_frame": [
+      {
+        "label": "The Cowardly Lion",
+        "canonical_id": "cowardly_lion",
+        "display_name": "cowardly_lion",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH016/cowardly_lion.md",
+        "notes": "Direct registry match for 'cowardly_lion'."
+      },
+      {
+        "label": "Oz (The Wizard)",
+        "canonical_id": "oz",
+        "display_name": "oz",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH016/oz_the_wizard.md",
+        "notes": "Direct registry match for 'oz_the_wizard'."
+      }
+    ],
+    "environment": {
+      "label": "throne_room_of_oz",
+      "canonical_id": "throne_room_of_oz",
+      "display_name": "throne_room_of_oz",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": null,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH016/throne_room_of_oz.md",
+      "notes": "Chapter-local beat subzone match for 'BT003'."
+    },
+    "beat_ids": [
+      "BT003"
+    ],
+    "continuity_constraints": [
+      "Liquid level in the carved dish",
+      "Lion's posture shift from slumped to upright",
+      "The transformation occurs"
+    ],
+    "prompt_seed": "Crowd Response 12: The transformation occurs. crowd_response. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Readable medium co...",
+    "shot_notes": "The transformation occurs",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH016_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH016",
+        "scene_id": "CH016_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH016",
+        "scene_id": "CH016_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH016",
+        "scene_id": "CH016_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH016",
+        "scene_id": "CH016_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH016",
+        "scene_id": "CH016_SC003"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH016",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH016_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH011",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH011_chapter_xi.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH015",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH015_chapter_xv.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH010",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH010_chapter_x.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH016",
+        "canonical_id": "cowardly_lion"
+      }
+    ],
+    "evidence_summary": [
+      "Establish the Wizard's use of psychological placebo by providing a green liquid to the Cowardly Lion. The scene must visually track the transition from physical trembling and slumped posture to an upright, bravado-filled stance following the ingestion of th...",
+      "The Cowardly Lion seeks courage. Oz provides a green liquid in a dish, claiming it must be swallowed to work. The Lion drinks it and immediately feels transformed by the perceived power of the potion.",
+      "Fear/Anxiety $\\rightarrow$ Hesitation $\\rightarrow$ Sudden Bravado.",
+      "cowardly_lion is slumped and trembling with anxiety.",
+      "cowardly_lion stands upright with sudden bravado.",
+      "The Lion drinks the green liquid and undergoes a psychological transformation.",
+      "oz | [CH002] Chapter II (book index hit) [CH010] Chapter X (book index hit) [CH011] Chapter XI (book index hit)",
+      "cowardly_lion | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH008/cowardly_lion.md] Physical Description: Large animal; too heavy to be carried by the others. [source:C:/FilmCreator/projects/wizard_of_oz/02_s...",
+      "throne_room_of_oz | No specific visual descriptors are provided in the current evidence. The location serves as a critical narrative hub for character transformations and confrontations. | Unknown. | Unknown. | Unknown."
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "ceremonial_tableau",
+    "coverage_role": "crowd_response",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "normal",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT003",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "normal",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = normal"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH016_SC003_SH012_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "ac331a41098b6f68baf1be5ea52150982bb8405e",
+      "created_at_utc": "2026-04-27T20:54:02.066975+00:00",
+      "updated_at_utc": "2026-04-27T20:55:00.798444+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH016_SC003",
+          "version": "7ee0bc5a4fefa400d2b2398d6a4df8a50ebf7e77"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH016_SC003",
+          "version": "1351c550413009fa15d840103a1425f2857085d6"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH016_SC003",
+          "version": "d8f4f45e643510e628b1d5a485bbd042d4f33108"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:54:02.067475+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "ac331a41098b6f68baf1be5ea52150982bb8405e"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:55:00.799444+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "ac331a41098b6f68baf1be5ea52150982bb8405e"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH013",
+    "scene_id": "CH016_SC003",
+    "chapter_id": "CH016",
+    "shot_order": 13,
+    "previous_shot_id": "SH012",
+    "next_shot_id": "SH014",
+    "primary_subject": "cowardly_lion",
+    "secondary_subjects": [
+      "oz"
+    ],
+    "shot_moment_summary": "The transformation occurs",
+    "start_state": "lion finishes drinking",
+    "end_state": "lion stands in bravado pose",
+    "action_during_shot": "The transformation occurs",
+    "action_continues_from": "lion stands in bravado pose",
+    "action_hands_off_to": "lion stands in bravado pose",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "cowardly_lion",
+    "visible_secondary_subject_ids": [
+      "oz"
+    ],
+    "primary_subject_frame_position": "foreground right within throne_room_of_oz central area",
+    "primary_subject_scale_relation": "preserve readable body-to-environment scale in frame",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "lion finishes drinking",
+    "subject_relation_summary": "cowardly_lion plays against oz in the same frame",
+    "required_environment_anchor_1": "throne_room_of_oz central area",
+    "required_subject_anchor_1": "lion shifts from slumped to upright predator silhouette | environment_subzone=throne_room_of_oz",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "preserve readable body-to-environment scale in frame",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "lion shifts from slumped to upright predator silhouette | environment_subzone=throne_room_of_oz",
+      "throne room center",
+      "cowardly_lion remains readable within the active playing space.",
+      "oz remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Background depth should keep throne_room_of_oz legible as the location anchor.",
+      "Subject 1: cowardly_lion remains visually readable against the environment scale.",
+      "Subject 2: oz remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "cowardly_lion focuses toward the active scene action."
+    ],
+    "environment_subzone": "throne_room_of_oz central area",
+    "key_visible_environment_features": [
+      "Chapter-local beat subzone match for 'BT003'."
+    ],
+    "continuity_from_previous_shot": "lion stands in bravado pose",
+    "continuity_to_next_shot": "lion stands in bravado pose",
+    "pose_anchor_frame": "lion finishes drinking",
+    "pose_end_frame": "lion stands in bravado pose",
+    "shot_title": "Symbol Insert 13: The transformation occurs",
+    "shot_type": "symbol_insert",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in throne_room_of_oz featuring cowardly_lion, oz.",
+    "target_seconds": 5.0,
+    "characters_in_frame": [
+      {
+        "label": "The Cowardly Lion",
+        "canonical_id": "cowardly_lion",
+        "display_name": "cowardly_lion",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH016/cowardly_lion.md",
+        "notes": "Direct registry match for 'cowardly_lion'."
+      },
+      {
+        "label": "Oz (The Wizard)",
+        "canonical_id": "oz",
+        "display_name": "oz",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH016/oz_the_wizard.md",
+        "notes": "Direct registry match for 'oz_the_wizard'."
+      }
+    ],
+    "environment": {
+      "label": "throne_room_of_oz",
+      "canonical_id": "throne_room_of_oz",
+      "display_name": "throne_room_of_oz",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": null,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH016/throne_room_of_oz.md",
+      "notes": "Chapter-local beat subzone match for 'BT003'."
+    },
+    "beat_ids": [
+      "BT003"
+    ],
+    "continuity_constraints": [
+      "Liquid level in the carved dish",
+      "Lion's posture shift from slumped to upright",
+      "The transformation occurs"
+    ],
+    "prompt_seed": "Symbol Insert 13: The transformation occurs. symbol_insert. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Readable medium comp...",
+    "shot_notes": "The transformation occurs",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH016_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH016",
+        "scene_id": "CH016_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH016",
+        "scene_id": "CH016_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH016",
+        "scene_id": "CH016_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH016",
+        "scene_id": "CH016_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH016",
+        "scene_id": "CH016_SC003"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH016",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH016_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH011",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH011_chapter_xi.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH015",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH015_chapter_xv.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH010",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH010_chapter_x.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH016",
+        "canonical_id": "cowardly_lion"
+      }
+    ],
+    "evidence_summary": [
+      "Establish the Wizard's use of psychological placebo by providing a green liquid to the Cowardly Lion. The scene must visually track the transition from physical trembling and slumped posture to an upright, bravado-filled stance following the ingestion of th...",
+      "The Cowardly Lion seeks courage. Oz provides a green liquid in a dish, claiming it must be swallowed to work. The Lion drinks it and immediately feels transformed by the perceived power of the potion.",
+      "Fear/Anxiety $\\rightarrow$ Hesitation $\\rightarrow$ Sudden Bravado.",
+      "cowardly_lion is slumped and trembling with anxiety.",
+      "cowardly_lion stands upright with sudden bravado.",
+      "The Lion drinks the green liquid and undergoes a psychological transformation.",
+      "oz | [CH002] Chapter II (book index hit) [CH010] Chapter X (book index hit) [CH011] Chapter XI (book index hit)",
+      "cowardly_lion | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH008/cowardly_lion.md] Physical Description: Large animal; too heavy to be carried by the others. [source:C:/FilmCreator/projects/wizard_of_oz/02_s...",
+      "throne_room_of_oz | No specific visual descriptors are provided in the current evidence. The location serves as a critical narrative hub for character transformations and confrontations. | Unknown. | Unknown. | Unknown."
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "ceremonial_tableau",
+    "coverage_role": "symbol_insert",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "normal",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT003",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "normal",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = normal"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH016_SC003_SH013_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "ac331a41098b6f68baf1be5ea52150982bb8405e",
+      "created_at_utc": "2026-04-27T20:54:02.068475+00:00",
+      "updated_at_utc": "2026-04-27T20:55:00.805464+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH016_SC003",
+          "version": "7ee0bc5a4fefa400d2b2398d6a4df8a50ebf7e77"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH016_SC003",
+          "version": "1351c550413009fa15d840103a1425f2857085d6"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH016_SC003",
+          "version": "d8f4f45e643510e628b1d5a485bbd042d4f33108"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:54:02.068975+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "ac331a41098b6f68baf1be5ea52150982bb8405e"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:55:00.805965+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "ac331a41098b6f68baf1be5ea52150982bb8405e"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH014",
+    "scene_id": "CH016_SC003",
+    "chapter_id": "CH016",
+    "shot_order": 14,
+    "previous_shot_id": "SH013",
+    "next_shot_id": "",
+    "primary_subject": "cowardly_lion",
+    "secondary_subjects": [
+      "oz"
+    ],
+    "shot_moment_summary": "The transformation occurs",
+    "start_state": "lion finishes drinking",
+    "end_state": "lion stands in bravado pose",
+    "action_during_shot": "The transformation occurs",
+    "action_continues_from": "lion stands in bravado pose",
+    "action_hands_off_to": "lion stands in bravado pose",
+    "shot_size": "close_up",
+    "camera_angle": "eye_level",
+    "lens_family": "portrait",
+    "camera_motion": "push_in",
+    "zoom_behavior": "subtle_in",
+    "focus_strategy": "shallow_subject",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "cowardly_lion",
+    "visible_secondary_subject_ids": [
+      "oz"
+    ],
+    "primary_subject_frame_position": "foreground inside throne_room_of_oz central area",
+    "primary_subject_scale_relation": "preserve readable body-to-environment scale in frame",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "lion finishes drinking",
+    "subject_relation_summary": "cowardly_lion plays against oz in the same frame",
+    "required_environment_anchor_1": "throne_room_of_oz central area",
+    "required_subject_anchor_1": "lion shifts from slumped to upright predator silhouette | environment_subzone=throne_room_of_oz",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "preserve readable body-to-environment scale in frame",
+    "camera_package_description": "close-up, eye level, portrait lens, push in, zoom subtle in, shallow subject, hard directional",
+    "subject_blocking": [
+      "lion shifts from slumped to upright predator silhouette | environment_subzone=throne_room_of_oz",
+      "throne room center",
+      "cowardly_lion remains readable within the active playing space.",
+      "oz remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Background depth should keep throne_room_of_oz legible as the location anchor.",
+      "Subject 1: cowardly_lion remains visually readable against the environment scale.",
+      "Subject 2: oz remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "cowardly_lion focuses toward the active scene action."
+    ],
+    "environment_subzone": "throne_room_of_oz central area",
+    "key_visible_environment_features": [
+      "Chapter-local beat subzone match for 'BT003'."
+    ],
+    "continuity_from_previous_shot": "lion stands in bravado pose",
+    "continuity_to_next_shot": "lion stands in bravado pose",
+    "pose_anchor_frame": "lion finishes drinking",
+    "pose_end_frame": "lion stands in bravado pose",
+    "shot_title": "Reaction Closeup 14: The transformation occurs",
+    "shot_type": "reaction_closeup",
+    "camera_description": "Close framing that isolates reaction and emotional emphasis.",
+    "composition": "Intimate composition that isolates cowardly_lion, oz against throne_room_of_oz to capture the beat's emotional turn.",
+    "target_seconds": 6.5,
+    "characters_in_frame": [
+      {
+        "label": "The Cowardly Lion",
+        "canonical_id": "cowardly_lion",
+        "display_name": "cowardly_lion",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH016/cowardly_lion.md",
+        "notes": "Direct registry match for 'cowardly_lion'."
+      },
+      {
+        "label": "Oz (The Wizard)",
+        "canonical_id": "oz",
+        "display_name": "oz",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH016/oz_the_wizard.md",
+        "notes": "Direct registry match for 'oz_the_wizard'."
+      }
+    ],
+    "environment": {
+      "label": "throne_room_of_oz",
+      "canonical_id": "throne_room_of_oz",
+      "display_name": "throne_room_of_oz",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": null,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH016/throne_room_of_oz.md",
+      "notes": "Chapter-local beat subzone match for 'BT003'."
+    },
+    "beat_ids": [
+      "BT003"
+    ],
+    "continuity_constraints": [
+      "Liquid level in the carved dish",
+      "Lion's posture shift from slumped to upright",
+      "The transformation occurs"
+    ],
+    "prompt_seed": "Reaction Closeup 14: The transformation occurs. reaction_closeup. size=close_up. angle=eye_level. lens=portrait. motion=push_in. zoom=subtle_in. focus=shallow_subject. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Close framing that isolates reaction and emotional emphasis....",
+    "shot_notes": "The transformation occurs",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH016_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH016",
+        "scene_id": "CH016_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH016",
+        "scene_id": "CH016_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH016",
+        "scene_id": "CH016_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH016",
+        "scene_id": "CH016_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH016",
+        "scene_id": "CH016_SC003"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH016",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH016_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH011",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH011_chapter_xi.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH015",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH015_chapter_xv.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH010",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH010_chapter_x.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH016",
+        "canonical_id": "cowardly_lion"
+      }
+    ],
+    "evidence_summary": [
+      "Establish the Wizard's use of psychological placebo by providing a green liquid to the Cowardly Lion. The scene must visually track the transition from physical trembling and slumped posture to an upright, bravado-filled stance following the ingestion of th...",
+      "The Cowardly Lion seeks courage. Oz provides a green liquid in a dish, claiming it must be swallowed to work. The Lion drinks it and immediately feels transformed by the perceived power of the potion.",
+      "Fear/Anxiety $\\rightarrow$ Hesitation $\\rightarrow$ Sudden Bravado.",
+      "cowardly_lion is slumped and trembling with anxiety.",
+      "cowardly_lion stands upright with sudden bravado.",
+      "The Lion drinks the green liquid and undergoes a psychological transformation.",
+      "oz | [CH002] Chapter II (book index hit) [CH010] Chapter X (book index hit) [CH011] Chapter XI (book index hit)",
+      "cowardly_lion | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH008/cowardly_lion.md] Physical Description: Large animal; too heavy to be carried by the others. [source:C:/FilmCreator/projects/wizard_of_oz/02_s...",
+      "throne_room_of_oz | No specific visual descriptors are provided in the current evidence. The location serves as a critical narrative hub for character transformations and confrontations. | Unknown. | Unknown. | Unknown."
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "ceremonial_tableau",
+    "coverage_role": "decision_closeup",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "normal",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT003",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "normal",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = normal"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH016_SC003_SH014_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "ac331a41098b6f68baf1be5ea52150982bb8405e",
+      "created_at_utc": "2026-04-27T20:54:02.069979+00:00",
+      "updated_at_utc": "2026-04-27T20:55:00.810964+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH016_SC003",
+          "version": "7ee0bc5a4fefa400d2b2398d6a4df8a50ebf7e77"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH016_SC003",
+          "version": "1351c550413009fa15d840103a1425f2857085d6"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH016_SC003",
+          "version": "d8f4f45e643510e628b1d5a485bbd042d4f33108"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:54:02.070483+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "ac331a41098b6f68baf1be5ea52150982bb8405e"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:55:00.811964+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "ac331a41098b6f68baf1be5ea52150982bb8405e"
         }
       ]
     }

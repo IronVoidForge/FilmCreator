@@ -7,42 +7,42 @@
   "next_shot_id": "SH003",
   "primary_subject": "Glinda the Good Witch (and departing companions in farewell)",
   "secondary_subjects": [],
-  "shot_moment_summary": "Companions realize their wisdom/heart/courage",
-  "start_state": "Companions nodding",
-  "end_state": "tears/smiles",
-  "action_during_shot": "companions sharing looks of realization",
+  "shot_moment_summary": "Glinda reveals the secret power of the Silver Shoes",
+  "start_state": "Glinda begins explanation",
+  "end_state": "The shoes' function is understood",
+  "action_during_shot": "Glinda reveals the secret power of the Silver Shoes",
   "action_continues_from": "shoes highlighted",
-  "action_hands_off_to": "BT003",
-  "shot_size": "close_up",
+  "action_hands_off_to": "BT002",
+  "shot_size": "medium",
   "camera_angle": "eye_level",
-  "lens_family": "portrait",
-  "camera_motion": "push_in",
-  "zoom_behavior": "subtle_in",
-  "focus_strategy": "shallow_subject",
-  "lighting_style": "soft_even",
+  "lens_family": "normal",
+  "camera_motion": "locked_off",
+  "zoom_behavior": "none",
+  "focus_strategy": "deep_focus",
+  "lighting_style": "hard_directional",
   "subject_visibility": "on_screen",
-  "narration_mode": "in_scene_speaker",
-  "primary_subject_angle": "front",
+  "narration_mode": "none",
+  "primary_subject_angle": "front_three_quarter_left",
   "visible_primary_subject_id": "dorothy",
   "visible_secondary_subject_ids": [],
-  "primary_subject_frame_position": "foreground inside glinda_castle_throne_room_companion_cluster",
+  "primary_subject_frame_position": "foreground right within glinda_castle_throne_room_central",
   "primary_subject_scale_relation": "Glinda's presence dominates the scale, dwarfing the weary travelers.",
-  "primary_subject_facing_direction": "facing directly toward camera",
-  "primary_subject_pose_description": "Companions nodding",
+  "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+  "primary_subject_pose_description": "Glinda begins explanation",
   "subject_relation_summary": "Glinda the Good Witch (and departing companions in farewell) carries the frame alone",
-  "required_environment_anchor_1": "glinda_castle_throne_room_companion_cluster",
+  "required_environment_anchor_1": "glinda_castle_throne_room_central",
   "required_subject_anchor_1": "",
   "required_celestial_anchor_1": "",
   "required_scale_proof_detail": "Glinda's presence dominates the scale, dwarfing the weary travelers.",
-  "camera_package_description": "close-up, eye level, portrait lens, push in, zoom subtle in, shallow subject, soft even",
+  "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
   "subject_blocking": [
-    "tight group cluster",
-    "Companions grouped together looking at Dorothy/Glinda",
+    "Glinda stands over Dorothy; focus on feet",
+    "glinda_castle_throne_room_central",
     "Glinda the Good Witch (and departing companions in farewell) remains readable within the active playing space.",
     "dorothy remains readable within the active playing space."
   ],
   "camera_relative_positions": [
-    "Camera anchors the action inside the glinda_castle_throne_room_companion_cluster.",
+    "Camera anchors the action inside the glinda_castle_throne_room_central.",
     "Background depth should keep glinda_castle_throne_room legible as the location anchor.",
     "Subject 1: Glinda the Good Witch (and departing companions in farewell) remains visually readable against the environment scale.",
     "Subject 2: dorothy remains visually readable against the environment scale."
@@ -50,19 +50,20 @@
   "gaze_directions": [
     "Glinda the Good Witch (and departing companions in farewell) focuses toward the active scene action."
   ],
-  "environment_subzone": "glinda_castle_throne_room_companion_cluster",
+  "environment_subzone": "glinda_castle_throne_room_central",
   "key_visible_environment_features": [
-    "glinda_castle_throne_room_companion_cluster"
+    "glinda_castle_throne_room_central",
+    "Chapter-local beat subzone match for 'glinda_castle_throne_room_central'."
   ],
   "continuity_from_previous_shot": "shoes highlighted",
-  "continuity_to_next_shot": "BT003",
-  "pose_anchor_frame": "Companions nodding",
-  "pose_end_frame": "tears/smiles",
-  "shot_title": "Reaction Closeup 2: Companions realize their internal gains",
-  "shot_type": "reaction_closeup",
-  "camera_description": "Close framing that isolates reaction and emotional emphasis.",
-  "composition": "Intimate composition that isolates Glinda the Good Witch (and departing companions in farewell), dorothy against glinda_castle_throne_room to capture the beat's emotional turn.",
-  "target_seconds": 5.3,
+  "continuity_to_next_shot": "BT002",
+  "pose_anchor_frame": "Glinda begins explanation",
+  "pose_end_frame": "The shoes' function is understood",
+  "shot_title": "Partial Reveal 2: Glinda reveals the secret power of the Silver Shoes",
+  "shot_type": "partial_reveal",
+  "camera_description": "Stable readable framing built from the beat requirement.",
+  "composition": "Readable medium composition in glinda_castle_throne_room featuring Glinda the Good Witch (and departing companions in farewell), dorothy.",
+  "target_seconds": 7.0,
   "characters_in_frame": [
     {
       "label": "Glinda the Good Witch (and departing companions in farewell)",
@@ -93,18 +94,19 @@
     "entity_kind": "environment",
     "resolution_score": null,
     "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH023/glinda_castle_throne_room.md",
-    "notes": "Chapter-local beat subzone match for 'glinda_castle_throne_room_companion_cluster'."
+    "notes": "Chapter-local beat subzone match for 'glinda_castle_throne_room_central'."
   },
   "beat_ids": [
-    "BT002"
+    "BT001"
   ],
   "continuity_constraints": [
     "Visual state/reflectivity of the Silver Shoes",
     "Dorothy's physical stance and foot positioning for heel clicking",
-    "Companions realize their internal gains"
+    "Glinda reveals the secret power of the Silver Shoes",
+    "Resolve Glinda the Good Witch (and departing companions in farewell) -> Glinda the Good Witch (and departing companions in farewell)"
   ],
-  "prompt_seed": "Reaction Closeup 2: Companions realize their internal gains. reaction_closeup. size=close_up. angle=eye_level. lens=portrait. motion=push_in. zoom=subtle_in. focus=shallow_subject. lighting=soft_even. visibility=on_screen. subject_angle=front. Close framing that isolates reaction and emotional emphasis. Intimate com...",
-  "shot_notes": "Companions realize their internal gains",
+  "prompt_seed": "Partial Reveal 2: Glinda reveals the secret power of the Silver Shoes. partial_reveal. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requir...",
+  "shot_notes": "Glinda reveals the secret power of the Silver Shoes",
   "evidence_refs": [
     {
       "source": "scene_contract",
@@ -171,13 +173,30 @@
     "dorothy | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md] Costume/Silhouette: Unknown. No specific clothing details are provided in this chapter. [source:C:/FilmCreator/projects/wizard_of_oz/02_...",
     "glinda_castle_throne_room | A grand-scale chamber defined by an ethereal and shimmering aesthetic. The space is characterized by a heavy presence of enchantment and powerful sorcery, centered around a ruby throne that serves as the primary environmental anc..."
   ],
+  "coverage_density": "medium",
+  "coverage_profile": "classic_adventure",
+  "coverage_intent": "ceremonial_tableau",
+  "coverage_role": "partial_reveal",
+  "beat_type": "reveal_wonder",
+  "coverage_importance": "major",
+  "coverage_blueprint_source": "deterministic_v1",
+  "coverage_classification": {
+    "beat_id": "BT001",
+    "beat_type": "reveal_wonder",
+    "importance": "major",
+    "confidence": 0.78,
+    "reasons": [
+      "reveal/wonder verb",
+      "importance = major"
+    ]
+  },
   "metadata": {
     "artifact_id": "CH023_SC003_SH002_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "143c8e2366117f2359dc31742455a70c75747165",
+    "source_fingerprint": "05b4c0141dc44a2d39190c86b735713e752f310f",
     "created_at_utc": "2026-04-27T20:43:40.314495+00:00",
-    "updated_at_utc": "2026-04-27T20:43:40.314495+00:00",
+    "updated_at_utc": "2026-04-27T20:55:19.660707+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
@@ -192,7 +211,7 @@
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH023_SC003",
-        "version": "add9a681028e0676d77a98fc1fc6662512e7401c"
+        "version": "5a35cc03e3bd444ea437f0ad30b3d94829c40d80"
       }
     ],
     "locked_fields": {},
@@ -202,6 +221,16 @@
         "timestamp_utc": "2026-04-27T20:44:56.772769+00:00",
         "action": "synthesized",
         "source_fingerprint": "143c8e2366117f2359dc31742455a70c75747165"
+      },
+      {
+        "timestamp_utc": "2026-04-27T20:54:18.940466+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "05b4c0141dc44a2d39190c86b735713e752f310f"
+      },
+      {
+        "timestamp_utc": "2026-04-27T20:55:19.661707+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "05b4c0141dc44a2d39190c86b735713e752f310f"
       }
     ]
   }

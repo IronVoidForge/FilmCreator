@@ -5,82 +5,72 @@
   "shot_order": 2,
   "previous_shot_id": "",
   "next_shot_id": "",
-  "primary_subject": "china_cow",
+  "primary_subject": "dorothy",
   "secondary_subjects": [
-    "dorothy",
-    "china_milkmaid"
+    "the_scarecrow",
+    "tin_woodman"
   ],
-  "shot_moment_summary": "cow reacts to dorothy",
-  "start_state": "startled movement",
-  "end_state": "kick motion",
-  "action_during_shot": "cow kicks out",
+  "shot_moment_summary": "Cautious navigation of the landscape",
+  "start_state": "group walking across white floor",
+  "end_state": "dorothy approaches china_cow",
+  "action_during_shot": "Cautious navigation of the landscape",
   "action_continues_from": "sudden halt",
-  "action_hands_off_to": "BT003",
+  "action_hands_off_to": "BT002",
   "shot_size": "medium",
-  "camera_angle": "low_angle",
+  "camera_angle": "eye_level",
   "lens_family": "normal",
-  "camera_motion": "pan",
+  "camera_motion": "locked_off",
   "zoom_behavior": "none",
-  "focus_strategy": "shallow_subject",
-  "lighting_style": "diffuse_ambient",
+  "focus_strategy": "deep_focus",
+  "lighting_style": "hard_directional",
   "subject_visibility": "on_screen",
   "narration_mode": "none",
-  "primary_subject_angle": "profile_left",
-  "visible_primary_subject_id": "china_cow",
+  "primary_subject_angle": "front_three_quarter_left",
+  "visible_primary_subject_id": "dorothy",
   "visible_secondary_subject_ids": [
-    "dorothy",
-    "china_milkmaid"
+    "the_scarecrow",
+    "tin_woodman"
   ],
   "primary_subject_frame_position": "foreground right within open landscape",
-  "primary_subject_scale_relation": "cow size relative to houses",
-  "primary_subject_facing_direction": "profile left toward the scene action",
-  "primary_subject_pose_description": "startled movement",
-  "subject_relation_summary": "china_cow plays against dorothy, china_milkmaid in the same frame",
+  "primary_subject_scale_relation": "Human scale vs tiny colorful china houses and porcelain inhabitants.",
+  "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+  "primary_subject_pose_description": "group walking across white floor",
+  "subject_relation_summary": "dorothy plays against the_scarecrow, tin_woodman in the same frame",
   "required_environment_anchor_1": "open landscape",
-  "required_subject_anchor_1": "dorothy close to cow's head/side",
-  "required_celestial_anchor_1": "The startle and kick",
-  "required_scale_proof_detail": "cow size relative to houses",
-  "camera_package_description": "medium, low angle, normal lens, pan, shallow subject, diffuse ambient",
+  "required_subject_anchor_1": "",
+  "required_celestial_anchor_1": "",
+  "required_scale_proof_detail": "Human scale vs tiny colorful china houses and porcelain inhabitants.",
+  "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
   "subject_blocking": [
-    "dorothy near cow flank",
-    "dorothy close to cow's head/side",
-    "near the cow",
-    "china_cow remains readable within the active playing space.",
-    "dorothy remains readable within the active playing space."
+    "group moving in a loose cluster",
+    "dainty_china_country open landscape",
+    "dorothy remains readable within the active playing space.",
+    "the_scarecrow remains readable within the active playing space."
   ],
   "camera_relative_positions": [
     "Camera anchors the action inside the open landscape.",
     "Background depth should keep dainty_china_country legible as the location anchor.",
-    "Subject 1: china_cow remains visually readable against the environment scale.",
-    "Subject 2: dorothy remains visually readable against the environment scale."
+    "Subject 1: dorothy remains visually readable against the environment scale.",
+    "Subject 2: the_scarecrow remains visually readable against the environment scale."
   ],
   "gaze_directions": [
-    "china_cow focuses toward the active scene action."
+    "dorothy focuses toward the active scene action."
   ],
   "environment_subzone": "open landscape",
   "key_visible_environment_features": [
-    "open landscape"
+    "open landscape",
+    "Chapter-local beat subzone match for 'open landscape'."
   ],
   "continuity_from_previous_shot": "sudden halt",
-  "continuity_to_next_shot": "BT003",
-  "pose_anchor_frame": "startled movement",
-  "pose_end_frame": "kick motion",
-  "shot_title": "Medium 2: The startle and kick",
-  "shot_type": "medium",
-  "camera_description": "Stable medium framing that keeps action and character readable.",
-  "composition": "Readable medium composition in dainty_china_country featuring china_cow, dorothy, china_milkmaid.",
-  "target_seconds": 5.3,
+  "continuity_to_next_shot": "BT002",
+  "pose_anchor_frame": "group walking across white floor",
+  "pose_end_frame": "dorothy approaches china_cow",
+  "shot_title": "Authority Single 2: Cautious navigation of the landscape",
+  "shot_type": "authority_single",
+  "camera_description": "Stable readable framing built from the beat requirement.",
+  "composition": "Readable medium composition in dainty_china_country featuring dorothy, the_scarecrow, tin_woodman.",
+  "target_seconds": 6.5,
   "characters_in_frame": [
-    {
-      "label": "China Cow",
-      "canonical_id": "china_cow",
-      "display_name": "china_cow",
-      "status": "canonical",
-      "entity_kind": "individual",
-      "resolution_score": 138,
-      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH020/china_cow.md",
-      "notes": "Direct registry match for 'china_cow'."
-    },
     {
       "label": "Dorothy",
       "canonical_id": "dorothy",
@@ -92,36 +82,46 @@
       "notes": "Direct registry match for 'dorothy'."
     },
     {
-      "label": "China Milkmaid",
-      "canonical_id": "china_milkmaid",
-      "display_name": "china_milkmaid",
+      "label": "Scarecrow",
+      "canonical_id": "the_scarecrow",
+      "display_name": "the_scarecrow",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 186,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH020/the_scarecrow.md",
+      "notes": "asset id exactly matches canonical id | query matches alias 'scarecrow'"
+    },
+    {
+      "label": "Tin Woodman",
+      "canonical_id": "tin_woodman",
+      "display_name": "tin_woodman",
       "status": "canonical",
       "entity_kind": "individual",
       "resolution_score": 138,
-      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH020/china_milkmaid.md",
-      "notes": "Direct registry match for 'china_milkmaid'."
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH020/tin_woodman.md",
+      "notes": "Direct registry match for 'tin_woodman'."
     }
   ],
   "environment": {
-    "label": "The Dainty China Country (open landscape)",
+    "label": "dainty_china_country",
     "canonical_id": "dainty_china_country",
     "display_name": "dainty_china_country",
     "status": "canonical",
     "entity_kind": "environment",
-    "resolution_score": 138,
+    "resolution_score": null,
     "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH020/dainty_china_country.md",
-    "notes": "Direct registry match for 'dainty_china_country'."
+    "notes": "Chapter-local beat subzone match for 'open landscape'."
   },
   "beat_ids": [
-    "BT002"
+    "BT001"
   ],
   "continuity_constraints": [
     "Exact location of the nick on china_milkmaid's elbow",
     "Specific orientation of the broken leg on china_cow",
-    "The startle and kick"
+    "Cautious navigation of the landscape"
   ],
-  "prompt_seed": "Medium 2: The startle and kick. medium. size=medium. angle=low_angle. lens=normal. motion=pan. zoom=none. focus=shallow_subject. lighting=diffuse_ambient. visibility=on_screen. subject_angle=profile_left. Stable medium framing that keeps action and character readable. Readable medium composition in dainty_china_coun...",
-  "shot_notes": "The startle and kick",
+  "prompt_seed": "Authority Single 2: Cautious navigation of the landscape. authority_single. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Read...",
+  "shot_notes": "Cautious navigation of the landscape",
   "evidence_refs": [
     {
       "source": "scene_contract",
@@ -190,13 +190,30 @@
     "tin_woodman | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH005/tin_woodman.md] Costume/Silhouette: Entirely metallic (tin) body; carries an axe. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis...",
     "dainty_china_country | A miniature-scale environment characterized by extreme fragility. The landscape is defined by a smooth, seamless white ground plane and high perimeter walls that enclose the territory. All surfaces are highly polished, contributing to..."
   ],
+  "coverage_density": "medium",
+  "coverage_profile": "classic_adventure",
+  "coverage_intent": "montage_travel",
+  "coverage_role": "authority_single",
+  "beat_type": "dialogue_council_or_court",
+  "coverage_importance": "normal",
+  "coverage_blueprint_source": "deterministic_v1",
+  "coverage_classification": {
+    "beat_id": "BT001",
+    "beat_type": "dialogue_council_or_court",
+    "importance": "normal",
+    "confidence": 0.82,
+    "reasons": [
+      "court/council authority language",
+      "importance = normal"
+    ]
+  },
   "metadata": {
     "artifact_id": "CH020_SC002_SH002_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "bb538c2f5e278830954154c851697982bac4e101",
+    "source_fingerprint": "4a77faa3b338bcbdcd3abd049b1ec18469f80cc4",
     "created_at_utc": "2026-04-27T19:41:03.554251+00:00",
-    "updated_at_utc": "2026-04-27T19:41:03.554251+00:00",
+    "updated_at_utc": "2026-04-27T20:55:09.367141+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
@@ -211,7 +228,7 @@
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH020_SC002",
-        "version": "a5f5ca8298d794f5ab26c042d44154bc6c397656"
+        "version": "eeef8382df74570a8a41ed960b91faa025c2e0c7"
       }
     ],
     "locked_fields": {},
@@ -221,6 +238,16 @@
         "timestamp_utc": "2026-04-27T19:42:15.095770+00:00",
         "action": "synthesized",
         "source_fingerprint": "bb538c2f5e278830954154c851697982bac4e101"
+      },
+      {
+        "timestamp_utc": "2026-04-27T20:54:09.828679+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "4a77faa3b338bcbdcd3abd049b1ec18469f80cc4"
+      },
+      {
+        "timestamp_utc": "2026-04-27T20:55:09.368141+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "4a77faa3b338bcbdcd3abd049b1ec18469f80cc4"
       }
     ]
   }

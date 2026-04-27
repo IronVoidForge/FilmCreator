@@ -9,40 +9,39 @@
   "secondary_subjects": [
     "the_great_oz"
   ],
-  "shot_moment_summary": "the promise is made",
-  "start_state": "medium shot of woodman",
-  "end_state": "close up on woodman face",
-  "action_during_shot": "nodding/standing firm",
-  "action_continues_from": "beast feature detail",
-  "action_hands_off_to": "end_scene",
-  "shot_size": "medium_close",
+  "shot_moment_summary": "The Woodman enters the chamber and encounters the manifestation",
+  "start_state": "walking into palace_of_oz",
+  "end_state": "stopping before the throne",
+  "action_during_shot": "The Woodman enters the chamber and encounters the manifestation",
+  "action_continues_from": "stopping before the throne",
+  "action_hands_off_to": "BT002",
+  "shot_size": "medium",
   "camera_angle": "eye_level",
   "lens_family": "normal",
   "camera_motion": "locked_off",
-  "zoom_behavior": "subtle_in",
-  "focus_strategy": "shallow_subject",
-  "lighting_style": "soft_even",
+  "zoom_behavior": "none",
+  "focus_strategy": "deep_focus",
+  "lighting_style": "hard_directional",
   "subject_visibility": "on_screen",
-  "narration_mode": "in_scene_speaker",
-  "primary_subject_angle": "front_three_quarter_right",
+  "narration_mode": "none",
+  "primary_subject_angle": "front_three_quarter_left",
   "visible_primary_subject_id": "tin_woodman",
   "visible_secondary_subject_ids": [
     "the_great_oz"
   ],
-  "primary_subject_frame_position": "foreground inside central_audience_floor",
+  "primary_subject_frame_position": "foreground right within central_audience_floor",
   "primary_subject_scale_relation": "preserve readable body-to-environment scale in frame",
-  "primary_subject_facing_direction": "front three-quarter right toward the scene action",
-  "primary_subject_pose_description": "medium shot of woodman",
+  "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+  "primary_subject_pose_description": "walking into palace_of_oz",
   "subject_relation_summary": "tin_woodman plays against the_great_oz in the same frame",
   "required_environment_anchor_1": "central_audience_floor",
   "required_subject_anchor_1": "",
   "required_celestial_anchor_1": "",
   "required_scale_proof_detail": "preserve readable body-to-environment scale in frame",
-  "camera_package_description": "medium-close, eye level, normal lens, locked off, zoom subtle in, shallow subject, soft even",
+  "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
   "subject_blocking": [
-    "center floor",
-    "woodman standing firm",
-    "palace_of_oz",
+    "center aisle toward throne",
+    "central_audience_floor",
     "tin_woodman remains readable within the active playing space.",
     "the_great_oz remains readable within the active playing space."
   ],
@@ -57,17 +56,18 @@
   ],
   "environment_subzone": "central_audience_floor",
   "key_visible_environment_features": [
-    "central_audience_floor"
+    "central_audience_floor",
+    "Chapter-local environment alias match for 'The Throne Room/Audience Chamber' (key_overlap=0, label_overlap=2, context..."
   ],
-  "continuity_from_previous_shot": "beast feature detail",
-  "continuity_to_next_shot": "end_scene",
-  "pose_anchor_frame": "medium shot of woodman",
-  "pose_end_frame": "close up on woodman face",
-  "shot_title": "Over The Shoulder 3: The Wizard offers a heart",
-  "shot_type": "over_the_shoulder",
-  "camera_description": "Shoulder-level conversational framing with visible foreground presence.",
-  "composition": "Over-the-shoulder composition in palace_of_oz with tin_woodman, the_great_oz sharing the frame for dialogue or tension.",
-  "target_seconds": 5.1,
+  "continuity_from_previous_shot": "stopping before the throne",
+  "continuity_to_next_shot": "BT002",
+  "pose_anchor_frame": "walking into palace_of_oz",
+  "pose_end_frame": "stopping before the throne",
+  "shot_title": "Petitioner Group 3: The Woodman enters the chamber and encounters the m...",
+  "shot_type": "petitioner_group",
+  "camera_description": "Stable readable framing built from the beat requirement.",
+  "composition": "Readable medium composition in palace_of_oz featuring tin_woodman, the_great_oz.",
+  "target_seconds": 6.5,
   "characters_in_frame": [
     {
       "label": "Tin Woodman",
@@ -91,25 +91,25 @@
     }
   ],
   "environment": {
-    "label": "palace_of_oz",
+    "label": "The Throne Room/Audience Chamber",
     "canonical_id": "palace_of_oz",
     "display_name": "palace_of_oz",
     "status": "canonical",
     "entity_kind": "environment",
-    "resolution_score": null,
+    "resolution_score": 56,
     "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH011/palace_of_oz.md",
-    "notes": "Chapter-local beat subzone match for 'central_audience_floor'."
+    "notes": "Chapter-local environment alias match for 'The Throne Room/Audience Chamber' (key_overlap=0, label_overlap=2, context_overlap=4)."
   },
   "beat_ids": [
-    "BT003"
+    "BT001"
   ],
   "continuity_constraints": [
     "Sound design synchronization for the_great_oz roar/growl",
     "Metallic texture and articulation of tin_woodman",
-    "The Wizard offers a heart in exchange for killing the Witch"
+    "The Woodman enters the chamber and encounters the manifestation"
   ],
-  "prompt_seed": "Over The Shoulder 3: The Wizard offers a heart in exchange for killing t.... over_the_shoulder. size=medium_close. angle=eye_level. lens=normal. motion=locked_off. zoom=subtle_in. focus=shallow_subject. lighting=soft_even. visibility=on_screen. subject_angle=front_three_quarter_right. Shoulder-level conversational f...",
-  "shot_notes": "The Wizard offers a heart in exchange for killing the Witch",
+  "prompt_seed": "Petitioner Group 3: The Woodman enters the chamber and encounters the m.... petitioner_group. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat...",
+  "shot_notes": "The Woodman enters the chamber and encounters the manifestation",
   "evidence_refs": [
     {
       "source": "scene_contract",
@@ -177,13 +177,30 @@
     "the_great_oz | [CH003] Chapter III (query appears in paragraph preview) [CH005] Chapter V (query appears in paragraph preview) [CH006] Chapter VI (query appears in paragraph preview)",
     "palace_of_oz | A grandiose emerald-themed sovereign residence featuring monumental ceremonial halls and royal audience chambers. The interior is characterized by large-scale chambers designed to accommodate massive, non-human manifestations of the Wizard. |..."
   ],
+  "coverage_density": "medium",
+  "coverage_profile": "classic_adventure",
+  "coverage_intent": "ceremonial_tableau",
+  "coverage_role": "petitioner_group",
+  "beat_type": "dialogue_council_or_court",
+  "coverage_importance": "normal",
+  "coverage_blueprint_source": "deterministic_v1",
+  "coverage_classification": {
+    "beat_id": "BT001",
+    "beat_type": "dialogue_council_or_court",
+    "importance": "normal",
+    "confidence": 0.82,
+    "reasons": [
+      "court/council authority language",
+      "importance = normal"
+    ]
+  },
   "metadata": {
     "artifact_id": "CH011_SC005_SH003_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "cc57e03598508d8e87abb4a1189164367f42d1c1",
+    "source_fingerprint": "c663f84314a1f752d8f754b631c48e5e65e0fecc",
     "created_at_utc": "2026-04-27T17:13:44.626907+00:00",
-    "updated_at_utc": "2026-04-27T17:13:44.626907+00:00",
+    "updated_at_utc": "2026-04-27T20:54:47.320415+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
@@ -198,7 +215,7 @@
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH011_SC005",
-        "version": "efb273dda10e1fb6598ec15c481d448a9c685e97"
+        "version": "ad96eb87f691d395188ed9c94b7655ef2307f3a9"
       }
     ],
     "locked_fields": {},
@@ -208,6 +225,16 @@
         "timestamp_utc": "2026-04-27T17:14:59.029811+00:00",
         "action": "synthesized",
         "source_fingerprint": "cc57e03598508d8e87abb4a1189164367f42d1c1"
+      },
+      {
+        "timestamp_utc": "2026-04-27T20:53:49.368004+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "c663f84314a1f752d8f754b631c48e5e65e0fecc"
+      },
+      {
+        "timestamp_utc": "2026-04-27T20:54:47.321417+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "c663f84314a1f752d8f754b631c48e5e65e0fecc"
       }
     ]
   }

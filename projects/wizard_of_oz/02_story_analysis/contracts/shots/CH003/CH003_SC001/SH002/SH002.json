@@ -5,73 +5,70 @@
   "shot_order": 2,
   "previous_shot_id": "SH001",
   "next_shot_id": "SH003",
-  "primary_subject": "yellow_brick_road",
-  "secondary_subjects": [],
-  "shot_moment_summary": "wide view of Munchkin landscape and road",
-  "start_state": "empty road",
-  "end_state": "dorothy entering frame",
-  "action_during_shot": "walking into view",
+  "primary_subject": "dorothy",
+  "secondary_subjects": [
+    "toto"
+  ],
+  "shot_moment_summary": "Dressing and shoe discovery",
+  "start_state": "dorothy preparing clothes",
+  "end_state": "silver shoes are on",
+  "action_during_shot": "Dressing and shoe discovery",
   "action_continues_from": "silver shoes on feet",
-  "action_hands_off_to": "BT003",
-  "shot_size": "wide",
+  "action_hands_off_to": "BT002",
+  "shot_size": "medium",
   "camera_angle": "eye_level",
-  "lens_family": "ultra_wide",
-  "camera_motion": "pan",
+  "lens_family": "normal",
+  "camera_motion": "locked_off",
   "zoom_behavior": "none",
   "focus_strategy": "deep_focus",
-  "lighting_style": "diffuse_ambient",
+  "lighting_style": "hard_directional",
   "subject_visibility": "on_screen",
   "narration_mode": "none",
-  "primary_subject_angle": "front_three_quarter_right",
+  "primary_subject_angle": "front_three_quarter_left",
   "visible_primary_subject_id": "dorothy",
-  "visible_secondary_subject_ids": [],
-  "primary_subject_frame_position": "midground inside yellow_brick_road",
+  "visible_secondary_subject_ids": [
+    "toto"
+  ],
+  "primary_subject_frame_position": "foreground right within munchkin_country_farms",
   "primary_subject_scale_relation": "Small domestic scale transitioning to vast landscape scale.",
-  "primary_subject_facing_direction": "front three-quarter right toward the scene action",
-  "primary_subject_pose_description": "empty road",
-  "subject_relation_summary": "yellow_brick_road carries the frame alone",
-  "required_environment_anchor_1": "yellow_brick_road",
+  "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+  "primary_subject_pose_description": "dorothy preparing clothes",
+  "subject_relation_summary": "dorothy plays against toto in the same frame",
+  "required_environment_anchor_1": "munchkin_country_farms",
   "required_subject_anchor_1": "",
   "required_celestial_anchor_1": "",
   "required_scale_proof_detail": "Small domestic scale transitioning to vast landscape scale.",
-  "camera_package_description": "wide, eye level, ultra-wide lens, pan, deep focus, diffuse ambient",
+  "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
   "subject_blocking": [
-    "walking down center",
-    "walking down center of path",
-    "Local Munchkins (background/extras) remains readable within the active playing space.",
-    "dorothy remains readable within the active playing space."
+    "seated near clothing",
+    "munchkin_country_farms",
+    "dorothy remains readable within the active playing space.",
+    "toto remains readable within the active playing space."
   ],
   "camera_relative_positions": [
-    "Camera anchors the action inside the yellow_brick_road.",
-    "Background depth should keep yellow_brick_road legible as the location anchor."
+    "Camera anchors the action inside the munchkin_country_farms.",
+    "Background depth should keep munchkin_country_farms legible as the location anchor.",
+    "Subject 1: dorothy remains visually readable against the environment scale.",
+    "Subject 2: toto remains visually readable against the environment scale."
   ],
   "gaze_directions": [
-    "yellow_brick_road focuses toward the active scene action."
+    "dorothy focuses toward the active scene action."
   ],
-  "environment_subzone": "yellow_brick_road",
+  "environment_subzone": "munchkin_country_farms",
   "key_visible_environment_features": [
-    "yellow_brick_road"
+    "munchkin_country_farms",
+    "Chapter-local environment alias match for 'Dorothy's temporary quarters/Munchkin Country outskirts' (key_overlap=2, l..."
   ],
   "continuity_from_previous_shot": "silver shoes on feet",
-  "continuity_to_next_shot": "BT003",
-  "pose_anchor_frame": "empty road",
-  "pose_end_frame": "dorothy entering frame",
-  "shot_title": "Establishing Wide 2: Entering the landscape",
-  "shot_type": "establishing_wide",
-  "camera_description": "Wide establishing frame with a steady or lightly drifting camera.",
-  "composition": "Wide composition across yellow_brick_road with Local Munchkins (background/extras), dorothy placed for immediate spatial orientation.",
-  "target_seconds": 5.3,
+  "continuity_to_next_shot": "BT002",
+  "pose_anchor_frame": "dorothy preparing clothes",
+  "pose_end_frame": "silver shoes are on",
+  "shot_title": "Transition Wide 2: Dressing and shoe discovery",
+  "shot_type": "transition_wide",
+  "camera_description": "Stable readable framing built from the beat requirement.",
+  "composition": "Readable medium composition in munchkin_country_farms featuring dorothy, toto.",
+  "target_seconds": 10.8,
   "characters_in_frame": [
-    {
-      "label": "Local Munchkins (background/extras)",
-      "canonical_id": null,
-      "display_name": "Local Munchkins (background/extras)",
-      "status": "review",
-      "entity_kind": "individual",
-      "resolution_score": 16,
-      "source_path": "",
-      "notes": "Low-confidence character match requires review."
-    },
     {
       "label": "Dorothy",
       "canonical_id": "dorothy",
@@ -81,27 +78,39 @@
       "resolution_score": 138,
       "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH003/dorothy.md",
       "notes": "Direct registry match for 'dorothy'."
+    },
+    {
+      "label": "Toto",
+      "canonical_id": "toto",
+      "display_name": "toto",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH003/toto.md",
+      "notes": "Direct registry match for 'toto'."
     }
   ],
   "environment": {
-    "label": "The Yellow Brick Road",
-    "canonical_id": "yellow_brick_road",
-    "display_name": "yellow_brick_road",
+    "label": "Dorothy's temporary quarters/Munchkin Country outskirts",
+    "canonical_id": "munchkin_country_farms",
+    "display_name": "munchkin_country_farms",
     "status": "canonical",
     "entity_kind": "environment",
-    "resolution_score": 124,
-    "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH005/yellow_brick_road.md",
-    "notes": "Direct registry match for 'yellow_brick_road'."
+    "resolution_score": 92,
+    "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH003/munchkin_country_farms.md",
+    "notes": "Chapter-local environment alias match for 'Dorothy's temporary quarters/Munchkin Country outskirts' (key_overlap=2, label_overlap=2, context_overlap=4)."
   },
   "beat_ids": [
-    "BT002"
+    "BT001"
   ],
   "continuity_constraints": [
     "Perfect fit and luster of silver shoes",
-    "Absolute cleanliness of the gingham dress"
+    "Absolute cleanliness of the gingham dress",
+    "Dressing and shoe discovery",
+    "Resolve Local Munchkins (background/extras) -> Local Munchkins (background/extras)"
   ],
-  "prompt_seed": "Establishing Wide 2: Entering the landscape. establishing_wide. size=wide. angle=eye_level. lens=ultra_wide. motion=pan. zoom=none. focus=deep_focus. lighting=diffuse_ambient. visibility=on_screen. subject_angle=front_three_quarter_right. Wide establishing frame with a steady or lightly drifting camera. Wide composi...",
-  "shot_notes": "Entering the landscape",
+  "prompt_seed": "Transition Wide 2: Dressing and shoe discovery. transition_wide. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Readable medium...",
+  "shot_notes": "Dressing and shoe discovery",
   "evidence_refs": [
     {
       "source": "scene_contract",
@@ -165,18 +174,34 @@
     "Dorothy in temporary quarters, preparing her new attire.",
     "Dorothy walking away from camera into the Munchkin landscape.",
     "Dorothy dresses and sets out on a walk through prosperous farmland.",
-    "dorothy | Dorothy is a young human girl characterized by an expressive face and the appearance of a weary traveler. Her visual identity evolves during her journey, transitioning from previously green clothing to a white dress or clothing. She is most notabl...",
-    "toto | Toto is a small quadruped dog characterized by a compact build and consistent black fur. The character possesses an alert physical presence with keen, observant eyes suitable for a companion animal. | black fur. | companion animal; alert.",
+    "dorothy | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md] Costume/Silhouette: Unknown. No specific clothing details are provided in this chapter. [source:C:/FilmCreator/projects/wizard_of_oz/02_...",
+    "toto | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/toto.md] Costume/Silhouette: Small quadruped with black fur. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapte...",
     "munchkin_country_farms | An idyllic landscape characterized by low-slung, rounded architecture. The environment features repetitive patterns of blue domes integrated with domestic farm structures, suggesting a prosperous and communal settlement. | Low-slung...",
     "yellow_brick_road | No specific visual descriptors are provided in the current evidence. The environment functions primarily as a transit setting. | Unknown. | Unknown. | Unknown."
   ],
+  "coverage_density": "medium",
+  "coverage_profile": "classic_adventure",
+  "coverage_intent": "wonder_reveal",
+  "coverage_role": "transition_wide",
+  "beat_type": "transition_handoff",
+  "coverage_importance": "major",
+  "coverage_blueprint_source": "deterministic_v1",
+  "coverage_classification": {
+    "beat_id": "BT001",
+    "beat_type": "transition_handoff",
+    "importance": "major",
+    "confidence": 0.55,
+    "reasons": [
+      "importance = major"
+    ]
+  },
   "metadata": {
     "artifact_id": "CH003_SC001_SH002_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "af21c5bbce08fa865da760a10137d2da131635a1",
+    "source_fingerprint": "984e623ac88e318f1a1898d9f8f245ab0d650333",
     "created_at_utc": "2026-04-27T09:49:19.817595+00:00",
-    "updated_at_utc": "2026-04-27T14:53:56.871796+00:00",
+    "updated_at_utc": "2026-04-27T20:54:25.381271+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
@@ -191,7 +216,7 @@
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH003_SC001",
-        "version": "f5e23a7d0f05423485ddeb307aea2b7ae95095c3"
+        "version": "741e23a1503ce4d11f67dc11c48d4ccaa5df0a5b"
       }
     ],
     "locked_fields": {},
@@ -206,6 +231,16 @@
         "timestamp_utc": "2026-04-27T14:55:05.441143+00:00",
         "action": "synthesized",
         "source_fingerprint": "af21c5bbce08fa865da760a10137d2da131635a1"
+      },
+      {
+        "timestamp_utc": "2026-04-27T20:53:28.363978+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "984e623ac88e318f1a1898d9f8f245ab0d650333"
+      },
+      {
+        "timestamp_utc": "2026-04-27T20:54:25.381772+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "984e623ac88e318f1a1898d9f8f245ab0d650333"
       }
     ]
   }

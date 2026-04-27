@@ -42,6 +42,7 @@
   "subject_blocking": [
     "the_great_oz centered",
     "the_scarecrow stands before the seated figure",
+    "throne_area",
     "the_great_oz remains readable within the active playing space.",
     "the_scarecrow remains readable within the active playing space."
   ],
@@ -56,17 +57,18 @@
   ],
   "environment_subzone": "throne_area",
   "key_visible_environment_features": [
-    "throne_area"
+    "throne_area",
+    "Chapter-local environment alias match for 'The Throne Room/Audience Chamber' (key_overlap=0, label_overlap=2, context..."
   ],
   "continuity_from_previous_shot": "the_scarecrow enters the audience chamber seeking wisdom.",
   "continuity_to_next_shot": "BT002",
   "pose_anchor_frame": "dim lighting",
   "pose_end_frame": "shift to Lovely Lady persona lighting",
-  "shot_title": "Medium 1: The manifestation of the Lovely Lady",
-  "shot_type": "medium",
-  "camera_description": "Stable medium framing that keeps action and character readable.",
+  "shot_title": "Ceremonial Master 1: The manifestation of the Lovely Lady",
+  "shot_type": "ceremonial_master",
+  "camera_description": "Stable readable framing built from the beat requirement.",
   "composition": "Readable medium composition in palace_of_oz featuring the_great_oz, the_scarecrow.",
-  "target_seconds": 5.5,
+  "target_seconds": 10.8,
   "characters_in_frame": [
     {
       "label": "The Great Oz (Lovely Lady)",
@@ -107,7 +109,7 @@
     "Maintain straw texture and clumsy movement for the_scarecrow",
     "The manifestation of the Lovely Lady"
   ],
-  "prompt_seed": "Medium 1: The manifestation of the Lovely Lady. medium. size=medium_full. angle=eye_level. lens=normal. motion=push_in. zoom=none. focus=shallow_subject. lighting=high_contrast_ceremonial. visibility=on_screen. subject_angle=front_three_quarter_right. Stable medium framing that keeps action and character readable.",
+  "prompt_seed": "Ceremonial Master 1: The manifestation of the Lovely Lady. ceremonial_master. size=medium_full. angle=eye_level. lens=normal. motion=push_in. zoom=none. focus=shallow_subject. lighting=high_contrast_ceremonial. visibility=on_screen. subject_angle=front_three_quarter_right. Stable readable framing built from the beat...",
   "shot_notes": "The manifestation of the Lovely Lady",
   "evidence_refs": [
     {
@@ -176,13 +178,30 @@
     "the_scarecrow | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH003/the_scarecrow.md] Physical Description: A living figure stuffed with straw. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/cha...",
     "palace_of_oz | A grandiose emerald-themed sovereign residence featuring monumental ceremonial halls and royal audience chambers. The interior is characterized by large-scale chambers designed to accommodate massive, non-human manifestations of the Wizard. |..."
   ],
+  "coverage_density": "medium",
+  "coverage_profile": "classic_adventure",
+  "coverage_intent": "ceremonial_tableau",
+  "coverage_role": "ceremonial_master",
+  "beat_type": "dialogue_council_or_court",
+  "coverage_importance": "major",
+  "coverage_blueprint_source": "deterministic_v1",
+  "coverage_classification": {
+    "beat_id": "BT001",
+    "beat_type": "dialogue_council_or_court",
+    "importance": "major",
+    "confidence": 0.82,
+    "reasons": [
+      "court/council authority language",
+      "importance = major"
+    ]
+  },
   "metadata": {
     "artifact_id": "CH011_SC004_SH001_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "0bd84815c24c4f2b36c96085336d512fc90a3364",
+    "source_fingerprint": "4d323d109a7a4abf6e9fa2e89ebff2013cd35b6c",
     "created_at_utc": "2026-04-27T17:07:16.519419+00:00",
-    "updated_at_utc": "2026-04-27T17:07:16.519419+00:00",
+    "updated_at_utc": "2026-04-27T20:54:46.264501+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
@@ -197,7 +216,7 @@
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH011_SC004",
-        "version": "8dd024d5579f7f44c303df1a842057fe31ba3ff6"
+        "version": "83f5ca8081b60607a5d34a5e6de7644c5c0a0267"
       }
     ],
     "locked_fields": {},
@@ -207,6 +226,16 @@
         "timestamp_utc": "2026-04-27T17:08:37.775456+00:00",
         "action": "synthesized",
         "source_fingerprint": "0bd84815c24c4f2b36c96085336d512fc90a3364"
+      },
+      {
+        "timestamp_utc": "2026-04-27T20:53:48.873122+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "4d323d109a7a4abf6e9fa2e89ebff2013cd35b6c"
+      },
+      {
+        "timestamp_utc": "2026-04-27T20:54:46.719212+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "4d323d109a7a4abf6e9fa2e89ebff2013cd35b6c"
       }
     ]
   }

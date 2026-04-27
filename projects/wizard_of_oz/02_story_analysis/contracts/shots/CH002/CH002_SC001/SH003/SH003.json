@@ -4,23 +4,23 @@
   "chapter_id": "CH002",
   "shot_order": 3,
   "previous_shot_id": "SH002",
-  "next_shot_id": "",
-  "primary_subject": "landscape",
+  "next_shot_id": "SH004",
+  "primary_subject": "dorothy",
   "secondary_subjects": [
     "toto"
   ],
-  "shot_moment_summary": "Wide view of the Oz landscape",
-  "start_state": "wide vista",
-  "end_state": "wide vista",
-  "action_during_shot": "static observation",
-  "action_continues_from": "gasping",
-  "action_hands_off_to": "end_scene",
-  "shot_size": "wide",
-  "camera_angle": "low_angle",
-  "lens_family": "ultra_wide",
-  "camera_motion": "pan",
-  "zoom_behavior": "none",
-  "focus_strategy": "deep_focus",
+  "shot_moment_summary": "Dorothy sees the colors and fruit",
+  "start_state": "looking around",
+  "end_state": "gasping",
+  "action_during_shot": "scanning environment",
+  "action_continues_from": "eyes open, confusion",
+  "action_hands_off_to": "BT003",
+  "shot_size": "close_up",
+  "camera_angle": "eye_level",
+  "lens_family": "portrait",
+  "camera_motion": "push_in",
+  "zoom_behavior": "subtle_in",
+  "focus_strategy": "rack_focus",
   "lighting_style": "hard_directional",
   "subject_visibility": "on_screen",
   "narration_mode": "none",
@@ -29,45 +29,46 @@
   "visible_secondary_subject_ids": [
     "toto"
   ],
-  "primary_subject_frame_position": "midground inside Flower-filled clearing",
+  "primary_subject_frame_position": "foreground inside Fruit-bearing grove",
   "primary_subject_scale_relation": "The vastness of the lush landscape relative to the small, disheveled girl.",
   "primary_subject_facing_direction": "facing directly toward camera",
-  "primary_subject_pose_description": "wide vista",
-  "subject_relation_summary": "landscape plays against toto in the same frame",
-  "required_environment_anchor_1": "Flower-filled clearing",
+  "primary_subject_pose_description": "looking around",
+  "subject_relation_summary": "dorothy plays against toto in the same frame",
+  "required_environment_anchor_1": "Fruit-bearing grove",
   "required_subject_anchor_1": "",
   "required_celestial_anchor_1": "",
   "required_scale_proof_detail": "The vastness of the lush landscape relative to the small, disheveled girl.",
-  "camera_package_description": "wide, low angle, ultra-wide lens, pan, deep focus, hard directional",
+  "camera_package_description": "close-up, eye level, portrait lens, push in, zoom subtle in, rack focus, hard directional",
   "subject_blocking": [
-    "subjects small in frame",
-    "Subjects small against the vista",
-    "Open landscape",
+    "sitting up",
+    "Dorothy looking at nearby flora",
+    "Immediate vicinity of flowers/fruit",
     "dorothy remains readable within the active playing space.",
     "toto remains readable within the active playing space."
   ],
   "camera_relative_positions": [
-    "Camera anchors the action inside the Flower-filled clearing.",
+    "Camera anchors the action inside the Fruit-bearing grove.",
     "Background depth should keep The exterior/immediate vicinity of Dorothy's house (Oz landscape) legible as the location anchor.",
     "Subject 1: dorothy remains visually readable against the environment scale.",
     "Subject 2: toto remains visually readable against the environment scale."
   ],
   "gaze_directions": [
-    "landscape focuses toward the active scene action."
+    "dorothy focuses toward the active scene action."
   ],
-  "environment_subzone": "Flower-filled clearing",
+  "environment_subzone": "Fruit-bearing grove",
   "key_visible_environment_features": [
-    "Flower-filled clearing"
+    "Fruit-bearing grove",
+    "Low-confidence environment match requires review."
   ],
-  "continuity_from_previous_shot": "gasping",
-  "continuity_to_next_shot": "end_scene",
-  "pose_anchor_frame": "wide vista",
-  "pose_end_frame": "wide vista",
-  "shot_title": "Establishing Wide 3: Realization of scale",
-  "shot_type": "establishing_wide",
-  "camera_description": "Wide establishing frame with a steady or lightly drifting camera.",
-  "composition": "Wide composition across The exterior/immediate vicinity of Dorothy's house (Oz landscape) with dorothy, toto placed for immediate spatial orientation.",
-  "target_seconds": 5.1,
+  "continuity_from_previous_shot": "eyes open, confusion",
+  "continuity_to_next_shot": "BT003",
+  "pose_anchor_frame": "looking around",
+  "pose_end_frame": "gasping",
+  "shot_title": "Ceremonial Master 3: Sensory discovery",
+  "shot_type": "ceremonial_master",
+  "camera_description": "Stable readable framing built from the beat requirement.",
+  "composition": "Readable medium composition in The exterior/immediate vicinity of Dorothy's house (Oz landscape) featuring dorothy, toto.",
+  "target_seconds": 10.0,
   "characters_in_frame": [
     {
       "label": "Dorothy",
@@ -101,16 +102,16 @@
     "notes": "Low-confidence environment match requires review."
   },
   "beat_ids": [
-    "BT003"
+    "BT002"
   ],
   "continuity_constraints": [
     "Lighting shift from dark/stormy to bright/saturated",
     "Dorothy physical state must remain disheveled from cyclone",
-    "Realization of scale",
+    "Sensory discovery",
     "Resolve The exterior/immediate vicinity of Dorothy's house (Oz landscape) -> The exterior/immediate vicinity of Dorothy's house (Oz landscape)"
   ],
-  "prompt_seed": "Establishing Wide 3: Realization of scale. establishing_wide. size=wide. angle=low_angle. lens=ultra_wide. motion=pan. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front. Wide establishing frame with a steady or lightly drifting camera. Wide composition across The exter...",
-  "shot_notes": "Realization of scale",
+  "prompt_seed": "Ceremonial Master 3: Sensory discovery. ceremonial_master. size=close_up. angle=eye_level. lens=portrait. motion=push_in. zoom=subtle_in. focus=rack_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front. Stable readable framing built from the beat requirement. Readable medium composition in The...",
+  "shot_notes": "Sensory discovery",
   "evidence_refs": [
     {
       "source": "scene_contract",
@@ -174,16 +175,33 @@
     "Dorothy waking up in a state of confusion and physical disarray.",
     "Dorothy looking out at the vibrant world in awe.",
     "Dorothy awakens and processes the sensory shift from storm to paradise.",
-    "dorothy | Dorothy is a young human girl characterized by an expressive face and the appearance of a weary traveler. Her visual identity evolves during her journey, transitioning from previously green clothing to a white dress or clothing. She is most notabl...",
-    "toto | Toto is a small quadruped dog characterized by a compact build and consistent black fur. The character possesses an alert physical presence with keen, observant eyes suitable for a companion animal. | black fur. | companion animal; alert."
+    "dorothy | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md] Costume/Silhouette: Unknown. No specific clothing details are provided in this chapter. [source:C:/FilmCreator/projects/wizard_of_oz/02_...",
+    "toto | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/toto.md] Costume/Silhouette: Small quadruped with black fur. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapte..."
   ],
+  "coverage_density": "medium",
+  "coverage_profile": "classic_adventure",
+  "coverage_intent": "wonder_reveal",
+  "coverage_role": "ceremonial_master",
+  "beat_type": "dialogue_council_or_court",
+  "coverage_importance": "normal",
+  "coverage_blueprint_source": "deterministic_v1",
+  "coverage_classification": {
+    "beat_id": "BT002",
+    "beat_type": "dialogue_council_or_court",
+    "importance": "normal",
+    "confidence": 0.82,
+    "reasons": [
+      "court/council authority language",
+      "importance = normal"
+    ]
+  },
   "metadata": {
     "artifact_id": "CH002_SC001_SH003_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "3832b52bdf6fe37e48e1f73ba9ba2597f913df76",
+    "source_fingerprint": "defa3b76c53ed23d5e1cc596d3e3358dfa88148b",
     "created_at_utc": "2026-04-27T09:32:31.122236+00:00",
-    "updated_at_utc": "2026-04-27T14:36:40.007349+00:00",
+    "updated_at_utc": "2026-04-27T20:54:22.747107+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
@@ -198,7 +216,7 @@
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH002_SC001",
-        "version": "5494baac5cc2492aec6ba27706b113f1effbecca"
+        "version": "5a72500f802b71d99718bc3f1202f7fa947c718a"
       }
     ],
     "locked_fields": {},
@@ -213,6 +231,16 @@
         "timestamp_utc": "2026-04-27T14:37:51.874939+00:00",
         "action": "synthesized",
         "source_fingerprint": "3832b52bdf6fe37e48e1f73ba9ba2597f913df76"
+      },
+      {
+        "timestamp_utc": "2026-04-27T20:53:25.776054+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "defa3b76c53ed23d5e1cc596d3e3358dfa88148b"
+      },
+      {
+        "timestamp_utc": "2026-04-27T20:54:22.747606+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "defa3b76c53ed23d5e1cc596d3e3358dfa88148b"
       }
     ]
   }

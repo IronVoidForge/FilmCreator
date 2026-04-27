@@ -38,33 +38,37 @@
     "required_environment_anchor_1": "open_plains",
     "required_subject_anchor_1": "",
     "required_celestial_anchor_1": "",
-    "required_scale_proof_detail": "character eye-level vs vast landscape",
+    "required_scale_proof_detail": "Swarm scale vs individual character vulnerability.",
     "camera_package_description": "medium-close, eye level, portrait lens, push in, zoom subtle in, shallow subject, diffuse ambient",
     "subject_blocking": [
       "tight group cluster",
+      "open_plains",
       "dorothy remains readable within the active playing space.",
       "the_scarecrow remains readable within the active playing space."
     ],
     "camera_relative_positions": [
       "Camera anchors the action inside the open_plains.",
-      "Background depth should keep western_rugged_lands legible as the location anchor."
+      "Background depth should keep western_rugged_lands legible as the location anchor.",
+      "Subject 1: dorothy remains visually readable against the environment scale.",
+      "Subject 2: the_scarecrow remains visually readable against the environment scale."
     ],
     "gaze_directions": [
       "dorothy focuses toward the active scene action."
     ],
     "environment_subzone": "open_plains",
     "key_visible_environment_features": [
-      "open_plains"
+      "open_plains",
+      "Chapter-local environment alias match for 'The rugged West landscape' (key_overlap=1, label_overlap=3, context_overla..."
     ],
     "continuity_from_previous_shot": "Travelers moving through the rugged West, weary and desperate.",
     "continuity_to_next_shot": "BT002",
     "pose_anchor_frame": "weary travelers walking",
     "pose_end_frame": "sudden magical activation",
-    "shot_title": "Reaction Closeup 1: The Golden Cap is used in desperation",
-    "shot_type": "reaction_closeup",
-    "camera_description": "Close framing that isolates reaction and emotional emphasis.",
-    "composition": "Intimate composition that isolates dorothy, the_scarecrow against western_rugged_lands to capture the beat's emotional turn.",
-    "target_seconds": 5.5,
+    "shot_title": "Ceremonial Master 1: The Golden Cap is used in desperation",
+    "shot_type": "ceremonial_master",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in western_rugged_lands featuring dorothy, the_scarecrow.",
+    "target_seconds": 10.8,
     "characters_in_frame": [
       {
         "label": "Dorothy",
@@ -103,9 +107,10 @@
     "continuity_constraints": [
       "Lighting must dim/shift as monkeys cloud the sun",
       "Character positioning during scramble must match previous travel state",
-      "The Golden Cap is used in desperation"
+      "The Golden Cap is used in desperation",
+      "Resolve Wicked Witch (presence/influence) -> Wicked Witch (presence/influence)"
     ],
-    "prompt_seed": "Reaction Closeup 1: The Golden Cap is used in desperation. reaction_closeup. size=medium_close. angle=eye_level. lens=portrait. motion=push_in. zoom=subtle_in. focus=shallow_subject. lighting=diffuse_ambient. visibility=on_screen. subject_angle=front_three_quarter_left. Close framing that isolates reaction and emoti...",
+    "prompt_seed": "Ceremonial Master 1: The Golden Cap is used in desperation. ceremonial_master. size=medium_close. angle=eye_level. lens=portrait. motion=push_in. zoom=subtle_in. focus=shallow_subject. lighting=diffuse_ambient. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat...",
     "shot_notes": "The Golden Cap is used in desperation",
     "evidence_refs": [
       {
@@ -172,16 +177,32 @@
       "The Golden Cap summons a swarm of Winged Monkeys that attack the travelers.",
       "dorothy | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md] Costume/Silhouette: Unknown. No specific clothing details are provided in this chapter. [source:C:/FilmCreator/projects/wizard_of_oz/02_...",
       "the_scarecrow | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH003/the_scarecrow.md] Physical Description: A living figure stuffed with straw. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/cha...",
-      "winged_monkeys | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH023/winged_monkeys.md] Costume/Silhouette: Monkey-like with wings. [CH012] Chapter XII (query appears in paragraph preview) [CH013] Chapter XIII...",
       "western_rugged_lands | No specific visual descriptors are provided in the current evidence. The environment functions as a primary location for transit. | Unknown. | Unknown. | Unknown."
     ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "wonder_reveal",
+    "coverage_role": "ceremonial_master",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT001",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "major",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = major"
+      ]
+    },
     "metadata": {
       "artifact_id": "CH012_SC002_SH001_SHOT_PACKAGE",
       "artifact_type": "shot_package",
       "status": "generated",
-      "source_fingerprint": "de97cbf9b2068e3cf53e001dfa47ef445282d252",
+      "source_fingerprint": "89f0115a6a68cda29313756c1cdd394238bfdd9c",
       "created_at_utc": "2026-04-27T17:25:26.968724+00:00",
-      "updated_at_utc": "2026-04-27T17:25:26.968724+00:00",
+      "updated_at_utc": "2026-04-27T20:54:49.312145+00:00",
       "upstream_dependencies": [
         {
           "dependency_type": "scene_contract",
@@ -196,7 +217,7 @@
         {
           "dependency_type": "shot_blueprints",
           "dependency_id": "CH012_SC002",
-          "version": "3ca0e8515ea9e28f8f20431cd1a11b5ebdf09902"
+          "version": "5c1c292a3519e76f317aef864de81b9e007dded0"
         }
       ],
       "locked_fields": {},
@@ -206,6 +227,16 @@
           "timestamp_utc": "2026-04-27T17:26:41.390972+00:00",
           "action": "synthesized",
           "source_fingerprint": "de97cbf9b2068e3cf53e001dfa47ef445282d252"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:53:51.612741+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "89f0115a6a68cda29313756c1cdd394238bfdd9c"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:49.785965+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "89f0115a6a68cda29313756c1cdd394238bfdd9c"
         }
       ]
     }
@@ -217,6 +248,1484 @@
     "shot_order": 2,
     "previous_shot_id": "SH001",
     "next_shot_id": "SH003",
+    "primary_subject": "dorothy",
+    "secondary_subjects": [
+      "the_scarecrow"
+    ],
+    "shot_moment_summary": "The Golden Cap is used in desperation",
+    "start_state": "characters looking weary/desperate",
+    "end_state": "magical charge complete",
+    "action_during_shot": "The Golden Cap is used in desperation",
+    "action_continues_from": "sudden magical activation",
+    "action_hands_off_to": "BT002",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "dorothy",
+    "visible_secondary_subject_ids": [
+      "the_scarecrow"
+    ],
+    "primary_subject_frame_position": "foreground right within open_plains",
+    "primary_subject_scale_relation": "Swarm scale vs individual character vulnerability.",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "characters looking weary/desperate",
+    "subject_relation_summary": "dorothy plays against the_scarecrow in the same frame",
+    "required_environment_anchor_1": "open_plains",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "Swarm scale vs individual character vulnerability.",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "tight group cluster",
+      "open_plains",
+      "dorothy remains readable within the active playing space.",
+      "Wicked Witch (presence/influence) remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the open_plains.",
+      "Background depth should keep western_rugged_lands legible as the location anchor.",
+      "Subject 1: dorothy remains visually readable against the environment scale.",
+      "Subject 2: Wicked Witch (presence/influence) remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "dorothy focuses toward the active scene action."
+    ],
+    "environment_subzone": "open_plains",
+    "key_visible_environment_features": [
+      "open_plains",
+      "Chapter-local environment alias match for 'The rugged West landscape' (key_overlap=1, label_overlap=3, context_overla..."
+    ],
+    "continuity_from_previous_shot": "sudden magical activation",
+    "continuity_to_next_shot": "BT002",
+    "pose_anchor_frame": "characters looking weary/desperate",
+    "pose_end_frame": "magical charge complete",
+    "shot_title": "Authority Single 2: The Golden Cap is used in desperation",
+    "shot_type": "authority_single",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in western_rugged_lands featuring dorothy, Wicked Witch (presence/influence), the_scarecrow.",
+    "target_seconds": 7.0,
+    "characters_in_frame": [
+      {
+        "label": "Dorothy",
+        "canonical_id": "dorothy",
+        "display_name": "dorothy",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH012/dorothy.md",
+        "notes": "Direct registry match for 'dorothy'."
+      },
+      {
+        "label": "Wicked Witch (presence/influence)",
+        "canonical_id": null,
+        "display_name": "Wicked Witch (presence/influence)",
+        "status": "review",
+        "entity_kind": "individual",
+        "resolution_score": 16,
+        "source_path": "",
+        "notes": "Low-confidence character match requires review."
+      },
+      {
+        "label": "Scarecrow",
+        "canonical_id": "the_scarecrow",
+        "display_name": "the_scarecrow",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 186,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH003/the_scarecrow.md",
+        "notes": "asset id exactly matches canonical id | query matches alias 'scarecrow'"
+      }
+    ],
+    "environment": {
+      "label": "The rugged West landscape",
+      "canonical_id": "western_rugged_lands",
+      "display_name": "western_rugged_lands",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 78,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH012/western_rugged_lands.md",
+      "notes": "Chapter-local environment alias match for 'The rugged West landscape' (key_overlap=1, label_overlap=3, context_overlap=4)."
+    },
+    "beat_ids": [
+      "BT001"
+    ],
+    "continuity_constraints": [
+      "Lighting must dim/shift as monkeys cloud the sun",
+      "Character positioning during scramble must match previous travel state",
+      "The Golden Cap is used in desperation",
+      "Resolve Wicked Witch (presence/influence) -> Wicked Witch (presence/influence)"
+    ],
+    "prompt_seed": "Authority Single 2: The Golden Cap is used in desperation. authority_single. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Rea...",
+    "shot_notes": "The Golden Cap is used in desperation",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH012_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH012",
+        "scene_id": "CH012_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH012",
+        "scene_id": "CH012_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH012",
+        "scene_id": "CH012_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH012",
+        "scene_id": "CH012_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH012",
+        "scene_id": "CH012_SC002"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH012",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH012_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH012",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH012_chapter_xii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH018",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH018_chapter_xviii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH022",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH022_chapter_xxii.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH012",
+        "canonical_id": "dorothy"
+      }
+    ],
+    "evidence_summary": [
+      "Execute a high-stakes magical escalation where the Golden Cap triggers a swarm event. The sequence must transition from character desperation to chaotic terror through lighting shifts and scale changes as winged monkeys descend from above.",
+      "In desperation, the Wicked Witch uses the final charge of the Golden Cap to summon the Winged Monkeys. The monkeys descend upon the group.",
+      "Desperation $\\rightarrow$ Terror.",
+      "Travelers moving through the rugged West, weary and desperate.",
+      "Chaos as winged monkeys descend upon the group.",
+      "The Golden Cap summons a swarm of Winged Monkeys that attack the travelers.",
+      "dorothy | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md] Costume/Silhouette: Unknown. No specific clothing details are provided in this chapter. [source:C:/FilmCreator/projects/wizard_of_oz/02_...",
+      "the_scarecrow | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH003/the_scarecrow.md] Physical Description: A living figure stuffed with straw. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/cha...",
+      "western_rugged_lands | No specific visual descriptors are provided in the current evidence. The environment functions as a primary location for transit. | Unknown. | Unknown. | Unknown."
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "wonder_reveal",
+    "coverage_role": "authority_single",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT001",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "major",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = major"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH012_SC002_SH002_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "89f0115a6a68cda29313756c1cdd394238bfdd9c",
+      "created_at_utc": "2026-04-27T17:26:41.392969+00:00",
+      "updated_at_utc": "2026-04-27T20:54:49.792484+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH012_SC002",
+          "version": "1a048cc233af74c40df590f6fed4a703ace88232"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH012_SC002",
+          "version": "bd7d9b1ff50210b143012db036bc3f1d97f0141c"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH012_SC002",
+          "version": "5c1c292a3519e76f317aef864de81b9e007dded0"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T17:27:48.770467+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "de97cbf9b2068e3cf53e001dfa47ef445282d252"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:53:51.620243+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "89f0115a6a68cda29313756c1cdd394238bfdd9c"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:49.793488+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "89f0115a6a68cda29313756c1cdd394238bfdd9c"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH003",
+    "scene_id": "CH012_SC002",
+    "chapter_id": "CH012",
+    "shot_order": 3,
+    "previous_shot_id": "SH002",
+    "next_shot_id": "SH004",
+    "primary_subject": "dorothy",
+    "secondary_subjects": [
+      "the_scarecrow"
+    ],
+    "shot_moment_summary": "The Golden Cap is used in desperation",
+    "start_state": "characters looking weary/desperate",
+    "end_state": "magical charge complete",
+    "action_during_shot": "The Golden Cap is used in desperation",
+    "action_continues_from": "magical charge complete",
+    "action_hands_off_to": "BT002",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "dorothy",
+    "visible_secondary_subject_ids": [
+      "the_scarecrow"
+    ],
+    "primary_subject_frame_position": "foreground right within open_plains",
+    "primary_subject_scale_relation": "Swarm scale vs individual character vulnerability.",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "characters looking weary/desperate",
+    "subject_relation_summary": "dorothy plays against the_scarecrow in the same frame",
+    "required_environment_anchor_1": "open_plains",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "Swarm scale vs individual character vulnerability.",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "tight group cluster",
+      "open_plains",
+      "dorothy remains readable within the active playing space.",
+      "Wicked Witch (presence/influence) remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the open_plains.",
+      "Background depth should keep western_rugged_lands legible as the location anchor.",
+      "Subject 1: dorothy remains visually readable against the environment scale.",
+      "Subject 2: Wicked Witch (presence/influence) remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "dorothy focuses toward the active scene action."
+    ],
+    "environment_subzone": "open_plains",
+    "key_visible_environment_features": [
+      "open_plains",
+      "Chapter-local environment alias match for 'The rugged West landscape' (key_overlap=1, label_overlap=3, context_overla..."
+    ],
+    "continuity_from_previous_shot": "magical charge complete",
+    "continuity_to_next_shot": "BT002",
+    "pose_anchor_frame": "characters looking weary/desperate",
+    "pose_end_frame": "magical charge complete",
+    "shot_title": "Petitioner Group 3: The Golden Cap is used in desperation",
+    "shot_type": "petitioner_group",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in western_rugged_lands featuring dorothy, Wicked Witch (presence/influence), the_scarecrow.",
+    "target_seconds": 7.0,
+    "characters_in_frame": [
+      {
+        "label": "Dorothy",
+        "canonical_id": "dorothy",
+        "display_name": "dorothy",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH012/dorothy.md",
+        "notes": "Direct registry match for 'dorothy'."
+      },
+      {
+        "label": "Wicked Witch (presence/influence)",
+        "canonical_id": null,
+        "display_name": "Wicked Witch (presence/influence)",
+        "status": "review",
+        "entity_kind": "individual",
+        "resolution_score": 16,
+        "source_path": "",
+        "notes": "Low-confidence character match requires review."
+      },
+      {
+        "label": "Scarecrow",
+        "canonical_id": "the_scarecrow",
+        "display_name": "the_scarecrow",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 186,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH003/the_scarecrow.md",
+        "notes": "asset id exactly matches canonical id | query matches alias 'scarecrow'"
+      }
+    ],
+    "environment": {
+      "label": "The rugged West landscape",
+      "canonical_id": "western_rugged_lands",
+      "display_name": "western_rugged_lands",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 78,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH012/western_rugged_lands.md",
+      "notes": "Chapter-local environment alias match for 'The rugged West landscape' (key_overlap=1, label_overlap=3, context_overlap=4)."
+    },
+    "beat_ids": [
+      "BT001"
+    ],
+    "continuity_constraints": [
+      "Lighting must dim/shift as monkeys cloud the sun",
+      "Character positioning during scramble must match previous travel state",
+      "The Golden Cap is used in desperation",
+      "Resolve Wicked Witch (presence/influence) -> Wicked Witch (presence/influence)"
+    ],
+    "prompt_seed": "Petitioner Group 3: The Golden Cap is used in desperation. petitioner_group. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Rea...",
+    "shot_notes": "The Golden Cap is used in desperation",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH012_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH012",
+        "scene_id": "CH012_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH012",
+        "scene_id": "CH012_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH012",
+        "scene_id": "CH012_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH012",
+        "scene_id": "CH012_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH012",
+        "scene_id": "CH012_SC002"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH012",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH012_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH012",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH012_chapter_xii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH018",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH018_chapter_xviii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH022",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH022_chapter_xxii.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH012",
+        "canonical_id": "dorothy"
+      }
+    ],
+    "evidence_summary": [
+      "Execute a high-stakes magical escalation where the Golden Cap triggers a swarm event. The sequence must transition from character desperation to chaotic terror through lighting shifts and scale changes as winged monkeys descend from above.",
+      "In desperation, the Wicked Witch uses the final charge of the Golden Cap to summon the Winged Monkeys. The monkeys descend upon the group.",
+      "Desperation $\\rightarrow$ Terror.",
+      "Travelers moving through the rugged West, weary and desperate.",
+      "Chaos as winged monkeys descend upon the group.",
+      "The Golden Cap summons a swarm of Winged Monkeys that attack the travelers.",
+      "dorothy | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md] Costume/Silhouette: Unknown. No specific clothing details are provided in this chapter. [source:C:/FilmCreator/projects/wizard_of_oz/02_...",
+      "the_scarecrow | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH003/the_scarecrow.md] Physical Description: A living figure stuffed with straw. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/cha...",
+      "western_rugged_lands | No specific visual descriptors are provided in the current evidence. The environment functions as a primary location for transit. | Unknown. | Unknown. | Unknown."
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "wonder_reveal",
+    "coverage_role": "petitioner_group",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT001",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "major",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = major"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH012_SC002_SH003_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "89f0115a6a68cda29313756c1cdd394238bfdd9c",
+      "created_at_utc": "2026-04-27T17:27:48.772465+00:00",
+      "updated_at_utc": "2026-04-27T20:54:49.798489+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH012_SC002",
+          "version": "1a048cc233af74c40df590f6fed4a703ace88232"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH012_SC002",
+          "version": "bd7d9b1ff50210b143012db036bc3f1d97f0141c"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH012_SC002",
+          "version": "5c1c292a3519e76f317aef864de81b9e007dded0"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T17:28:56.049664+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "de97cbf9b2068e3cf53e001dfa47ef445282d252"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:53:51.626246+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "89f0115a6a68cda29313756c1cdd394238bfdd9c"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:49.799488+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "89f0115a6a68cda29313756c1cdd394238bfdd9c"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH004",
+    "scene_id": "CH012_SC002",
+    "chapter_id": "CH012",
+    "shot_order": 4,
+    "previous_shot_id": "SH003",
+    "next_shot_id": "SH005",
+    "primary_subject": "dorothy",
+    "secondary_subjects": [
+      "the_scarecrow"
+    ],
+    "shot_moment_summary": "The Golden Cap is used in desperation",
+    "start_state": "characters looking weary/desperate",
+    "end_state": "magical charge complete",
+    "action_during_shot": "The Golden Cap is used in desperation",
+    "action_continues_from": "magical charge complete",
+    "action_hands_off_to": "BT002",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "dorothy",
+    "visible_secondary_subject_ids": [
+      "the_scarecrow"
+    ],
+    "primary_subject_frame_position": "foreground right within open_plains",
+    "primary_subject_scale_relation": "Swarm scale vs individual character vulnerability.",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "characters looking weary/desperate",
+    "subject_relation_summary": "dorothy plays against the_scarecrow in the same frame",
+    "required_environment_anchor_1": "open_plains",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "Swarm scale vs individual character vulnerability.",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "tight group cluster",
+      "open_plains",
+      "dorothy remains readable within the active playing space.",
+      "Wicked Witch (presence/influence) remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the open_plains.",
+      "Background depth should keep western_rugged_lands legible as the location anchor.",
+      "Subject 1: dorothy remains visually readable against the environment scale.",
+      "Subject 2: Wicked Witch (presence/influence) remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "dorothy focuses toward the active scene action."
+    ],
+    "environment_subzone": "open_plains",
+    "key_visible_environment_features": [
+      "open_plains",
+      "Chapter-local environment alias match for 'The rugged West landscape' (key_overlap=1, label_overlap=3, context_overla..."
+    ],
+    "continuity_from_previous_shot": "magical charge complete",
+    "continuity_to_next_shot": "BT002",
+    "pose_anchor_frame": "characters looking weary/desperate",
+    "pose_end_frame": "magical charge complete",
+    "shot_title": "Crowd Response 4: The Golden Cap is used in desperation",
+    "shot_type": "crowd_response",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in western_rugged_lands featuring dorothy, Wicked Witch (presence/influence), the_scarecrow.",
+    "target_seconds": 7.0,
+    "characters_in_frame": [
+      {
+        "label": "Dorothy",
+        "canonical_id": "dorothy",
+        "display_name": "dorothy",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH012/dorothy.md",
+        "notes": "Direct registry match for 'dorothy'."
+      },
+      {
+        "label": "Wicked Witch (presence/influence)",
+        "canonical_id": null,
+        "display_name": "Wicked Witch (presence/influence)",
+        "status": "review",
+        "entity_kind": "individual",
+        "resolution_score": 16,
+        "source_path": "",
+        "notes": "Low-confidence character match requires review."
+      },
+      {
+        "label": "Scarecrow",
+        "canonical_id": "the_scarecrow",
+        "display_name": "the_scarecrow",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 186,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH003/the_scarecrow.md",
+        "notes": "asset id exactly matches canonical id | query matches alias 'scarecrow'"
+      }
+    ],
+    "environment": {
+      "label": "The rugged West landscape",
+      "canonical_id": "western_rugged_lands",
+      "display_name": "western_rugged_lands",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 78,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH012/western_rugged_lands.md",
+      "notes": "Chapter-local environment alias match for 'The rugged West landscape' (key_overlap=1, label_overlap=3, context_overlap=4)."
+    },
+    "beat_ids": [
+      "BT001"
+    ],
+    "continuity_constraints": [
+      "Lighting must dim/shift as monkeys cloud the sun",
+      "Character positioning during scramble must match previous travel state",
+      "The Golden Cap is used in desperation",
+      "Resolve Wicked Witch (presence/influence) -> Wicked Witch (presence/influence)"
+    ],
+    "prompt_seed": "Crowd Response 4: The Golden Cap is used in desperation. crowd_response. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Readabl...",
+    "shot_notes": "The Golden Cap is used in desperation",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH012_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH012",
+        "scene_id": "CH012_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH012",
+        "scene_id": "CH012_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH012",
+        "scene_id": "CH012_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH012",
+        "scene_id": "CH012_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH012",
+        "scene_id": "CH012_SC002"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH012",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH012_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH012",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH012_chapter_xii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH018",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH018_chapter_xviii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH022",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH022_chapter_xxii.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH012",
+        "canonical_id": "dorothy"
+      }
+    ],
+    "evidence_summary": [
+      "Execute a high-stakes magical escalation where the Golden Cap triggers a swarm event. The sequence must transition from character desperation to chaotic terror through lighting shifts and scale changes as winged monkeys descend from above.",
+      "In desperation, the Wicked Witch uses the final charge of the Golden Cap to summon the Winged Monkeys. The monkeys descend upon the group.",
+      "Desperation $\\rightarrow$ Terror.",
+      "Travelers moving through the rugged West, weary and desperate.",
+      "Chaos as winged monkeys descend upon the group.",
+      "The Golden Cap summons a swarm of Winged Monkeys that attack the travelers.",
+      "dorothy | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md] Costume/Silhouette: Unknown. No specific clothing details are provided in this chapter. [source:C:/FilmCreator/projects/wizard_of_oz/02_...",
+      "the_scarecrow | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH003/the_scarecrow.md] Physical Description: A living figure stuffed with straw. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/cha...",
+      "western_rugged_lands | No specific visual descriptors are provided in the current evidence. The environment functions as a primary location for transit. | Unknown. | Unknown. | Unknown."
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "wonder_reveal",
+    "coverage_role": "crowd_response",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT001",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "major",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = major"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH012_SC002_SH004_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "89f0115a6a68cda29313756c1cdd394238bfdd9c",
+      "created_at_utc": "2026-04-27T20:53:51.627751+00:00",
+      "updated_at_utc": "2026-04-27T20:54:49.804807+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH012_SC002",
+          "version": "1a048cc233af74c40df590f6fed4a703ace88232"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH012_SC002",
+          "version": "bd7d9b1ff50210b143012db036bc3f1d97f0141c"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH012_SC002",
+          "version": "5c1c292a3519e76f317aef864de81b9e007dded0"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:53:51.628251+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "89f0115a6a68cda29313756c1cdd394238bfdd9c"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:49.805815+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "89f0115a6a68cda29313756c1cdd394238bfdd9c"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH005",
+    "scene_id": "CH012_SC002",
+    "chapter_id": "CH012",
+    "shot_order": 5,
+    "previous_shot_id": "SH004",
+    "next_shot_id": "SH006",
+    "primary_subject": "dorothy",
+    "secondary_subjects": [
+      "the_scarecrow"
+    ],
+    "shot_moment_summary": "The Golden Cap is used in desperation",
+    "start_state": "characters looking weary/desperate",
+    "end_state": "magical charge complete",
+    "action_during_shot": "The Golden Cap is used in desperation",
+    "action_continues_from": "magical charge complete",
+    "action_hands_off_to": "BT002",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "dorothy",
+    "visible_secondary_subject_ids": [
+      "the_scarecrow"
+    ],
+    "primary_subject_frame_position": "foreground right within open_plains",
+    "primary_subject_scale_relation": "Swarm scale vs individual character vulnerability.",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "characters looking weary/desperate",
+    "subject_relation_summary": "dorothy plays against the_scarecrow in the same frame",
+    "required_environment_anchor_1": "open_plains",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "Swarm scale vs individual character vulnerability.",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "tight group cluster",
+      "open_plains",
+      "dorothy remains readable within the active playing space.",
+      "Wicked Witch (presence/influence) remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the open_plains.",
+      "Background depth should keep western_rugged_lands legible as the location anchor.",
+      "Subject 1: dorothy remains visually readable against the environment scale.",
+      "Subject 2: Wicked Witch (presence/influence) remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "dorothy focuses toward the active scene action."
+    ],
+    "environment_subzone": "open_plains",
+    "key_visible_environment_features": [
+      "open_plains",
+      "Chapter-local environment alias match for 'The rugged West landscape' (key_overlap=1, label_overlap=3, context_overla..."
+    ],
+    "continuity_from_previous_shot": "magical charge complete",
+    "continuity_to_next_shot": "BT002",
+    "pose_anchor_frame": "characters looking weary/desperate",
+    "pose_end_frame": "magical charge complete",
+    "shot_title": "Symbol Insert 5: The Golden Cap is used in desperation",
+    "shot_type": "symbol_insert",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in western_rugged_lands featuring dorothy, Wicked Witch (presence/influence), the_scarecrow.",
+    "target_seconds": 5.4,
+    "characters_in_frame": [
+      {
+        "label": "Dorothy",
+        "canonical_id": "dorothy",
+        "display_name": "dorothy",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH012/dorothy.md",
+        "notes": "Direct registry match for 'dorothy'."
+      },
+      {
+        "label": "Wicked Witch (presence/influence)",
+        "canonical_id": null,
+        "display_name": "Wicked Witch (presence/influence)",
+        "status": "review",
+        "entity_kind": "individual",
+        "resolution_score": 16,
+        "source_path": "",
+        "notes": "Low-confidence character match requires review."
+      },
+      {
+        "label": "Scarecrow",
+        "canonical_id": "the_scarecrow",
+        "display_name": "the_scarecrow",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 186,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH003/the_scarecrow.md",
+        "notes": "asset id exactly matches canonical id | query matches alias 'scarecrow'"
+      }
+    ],
+    "environment": {
+      "label": "The rugged West landscape",
+      "canonical_id": "western_rugged_lands",
+      "display_name": "western_rugged_lands",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 78,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH012/western_rugged_lands.md",
+      "notes": "Chapter-local environment alias match for 'The rugged West landscape' (key_overlap=1, label_overlap=3, context_overlap=4)."
+    },
+    "beat_ids": [
+      "BT001"
+    ],
+    "continuity_constraints": [
+      "Lighting must dim/shift as monkeys cloud the sun",
+      "Character positioning during scramble must match previous travel state",
+      "The Golden Cap is used in desperation",
+      "Resolve Wicked Witch (presence/influence) -> Wicked Witch (presence/influence)"
+    ],
+    "prompt_seed": "Symbol Insert 5: The Golden Cap is used in desperation. symbol_insert. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Readable...",
+    "shot_notes": "The Golden Cap is used in desperation",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH012_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH012",
+        "scene_id": "CH012_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH012",
+        "scene_id": "CH012_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH012",
+        "scene_id": "CH012_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH012",
+        "scene_id": "CH012_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH012",
+        "scene_id": "CH012_SC002"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH012",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH012_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH012",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH012_chapter_xii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH018",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH018_chapter_xviii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH022",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH022_chapter_xxii.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH012",
+        "canonical_id": "dorothy"
+      }
+    ],
+    "evidence_summary": [
+      "Execute a high-stakes magical escalation where the Golden Cap triggers a swarm event. The sequence must transition from character desperation to chaotic terror through lighting shifts and scale changes as winged monkeys descend from above.",
+      "In desperation, the Wicked Witch uses the final charge of the Golden Cap to summon the Winged Monkeys. The monkeys descend upon the group.",
+      "Desperation $\\rightarrow$ Terror.",
+      "Travelers moving through the rugged West, weary and desperate.",
+      "Chaos as winged monkeys descend upon the group.",
+      "The Golden Cap summons a swarm of Winged Monkeys that attack the travelers.",
+      "dorothy | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md] Costume/Silhouette: Unknown. No specific clothing details are provided in this chapter. [source:C:/FilmCreator/projects/wizard_of_oz/02_...",
+      "the_scarecrow | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH003/the_scarecrow.md] Physical Description: A living figure stuffed with straw. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/cha...",
+      "western_rugged_lands | No specific visual descriptors are provided in the current evidence. The environment functions as a primary location for transit. | Unknown. | Unknown. | Unknown."
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "wonder_reveal",
+    "coverage_role": "symbol_insert",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT001",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "major",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = major"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH012_SC002_SH005_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "89f0115a6a68cda29313756c1cdd394238bfdd9c",
+      "created_at_utc": "2026-04-27T20:53:51.629754+00:00",
+      "updated_at_utc": "2026-04-27T20:54:49.811818+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH012_SC002",
+          "version": "1a048cc233af74c40df590f6fed4a703ace88232"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH012_SC002",
+          "version": "bd7d9b1ff50210b143012db036bc3f1d97f0141c"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH012_SC002",
+          "version": "5c1c292a3519e76f317aef864de81b9e007dded0"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:53:51.630251+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "89f0115a6a68cda29313756c1cdd394238bfdd9c"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:49.812816+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "89f0115a6a68cda29313756c1cdd394238bfdd9c"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH006",
+    "scene_id": "CH012_SC002",
+    "chapter_id": "CH012",
+    "shot_order": 6,
+    "previous_shot_id": "SH005",
+    "next_shot_id": "SH007",
+    "primary_subject": "dorothy",
+    "secondary_subjects": [],
+    "shot_moment_summary": "The Golden Cap is used in desperation",
+    "start_state": "characters looking weary/desperate",
+    "end_state": "magical charge complete",
+    "action_during_shot": "The Golden Cap is used in desperation",
+    "action_continues_from": "magical charge complete",
+    "action_hands_off_to": "BT002",
+    "shot_size": "close_up",
+    "camera_angle": "eye_level",
+    "lens_family": "portrait",
+    "camera_motion": "push_in",
+    "zoom_behavior": "subtle_in",
+    "focus_strategy": "shallow_subject",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "dorothy",
+    "visible_secondary_subject_ids": [],
+    "primary_subject_frame_position": "foreground inside open_plains",
+    "primary_subject_scale_relation": "Swarm scale vs individual character vulnerability.",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "characters looking weary/desperate",
+    "subject_relation_summary": "dorothy carries the frame alone",
+    "required_environment_anchor_1": "open_plains",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "Swarm scale vs individual character vulnerability.",
+    "camera_package_description": "close-up, eye level, portrait lens, push in, zoom subtle in, shallow subject, hard directional",
+    "subject_blocking": [
+      "tight group cluster",
+      "open_plains",
+      "dorothy remains readable within the active playing space.",
+      "Wicked Witch (presence/influence) remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the open_plains.",
+      "Background depth should keep western_rugged_lands legible as the location anchor.",
+      "Subject 1: dorothy remains visually readable against the environment scale.",
+      "Subject 2: Wicked Witch (presence/influence) remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "dorothy focuses toward the active scene action."
+    ],
+    "environment_subzone": "open_plains",
+    "key_visible_environment_features": [
+      "open_plains",
+      "Chapter-local environment alias match for 'The rugged West landscape' (key_overlap=1, label_overlap=3, context_overla..."
+    ],
+    "continuity_from_previous_shot": "magical charge complete",
+    "continuity_to_next_shot": "BT002",
+    "pose_anchor_frame": "characters looking weary/desperate",
+    "pose_end_frame": "magical charge complete",
+    "shot_title": "Reaction Closeup 6: The Golden Cap is used in desperation",
+    "shot_type": "reaction_closeup",
+    "camera_description": "Close framing that isolates reaction and emotional emphasis.",
+    "composition": "Intimate composition that isolates dorothy, Wicked Witch (presence/influence) against western_rugged_lands to capture the beat's emotional turn.",
+    "target_seconds": 7.0,
+    "characters_in_frame": [
+      {
+        "label": "Dorothy",
+        "canonical_id": "dorothy",
+        "display_name": "dorothy",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH012/dorothy.md",
+        "notes": "Direct registry match for 'dorothy'."
+      },
+      {
+        "label": "Wicked Witch (presence/influence)",
+        "canonical_id": null,
+        "display_name": "Wicked Witch (presence/influence)",
+        "status": "review",
+        "entity_kind": "individual",
+        "resolution_score": 16,
+        "source_path": "",
+        "notes": "Low-confidence character match requires review."
+      }
+    ],
+    "environment": {
+      "label": "The rugged West landscape",
+      "canonical_id": "western_rugged_lands",
+      "display_name": "western_rugged_lands",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 78,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH012/western_rugged_lands.md",
+      "notes": "Chapter-local environment alias match for 'The rugged West landscape' (key_overlap=1, label_overlap=3, context_overlap=4)."
+    },
+    "beat_ids": [
+      "BT001"
+    ],
+    "continuity_constraints": [
+      "Lighting must dim/shift as monkeys cloud the sun",
+      "Character positioning during scramble must match previous travel state",
+      "The Golden Cap is used in desperation",
+      "Resolve Wicked Witch (presence/influence) -> Wicked Witch (presence/influence)"
+    ],
+    "prompt_seed": "Reaction Closeup 6: The Golden Cap is used in desperation. reaction_closeup. size=close_up. angle=eye_level. lens=portrait. motion=push_in. zoom=subtle_in. focus=shallow_subject. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Close framing that isolates reaction and emotiona...",
+    "shot_notes": "The Golden Cap is used in desperation",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH012_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH012",
+        "scene_id": "CH012_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH012",
+        "scene_id": "CH012_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH012",
+        "scene_id": "CH012_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH012",
+        "scene_id": "CH012_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH012",
+        "scene_id": "CH012_SC002"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH012",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH012_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH012",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH012_chapter_xii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH018",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH018_chapter_xviii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH022",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH022_chapter_xxii.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH012",
+        "canonical_id": "dorothy"
+      }
+    ],
+    "evidence_summary": [
+      "Execute a high-stakes magical escalation where the Golden Cap triggers a swarm event. The sequence must transition from character desperation to chaotic terror through lighting shifts and scale changes as winged monkeys descend from above.",
+      "In desperation, the Wicked Witch uses the final charge of the Golden Cap to summon the Winged Monkeys. The monkeys descend upon the group.",
+      "Desperation $\\rightarrow$ Terror.",
+      "Travelers moving through the rugged West, weary and desperate.",
+      "Chaos as winged monkeys descend upon the group.",
+      "The Golden Cap summons a swarm of Winged Monkeys that attack the travelers.",
+      "dorothy | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md] Costume/Silhouette: Unknown. No specific clothing details are provided in this chapter. [source:C:/FilmCreator/projects/wizard_of_oz/02_...",
+      "the_scarecrow | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH003/the_scarecrow.md] Physical Description: A living figure stuffed with straw. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/cha...",
+      "western_rugged_lands | No specific visual descriptors are provided in the current evidence. The environment functions as a primary location for transit. | Unknown. | Unknown. | Unknown."
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "wonder_reveal",
+    "coverage_role": "decision_closeup",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT001",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "major",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = major"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH012_SC002_SH006_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "89f0115a6a68cda29313756c1cdd394238bfdd9c",
+      "created_at_utc": "2026-04-27T20:53:51.631753+00:00",
+      "updated_at_utc": "2026-04-27T20:54:49.817817+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH012_SC002",
+          "version": "1a048cc233af74c40df590f6fed4a703ace88232"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH012_SC002",
+          "version": "bd7d9b1ff50210b143012db036bc3f1d97f0141c"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH012_SC002",
+          "version": "5c1c292a3519e76f317aef864de81b9e007dded0"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:53:51.632251+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "89f0115a6a68cda29313756c1cdd394238bfdd9c"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:49.818816+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "89f0115a6a68cda29313756c1cdd394238bfdd9c"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH007",
+    "scene_id": "CH012_SC002",
+    "chapter_id": "CH012",
+    "shot_order": 7,
+    "previous_shot_id": "SH006",
+    "next_shot_id": "SH008",
+    "primary_subject": "dorothy",
+    "secondary_subjects": [
+      "the_scarecrow"
+    ],
+    "shot_moment_summary": "The Golden Cap is used in desperation",
+    "start_state": "characters looking weary/desperate",
+    "end_state": "magical charge complete",
+    "action_during_shot": "The Golden Cap is used in desperation",
+    "action_continues_from": "magical charge complete",
+    "action_hands_off_to": "BT002",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "dorothy",
+    "visible_secondary_subject_ids": [
+      "the_scarecrow"
+    ],
+    "primary_subject_frame_position": "foreground right within open_plains",
+    "primary_subject_scale_relation": "Swarm scale vs individual character vulnerability.",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "characters looking weary/desperate",
+    "subject_relation_summary": "dorothy plays against the_scarecrow in the same frame",
+    "required_environment_anchor_1": "open_plains",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "Swarm scale vs individual character vulnerability.",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "tight group cluster",
+      "open_plains",
+      "dorothy remains readable within the active playing space.",
+      "Wicked Witch (presence/influence) remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the open_plains.",
+      "Background depth should keep western_rugged_lands legible as the location anchor.",
+      "Subject 1: dorothy remains visually readable against the environment scale.",
+      "Subject 2: Wicked Witch (presence/influence) remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "dorothy focuses toward the active scene action."
+    ],
+    "environment_subzone": "open_plains",
+    "key_visible_environment_features": [
+      "open_plains",
+      "Chapter-local environment alias match for 'The rugged West landscape' (key_overlap=1, label_overlap=3, context_overla..."
+    ],
+    "continuity_from_previous_shot": "magical charge complete",
+    "continuity_to_next_shot": "BT002",
+    "pose_anchor_frame": "characters looking weary/desperate",
+    "pose_end_frame": "magical charge complete",
+    "shot_title": "Scale Proof Wide 7: The Golden Cap is used in desperation",
+    "shot_type": "scale_proof_wide",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in western_rugged_lands featuring dorothy, Wicked Witch (presence/influence), the_scarecrow.",
+    "target_seconds": 10.8,
+    "characters_in_frame": [
+      {
+        "label": "Dorothy",
+        "canonical_id": "dorothy",
+        "display_name": "dorothy",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH012/dorothy.md",
+        "notes": "Direct registry match for 'dorothy'."
+      },
+      {
+        "label": "Wicked Witch (presence/influence)",
+        "canonical_id": null,
+        "display_name": "Wicked Witch (presence/influence)",
+        "status": "review",
+        "entity_kind": "individual",
+        "resolution_score": 16,
+        "source_path": "",
+        "notes": "Low-confidence character match requires review."
+      },
+      {
+        "label": "Scarecrow",
+        "canonical_id": "the_scarecrow",
+        "display_name": "the_scarecrow",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 186,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH003/the_scarecrow.md",
+        "notes": "asset id exactly matches canonical id | query matches alias 'scarecrow'"
+      }
+    ],
+    "environment": {
+      "label": "The rugged West landscape",
+      "canonical_id": "western_rugged_lands",
+      "display_name": "western_rugged_lands",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 78,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH012/western_rugged_lands.md",
+      "notes": "Chapter-local environment alias match for 'The rugged West landscape' (key_overlap=1, label_overlap=3, context_overlap=4)."
+    },
+    "beat_ids": [
+      "BT001"
+    ],
+    "continuity_constraints": [
+      "Lighting must dim/shift as monkeys cloud the sun",
+      "Character positioning during scramble must match previous travel state",
+      "The Golden Cap is used in desperation",
+      "Resolve Wicked Witch (presence/influence) -> Wicked Witch (presence/influence)"
+    ],
+    "prompt_seed": "Scale Proof Wide 7: The Golden Cap is used in desperation. scale_proof_wide. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Rea...",
+    "shot_notes": "The Golden Cap is used in desperation",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH012_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH012",
+        "scene_id": "CH012_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH012",
+        "scene_id": "CH012_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH012",
+        "scene_id": "CH012_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH012",
+        "scene_id": "CH012_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH012",
+        "scene_id": "CH012_SC002"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH012",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH012_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH012",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH012_chapter_xii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH018",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH018_chapter_xviii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH022",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH022_chapter_xxii.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH012",
+        "canonical_id": "dorothy"
+      }
+    ],
+    "evidence_summary": [
+      "Execute a high-stakes magical escalation where the Golden Cap triggers a swarm event. The sequence must transition from character desperation to chaotic terror through lighting shifts and scale changes as winged monkeys descend from above.",
+      "In desperation, the Wicked Witch uses the final charge of the Golden Cap to summon the Winged Monkeys. The monkeys descend upon the group.",
+      "Desperation $\\rightarrow$ Terror.",
+      "Travelers moving through the rugged West, weary and desperate.",
+      "Chaos as winged monkeys descend upon the group.",
+      "The Golden Cap summons a swarm of Winged Monkeys that attack the travelers.",
+      "dorothy | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md] Costume/Silhouette: Unknown. No specific clothing details are provided in this chapter. [source:C:/FilmCreator/projects/wizard_of_oz/02_...",
+      "the_scarecrow | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH003/the_scarecrow.md] Physical Description: A living figure stuffed with straw. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/cha...",
+      "western_rugged_lands | No specific visual descriptors are provided in the current evidence. The environment functions as a primary location for transit. | Unknown. | Unknown. | Unknown."
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "wonder_reveal",
+    "coverage_role": "scale_proof_wide",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT001",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "major",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = major"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH012_SC002_SH007_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "89f0115a6a68cda29313756c1cdd394238bfdd9c",
+      "created_at_utc": "2026-04-27T20:53:51.633250+00:00",
+      "updated_at_utc": "2026-04-27T20:54:49.824328+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH012_SC002",
+          "version": "1a048cc233af74c40df590f6fed4a703ace88232"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH012_SC002",
+          "version": "bd7d9b1ff50210b143012db036bc3f1d97f0141c"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH012_SC002",
+          "version": "5c1c292a3519e76f317aef864de81b9e007dded0"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:53:51.634252+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "89f0115a6a68cda29313756c1cdd394238bfdd9c"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:49.825331+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "89f0115a6a68cda29313756c1cdd394238bfdd9c"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH008",
+    "scene_id": "CH012_SC002",
+    "chapter_id": "CH012",
+    "shot_order": 8,
+    "previous_shot_id": "SH007",
+    "next_shot_id": "SH009",
     "primary_subject": "winged_monkeys",
     "secondary_subjects": [
       "dorothy",
@@ -226,7 +1735,7 @@
     "start_state": "clear sky",
     "end_state": "sky darkened by wings",
     "action_during_shot": "monkeys swarm into frame",
-    "action_continues_from": "sudden magical activation",
+    "action_continues_from": "magical charge complete",
     "action_hands_off_to": "BT003",
     "shot_size": "wide",
     "camera_angle": "low_angle",
@@ -256,29 +1765,33 @@
     "subject_blocking": [
       "aerial descent pattern",
       "aerial descent from high angle",
+      "sky_canopy",
       "winged_monkeys remains readable within the active playing space.",
       "dorothy remains readable within the active playing space."
     ],
     "camera_relative_positions": [
       "Camera anchors the action inside the sky_canopy.",
-      "Background depth should keep western_rugged_lands legible as the location anchor."
+      "Background depth should keep western_rugged_lands legible as the location anchor.",
+      "Subject 1: winged_monkeys remains visually readable against the environment scale.",
+      "Subject 2: dorothy remains visually readable against the environment scale."
     ],
     "gaze_directions": [
       "winged_monkeys focuses toward the active scene action."
     ],
     "environment_subzone": "sky_canopy",
     "key_visible_environment_features": [
-      "sky_canopy"
+      "sky_canopy",
+      "Chapter-local environment alias match for 'The rugged West landscape' (key_overlap=1, label_overlap=3, context_overla..."
     ],
-    "continuity_from_previous_shot": "sudden magical activation",
+    "continuity_from_previous_shot": "magical charge complete",
     "continuity_to_next_shot": "BT003",
     "pose_anchor_frame": "clear sky",
     "pose_end_frame": "sky darkened by wings",
-    "shot_title": "Action 2: The summoning of the swarm",
-    "shot_type": "action",
-    "camera_description": "Active camera with tracking energy and clear spatial orientation.",
-    "composition": "Dynamic composition in western_rugged_lands with clear pursuit vectors and readable movement for winged_monkeys, dorothy, the_scarecrow.",
-    "target_seconds": 5.8,
+    "shot_title": "Task Medium 8: The summoning of the swarm",
+    "shot_type": "task_medium",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in western_rugged_lands featuring winged_monkeys, dorothy, the_scarecrow.",
+    "target_seconds": 6.5,
     "characters_in_frame": [
       {
         "label": "Winged Monkeys",
@@ -326,9 +1839,11 @@
     ],
     "continuity_constraints": [
       "Lighting must dim/shift as monkeys cloud the sun",
-      "Character positioning during scramble must match previous travel state"
+      "Character positioning during scramble must match previous travel state",
+      "The summoning of the swarm",
+      "Resolve Wicked Witch (presence/influence) -> Wicked Witch (presence/influence)"
     ],
-    "prompt_seed": "Action 2: The summoning of the swarm. action. size=wide. angle=low_angle. lens=ultra_wide. motion=tilt. zoom=none. focus=environment_priority. lighting=hard_directional. visibility=on_screen. subject_angle=front. Active camera with tracking energy and clear spatial orientation. Dynamic composition in western_rugged_...",
+    "prompt_seed": "Task Medium 8: The summoning of the swarm. task_medium. size=wide. angle=low_angle. lens=ultra_wide. motion=tilt. zoom=none. focus=environment_priority. lighting=hard_directional. visibility=on_screen. subject_angle=front. Stable readable framing built from the beat requirement. Readable medium composition in wester...",
     "shot_notes": "The summoning of the swarm",
     "evidence_refs": [
       {
@@ -395,16 +1910,32 @@
       "The Golden Cap summons a swarm of Winged Monkeys that attack the travelers.",
       "dorothy | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md] Costume/Silhouette: Unknown. No specific clothing details are provided in this chapter. [source:C:/FilmCreator/projects/wizard_of_oz/02_...",
       "the_scarecrow | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH003/the_scarecrow.md] Physical Description: A living figure stuffed with straw. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/cha...",
-      "winged_monkeys | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH023/winged_monkeys.md] Costume/Silhouette: Monkey-like with wings. [CH012] Chapter XII (query appears in paragraph preview) [CH013] Chapter XIII...",
       "western_rugged_lands | No specific visual descriptors are provided in the current evidence. The environment functions as a primary location for transit. | Unknown. | Unknown. | Unknown."
     ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "wonder_reveal",
+    "coverage_role": "task_medium",
+    "beat_type": "object_or_magic_business",
+    "coverage_importance": "normal",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT002",
+      "beat_type": "object_or_magic_business",
+      "importance": "normal",
+      "confidence": 0.72,
+      "reasons": [
+        "object, task, or magic business",
+        "importance = normal"
+      ]
+    },
     "metadata": {
-      "artifact_id": "CH012_SC002_SH002_SHOT_PACKAGE",
+      "artifact_id": "CH012_SC002_SH008_SHOT_PACKAGE",
       "artifact_type": "shot_package",
       "status": "generated",
-      "source_fingerprint": "de97cbf9b2068e3cf53e001dfa47ef445282d252",
-      "created_at_utc": "2026-04-27T17:26:41.392969+00:00",
-      "updated_at_utc": "2026-04-27T17:26:41.392969+00:00",
+      "source_fingerprint": "89f0115a6a68cda29313756c1cdd394238bfdd9c",
+      "created_at_utc": "2026-04-27T20:53:51.634751+00:00",
+      "updated_at_utc": "2026-04-27T20:54:49.830336+00:00",
       "upstream_dependencies": [
         {
           "dependency_type": "scene_contract",
@@ -419,27 +1950,779 @@
         {
           "dependency_type": "shot_blueprints",
           "dependency_id": "CH012_SC002",
-          "version": "3ca0e8515ea9e28f8f20431cd1a11b5ebdf09902"
+          "version": "5c1c292a3519e76f317aef864de81b9e007dded0"
         }
       ],
       "locked_fields": {},
       "manual_overrides": {},
       "revision_history": [
         {
-          "timestamp_utc": "2026-04-27T17:27:48.770467+00:00",
+          "timestamp_utc": "2026-04-27T20:53:51.635753+00:00",
           "action": "synthesized",
-          "source_fingerprint": "de97cbf9b2068e3cf53e001dfa47ef445282d252"
+          "source_fingerprint": "89f0115a6a68cda29313756c1cdd394238bfdd9c"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:49.831335+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "89f0115a6a68cda29313756c1cdd394238bfdd9c"
         }
       ]
     }
   },
   {
-    "shot_id": "SH003",
+    "shot_id": "SH009",
     "scene_id": "CH012_SC002",
     "chapter_id": "CH012",
-    "shot_order": 3,
-    "previous_shot_id": "SH002",
-    "next_shot_id": "",
+    "shot_order": 9,
+    "previous_shot_id": "SH008",
+    "next_shot_id": "SH010",
+    "primary_subject": "winged_monkeys",
+    "secondary_subjects": [
+      "dorothy",
+      "the_scarecrow"
+    ],
+    "shot_moment_summary": "The summoning of the swarm",
+    "start_state": "magical flash/charge",
+    "end_state": "sky begins to darken",
+    "action_during_shot": "The summoning of the swarm",
+    "action_continues_from": "sky darkened by wings",
+    "action_hands_off_to": "BT003",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "winged_monkeys",
+    "visible_secondary_subject_ids": [
+      "dorothy",
+      "the_scarecrow"
+    ],
+    "primary_subject_frame_position": "foreground right within sky_canopy",
+    "primary_subject_scale_relation": "Swarm scale vs individual character vulnerability.",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "magical flash/charge",
+    "subject_relation_summary": "winged_monkeys plays against dorothy, the_scarecrow in the same frame",
+    "required_environment_anchor_1": "sky_canopy",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "Swarm scale vs individual character vulnerability.",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "aerial descent from high angle",
+      "sky_canopy",
+      "winged_monkeys remains readable within the active playing space.",
+      "dorothy remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the sky_canopy.",
+      "Background depth should keep western_rugged_lands legible as the location anchor.",
+      "Subject 1: winged_monkeys remains visually readable against the environment scale.",
+      "Subject 2: dorothy remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "winged_monkeys focuses toward the active scene action."
+    ],
+    "environment_subzone": "sky_canopy",
+    "key_visible_environment_features": [
+      "sky_canopy",
+      "Chapter-local environment alias match for 'The rugged West landscape' (key_overlap=1, label_overlap=3, context_overla..."
+    ],
+    "continuity_from_previous_shot": "sky darkened by wings",
+    "continuity_to_next_shot": "BT003",
+    "pose_anchor_frame": "magical flash/charge",
+    "pose_end_frame": "sky begins to darken",
+    "shot_title": "Hands Insert 9: The summoning of the swarm",
+    "shot_type": "hands_insert",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in western_rugged_lands featuring winged_monkeys, dorothy, the_scarecrow.",
+    "target_seconds": 5.0,
+    "characters_in_frame": [
+      {
+        "label": "Winged Monkeys",
+        "canonical_id": "winged_monkeys",
+        "display_name": "winged_monkeys",
+        "status": "canonical",
+        "entity_kind": "group",
+        "resolution_score": 130,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH013/winged_monkeys.md",
+        "notes": "Direct registry match for 'winged_monkeys'."
+      },
+      {
+        "label": "Dorothy",
+        "canonical_id": "dorothy",
+        "display_name": "dorothy",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH012/dorothy.md",
+        "notes": "Direct registry match for 'dorothy'."
+      },
+      {
+        "label": "Scarecrow",
+        "canonical_id": "the_scarecrow",
+        "display_name": "the_scarecrow",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 186,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH003/the_scarecrow.md",
+        "notes": "asset id exactly matches canonical id | query matches alias 'scarecrow'"
+      }
+    ],
+    "environment": {
+      "label": "The rugged West landscape",
+      "canonical_id": "western_rugged_lands",
+      "display_name": "western_rugged_lands",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 78,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH012/western_rugged_lands.md",
+      "notes": "Chapter-local environment alias match for 'The rugged West landscape' (key_overlap=1, label_overlap=3, context_overlap=4)."
+    },
+    "beat_ids": [
+      "BT002"
+    ],
+    "continuity_constraints": [
+      "Lighting must dim/shift as monkeys cloud the sun",
+      "Character positioning during scramble must match previous travel state",
+      "The summoning of the swarm",
+      "Resolve Wicked Witch (presence/influence) -> Wicked Witch (presence/influence)"
+    ],
+    "prompt_seed": "Hands Insert 9: The summoning of the swarm. hands_insert. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Readable medium compos...",
+    "shot_notes": "The summoning of the swarm",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH012_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH012",
+        "scene_id": "CH012_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH012",
+        "scene_id": "CH012_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH012",
+        "scene_id": "CH012_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH012",
+        "scene_id": "CH012_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH012",
+        "scene_id": "CH012_SC002"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH012",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH012_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH012",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH012_chapter_xii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH018",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH018_chapter_xviii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH022",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH022_chapter_xxii.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH012",
+        "canonical_id": "dorothy"
+      }
+    ],
+    "evidence_summary": [
+      "Execute a high-stakes magical escalation where the Golden Cap triggers a swarm event. The sequence must transition from character desperation to chaotic terror through lighting shifts and scale changes as winged monkeys descend from above.",
+      "In desperation, the Wicked Witch uses the final charge of the Golden Cap to summon the Winged Monkeys. The monkeys descend upon the group.",
+      "Desperation $\\rightarrow$ Terror.",
+      "Travelers moving through the rugged West, weary and desperate.",
+      "Chaos as winged monkeys descend upon the group.",
+      "The Golden Cap summons a swarm of Winged Monkeys that attack the travelers.",
+      "dorothy | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md] Costume/Silhouette: Unknown. No specific clothing details are provided in this chapter. [source:C:/FilmCreator/projects/wizard_of_oz/02_...",
+      "the_scarecrow | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH003/the_scarecrow.md] Physical Description: A living figure stuffed with straw. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/cha...",
+      "western_rugged_lands | No specific visual descriptors are provided in the current evidence. The environment functions as a primary location for transit. | Unknown. | Unknown. | Unknown."
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "wonder_reveal",
+    "coverage_role": "hands_insert",
+    "beat_type": "object_or_magic_business",
+    "coverage_importance": "normal",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT002",
+      "beat_type": "object_or_magic_business",
+      "importance": "normal",
+      "confidence": 0.72,
+      "reasons": [
+        "object, task, or magic business",
+        "importance = normal"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH012_SC002_SH009_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "89f0115a6a68cda29313756c1cdd394238bfdd9c",
+      "created_at_utc": "2026-04-27T20:53:51.636762+00:00",
+      "updated_at_utc": "2026-04-27T20:54:49.836840+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH012_SC002",
+          "version": "1a048cc233af74c40df590f6fed4a703ace88232"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH012_SC002",
+          "version": "bd7d9b1ff50210b143012db036bc3f1d97f0141c"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH012_SC002",
+          "version": "5c1c292a3519e76f317aef864de81b9e007dded0"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:53:51.637766+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "89f0115a6a68cda29313756c1cdd394238bfdd9c"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:49.837843+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "89f0115a6a68cda29313756c1cdd394238bfdd9c"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH010",
+    "scene_id": "CH012_SC002",
+    "chapter_id": "CH012",
+    "shot_order": 10,
+    "previous_shot_id": "SH009",
+    "next_shot_id": "SH011",
+    "primary_subject": "winged_monkeys",
+    "secondary_subjects": [
+      "dorothy",
+      "the_scarecrow"
+    ],
+    "shot_moment_summary": "The summoning of the swarm",
+    "start_state": "magical flash/charge",
+    "end_state": "sky begins to darken",
+    "action_during_shot": "The summoning of the swarm",
+    "action_continues_from": "sky begins to darken",
+    "action_hands_off_to": "BT003",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "winged_monkeys",
+    "visible_secondary_subject_ids": [
+      "dorothy",
+      "the_scarecrow"
+    ],
+    "primary_subject_frame_position": "foreground right within sky_canopy",
+    "primary_subject_scale_relation": "Swarm scale vs individual character vulnerability.",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "magical flash/charge",
+    "subject_relation_summary": "winged_monkeys plays against dorothy, the_scarecrow in the same frame",
+    "required_environment_anchor_1": "sky_canopy",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "Swarm scale vs individual character vulnerability.",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "aerial descent from high angle",
+      "sky_canopy",
+      "winged_monkeys remains readable within the active playing space.",
+      "dorothy remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the sky_canopy.",
+      "Background depth should keep western_rugged_lands legible as the location anchor.",
+      "Subject 1: winged_monkeys remains visually readable against the environment scale.",
+      "Subject 2: dorothy remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "winged_monkeys focuses toward the active scene action."
+    ],
+    "environment_subzone": "sky_canopy",
+    "key_visible_environment_features": [
+      "sky_canopy",
+      "Chapter-local environment alias match for 'The rugged West landscape' (key_overlap=1, label_overlap=3, context_overla..."
+    ],
+    "continuity_from_previous_shot": "sky begins to darken",
+    "continuity_to_next_shot": "BT003",
+    "pose_anchor_frame": "magical flash/charge",
+    "pose_end_frame": "sky begins to darken",
+    "shot_title": "Object Insert 10: The summoning of the swarm",
+    "shot_type": "object_insert",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in western_rugged_lands featuring winged_monkeys, dorothy, the_scarecrow.",
+    "target_seconds": 5.0,
+    "characters_in_frame": [
+      {
+        "label": "Winged Monkeys",
+        "canonical_id": "winged_monkeys",
+        "display_name": "winged_monkeys",
+        "status": "canonical",
+        "entity_kind": "group",
+        "resolution_score": 130,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH013/winged_monkeys.md",
+        "notes": "Direct registry match for 'winged_monkeys'."
+      },
+      {
+        "label": "Dorothy",
+        "canonical_id": "dorothy",
+        "display_name": "dorothy",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH012/dorothy.md",
+        "notes": "Direct registry match for 'dorothy'."
+      },
+      {
+        "label": "Scarecrow",
+        "canonical_id": "the_scarecrow",
+        "display_name": "the_scarecrow",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 186,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH003/the_scarecrow.md",
+        "notes": "asset id exactly matches canonical id | query matches alias 'scarecrow'"
+      }
+    ],
+    "environment": {
+      "label": "The rugged West landscape",
+      "canonical_id": "western_rugged_lands",
+      "display_name": "western_rugged_lands",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 78,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH012/western_rugged_lands.md",
+      "notes": "Chapter-local environment alias match for 'The rugged West landscape' (key_overlap=1, label_overlap=3, context_overlap=4)."
+    },
+    "beat_ids": [
+      "BT002"
+    ],
+    "continuity_constraints": [
+      "Lighting must dim/shift as monkeys cloud the sun",
+      "Character positioning during scramble must match previous travel state",
+      "The summoning of the swarm",
+      "Resolve Wicked Witch (presence/influence) -> Wicked Witch (presence/influence)"
+    ],
+    "prompt_seed": "Object Insert 10: The summoning of the swarm. object_insert. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Readable medium com...",
+    "shot_notes": "The summoning of the swarm",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH012_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH012",
+        "scene_id": "CH012_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH012",
+        "scene_id": "CH012_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH012",
+        "scene_id": "CH012_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH012",
+        "scene_id": "CH012_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH012",
+        "scene_id": "CH012_SC002"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH012",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH012_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH012",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH012_chapter_xii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH018",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH018_chapter_xviii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH022",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH022_chapter_xxii.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH012",
+        "canonical_id": "dorothy"
+      }
+    ],
+    "evidence_summary": [
+      "Execute a high-stakes magical escalation where the Golden Cap triggers a swarm event. The sequence must transition from character desperation to chaotic terror through lighting shifts and scale changes as winged monkeys descend from above.",
+      "In desperation, the Wicked Witch uses the final charge of the Golden Cap to summon the Winged Monkeys. The monkeys descend upon the group.",
+      "Desperation $\\rightarrow$ Terror.",
+      "Travelers moving through the rugged West, weary and desperate.",
+      "Chaos as winged monkeys descend upon the group.",
+      "The Golden Cap summons a swarm of Winged Monkeys that attack the travelers.",
+      "dorothy | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md] Costume/Silhouette: Unknown. No specific clothing details are provided in this chapter. [source:C:/FilmCreator/projects/wizard_of_oz/02_...",
+      "the_scarecrow | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH003/the_scarecrow.md] Physical Description: A living figure stuffed with straw. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/cha...",
+      "western_rugged_lands | No specific visual descriptors are provided in the current evidence. The environment functions as a primary location for transit. | Unknown. | Unknown. | Unknown."
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "wonder_reveal",
+    "coverage_role": "object_insert",
+    "beat_type": "object_or_magic_business",
+    "coverage_importance": "normal",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT002",
+      "beat_type": "object_or_magic_business",
+      "importance": "normal",
+      "confidence": 0.72,
+      "reasons": [
+        "object, task, or magic business",
+        "importance = normal"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH012_SC002_SH010_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "89f0115a6a68cda29313756c1cdd394238bfdd9c",
+      "created_at_utc": "2026-04-27T20:53:51.638265+00:00",
+      "updated_at_utc": "2026-04-27T20:54:49.843352+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH012_SC002",
+          "version": "1a048cc233af74c40df590f6fed4a703ace88232"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH012_SC002",
+          "version": "bd7d9b1ff50210b143012db036bc3f1d97f0141c"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH012_SC002",
+          "version": "5c1c292a3519e76f317aef864de81b9e007dded0"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:53:51.639268+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "89f0115a6a68cda29313756c1cdd394238bfdd9c"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:49.844352+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "89f0115a6a68cda29313756c1cdd394238bfdd9c"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH011",
+    "scene_id": "CH012_SC002",
+    "chapter_id": "CH012",
+    "shot_order": 11,
+    "previous_shot_id": "SH010",
+    "next_shot_id": "SH012",
+    "primary_subject": "winged_monkeys",
+    "secondary_subjects": [
+      "dorothy",
+      "the_scarecrow"
+    ],
+    "shot_moment_summary": "The summoning of the swarm",
+    "start_state": "magical flash/charge",
+    "end_state": "sky begins to darken",
+    "action_during_shot": "The summoning of the swarm",
+    "action_continues_from": "sky begins to darken",
+    "action_hands_off_to": "BT003",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "winged_monkeys",
+    "visible_secondary_subject_ids": [
+      "dorothy",
+      "the_scarecrow"
+    ],
+    "primary_subject_frame_position": "foreground right within sky_canopy",
+    "primary_subject_scale_relation": "Swarm scale vs individual character vulnerability.",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "magical flash/charge",
+    "subject_relation_summary": "winged_monkeys plays against dorothy, the_scarecrow in the same frame",
+    "required_environment_anchor_1": "sky_canopy",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "Swarm scale vs individual character vulnerability.",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "aerial descent from high angle",
+      "sky_canopy",
+      "winged_monkeys remains readable within the active playing space.",
+      "dorothy remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the sky_canopy.",
+      "Background depth should keep western_rugged_lands legible as the location anchor.",
+      "Subject 1: winged_monkeys remains visually readable against the environment scale.",
+      "Subject 2: dorothy remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "winged_monkeys focuses toward the active scene action."
+    ],
+    "environment_subzone": "sky_canopy",
+    "key_visible_environment_features": [
+      "sky_canopy",
+      "Chapter-local environment alias match for 'The rugged West landscape' (key_overlap=1, label_overlap=3, context_overla..."
+    ],
+    "continuity_from_previous_shot": "sky begins to darken",
+    "continuity_to_next_shot": "BT003",
+    "pose_anchor_frame": "magical flash/charge",
+    "pose_end_frame": "sky begins to darken",
+    "shot_title": "Result Medium 11: The summoning of the swarm",
+    "shot_type": "result_medium",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in western_rugged_lands featuring winged_monkeys, dorothy, the_scarecrow.",
+    "target_seconds": 6.5,
+    "characters_in_frame": [
+      {
+        "label": "Winged Monkeys",
+        "canonical_id": "winged_monkeys",
+        "display_name": "winged_monkeys",
+        "status": "canonical",
+        "entity_kind": "group",
+        "resolution_score": 130,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH013/winged_monkeys.md",
+        "notes": "Direct registry match for 'winged_monkeys'."
+      },
+      {
+        "label": "Dorothy",
+        "canonical_id": "dorothy",
+        "display_name": "dorothy",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH012/dorothy.md",
+        "notes": "Direct registry match for 'dorothy'."
+      },
+      {
+        "label": "Scarecrow",
+        "canonical_id": "the_scarecrow",
+        "display_name": "the_scarecrow",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 186,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH003/the_scarecrow.md",
+        "notes": "asset id exactly matches canonical id | query matches alias 'scarecrow'"
+      }
+    ],
+    "environment": {
+      "label": "The rugged West landscape",
+      "canonical_id": "western_rugged_lands",
+      "display_name": "western_rugged_lands",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 78,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH012/western_rugged_lands.md",
+      "notes": "Chapter-local environment alias match for 'The rugged West landscape' (key_overlap=1, label_overlap=3, context_overlap=4)."
+    },
+    "beat_ids": [
+      "BT002"
+    ],
+    "continuity_constraints": [
+      "Lighting must dim/shift as monkeys cloud the sun",
+      "Character positioning during scramble must match previous travel state",
+      "The summoning of the swarm",
+      "Resolve Wicked Witch (presence/influence) -> Wicked Witch (presence/influence)"
+    ],
+    "prompt_seed": "Result Medium 11: The summoning of the swarm. result_medium. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Readable medium com...",
+    "shot_notes": "The summoning of the swarm",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH012_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH012",
+        "scene_id": "CH012_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH012",
+        "scene_id": "CH012_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH012",
+        "scene_id": "CH012_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH012",
+        "scene_id": "CH012_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH012",
+        "scene_id": "CH012_SC002"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH012",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH012_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH012",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH012_chapter_xii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH018",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH018_chapter_xviii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH022",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH022_chapter_xxii.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH012",
+        "canonical_id": "dorothy"
+      }
+    ],
+    "evidence_summary": [
+      "Execute a high-stakes magical escalation where the Golden Cap triggers a swarm event. The sequence must transition from character desperation to chaotic terror through lighting shifts and scale changes as winged monkeys descend from above.",
+      "In desperation, the Wicked Witch uses the final charge of the Golden Cap to summon the Winged Monkeys. The monkeys descend upon the group.",
+      "Desperation $\\rightarrow$ Terror.",
+      "Travelers moving through the rugged West, weary and desperate.",
+      "Chaos as winged monkeys descend upon the group.",
+      "The Golden Cap summons a swarm of Winged Monkeys that attack the travelers.",
+      "dorothy | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md] Costume/Silhouette: Unknown. No specific clothing details are provided in this chapter. [source:C:/FilmCreator/projects/wizard_of_oz/02_...",
+      "the_scarecrow | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH003/the_scarecrow.md] Physical Description: A living figure stuffed with straw. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/cha...",
+      "western_rugged_lands | No specific visual descriptors are provided in the current evidence. The environment functions as a primary location for transit. | Unknown. | Unknown. | Unknown."
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "wonder_reveal",
+    "coverage_role": "result_medium",
+    "beat_type": "object_or_magic_business",
+    "coverage_importance": "normal",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT002",
+      "beat_type": "object_or_magic_business",
+      "importance": "normal",
+      "confidence": 0.72,
+      "reasons": [
+        "object, task, or magic business",
+        "importance = normal"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH012_SC002_SH011_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "89f0115a6a68cda29313756c1cdd394238bfdd9c",
+      "created_at_utc": "2026-04-27T20:53:51.640773+00:00",
+      "updated_at_utc": "2026-04-27T20:54:49.849353+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH012_SC002",
+          "version": "1a048cc233af74c40df590f6fed4a703ace88232"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH012_SC002",
+          "version": "bd7d9b1ff50210b143012db036bc3f1d97f0141c"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH012_SC002",
+          "version": "5c1c292a3519e76f317aef864de81b9e007dded0"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:53:51.641272+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "89f0115a6a68cda29313756c1cdd394238bfdd9c"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:49.850355+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "89f0115a6a68cda29313756c1cdd394238bfdd9c"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH012",
+    "scene_id": "CH012_SC002",
+    "chapter_id": "CH012",
+    "shot_order": 12,
+    "previous_shot_id": "SH011",
+    "next_shot_id": "SH013",
     "primary_subject": "winged_monkeys",
     "secondary_subjects": [
       "dorothy",
@@ -449,7 +2732,7 @@
     "start_state": "descending swarm",
     "end_state": "scrambling group",
     "action_during_shot": "monkeys dive at characters",
-    "action_continues_from": "sky darkened by wings",
+    "action_continues_from": "sky begins to darken",
     "action_hands_off_to": "end_of_scene",
     "shot_size": "medium_full",
     "camera_angle": "low_angle",
@@ -474,34 +2757,38 @@
     "required_environment_anchor_1": "open_plains",
     "required_subject_anchor_1": "",
     "required_celestial_anchor_1": "",
-    "required_scale_proof_detail": "rapid movement vs static ground",
+    "required_scale_proof_detail": "Swarm scale vs individual character vulnerability.",
     "camera_package_description": "medium-full, low angle, wide lens, handheld, rack focus, high contrast ceremonial",
     "subject_blocking": [
       "chaotic scramble",
       "scattered scramble",
+      "open_plains",
       "winged_monkeys remains readable within the active playing space.",
       "dorothy remains readable within the active playing space."
     ],
     "camera_relative_positions": [
       "Camera anchors the action inside the open_plains.",
-      "Background depth should keep western_rugged_lands legible as the location anchor."
+      "Background depth should keep western_rugged_lands legible as the location anchor.",
+      "Subject 1: winged_monkeys remains visually readable against the environment scale.",
+      "Subject 2: dorothy remains visually readable against the environment scale."
     ],
     "gaze_directions": [
       "winged_monkeys focuses toward the active scene action."
     ],
     "environment_subzone": "open_plains",
     "key_visible_environment_features": [
-      "open_plains"
+      "open_plains",
+      "Chapter-local environment alias match for 'The rugged West landscape' (key_overlap=1, label_overlap=3, context_overla..."
     ],
-    "continuity_from_previous_shot": "sky darkened by wings",
+    "continuity_from_previous_shot": "sky begins to darken",
     "continuity_to_next_shot": "end_of_scene",
     "pose_anchor_frame": "descending swarm",
     "pose_end_frame": "scrambling group",
-    "shot_title": "Action 3: The attack and scramble",
-    "shot_type": "action",
-    "camera_description": "Active camera with tracking energy and clear spatial orientation.",
-    "composition": "Dynamic composition in western_rugged_lands with clear pursuit vectors and readable movement for winged_monkeys, dorothy, cowardly_lion.",
-    "target_seconds": 5.6,
+    "shot_title": "Geography Wide 12: The attack and scramble",
+    "shot_type": "geography_wide",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in western_rugged_lands featuring winged_monkeys, dorothy, cowardly_lion.",
+    "target_seconds": 10.8,
     "characters_in_frame": [
       {
         "label": "Winged Monkeys",
@@ -549,9 +2836,11 @@
     ],
     "continuity_constraints": [
       "Lighting must dim/shift as monkeys cloud the sun",
-      "Character positioning during scramble must match previous travel state"
+      "Character positioning during scramble must match previous travel state",
+      "The attack and scramble",
+      "Resolve Wicked Witch (presence/influence) -> Wicked Witch (presence/influence)"
     ],
-    "prompt_seed": "Action 3: The attack and scramble. action. size=medium_full. angle=low_angle. lens=wide. motion=handheld. zoom=none. focus=rack_focus. lighting=high_contrast_ceremonial. visibility=on_screen. subject_angle=front_three_quarter_right. Active camera with tracking energy and clear spatial orientation. Dynamic compositio...",
+    "prompt_seed": "Geography Wide 12: The attack and scramble. geography_wide. size=medium_full. angle=low_angle. lens=wide. motion=handheld. zoom=none. focus=rack_focus. lighting=high_contrast_ceremonial. visibility=on_screen. subject_angle=front_three_quarter_right. Stable readable framing built from the beat requirement. Readable m...",
     "shot_notes": "The attack and scramble",
     "evidence_refs": [
       {
@@ -618,16 +2907,32 @@
       "The Golden Cap summons a swarm of Winged Monkeys that attack the travelers.",
       "dorothy | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md] Costume/Silhouette: Unknown. No specific clothing details are provided in this chapter. [source:C:/FilmCreator/projects/wizard_of_oz/02_...",
       "the_scarecrow | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH003/the_scarecrow.md] Physical Description: A living figure stuffed with straw. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/cha...",
-      "winged_monkeys | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH023/winged_monkeys.md] Costume/Silhouette: Monkey-like with wings. [CH012] Chapter XII (query appears in paragraph preview) [CH013] Chapter XIII...",
       "western_rugged_lands | No specific visual descriptors are provided in the current evidence. The environment functions as a primary location for transit. | Unknown. | Unknown. | Unknown."
     ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "wonder_reveal",
+    "coverage_role": "geography_wide",
+    "beat_type": "action_conflict",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT003",
+      "beat_type": "action_conflict",
+      "importance": "major",
+      "confidence": 0.78,
+      "reasons": [
+        "conflict/action verb",
+        "importance = major"
+      ]
+    },
     "metadata": {
-      "artifact_id": "CH012_SC002_SH003_SHOT_PACKAGE",
+      "artifact_id": "CH012_SC002_SH012_SHOT_PACKAGE",
       "artifact_type": "shot_package",
       "status": "generated",
-      "source_fingerprint": "de97cbf9b2068e3cf53e001dfa47ef445282d252",
-      "created_at_utc": "2026-04-27T17:27:48.772465+00:00",
-      "updated_at_utc": "2026-04-27T17:27:48.772465+00:00",
+      "source_fingerprint": "89f0115a6a68cda29313756c1cdd394238bfdd9c",
+      "created_at_utc": "2026-04-27T20:53:51.642271+00:00",
+      "updated_at_utc": "2026-04-27T20:54:49.855365+00:00",
       "upstream_dependencies": [
         {
           "dependency_type": "scene_contract",
@@ -642,16 +2947,1503 @@
         {
           "dependency_type": "shot_blueprints",
           "dependency_id": "CH012_SC002",
-          "version": "3ca0e8515ea9e28f8f20431cd1a11b5ebdf09902"
+          "version": "5c1c292a3519e76f317aef864de81b9e007dded0"
         }
       ],
       "locked_fields": {},
       "manual_overrides": {},
       "revision_history": [
         {
-          "timestamp_utc": "2026-04-27T17:28:56.049664+00:00",
+          "timestamp_utc": "2026-04-27T20:53:51.643272+00:00",
           "action": "synthesized",
-          "source_fingerprint": "de97cbf9b2068e3cf53e001dfa47ef445282d252"
+          "source_fingerprint": "89f0115a6a68cda29313756c1cdd394238bfdd9c"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:49.855365+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "89f0115a6a68cda29313756c1cdd394238bfdd9c"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH013",
+    "scene_id": "CH012_SC002",
+    "chapter_id": "CH012",
+    "shot_order": 13,
+    "previous_shot_id": "SH012",
+    "next_shot_id": "SH014",
+    "primary_subject": "winged_monkeys",
+    "secondary_subjects": [
+      "dorothy",
+      "the_scarecrow"
+    ],
+    "shot_moment_summary": "The attack and scramble",
+    "start_state": "monkeys hitting ground level",
+    "end_state": "group in chaotic retreat",
+    "action_during_shot": "The attack and scramble",
+    "action_continues_from": "scrambling group",
+    "action_hands_off_to": "end_of_scene",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "winged_monkeys",
+    "visible_secondary_subject_ids": [
+      "dorothy",
+      "the_scarecrow"
+    ],
+    "primary_subject_frame_position": "foreground right within open_plains",
+    "primary_subject_scale_relation": "Swarm scale vs individual character vulnerability.",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "monkeys hitting ground level",
+    "subject_relation_summary": "winged_monkeys plays against dorothy, the_scarecrow in the same frame",
+    "required_environment_anchor_1": "open_plains",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "Swarm scale vs individual character vulnerability.",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "scattered scramble",
+      "open_plains",
+      "winged_monkeys remains readable within the active playing space.",
+      "dorothy remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the open_plains.",
+      "Background depth should keep western_rugged_lands legible as the location anchor.",
+      "Subject 1: winged_monkeys remains visually readable against the environment scale.",
+      "Subject 2: dorothy remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "winged_monkeys focuses toward the active scene action."
+    ],
+    "environment_subzone": "open_plains",
+    "key_visible_environment_features": [
+      "open_plains",
+      "Chapter-local environment alias match for 'The rugged West landscape' (key_overlap=1, label_overlap=3, context_overla..."
+    ],
+    "continuity_from_previous_shot": "scrambling group",
+    "continuity_to_next_shot": "end_of_scene",
+    "pose_anchor_frame": "monkeys hitting ground level",
+    "pose_end_frame": "group in chaotic retreat",
+    "shot_title": "Threat Reveal 13: The attack and scramble",
+    "shot_type": "threat_reveal",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in western_rugged_lands featuring winged_monkeys, dorothy, the_scarecrow.",
+    "target_seconds": 7.0,
+    "characters_in_frame": [
+      {
+        "label": "Winged Monkeys",
+        "canonical_id": "winged_monkeys",
+        "display_name": "winged_monkeys",
+        "status": "canonical",
+        "entity_kind": "group",
+        "resolution_score": 130,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH013/winged_monkeys.md",
+        "notes": "Direct registry match for 'winged_monkeys'."
+      },
+      {
+        "label": "Dorothy",
+        "canonical_id": "dorothy",
+        "display_name": "dorothy",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH012/dorothy.md",
+        "notes": "Direct registry match for 'dorothy'."
+      },
+      {
+        "label": "Scarecrow",
+        "canonical_id": "the_scarecrow",
+        "display_name": "the_scarecrow",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 186,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH003/the_scarecrow.md",
+        "notes": "asset id exactly matches canonical id | query matches alias 'scarecrow'"
+      }
+    ],
+    "environment": {
+      "label": "The rugged West landscape",
+      "canonical_id": "western_rugged_lands",
+      "display_name": "western_rugged_lands",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 78,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH012/western_rugged_lands.md",
+      "notes": "Chapter-local environment alias match for 'The rugged West landscape' (key_overlap=1, label_overlap=3, context_overlap=4)."
+    },
+    "beat_ids": [
+      "BT003"
+    ],
+    "continuity_constraints": [
+      "Lighting must dim/shift as monkeys cloud the sun",
+      "Character positioning during scramble must match previous travel state",
+      "The attack and scramble",
+      "Resolve Wicked Witch (presence/influence) -> Wicked Witch (presence/influence)"
+    ],
+    "prompt_seed": "Threat Reveal 13: The attack and scramble. threat_reveal. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Readable medium compos...",
+    "shot_notes": "The attack and scramble",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH012_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH012",
+        "scene_id": "CH012_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH012",
+        "scene_id": "CH012_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH012",
+        "scene_id": "CH012_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH012",
+        "scene_id": "CH012_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH012",
+        "scene_id": "CH012_SC002"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH012",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH012_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH012",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH012_chapter_xii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH018",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH018_chapter_xviii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH022",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH022_chapter_xxii.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH012",
+        "canonical_id": "dorothy"
+      }
+    ],
+    "evidence_summary": [
+      "Execute a high-stakes magical escalation where the Golden Cap triggers a swarm event. The sequence must transition from character desperation to chaotic terror through lighting shifts and scale changes as winged monkeys descend from above.",
+      "In desperation, the Wicked Witch uses the final charge of the Golden Cap to summon the Winged Monkeys. The monkeys descend upon the group.",
+      "Desperation $\\rightarrow$ Terror.",
+      "Travelers moving through the rugged West, weary and desperate.",
+      "Chaos as winged monkeys descend upon the group.",
+      "The Golden Cap summons a swarm of Winged Monkeys that attack the travelers.",
+      "dorothy | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md] Costume/Silhouette: Unknown. No specific clothing details are provided in this chapter. [source:C:/FilmCreator/projects/wizard_of_oz/02_...",
+      "the_scarecrow | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH003/the_scarecrow.md] Physical Description: A living figure stuffed with straw. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/cha...",
+      "western_rugged_lands | No specific visual descriptors are provided in the current evidence. The environment functions as a primary location for transit. | Unknown. | Unknown. | Unknown."
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "wonder_reveal",
+    "coverage_role": "threat_reveal",
+    "beat_type": "action_conflict",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT003",
+      "beat_type": "action_conflict",
+      "importance": "major",
+      "confidence": 0.78,
+      "reasons": [
+        "conflict/action verb",
+        "importance = major"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH012_SC002_SH013_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "89f0115a6a68cda29313756c1cdd394238bfdd9c",
+      "created_at_utc": "2026-04-27T20:53:51.644275+00:00",
+      "updated_at_utc": "2026-04-27T20:54:49.861405+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH012_SC002",
+          "version": "1a048cc233af74c40df590f6fed4a703ace88232"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH012_SC002",
+          "version": "bd7d9b1ff50210b143012db036bc3f1d97f0141c"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH012_SC002",
+          "version": "5c1c292a3519e76f317aef864de81b9e007dded0"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:53:51.644779+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "89f0115a6a68cda29313756c1cdd394238bfdd9c"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:49.861904+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "89f0115a6a68cda29313756c1cdd394238bfdd9c"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH014",
+    "scene_id": "CH012_SC002",
+    "chapter_id": "CH012",
+    "shot_order": 14,
+    "previous_shot_id": "SH013",
+    "next_shot_id": "SH015",
+    "primary_subject": "winged_monkeys",
+    "secondary_subjects": [
+      "dorothy",
+      "the_scarecrow"
+    ],
+    "shot_moment_summary": "The attack and scramble",
+    "start_state": "monkeys hitting ground level",
+    "end_state": "group in chaotic retreat",
+    "action_during_shot": "The attack and scramble",
+    "action_continues_from": "group in chaotic retreat",
+    "action_hands_off_to": "end_of_scene",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "winged_monkeys",
+    "visible_secondary_subject_ids": [
+      "dorothy",
+      "the_scarecrow"
+    ],
+    "primary_subject_frame_position": "foreground right within open_plains",
+    "primary_subject_scale_relation": "Swarm scale vs individual character vulnerability.",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "monkeys hitting ground level",
+    "subject_relation_summary": "winged_monkeys plays against dorothy, the_scarecrow in the same frame",
+    "required_environment_anchor_1": "open_plains",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "Swarm scale vs individual character vulnerability.",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "scattered scramble",
+      "open_plains",
+      "winged_monkeys remains readable within the active playing space.",
+      "dorothy remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the open_plains.",
+      "Background depth should keep western_rugged_lands legible as the location anchor.",
+      "Subject 1: winged_monkeys remains visually readable against the environment scale.",
+      "Subject 2: dorothy remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "winged_monkeys focuses toward the active scene action."
+    ],
+    "environment_subzone": "open_plains",
+    "key_visible_environment_features": [
+      "open_plains",
+      "Chapter-local environment alias match for 'The rugged West landscape' (key_overlap=1, label_overlap=3, context_overla..."
+    ],
+    "continuity_from_previous_shot": "group in chaotic retreat",
+    "continuity_to_next_shot": "end_of_scene",
+    "pose_anchor_frame": "monkeys hitting ground level",
+    "pose_end_frame": "group in chaotic retreat",
+    "shot_title": "Action Medium 14: The attack and scramble",
+    "shot_type": "action_medium",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in western_rugged_lands featuring winged_monkeys, dorothy, the_scarecrow.",
+    "target_seconds": 7.0,
+    "characters_in_frame": [
+      {
+        "label": "Winged Monkeys",
+        "canonical_id": "winged_monkeys",
+        "display_name": "winged_monkeys",
+        "status": "canonical",
+        "entity_kind": "group",
+        "resolution_score": 130,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH013/winged_monkeys.md",
+        "notes": "Direct registry match for 'winged_monkeys'."
+      },
+      {
+        "label": "Dorothy",
+        "canonical_id": "dorothy",
+        "display_name": "dorothy",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH012/dorothy.md",
+        "notes": "Direct registry match for 'dorothy'."
+      },
+      {
+        "label": "Scarecrow",
+        "canonical_id": "the_scarecrow",
+        "display_name": "the_scarecrow",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 186,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH003/the_scarecrow.md",
+        "notes": "asset id exactly matches canonical id | query matches alias 'scarecrow'"
+      }
+    ],
+    "environment": {
+      "label": "The rugged West landscape",
+      "canonical_id": "western_rugged_lands",
+      "display_name": "western_rugged_lands",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 78,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH012/western_rugged_lands.md",
+      "notes": "Chapter-local environment alias match for 'The rugged West landscape' (key_overlap=1, label_overlap=3, context_overlap=4)."
+    },
+    "beat_ids": [
+      "BT003"
+    ],
+    "continuity_constraints": [
+      "Lighting must dim/shift as monkeys cloud the sun",
+      "Character positioning during scramble must match previous travel state",
+      "The attack and scramble",
+      "Resolve Wicked Witch (presence/influence) -> Wicked Witch (presence/influence)"
+    ],
+    "prompt_seed": "Action Medium 14: The attack and scramble. action_medium. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Readable medium compos...",
+    "shot_notes": "The attack and scramble",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH012_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH012",
+        "scene_id": "CH012_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH012",
+        "scene_id": "CH012_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH012",
+        "scene_id": "CH012_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH012",
+        "scene_id": "CH012_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH012",
+        "scene_id": "CH012_SC002"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH012",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH012_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH012",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH012_chapter_xii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH018",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH018_chapter_xviii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH022",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH022_chapter_xxii.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH012",
+        "canonical_id": "dorothy"
+      }
+    ],
+    "evidence_summary": [
+      "Execute a high-stakes magical escalation where the Golden Cap triggers a swarm event. The sequence must transition from character desperation to chaotic terror through lighting shifts and scale changes as winged monkeys descend from above.",
+      "In desperation, the Wicked Witch uses the final charge of the Golden Cap to summon the Winged Monkeys. The monkeys descend upon the group.",
+      "Desperation $\\rightarrow$ Terror.",
+      "Travelers moving through the rugged West, weary and desperate.",
+      "Chaos as winged monkeys descend upon the group.",
+      "The Golden Cap summons a swarm of Winged Monkeys that attack the travelers.",
+      "dorothy | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md] Costume/Silhouette: Unknown. No specific clothing details are provided in this chapter. [source:C:/FilmCreator/projects/wizard_of_oz/02_...",
+      "the_scarecrow | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH003/the_scarecrow.md] Physical Description: A living figure stuffed with straw. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/cha...",
+      "western_rugged_lands | No specific visual descriptors are provided in the current evidence. The environment functions as a primary location for transit. | Unknown. | Unknown. | Unknown."
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "wonder_reveal",
+    "coverage_role": "defender_action",
+    "beat_type": "action_conflict",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT003",
+      "beat_type": "action_conflict",
+      "importance": "major",
+      "confidence": 0.78,
+      "reasons": [
+        "conflict/action verb",
+        "importance = major"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH012_SC002_SH014_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "89f0115a6a68cda29313756c1cdd394238bfdd9c",
+      "created_at_utc": "2026-04-27T20:53:51.645778+00:00",
+      "updated_at_utc": "2026-04-27T20:54:49.867403+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH012_SC002",
+          "version": "1a048cc233af74c40df590f6fed4a703ace88232"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH012_SC002",
+          "version": "bd7d9b1ff50210b143012db036bc3f1d97f0141c"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH012_SC002",
+          "version": "5c1c292a3519e76f317aef864de81b9e007dded0"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:53:51.646278+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "89f0115a6a68cda29313756c1cdd394238bfdd9c"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:49.868403+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "89f0115a6a68cda29313756c1cdd394238bfdd9c"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH015",
+    "scene_id": "CH012_SC002",
+    "chapter_id": "CH012",
+    "shot_order": 15,
+    "previous_shot_id": "SH014",
+    "next_shot_id": "SH016",
+    "primary_subject": "winged_monkeys",
+    "secondary_subjects": [
+      "dorothy",
+      "the_scarecrow"
+    ],
+    "shot_moment_summary": "The attack and scramble",
+    "start_state": "monkeys hitting ground level",
+    "end_state": "group in chaotic retreat",
+    "action_during_shot": "The attack and scramble",
+    "action_continues_from": "group in chaotic retreat",
+    "action_hands_off_to": "end_of_scene",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "winged_monkeys",
+    "visible_secondary_subject_ids": [
+      "dorothy",
+      "the_scarecrow"
+    ],
+    "primary_subject_frame_position": "foreground right within open_plains",
+    "primary_subject_scale_relation": "Swarm scale vs individual character vulnerability.",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "monkeys hitting ground level",
+    "subject_relation_summary": "winged_monkeys plays against dorothy, the_scarecrow in the same frame",
+    "required_environment_anchor_1": "open_plains",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "Swarm scale vs individual character vulnerability.",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "scattered scramble",
+      "open_plains",
+      "winged_monkeys remains readable within the active playing space.",
+      "dorothy remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the open_plains.",
+      "Background depth should keep western_rugged_lands legible as the location anchor.",
+      "Subject 1: winged_monkeys remains visually readable against the environment scale.",
+      "Subject 2: dorothy remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "winged_monkeys focuses toward the active scene action."
+    ],
+    "environment_subzone": "open_plains",
+    "key_visible_environment_features": [
+      "open_plains",
+      "Chapter-local environment alias match for 'The rugged West landscape' (key_overlap=1, label_overlap=3, context_overla..."
+    ],
+    "continuity_from_previous_shot": "group in chaotic retreat",
+    "continuity_to_next_shot": "end_of_scene",
+    "pose_anchor_frame": "monkeys hitting ground level",
+    "pose_end_frame": "group in chaotic retreat",
+    "shot_title": "Impact Insert 15: The attack and scramble",
+    "shot_type": "impact_insert",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in western_rugged_lands featuring winged_monkeys, dorothy, the_scarecrow.",
+    "target_seconds": 5.4,
+    "characters_in_frame": [
+      {
+        "label": "Winged Monkeys",
+        "canonical_id": "winged_monkeys",
+        "display_name": "winged_monkeys",
+        "status": "canonical",
+        "entity_kind": "group",
+        "resolution_score": 130,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH013/winged_monkeys.md",
+        "notes": "Direct registry match for 'winged_monkeys'."
+      },
+      {
+        "label": "Dorothy",
+        "canonical_id": "dorothy",
+        "display_name": "dorothy",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH012/dorothy.md",
+        "notes": "Direct registry match for 'dorothy'."
+      },
+      {
+        "label": "Scarecrow",
+        "canonical_id": "the_scarecrow",
+        "display_name": "the_scarecrow",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 186,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH003/the_scarecrow.md",
+        "notes": "asset id exactly matches canonical id | query matches alias 'scarecrow'"
+      }
+    ],
+    "environment": {
+      "label": "The rugged West landscape",
+      "canonical_id": "western_rugged_lands",
+      "display_name": "western_rugged_lands",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 78,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH012/western_rugged_lands.md",
+      "notes": "Chapter-local environment alias match for 'The rugged West landscape' (key_overlap=1, label_overlap=3, context_overlap=4)."
+    },
+    "beat_ids": [
+      "BT003"
+    ],
+    "continuity_constraints": [
+      "Lighting must dim/shift as monkeys cloud the sun",
+      "Character positioning during scramble must match previous travel state",
+      "The attack and scramble",
+      "Resolve Wicked Witch (presence/influence) -> Wicked Witch (presence/influence)"
+    ],
+    "prompt_seed": "Impact Insert 15: The attack and scramble. impact_insert. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Readable medium compos...",
+    "shot_notes": "The attack and scramble",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH012_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH012",
+        "scene_id": "CH012_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH012",
+        "scene_id": "CH012_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH012",
+        "scene_id": "CH012_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH012",
+        "scene_id": "CH012_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH012",
+        "scene_id": "CH012_SC002"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH012",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH012_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH012",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH012_chapter_xii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH018",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH018_chapter_xviii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH022",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH022_chapter_xxii.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH012",
+        "canonical_id": "dorothy"
+      }
+    ],
+    "evidence_summary": [
+      "Execute a high-stakes magical escalation where the Golden Cap triggers a swarm event. The sequence must transition from character desperation to chaotic terror through lighting shifts and scale changes as winged monkeys descend from above.",
+      "In desperation, the Wicked Witch uses the final charge of the Golden Cap to summon the Winged Monkeys. The monkeys descend upon the group.",
+      "Desperation $\\rightarrow$ Terror.",
+      "Travelers moving through the rugged West, weary and desperate.",
+      "Chaos as winged monkeys descend upon the group.",
+      "The Golden Cap summons a swarm of Winged Monkeys that attack the travelers.",
+      "dorothy | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md] Costume/Silhouette: Unknown. No specific clothing details are provided in this chapter. [source:C:/FilmCreator/projects/wizard_of_oz/02_...",
+      "the_scarecrow | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH003/the_scarecrow.md] Physical Description: A living figure stuffed with straw. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/cha...",
+      "western_rugged_lands | No specific visual descriptors are provided in the current evidence. The environment functions as a primary location for transit. | Unknown. | Unknown. | Unknown."
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "wonder_reveal",
+    "coverage_role": "impact_insert",
+    "beat_type": "action_conflict",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT003",
+      "beat_type": "action_conflict",
+      "importance": "major",
+      "confidence": 0.78,
+      "reasons": [
+        "conflict/action verb",
+        "importance = major"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH012_SC002_SH015_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "89f0115a6a68cda29313756c1cdd394238bfdd9c",
+      "created_at_utc": "2026-04-27T20:53:51.647278+00:00",
+      "updated_at_utc": "2026-04-27T20:54:49.873915+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH012_SC002",
+          "version": "1a048cc233af74c40df590f6fed4a703ace88232"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH012_SC002",
+          "version": "bd7d9b1ff50210b143012db036bc3f1d97f0141c"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH012_SC002",
+          "version": "5c1c292a3519e76f317aef864de81b9e007dded0"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:53:51.648278+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "89f0115a6a68cda29313756c1cdd394238bfdd9c"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:49.874916+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "89f0115a6a68cda29313756c1cdd394238bfdd9c"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH016",
+    "scene_id": "CH012_SC002",
+    "chapter_id": "CH012",
+    "shot_order": 16,
+    "previous_shot_id": "SH015",
+    "next_shot_id": "SH017",
+    "primary_subject": "winged_monkeys",
+    "secondary_subjects": [
+      "dorothy"
+    ],
+    "shot_moment_summary": "The attack and scramble",
+    "start_state": "monkeys hitting ground level",
+    "end_state": "group in chaotic retreat",
+    "action_during_shot": "The attack and scramble",
+    "action_continues_from": "group in chaotic retreat",
+    "action_hands_off_to": "end_of_scene",
+    "shot_size": "close_up",
+    "camera_angle": "eye_level",
+    "lens_family": "portrait",
+    "camera_motion": "push_in",
+    "zoom_behavior": "subtle_in",
+    "focus_strategy": "shallow_subject",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "winged_monkeys",
+    "visible_secondary_subject_ids": [
+      "dorothy"
+    ],
+    "primary_subject_frame_position": "foreground inside open_plains",
+    "primary_subject_scale_relation": "Swarm scale vs individual character vulnerability.",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "monkeys hitting ground level",
+    "subject_relation_summary": "winged_monkeys plays against dorothy in the same frame",
+    "required_environment_anchor_1": "open_plains",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "Swarm scale vs individual character vulnerability.",
+    "camera_package_description": "close-up, eye level, portrait lens, push in, zoom subtle in, shallow subject, hard directional",
+    "subject_blocking": [
+      "scattered scramble",
+      "open_plains",
+      "winged_monkeys remains readable within the active playing space.",
+      "dorothy remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the open_plains.",
+      "Background depth should keep western_rugged_lands legible as the location anchor.",
+      "Subject 1: winged_monkeys remains visually readable against the environment scale.",
+      "Subject 2: dorothy remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "winged_monkeys focuses toward the active scene action."
+    ],
+    "environment_subzone": "open_plains",
+    "key_visible_environment_features": [
+      "open_plains",
+      "Chapter-local environment alias match for 'The rugged West landscape' (key_overlap=1, label_overlap=3, context_overla..."
+    ],
+    "continuity_from_previous_shot": "group in chaotic retreat",
+    "continuity_to_next_shot": "end_of_scene",
+    "pose_anchor_frame": "monkeys hitting ground level",
+    "pose_end_frame": "group in chaotic retreat",
+    "shot_title": "Reaction Closeup 16: The attack and scramble",
+    "shot_type": "reaction_closeup",
+    "camera_description": "Close framing that isolates reaction and emotional emphasis.",
+    "composition": "Intimate composition that isolates winged_monkeys, dorothy against western_rugged_lands to capture the beat's emotional turn.",
+    "target_seconds": 7.0,
+    "characters_in_frame": [
+      {
+        "label": "Winged Monkeys",
+        "canonical_id": "winged_monkeys",
+        "display_name": "winged_monkeys",
+        "status": "canonical",
+        "entity_kind": "group",
+        "resolution_score": 130,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH013/winged_monkeys.md",
+        "notes": "Direct registry match for 'winged_monkeys'."
+      },
+      {
+        "label": "Dorothy",
+        "canonical_id": "dorothy",
+        "display_name": "dorothy",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH012/dorothy.md",
+        "notes": "Direct registry match for 'dorothy'."
+      }
+    ],
+    "environment": {
+      "label": "The rugged West landscape",
+      "canonical_id": "western_rugged_lands",
+      "display_name": "western_rugged_lands",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 78,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH012/western_rugged_lands.md",
+      "notes": "Chapter-local environment alias match for 'The rugged West landscape' (key_overlap=1, label_overlap=3, context_overlap=4)."
+    },
+    "beat_ids": [
+      "BT003"
+    ],
+    "continuity_constraints": [
+      "Lighting must dim/shift as monkeys cloud the sun",
+      "Character positioning during scramble must match previous travel state",
+      "The attack and scramble",
+      "Resolve Wicked Witch (presence/influence) -> Wicked Witch (presence/influence)"
+    ],
+    "prompt_seed": "Reaction Closeup 16: The attack and scramble. reaction_closeup. size=close_up. angle=eye_level. lens=portrait. motion=push_in. zoom=subtle_in. focus=shallow_subject. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Close framing that isolates reaction and emotional emphasis. I...",
+    "shot_notes": "The attack and scramble",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH012_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH012",
+        "scene_id": "CH012_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH012",
+        "scene_id": "CH012_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH012",
+        "scene_id": "CH012_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH012",
+        "scene_id": "CH012_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH012",
+        "scene_id": "CH012_SC002"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH012",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH012_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH012",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH012_chapter_xii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH018",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH018_chapter_xviii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH022",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH022_chapter_xxii.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH012",
+        "canonical_id": "dorothy"
+      }
+    ],
+    "evidence_summary": [
+      "Execute a high-stakes magical escalation where the Golden Cap triggers a swarm event. The sequence must transition from character desperation to chaotic terror through lighting shifts and scale changes as winged monkeys descend from above.",
+      "In desperation, the Wicked Witch uses the final charge of the Golden Cap to summon the Winged Monkeys. The monkeys descend upon the group.",
+      "Desperation $\\rightarrow$ Terror.",
+      "Travelers moving through the rugged West, weary and desperate.",
+      "Chaos as winged monkeys descend upon the group.",
+      "The Golden Cap summons a swarm of Winged Monkeys that attack the travelers.",
+      "dorothy | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md] Costume/Silhouette: Unknown. No specific clothing details are provided in this chapter. [source:C:/FilmCreator/projects/wizard_of_oz/02_...",
+      "the_scarecrow | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH003/the_scarecrow.md] Physical Description: A living figure stuffed with straw. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/cha...",
+      "western_rugged_lands | No specific visual descriptors are provided in the current evidence. The environment functions as a primary location for transit. | Unknown. | Unknown. | Unknown."
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "wonder_reveal",
+    "coverage_role": "reaction_closeup",
+    "beat_type": "action_conflict",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT003",
+      "beat_type": "action_conflict",
+      "importance": "major",
+      "confidence": 0.78,
+      "reasons": [
+        "conflict/action verb",
+        "importance = major"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH012_SC002_SH016_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "89f0115a6a68cda29313756c1cdd394238bfdd9c",
+      "created_at_utc": "2026-04-27T20:53:51.649279+00:00",
+      "updated_at_utc": "2026-04-27T20:54:49.879916+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH012_SC002",
+          "version": "1a048cc233af74c40df590f6fed4a703ace88232"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH012_SC002",
+          "version": "bd7d9b1ff50210b143012db036bc3f1d97f0141c"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH012_SC002",
+          "version": "5c1c292a3519e76f317aef864de81b9e007dded0"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:53:51.649778+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "89f0115a6a68cda29313756c1cdd394238bfdd9c"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:49.880916+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "89f0115a6a68cda29313756c1cdd394238bfdd9c"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH017",
+    "scene_id": "CH012_SC002",
+    "chapter_id": "CH012",
+    "shot_order": 17,
+    "previous_shot_id": "SH016",
+    "next_shot_id": "SH018",
+    "primary_subject": "winged_monkeys",
+    "secondary_subjects": [
+      "dorothy",
+      "the_scarecrow"
+    ],
+    "shot_moment_summary": "The attack and scramble",
+    "start_state": "monkeys hitting ground level",
+    "end_state": "group in chaotic retreat",
+    "action_during_shot": "The attack and scramble",
+    "action_continues_from": "group in chaotic retreat",
+    "action_hands_off_to": "end_of_scene",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "winged_monkeys",
+    "visible_secondary_subject_ids": [
+      "dorothy",
+      "the_scarecrow"
+    ],
+    "primary_subject_frame_position": "foreground right within open_plains",
+    "primary_subject_scale_relation": "Swarm scale vs individual character vulnerability.",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "monkeys hitting ground level",
+    "subject_relation_summary": "winged_monkeys plays against dorothy, the_scarecrow in the same frame",
+    "required_environment_anchor_1": "open_plains",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "Swarm scale vs individual character vulnerability.",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "scattered scramble",
+      "open_plains",
+      "winged_monkeys remains readable within the active playing space.",
+      "dorothy remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the open_plains.",
+      "Background depth should keep western_rugged_lands legible as the location anchor.",
+      "Subject 1: winged_monkeys remains visually readable against the environment scale.",
+      "Subject 2: dorothy remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "winged_monkeys focuses toward the active scene action."
+    ],
+    "environment_subzone": "open_plains",
+    "key_visible_environment_features": [
+      "open_plains",
+      "Chapter-local environment alias match for 'The rugged West landscape' (key_overlap=1, label_overlap=3, context_overla..."
+    ],
+    "continuity_from_previous_shot": "group in chaotic retreat",
+    "continuity_to_next_shot": "end_of_scene",
+    "pose_anchor_frame": "monkeys hitting ground level",
+    "pose_end_frame": "group in chaotic retreat",
+    "shot_title": "Handoff Action 17: The attack and scramble",
+    "shot_type": "handoff_action",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in western_rugged_lands featuring winged_monkeys, dorothy, the_scarecrow.",
+    "target_seconds": 7.0,
+    "characters_in_frame": [
+      {
+        "label": "Winged Monkeys",
+        "canonical_id": "winged_monkeys",
+        "display_name": "winged_monkeys",
+        "status": "canonical",
+        "entity_kind": "group",
+        "resolution_score": 130,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH013/winged_monkeys.md",
+        "notes": "Direct registry match for 'winged_monkeys'."
+      },
+      {
+        "label": "Dorothy",
+        "canonical_id": "dorothy",
+        "display_name": "dorothy",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH012/dorothy.md",
+        "notes": "Direct registry match for 'dorothy'."
+      },
+      {
+        "label": "Scarecrow",
+        "canonical_id": "the_scarecrow",
+        "display_name": "the_scarecrow",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 186,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH003/the_scarecrow.md",
+        "notes": "asset id exactly matches canonical id | query matches alias 'scarecrow'"
+      }
+    ],
+    "environment": {
+      "label": "The rugged West landscape",
+      "canonical_id": "western_rugged_lands",
+      "display_name": "western_rugged_lands",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 78,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH012/western_rugged_lands.md",
+      "notes": "Chapter-local environment alias match for 'The rugged West landscape' (key_overlap=1, label_overlap=3, context_overlap=4)."
+    },
+    "beat_ids": [
+      "BT003"
+    ],
+    "continuity_constraints": [
+      "Lighting must dim/shift as monkeys cloud the sun",
+      "Character positioning during scramble must match previous travel state",
+      "The attack and scramble",
+      "Resolve Wicked Witch (presence/influence) -> Wicked Witch (presence/influence)"
+    ],
+    "prompt_seed": "Handoff Action 17: The attack and scramble. handoff_action. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Readable medium comp...",
+    "shot_notes": "The attack and scramble",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH012_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH012",
+        "scene_id": "CH012_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH012",
+        "scene_id": "CH012_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH012",
+        "scene_id": "CH012_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH012",
+        "scene_id": "CH012_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH012",
+        "scene_id": "CH012_SC002"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH012",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH012_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH012",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH012_chapter_xii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH018",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH018_chapter_xviii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH022",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH022_chapter_xxii.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH012",
+        "canonical_id": "dorothy"
+      }
+    ],
+    "evidence_summary": [
+      "Execute a high-stakes magical escalation where the Golden Cap triggers a swarm event. The sequence must transition from character desperation to chaotic terror through lighting shifts and scale changes as winged monkeys descend from above.",
+      "In desperation, the Wicked Witch uses the final charge of the Golden Cap to summon the Winged Monkeys. The monkeys descend upon the group.",
+      "Desperation $\\rightarrow$ Terror.",
+      "Travelers moving through the rugged West, weary and desperate.",
+      "Chaos as winged monkeys descend upon the group.",
+      "The Golden Cap summons a swarm of Winged Monkeys that attack the travelers.",
+      "dorothy | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md] Costume/Silhouette: Unknown. No specific clothing details are provided in this chapter. [source:C:/FilmCreator/projects/wizard_of_oz/02_...",
+      "the_scarecrow | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH003/the_scarecrow.md] Physical Description: A living figure stuffed with straw. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/cha...",
+      "western_rugged_lands | No specific visual descriptors are provided in the current evidence. The environment functions as a primary location for transit. | Unknown. | Unknown. | Unknown."
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "wonder_reveal",
+    "coverage_role": "handoff_action",
+    "beat_type": "action_conflict",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT003",
+      "beat_type": "action_conflict",
+      "importance": "major",
+      "confidence": 0.78,
+      "reasons": [
+        "conflict/action verb",
+        "importance = major"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH012_SC002_SH017_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "89f0115a6a68cda29313756c1cdd394238bfdd9c",
+      "created_at_utc": "2026-04-27T20:53:51.650278+00:00",
+      "updated_at_utc": "2026-04-27T20:54:49.885917+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH012_SC002",
+          "version": "1a048cc233af74c40df590f6fed4a703ace88232"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH012_SC002",
+          "version": "bd7d9b1ff50210b143012db036bc3f1d97f0141c"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH012_SC002",
+          "version": "5c1c292a3519e76f317aef864de81b9e007dded0"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:53:51.651784+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "89f0115a6a68cda29313756c1cdd394238bfdd9c"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:49.886920+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "89f0115a6a68cda29313756c1cdd394238bfdd9c"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH018",
+    "scene_id": "CH012_SC002",
+    "chapter_id": "CH012",
+    "shot_order": 18,
+    "previous_shot_id": "SH017",
+    "next_shot_id": "",
+    "primary_subject": "winged_monkeys",
+    "secondary_subjects": [
+      "dorothy",
+      "the_scarecrow"
+    ],
+    "shot_moment_summary": "The attack and scramble",
+    "start_state": "monkeys hitting ground level",
+    "end_state": "group in chaotic retreat",
+    "action_during_shot": "The attack and scramble",
+    "action_continues_from": "group in chaotic retreat",
+    "action_hands_off_to": "end_of_scene",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "winged_monkeys",
+    "visible_secondary_subject_ids": [
+      "dorothy",
+      "the_scarecrow"
+    ],
+    "primary_subject_frame_position": "foreground right within open_plains",
+    "primary_subject_scale_relation": "Swarm scale vs individual character vulnerability.",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "monkeys hitting ground level",
+    "subject_relation_summary": "winged_monkeys plays against dorothy, the_scarecrow in the same frame",
+    "required_environment_anchor_1": "open_plains",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "Swarm scale vs individual character vulnerability.",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "scattered scramble",
+      "open_plains",
+      "winged_monkeys remains readable within the active playing space.",
+      "dorothy remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the open_plains.",
+      "Background depth should keep western_rugged_lands legible as the location anchor.",
+      "Subject 1: winged_monkeys remains visually readable against the environment scale.",
+      "Subject 2: dorothy remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "winged_monkeys focuses toward the active scene action."
+    ],
+    "environment_subzone": "open_plains",
+    "key_visible_environment_features": [
+      "open_plains",
+      "Chapter-local environment alias match for 'The rugged West landscape' (key_overlap=1, label_overlap=3, context_overla..."
+    ],
+    "continuity_from_previous_shot": "group in chaotic retreat",
+    "continuity_to_next_shot": "end_of_scene",
+    "pose_anchor_frame": "monkeys hitting ground level",
+    "pose_end_frame": "group in chaotic retreat",
+    "shot_title": "Reverse Action 18: The attack and scramble",
+    "shot_type": "reverse_action",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in western_rugged_lands featuring winged_monkeys, dorothy, the_scarecrow.",
+    "target_seconds": 7.0,
+    "characters_in_frame": [
+      {
+        "label": "Winged Monkeys",
+        "canonical_id": "winged_monkeys",
+        "display_name": "winged_monkeys",
+        "status": "canonical",
+        "entity_kind": "group",
+        "resolution_score": 130,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH013/winged_monkeys.md",
+        "notes": "Direct registry match for 'winged_monkeys'."
+      },
+      {
+        "label": "Dorothy",
+        "canonical_id": "dorothy",
+        "display_name": "dorothy",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH012/dorothy.md",
+        "notes": "Direct registry match for 'dorothy'."
+      },
+      {
+        "label": "Scarecrow",
+        "canonical_id": "the_scarecrow",
+        "display_name": "the_scarecrow",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 186,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH003/the_scarecrow.md",
+        "notes": "asset id exactly matches canonical id | query matches alias 'scarecrow'"
+      }
+    ],
+    "environment": {
+      "label": "The rugged West landscape",
+      "canonical_id": "western_rugged_lands",
+      "display_name": "western_rugged_lands",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 78,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH012/western_rugged_lands.md",
+      "notes": "Chapter-local environment alias match for 'The rugged West landscape' (key_overlap=1, label_overlap=3, context_overlap=4)."
+    },
+    "beat_ids": [
+      "BT003"
+    ],
+    "continuity_constraints": [
+      "Lighting must dim/shift as monkeys cloud the sun",
+      "Character positioning during scramble must match previous travel state",
+      "The attack and scramble",
+      "Resolve Wicked Witch (presence/influence) -> Wicked Witch (presence/influence)"
+    ],
+    "prompt_seed": "Reverse Action 18: The attack and scramble. reverse_action. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Readable medium comp...",
+    "shot_notes": "The attack and scramble",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH012_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH012",
+        "scene_id": "CH012_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH012",
+        "scene_id": "CH012_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH012",
+        "scene_id": "CH012_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH012",
+        "scene_id": "CH012_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH012",
+        "scene_id": "CH012_SC002"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH012",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH012_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH012",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH012_chapter_xii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH018",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH018_chapter_xviii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH022",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH022_chapter_xxii.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH012",
+        "canonical_id": "dorothy"
+      }
+    ],
+    "evidence_summary": [
+      "Execute a high-stakes magical escalation where the Golden Cap triggers a swarm event. The sequence must transition from character desperation to chaotic terror through lighting shifts and scale changes as winged monkeys descend from above.",
+      "In desperation, the Wicked Witch uses the final charge of the Golden Cap to summon the Winged Monkeys. The monkeys descend upon the group.",
+      "Desperation $\\rightarrow$ Terror.",
+      "Travelers moving through the rugged West, weary and desperate.",
+      "Chaos as winged monkeys descend upon the group.",
+      "The Golden Cap summons a swarm of Winged Monkeys that attack the travelers.",
+      "dorothy | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md] Costume/Silhouette: Unknown. No specific clothing details are provided in this chapter. [source:C:/FilmCreator/projects/wizard_of_oz/02_...",
+      "the_scarecrow | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH003/the_scarecrow.md] Physical Description: A living figure stuffed with straw. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/cha...",
+      "western_rugged_lands | No specific visual descriptors are provided in the current evidence. The environment functions as a primary location for transit. | Unknown. | Unknown. | Unknown."
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "wonder_reveal",
+    "coverage_role": "reverse_action",
+    "beat_type": "action_conflict",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT003",
+      "beat_type": "action_conflict",
+      "importance": "major",
+      "confidence": 0.78,
+      "reasons": [
+        "conflict/action verb",
+        "importance = major"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH012_SC002_SH018_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "89f0115a6a68cda29313756c1cdd394238bfdd9c",
+      "created_at_utc": "2026-04-27T20:53:51.652784+00:00",
+      "updated_at_utc": "2026-04-27T20:54:49.892434+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH012_SC002",
+          "version": "1a048cc233af74c40df590f6fed4a703ace88232"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH012_SC002",
+          "version": "bd7d9b1ff50210b143012db036bc3f1d97f0141c"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH012_SC002",
+          "version": "5c1c292a3519e76f317aef864de81b9e007dded0"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:53:51.652784+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "89f0115a6a68cda29313756c1cdd394238bfdd9c"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:49.893433+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "89f0115a6a68cda29313756c1cdd394238bfdd9c"
         }
       ]
     }

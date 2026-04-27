@@ -5,67 +5,71 @@
   "shot_order": 2,
   "previous_shot_id": "SH001",
   "next_shot_id": "SH003",
-  "primary_subject": "scarlet_poppy_meadow",
+  "primary_subject": "dorothy",
   "secondary_subjects": [
-    "toto"
+    "the_scarecrow",
+    "tin_woodman"
   ],
-  "shot_moment_summary": "close up of flowers and scent",
-  "start_state": "static flowers",
-  "end_state": "wafting scent movement",
-  "action_during_shot": "flowers swaying slightly",
+  "shot_moment_summary": "Transition from river to meadow",
+  "start_state": "walking along swift_river_crossing",
+  "end_state": "stepping into scarlet_poppy_meadow",
+  "action_during_shot": "Transition from river to meadow",
   "action_continues_from": "edge of poppy field",
-  "action_hands_off_to": "BT003",
-  "shot_size": "close_up",
+  "action_hands_off_to": "BT002",
+  "shot_size": "medium",
   "camera_angle": "eye_level",
-  "lens_family": "telephoto",
+  "lens_family": "normal",
   "camera_motion": "locked_off",
   "zoom_behavior": "none",
-  "focus_strategy": "shallow_subject",
-  "lighting_style": "soft_even",
+  "focus_strategy": "deep_focus",
+  "lighting_style": "hard_directional",
   "subject_visibility": "on_screen",
   "narration_mode": "none",
-  "primary_subject_angle": "front",
+  "primary_subject_angle": "front_three_quarter_left",
   "visible_primary_subject_id": "dorothy",
   "visible_secondary_subject_ids": [
-    "toto"
+    "the_scarecrow",
+    "tin_woodman"
   ],
-  "primary_subject_frame_position": "foreground inside scarlet_poppy_meadow",
+  "primary_subject_frame_position": "foreground right within swift_river_crossing/scarlet_poppy_meadow",
   "primary_subject_scale_relation": "The scale of the scarlet_poppy_meadow dwarfs the character group.",
-  "primary_subject_facing_direction": "facing directly toward camera",
-  "primary_subject_pose_description": "static flowers",
-  "subject_relation_summary": "scarlet_poppy_meadow plays against toto in the same frame",
-  "required_environment_anchor_1": "scarlet_poppy_meadow",
-  "required_subject_anchor_1": "scarlet_poppy_meadow",
+  "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+  "primary_subject_pose_description": "walking along swift_river_crossing",
+  "subject_relation_summary": "dorothy plays against the_scarecrow, tin_woodman in the same frame",
+  "required_environment_anchor_1": "swift_river_crossing/scarlet_poppy_meadow",
+  "required_subject_anchor_1": "",
   "required_celestial_anchor_1": "",
   "required_scale_proof_detail": "The scale of the scarlet_poppy_meadow dwarfs the character group.",
-  "camera_package_description": "close-up, eye level, telephoto lens, locked off, shallow subject, soft even",
+  "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
   "subject_blocking": [
-    "within the meadow flora",
+    "linear progression from water to flowers",
+    "edge of riverbank and meadow",
     "dorothy remains readable within the active playing space.",
-    "toto remains readable within the active playing space."
+    "the_scarecrow remains readable within the active playing space."
   ],
   "camera_relative_positions": [
-    "Camera anchors the action inside the scarlet_poppy_meadow.",
-    "Background depth should keep scarlet_poppy_meadow legible as the location anchor.",
+    "Camera anchors the action inside the swift_river_crossing/scarlet_poppy_meadow.",
+    "Background depth should keep swift_river_crossing legible as the location anchor.",
     "Subject 1: dorothy remains visually readable against the environment scale.",
-    "Subject 2: toto remains visually readable against the environment scale."
+    "Subject 2: the_scarecrow remains visually readable against the environment scale."
   ],
   "gaze_directions": [
-    "scarlet_poppy_meadow focuses toward the active scene action."
+    "dorothy focuses toward the active scene action."
   ],
-  "environment_subzone": "scarlet_poppy_meadow",
+  "environment_subzone": "swift_river_crossing/scarlet_poppy_meadow",
   "key_visible_environment_features": [
-    "scarlet_poppy_meadow"
+    "swift_river_crossing/scarlet_poppy_meadow",
+    "Chapter-local environment alias match for 'Grassy riverbank' (key_overlap=0, label_overlap=2, context_overlap=4)."
   ],
   "continuity_from_previous_shot": "edge of poppy field",
-  "continuity_to_next_shot": "BT003",
-  "pose_anchor_frame": "static flowers",
-  "pose_end_frame": "wafting scent movement",
-  "shot_title": "Reaction Closeup 2: Sensory immersion in poppies",
-  "shot_type": "reaction_closeup",
-  "camera_description": "Close framing that isolates reaction and emotional emphasis.",
-  "composition": "Intimate composition that isolates dorothy, toto against scarlet_poppy_meadow to capture the beat's emotional turn.",
-  "target_seconds": 5.3,
+  "continuity_to_next_shot": "BT002",
+  "pose_anchor_frame": "walking along swift_river_crossing",
+  "pose_end_frame": "stepping into scarlet_poppy_meadow",
+  "shot_title": "Authority Single 2: Transition from river to meadow",
+  "shot_type": "authority_single",
+  "camera_description": "Stable readable framing built from the beat requirement.",
+  "composition": "Readable medium composition in swift_river_crossing featuring dorothy, the_scarecrow, tin_woodman.",
+  "target_seconds": 7.0,
   "characters_in_frame": [
     {
       "label": "Dorothy",
@@ -78,36 +82,46 @@
       "notes": "Direct registry match for 'dorothy'."
     },
     {
-      "label": "Toto",
-      "canonical_id": "toto",
-      "display_name": "toto",
+      "label": "Scarecrow",
+      "canonical_id": "the_scarecrow",
+      "display_name": "the_scarecrow",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 186,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH008/the_scarecrow.md",
+      "notes": "asset id exactly matches canonical id | query matches alias 'scarecrow'"
+    },
+    {
+      "label": "Tin Woodman",
+      "canonical_id": "tin_woodman",
+      "display_name": "tin_woodman",
       "status": "canonical",
       "entity_kind": "individual",
       "resolution_score": 138,
-      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH008/toto.md",
-      "notes": "Direct registry match for 'toto'."
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH008/tin_woodman.md",
+      "notes": "Direct registry match for 'tin_woodman'."
     }
   ],
   "environment": {
-    "label": "massive meadow of scarlet poppies",
-    "canonical_id": "scarlet_poppy_meadow",
-    "display_name": "scarlet_poppy_meadow",
+    "label": "Grassy riverbank",
+    "canonical_id": "swift_river_crossing",
+    "display_name": "swift_river_crossing",
     "status": "canonical",
     "entity_kind": "environment",
-    "resolution_score": 112,
-    "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH008/scarlet_poppy_meadow.md",
-    "notes": "Chapter-local environment alias match for 'massive meadow of scarlet poppies' (key_overlap=2, label_overlap=4, context_overlap=4)."
+    "resolution_score": 56,
+    "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH008/swift_river_crossing.md",
+    "notes": "Chapter-local environment alias match for 'Grassy riverbank' (key_overlap=0, label_overlap=2, context_overlap=4)."
   },
   "beat_ids": [
-    "BT002"
+    "BT001"
   ],
   "continuity_constraints": [
     "Poppy density and color saturation must remain consistent across shots",
     "Lighting transition from sunny riverbank to hazy, saturated meadow atmosphere",
-    "Sensory immersion in poppies"
+    "Transition from river to meadow"
   ],
-  "prompt_seed": "Reaction Closeup 2: Sensory immersion in poppies. reaction_closeup. size=close_up. angle=eye_level. lens=telephoto. motion=locked_off. zoom=none. focus=shallow_subject. lighting=soft_even. visibility=on_screen. subject_angle=front. Close framing that isolates reaction and emotional emphasis. Intimate composition tha...",
-  "shot_notes": "Sensory immersion in poppies",
+  "prompt_seed": "Authority Single 2: Transition from river to meadow. authority_single. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Readable...",
+  "shot_notes": "Transition from river to meadow",
   "evidence_refs": [
     {
       "source": "scene_contract",
@@ -177,13 +191,30 @@
     "swift_river_crossing | A river crossing characterized by swift water currents, serving as a physical obstacle for characters in transit. Specific visual details regarding the terrain or water clarity are currently unrecorded. | Functions as a transitional p...",
     "scarlet_poppy_meadow | The environment is characterized by a field of scarlet poppies. It functions as a hazard zone within the narrative. | Unknown. | Unknown. | Unknown."
   ],
+  "coverage_density": "medium",
+  "coverage_profile": "classic_adventure",
+  "coverage_intent": "adventure_action",
+  "coverage_role": "authority_single",
+  "beat_type": "dialogue_council_or_court",
+  "coverage_importance": "major",
+  "coverage_blueprint_source": "deterministic_v1",
+  "coverage_classification": {
+    "beat_id": "BT001",
+    "beat_type": "dialogue_council_or_court",
+    "importance": "major",
+    "confidence": 0.82,
+    "reasons": [
+      "court/council authority language",
+      "importance = major"
+    ]
+  },
   "metadata": {
     "artifact_id": "CH008_SC003_SH002_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "236ba9f8fc51618c8e41793ded20d694ddbe1fb3",
+    "source_fingerprint": "1945331590eb88fda08f81514a3880384f4bcb95",
     "created_at_utc": "2026-04-27T16:17:27.902041+00:00",
-    "updated_at_utc": "2026-04-27T16:17:27.902041+00:00",
+    "updated_at_utc": "2026-04-27T20:54:38.437355+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
@@ -198,7 +229,7 @@
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH008_SC003",
-        "version": "3ef57c5beaf4fd407257f725e30ac05860225c02"
+        "version": "100ceec08abcd248b6439f79aae134ba8521addc"
       }
     ],
     "locked_fields": {},
@@ -208,6 +239,16 @@
         "timestamp_utc": "2026-04-27T16:18:41.541172+00:00",
         "action": "synthesized",
         "source_fingerprint": "236ba9f8fc51618c8e41793ded20d694ddbe1fb3"
+      },
+      {
+        "timestamp_utc": "2026-04-27T20:53:41.079175+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "1945331590eb88fda08f81514a3880384f4bcb95"
+      },
+      {
+        "timestamp_utc": "2026-04-27T20:54:38.437855+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "1945331590eb88fda08f81514a3880384f4bcb95"
       }
     ]
   }

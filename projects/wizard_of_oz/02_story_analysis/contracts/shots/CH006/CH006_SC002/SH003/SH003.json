@@ -4,71 +4,84 @@
   "chapter_id": "CH006",
   "shot_order": 3,
   "previous_shot_id": "SH002",
-  "next_shot_id": "",
-  "primary_subject": "cowardly_lion",
+  "next_shot_id": "SH004",
+  "primary_subject": "dorothy",
   "secondary_subjects": [
-    "dorothy"
+    "cowardly_lion",
+    "the_scarecrow"
   ],
-  "shot_moment_summary": "Lion's face shows shame and sadness",
-  "start_state": "Lion looking stunned",
-  "end_state": "Lion looking pleading",
-  "action_during_shot": "Lion admits fear and asks to join",
-  "action_continues_from": "Lion recoiling",
-  "action_hands_off_to": "End of scene",
-  "shot_size": "close_up",
+  "shot_moment_summary": "Dorothy slaps the Lion's nose",
+  "start_state": "Dorothy stepping forward",
+  "end_state": "Lion recoiling",
+  "action_during_shot": "Slap to the nose",
+  "action_continues_from": "Lion stands over the group",
+  "action_hands_off_to": "BT003",
+  "shot_size": "medium",
   "camera_angle": "eye_level",
-  "lens_family": "portrait",
+  "lens_family": "normal",
   "camera_motion": "locked_off",
-  "zoom_behavior": "none",
+  "zoom_behavior": "subtle_in",
   "focus_strategy": "shallow_subject",
-  "lighting_style": "soft_even",
+  "lighting_style": "diffuse_ambient",
   "subject_visibility": "on_screen",
   "narration_mode": "in_scene_speaker",
-  "primary_subject_angle": "front",
-  "visible_primary_subject_id": "cowardly_lion",
+  "primary_subject_angle": "profile_left",
+  "visible_primary_subject_id": "dorothy",
   "visible_secondary_subject_ids": [
-    "dorothy"
+    "cowardly_lion",
+    "the_scarecrow"
   ],
-  "primary_subject_frame_position": "foreground inside ambush site",
-  "primary_subject_scale_relation": "preserve readable body-to-environment scale in frame",
-  "primary_subject_facing_direction": "facing directly toward camera",
-  "primary_subject_pose_description": "Lion looking stunned",
-  "subject_relation_summary": "cowardly_lion plays against dorothy in the same frame",
+  "primary_subject_frame_position": "foreground right within ambush site",
+  "primary_subject_scale_relation": "Hand size vs Lion nose",
+  "primary_subject_facing_direction": "profile left toward the scene action",
+  "primary_subject_pose_description": "Dorothy stepping forward",
+  "subject_relation_summary": "dorothy plays against cowardly_lion, the_scarecrow in the same frame",
   "required_environment_anchor_1": "ambush site",
-  "required_subject_anchor_1": "Lion lowers himself to eye level or below",
+  "required_subject_anchor_1": "",
   "required_celestial_anchor_1": "",
-  "required_scale_proof_detail": "preserve readable body-to-environment scale in frame",
-  "camera_package_description": "close-up, eye level, portrait lens, locked off, shallow subject, soft even",
+  "required_scale_proof_detail": "Hand size vs Lion nose",
+  "camera_package_description": "medium, eye level, normal lens, locked off, zoom subtle in, shallow subject, diffuse ambient",
   "subject_blocking": [
-    "Lion lowers head/posture",
-    "Lion lowers himself to eye level or below",
-    "negotiation space",
-    "cowardly_lion remains readable within the active playing space.",
-    "dorothy remains readable within the active playing space."
+    "Dorothy moves into Lion's personal space",
+    "Dorothy breaks the distance barrier",
+    "immediate proximity of Dorothy and Lion",
+    "dorothy remains readable within the active playing space.",
+    "cowardly_lion remains readable within the active playing space."
   ],
   "camera_relative_positions": [
     "Camera anchors the action inside the ambush site.",
     "Background depth should keep thick_dark_forest legible as the location anchor.",
-    "Subject 1: cowardly_lion remains visually readable against the environment scale.",
-    "Subject 2: dorothy remains visually readable against the environment scale."
+    "Subject 1: dorothy remains visually readable against the environment scale.",
+    "Subject 2: cowardly_lion remains visually readable against the environment scale."
   ],
   "gaze_directions": [
-    "cowardly_lion focuses toward the active scene action."
+    "dorothy focuses toward the active scene action."
   ],
   "environment_subzone": "ambush site",
   "key_visible_environment_features": [
-    "ambush site"
+    "ambush site",
+    "Chapter-local environment alias match for 'The forest clearing/ambush site' (key_overlap=1, label_overlap=1, context_..."
   ],
-  "continuity_from_previous_shot": "Lion recoiling",
-  "continuity_to_next_shot": "End of scene",
-  "pose_anchor_frame": "Lion looking stunned",
-  "pose_end_frame": "Lion looking pleading",
-  "shot_title": "Reaction Closeup 3: The request for courage",
-  "shot_type": "reaction_closeup",
-  "camera_description": "Close framing that isolates reaction and emotional emphasis.",
-  "composition": "Intimate composition that isolates cowardly_lion, dorothy against thick_dark_forest to capture the beat's emotional turn.",
-  "target_seconds": 5.1,
+  "continuity_from_previous_shot": "Lion stands over the group",
+  "continuity_to_next_shot": "BT003",
+  "pose_anchor_frame": "Dorothy stepping forward",
+  "pose_end_frame": "Lion recoiling",
+  "shot_title": "Handoff Medium 3: The slap and subversion",
+  "shot_type": "handoff_medium",
+  "camera_description": "Stable readable framing built from the beat requirement.",
+  "composition": "Readable medium composition in thick_dark_forest featuring dorothy, cowardly_lion, the_scarecrow.",
+  "target_seconds": 7.0,
   "characters_in_frame": [
+    {
+      "label": "Dorothy",
+      "canonical_id": "dorothy",
+      "display_name": "dorothy",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH006/dorothy.md",
+      "notes": "Direct registry match for 'dorothy'."
+    },
     {
       "label": "Cowardly Lion",
       "canonical_id": "cowardly_lion",
@@ -80,14 +93,14 @@
       "notes": "Direct registry match for 'cowardly_lion'."
     },
     {
-      "label": "Dorothy",
-      "canonical_id": "dorothy",
-      "display_name": "dorothy",
+      "label": "Scarecrow",
+      "canonical_id": "the_scarecrow",
+      "display_name": "the_scarecrow",
       "status": "canonical",
       "entity_kind": "individual",
-      "resolution_score": 138,
-      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH006/dorothy.md",
-      "notes": "Direct registry match for 'dorothy'."
+      "resolution_score": 186,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH006/the_scarecrow.md",
+      "notes": "asset id exactly matches canonical id | query matches alias 'scarecrow'"
     }
   ],
   "environment": {
@@ -101,15 +114,15 @@
     "notes": "Chapter-local environment alias match for 'The forest clearing/ambush site' (key_overlap=1, label_overlap=1, context_overlap=2)."
   },
   "beat_ids": [
-    "BT003"
+    "BT002"
   ],
   "continuity_constraints": [
     "Physical distance between cowardly_lion and dorothy post-slap",
     "Position of toto relative to the group",
-    "The request for courage"
+    "The slap and subversion"
   ],
-  "prompt_seed": "Reaction Closeup 3: The request for courage. reaction_closeup. size=close_up. angle=eye_level. lens=portrait. motion=locked_off. zoom=none. focus=shallow_subject. lighting=soft_even. visibility=on_screen. subject_angle=front. Close framing that isolates reaction and emotional emphasis. Intimate composition that isol...",
-  "shot_notes": "The request for courage",
+  "prompt_seed": "Handoff Medium 3: The slap and subversion. handoff_medium. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=subtle_in. focus=shallow_subject. lighting=diffuse_ambient. visibility=on_screen. subject_angle=profile_left. Stable readable framing built from the beat requirement. Readable medium composit...",
+  "shot_notes": "The slap and subversion",
   "evidence_refs": [
     {
       "source": "scene_contract",
@@ -178,13 +191,29 @@
     "the_scarecrow | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH003/the_scarecrow.md] Physical Description: A living figure stuffed with straw. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/cha...",
     "thick_dark_forest | No specific visual descriptors are provided in the current evidence. The environment is identified as a \"thick dark forest.\" | Unknown. | Dark (per name). | Unknown."
   ],
+  "coverage_density": "medium",
+  "coverage_profile": "classic_adventure",
+  "coverage_intent": "adventure_action",
+  "coverage_role": "handoff_medium",
+  "beat_type": "transition_handoff",
+  "coverage_importance": "major",
+  "coverage_blueprint_source": "deterministic_v1",
+  "coverage_classification": {
+    "beat_id": "BT002",
+    "beat_type": "transition_handoff",
+    "importance": "major",
+    "confidence": 0.55,
+    "reasons": [
+      "importance = major"
+    ]
+  },
   "metadata": {
     "artifact_id": "CH006_SC002_SH003_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "ffef53e7b41afbf3ba3f2c10192b5013fb826f71",
+    "source_fingerprint": "1539993804859a217f8ff1ba1d8364792a6e7545",
     "created_at_utc": "2026-04-27T15:46:41.297809+00:00",
-    "updated_at_utc": "2026-04-27T15:46:41.297809+00:00",
+    "updated_at_utc": "2026-04-27T20:54:33.555030+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
@@ -199,7 +228,7 @@
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH006_SC002",
-        "version": "8ab1b4e83c814dae1319fc5dacb91e102ee16a16"
+        "version": "3ba30bef111afb50c85b144bffc8d5f4ca3a1250"
       }
     ],
     "locked_fields": {},
@@ -209,6 +238,16 @@
         "timestamp_utc": "2026-04-27T15:47:55.263438+00:00",
         "action": "synthesized",
         "source_fingerprint": "ffef53e7b41afbf3ba3f2c10192b5013fb826f71"
+      },
+      {
+        "timestamp_utc": "2026-04-27T20:53:36.294822+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "1539993804859a217f8ff1ba1d8364792a6e7545"
+      },
+      {
+        "timestamp_utc": "2026-04-27T20:54:33.555528+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "1539993804859a217f8ff1ba1d8364792a6e7545"
       }
     ]
   }

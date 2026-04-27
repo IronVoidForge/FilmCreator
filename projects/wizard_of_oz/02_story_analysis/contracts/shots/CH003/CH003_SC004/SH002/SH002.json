@@ -5,69 +5,82 @@
   "shot_order": 2,
   "previous_shot_id": "SH001",
   "next_shot_id": "SH003",
-  "primary_subject": "the_scarecrow",
+  "primary_subject": "dorothy",
   "secondary_subjects": [
-    "dorothy"
+    "the_scarecrow",
+    "toto"
   ],
-  "shot_moment_summary": "the_scarecrow expresses desire for brains",
-  "start_state": "the_scarecrow on ground",
-  "end_state": "the_scarecrow speaking",
-  "action_during_shot": "explaining goal",
+  "shot_moment_summary": "The rescue of the scarecrow",
+  "start_state": "dorothy approaches the pole",
+  "end_state": "the_scarecrow is on the ground",
+  "action_during_shot": "The rescue of the scarecrow",
   "action_continues_from": "hands meeting straw",
-  "action_hands_off_to": "BT003",
-  "shot_size": "close_up",
+  "action_hands_off_to": "BT002",
+  "shot_size": "medium",
   "camera_angle": "eye_level",
-  "lens_family": "portrait",
+  "lens_family": "normal",
   "camera_motion": "locked_off",
   "zoom_behavior": "none",
-  "focus_strategy": "shallow_subject",
-  "lighting_style": "diffuse_ambient",
+  "focus_strategy": "deep_focus",
+  "lighting_style": "hard_directional",
   "subject_visibility": "on_screen",
-  "narration_mode": "in_scene_speaker",
-  "primary_subject_angle": "front",
-  "visible_primary_subject_id": "the_scarecrow",
+  "narration_mode": "none",
+  "primary_subject_angle": "front_three_quarter_left",
+  "visible_primary_subject_id": "dorothy",
   "visible_secondary_subject_ids": [
-    "dorothy"
+    "the_scarecrow",
+    "toto"
   ],
-  "primary_subject_frame_position": "foreground inside cornfield_edge",
+  "primary_subject_frame_position": "foreground right within cornfield_edge",
   "primary_subject_scale_relation": "Human scale interaction with a vertical object (pole) transitioning to wide landscape travel.",
-  "primary_subject_facing_direction": "facing directly toward camera",
-  "primary_subject_pose_description": "the_scarecrow on ground",
-  "subject_relation_summary": "the_scarecrow plays against dorothy in the same frame",
+  "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+  "primary_subject_pose_description": "dorothy approaches the pole",
+  "subject_relation_summary": "dorothy plays against the_scarecrow, toto in the same frame",
   "required_environment_anchor_1": "cornfield_edge",
-  "required_subject_anchor_1": "the_scarecrow on ground",
+  "required_subject_anchor_1": "",
   "required_celestial_anchor_1": "",
   "required_scale_proof_detail": "Human scale interaction with a vertical object (pole) transitioning to wide landscape travel.",
-  "camera_package_description": "close-up, eye level, portrait lens, locked off, shallow subject, diffuse ambient",
+  "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
   "subject_blocking": [
-    "seated or standing near pole",
-    "characters facing each other near pole",
-    "the_scarecrow remains readable within the active playing space.",
-    "dorothy remains readable within the active playing space."
+    "dorothy at base of pole reaching up",
+    "cornfield_edge",
+    "dorothy remains readable within the active playing space.",
+    "the_scarecrow remains readable within the active playing space."
   ],
   "camera_relative_positions": [
     "Camera anchors the action inside the cornfield_edge.",
-    "Background depth should keep yellow_brick_road legible as the location anchor.",
-    "Subject 1: the_scarecrow remains visually readable against the environment scale.",
-    "Subject 2: dorothy remains visually readable against the environment scale."
+    "Background depth should keep cornfield_scarecrow_post legible as the location anchor.",
+    "Subject 1: dorothy remains visually readable against the environment scale.",
+    "Subject 2: the_scarecrow remains visually readable against the environment scale."
   ],
   "gaze_directions": [
-    "the_scarecrow focuses toward the active scene action."
+    "dorothy focuses toward the active scene action."
   ],
   "environment_subzone": "cornfield_edge",
   "key_visible_environment_features": [
-    "cornfield_edge"
+    "cornfield_edge",
+    "Chapter-local beat subzone match for 'cornfield_edge'."
   ],
   "continuity_from_previous_shot": "hands meeting straw",
-  "continuity_to_next_shot": "BT003",
-  "pose_anchor_frame": "the_scarecrow on ground",
-  "pose_end_frame": "the_scarecrow speaking",
-  "shot_title": "Reaction Closeup 2: The request for brains and Oz",
-  "shot_type": "reaction_closeup",
-  "camera_description": "Close framing that isolates reaction and emotional emphasis.",
-  "composition": "Intimate composition that isolates the_scarecrow, dorothy against yellow_brick_road to capture the beat's emotional turn.",
-  "target_seconds": 5.3,
+  "continuity_to_next_shot": "BT002",
+  "pose_anchor_frame": "dorothy approaches the pole",
+  "pose_end_frame": "the_scarecrow is on the ground",
+  "shot_title": "Threat Reveal 2: The rescue of the scarecrow",
+  "shot_type": "threat_reveal",
+  "camera_description": "Stable readable framing built from the beat requirement.",
+  "composition": "Readable medium composition in cornfield_scarecrow_post featuring dorothy, the_scarecrow, toto.",
+  "target_seconds": 7.0,
   "characters_in_frame": [
+    {
+      "label": "Dorothy",
+      "canonical_id": "dorothy",
+      "display_name": "dorothy",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH003/dorothy.md",
+      "notes": "Direct registry match for 'dorothy'."
+    },
     {
       "label": "The Scarecrow",
       "canonical_id": "the_scarecrow",
@@ -79,36 +92,36 @@
       "notes": "Direct registry match for 'the_scarecrow'."
     },
     {
-      "label": "Dorothy",
-      "canonical_id": "dorothy",
-      "display_name": "dorothy",
+      "label": "Toto",
+      "canonical_id": "toto",
+      "display_name": "toto",
       "status": "canonical",
       "entity_kind": "individual",
       "resolution_score": 138,
-      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH003/dorothy.md",
-      "notes": "Direct registry match for 'dorothy'."
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH003/toto.md",
+      "notes": "Direct registry match for 'toto'."
     }
   ],
   "environment": {
-    "label": "Cornfield edge/Yellow Brick Road",
-    "canonical_id": "yellow_brick_road",
-    "display_name": "yellow_brick_road",
+    "label": "cornfield_scarecrow_post",
+    "canonical_id": "cornfield_scarecrow_post",
+    "display_name": "cornfield_scarecrow_post",
     "status": "canonical",
     "entity_kind": "environment",
-    "resolution_score": 124,
-    "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH005/yellow_brick_road.md",
-    "notes": "Direct registry match for 'yellow_brick_road'."
+    "resolution_score": null,
+    "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH003/cornfield_scarecrow_post.md",
+    "notes": "Chapter-local beat subzone match for 'cornfield_edge'."
   },
   "beat_ids": [
-    "BT002"
+    "BT001"
   ],
   "continuity_constraints": [
     "Physical contact mechanics during the descent from the pole.",
     "Relative positioning of toto to the main duo during travel.",
-    "The request for brains and Oz"
+    "The rescue of the scarecrow"
   ],
-  "prompt_seed": "Reaction Closeup 2: The request for brains and Oz. reaction_closeup. size=close_up. angle=eye_level. lens=portrait. motion=locked_off. zoom=none. focus=shallow_subject. lighting=diffuse_ambient. visibility=on_screen. subject_angle=front. Close framing that isolates reaction and emotional emphasis. Intimate compositi...",
-  "shot_notes": "The request for brains and Oz",
+  "prompt_seed": "Threat Reveal 2: The rescue of the scarecrow. threat_reveal. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Readable medium com...",
+  "shot_notes": "The rescue of the scarecrow",
   "evidence_refs": [
     {
       "source": "scene_contract",
@@ -172,19 +185,36 @@
     "the_scarecrow is suspended on a pole at the edge of the cornfield.",
     "dorothy and the_scarecrow walk away down the road with toto following.",
     "Helping the scarecrow down, negotiating a journey to the Emerald City, and departing.",
-    "dorothy | Dorothy is a young human girl characterized by an expressive face and the appearance of a weary traveler. Her visual identity evolves during her journey, transitioning from previously green clothing to a white dress or clothing. She is most notabl...",
-    "the_scarecrow | The Scarecrow is a bipedal, human-scale humanoid figure of rustic construction, appearing as a living entity stuffed entirely with straw. His movement is characterized by a distinct clumsiness. He lacks flesh and is visually defined by his t...",
-    "toto | Toto is a small quadruped dog characterized by a compact build and consistent black fur. The character possesses an alert physical presence with keen, observant eyes suitable for a companion animal. | black fur. | companion animal; alert.",
+    "dorothy | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md] Costume/Silhouette: Unknown. No specific clothing details are provided in this chapter. [source:C:/FilmCreator/projects/wizard_of_oz/02_...",
+    "the_scarecrow | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH003/the_scarecrow.md] Physical Description: A living figure stuffed with straw. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/cha...",
+    "toto | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/toto.md] Costume/Silhouette: Small quadruped with black fur. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapte...",
     "cornfield_scarecrow_post | A dense cornfield characterized by high-reaching stalks that form a sheltering or claustrophobic canopy. The primary focal point within this greenery is a singular wooden post. | High vegetation creates a sense of enclosure; cente...",
     "yellow_brick_road | No specific visual descriptors are provided in the current evidence. The environment functions primarily as a transit setting. | Unknown. | Unknown. | Unknown."
   ],
+  "coverage_density": "medium",
+  "coverage_profile": "classic_adventure",
+  "coverage_intent": "adventure_action",
+  "coverage_role": "threat_reveal",
+  "beat_type": "action_conflict",
+  "coverage_importance": "major",
+  "coverage_blueprint_source": "deterministic_v1",
+  "coverage_classification": {
+    "beat_id": "BT001",
+    "beat_type": "action_conflict",
+    "importance": "major",
+    "confidence": 0.78,
+    "reasons": [
+      "conflict/action verb",
+      "importance = major"
+    ]
+  },
   "metadata": {
     "artifact_id": "CH003_SC004_SH002_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "d6b40c9a10081b940be80564085bddf932198546",
+    "source_fingerprint": "9fcf66dc88a40db36f78420d46a2562570dcb46a",
     "created_at_utc": "2026-04-27T09:59:47.513302+00:00",
-    "updated_at_utc": "2026-04-27T15:05:26.450207+00:00",
+    "updated_at_utc": "2026-04-27T20:54:26.875596+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
@@ -199,7 +229,7 @@
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH003_SC004",
-        "version": "821ac222365284262e84ffc6cf1cf37be42a67b0"
+        "version": "0df831e76aa097af35e7b0339404edba4c03fb54"
       }
     ],
     "locked_fields": {},
@@ -214,6 +244,16 @@
         "timestamp_utc": "2026-04-27T15:06:41.557120+00:00",
         "action": "synthesized",
         "source_fingerprint": "d6b40c9a10081b940be80564085bddf932198546"
+      },
+      {
+        "timestamp_utc": "2026-04-27T20:53:29.873745+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "9fcf66dc88a40db36f78420d46a2562570dcb46a"
+      },
+      {
+        "timestamp_utc": "2026-04-27T20:54:26.876097+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "9fcf66dc88a40db36f78420d46a2562570dcb46a"
       }
     ]
   }

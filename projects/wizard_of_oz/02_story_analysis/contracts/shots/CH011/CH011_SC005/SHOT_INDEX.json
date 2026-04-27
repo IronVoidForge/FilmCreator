@@ -43,6 +43,7 @@
     "subject_blocking": [
       "center path",
       "center aisle toward throne",
+      "central_audience_floor",
       "tin_woodman remains readable within the active playing space.",
       "the_great_oz remains readable within the active playing space."
     ],
@@ -57,17 +58,18 @@
     ],
     "environment_subzone": "central_audience_floor",
     "key_visible_environment_features": [
-      "central_audience_floor"
+      "central_audience_floor",
+      "Chapter-local environment alias match for 'The Throne Room/Audience Chamber' (key_overlap=0, label_overlap=2, context..."
     ],
     "continuity_from_previous_shot": "tin_woodman enters the vast, intimidating palace space facing a massive presence.",
     "continuity_to_next_shot": "BT002",
     "pose_anchor_frame": "wide shot of empty floor",
     "pose_end_frame": "tin_woodman walking toward center",
-    "shot_title": "Establishing Wide 1: The Woodman enters the chamber",
-    "shot_type": "establishing_wide",
-    "camera_description": "Wide establishing frame with a steady or lightly drifting camera.",
-    "composition": "Wide composition across palace_of_oz with tin_woodman, the_great_oz placed for immediate spatial orientation.",
-    "target_seconds": 5.5,
+    "shot_title": "Ceremonial Master 1: The Woodman enters the chamber and encounters the m...",
+    "shot_type": "ceremonial_master",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in palace_of_oz featuring tin_woodman, the_great_oz.",
+    "target_seconds": 10.0,
     "characters_in_frame": [
       {
         "label": "Tin Woodman",
@@ -108,7 +110,7 @@
       "Metallic texture and articulation of tin_woodman",
       "The Woodman enters the chamber and encounters the manifestation"
     ],
-    "prompt_seed": "Establishing Wide 1: The Woodman enters the chamber and encounters the m.... establishing_wide. size=wide. angle=high_angle. lens=wide. motion=push_in. zoom=none. focus=deep_focus. lighting=high_contrast_ceremonial. visibility=on_screen. subject_angle=back. Wide establishing frame with a steady or lightly drifting c...",
+    "prompt_seed": "Ceremonial Master 1: The Woodman enters the chamber and encounters the m.... ceremonial_master. size=wide. angle=high_angle. lens=wide. motion=push_in. zoom=none. focus=deep_focus. lighting=high_contrast_ceremonial. visibility=on_screen. subject_angle=back. Stable readable framing built from the beat requirement. Re...",
     "shot_notes": "The Woodman enters the chamber and encounters the manifestation",
     "evidence_refs": [
       {
@@ -177,13 +179,30 @@
       "the_great_oz | [CH003] Chapter III (query appears in paragraph preview) [CH005] Chapter V (query appears in paragraph preview) [CH006] Chapter VI (query appears in paragraph preview)",
       "palace_of_oz | A grandiose emerald-themed sovereign residence featuring monumental ceremonial halls and royal audience chambers. The interior is characterized by large-scale chambers designed to accommodate massive, non-human manifestations of the Wizard. |..."
     ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "ceremonial_tableau",
+    "coverage_role": "ceremonial_master",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "normal",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT001",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "normal",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = normal"
+      ]
+    },
     "metadata": {
       "artifact_id": "CH011_SC005_SH001_SHOT_PACKAGE",
       "artifact_type": "shot_package",
       "status": "generated",
-      "source_fingerprint": "cc57e03598508d8e87abb4a1189164367f42d1c1",
+      "source_fingerprint": "c663f84314a1f752d8f754b631c48e5e65e0fecc",
       "created_at_utc": "2026-04-27T17:11:07.841763+00:00",
-      "updated_at_utc": "2026-04-27T17:11:07.841763+00:00",
+      "updated_at_utc": "2026-04-27T20:54:46.852378+00:00",
       "upstream_dependencies": [
         {
           "dependency_type": "scene_contract",
@@ -198,7 +217,7 @@
         {
           "dependency_type": "shot_blueprints",
           "dependency_id": "CH011_SC005",
-          "version": "efb273dda10e1fb6598ec15c481d448a9c685e97"
+          "version": "ad96eb87f691d395188ed9c94b7655ef2307f3a9"
         }
       ],
       "locked_fields": {},
@@ -208,6 +227,16 @@
           "timestamp_utc": "2026-04-27T17:12:30.132133+00:00",
           "action": "synthesized",
           "source_fingerprint": "cc57e03598508d8e87abb4a1189164367f42d1c1"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:53:49.354996+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "c663f84314a1f752d8f754b631c48e5e65e0fecc"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:47.308407+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "c663f84314a1f752d8f754b631c48e5e65e0fecc"
         }
       ]
     }
@@ -219,6 +248,1196 @@
     "shot_order": 2,
     "previous_shot_id": "SH001",
     "next_shot_id": "SH003",
+    "primary_subject": "tin_woodman",
+    "secondary_subjects": [
+      "the_great_oz"
+    ],
+    "shot_moment_summary": "The Woodman enters the chamber and encounters the manifestation",
+    "start_state": "walking into palace_of_oz",
+    "end_state": "stopping before the throne",
+    "action_during_shot": "The Woodman enters the chamber and encounters the manifestation",
+    "action_continues_from": "tin_woodman walking toward center",
+    "action_hands_off_to": "BT002",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "tin_woodman",
+    "visible_secondary_subject_ids": [
+      "the_great_oz"
+    ],
+    "primary_subject_frame_position": "foreground right within central_audience_floor",
+    "primary_subject_scale_relation": "preserve readable body-to-environment scale in frame",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "walking into palace_of_oz",
+    "subject_relation_summary": "tin_woodman plays against the_great_oz in the same frame",
+    "required_environment_anchor_1": "central_audience_floor",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "preserve readable body-to-environment scale in frame",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "center aisle toward throne",
+      "central_audience_floor",
+      "tin_woodman remains readable within the active playing space.",
+      "the_great_oz remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the central_audience_floor.",
+      "Background depth should keep palace_of_oz legible as the location anchor.",
+      "Subject 1: tin_woodman remains visually readable against the environment scale.",
+      "Subject 2: the_great_oz remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "tin_woodman focuses toward the active scene action."
+    ],
+    "environment_subzone": "central_audience_floor",
+    "key_visible_environment_features": [
+      "central_audience_floor",
+      "Chapter-local environment alias match for 'The Throne Room/Audience Chamber' (key_overlap=0, label_overlap=2, context..."
+    ],
+    "continuity_from_previous_shot": "tin_woodman walking toward center",
+    "continuity_to_next_shot": "BT002",
+    "pose_anchor_frame": "walking into palace_of_oz",
+    "pose_end_frame": "stopping before the throne",
+    "shot_title": "Authority Single 2: The Woodman enters the chamber and encounters the m...",
+    "shot_type": "authority_single",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in palace_of_oz featuring tin_woodman, the_great_oz.",
+    "target_seconds": 6.5,
+    "characters_in_frame": [
+      {
+        "label": "Tin Woodman",
+        "canonical_id": "tin_woodman",
+        "display_name": "tin_woodman",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH011/tin_woodman.md",
+        "notes": "Direct registry match for 'tin_woodman'."
+      },
+      {
+        "label": "The Great Oz (Terrible Beast)",
+        "canonical_id": "the_great_oz",
+        "display_name": "the_great_oz",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH011/the_great_oz.md",
+        "notes": "Direct registry match for 'the_great_oz'."
+      }
+    ],
+    "environment": {
+      "label": "The Throne Room/Audience Chamber",
+      "canonical_id": "palace_of_oz",
+      "display_name": "palace_of_oz",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 56,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH011/palace_of_oz.md",
+      "notes": "Chapter-local environment alias match for 'The Throne Room/Audience Chamber' (key_overlap=0, label_overlap=2, context_overlap=4)."
+    },
+    "beat_ids": [
+      "BT001"
+    ],
+    "continuity_constraints": [
+      "Sound design synchronization for the_great_oz roar/growl",
+      "Metallic texture and articulation of tin_woodman",
+      "The Woodman enters the chamber and encounters the manifestation"
+    ],
+    "prompt_seed": "Authority Single 2: The Woodman enters the chamber and encounters the m.... authority_single. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat...",
+    "shot_notes": "The Woodman enters the chamber and encounters the manifestation",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH011_SC005"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC005"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC005"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC005"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC005"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC005"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH011",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH011_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH011",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH011_chapter_xi.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH015",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH015_chapter_xv.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH006",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH006_chapter_vi.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH011",
+        "canonical_id": "tin_woodman"
+      }
+    ],
+    "evidence_summary": [
+      "Establish the third manifestation of Oz as a terrifying entity to create high stakes for the Tin Woodman. The interaction must transition from overwhelming intimidation through the Beast's presence to the Woodman's internal resolve following a conditional p...",
+      "The Tin Woodman meets the Wizard, who appears as a Terrible Beast. He promises a heart if the Woodman helps Dorothy kill the Witch.",
+      "Intimidation $\\rightarrow$ Resolve.",
+      "tin_woodman enters the vast, intimidating palace space facing a massive presence.",
+      "tin_woodman stands firm with newfound purpose after receiving a conditional promise.",
+      "The Woodman negotiates for a heart by accepting a dangerous mission.",
+      "tin_woodman | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH005/tin_woodman.md] Costume/Silhouette: Entirely metallic (tin) body; carries an axe. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis...",
+      "the_great_oz | [CH003] Chapter III (query appears in paragraph preview) [CH005] Chapter V (query appears in paragraph preview) [CH006] Chapter VI (query appears in paragraph preview)",
+      "palace_of_oz | A grandiose emerald-themed sovereign residence featuring monumental ceremonial halls and royal audience chambers. The interior is characterized by large-scale chambers designed to accommodate massive, non-human manifestations of the Wizard. |..."
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "ceremonial_tableau",
+    "coverage_role": "authority_single",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "normal",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT001",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "normal",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = normal"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH011_SC005_SH002_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "c663f84314a1f752d8f754b631c48e5e65e0fecc",
+      "created_at_utc": "2026-04-27T17:12:30.133132+00:00",
+      "updated_at_utc": "2026-04-27T20:54:47.314407+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH011_SC005",
+          "version": "de52c6baf1920f3ad6aebdf1e240a30fad794929"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH011_SC005",
+          "version": "38a98b8a7f43d0c915c3b20217b58ebd73230e15"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH011_SC005",
+          "version": "ad96eb87f691d395188ed9c94b7655ef2307f3a9"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T17:13:44.625904+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "cc57e03598508d8e87abb4a1189164367f42d1c1"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:53:49.361496+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "c663f84314a1f752d8f754b631c48e5e65e0fecc"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:47.315407+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "c663f84314a1f752d8f754b631c48e5e65e0fecc"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH003",
+    "scene_id": "CH011_SC005",
+    "chapter_id": "CH011",
+    "shot_order": 3,
+    "previous_shot_id": "SH002",
+    "next_shot_id": "SH004",
+    "primary_subject": "tin_woodman",
+    "secondary_subjects": [
+      "the_great_oz"
+    ],
+    "shot_moment_summary": "The Woodman enters the chamber and encounters the manifestation",
+    "start_state": "walking into palace_of_oz",
+    "end_state": "stopping before the throne",
+    "action_during_shot": "The Woodman enters the chamber and encounters the manifestation",
+    "action_continues_from": "stopping before the throne",
+    "action_hands_off_to": "BT002",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "tin_woodman",
+    "visible_secondary_subject_ids": [
+      "the_great_oz"
+    ],
+    "primary_subject_frame_position": "foreground right within central_audience_floor",
+    "primary_subject_scale_relation": "preserve readable body-to-environment scale in frame",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "walking into palace_of_oz",
+    "subject_relation_summary": "tin_woodman plays against the_great_oz in the same frame",
+    "required_environment_anchor_1": "central_audience_floor",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "preserve readable body-to-environment scale in frame",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "center aisle toward throne",
+      "central_audience_floor",
+      "tin_woodman remains readable within the active playing space.",
+      "the_great_oz remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the central_audience_floor.",
+      "Background depth should keep palace_of_oz legible as the location anchor.",
+      "Subject 1: tin_woodman remains visually readable against the environment scale.",
+      "Subject 2: the_great_oz remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "tin_woodman focuses toward the active scene action."
+    ],
+    "environment_subzone": "central_audience_floor",
+    "key_visible_environment_features": [
+      "central_audience_floor",
+      "Chapter-local environment alias match for 'The Throne Room/Audience Chamber' (key_overlap=0, label_overlap=2, context..."
+    ],
+    "continuity_from_previous_shot": "stopping before the throne",
+    "continuity_to_next_shot": "BT002",
+    "pose_anchor_frame": "walking into palace_of_oz",
+    "pose_end_frame": "stopping before the throne",
+    "shot_title": "Petitioner Group 3: The Woodman enters the chamber and encounters the m...",
+    "shot_type": "petitioner_group",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in palace_of_oz featuring tin_woodman, the_great_oz.",
+    "target_seconds": 6.5,
+    "characters_in_frame": [
+      {
+        "label": "Tin Woodman",
+        "canonical_id": "tin_woodman",
+        "display_name": "tin_woodman",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH011/tin_woodman.md",
+        "notes": "Direct registry match for 'tin_woodman'."
+      },
+      {
+        "label": "The Great Oz (Terrible Beast)",
+        "canonical_id": "the_great_oz",
+        "display_name": "the_great_oz",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH011/the_great_oz.md",
+        "notes": "Direct registry match for 'the_great_oz'."
+      }
+    ],
+    "environment": {
+      "label": "The Throne Room/Audience Chamber",
+      "canonical_id": "palace_of_oz",
+      "display_name": "palace_of_oz",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 56,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH011/palace_of_oz.md",
+      "notes": "Chapter-local environment alias match for 'The Throne Room/Audience Chamber' (key_overlap=0, label_overlap=2, context_overlap=4)."
+    },
+    "beat_ids": [
+      "BT001"
+    ],
+    "continuity_constraints": [
+      "Sound design synchronization for the_great_oz roar/growl",
+      "Metallic texture and articulation of tin_woodman",
+      "The Woodman enters the chamber and encounters the manifestation"
+    ],
+    "prompt_seed": "Petitioner Group 3: The Woodman enters the chamber and encounters the m.... petitioner_group. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat...",
+    "shot_notes": "The Woodman enters the chamber and encounters the manifestation",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH011_SC005"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC005"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC005"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC005"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC005"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC005"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH011",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH011_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH011",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH011_chapter_xi.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH015",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH015_chapter_xv.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH006",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH006_chapter_vi.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH011",
+        "canonical_id": "tin_woodman"
+      }
+    ],
+    "evidence_summary": [
+      "Establish the third manifestation of Oz as a terrifying entity to create high stakes for the Tin Woodman. The interaction must transition from overwhelming intimidation through the Beast's presence to the Woodman's internal resolve following a conditional p...",
+      "The Tin Woodman meets the Wizard, who appears as a Terrible Beast. He promises a heart if the Woodman helps Dorothy kill the Witch.",
+      "Intimidation $\\rightarrow$ Resolve.",
+      "tin_woodman enters the vast, intimidating palace space facing a massive presence.",
+      "tin_woodman stands firm with newfound purpose after receiving a conditional promise.",
+      "The Woodman negotiates for a heart by accepting a dangerous mission.",
+      "tin_woodman | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH005/tin_woodman.md] Costume/Silhouette: Entirely metallic (tin) body; carries an axe. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis...",
+      "the_great_oz | [CH003] Chapter III (query appears in paragraph preview) [CH005] Chapter V (query appears in paragraph preview) [CH006] Chapter VI (query appears in paragraph preview)",
+      "palace_of_oz | A grandiose emerald-themed sovereign residence featuring monumental ceremonial halls and royal audience chambers. The interior is characterized by large-scale chambers designed to accommodate massive, non-human manifestations of the Wizard. |..."
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "ceremonial_tableau",
+    "coverage_role": "petitioner_group",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "normal",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT001",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "normal",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = normal"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH011_SC005_SH003_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "c663f84314a1f752d8f754b631c48e5e65e0fecc",
+      "created_at_utc": "2026-04-27T17:13:44.626907+00:00",
+      "updated_at_utc": "2026-04-27T20:54:47.320415+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH011_SC005",
+          "version": "de52c6baf1920f3ad6aebdf1e240a30fad794929"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH011_SC005",
+          "version": "38a98b8a7f43d0c915c3b20217b58ebd73230e15"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH011_SC005",
+          "version": "ad96eb87f691d395188ed9c94b7655ef2307f3a9"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T17:14:59.029811+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "cc57e03598508d8e87abb4a1189164367f42d1c1"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:53:49.368004+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "c663f84314a1f752d8f754b631c48e5e65e0fecc"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:47.321417+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "c663f84314a1f752d8f754b631c48e5e65e0fecc"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH004",
+    "scene_id": "CH011_SC005",
+    "chapter_id": "CH011",
+    "shot_order": 4,
+    "previous_shot_id": "SH003",
+    "next_shot_id": "SH005",
+    "primary_subject": "tin_woodman",
+    "secondary_subjects": [
+      "the_great_oz"
+    ],
+    "shot_moment_summary": "The Woodman enters the chamber and encounters the manifestation",
+    "start_state": "walking into palace_of_oz",
+    "end_state": "stopping before the throne",
+    "action_during_shot": "The Woodman enters the chamber and encounters the manifestation",
+    "action_continues_from": "stopping before the throne",
+    "action_hands_off_to": "BT002",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "tin_woodman",
+    "visible_secondary_subject_ids": [
+      "the_great_oz"
+    ],
+    "primary_subject_frame_position": "foreground right within central_audience_floor",
+    "primary_subject_scale_relation": "preserve readable body-to-environment scale in frame",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "walking into palace_of_oz",
+    "subject_relation_summary": "tin_woodman plays against the_great_oz in the same frame",
+    "required_environment_anchor_1": "central_audience_floor",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "preserve readable body-to-environment scale in frame",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "center aisle toward throne",
+      "central_audience_floor",
+      "tin_woodman remains readable within the active playing space.",
+      "the_great_oz remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the central_audience_floor.",
+      "Background depth should keep palace_of_oz legible as the location anchor.",
+      "Subject 1: tin_woodman remains visually readable against the environment scale.",
+      "Subject 2: the_great_oz remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "tin_woodman focuses toward the active scene action."
+    ],
+    "environment_subzone": "central_audience_floor",
+    "key_visible_environment_features": [
+      "central_audience_floor",
+      "Chapter-local environment alias match for 'The Throne Room/Audience Chamber' (key_overlap=0, label_overlap=2, context..."
+    ],
+    "continuity_from_previous_shot": "stopping before the throne",
+    "continuity_to_next_shot": "BT002",
+    "pose_anchor_frame": "walking into palace_of_oz",
+    "pose_end_frame": "stopping before the throne",
+    "shot_title": "Crowd Response 4: The Woodman enters the chamber and encounters the m...",
+    "shot_type": "crowd_response",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in palace_of_oz featuring tin_woodman, the_great_oz.",
+    "target_seconds": 6.5,
+    "characters_in_frame": [
+      {
+        "label": "Tin Woodman",
+        "canonical_id": "tin_woodman",
+        "display_name": "tin_woodman",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH011/tin_woodman.md",
+        "notes": "Direct registry match for 'tin_woodman'."
+      },
+      {
+        "label": "The Great Oz (Terrible Beast)",
+        "canonical_id": "the_great_oz",
+        "display_name": "the_great_oz",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH011/the_great_oz.md",
+        "notes": "Direct registry match for 'the_great_oz'."
+      }
+    ],
+    "environment": {
+      "label": "The Throne Room/Audience Chamber",
+      "canonical_id": "palace_of_oz",
+      "display_name": "palace_of_oz",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 56,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH011/palace_of_oz.md",
+      "notes": "Chapter-local environment alias match for 'The Throne Room/Audience Chamber' (key_overlap=0, label_overlap=2, context_overlap=4)."
+    },
+    "beat_ids": [
+      "BT001"
+    ],
+    "continuity_constraints": [
+      "Sound design synchronization for the_great_oz roar/growl",
+      "Metallic texture and articulation of tin_woodman",
+      "The Woodman enters the chamber and encounters the manifestation"
+    ],
+    "prompt_seed": "Crowd Response 4: The Woodman enters the chamber and encounters the m.... crowd_response. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat req...",
+    "shot_notes": "The Woodman enters the chamber and encounters the manifestation",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH011_SC005"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC005"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC005"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC005"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC005"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC005"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH011",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH011_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH011",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH011_chapter_xi.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH015",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH015_chapter_xv.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH006",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH006_chapter_vi.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH011",
+        "canonical_id": "tin_woodman"
+      }
+    ],
+    "evidence_summary": [
+      "Establish the third manifestation of Oz as a terrifying entity to create high stakes for the Tin Woodman. The interaction must transition from overwhelming intimidation through the Beast's presence to the Woodman's internal resolve following a conditional p...",
+      "The Tin Woodman meets the Wizard, who appears as a Terrible Beast. He promises a heart if the Woodman helps Dorothy kill the Witch.",
+      "Intimidation $\\rightarrow$ Resolve.",
+      "tin_woodman enters the vast, intimidating palace space facing a massive presence.",
+      "tin_woodman stands firm with newfound purpose after receiving a conditional promise.",
+      "The Woodman negotiates for a heart by accepting a dangerous mission.",
+      "tin_woodman | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH005/tin_woodman.md] Costume/Silhouette: Entirely metallic (tin) body; carries an axe. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis...",
+      "the_great_oz | [CH003] Chapter III (query appears in paragraph preview) [CH005] Chapter V (query appears in paragraph preview) [CH006] Chapter VI (query appears in paragraph preview)",
+      "palace_of_oz | A grandiose emerald-themed sovereign residence featuring monumental ceremonial halls and royal audience chambers. The interior is characterized by large-scale chambers designed to accommodate massive, non-human manifestations of the Wizard. |..."
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "ceremonial_tableau",
+    "coverage_role": "crowd_response",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "normal",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT001",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "normal",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = normal"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH011_SC005_SH004_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "c663f84314a1f752d8f754b631c48e5e65e0fecc",
+      "created_at_utc": "2026-04-27T20:53:49.369004+00:00",
+      "updated_at_utc": "2026-04-27T20:54:47.326418+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH011_SC005",
+          "version": "de52c6baf1920f3ad6aebdf1e240a30fad794929"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH011_SC005",
+          "version": "38a98b8a7f43d0c915c3b20217b58ebd73230e15"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH011_SC005",
+          "version": "ad96eb87f691d395188ed9c94b7655ef2307f3a9"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:53:49.370008+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "c663f84314a1f752d8f754b631c48e5e65e0fecc"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:47.326918+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "c663f84314a1f752d8f754b631c48e5e65e0fecc"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH005",
+    "scene_id": "CH011_SC005",
+    "chapter_id": "CH011",
+    "shot_order": 5,
+    "previous_shot_id": "SH004",
+    "next_shot_id": "SH006",
+    "primary_subject": "tin_woodman",
+    "secondary_subjects": [
+      "the_great_oz"
+    ],
+    "shot_moment_summary": "The Woodman enters the chamber and encounters the manifestation",
+    "start_state": "walking into palace_of_oz",
+    "end_state": "stopping before the throne",
+    "action_during_shot": "The Woodman enters the chamber and encounters the manifestation",
+    "action_continues_from": "stopping before the throne",
+    "action_hands_off_to": "BT002",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "tin_woodman",
+    "visible_secondary_subject_ids": [
+      "the_great_oz"
+    ],
+    "primary_subject_frame_position": "foreground right within central_audience_floor",
+    "primary_subject_scale_relation": "preserve readable body-to-environment scale in frame",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "walking into palace_of_oz",
+    "subject_relation_summary": "tin_woodman plays against the_great_oz in the same frame",
+    "required_environment_anchor_1": "central_audience_floor",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "preserve readable body-to-environment scale in frame",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "center aisle toward throne",
+      "central_audience_floor",
+      "tin_woodman remains readable within the active playing space.",
+      "the_great_oz remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the central_audience_floor.",
+      "Background depth should keep palace_of_oz legible as the location anchor.",
+      "Subject 1: tin_woodman remains visually readable against the environment scale.",
+      "Subject 2: the_great_oz remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "tin_woodman focuses toward the active scene action."
+    ],
+    "environment_subzone": "central_audience_floor",
+    "key_visible_environment_features": [
+      "central_audience_floor",
+      "Chapter-local environment alias match for 'The Throne Room/Audience Chamber' (key_overlap=0, label_overlap=2, context..."
+    ],
+    "continuity_from_previous_shot": "stopping before the throne",
+    "continuity_to_next_shot": "BT002",
+    "pose_anchor_frame": "walking into palace_of_oz",
+    "pose_end_frame": "stopping before the throne",
+    "shot_title": "Symbol Insert 5: The Woodman enters the chamber and encounters the m...",
+    "shot_type": "symbol_insert",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in palace_of_oz featuring tin_woodman, the_great_oz.",
+    "target_seconds": 5.0,
+    "characters_in_frame": [
+      {
+        "label": "Tin Woodman",
+        "canonical_id": "tin_woodman",
+        "display_name": "tin_woodman",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH011/tin_woodman.md",
+        "notes": "Direct registry match for 'tin_woodman'."
+      },
+      {
+        "label": "The Great Oz (Terrible Beast)",
+        "canonical_id": "the_great_oz",
+        "display_name": "the_great_oz",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH011/the_great_oz.md",
+        "notes": "Direct registry match for 'the_great_oz'."
+      }
+    ],
+    "environment": {
+      "label": "The Throne Room/Audience Chamber",
+      "canonical_id": "palace_of_oz",
+      "display_name": "palace_of_oz",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 56,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH011/palace_of_oz.md",
+      "notes": "Chapter-local environment alias match for 'The Throne Room/Audience Chamber' (key_overlap=0, label_overlap=2, context_overlap=4)."
+    },
+    "beat_ids": [
+      "BT001"
+    ],
+    "continuity_constraints": [
+      "Sound design synchronization for the_great_oz roar/growl",
+      "Metallic texture and articulation of tin_woodman",
+      "The Woodman enters the chamber and encounters the manifestation"
+    ],
+    "prompt_seed": "Symbol Insert 5: The Woodman enters the chamber and encounters the m.... symbol_insert. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requi...",
+    "shot_notes": "The Woodman enters the chamber and encounters the manifestation",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH011_SC005"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC005"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC005"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC005"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC005"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC005"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH011",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH011_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH011",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH011_chapter_xi.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH015",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH015_chapter_xv.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH006",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH006_chapter_vi.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH011",
+        "canonical_id": "tin_woodman"
+      }
+    ],
+    "evidence_summary": [
+      "Establish the third manifestation of Oz as a terrifying entity to create high stakes for the Tin Woodman. The interaction must transition from overwhelming intimidation through the Beast's presence to the Woodman's internal resolve following a conditional p...",
+      "The Tin Woodman meets the Wizard, who appears as a Terrible Beast. He promises a heart if the Woodman helps Dorothy kill the Witch.",
+      "Intimidation $\\rightarrow$ Resolve.",
+      "tin_woodman enters the vast, intimidating palace space facing a massive presence.",
+      "tin_woodman stands firm with newfound purpose after receiving a conditional promise.",
+      "The Woodman negotiates for a heart by accepting a dangerous mission.",
+      "tin_woodman | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH005/tin_woodman.md] Costume/Silhouette: Entirely metallic (tin) body; carries an axe. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis...",
+      "the_great_oz | [CH003] Chapter III (query appears in paragraph preview) [CH005] Chapter V (query appears in paragraph preview) [CH006] Chapter VI (query appears in paragraph preview)",
+      "palace_of_oz | A grandiose emerald-themed sovereign residence featuring monumental ceremonial halls and royal audience chambers. The interior is characterized by large-scale chambers designed to accommodate massive, non-human manifestations of the Wizard. |..."
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "ceremonial_tableau",
+    "coverage_role": "symbol_insert",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "normal",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT001",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "normal",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = normal"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH011_SC005_SH005_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "c663f84314a1f752d8f754b631c48e5e65e0fecc",
+      "created_at_utc": "2026-04-27T20:53:49.371014+00:00",
+      "updated_at_utc": "2026-04-27T20:54:47.331917+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH011_SC005",
+          "version": "de52c6baf1920f3ad6aebdf1e240a30fad794929"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH011_SC005",
+          "version": "38a98b8a7f43d0c915c3b20217b58ebd73230e15"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH011_SC005",
+          "version": "ad96eb87f691d395188ed9c94b7655ef2307f3a9"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:53:49.371515+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "c663f84314a1f752d8f754b631c48e5e65e0fecc"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:47.332917+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "c663f84314a1f752d8f754b631c48e5e65e0fecc"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH006",
+    "scene_id": "CH011_SC005",
+    "chapter_id": "CH011",
+    "shot_order": 6,
+    "previous_shot_id": "SH005",
+    "next_shot_id": "SH007",
+    "primary_subject": "tin_woodman",
+    "secondary_subjects": [
+      "the_great_oz"
+    ],
+    "shot_moment_summary": "The Woodman enters the chamber and encounters the manifestation",
+    "start_state": "walking into palace_of_oz",
+    "end_state": "stopping before the throne",
+    "action_during_shot": "The Woodman enters the chamber and encounters the manifestation",
+    "action_continues_from": "stopping before the throne",
+    "action_hands_off_to": "BT002",
+    "shot_size": "close_up",
+    "camera_angle": "eye_level",
+    "lens_family": "portrait",
+    "camera_motion": "push_in",
+    "zoom_behavior": "subtle_in",
+    "focus_strategy": "shallow_subject",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "tin_woodman",
+    "visible_secondary_subject_ids": [
+      "the_great_oz"
+    ],
+    "primary_subject_frame_position": "foreground inside central_audience_floor",
+    "primary_subject_scale_relation": "preserve readable body-to-environment scale in frame",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "walking into palace_of_oz",
+    "subject_relation_summary": "tin_woodman plays against the_great_oz in the same frame",
+    "required_environment_anchor_1": "central_audience_floor",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "preserve readable body-to-environment scale in frame",
+    "camera_package_description": "close-up, eye level, portrait lens, push in, zoom subtle in, shallow subject, hard directional",
+    "subject_blocking": [
+      "center aisle toward throne",
+      "central_audience_floor",
+      "tin_woodman remains readable within the active playing space.",
+      "the_great_oz remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the central_audience_floor.",
+      "Background depth should keep palace_of_oz legible as the location anchor.",
+      "Subject 1: tin_woodman remains visually readable against the environment scale.",
+      "Subject 2: the_great_oz remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "tin_woodman focuses toward the active scene action."
+    ],
+    "environment_subzone": "central_audience_floor",
+    "key_visible_environment_features": [
+      "central_audience_floor",
+      "Chapter-local environment alias match for 'The Throne Room/Audience Chamber' (key_overlap=0, label_overlap=2, context..."
+    ],
+    "continuity_from_previous_shot": "stopping before the throne",
+    "continuity_to_next_shot": "BT002",
+    "pose_anchor_frame": "walking into palace_of_oz",
+    "pose_end_frame": "stopping before the throne",
+    "shot_title": "Reaction Closeup 6: The Woodman enters the chamber and encounters the m...",
+    "shot_type": "reaction_closeup",
+    "camera_description": "Close framing that isolates reaction and emotional emphasis.",
+    "composition": "Intimate composition that isolates tin_woodman, the_great_oz against palace_of_oz to capture the beat's emotional turn.",
+    "target_seconds": 6.5,
+    "characters_in_frame": [
+      {
+        "label": "Tin Woodman",
+        "canonical_id": "tin_woodman",
+        "display_name": "tin_woodman",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH011/tin_woodman.md",
+        "notes": "Direct registry match for 'tin_woodman'."
+      },
+      {
+        "label": "The Great Oz (Terrible Beast)",
+        "canonical_id": "the_great_oz",
+        "display_name": "the_great_oz",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH011/the_great_oz.md",
+        "notes": "Direct registry match for 'the_great_oz'."
+      }
+    ],
+    "environment": {
+      "label": "The Throne Room/Audience Chamber",
+      "canonical_id": "palace_of_oz",
+      "display_name": "palace_of_oz",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 56,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH011/palace_of_oz.md",
+      "notes": "Chapter-local environment alias match for 'The Throne Room/Audience Chamber' (key_overlap=0, label_overlap=2, context_overlap=4)."
+    },
+    "beat_ids": [
+      "BT001"
+    ],
+    "continuity_constraints": [
+      "Sound design synchronization for the_great_oz roar/growl",
+      "Metallic texture and articulation of tin_woodman",
+      "The Woodman enters the chamber and encounters the manifestation"
+    ],
+    "prompt_seed": "Reaction Closeup 6: The Woodman enters the chamber and encounters the m.... reaction_closeup. size=close_up. angle=eye_level. lens=portrait. motion=push_in. zoom=subtle_in. focus=shallow_subject. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Close framing that isolates reac...",
+    "shot_notes": "The Woodman enters the chamber and encounters the manifestation",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH011_SC005"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC005"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC005"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC005"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC005"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC005"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH011",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH011_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH011",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH011_chapter_xi.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH015",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH015_chapter_xv.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH006",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH006_chapter_vi.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH011",
+        "canonical_id": "tin_woodman"
+      }
+    ],
+    "evidence_summary": [
+      "Establish the third manifestation of Oz as a terrifying entity to create high stakes for the Tin Woodman. The interaction must transition from overwhelming intimidation through the Beast's presence to the Woodman's internal resolve following a conditional p...",
+      "The Tin Woodman meets the Wizard, who appears as a Terrible Beast. He promises a heart if the Woodman helps Dorothy kill the Witch.",
+      "Intimidation $\\rightarrow$ Resolve.",
+      "tin_woodman enters the vast, intimidating palace space facing a massive presence.",
+      "tin_woodman stands firm with newfound purpose after receiving a conditional promise.",
+      "The Woodman negotiates for a heart by accepting a dangerous mission.",
+      "tin_woodman | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH005/tin_woodman.md] Costume/Silhouette: Entirely metallic (tin) body; carries an axe. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis...",
+      "the_great_oz | [CH003] Chapter III (query appears in paragraph preview) [CH005] Chapter V (query appears in paragraph preview) [CH006] Chapter VI (query appears in paragraph preview)",
+      "palace_of_oz | A grandiose emerald-themed sovereign residence featuring monumental ceremonial halls and royal audience chambers. The interior is characterized by large-scale chambers designed to accommodate massive, non-human manifestations of the Wizard. |..."
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "ceremonial_tableau",
+    "coverage_role": "decision_closeup",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "normal",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT001",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "normal",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = normal"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH011_SC005_SH006_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "c663f84314a1f752d8f754b631c48e5e65e0fecc",
+      "created_at_utc": "2026-04-27T20:53:49.372513+00:00",
+      "updated_at_utc": "2026-04-27T20:54:47.337923+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH011_SC005",
+          "version": "de52c6baf1920f3ad6aebdf1e240a30fad794929"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH011_SC005",
+          "version": "38a98b8a7f43d0c915c3b20217b58ebd73230e15"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH011_SC005",
+          "version": "ad96eb87f691d395188ed9c94b7655ef2307f3a9"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:53:49.373015+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "c663f84314a1f752d8f754b631c48e5e65e0fecc"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:47.338422+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "c663f84314a1f752d8f754b631c48e5e65e0fecc"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH007",
+    "scene_id": "CH011_SC005",
+    "chapter_id": "CH011",
+    "shot_order": 7,
+    "previous_shot_id": "SH006",
+    "next_shot_id": "SH008",
     "primary_subject": "the_great_oz",
     "secondary_subjects": [
       "tin_woodman"
@@ -227,7 +1446,7 @@
     "start_state": "low angle on throne",
     "end_state": "beast feature detail",
     "action_during_shot": "roaring",
-    "action_continues_from": "tin_woodman walking toward center",
+    "action_continues_from": "stopping before the throne",
     "action_hands_off_to": "BT003",
     "shot_size": "close_up",
     "camera_angle": "low_angle",
@@ -271,17 +1490,18 @@
     ],
     "environment_subzone": "throne_platform",
     "key_visible_environment_features": [
-      "throne_platform"
+      "throne_platform",
+      "Chapter-local environment alias match for 'The Throne Room/Audience Chamber' (key_overlap=0, label_overlap=2, context..."
     ],
-    "continuity_from_previous_shot": "tin_woodman walking toward center",
+    "continuity_from_previous_shot": "stopping before the throne",
     "continuity_to_next_shot": "BT003",
     "pose_anchor_frame": "low angle on throne",
     "pose_end_frame": "beast feature detail",
-    "shot_title": "Reaction Closeup 2: The Great Oz intimidates the Woodman",
-    "shot_type": "reaction_closeup",
-    "camera_description": "Close framing that isolates reaction and emotional emphasis.",
-    "composition": "Intimate composition that isolates the_great_oz, tin_woodman against palace_of_oz to capture the beat's emotional turn.",
-    "target_seconds": 5.3,
+    "shot_title": "Handoff Medium 7: The Great Oz intimidates the Woodman through beastl...",
+    "shot_type": "handoff_medium",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in palace_of_oz featuring the_great_oz, tin_woodman.",
+    "target_seconds": 7.0,
     "characters_in_frame": [
       {
         "label": "The Great Oz (Terrible Beast)",
@@ -322,7 +1542,7 @@
       "Metallic texture and articulation of tin_woodman",
       "The Great Oz intimidates the Woodman through beastly manifestation"
     ],
-    "prompt_seed": "Reaction Closeup 2: The Great Oz intimidates the Woodman through beastl.... reaction_closeup. size=close_up. angle=low_angle. lens=telephoto. motion=locked_off. zoom=strong_in. focus=shallow_subject. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Close framing that isolates...",
+    "prompt_seed": "Handoff Medium 7: The Great Oz intimidates the Woodman through beastl.... handoff_medium. size=close_up. angle=low_angle. lens=telephoto. motion=locked_off. zoom=strong_in. focus=shallow_subject. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built fr...",
     "shot_notes": "The Great Oz intimidates the Woodman through beastly manifestation",
     "evidence_refs": [
       {
@@ -391,13 +1611,29 @@
       "the_great_oz | [CH003] Chapter III (query appears in paragraph preview) [CH005] Chapter V (query appears in paragraph preview) [CH006] Chapter VI (query appears in paragraph preview)",
       "palace_of_oz | A grandiose emerald-themed sovereign residence featuring monumental ceremonial halls and royal audience chambers. The interior is characterized by large-scale chambers designed to accommodate massive, non-human manifestations of the Wizard. |..."
     ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "ceremonial_tableau",
+    "coverage_role": "handoff_medium",
+    "beat_type": "transition_handoff",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT002",
+      "beat_type": "transition_handoff",
+      "importance": "major",
+      "confidence": 0.55,
+      "reasons": [
+        "importance = major"
+      ]
+    },
     "metadata": {
-      "artifact_id": "CH011_SC005_SH002_SHOT_PACKAGE",
+      "artifact_id": "CH011_SC005_SH007_SHOT_PACKAGE",
       "artifact_type": "shot_package",
       "status": "generated",
-      "source_fingerprint": "cc57e03598508d8e87abb4a1189164367f42d1c1",
-      "created_at_utc": "2026-04-27T17:12:30.133132+00:00",
-      "updated_at_utc": "2026-04-27T17:12:30.133132+00:00",
+      "source_fingerprint": "c663f84314a1f752d8f754b631c48e5e65e0fecc",
+      "created_at_utc": "2026-04-27T20:53:49.374013+00:00",
+      "updated_at_utc": "2026-04-27T20:54:47.343930+00:00",
       "upstream_dependencies": [
         {
           "dependency_type": "scene_contract",
@@ -412,27 +1648,267 @@
         {
           "dependency_type": "shot_blueprints",
           "dependency_id": "CH011_SC005",
-          "version": "efb273dda10e1fb6598ec15c481d448a9c685e97"
+          "version": "ad96eb87f691d395188ed9c94b7655ef2307f3a9"
         }
       ],
       "locked_fields": {},
       "manual_overrides": {},
       "revision_history": [
         {
-          "timestamp_utc": "2026-04-27T17:13:44.625904+00:00",
+          "timestamp_utc": "2026-04-27T20:53:49.375013+00:00",
           "action": "synthesized",
-          "source_fingerprint": "cc57e03598508d8e87abb4a1189164367f42d1c1"
+          "source_fingerprint": "c663f84314a1f752d8f754b631c48e5e65e0fecc"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:47.344428+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "c663f84314a1f752d8f754b631c48e5e65e0fecc"
         }
       ]
     }
   },
   {
-    "shot_id": "SH003",
+    "shot_id": "SH008",
     "scene_id": "CH011_SC005",
     "chapter_id": "CH011",
-    "shot_order": 3,
-    "previous_shot_id": "SH002",
-    "next_shot_id": "",
+    "shot_order": 8,
+    "previous_shot_id": "SH007",
+    "next_shot_id": "SH009",
+    "primary_subject": "the_great_oz",
+    "secondary_subjects": [
+      "tin_woodman"
+    ],
+    "shot_moment_summary": "The Great Oz intimidates the Woodman through beastly manifestation",
+    "start_state": "the_great_oz roars",
+    "end_state": "tin_woodman recoils/waits",
+    "action_during_shot": "The Great Oz intimidates the Woodman through beastly manifestation",
+    "action_continues_from": "beast feature detail",
+    "action_hands_off_to": "BT003",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "the_great_oz",
+    "visible_secondary_subject_ids": [
+      "tin_woodman"
+    ],
+    "primary_subject_frame_position": "foreground right within throne_platform",
+    "primary_subject_scale_relation": "preserve readable body-to-environment scale in frame",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "the_great_oz roars",
+    "subject_relation_summary": "the_great_oz plays against tin_woodman in the same frame",
+    "required_environment_anchor_1": "throne_platform",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "preserve readable body-to-environment scale in frame",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "beast looming over woodman",
+      "throne_platform",
+      "the_great_oz remains readable within the active playing space.",
+      "tin_woodman remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the throne_platform.",
+      "Background depth should keep palace_of_oz legible as the location anchor.",
+      "Subject 1: the_great_oz remains visually readable against the environment scale.",
+      "Subject 2: tin_woodman remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "the_great_oz focuses toward the active scene action."
+    ],
+    "environment_subzone": "throne_platform",
+    "key_visible_environment_features": [
+      "throne_platform",
+      "Chapter-local environment alias match for 'The Throne Room/Audience Chamber' (key_overlap=0, label_overlap=2, context..."
+    ],
+    "continuity_from_previous_shot": "beast feature detail",
+    "continuity_to_next_shot": "BT003",
+    "pose_anchor_frame": "the_great_oz roars",
+    "pose_end_frame": "tin_woodman recoils/waits",
+    "shot_title": "Transition Wide 8: The Great Oz intimidates the Woodman through beastl...",
+    "shot_type": "transition_wide",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in palace_of_oz featuring the_great_oz, tin_woodman.",
+    "target_seconds": 10.8,
+    "characters_in_frame": [
+      {
+        "label": "The Great Oz (Terrible Beast)",
+        "canonical_id": "the_great_oz",
+        "display_name": "the_great_oz",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH011/the_great_oz.md",
+        "notes": "Direct registry match for 'the_great_oz'."
+      },
+      {
+        "label": "Tin Woodman",
+        "canonical_id": "tin_woodman",
+        "display_name": "tin_woodman",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH011/tin_woodman.md",
+        "notes": "Direct registry match for 'tin_woodman'."
+      }
+    ],
+    "environment": {
+      "label": "The Throne Room/Audience Chamber",
+      "canonical_id": "palace_of_oz",
+      "display_name": "palace_of_oz",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 56,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH011/palace_of_oz.md",
+      "notes": "Chapter-local environment alias match for 'The Throne Room/Audience Chamber' (key_overlap=0, label_overlap=2, context_overlap=4)."
+    },
+    "beat_ids": [
+      "BT002"
+    ],
+    "continuity_constraints": [
+      "Sound design synchronization for the_great_oz roar/growl",
+      "Metallic texture and articulation of tin_woodman",
+      "The Great Oz intimidates the Woodman through beastly manifestation"
+    ],
+    "prompt_seed": "Transition Wide 8: The Great Oz intimidates the Woodman through beastl.... transition_wide. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat r...",
+    "shot_notes": "The Great Oz intimidates the Woodman through beastly manifestation",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH011_SC005"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC005"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC005"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC005"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC005"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC005"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH011",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH011_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH011",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH011_chapter_xi.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH015",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH015_chapter_xv.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH006",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH006_chapter_vi.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH011",
+        "canonical_id": "tin_woodman"
+      }
+    ],
+    "evidence_summary": [
+      "Establish the third manifestation of Oz as a terrifying entity to create high stakes for the Tin Woodman. The interaction must transition from overwhelming intimidation through the Beast's presence to the Woodman's internal resolve following a conditional p...",
+      "The Tin Woodman meets the Wizard, who appears as a Terrible Beast. He promises a heart if the Woodman helps Dorothy kill the Witch.",
+      "Intimidation $\\rightarrow$ Resolve.",
+      "tin_woodman enters the vast, intimidating palace space facing a massive presence.",
+      "tin_woodman stands firm with newfound purpose after receiving a conditional promise.",
+      "The Woodman negotiates for a heart by accepting a dangerous mission.",
+      "tin_woodman | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH005/tin_woodman.md] Costume/Silhouette: Entirely metallic (tin) body; carries an axe. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis...",
+      "the_great_oz | [CH003] Chapter III (query appears in paragraph preview) [CH005] Chapter V (query appears in paragraph preview) [CH006] Chapter VI (query appears in paragraph preview)",
+      "palace_of_oz | A grandiose emerald-themed sovereign residence featuring monumental ceremonial halls and royal audience chambers. The interior is characterized by large-scale chambers designed to accommodate massive, non-human manifestations of the Wizard. |..."
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "ceremonial_tableau",
+    "coverage_role": "transition_wide",
+    "beat_type": "transition_handoff",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT002",
+      "beat_type": "transition_handoff",
+      "importance": "major",
+      "confidence": 0.55,
+      "reasons": [
+        "importance = major"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH011_SC005_SH008_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "c663f84314a1f752d8f754b631c48e5e65e0fecc",
+      "created_at_utc": "2026-04-27T20:53:49.376012+00:00",
+      "updated_at_utc": "2026-04-27T20:54:47.349428+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH011_SC005",
+          "version": "de52c6baf1920f3ad6aebdf1e240a30fad794929"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH011_SC005",
+          "version": "38a98b8a7f43d0c915c3b20217b58ebd73230e15"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH011_SC005",
+          "version": "ad96eb87f691d395188ed9c94b7655ef2307f3a9"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:53:49.376516+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "c663f84314a1f752d8f754b631c48e5e65e0fecc"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:47.349928+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "c663f84314a1f752d8f754b631c48e5e65e0fecc"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH009",
+    "scene_id": "CH011_SC005",
+    "chapter_id": "CH011",
+    "shot_order": 9,
+    "previous_shot_id": "SH008",
+    "next_shot_id": "SH010",
     "primary_subject": "tin_woodman",
     "secondary_subjects": [
       "the_great_oz"
@@ -441,7 +1917,7 @@
     "start_state": "medium shot of woodman",
     "end_state": "close up on woodman face",
     "action_during_shot": "nodding/standing firm",
-    "action_continues_from": "beast feature detail",
+    "action_continues_from": "tin_woodman recoils/waits",
     "action_hands_off_to": "end_scene",
     "shot_size": "medium_close",
     "camera_angle": "eye_level",
@@ -485,17 +1961,18 @@
     ],
     "environment_subzone": "central_audience_floor",
     "key_visible_environment_features": [
-      "central_audience_floor"
+      "central_audience_floor",
+      "Chapter-local beat subzone match for 'central_audience_floor'."
     ],
-    "continuity_from_previous_shot": "beast feature detail",
+    "continuity_from_previous_shot": "tin_woodman recoils/waits",
     "continuity_to_next_shot": "end_scene",
     "pose_anchor_frame": "medium shot of woodman",
     "pose_end_frame": "close up on woodman face",
-    "shot_title": "Over The Shoulder 3: The Wizard offers a heart",
-    "shot_type": "over_the_shoulder",
-    "camera_description": "Shoulder-level conversational framing with visible foreground presence.",
-    "composition": "Over-the-shoulder composition in palace_of_oz with tin_woodman, the_great_oz sharing the frame for dialogue or tension.",
-    "target_seconds": 5.1,
+    "shot_title": "Ceremonial Master 9: The Wizard offers a heart in exchange for killing t...",
+    "shot_type": "ceremonial_master",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in palace_of_oz featuring tin_woodman, the_great_oz.",
+    "target_seconds": 10.8,
     "characters_in_frame": [
       {
         "label": "Tin Woodman",
@@ -536,7 +2013,7 @@
       "Metallic texture and articulation of tin_woodman",
       "The Wizard offers a heart in exchange for killing the Witch"
     ],
-    "prompt_seed": "Over The Shoulder 3: The Wizard offers a heart in exchange for killing t.... over_the_shoulder. size=medium_close. angle=eye_level. lens=normal. motion=locked_off. zoom=subtle_in. focus=shallow_subject. lighting=soft_even. visibility=on_screen. subject_angle=front_three_quarter_right. Shoulder-level conversational f...",
+    "prompt_seed": "Ceremonial Master 9: The Wizard offers a heart in exchange for killing t.... ceremonial_master. size=medium_close. angle=eye_level. lens=normal. motion=locked_off. zoom=subtle_in. focus=shallow_subject. lighting=soft_even. visibility=on_screen. subject_angle=front_three_quarter_right. Stable readable framing built f...",
     "shot_notes": "The Wizard offers a heart in exchange for killing the Witch",
     "evidence_refs": [
       {
@@ -605,13 +2082,30 @@
       "the_great_oz | [CH003] Chapter III (query appears in paragraph preview) [CH005] Chapter V (query appears in paragraph preview) [CH006] Chapter VI (query appears in paragraph preview)",
       "palace_of_oz | A grandiose emerald-themed sovereign residence featuring monumental ceremonial halls and royal audience chambers. The interior is characterized by large-scale chambers designed to accommodate massive, non-human manifestations of the Wizard. |..."
     ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "ceremonial_tableau",
+    "coverage_role": "ceremonial_master",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT003",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "major",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = major"
+      ]
+    },
     "metadata": {
-      "artifact_id": "CH011_SC005_SH003_SHOT_PACKAGE",
+      "artifact_id": "CH011_SC005_SH009_SHOT_PACKAGE",
       "artifact_type": "shot_package",
       "status": "generated",
-      "source_fingerprint": "cc57e03598508d8e87abb4a1189164367f42d1c1",
-      "created_at_utc": "2026-04-27T17:13:44.626907+00:00",
-      "updated_at_utc": "2026-04-27T17:13:44.626907+00:00",
+      "source_fingerprint": "c663f84314a1f752d8f754b631c48e5e65e0fecc",
+      "created_at_utc": "2026-04-27T20:53:49.377513+00:00",
+      "updated_at_utc": "2026-04-27T20:54:47.354939+00:00",
       "upstream_dependencies": [
         {
           "dependency_type": "scene_contract",
@@ -626,16 +2120,1437 @@
         {
           "dependency_type": "shot_blueprints",
           "dependency_id": "CH011_SC005",
-          "version": "efb273dda10e1fb6598ec15c481d448a9c685e97"
+          "version": "ad96eb87f691d395188ed9c94b7655ef2307f3a9"
         }
       ],
       "locked_fields": {},
       "manual_overrides": {},
       "revision_history": [
         {
-          "timestamp_utc": "2026-04-27T17:14:59.029811+00:00",
+          "timestamp_utc": "2026-04-27T20:53:49.378013+00:00",
           "action": "synthesized",
-          "source_fingerprint": "cc57e03598508d8e87abb4a1189164367f42d1c1"
+          "source_fingerprint": "c663f84314a1f752d8f754b631c48e5e65e0fecc"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:47.355938+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "c663f84314a1f752d8f754b631c48e5e65e0fecc"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH010",
+    "scene_id": "CH011_SC005",
+    "chapter_id": "CH011",
+    "shot_order": 10,
+    "previous_shot_id": "SH009",
+    "next_shot_id": "SH011",
+    "primary_subject": "the_great_oz",
+    "secondary_subjects": [
+      "tin_woodman"
+    ],
+    "shot_moment_summary": "The Wizard offers a heart in exchange for killing the Witch",
+    "start_state": "the_great_oz speaks/promises",
+    "end_state": "tin_woodman accepts the stakes",
+    "action_during_shot": "The Wizard offers a heart in exchange for killing the Witch",
+    "action_continues_from": "close up on woodman face",
+    "action_hands_off_to": "end_scene",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "the_great_oz",
+    "visible_secondary_subject_ids": [
+      "tin_woodman"
+    ],
+    "primary_subject_frame_position": "foreground right within central_audience_floor",
+    "primary_subject_scale_relation": "preserve readable body-to-environment scale in frame",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "the_great_oz speaks/promises",
+    "subject_relation_summary": "the_great_oz plays against tin_woodman in the same frame",
+    "required_environment_anchor_1": "central_audience_floor",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "preserve readable body-to-environment scale in frame",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "woodman standing firm",
+      "palace_of_oz",
+      "the_great_oz remains readable within the active playing space.",
+      "tin_woodman remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the central_audience_floor.",
+      "Background depth should keep palace_of_oz legible as the location anchor.",
+      "Subject 1: the_great_oz remains visually readable against the environment scale.",
+      "Subject 2: tin_woodman remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "the_great_oz focuses toward the active scene action."
+    ],
+    "environment_subzone": "central_audience_floor",
+    "key_visible_environment_features": [
+      "central_audience_floor",
+      "Chapter-local beat subzone match for 'central_audience_floor'."
+    ],
+    "continuity_from_previous_shot": "close up on woodman face",
+    "continuity_to_next_shot": "end_scene",
+    "pose_anchor_frame": "the_great_oz speaks/promises",
+    "pose_end_frame": "tin_woodman accepts the stakes",
+    "shot_title": "Authority Single 10: The Wizard offers a heart in exchange for killing t...",
+    "shot_type": "authority_single",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in palace_of_oz featuring the_great_oz, tin_woodman.",
+    "target_seconds": 7.0,
+    "characters_in_frame": [
+      {
+        "label": "The Great Oz (Terrible Beast)",
+        "canonical_id": "the_great_oz",
+        "display_name": "the_great_oz",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH011/the_great_oz.md",
+        "notes": "Direct registry match for 'the_great_oz'."
+      },
+      {
+        "label": "Tin Woodman",
+        "canonical_id": "tin_woodman",
+        "display_name": "tin_woodman",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH011/tin_woodman.md",
+        "notes": "Direct registry match for 'tin_woodman'."
+      }
+    ],
+    "environment": {
+      "label": "palace_of_oz",
+      "canonical_id": "palace_of_oz",
+      "display_name": "palace_of_oz",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": null,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH011/palace_of_oz.md",
+      "notes": "Chapter-local beat subzone match for 'central_audience_floor'."
+    },
+    "beat_ids": [
+      "BT003"
+    ],
+    "continuity_constraints": [
+      "Sound design synchronization for the_great_oz roar/growl",
+      "Metallic texture and articulation of tin_woodman",
+      "The Wizard offers a heart in exchange for killing the Witch"
+    ],
+    "prompt_seed": "Authority Single 10: The Wizard offers a heart in exchange for killing t.... authority_single. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the bea...",
+    "shot_notes": "The Wizard offers a heart in exchange for killing the Witch",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH011_SC005"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC005"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC005"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC005"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC005"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC005"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH011",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH011_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH011",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH011_chapter_xi.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH015",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH015_chapter_xv.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH006",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH006_chapter_vi.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH011",
+        "canonical_id": "tin_woodman"
+      }
+    ],
+    "evidence_summary": [
+      "Establish the third manifestation of Oz as a terrifying entity to create high stakes for the Tin Woodman. The interaction must transition from overwhelming intimidation through the Beast's presence to the Woodman's internal resolve following a conditional p...",
+      "The Tin Woodman meets the Wizard, who appears as a Terrible Beast. He promises a heart if the Woodman helps Dorothy kill the Witch.",
+      "Intimidation $\\rightarrow$ Resolve.",
+      "tin_woodman enters the vast, intimidating palace space facing a massive presence.",
+      "tin_woodman stands firm with newfound purpose after receiving a conditional promise.",
+      "The Woodman negotiates for a heart by accepting a dangerous mission.",
+      "tin_woodman | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH005/tin_woodman.md] Costume/Silhouette: Entirely metallic (tin) body; carries an axe. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis...",
+      "the_great_oz | [CH003] Chapter III (query appears in paragraph preview) [CH005] Chapter V (query appears in paragraph preview) [CH006] Chapter VI (query appears in paragraph preview)",
+      "palace_of_oz | A grandiose emerald-themed sovereign residence featuring monumental ceremonial halls and royal audience chambers. The interior is characterized by large-scale chambers designed to accommodate massive, non-human manifestations of the Wizard. |..."
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "ceremonial_tableau",
+    "coverage_role": "authority_single",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT003",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "major",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = major"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH011_SC005_SH010_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "c663f84314a1f752d8f754b631c48e5e65e0fecc",
+      "created_at_utc": "2026-04-27T20:53:49.379013+00:00",
+      "updated_at_utc": "2026-04-27T20:54:47.361938+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH011_SC005",
+          "version": "de52c6baf1920f3ad6aebdf1e240a30fad794929"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH011_SC005",
+          "version": "38a98b8a7f43d0c915c3b20217b58ebd73230e15"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH011_SC005",
+          "version": "ad96eb87f691d395188ed9c94b7655ef2307f3a9"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:53:49.379513+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "c663f84314a1f752d8f754b631c48e5e65e0fecc"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:47.362438+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "c663f84314a1f752d8f754b631c48e5e65e0fecc"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH011",
+    "scene_id": "CH011_SC005",
+    "chapter_id": "CH011",
+    "shot_order": 11,
+    "previous_shot_id": "SH010",
+    "next_shot_id": "SH012",
+    "primary_subject": "the_great_oz",
+    "secondary_subjects": [
+      "tin_woodman"
+    ],
+    "shot_moment_summary": "The Wizard offers a heart in exchange for killing the Witch",
+    "start_state": "the_great_oz speaks/promises",
+    "end_state": "tin_woodman accepts the stakes",
+    "action_during_shot": "The Wizard offers a heart in exchange for killing the Witch",
+    "action_continues_from": "tin_woodman accepts the stakes",
+    "action_hands_off_to": "end_scene",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "the_great_oz",
+    "visible_secondary_subject_ids": [
+      "tin_woodman"
+    ],
+    "primary_subject_frame_position": "foreground right within central_audience_floor",
+    "primary_subject_scale_relation": "preserve readable body-to-environment scale in frame",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "the_great_oz speaks/promises",
+    "subject_relation_summary": "the_great_oz plays against tin_woodman in the same frame",
+    "required_environment_anchor_1": "central_audience_floor",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "preserve readable body-to-environment scale in frame",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "woodman standing firm",
+      "palace_of_oz",
+      "the_great_oz remains readable within the active playing space.",
+      "tin_woodman remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the central_audience_floor.",
+      "Background depth should keep palace_of_oz legible as the location anchor.",
+      "Subject 1: the_great_oz remains visually readable against the environment scale.",
+      "Subject 2: tin_woodman remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "the_great_oz focuses toward the active scene action."
+    ],
+    "environment_subzone": "central_audience_floor",
+    "key_visible_environment_features": [
+      "central_audience_floor",
+      "Chapter-local beat subzone match for 'central_audience_floor'."
+    ],
+    "continuity_from_previous_shot": "tin_woodman accepts the stakes",
+    "continuity_to_next_shot": "end_scene",
+    "pose_anchor_frame": "the_great_oz speaks/promises",
+    "pose_end_frame": "tin_woodman accepts the stakes",
+    "shot_title": "Petitioner Group 11: The Wizard offers a heart in exchange for killing t...",
+    "shot_type": "petitioner_group",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in palace_of_oz featuring the_great_oz, tin_woodman.",
+    "target_seconds": 7.0,
+    "characters_in_frame": [
+      {
+        "label": "The Great Oz (Terrible Beast)",
+        "canonical_id": "the_great_oz",
+        "display_name": "the_great_oz",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH011/the_great_oz.md",
+        "notes": "Direct registry match for 'the_great_oz'."
+      },
+      {
+        "label": "Tin Woodman",
+        "canonical_id": "tin_woodman",
+        "display_name": "tin_woodman",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH011/tin_woodman.md",
+        "notes": "Direct registry match for 'tin_woodman'."
+      }
+    ],
+    "environment": {
+      "label": "palace_of_oz",
+      "canonical_id": "palace_of_oz",
+      "display_name": "palace_of_oz",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": null,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH011/palace_of_oz.md",
+      "notes": "Chapter-local beat subzone match for 'central_audience_floor'."
+    },
+    "beat_ids": [
+      "BT003"
+    ],
+    "continuity_constraints": [
+      "Sound design synchronization for the_great_oz roar/growl",
+      "Metallic texture and articulation of tin_woodman",
+      "The Wizard offers a heart in exchange for killing the Witch"
+    ],
+    "prompt_seed": "Petitioner Group 11: The Wizard offers a heart in exchange for killing t.... petitioner_group. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the bea...",
+    "shot_notes": "The Wizard offers a heart in exchange for killing the Witch",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH011_SC005"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC005"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC005"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC005"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC005"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC005"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH011",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH011_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH011",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH011_chapter_xi.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH015",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH015_chapter_xv.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH006",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH006_chapter_vi.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH011",
+        "canonical_id": "tin_woodman"
+      }
+    ],
+    "evidence_summary": [
+      "Establish the third manifestation of Oz as a terrifying entity to create high stakes for the Tin Woodman. The interaction must transition from overwhelming intimidation through the Beast's presence to the Woodman's internal resolve following a conditional p...",
+      "The Tin Woodman meets the Wizard, who appears as a Terrible Beast. He promises a heart if the Woodman helps Dorothy kill the Witch.",
+      "Intimidation $\\rightarrow$ Resolve.",
+      "tin_woodman enters the vast, intimidating palace space facing a massive presence.",
+      "tin_woodman stands firm with newfound purpose after receiving a conditional promise.",
+      "The Woodman negotiates for a heart by accepting a dangerous mission.",
+      "tin_woodman | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH005/tin_woodman.md] Costume/Silhouette: Entirely metallic (tin) body; carries an axe. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis...",
+      "the_great_oz | [CH003] Chapter III (query appears in paragraph preview) [CH005] Chapter V (query appears in paragraph preview) [CH006] Chapter VI (query appears in paragraph preview)",
+      "palace_of_oz | A grandiose emerald-themed sovereign residence featuring monumental ceremonial halls and royal audience chambers. The interior is characterized by large-scale chambers designed to accommodate massive, non-human manifestations of the Wizard. |..."
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "ceremonial_tableau",
+    "coverage_role": "petitioner_group",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT003",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "major",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = major"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH011_SC005_SH011_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "c663f84314a1f752d8f754b631c48e5e65e0fecc",
+      "created_at_utc": "2026-04-27T20:53:49.380517+00:00",
+      "updated_at_utc": "2026-04-27T20:54:47.367939+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH011_SC005",
+          "version": "de52c6baf1920f3ad6aebdf1e240a30fad794929"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH011_SC005",
+          "version": "38a98b8a7f43d0c915c3b20217b58ebd73230e15"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH011_SC005",
+          "version": "ad96eb87f691d395188ed9c94b7655ef2307f3a9"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:53:49.381023+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "c663f84314a1f752d8f754b631c48e5e65e0fecc"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:47.368438+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "c663f84314a1f752d8f754b631c48e5e65e0fecc"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH012",
+    "scene_id": "CH011_SC005",
+    "chapter_id": "CH011",
+    "shot_order": 12,
+    "previous_shot_id": "SH011",
+    "next_shot_id": "SH013",
+    "primary_subject": "the_great_oz",
+    "secondary_subjects": [
+      "tin_woodman"
+    ],
+    "shot_moment_summary": "The Wizard offers a heart in exchange for killing the Witch",
+    "start_state": "the_great_oz speaks/promises",
+    "end_state": "tin_woodman accepts the stakes",
+    "action_during_shot": "The Wizard offers a heart in exchange for killing the Witch",
+    "action_continues_from": "tin_woodman accepts the stakes",
+    "action_hands_off_to": "end_scene",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "the_great_oz",
+    "visible_secondary_subject_ids": [
+      "tin_woodman"
+    ],
+    "primary_subject_frame_position": "foreground right within central_audience_floor",
+    "primary_subject_scale_relation": "preserve readable body-to-environment scale in frame",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "the_great_oz speaks/promises",
+    "subject_relation_summary": "the_great_oz plays against tin_woodman in the same frame",
+    "required_environment_anchor_1": "central_audience_floor",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "preserve readable body-to-environment scale in frame",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "woodman standing firm",
+      "palace_of_oz",
+      "the_great_oz remains readable within the active playing space.",
+      "tin_woodman remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the central_audience_floor.",
+      "Background depth should keep palace_of_oz legible as the location anchor.",
+      "Subject 1: the_great_oz remains visually readable against the environment scale.",
+      "Subject 2: tin_woodman remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "the_great_oz focuses toward the active scene action."
+    ],
+    "environment_subzone": "central_audience_floor",
+    "key_visible_environment_features": [
+      "central_audience_floor",
+      "Chapter-local beat subzone match for 'central_audience_floor'."
+    ],
+    "continuity_from_previous_shot": "tin_woodman accepts the stakes",
+    "continuity_to_next_shot": "end_scene",
+    "pose_anchor_frame": "the_great_oz speaks/promises",
+    "pose_end_frame": "tin_woodman accepts the stakes",
+    "shot_title": "Crowd Response 12: The Wizard offers a heart in exchange for killing t...",
+    "shot_type": "crowd_response",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in palace_of_oz featuring the_great_oz, tin_woodman.",
+    "target_seconds": 7.0,
+    "characters_in_frame": [
+      {
+        "label": "The Great Oz (Terrible Beast)",
+        "canonical_id": "the_great_oz",
+        "display_name": "the_great_oz",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH011/the_great_oz.md",
+        "notes": "Direct registry match for 'the_great_oz'."
+      },
+      {
+        "label": "Tin Woodman",
+        "canonical_id": "tin_woodman",
+        "display_name": "tin_woodman",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH011/tin_woodman.md",
+        "notes": "Direct registry match for 'tin_woodman'."
+      }
+    ],
+    "environment": {
+      "label": "palace_of_oz",
+      "canonical_id": "palace_of_oz",
+      "display_name": "palace_of_oz",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": null,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH011/palace_of_oz.md",
+      "notes": "Chapter-local beat subzone match for 'central_audience_floor'."
+    },
+    "beat_ids": [
+      "BT003"
+    ],
+    "continuity_constraints": [
+      "Sound design synchronization for the_great_oz roar/growl",
+      "Metallic texture and articulation of tin_woodman",
+      "The Wizard offers a heart in exchange for killing the Witch"
+    ],
+    "prompt_seed": "Crowd Response 12: The Wizard offers a heart in exchange for killing t.... crowd_response. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat re...",
+    "shot_notes": "The Wizard offers a heart in exchange for killing the Witch",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH011_SC005"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC005"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC005"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC005"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC005"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC005"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH011",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH011_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH011",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH011_chapter_xi.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH015",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH015_chapter_xv.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH006",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH006_chapter_vi.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH011",
+        "canonical_id": "tin_woodman"
+      }
+    ],
+    "evidence_summary": [
+      "Establish the third manifestation of Oz as a terrifying entity to create high stakes for the Tin Woodman. The interaction must transition from overwhelming intimidation through the Beast's presence to the Woodman's internal resolve following a conditional p...",
+      "The Tin Woodman meets the Wizard, who appears as a Terrible Beast. He promises a heart if the Woodman helps Dorothy kill the Witch.",
+      "Intimidation $\\rightarrow$ Resolve.",
+      "tin_woodman enters the vast, intimidating palace space facing a massive presence.",
+      "tin_woodman stands firm with newfound purpose after receiving a conditional promise.",
+      "The Woodman negotiates for a heart by accepting a dangerous mission.",
+      "tin_woodman | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH005/tin_woodman.md] Costume/Silhouette: Entirely metallic (tin) body; carries an axe. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis...",
+      "the_great_oz | [CH003] Chapter III (query appears in paragraph preview) [CH005] Chapter V (query appears in paragraph preview) [CH006] Chapter VI (query appears in paragraph preview)",
+      "palace_of_oz | A grandiose emerald-themed sovereign residence featuring monumental ceremonial halls and royal audience chambers. The interior is characterized by large-scale chambers designed to accommodate massive, non-human manifestations of the Wizard. |..."
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "ceremonial_tableau",
+    "coverage_role": "crowd_response",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT003",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "major",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = major"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH011_SC005_SH012_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "c663f84314a1f752d8f754b631c48e5e65e0fecc",
+      "created_at_utc": "2026-04-27T20:53:49.382021+00:00",
+      "updated_at_utc": "2026-04-27T20:54:47.373951+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH011_SC005",
+          "version": "de52c6baf1920f3ad6aebdf1e240a30fad794929"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH011_SC005",
+          "version": "38a98b8a7f43d0c915c3b20217b58ebd73230e15"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH011_SC005",
+          "version": "ad96eb87f691d395188ed9c94b7655ef2307f3a9"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:53:49.382523+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "c663f84314a1f752d8f754b631c48e5e65e0fecc"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:47.374450+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "c663f84314a1f752d8f754b631c48e5e65e0fecc"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH013",
+    "scene_id": "CH011_SC005",
+    "chapter_id": "CH011",
+    "shot_order": 13,
+    "previous_shot_id": "SH012",
+    "next_shot_id": "SH014",
+    "primary_subject": "the_great_oz",
+    "secondary_subjects": [
+      "tin_woodman"
+    ],
+    "shot_moment_summary": "The Wizard offers a heart in exchange for killing the Witch",
+    "start_state": "the_great_oz speaks/promises",
+    "end_state": "tin_woodman accepts the stakes",
+    "action_during_shot": "The Wizard offers a heart in exchange for killing the Witch",
+    "action_continues_from": "tin_woodman accepts the stakes",
+    "action_hands_off_to": "end_scene",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "the_great_oz",
+    "visible_secondary_subject_ids": [
+      "tin_woodman"
+    ],
+    "primary_subject_frame_position": "foreground right within central_audience_floor",
+    "primary_subject_scale_relation": "preserve readable body-to-environment scale in frame",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "the_great_oz speaks/promises",
+    "subject_relation_summary": "the_great_oz plays against tin_woodman in the same frame",
+    "required_environment_anchor_1": "central_audience_floor",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "preserve readable body-to-environment scale in frame",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "woodman standing firm",
+      "palace_of_oz",
+      "the_great_oz remains readable within the active playing space.",
+      "tin_woodman remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the central_audience_floor.",
+      "Background depth should keep palace_of_oz legible as the location anchor.",
+      "Subject 1: the_great_oz remains visually readable against the environment scale.",
+      "Subject 2: tin_woodman remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "the_great_oz focuses toward the active scene action."
+    ],
+    "environment_subzone": "central_audience_floor",
+    "key_visible_environment_features": [
+      "central_audience_floor",
+      "Chapter-local beat subzone match for 'central_audience_floor'."
+    ],
+    "continuity_from_previous_shot": "tin_woodman accepts the stakes",
+    "continuity_to_next_shot": "end_scene",
+    "pose_anchor_frame": "the_great_oz speaks/promises",
+    "pose_end_frame": "tin_woodman accepts the stakes",
+    "shot_title": "Symbol Insert 13: The Wizard offers a heart in exchange for killing t...",
+    "shot_type": "symbol_insert",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in palace_of_oz featuring the_great_oz, tin_woodman.",
+    "target_seconds": 5.4,
+    "characters_in_frame": [
+      {
+        "label": "The Great Oz (Terrible Beast)",
+        "canonical_id": "the_great_oz",
+        "display_name": "the_great_oz",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH011/the_great_oz.md",
+        "notes": "Direct registry match for 'the_great_oz'."
+      },
+      {
+        "label": "Tin Woodman",
+        "canonical_id": "tin_woodman",
+        "display_name": "tin_woodman",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH011/tin_woodman.md",
+        "notes": "Direct registry match for 'tin_woodman'."
+      }
+    ],
+    "environment": {
+      "label": "palace_of_oz",
+      "canonical_id": "palace_of_oz",
+      "display_name": "palace_of_oz",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": null,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH011/palace_of_oz.md",
+      "notes": "Chapter-local beat subzone match for 'central_audience_floor'."
+    },
+    "beat_ids": [
+      "BT003"
+    ],
+    "continuity_constraints": [
+      "Sound design synchronization for the_great_oz roar/growl",
+      "Metallic texture and articulation of tin_woodman",
+      "The Wizard offers a heart in exchange for killing the Witch"
+    ],
+    "prompt_seed": "Symbol Insert 13: The Wizard offers a heart in exchange for killing t.... symbol_insert. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requ...",
+    "shot_notes": "The Wizard offers a heart in exchange for killing the Witch",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH011_SC005"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC005"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC005"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC005"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC005"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC005"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH011",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH011_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH011",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH011_chapter_xi.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH015",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH015_chapter_xv.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH006",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH006_chapter_vi.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH011",
+        "canonical_id": "tin_woodman"
+      }
+    ],
+    "evidence_summary": [
+      "Establish the third manifestation of Oz as a terrifying entity to create high stakes for the Tin Woodman. The interaction must transition from overwhelming intimidation through the Beast's presence to the Woodman's internal resolve following a conditional p...",
+      "The Tin Woodman meets the Wizard, who appears as a Terrible Beast. He promises a heart if the Woodman helps Dorothy kill the Witch.",
+      "Intimidation $\\rightarrow$ Resolve.",
+      "tin_woodman enters the vast, intimidating palace space facing a massive presence.",
+      "tin_woodman stands firm with newfound purpose after receiving a conditional promise.",
+      "The Woodman negotiates for a heart by accepting a dangerous mission.",
+      "tin_woodman | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH005/tin_woodman.md] Costume/Silhouette: Entirely metallic (tin) body; carries an axe. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis...",
+      "the_great_oz | [CH003] Chapter III (query appears in paragraph preview) [CH005] Chapter V (query appears in paragraph preview) [CH006] Chapter VI (query appears in paragraph preview)",
+      "palace_of_oz | A grandiose emerald-themed sovereign residence featuring monumental ceremonial halls and royal audience chambers. The interior is characterized by large-scale chambers designed to accommodate massive, non-human manifestations of the Wizard. |..."
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "ceremonial_tableau",
+    "coverage_role": "symbol_insert",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT003",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "major",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = major"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH011_SC005_SH013_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "c663f84314a1f752d8f754b631c48e5e65e0fecc",
+      "created_at_utc": "2026-04-27T20:53:49.383523+00:00",
+      "updated_at_utc": "2026-04-27T20:54:47.379949+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH011_SC005",
+          "version": "de52c6baf1920f3ad6aebdf1e240a30fad794929"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH011_SC005",
+          "version": "38a98b8a7f43d0c915c3b20217b58ebd73230e15"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH011_SC005",
+          "version": "ad96eb87f691d395188ed9c94b7655ef2307f3a9"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:53:49.384024+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "c663f84314a1f752d8f754b631c48e5e65e0fecc"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:47.380450+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "c663f84314a1f752d8f754b631c48e5e65e0fecc"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH014",
+    "scene_id": "CH011_SC005",
+    "chapter_id": "CH011",
+    "shot_order": 14,
+    "previous_shot_id": "SH013",
+    "next_shot_id": "SH015",
+    "primary_subject": "the_great_oz",
+    "secondary_subjects": [
+      "tin_woodman"
+    ],
+    "shot_moment_summary": "The Wizard offers a heart in exchange for killing the Witch",
+    "start_state": "the_great_oz speaks/promises",
+    "end_state": "tin_woodman accepts the stakes",
+    "action_during_shot": "The Wizard offers a heart in exchange for killing the Witch",
+    "action_continues_from": "tin_woodman accepts the stakes",
+    "action_hands_off_to": "end_scene",
+    "shot_size": "close_up",
+    "camera_angle": "eye_level",
+    "lens_family": "portrait",
+    "camera_motion": "push_in",
+    "zoom_behavior": "subtle_in",
+    "focus_strategy": "shallow_subject",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "the_great_oz",
+    "visible_secondary_subject_ids": [
+      "tin_woodman"
+    ],
+    "primary_subject_frame_position": "foreground inside central_audience_floor",
+    "primary_subject_scale_relation": "preserve readable body-to-environment scale in frame",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "the_great_oz speaks/promises",
+    "subject_relation_summary": "the_great_oz plays against tin_woodman in the same frame",
+    "required_environment_anchor_1": "central_audience_floor",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "preserve readable body-to-environment scale in frame",
+    "camera_package_description": "close-up, eye level, portrait lens, push in, zoom subtle in, shallow subject, hard directional",
+    "subject_blocking": [
+      "woodman standing firm",
+      "palace_of_oz",
+      "the_great_oz remains readable within the active playing space.",
+      "tin_woodman remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the central_audience_floor.",
+      "Background depth should keep palace_of_oz legible as the location anchor.",
+      "Subject 1: the_great_oz remains visually readable against the environment scale.",
+      "Subject 2: tin_woodman remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "the_great_oz focuses toward the active scene action."
+    ],
+    "environment_subzone": "central_audience_floor",
+    "key_visible_environment_features": [
+      "central_audience_floor",
+      "Chapter-local beat subzone match for 'central_audience_floor'."
+    ],
+    "continuity_from_previous_shot": "tin_woodman accepts the stakes",
+    "continuity_to_next_shot": "end_scene",
+    "pose_anchor_frame": "the_great_oz speaks/promises",
+    "pose_end_frame": "tin_woodman accepts the stakes",
+    "shot_title": "Reaction Closeup 14: The Wizard offers a heart in exchange for killing t...",
+    "shot_type": "reaction_closeup",
+    "camera_description": "Close framing that isolates reaction and emotional emphasis.",
+    "composition": "Intimate composition that isolates the_great_oz, tin_woodman against palace_of_oz to capture the beat's emotional turn.",
+    "target_seconds": 7.0,
+    "characters_in_frame": [
+      {
+        "label": "The Great Oz (Terrible Beast)",
+        "canonical_id": "the_great_oz",
+        "display_name": "the_great_oz",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH011/the_great_oz.md",
+        "notes": "Direct registry match for 'the_great_oz'."
+      },
+      {
+        "label": "Tin Woodman",
+        "canonical_id": "tin_woodman",
+        "display_name": "tin_woodman",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH011/tin_woodman.md",
+        "notes": "Direct registry match for 'tin_woodman'."
+      }
+    ],
+    "environment": {
+      "label": "palace_of_oz",
+      "canonical_id": "palace_of_oz",
+      "display_name": "palace_of_oz",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": null,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH011/palace_of_oz.md",
+      "notes": "Chapter-local beat subzone match for 'central_audience_floor'."
+    },
+    "beat_ids": [
+      "BT003"
+    ],
+    "continuity_constraints": [
+      "Sound design synchronization for the_great_oz roar/growl",
+      "Metallic texture and articulation of tin_woodman",
+      "The Wizard offers a heart in exchange for killing the Witch"
+    ],
+    "prompt_seed": "Reaction Closeup 14: The Wizard offers a heart in exchange for killing t.... reaction_closeup. size=close_up. angle=eye_level. lens=portrait. motion=push_in. zoom=subtle_in. focus=shallow_subject. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Close framing that isolates rea...",
+    "shot_notes": "The Wizard offers a heart in exchange for killing the Witch",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH011_SC005"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC005"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC005"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC005"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC005"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC005"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH011",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH011_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH011",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH011_chapter_xi.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH015",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH015_chapter_xv.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH006",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH006_chapter_vi.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH011",
+        "canonical_id": "tin_woodman"
+      }
+    ],
+    "evidence_summary": [
+      "Establish the third manifestation of Oz as a terrifying entity to create high stakes for the Tin Woodman. The interaction must transition from overwhelming intimidation through the Beast's presence to the Woodman's internal resolve following a conditional p...",
+      "The Tin Woodman meets the Wizard, who appears as a Terrible Beast. He promises a heart if the Woodman helps Dorothy kill the Witch.",
+      "Intimidation $\\rightarrow$ Resolve.",
+      "tin_woodman enters the vast, intimidating palace space facing a massive presence.",
+      "tin_woodman stands firm with newfound purpose after receiving a conditional promise.",
+      "The Woodman negotiates for a heart by accepting a dangerous mission.",
+      "tin_woodman | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH005/tin_woodman.md] Costume/Silhouette: Entirely metallic (tin) body; carries an axe. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis...",
+      "the_great_oz | [CH003] Chapter III (query appears in paragraph preview) [CH005] Chapter V (query appears in paragraph preview) [CH006] Chapter VI (query appears in paragraph preview)",
+      "palace_of_oz | A grandiose emerald-themed sovereign residence featuring monumental ceremonial halls and royal audience chambers. The interior is characterized by large-scale chambers designed to accommodate massive, non-human manifestations of the Wizard. |..."
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "ceremonial_tableau",
+    "coverage_role": "decision_closeup",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT003",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "major",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = major"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH011_SC005_SH014_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "c663f84314a1f752d8f754b631c48e5e65e0fecc",
+      "created_at_utc": "2026-04-27T20:53:49.385522+00:00",
+      "updated_at_utc": "2026-04-27T20:54:47.386658+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH011_SC005",
+          "version": "de52c6baf1920f3ad6aebdf1e240a30fad794929"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH011_SC005",
+          "version": "38a98b8a7f43d0c915c3b20217b58ebd73230e15"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH011_SC005",
+          "version": "ad96eb87f691d395188ed9c94b7655ef2307f3a9"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:53:49.386021+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "c663f84314a1f752d8f754b631c48e5e65e0fecc"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:47.387163+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "c663f84314a1f752d8f754b631c48e5e65e0fecc"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH015",
+    "scene_id": "CH011_SC005",
+    "chapter_id": "CH011",
+    "shot_order": 15,
+    "previous_shot_id": "SH014",
+    "next_shot_id": "",
+    "primary_subject": "the_great_oz",
+    "secondary_subjects": [
+      "tin_woodman"
+    ],
+    "shot_moment_summary": "The Wizard offers a heart in exchange for killing the Witch",
+    "start_state": "the_great_oz speaks/promises",
+    "end_state": "tin_woodman accepts the stakes",
+    "action_during_shot": "The Wizard offers a heart in exchange for killing the Witch",
+    "action_continues_from": "tin_woodman accepts the stakes",
+    "action_hands_off_to": "end_scene",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "the_great_oz",
+    "visible_secondary_subject_ids": [
+      "tin_woodman"
+    ],
+    "primary_subject_frame_position": "foreground right within central_audience_floor",
+    "primary_subject_scale_relation": "preserve readable body-to-environment scale in frame",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "the_great_oz speaks/promises",
+    "subject_relation_summary": "the_great_oz plays against tin_woodman in the same frame",
+    "required_environment_anchor_1": "central_audience_floor",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "preserve readable body-to-environment scale in frame",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "woodman standing firm",
+      "palace_of_oz",
+      "the_great_oz remains readable within the active playing space.",
+      "tin_woodman remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the central_audience_floor.",
+      "Background depth should keep palace_of_oz legible as the location anchor.",
+      "Subject 1: the_great_oz remains visually readable against the environment scale.",
+      "Subject 2: tin_woodman remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "the_great_oz focuses toward the active scene action."
+    ],
+    "environment_subzone": "central_audience_floor",
+    "key_visible_environment_features": [
+      "central_audience_floor",
+      "Chapter-local beat subzone match for 'central_audience_floor'."
+    ],
+    "continuity_from_previous_shot": "tin_woodman accepts the stakes",
+    "continuity_to_next_shot": "end_scene",
+    "pose_anchor_frame": "the_great_oz speaks/promises",
+    "pose_end_frame": "tin_woodman accepts the stakes",
+    "shot_title": "Scale Proof Wide 15: The Wizard offers a heart in exchange for killing t...",
+    "shot_type": "scale_proof_wide",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in palace_of_oz featuring the_great_oz, tin_woodman.",
+    "target_seconds": 10.8,
+    "characters_in_frame": [
+      {
+        "label": "The Great Oz (Terrible Beast)",
+        "canonical_id": "the_great_oz",
+        "display_name": "the_great_oz",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH011/the_great_oz.md",
+        "notes": "Direct registry match for 'the_great_oz'."
+      },
+      {
+        "label": "Tin Woodman",
+        "canonical_id": "tin_woodman",
+        "display_name": "tin_woodman",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH011/tin_woodman.md",
+        "notes": "Direct registry match for 'tin_woodman'."
+      }
+    ],
+    "environment": {
+      "label": "palace_of_oz",
+      "canonical_id": "palace_of_oz",
+      "display_name": "palace_of_oz",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": null,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH011/palace_of_oz.md",
+      "notes": "Chapter-local beat subzone match for 'central_audience_floor'."
+    },
+    "beat_ids": [
+      "BT003"
+    ],
+    "continuity_constraints": [
+      "Sound design synchronization for the_great_oz roar/growl",
+      "Metallic texture and articulation of tin_woodman",
+      "The Wizard offers a heart in exchange for killing the Witch"
+    ],
+    "prompt_seed": "Scale Proof Wide 15: The Wizard offers a heart in exchange for killing t.... scale_proof_wide. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the bea...",
+    "shot_notes": "The Wizard offers a heart in exchange for killing the Witch",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH011_SC005"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC005"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC005"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC005"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC005"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC005"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH011",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH011_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH011",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH011_chapter_xi.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH015",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH015_chapter_xv.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH006",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH006_chapter_vi.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH011",
+        "canonical_id": "tin_woodman"
+      }
+    ],
+    "evidence_summary": [
+      "Establish the third manifestation of Oz as a terrifying entity to create high stakes for the Tin Woodman. The interaction must transition from overwhelming intimidation through the Beast's presence to the Woodman's internal resolve following a conditional p...",
+      "The Tin Woodman meets the Wizard, who appears as a Terrible Beast. He promises a heart if the Woodman helps Dorothy kill the Witch.",
+      "Intimidation $\\rightarrow$ Resolve.",
+      "tin_woodman enters the vast, intimidating palace space facing a massive presence.",
+      "tin_woodman stands firm with newfound purpose after receiving a conditional promise.",
+      "The Woodman negotiates for a heart by accepting a dangerous mission.",
+      "tin_woodman | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH005/tin_woodman.md] Costume/Silhouette: Entirely metallic (tin) body; carries an axe. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis...",
+      "the_great_oz | [CH003] Chapter III (query appears in paragraph preview) [CH005] Chapter V (query appears in paragraph preview) [CH006] Chapter VI (query appears in paragraph preview)",
+      "palace_of_oz | A grandiose emerald-themed sovereign residence featuring monumental ceremonial halls and royal audience chambers. The interior is characterized by large-scale chambers designed to accommodate massive, non-human manifestations of the Wizard. |..."
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "ceremonial_tableau",
+    "coverage_role": "scale_proof_wide",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT003",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "major",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = major"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH011_SC005_SH015_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "c663f84314a1f752d8f754b631c48e5e65e0fecc",
+      "created_at_utc": "2026-04-27T20:53:49.387025+00:00",
+      "updated_at_utc": "2026-04-27T20:54:47.392166+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH011_SC005",
+          "version": "de52c6baf1920f3ad6aebdf1e240a30fad794929"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH011_SC005",
+          "version": "38a98b8a7f43d0c915c3b20217b58ebd73230e15"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH011_SC005",
+          "version": "ad96eb87f691d395188ed9c94b7655ef2307f3a9"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:53:49.387532+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "c663f84314a1f752d8f754b631c48e5e65e0fecc"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:47.393166+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "c663f84314a1f752d8f754b631c48e5e65e0fecc"
         }
       ]
     }

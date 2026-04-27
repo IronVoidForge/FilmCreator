@@ -4,50 +4,52 @@
   "chapter_id": "CH022",
   "shot_order": 3,
   "previous_shot_id": "SH002",
-  "next_shot_id": "",
+  "next_shot_id": "SH004",
   "primary_subject": "hammer_heads",
   "secondary_subjects": [
-    "the_scarecrow"
+    "the_scarecrow",
+    "dorothy"
   ],
-  "shot_moment_summary": "heads flying through air",
-  "start_state": "head leaves body",
-  "end_state": "impact with character",
-  "action_during_shot": "projectile flight and collision",
-  "action_continues_from": "heads launching",
-  "action_hands_off_to": "none",
-  "shot_size": "close_up",
-  "camera_angle": "eye_level",
-  "lens_family": "telephoto",
-  "camera_motion": "track",
+  "shot_moment_summary": "hammer_heads emerge from rocks",
+  "start_state": "hammer_heads appearing",
+  "end_state": "heads launching",
+  "action_during_shot": "emerging and preparing attack",
+  "action_continues_from": "travelers pausing mid-climb",
+  "action_hands_off_to": "BT003",
+  "shot_size": "medium",
+  "camera_angle": "low_angle",
+  "lens_family": "normal",
+  "camera_motion": "pan",
   "zoom_behavior": "none",
-  "focus_strategy": "rack_focus",
+  "focus_strategy": "shallow_subject",
   "lighting_style": "hard_directional",
   "subject_visibility": "on_screen",
   "narration_mode": "none",
-  "primary_subject_angle": "profile_left",
+  "primary_subject_angle": "front",
   "visible_primary_subject_id": "hammer_heads",
   "visible_secondary_subject_ids": [
-    "the_scarecrow"
+    "the_scarecrow",
+    "dorothy"
   ],
-  "primary_subject_frame_position": "foreground inside climbing path",
-  "primary_subject_scale_relation": "speed of projectile vs character size",
-  "primary_subject_facing_direction": "profile left toward the scene action",
-  "primary_subject_pose_description": "head leaves body",
-  "subject_relation_summary": "hammer_heads plays against the_scarecrow in the same frame",
-  "required_environment_anchor_1": "climbing path",
-  "required_subject_anchor_1": "head leaves body",
+  "primary_subject_frame_position": "foreground right within upper slope",
+  "primary_subject_scale_relation": "creature size vs rock face",
+  "primary_subject_facing_direction": "facing directly toward camera",
+  "primary_subject_pose_description": "hammer_heads appearing",
+  "subject_relation_summary": "hammer_heads plays against the_scarecrow, dorothy in the same frame",
+  "required_environment_anchor_1": "upper slope",
+  "required_subject_anchor_1": "hammer_heads appearing",
   "required_celestial_anchor_1": "",
-  "required_scale_proof_detail": "speed of projectile vs character size",
-  "camera_package_description": "close-up, eye level, telephoto lens, track, rack focus, hard directional",
+  "required_scale_proof_detail": "creature size vs rock face",
+  "camera_package_description": "medium, low angle, normal lens, pan, shallow subject, hard directional",
   "subject_blocking": [
-    "diagonal trajectory across frame",
-    "diagonal movement of heads and vertical descent of characters",
-    "climbing path/slope",
+    "stationary above travelers",
+    "creatures positioned above travelers",
+    "upper slope looking down",
     "hammer_heads remains readable within the active playing space.",
     "the_scarecrow remains readable within the active playing space."
   ],
   "camera_relative_positions": [
-    "Camera anchors the action inside the climbing path.",
+    "Camera anchors the action inside the upper slope.",
     "Background depth should keep rocky_hill_territory legible as the location anchor.",
     "Subject 1: hammer_heads remains visually readable against the environment scale.",
     "Subject 2: the_scarecrow remains visually readable against the environment scale."
@@ -55,19 +57,20 @@
   "gaze_directions": [
     "hammer_heads focuses toward the active scene action."
   ],
-  "environment_subzone": "climbing path",
+  "environment_subzone": "upper slope",
   "key_visible_environment_features": [
-    "climbing path"
+    "upper slope",
+    "Chapter-local environment alias match for 'A rocky' (key_overlap=1, label_overlap=1, context_overlap=4)."
   ],
-  "continuity_from_previous_shot": "heads launching",
-  "continuity_to_next_shot": "none",
-  "pose_anchor_frame": "head leaves body",
-  "pose_end_frame": "impact with character",
-  "shot_title": "Reaction Closeup 3: Projectile attack and descent",
-  "shot_type": "reaction_closeup",
-  "camera_description": "Close framing that isolates reaction and emotional emphasis.",
-  "composition": "Intimate composition that isolates hammer_heads, the_scarecrow against rocky_hill_territory to capture the beat's emotional turn.",
-  "target_seconds": 5.1,
+  "continuity_from_previous_shot": "travelers pausing mid-climb",
+  "continuity_to_next_shot": "BT003",
+  "pose_anchor_frame": "hammer_heads appearing",
+  "pose_end_frame": "heads launching",
+  "shot_title": "Handoff Medium 3: Hammer-Heads intercept the group",
+  "shot_type": "handoff_medium",
+  "camera_description": "Stable readable framing built from the beat requirement.",
+  "composition": "Readable medium composition in rocky_hill_territory featuring hammer_heads, the_scarecrow, dorothy.",
+  "target_seconds": 7.0,
   "characters_in_frame": [
     {
       "label": "Hammer-Heads",
@@ -88,6 +91,16 @@
       "resolution_score": 186,
       "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH022/the_scarecrow.md",
       "notes": "asset id exactly matches canonical id | query matches alias 'scarecrow'"
+    },
+    {
+      "label": "Dorothy",
+      "canonical_id": "dorothy",
+      "display_name": "dorothy",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH022/dorothy.md",
+      "notes": "Direct registry match for 'dorothy'."
     }
   ],
   "environment": {
@@ -101,15 +114,15 @@
     "notes": "Chapter-local environment alias match for 'A rocky' (key_overlap=1, label_overlap=1, context_overlap=4)."
   },
   "beat_ids": [
-    "BT003"
+    "BT002"
   ],
   "continuity_constraints": [
     "Precise positioning of travelers prior to the first impact",
     "Trajectory paths and specific impact points of projectile heads",
-    "Projectile attack and descent"
+    "Hammer-Heads intercept the group"
   ],
-  "prompt_seed": "Reaction Closeup 3: Projectile attack and descent. reaction_closeup. size=close_up. angle=eye_level. lens=telephoto. motion=track. zoom=none. focus=rack_focus. lighting=hard_directional. visibility=on_screen. subject_angle=profile_left. Close framing that isolates reaction and emotional emphasis. Intimate compositio...",
-  "shot_notes": "Projectile attack and descent",
+  "prompt_seed": "Handoff Medium 3: Hammer-Heads intercept the group. handoff_medium. size=medium. angle=low_angle. lens=normal. motion=pan. zoom=none. focus=shallow_subject. lighting=hard_directional. visibility=on_screen. subject_angle=front. Stable readable framing built from the beat requirement. Readable medium composition in ro...",
+  "shot_notes": "Hammer-Heads intercept the group",
   "evidence_refs": [
     {
       "source": "scene_contract",
@@ -178,13 +191,29 @@
     "tin_woodman | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH005/tin_woodman.md] Costume/Silhouette: Entirely metallic (tin) body; carries an axe. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis...",
     "rocky_hill_territory | No specific visual descriptors are provided in the current evidence. The location is identified as a landform serving as an obstacle setting. | Unknown. | Unknown. | Unknown."
   ],
+  "coverage_density": "medium",
+  "coverage_profile": "classic_adventure",
+  "coverage_intent": "adventure_action",
+  "coverage_role": "handoff_medium",
+  "beat_type": "transition_handoff",
+  "coverage_importance": "major",
+  "coverage_blueprint_source": "deterministic_v1",
+  "coverage_classification": {
+    "beat_id": "BT002",
+    "beat_type": "transition_handoff",
+    "importance": "major",
+    "confidence": 0.55,
+    "reasons": [
+      "importance = major"
+    ]
+  },
   "metadata": {
     "artifact_id": "CH022_SC001_SH003_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "2eb76080a7c4581778e74348887ea787cede2c15",
+    "source_fingerprint": "8dabf4d611fc0e2cff114ad0527318d3f845f9b6",
     "created_at_utc": "2026-04-27T20:18:33.435848+00:00",
-    "updated_at_utc": "2026-04-27T20:18:33.435848+00:00",
+    "updated_at_utc": "2026-04-27T20:55:15.093712+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
@@ -199,7 +228,7 @@
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH022_SC001",
-        "version": "c8a5f41bc8d135c4fed2161aa643e453876ed939"
+        "version": "6bd9740d2d9db160e89968b0dcbde072e947e398"
       }
     ],
     "locked_fields": {},
@@ -209,6 +238,16 @@
         "timestamp_utc": "2026-04-27T20:19:42.809388+00:00",
         "action": "synthesized",
         "source_fingerprint": "2eb76080a7c4581778e74348887ea787cede2c15"
+      },
+      {
+        "timestamp_utc": "2026-04-27T20:54:14.976155+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "8dabf4d611fc0e2cff114ad0527318d3f845f9b6"
+      },
+      {
+        "timestamp_utc": "2026-04-27T20:55:15.094711+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "8dabf4d611fc0e2cff114ad0527318d3f845f9b6"
       }
     ]
   }

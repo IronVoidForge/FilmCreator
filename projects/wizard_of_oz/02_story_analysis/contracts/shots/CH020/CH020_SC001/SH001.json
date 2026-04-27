@@ -11,9 +11,9 @@
     "the_scarecrow"
   ],
   "shot_moment_summary": "characters beginning the climb",
-  "start_state": "characters at base of wall with wooden ladder",
-  "end_state": "climbing mid-way up the ladder",
-  "action_during_shot": "climbing ladder in single file",
+  "start_state": "characters at base",
+  "end_state": "climbing mid-way",
+  "action_during_shot": "climbing ladder",
   "action_continues_from": "Characters gathered at the base of the massive wall with a wooden ladder.",
   "action_hands_off_to": "BT002",
   "shot_size": "full",
@@ -42,20 +42,25 @@
   "required_scale_proof_detail": "low angle looking up wall height",
   "camera_package_description": "full, low angle, wide lens, tilt, deep focus, diffuse ambient",
   "subject_blocking": [
-    "single file vertical climb on wooden_ladder",
+    "single file on ladder",
+    "single file vertical climb",
+    "wall_base to wall_summit",
     "tin_woodman remains readable within the active playing space.",
     "dorothy remains readable within the active playing space."
   ],
   "camera_relative_positions": [
     "Camera anchors the action inside the wall_base.",
-    "Background depth should keep dainty_china_country legible as the location anchor."
+    "Background depth should keep dainty_china_country legible as the location anchor.",
+    "Subject 1: tin_woodman remains visually readable against the environment scale.",
+    "Subject 2: dorothy remains visually readable against the environment scale."
   ],
   "gaze_directions": [
     "tin_woodman focuses toward the active scene action."
   ],
   "environment_subzone": "wall_base",
   "key_visible_environment_features": [
-    "wall_base"
+    "wall_base",
+    "Chapter-local environment alias match for 'The high wall of China Country' (key_overlap=2, label_overlap=3, context_o..."
   ],
   "continuity_from_previous_shot": "Characters gathered at the base of the massive wall with a wooden ladder.",
   "continuity_to_next_shot": "BT002",
@@ -65,7 +70,7 @@
   "shot_type": "establishing_wide",
   "camera_description": "Wide establishing frame with a steady or lightly drifting camera.",
   "composition": "Wide composition across dainty_china_country with tin_woodman, dorothy, the_scarecrow placed for immediate spatial orientation.",
-  "target_seconds": 5.5,
+  "target_seconds": 10.8,
   "characters_in_frame": [
     {
       "label": "Tin Woodman",
@@ -113,7 +118,9 @@
   ],
   "continuity_constraints": [
     "Vertical scale relationship between characters and the massive wall",
-    "Structural stability of the wooden ladder during ascent"
+    "Structural stability of the wooden ladder during ascent",
+    "Scaling the massive wall via ladder",
+    "Resolve the white -> the white"
   ],
   "prompt_seed": "Establishing Wide 1: Scaling the massive wall via ladder. establishing_wide. size=full. angle=low_angle. lens=wide. motion=tilt. zoom=none. focus=deep_focus. lighting=diffuse_ambient. visibility=on_screen. subject_angle=profile_right. Wide establishing frame with a steady or lightly drifting camera. Wide composition...",
   "shot_notes": "Scaling the massive wall via ladder",
@@ -185,13 +192,30 @@
     "the_scarecrow | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH003/the_scarecrow.md] Physical Description: A living figure stuffed with straw. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/cha...",
     "dainty_china_country | A miniature-scale environment characterized by extreme fragility. The landscape is defined by a smooth, seamless white ground plane and high perimeter walls that enclose the territory. All surfaces are highly polished, contributing to..."
   ],
+  "coverage_density": "medium",
+  "coverage_profile": "classic_adventure",
+  "coverage_intent": "montage_travel",
+  "coverage_role": "establishing_wide",
+  "beat_type": "establishing_arrival",
+  "coverage_importance": "major",
+  "coverage_blueprint_source": "deterministic_v1",
+  "coverage_classification": {
+    "beat_id": "BT001",
+    "beat_type": "establishing_arrival",
+    "importance": "major",
+    "confidence": 0.72,
+    "reasons": [
+      "arrival/entry verb",
+      "importance = major"
+    ]
+  },
   "metadata": {
     "artifact_id": "CH020_SC001_SH001_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "aa841987cde5821d0c10901094d383143b226443",
+    "source_fingerprint": "387360a61ebf2d93782a275b298d1d19ffd678be",
     "created_at_utc": "2026-04-27T19:36:12.644075+00:00",
-    "updated_at_utc": "2026-04-27T19:36:12.644075+00:00",
+    "updated_at_utc": "2026-04-27T20:55:08.546687+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
@@ -206,7 +230,7 @@
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH020_SC001",
-        "version": "c4cdc15c78feff1db73330154be013637613cead"
+        "version": "563df9a99e96b742f2d03f284953923910551ac7"
       }
     ],
     "locked_fields": {},
@@ -216,6 +240,16 @@
         "timestamp_utc": "2026-04-27T19:37:30.358513+00:00",
         "action": "synthesized",
         "source_fingerprint": "aa841987cde5821d0c10901094d383143b226443"
+      },
+      {
+        "timestamp_utc": "2026-04-27T20:54:09.368851+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "387360a61ebf2d93782a275b298d1d19ffd678be"
+      },
+      {
+        "timestamp_utc": "2026-04-27T20:55:08.881854+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "387360a61ebf2d93782a275b298d1d19ffd678be"
       }
     ]
   }

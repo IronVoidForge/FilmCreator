@@ -5,71 +5,66 @@
   "shot_order": 2,
   "previous_shot_id": "",
   "next_shot_id": "",
-  "primary_subject": "Citizens of the Emerald City",
+  "primary_subject": "oz",
   "secondary_subjects": [],
-  "shot_moment_summary": "Citizens reacting to the news of the brother Wizard",
-  "start_state": "crowd listening",
-  "end_state": "crowd murmuring/curious",
-  "action_during_shot": "citizens exchange looks",
+  "shot_moment_summary": "Oz's formal announcement of departure",
+  "start_state": "Oz stands before the crowd",
+  "end_state": "Oz claims he is visiting a brother Wizard",
+  "action_during_shot": "Oz's formal announcement of departure",
   "action_continues_from": "Oz beginning to speak",
-  "action_hands_off_to": "BT003",
+  "action_hands_off_to": "BT002",
   "shot_size": "medium",
   "camera_angle": "eye_level",
   "lens_family": "normal",
-  "camera_motion": "pan",
+  "camera_motion": "locked_off",
   "zoom_behavior": "none",
-  "focus_strategy": "shallow_subject",
-  "lighting_style": "diffuse_ambient",
+  "focus_strategy": "deep_focus",
+  "lighting_style": "hard_directional",
   "subject_visibility": "on_screen",
-  "narration_mode": "in_scene_speaker",
-  "primary_subject_angle": "front",
+  "narration_mode": "none",
+  "primary_subject_angle": "front_three_quarter_left",
   "visible_primary_subject_id": "oz",
   "visible_secondary_subject_ids": [],
-  "primary_subject_frame_position": "foreground right within public_square",
+  "primary_subject_frame_position": "foreground right within palace_steps",
   "primary_subject_scale_relation": "preserve readable body-to-environment scale in frame",
-  "primary_subject_facing_direction": "facing directly toward camera",
-  "primary_subject_pose_description": "crowd listening",
-  "subject_relation_summary": "Citizens of the Emerald City carries the frame alone",
-  "required_environment_anchor_1": "public_square",
+  "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+  "primary_subject_pose_description": "Oz stands before the crowd",
+  "subject_relation_summary": "oz carries the frame alone",
+  "required_environment_anchor_1": "palace_steps",
   "required_subject_anchor_1": "",
   "required_celestial_anchor_1": "",
   "required_scale_proof_detail": "preserve readable body-to-environment scale in frame",
-  "camera_package_description": "medium, eye level, normal lens, pan, shallow subject, diffuse ambient",
+  "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
   "subject_blocking": [
-    "scattered throughout square",
-    "Citizens clustered in groups"
+    "Oz at center high point",
+    "emerald_city_palace_exterior_steps",
+    "oz remains readable within the active playing space.",
+    "Citizens of the Emerald City remains readable within the active playing space."
   ],
   "camera_relative_positions": [
-    "Camera anchors the action inside the public_square.",
-    "Background depth should keep emerald_city_palace_exterior legible as the location anchor."
+    "Camera anchors the action inside the palace_steps.",
+    "Background depth should keep emerald_city_palace_exterior legible as the location anchor.",
+    "Subject 1: oz remains visually readable against the environment scale.",
+    "Subject 2: Citizens of the Emerald City remains visually readable against the environment scale."
   ],
   "gaze_directions": [
-    "Citizens of the Emerald City focuses toward the active scene action."
+    "oz focuses toward the active scene action."
   ],
-  "environment_subzone": "public_square",
+  "environment_subzone": "palace_steps",
   "key_visible_environment_features": [
-    "public_square"
+    "palace_steps",
+    "Chapter-local beat subzone match for 'palace_steps'."
   ],
   "continuity_from_previous_shot": "Oz beginning to speak",
-  "continuity_to_next_shot": "BT003",
-  "pose_anchor_frame": "crowd listening",
-  "pose_end_frame": "crowd murmuring/curious",
-  "shot_title": "Medium 2: The crowd reacts to the news of the clouds and the...",
-  "shot_type": "medium",
-  "camera_description": "Stable medium framing that keeps action and character readable.",
-  "composition": "Readable medium composition in emerald_city_palace_exterior featuring Citizens of the Emerald City, oz.",
-  "target_seconds": 5.3,
+  "continuity_to_next_shot": "BT002",
+  "pose_anchor_frame": "Oz stands before the crowd",
+  "pose_end_frame": "Oz claims he is visiting a brother Wizard",
+  "shot_title": "Authority Single 2: Oz's formal announcement of departure",
+  "shot_type": "authority_single",
+  "camera_description": "Stable readable framing built from the beat requirement.",
+  "composition": "Readable medium composition in emerald_city_palace_exterior featuring oz, Citizens of the Emerald City.",
+  "target_seconds": 7.0,
   "characters_in_frame": [
-    {
-      "label": "Citizens of the Emerald City",
-      "canonical_id": null,
-      "display_name": "Citizens of the Emerald City",
-      "status": "review",
-      "entity_kind": "individual",
-      "resolution_score": 16,
-      "source_path": "",
-      "notes": "Low-confidence character match requires review."
-    },
     {
       "label": "Oz (The Wizard)",
       "canonical_id": "oz",
@@ -79,27 +74,39 @@
       "resolution_score": 138,
       "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH017/oz_the_wizard.md",
       "notes": "Direct registry match for 'oz_the_wizard'."
+    },
+    {
+      "label": "Citizens of the Emerald City",
+      "canonical_id": null,
+      "display_name": "Citizens of the Emerald City",
+      "status": "review",
+      "entity_kind": "individual",
+      "resolution_score": 16,
+      "source_path": "",
+      "notes": "Low-confidence character match requires review."
     }
   ],
   "environment": {
-    "label": "Palace Exterior/Public Square",
+    "label": "emerald_city_palace_exterior",
     "canonical_id": "emerald_city_palace_exterior",
     "display_name": "emerald_city_palace_exterior",
     "status": "canonical",
     "entity_kind": "city",
-    "resolution_score": 114,
+    "resolution_score": null,
     "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH017/emerald_city_palace_exterior.md",
-    "notes": "Chapter-local environment alias match for 'Palace Exterior/Public Square' (key_overlap=2, label_overlap=3, context_overlap=4)."
+    "notes": "Chapter-local beat subzone match for 'palace_steps'."
   },
   "beat_ids": [
-    "BT002"
+    "BT001"
   ],
   "continuity_constraints": [
     "Crowd density and placement must remain consistent across coverage.",
-    "the_scarecrow must maintain a regal/official posture during the appointment."
+    "the_scarecrow must maintain a regal/official posture during the appointment.",
+    "Oz's formal announcement of departure",
+    "Resolve Citizens of the Emerald City -> Citizens of the Emerald City"
   ],
-  "prompt_seed": "Medium 2: The crowd reacts to the news of the clouds and the.... medium. size=medium. angle=eye_level. lens=normal. motion=pan. zoom=none. focus=shallow_subject. lighting=diffuse_ambient. visibility=on_screen. subject_angle=front. Stable medium framing that keeps action and character readable.",
-  "shot_notes": "The crowd reacts to the news of the clouds and the brother Wizard",
+  "prompt_seed": "Authority Single 2: Oz's formal announcement of departure. authority_single. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Rea...",
+  "shot_notes": "Oz's formal announcement of departure",
   "evidence_refs": [
     {
       "source": "scene_contract",
@@ -167,13 +174,30 @@
     "the_scarecrow | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH003/the_scarecrow.md] Physical Description: A living figure stuffed with straw. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/cha...",
     "emerald_city_palace_exterior | No specific visual descriptors are provided in the current evidence. The location functions as a secondary setting and transit hub within the narrative structure. | Unknown. | Unknown. | Unknown."
   ],
+  "coverage_density": "medium",
+  "coverage_profile": "classic_adventure",
+  "coverage_intent": "montage_travel",
+  "coverage_role": "authority_single",
+  "beat_type": "dialogue_council_or_court",
+  "coverage_importance": "major",
+  "coverage_blueprint_source": "deterministic_v1",
+  "coverage_classification": {
+    "beat_id": "BT001",
+    "beat_type": "dialogue_council_or_court",
+    "importance": "major",
+    "confidence": 0.82,
+    "reasons": [
+      "court/council authority language",
+      "importance = major"
+    ]
+  },
   "metadata": {
     "artifact_id": "CH017_SC003_SH002_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "fe132e4e1956d2918c31b0059d7f97ea5eceb000",
+    "source_fingerprint": "22d6313bfa6f878299a20c63f6aa50749d6b331b",
     "created_at_utc": "2026-04-27T18:57:12.951211+00:00",
-    "updated_at_utc": "2026-04-27T18:57:12.951211+00:00",
+    "updated_at_utc": "2026-04-27T20:55:02.712117+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
@@ -188,7 +212,7 @@
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH017_SC003",
-        "version": "438aaedc772eb7ac5a33689afa165acbc39bdffa"
+        "version": "567f96dc1d89bbc78905874f4039984a3b4da6e4"
       }
     ],
     "locked_fields": {},
@@ -198,6 +222,16 @@
         "timestamp_utc": "2026-04-27T18:58:19.422001+00:00",
         "action": "synthesized",
         "source_fingerprint": "fe132e4e1956d2918c31b0059d7f97ea5eceb000"
+      },
+      {
+        "timestamp_utc": "2026-04-27T20:54:03.870506+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "22d6313bfa6f878299a20c63f6aa50749d6b331b"
+      },
+      {
+        "timestamp_utc": "2026-04-27T20:55:02.712616+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "22d6313bfa6f878299a20c63f6aa50749d6b331b"
       }
     ]
   }

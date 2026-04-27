@@ -4,77 +4,65 @@
   "chapter_id": "CH012",
   "shot_order": 3,
   "previous_shot_id": "SH002",
-  "next_shot_id": "",
-  "primary_subject": "silver_shoe",
+  "next_shot_id": "SH004",
+  "primary_subject": "dorothy",
   "secondary_subjects": [],
-  "shot_moment_summary": "silver shoe is snatched",
-  "start_state": "shoe on foot",
-  "end_state": "shoe gone",
-  "action_during_shot": "snatching motion",
-  "action_continues_from": "unstable stumble",
-  "action_hands_off_to": "end_of_scene",
-  "shot_size": "extreme_close_up",
-  "camera_angle": "low_angle",
-  "lens_family": "telephoto",
+  "shot_moment_summary": "Monotonous domestic labor",
+  "start_state": "dorothy engaged in task",
+  "end_state": "dorothy continues task",
+  "action_during_shot": "Monotonous domestic labor",
+  "action_continues_from": "dorothy continues task",
+  "action_hands_off_to": "BT002",
+  "shot_size": "medium",
+  "camera_angle": "eye_level",
+  "lens_family": "normal",
   "camera_motion": "locked_off",
   "zoom_behavior": "none",
   "focus_strategy": "deep_focus",
-  "lighting_style": "high_contrast_ceremonial",
+  "lighting_style": "hard_directional",
   "subject_visibility": "on_screen",
   "narration_mode": "none",
-  "primary_subject_angle": "profile_right",
+  "primary_subject_angle": "front_three_quarter_left",
   "visible_primary_subject_id": "dorothy",
   "visible_secondary_subject_ids": [],
-  "primary_subject_frame_position": "foreground inside kitchen_floor",
+  "primary_subject_frame_position": "foreground right within kitchen_work_surface",
   "primary_subject_scale_relation": "Human scale domesticity vs. unseen magical presence.",
-  "primary_subject_facing_direction": "profile right toward the scene action",
-  "primary_subject_pose_description": "shoe on foot",
-  "subject_relation_summary": "silver_shoe carries the frame alone",
-  "required_environment_anchor_1": "kitchen_floor",
-  "required_subject_anchor_1": "",
+  "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+  "primary_subject_pose_description": "dorothy engaged in task",
+  "subject_relation_summary": "dorothy carries the frame alone",
+  "required_environment_anchor_1": "kitchen_work_surface",
+  "required_subject_anchor_1": "standing at surface",
   "required_celestial_anchor_1": "",
-  "required_scale_proof_detail": "shoe removal from foot",
-  "camera_package_description": "extreme-close-up, low angle, telephoto lens, locked off, deep focus, high contrast ceremonial",
+  "required_scale_proof_detail": "Human scale domesticity vs. unseen magical presence.",
+  "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
   "subject_blocking": [
-    "shoe being pulled away",
-    "shoe pulled from foot",
-    "kitchen_floor",
-    "Wicked Witch (invisible/presence) remains readable within the active playing space.",
+    "standing at surface",
+    "kitchen_work_surface",
     "dorothy remains readable within the active playing space."
   ],
   "camera_relative_positions": [
-    "Camera anchors the action inside the kitchen_floor.",
+    "Camera anchors the action inside the kitchen_work_surface.",
     "Background depth should keep wicked_witch_castle_interior legible as the location anchor.",
-    "Subject 1: Wicked Witch (invisible/presence) remains visually readable against the environment scale.",
-    "Subject 2: dorothy remains visually readable against the environment scale."
+    "Subject 1: dorothy remains visually readable against the environment scale."
   ],
   "gaze_directions": [
-    "silver_shoe focuses toward the active scene action."
+    "dorothy focuses toward the active scene action."
   ],
-  "environment_subzone": "kitchen_floor",
+  "environment_subzone": "kitchen_work_surface",
   "key_visible_environment_features": [
-    "kitchen_floor"
+    "kitchen_work_surface",
+    "Chapter-local environment alias match for 'The Witch's Kitchen' (key_overlap=1, label_overlap=2, context_overlap=4)."
   ],
-  "continuity_from_previous_shot": "unstable stumble",
-  "continuity_to_next_shot": "end_of_scene",
-  "pose_anchor_frame": "shoe on foot",
-  "pose_end_frame": "shoe gone",
-  "shot_title": "Reaction Closeup 3: The theft and shock",
-  "shot_type": "reaction_closeup",
-  "camera_description": "Close framing that isolates reaction and emotional emphasis.",
-  "composition": "Intimate composition that isolates Wicked Witch (invisible/presence), dorothy against wicked_witch_castle_interior to capture the beat's emotional turn.",
-  "target_seconds": 5.1,
+  "continuity_from_previous_shot": "dorothy continues task",
+  "continuity_to_next_shot": "BT002",
+  "pose_anchor_frame": "dorothy engaged in task",
+  "pose_end_frame": "dorothy continues task",
+  "shot_title": "Reverse Over The Shoulder 3: Monotonous domestic labor",
+  "shot_type": "reverse_over_the_shoulder",
+  "camera_description": "Stable readable framing built from the beat requirement.",
+  "composition": "Readable medium composition in wicked_witch_castle_interior featuring dorothy.",
+  "target_seconds": 6.5,
   "characters_in_frame": [
-    {
-      "label": "Wicked Witch (invisible/presence)",
-      "canonical_id": null,
-      "display_name": "Wicked Witch (invisible/presence)",
-      "status": "review",
-      "entity_kind": "individual",
-      "resolution_score": 16,
-      "source_path": "",
-      "notes": "Low-confidence character match requires review."
-    },
     {
       "label": "Dorothy",
       "canonical_id": "dorothy",
@@ -97,15 +85,16 @@
     "notes": "Chapter-local environment alias match for 'The Witch's Kitchen' (key_overlap=1, label_overlap=2, context_overlap=4)."
   },
   "beat_ids": [
-    "BT003"
+    "BT001"
   ],
   "continuity_constraints": [
     "Presence/absence of exactly one silver shoe",
     "Cleanliness and state of the kitchen surfaces",
-    "The theft and shock"
+    "Monotonous domestic labor",
+    "Resolve Wicked Witch (invisible/presence) -> Wicked Witch (invisible/presence)"
   ],
-  "prompt_seed": "Reaction Closeup 3: The theft and shock. reaction_closeup. size=extreme_close_up. angle=low_angle. lens=telephoto. motion=locked_off. zoom=none. focus=deep_focus. lighting=high_contrast_ceremonial. visibility=on_screen. subject_angle=profile_right. Close framing that isolates reaction and emotional emphasis.",
-  "shot_notes": "The theft and shock",
+  "prompt_seed": "Reverse Over The Shoulder 3: Monotonous domestic labor. reverse_over_the_shoulder. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requiremen...",
+  "shot_notes": "Monotonous domestic labor",
   "evidence_refs": [
     {
       "source": "scene_contract",
@@ -172,13 +161,30 @@
     "dorothy | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md] Costume/Silhouette: Unknown. No specific clothing details are provided in this chapter. [source:C:/FilmCreator/projects/wizard_of_oz/02_...",
     "wicked_witch_castle_interior | No specific visual descriptors are provided in the current evidence. The location serves as a critical site for character imprisonment and the narrative climax. | Unknown. | Unknown. | Unknown."
   ],
+  "coverage_density": "medium",
+  "coverage_profile": "classic_adventure",
+  "coverage_intent": "wonder_reveal",
+  "coverage_role": "reverse_over_the_shoulder_b",
+  "beat_type": "dialogue_two_person",
+  "coverage_importance": "normal",
+  "coverage_blueprint_source": "deterministic_v1",
+  "coverage_classification": {
+    "beat_id": "BT001",
+    "beat_type": "dialogue_two_person",
+    "importance": "normal",
+    "confidence": 0.74,
+    "reasons": [
+      "dialogue verb with subject count = 1",
+      "importance = normal"
+    ]
+  },
   "metadata": {
     "artifact_id": "CH012_SC004_SH003_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "d95893c110cbd1d2696e21acb8164d183953d7ec",
+    "source_fingerprint": "4362fb3b3c44025986b1cd505f7dc71df49594db",
     "created_at_utc": "2026-04-27T17:34:43.314770+00:00",
-    "updated_at_utc": "2026-04-27T17:34:43.314770+00:00",
+    "updated_at_utc": "2026-04-27T20:54:50.903168+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
@@ -193,7 +199,7 @@
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH012_SC004",
-        "version": "f451e8513f6058acbe040a5da0e6d2562ece2b9a"
+        "version": "55ed88375c9b39de9255e1a933a0d2191587fd80"
       }
     ],
     "locked_fields": {},
@@ -203,6 +209,16 @@
         "timestamp_utc": "2026-04-27T17:35:49.747175+00:00",
         "action": "synthesized",
         "source_fingerprint": "d95893c110cbd1d2696e21acb8164d183953d7ec"
+      },
+      {
+        "timestamp_utc": "2026-04-27T20:53:52.621912+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "4362fb3b3c44025986b1cd505f7dc71df49594db"
+      },
+      {
+        "timestamp_utc": "2026-04-27T20:54:50.903671+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "4362fb3b3c44025986b1cd505f7dc71df49594db"
       }
     ]
   }

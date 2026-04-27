@@ -5,64 +5,76 @@
   "shot_order": 2,
   "previous_shot_id": "",
   "next_shot_id": "",
-  "primary_subject": "Thousands of Field Mice",
-  "secondary_subjects": [
-    "tin_woodman"
-  ],
-  "shot_moment_summary": "mice and characters pulling the lion",
-  "start_state": "mice pulling string",
-  "end_state": "lion moving through poppies",
-  "action_during_shot": "massive group effort to drag the heavy lion",
+  "primary_subject": "dorothy",
+  "secondary_subjects": [],
+  "shot_moment_summary": "Dorothy wakes from poppy sleep",
+  "start_state": "dorothy lying still in poppies",
+  "end_state": "dorothy looking at the mice",
+  "action_during_shot": "Dorothy wakes from poppy sleep",
   "action_continues_from": "eyes open/confused",
-  "action_hands_off_to": "BT003",
-  "shot_size": "wide",
-  "camera_angle": "low_angle",
-  "lens_family": "wide",
-  "camera_motion": "track",
+  "action_hands_off_to": "BT002",
+  "shot_size": "medium",
+  "camera_angle": "eye_level",
+  "lens_family": "normal",
+  "camera_motion": "locked_off",
   "zoom_behavior": "none",
   "focus_strategy": "deep_focus",
-  "lighting_style": "diffuse_ambient",
+  "lighting_style": "hard_directional",
   "subject_visibility": "on_screen",
   "narration_mode": "none",
   "primary_subject_angle": "front_three_quarter_left",
-  "visible_primary_subject_id": "the_scarecrow",
-  "visible_secondary_subject_ids": [
-    "tin_woodman"
-  ],
-  "primary_subject_frame_position": "midground inside poppy_field_bed",
-  "primary_subject_scale_relation": "low-angle looking up at mice vs lion size",
+  "visible_primary_subject_id": "dorothy",
+  "visible_secondary_subject_ids": [],
+  "primary_subject_frame_position": "foreground right within poppy_field_bed",
+  "primary_subject_scale_relation": "preserve readable body-to-environment scale in frame",
   "primary_subject_facing_direction": "front three-quarter left toward the scene action",
-  "primary_subject_pose_description": "mice pulling string",
-  "subject_relation_summary": "Thousands of Field Mice plays against tin_woodman in the same frame",
+  "primary_subject_pose_description": "dorothy lying still in poppies",
+  "subject_relation_summary": "dorothy carries the frame alone",
   "required_environment_anchor_1": "poppy_field_bed",
   "required_subject_anchor_1": "",
   "required_celestial_anchor_1": "",
-  "required_scale_proof_detail": "low-angle looking up at mice vs lion size",
-  "camera_package_description": "wide, low angle, wide lens, track, deep focus, diffuse ambient",
+  "required_scale_proof_detail": "preserve readable body-to-environment scale in frame",
+  "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
   "subject_blocking": [
-    "linear pull toward camera/side",
-    "linear movement line"
+    "dorothy central to frame",
+    "poppy_field_bed",
+    "dorothy remains readable within the active playing space.",
+    "Thousands of Field Mice remains readable within the active playing space."
   ],
   "camera_relative_positions": [
-    "Camera anchors the action inside the poppy_field_bed."
+    "Camera anchors the action inside the poppy_field_bed.",
+    "Background depth should keep poppy_field_bed legible as the location anchor.",
+    "Subject 1: dorothy remains visually readable against the environment scale.",
+    "Subject 2: Thousands of Field Mice remains visually readable against the environment scale."
   ],
   "gaze_directions": [
-    "Thousands of Field Mice focuses toward the active scene action."
+    "dorothy focuses toward the active scene action."
   ],
   "environment_subzone": "poppy_field_bed",
   "key_visible_environment_features": [
-    "poppy_field_bed"
+    "poppy_field_bed",
+    "Chapter-local beat subzone match for 'poppy_field_bed'."
   ],
   "continuity_from_previous_shot": "eyes open/confused",
-  "continuity_to_next_shot": "BT003",
-  "pose_anchor_frame": "mice pulling string",
-  "pose_end_frame": "lion moving through poppies",
-  "shot_title": "Establishing Wide 2: The massive rescue effort begins",
-  "shot_type": "establishing_wide",
-  "camera_description": "Wide establishing frame with a steady or lightly drifting camera.",
-  "composition": "Wide composition across poppy_field_bed with Thousands of Field Mice, the_scarecrow, tin_woodman placed for immediate spatial orientation.",
-  "target_seconds": 5.3,
+  "continuity_to_next_shot": "BT002",
+  "pose_anchor_frame": "dorothy lying still in poppies",
+  "pose_end_frame": "dorothy looking at the mice",
+  "shot_title": "Authority Single 2: Dorothy wakes from poppy sleep",
+  "shot_type": "authority_single",
+  "camera_description": "Stable readable framing built from the beat requirement.",
+  "composition": "Readable medium composition in poppy_field_bed featuring dorothy, Thousands of Field Mice.",
+  "target_seconds": 7.0,
   "characters_in_frame": [
+    {
+      "label": "Dorothy",
+      "canonical_id": "dorothy",
+      "display_name": "dorothy",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH009/dorothy.md",
+      "notes": "Direct registry match for 'dorothy'."
+    },
     {
       "label": "Thousands of Field Mice",
       "canonical_id": null,
@@ -72,26 +84,6 @@
       "resolution_score": 16,
       "source_path": "",
       "notes": "Low-confidence character match requires review."
-    },
-    {
-      "label": "Scarecrow",
-      "canonical_id": "the_scarecrow",
-      "display_name": "the_scarecrow",
-      "status": "canonical",
-      "entity_kind": "individual",
-      "resolution_score": 186,
-      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH009/the_scarecrow.md",
-      "notes": "asset id exactly matches canonical id | query matches alias 'scarecrow'"
-    },
-    {
-      "label": "Tin Woodman",
-      "canonical_id": "tin_woodman",
-      "display_name": "tin_woodman",
-      "status": "canonical",
-      "entity_kind": "individual",
-      "resolution_score": 138,
-      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH009/tin_woodman.md",
-      "notes": "Direct registry match for 'tin_woodman'."
     }
   ],
   "environment": {
@@ -105,14 +97,16 @@
     "notes": "Chapter-local beat subzone match for 'poppy_field_bed'."
   },
   "beat_ids": [
-    "BT002"
+    "BT001"
   ],
   "continuity_constraints": [
     "Physical connection between string, truck, and cowardly_lion must remain taut/intact during transit",
-    "Direction of travel must strictly move from poppy_field_bed into green grass"
+    "Direction of travel must strictly move from poppy_field_bed into green grass",
+    "Dorothy wakes from poppy sleep",
+    "Resolve Thousands of Field Mice -> Thousands of Field Mice"
   ],
-  "prompt_seed": "Establishing Wide 2: The massive rescue effort begins. establishing_wide. size=wide. angle=low_angle. lens=wide. motion=track. zoom=none. focus=deep_focus. lighting=diffuse_ambient. visibility=on_screen. subject_angle=front_three_quarter_left. Wide establishing frame with a steady or lightly drifting camera. Wide co...",
-  "shot_notes": "The massive rescue effort begins",
+  "prompt_seed": "Authority Single 2: Dorothy wakes from poppy sleep. authority_single. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Readable m...",
+  "shot_notes": "Dorothy wakes from poppy sleep",
   "evidence_refs": [
     {
       "source": "scene_contract",
@@ -180,13 +174,30 @@
     "the_scarecrow | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH003/the_scarecrow.md] Physical Description: A living figure stuffed with straw. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/cha...",
     "poppy_field_bed | No specific visual details are provided in the current evidence. The environment is identified as a hazard setting associated with poppy fields. | Unknown. | Unknown. | Unknown."
   ],
+  "coverage_density": "medium",
+  "coverage_profile": "classic_adventure",
+  "coverage_intent": "adventure_action",
+  "coverage_role": "authority_single",
+  "beat_type": "dialogue_council_or_court",
+  "coverage_importance": "major",
+  "coverage_blueprint_source": "deterministic_v1",
+  "coverage_classification": {
+    "beat_id": "BT001",
+    "beat_type": "dialogue_council_or_court",
+    "importance": "major",
+    "confidence": 0.82,
+    "reasons": [
+      "court/council authority language",
+      "importance = major"
+    ]
+  },
   "metadata": {
     "artifact_id": "CH009_SC003_SH002_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "be822dcc971efae5e2109b1e087c581b06c78ae8",
+    "source_fingerprint": "e82687e8c731a5e780ab3e1b40ec52ce5e603e65",
     "created_at_utc": "2026-04-27T16:34:43.232517+00:00",
-    "updated_at_utc": "2026-04-27T16:34:43.232517+00:00",
+    "updated_at_utc": "2026-04-27T20:54:41.385838+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
@@ -201,7 +212,7 @@
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH009_SC003",
-        "version": "dd426b02c76b79f08bfb2cfedc2ea7a671d4ad1a"
+        "version": "a847b2a8552295e5ac8038cfa8a8b7f59802a44f"
       }
     ],
     "locked_fields": {},
@@ -211,6 +222,16 @@
         "timestamp_utc": "2026-04-27T16:35:51.949990+00:00",
         "action": "synthesized",
         "source_fingerprint": "be822dcc971efae5e2109b1e087c581b06c78ae8"
+      },
+      {
+        "timestamp_utc": "2026-04-27T20:53:43.881886+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "e82687e8c731a5e780ab3e1b40ec52ce5e603e65"
+      },
+      {
+        "timestamp_utc": "2026-04-27T20:54:41.386840+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "e82687e8c731a5e780ab3e1b40ec52ce5e603e65"
       }
     ]
   }

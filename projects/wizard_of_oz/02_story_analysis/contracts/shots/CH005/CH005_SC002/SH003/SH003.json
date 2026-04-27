@@ -4,75 +4,102 @@
   "chapter_id": "CH005",
   "shot_order": 3,
   "previous_shot_id": "SH002",
-  "next_shot_id": "",
-  "primary_subject": "tin_woodman",
-  "secondary_subjects": [],
-  "shot_moment_summary": "low angle reveal of tin_woodman",
-  "start_state": "static foliage",
-  "end_state": "reveal of metal limbs",
-  "action_during_shot": "unveiling the rusted figure",
-  "action_continues_from": "brush clearing",
-  "action_hands_off_to": "end_of_scene",
-  "shot_size": "insert_detail",
-  "camera_angle": "low_angle",
-  "lens_family": "wide",
-  "camera_motion": "tilt",
+  "next_shot_id": "SH004",
+  "primary_subject": "dorothy",
+  "secondary_subjects": [
+    "the_scarecrow",
+    "toto"
+  ],
+  "shot_moment_summary": "Auditory disturbance",
+  "start_state": "walking through clearing",
+  "end_state": "sudden halt",
+  "action_during_shot": "Auditory disturbance",
+  "action_continues_from": "sudden halt",
+  "action_hands_off_to": "BT002",
+  "shot_size": "medium",
+  "camera_angle": "eye_level",
+  "lens_family": "normal",
+  "camera_motion": "locked_off",
   "zoom_behavior": "none",
   "focus_strategy": "deep_focus",
-  "lighting_style": "high_contrast_ceremonial",
+  "lighting_style": "hard_directional",
   "subject_visibility": "on_screen",
   "narration_mode": "none",
-  "primary_subject_angle": "front_three_quarter_right",
-  "visible_primary_subject_id": "tin_woodman",
-  "visible_secondary_subject_ids": [],
+  "primary_subject_angle": "front_three_quarter_left",
+  "visible_primary_subject_id": "dorothy",
+  "visible_secondary_subject_ids": [
+    "the_scarecrow",
+    "toto"
+  ],
   "primary_subject_frame_position": "foreground right within forest_clearing_center",
-  "primary_subject_scale_relation": "metal height vs dorothy",
-  "primary_subject_facing_direction": "front three-quarter right toward the scene action",
-  "primary_subject_pose_description": "static foliage",
-  "subject_relation_summary": "tin_woodman carries the frame alone",
+  "primary_subject_scale_relation": "The scale of the tin_woodman relative to dorothy and the_scarecrow.",
+  "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+  "primary_subject_pose_description": "walking through clearing",
+  "subject_relation_summary": "dorothy plays against the_scarecrow, toto in the same frame",
   "required_environment_anchor_1": "forest_clearing_center",
   "required_subject_anchor_1": "",
   "required_celestial_anchor_1": "",
-  "required_scale_proof_detail": "metal height vs dorothy",
-  "camera_package_description": "insert-detail, low angle, wide lens, tilt, deep focus, high contrast ceremonial",
+  "required_scale_proof_detail": "The scale of the tin_woodman relative to dorothy and the_scarecrow.",
+  "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
   "subject_blocking": [
-    "group approaches tin_woodman",
-    "group surrounds or stands before tin_woodman",
+    "group stops in a cluster",
     "forest_clearing_center",
-    "tin_woodman remains readable within the active playing space."
+    "dorothy remains readable within the active playing space.",
+    "the_scarecrow remains readable within the active playing space."
   ],
   "camera_relative_positions": [
     "Camera anchors the action inside the forest_clearing_center.",
     "Background depth should keep forest_and_cottage_setting legible as the location anchor.",
-    "Subject 1: tin_woodman remains visually readable against the environment scale."
+    "Subject 1: dorothy remains visually readable against the environment scale.",
+    "Subject 2: the_scarecrow remains visually readable against the environment scale."
   ],
   "gaze_directions": [
-    "tin_woodman focuses toward the active scene action."
+    "dorothy focuses toward the active scene action."
   ],
   "environment_subzone": "forest_clearing_center",
   "key_visible_environment_features": [
     "forest_clearing_center",
     "Chapter-local environment alias match for 'Forest clearing near a cottage' (key_overlap=2, label_overlap=3, context_o..."
   ],
-  "continuity_from_previous_shot": "brush clearing",
-  "continuity_to_next_shot": "end_of_scene",
-  "pose_anchor_frame": "static foliage",
-  "pose_end_frame": "reveal of metal limbs",
-  "shot_title": "Insert Detail 3: The Discovery",
-  "shot_type": "insert_detail",
-  "camera_description": "Tight detail framing focused on a single visual object or gesture.",
-  "composition": "Detail composition centered on the key physical action or prop inside forest_and_cottage_setting.",
-  "target_seconds": 5.1,
+  "continuity_from_previous_shot": "sudden halt",
+  "continuity_to_next_shot": "BT002",
+  "pose_anchor_frame": "walking through clearing",
+  "pose_end_frame": "sudden halt",
+  "shot_title": "Petitioner Group 3: Auditory disturbance",
+  "shot_type": "petitioner_group",
+  "camera_description": "Stable readable framing built from the beat requirement.",
+  "composition": "Readable medium composition in forest_and_cottage_setting featuring dorothy, the_scarecrow, toto.",
+  "target_seconds": 7.0,
   "characters_in_frame": [
     {
-      "label": "Tin Woodman (immobile)",
-      "canonical_id": "tin_woodman",
-      "display_name": "tin_woodman",
+      "label": "Dorothy",
+      "canonical_id": "dorothy",
+      "display_name": "dorothy",
       "status": "canonical",
       "entity_kind": "individual",
       "resolution_score": 138,
-      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH005/tin_woodman.md",
-      "notes": "Direct registry match for 'tin_woodman'."
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH005/dorothy.md",
+      "notes": "Direct registry match for 'dorothy'."
+    },
+    {
+      "label": "Scarecrow",
+      "canonical_id": "the_scarecrow",
+      "display_name": "the_scarecrow",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 186,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH005/the_scarecrow.md",
+      "notes": "asset id exactly matches canonical id | query matches alias 'scarecrow'"
+    },
+    {
+      "label": "Toto",
+      "canonical_id": "toto",
+      "display_name": "toto",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH005/toto.md",
+      "notes": "Direct registry match for 'toto'."
     }
   ],
   "environment": {
@@ -86,15 +113,15 @@
     "notes": "Chapter-local environment alias match for 'Forest clearing near a cottage' (key_overlap=2, label_overlap=3, context_overlap=3)."
   },
   "beat_ids": [
-    "BT003"
+    "BT001"
   ],
   "continuity_constraints": [
     "tin_woodman must maintain a specific frozen pose throughout the scene",
     "rust texture consistency on metal surfaces",
-    "The Discovery"
+    "Auditory disturbance"
   ],
-  "prompt_seed": "Insert Detail 3: The Discovery. insert_detail. size=insert_detail. angle=low_angle. lens=wide. motion=tilt. zoom=none. focus=deep_focus. lighting=high_contrast_ceremonial. visibility=on_screen. subject_angle=front_three_quarter_right. Tight detail framing focused on a single visual object or gesture. Detail composit...",
-  "shot_notes": "The Discovery",
+  "prompt_seed": "Petitioner Group 3: Auditory disturbance. petitioner_group. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Readable medium comp...",
+  "shot_notes": "Auditory disturbance",
   "evidence_refs": [
     {
       "source": "scene_contract",
@@ -159,17 +186,34 @@
     "Group standing in stunned silence before the frozen tin_woodman.",
     "Searching for sound source leads to discovery of a rusted companion.",
     "dorothy | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md] Costume/Silhouette: Unknown. No specific clothing details are provided in this chapter. [source:C:/FilmCreator/projects/wizard_of_oz/02_...",
-    "the_scarecrow | The Scarecrow is a bipedal, human-scale humanoid figure of rustic construction, appearing as a living entity stuffed entirely with straw. His movement is characterized by a distinct clumsiness. He lacks flesh and is visually defined by his t...",
+    "the_scarecrow | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH003/the_scarecrow.md] Physical Description: A living figure stuffed with straw. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/cha...",
     "toto | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/toto.md] Costume/Silhouette: Small quadruped with black fur. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapte...",
     "forest_and_cottage_setting | The environment consists of a forest and a cottage, serving as the primary location for initial character encounters. Specific visual details regarding the architecture or flora are currently undocumented in the provided evidenc..."
   ],
+  "coverage_density": "medium",
+  "coverage_profile": "classic_adventure",
+  "coverage_intent": "wonder_reveal",
+  "coverage_role": "petitioner_group",
+  "beat_type": "dialogue_council_or_court",
+  "coverage_importance": "major",
+  "coverage_blueprint_source": "deterministic_v1",
+  "coverage_classification": {
+    "beat_id": "BT001",
+    "beat_type": "dialogue_council_or_court",
+    "importance": "major",
+    "confidence": 0.82,
+    "reasons": [
+      "court/council authority language",
+      "importance = major"
+    ]
+  },
   "metadata": {
     "artifact_id": "CH005_SC002_SH003_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "2642dfbdaa05e5be9a993a0ebc7c73a36e076cf0",
+    "source_fingerprint": "3f173761b6440a002d9a016bc1482646cae4f5a2",
     "created_at_utc": "2026-04-27T15:29:08.642378+00:00",
-    "updated_at_utc": "2026-04-27T15:29:08.642378+00:00",
+    "updated_at_utc": "2026-04-27T20:54:30.797942+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
@@ -184,7 +228,7 @@
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH005_SC002",
-        "version": "28704b4c8ee1d23ae4021353330a067aceefc50f"
+        "version": "d3c858509b71042786449a12bf8c93ba3e311541"
       }
     ],
     "locked_fields": {},
@@ -194,6 +238,16 @@
         "timestamp_utc": "2026-04-27T15:30:18.290799+00:00",
         "action": "synthesized",
         "source_fingerprint": "2642dfbdaa05e5be9a993a0ebc7c73a36e076cf0"
+      },
+      {
+        "timestamp_utc": "2026-04-27T20:53:33.688418+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "3f173761b6440a002d9a016bc1482646cae4f5a2"
+      },
+      {
+        "timestamp_utc": "2026-04-27T20:54:30.798932+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "3f173761b6440a002d9a016bc1482646cae4f5a2"
       }
     ]
   }

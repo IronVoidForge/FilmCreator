@@ -39,11 +39,12 @@
   "required_environment_anchor_1": "kansas_prairie_landscape",
   "required_subject_anchor_1": "",
   "required_celestial_anchor_1": "",
-  "required_scale_proof_detail": "vastness_of_prairie",
+  "required_scale_proof_detail": "preserve readable body-to-environment scale in frame",
   "camera_package_description": "extreme-wide, eye level, ultra-wide lens, pan, environment priority, diffuse ambient",
   "subject_blocking": [
     "static",
     "wide open space",
+    "kansas_prairie_landscape",
     "dorothy remains readable within the active playing space.",
     "aunt_em remains readable within the active playing space."
   ],
@@ -58,17 +59,18 @@
   ],
   "environment_subzone": "kansas_prairie_landscape",
   "key_visible_environment_features": [
-    "kansas_prairie_landscape"
+    "kansas_prairie_landscape",
+    "Chapter-local environment alias match for 'vast' (key_overlap=0, label_overlap=1, context_overlap=4)."
   ],
   "continuity_from_previous_shot": "Bright, gray, desolate prairie under high-key overcast light.",
   "continuity_to_next_shot": "BT002",
   "pose_anchor_frame": "bright_gray_light",
   "pose_end_frame": "dimming_sky",
-  "shot_title": "Establishing Wide 1: Desolate Prairie",
-  "shot_type": "establishing_wide",
-  "camera_description": "Wide establishing frame with a steady or lightly drifting camera.",
-  "composition": "Wide composition across kansas_prairie_landscape with dorothy, aunt_em, uncle_henry placed for immediate spatial orientation.",
-  "target_seconds": 5.5,
+  "shot_title": "Handoff Medium 1: Establishing the desolate landscape and approaching...",
+  "shot_type": "handoff_medium",
+  "camera_description": "Stable readable framing built from the beat requirement.",
+  "composition": "Readable medium composition in kansas_prairie_landscape featuring dorothy, aunt_em, uncle_henry.",
+  "target_seconds": 7.0,
   "characters_in_frame": [
     {
       "label": "Dorothy",
@@ -119,7 +121,7 @@
     "Wind speed and direction affecting hair and clothing",
     "Establishing the desolate landscape and approaching storm"
   ],
-  "prompt_seed": "Establishing Wide 1: Establishing the desolate landscape and approaching.... establishing_wide. size=extreme_wide. angle=eye_level. lens=ultra_wide. motion=pan. zoom=none. focus=environment_priority. lighting=diffuse_ambient. visibility=on_screen. subject_angle=front. Wide establishing frame with a steady or lightly...",
+  "prompt_seed": "Handoff Medium 1: Establishing the desolate landscape and approaching.... handoff_medium. size=extreme_wide. angle=eye_level. lens=ultra_wide. motion=pan. zoom=none. focus=environment_priority. lighting=diffuse_ambient. visibility=on_screen. subject_angle=front. Stable readable framing built from the beat requiremen...",
   "shot_notes": "Establishing the desolate landscape and approaching storm",
   "evidence_refs": [
     {
@@ -184,19 +186,35 @@
     "Bright, gray, desolate prairie under high-key overcast light.",
     "Dark, stormy atmosphere with increasing wind and heavy cloud cover.",
     "Family members react to the approaching storm through preparation and safety directives.",
-    "dorothy | Dorothy is a young human girl characterized by an expressive face and the appearance of a weary traveler. Her visual identity evolves during her journey, transitioning from previously green clothing to a white dress or clothing. She is most notabl...",
-    "aunt_em | Visual identity is currently unestablished. While the entity is taxonomically classified as a human-scale biped, specific details regarding age, build, costume, or movement are not provided in the available evidence. Note: Chapter CH012 contains c...",
-    "uncle_henry | No visual data is available to establish a stable identity, costume, or physical presence for uncle_henry. The character is confirmed as a human-scale individual but lacks specific descriptive evidence regarding appearance or movement. | unkno...",
+    "dorothy | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md] Costume/Silhouette: Unknown. No specific clothing details are provided in this chapter. [source:C:/FilmCreator/projects/wizard_of_oz/02_...",
+    "aunt_em | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/aunt_em.md] Costume/Silhouette: Unknown. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH012/aunt_em....",
+    "uncle_henry | No visual data is available to establish a stable identity, build, or costume for Uncle Henry. The character's physical presence remains entirely undefined by the provided evidence. | unknown | unknown",
     "kansas_prairie_landscape | No specific visual descriptors are provided in the current evidence. The environment is identified as a prairie landscape within the Kansas setting. | Unknown. | Unknown. | Unknown.",
     "farmhouse_interior_and_cellar | No specific visual details are provided in the current evidence. The location is identified as a farmhouse interior and its associated cellar. | Includes an interior living space and a cellar. | unknown | unknown"
   ],
+  "coverage_density": "medium",
+  "coverage_profile": "classic_adventure",
+  "coverage_intent": "adventure_action",
+  "coverage_role": "handoff_medium",
+  "beat_type": "transition_handoff",
+  "coverage_importance": "major",
+  "coverage_blueprint_source": "deterministic_v1",
+  "coverage_classification": {
+    "beat_id": "BT001",
+    "beat_type": "transition_handoff",
+    "importance": "major",
+    "confidence": 0.55,
+    "reasons": [
+      "importance = major"
+    ]
+  },
   "metadata": {
     "artifact_id": "CH001_SC001_SH001_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "6951cde724270037ba8786edd0ff160cd8a7b5de",
+    "source_fingerprint": "335fa86a2d6a5738362a21f8354409215f2206b3",
     "created_at_utc": "2026-04-27T09:16:16.106214+00:00",
-    "updated_at_utc": "2026-04-27T14:19:47.875614+00:00",
+    "updated_at_utc": "2026-04-27T20:54:20.415851+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
@@ -211,7 +229,7 @@
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH001_SC001",
-        "version": "94df253f5760c35c377ba86800026b17b79b7957"
+        "version": "d695c7ecd79bd02b8c4497390fb6b5dcd0f28898"
       }
     ],
     "locked_fields": {},
@@ -226,6 +244,16 @@
         "timestamp_utc": "2026-04-27T14:21:09.674724+00:00",
         "action": "synthesized",
         "source_fingerprint": "6951cde724270037ba8786edd0ff160cd8a7b5de"
+      },
+      {
+        "timestamp_utc": "2026-04-27T20:53:23.439352+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "335fa86a2d6a5738362a21f8354409215f2206b3"
+      },
+      {
+        "timestamp_utc": "2026-04-27T20:54:20.748931+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "335fa86a2d6a5738362a21f8354409215f2206b3"
       }
     ]
   }

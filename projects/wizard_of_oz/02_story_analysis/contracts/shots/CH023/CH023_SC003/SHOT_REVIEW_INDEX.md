@@ -1,4 +1,16 @@
 # Shot Index
 
-- `SH002` - Reaction Closeup 2: Companions realize their internal gains (type=reaction_closeup, target=5.3s, beat_ids=BT002, cast=2, env=glinda_castle_throne_room, prev=SH001, next=SH003)
-- `SH003` - Reaction Closeup 3: Final farewell and departure preparation (type=reaction_closeup, target=5.1s, beat_ids=BT003, cast=2, env=glinda_castle_throne_room, prev=SH002, next=(none))
+- `SH002` - Partial Reveal 2: Glinda reveals the secret power of the Silver Shoes (type=partial_reveal, target=7.0s, beat_ids=BT001, cast=2, env=glinda_castle_throne_room, prev=SH001, next=SH003)
+- `SH003` - Reveal Wide 3: Glinda reveals the secret power of the Silver Shoes (type=reveal_wide, target=10.8s, beat_ids=BT001, cast=2, env=glinda_castle_throne_room, prev=SH002, next=SH004)
+- `SH004` - Scale Proof Wide 4: Glinda reveals the secret power of the Silver Shoes (type=scale_proof_wide, target=10.8s, beat_ids=BT001, cast=2, env=glinda_castle_throne_room, prev=SH003, next=SH005)
+- `SH005` - Reaction Closeup 5: Glinda reveals the secret power of the Silver Shoes (type=reaction_closeup, target=7.0s, beat_ids=BT001, cast=2, env=glinda_castle_throne_room, prev=SH004, next=SH006)
+- `SH006` - Subject Pov 6: Glinda reveals the secret power of the Silver Shoes (type=subject_pov, target=7.0s, beat_ids=BT001, cast=2, env=glinda_castle_throne_room, prev=SH005, next=SH007)
+- `SH007` - Ceremonial Master 7: Companions realize their internal gains (type=ceremonial_master, target=10.8s, beat_ids=BT002, cast=2, env=glinda_castle_throne_room, prev=SH006, next=SH008)
+- `SH008` - Authority Single 8: Companions realize their internal gains (type=authority_single, target=7.0s, beat_ids=BT002, cast=2, env=glinda_castle_throne_room, prev=SH007, next=SH009)
+- `SH009` - Petitioner Group 9: Companions realize their internal gains (type=petitioner_group, target=7.0s, beat_ids=BT002, cast=2, env=glinda_castle_throne_room, prev=SH008, next=SH010)
+- `SH010` - Crowd Response 10: Companions realize their internal gains (type=crowd_response, target=7.0s, beat_ids=BT002, cast=2, env=glinda_castle_throne_room, prev=SH009, next=SH011)
+- `SH011` - Symbol Insert 11: Companions realize their internal gains (type=symbol_insert, target=5.4s, beat_ids=BT002, cast=2, env=glinda_castle_throne_room, prev=SH010, next=SH012)
+- `SH012` - Reaction Closeup 12: Companions realize their internal gains (type=reaction_closeup, target=7.0s, beat_ids=BT002, cast=2, env=glinda_castle_throne_room, prev=SH011, next=SH013)
+- `SH013` - Scale Proof Wide 13: Companions realize their internal gains (type=scale_proof_wide, target=10.8s, beat_ids=BT002, cast=2, env=glinda_castle_throne_room, prev=SH012, next=SH014)
+- `SH014` - Handoff Medium 14: Final farewell and departure preparation (type=handoff_medium, target=7.0s, beat_ids=BT003, cast=2, env=glinda_castle_throne_room, prev=SH013, next=SH015)
+- `SH015` - Transition Wide 15: Final farewell and departure preparation (type=transition_wide, target=10.8s, beat_ids=BT003, cast=2, env=glinda_castle_throne_room, prev=SH014, next=(none))

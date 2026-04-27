@@ -4,71 +4,83 @@
   "chapter_id": "CH006",
   "shot_order": 3,
   "previous_shot_id": "SH002",
-  "next_shot_id": "",
-  "primary_subject": "the_scarecrow",
+  "next_shot_id": "SH004",
+  "primary_subject": "dorothy",
   "secondary_subjects": [
+    "the_scarecrow",
     "tin_woodman"
   ],
-  "shot_moment_summary": "attack on scarecrow and woodman",
-  "start_state": "charge beginning",
-  "end_state": "collision/chaos",
-  "action_during_shot": "lion attacks targets",
-  "action_continues_from": "lion visible",
-  "action_hands_off_to": "end_of_scene",
-  "shot_size": "medium_close",
+  "shot_moment_summary": "Group travels through the forest",
+  "start_state": "steady walking",
+  "end_state": "walking continues",
+  "action_during_shot": "Group travels through the forest",
+  "action_continues_from": "walking continues",
+  "action_hands_off_to": "BT002",
+  "shot_size": "medium",
   "camera_angle": "eye_level",
   "lens_family": "normal",
-  "camera_motion": "handheld",
+  "camera_motion": "locked_off",
   "zoom_behavior": "none",
-  "focus_strategy": "rack_focus",
-  "lighting_style": "low_key_night",
+  "focus_strategy": "deep_focus",
+  "lighting_style": "hard_directional",
   "subject_visibility": "on_screen",
   "narration_mode": "none",
-  "primary_subject_angle": "front",
-  "visible_primary_subject_id": "the_scarecrow",
+  "primary_subject_angle": "front_three_quarter_left",
+  "visible_primary_subject_id": "dorothy",
   "visible_secondary_subject_ids": [
+    "the_scarecrow",
     "tin_woodman"
   ],
-  "primary_subject_frame_position": "foreground inside yellow_brick_road",
+  "primary_subject_frame_position": "foreground right within yellow_brick_road",
   "primary_subject_scale_relation": "The predatory scale of the cowardly_lion relative to the traveling group.",
-  "primary_subject_facing_direction": "facing directly toward camera",
-  "primary_subject_pose_description": "charge beginning",
-  "subject_relation_summary": "the_scarecrow plays against tin_woodman in the same frame",
+  "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+  "primary_subject_pose_description": "steady walking",
+  "subject_relation_summary": "dorothy plays against the_scarecrow, tin_woodman in the same frame",
   "required_environment_anchor_1": "yellow_brick_road",
   "required_subject_anchor_1": "",
   "required_celestial_anchor_1": "",
   "required_scale_proof_detail": "The predatory scale of the cowardly_lion relative to the traveling group.",
-  "camera_package_description": "medium-close, eye level, normal lens, handheld, rack focus, low key night",
+  "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
   "subject_blocking": [
-    "scattered/chaotic movement",
-    "collision between lion and group members",
-    "yellow_brick_road",
-    "the_scarecrow remains readable within the active playing space.",
-    "tin_woodman remains readable within the active playing space."
+    "linear formation along road",
+    "yellow_brick_road within thick_dark_forest",
+    "dorothy remains readable within the active playing space.",
+    "the_scarecrow remains readable within the active playing space."
   ],
   "camera_relative_positions": [
     "Camera anchors the action inside the yellow_brick_road.",
-    "Background depth should keep yellow_brick_road legible as the location anchor.",
-    "Subject 1: the_scarecrow remains visually readable against the environment scale.",
-    "Subject 2: tin_woodman remains visually readable against the environment scale."
+    "Background depth should keep thick_dark_forest legible as the location anchor.",
+    "Subject 1: dorothy remains visually readable against the environment scale.",
+    "Subject 2: the_scarecrow remains visually readable against the environment scale."
   ],
   "gaze_directions": [
-    "the_scarecrow focuses toward the active scene action."
+    "dorothy focuses toward the active scene action."
   ],
   "environment_subzone": "yellow_brick_road",
   "key_visible_environment_features": [
-    "yellow_brick_road"
+    "yellow_brick_road",
+    "Chapter-local environment alias match for 'Thick' (key_overlap=1, label_overlap=1, context_overlap=4)."
   ],
-  "continuity_from_previous_shot": "lion visible",
-  "continuity_to_next_shot": "end_of_scene",
-  "pose_anchor_frame": "charge beginning",
-  "pose_end_frame": "collision/chaos",
-  "shot_title": "Reaction Closeup 3: The ambush/attack occurs",
-  "shot_type": "reaction_closeup",
-  "camera_description": "Close framing that isolates reaction and emotional emphasis.",
-  "composition": "Intimate composition that isolates the_scarecrow, tin_woodman against yellow_brick_road to capture the beat's emotional turn.",
-  "target_seconds": 5.1,
+  "continuity_from_previous_shot": "walking continues",
+  "continuity_to_next_shot": "BT002",
+  "pose_anchor_frame": "steady walking",
+  "pose_end_frame": "walking continues",
+  "shot_title": "Petitioner Group 3: Group travels through the forest",
+  "shot_type": "petitioner_group",
+  "camera_description": "Stable readable framing built from the beat requirement.",
+  "composition": "Readable medium composition in thick_dark_forest featuring dorothy, the_scarecrow, tin_woodman.",
+  "target_seconds": 6.5,
   "characters_in_frame": [
+    {
+      "label": "Dorothy",
+      "canonical_id": "dorothy",
+      "display_name": "dorothy",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH006/dorothy.md",
+      "notes": "Direct registry match for 'dorothy'."
+    },
     {
       "label": "Scarecrow",
       "canonical_id": "the_scarecrow",
@@ -91,25 +103,25 @@
     }
   ],
   "environment": {
-    "label": "Yellow Brick Road (partially obscured)",
-    "canonical_id": "yellow_brick_road",
-    "display_name": "yellow_brick_road",
+    "label": "Thick",
+    "canonical_id": "thick_dark_forest",
+    "display_name": "thick_dark_forest",
     "status": "canonical",
     "entity_kind": "environment",
-    "resolution_score": 130,
-    "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH005/yellow_brick_road.md",
-    "notes": "Direct registry match for 'yellow_brick_road'."
+    "resolution_score": 70,
+    "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH006/thick_dark_forest.md",
+    "notes": "Chapter-local environment alias match for 'Thick' (key_overlap=1, label_overlap=1, context_overlap=4)."
   },
   "beat_ids": [
-    "BT003"
+    "BT001"
   ],
   "continuity_constraints": [
     "Position of the group relative to the yellow_brick_road",
     "Direction of the cowardly_lion's charge",
-    "The ambush/attack occurs"
+    "Group travels through the forest"
   ],
-  "prompt_seed": "Reaction Closeup 3: The ambush/attack occurs. reaction_closeup. size=medium_close. angle=eye_level. lens=normal. motion=handheld. zoom=none. focus=rack_focus. lighting=low_key_night. visibility=on_screen. subject_angle=front. Close framing that isolates reaction and emotional emphasis. Intimate composition that isol...",
-  "shot_notes": "The ambush/attack occurs",
+  "prompt_seed": "Petitioner Group 3: Group travels through the forest. petitioner_group. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Readable...",
+  "shot_notes": "Group travels through the forest",
   "evidence_refs": [
     {
       "source": "scene_contract",
@@ -179,13 +191,30 @@
     "thick_dark_forest | No specific visual descriptors are provided in the current evidence. The environment is identified as a \"thick dark forest.\" | Unknown. | Dark (per name). | Unknown.",
     "yellow_brick_road | No specific visual descriptors are provided in the current evidence. The environment functions primarily as a transit setting. | Unknown. | Unknown. | Unknown."
   ],
+  "coverage_density": "medium",
+  "coverage_profile": "classic_adventure",
+  "coverage_intent": "adventure_action",
+  "coverage_role": "petitioner_group",
+  "beat_type": "dialogue_council_or_court",
+  "coverage_importance": "normal",
+  "coverage_blueprint_source": "deterministic_v1",
+  "coverage_classification": {
+    "beat_id": "BT001",
+    "beat_type": "dialogue_council_or_court",
+    "importance": "normal",
+    "confidence": 0.82,
+    "reasons": [
+      "court/council authority language",
+      "importance = normal"
+    ]
+  },
   "metadata": {
     "artifact_id": "CH006_SC001_SH003_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "49a7ae96df608a95733d47cc5236b2b6814f487d",
+    "source_fingerprint": "b55eb108eac6309c70aea39307e321fff7d70140",
     "created_at_utc": "2026-04-27T15:42:57.352626+00:00",
-    "updated_at_utc": "2026-04-27T15:42:57.352626+00:00",
+    "updated_at_utc": "2026-04-27T20:54:33.025047+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
@@ -200,7 +229,7 @@
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH006_SC001",
-        "version": "f23b053424593bbc54202057c533e3e61ea903f3"
+        "version": "95518ec6d4c37d2e54de6a2c6f4dcd47c7e94b91"
       }
     ],
     "locked_fields": {},
@@ -210,6 +239,16 @@
         "timestamp_utc": "2026-04-27T15:44:10.479554+00:00",
         "action": "synthesized",
         "source_fingerprint": "49a7ae96df608a95733d47cc5236b2b6814f487d"
+      },
+      {
+        "timestamp_utc": "2026-04-27T20:53:35.802514+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "b55eb108eac6309c70aea39307e321fff7d70140"
+      },
+      {
+        "timestamp_utc": "2026-04-27T20:54:33.026047+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "b55eb108eac6309c70aea39307e321fff7d70140"
       }
     ]
   }

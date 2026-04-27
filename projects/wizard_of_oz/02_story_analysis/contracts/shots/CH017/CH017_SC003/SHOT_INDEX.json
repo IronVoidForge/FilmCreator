@@ -39,7 +39,10 @@
     "subject_blocking": [
       "Oz center frame on steps",
       "crowd below",
-      "Oz at center high point"
+      "Oz at center high point",
+      "emerald_city_palace_exterior_steps",
+      "oz remains readable within the active playing space.",
+      "Citizens of the Emerald City remains readable within the active playing space."
     ],
     "camera_relative_positions": [
       "Camera anchors the action inside the palace_steps.",
@@ -52,17 +55,18 @@
     ],
     "environment_subzone": "palace_steps",
     "key_visible_environment_features": [
-      "palace_steps"
+      "palace_steps",
+      "Chapter-local beat subzone match for 'palace_steps'."
     ],
     "continuity_from_previous_shot": "Oz stands before a large crowd, preparing for a formal address.",
     "continuity_to_next_shot": "BT002",
     "pose_anchor_frame": "Oz standing tall",
     "pose_end_frame": "Oz beginning to speak",
-    "shot_title": "Establishing Wide 1: Oz's formal announcement of departure",
-    "shot_type": "establishing_wide",
-    "camera_description": "Wide establishing frame with a steady or lightly drifting camera.",
-    "composition": "Wide composition across emerald_city_palace_exterior with oz, Citizens of the Emerald City placed for immediate spatial orientation.",
-    "target_seconds": 5.5,
+    "shot_title": "Ceremonial Master 1: Oz's formal announcement of departure",
+    "shot_type": "ceremonial_master",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in emerald_city_palace_exterior featuring oz, Citizens of the Emerald City.",
+    "target_seconds": 10.8,
     "characters_in_frame": [
       {
         "label": "Oz (The Wizard)",
@@ -104,7 +108,7 @@
       "Oz's formal announcement of departure",
       "Resolve Citizens of the Emerald City -> Citizens of the Emerald City"
     ],
-    "prompt_seed": "Establishing Wide 1: Oz's formal announcement of departure. establishing_wide. size=wide. angle=low_angle. lens=wide. motion=locked_off. zoom=none. focus=deep_focus. lighting=high_contrast_ceremonial. visibility=on_screen. subject_angle=front_three_quarter_right. Wide establishing frame with a steady or lightly drif...",
+    "prompt_seed": "Ceremonial Master 1: Oz's formal announcement of departure. ceremonial_master. size=wide. angle=low_angle. lens=wide. motion=locked_off. zoom=none. focus=deep_focus. lighting=high_contrast_ceremonial. visibility=on_screen. subject_angle=front_three_quarter_right. Stable readable framing built from the beat requireme...",
     "shot_notes": "Oz's formal announcement of departure",
     "evidence_refs": [
       {
@@ -173,13 +177,30 @@
       "the_scarecrow | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH003/the_scarecrow.md] Physical Description: A living figure stuffed with straw. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/cha...",
       "emerald_city_palace_exterior | No specific visual descriptors are provided in the current evidence. The location functions as a secondary setting and transit hub within the narrative structure. | Unknown. | Unknown. | Unknown."
     ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "montage_travel",
+    "coverage_role": "ceremonial_master",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT001",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "major",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = major"
+      ]
+    },
     "metadata": {
       "artifact_id": "CH017_SC003_SH001_SHOT_PACKAGE",
       "artifact_type": "shot_package",
       "status": "generated",
-      "source_fingerprint": "fe132e4e1956d2918c31b0059d7f97ea5eceb000",
+      "source_fingerprint": "22d6313bfa6f878299a20c63f6aa50749d6b331b",
       "created_at_utc": "2026-04-27T18:55:54.837934+00:00",
-      "updated_at_utc": "2026-04-27T18:55:54.837934+00:00",
+      "updated_at_utc": "2026-04-27T20:55:02.299802+00:00",
       "upstream_dependencies": [
         {
           "dependency_type": "scene_contract",
@@ -194,7 +215,7 @@
         {
           "dependency_type": "shot_blueprints",
           "dependency_id": "CH017_SC003",
-          "version": "438aaedc772eb7ac5a33689afa165acbc39bdffa"
+          "version": "567f96dc1d89bbc78905874f4039984a3b4da6e4"
         }
       ],
       "locked_fields": {},
@@ -204,6 +225,16 @@
           "timestamp_utc": "2026-04-27T18:57:12.950207+00:00",
           "action": "synthesized",
           "source_fingerprint": "fe132e4e1956d2918c31b0059d7f97ea5eceb000"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:03.863002+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "22d6313bfa6f878299a20c63f6aa50749d6b331b"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:55:02.705612+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "22d6313bfa6f878299a20c63f6aa50749d6b331b"
         }
       ]
     }
@@ -215,13 +246,1421 @@
     "shot_order": 2,
     "previous_shot_id": "SH001",
     "next_shot_id": "SH003",
+    "primary_subject": "oz",
+    "secondary_subjects": [],
+    "shot_moment_summary": "Oz's formal announcement of departure",
+    "start_state": "Oz stands before the crowd",
+    "end_state": "Oz claims he is visiting a brother Wizard",
+    "action_during_shot": "Oz's formal announcement of departure",
+    "action_continues_from": "Oz beginning to speak",
+    "action_hands_off_to": "BT002",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "oz",
+    "visible_secondary_subject_ids": [],
+    "primary_subject_frame_position": "foreground right within palace_steps",
+    "primary_subject_scale_relation": "preserve readable body-to-environment scale in frame",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "Oz stands before the crowd",
+    "subject_relation_summary": "oz carries the frame alone",
+    "required_environment_anchor_1": "palace_steps",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "preserve readable body-to-environment scale in frame",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "Oz at center high point",
+      "emerald_city_palace_exterior_steps",
+      "oz remains readable within the active playing space.",
+      "Citizens of the Emerald City remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the palace_steps.",
+      "Background depth should keep emerald_city_palace_exterior legible as the location anchor.",
+      "Subject 1: oz remains visually readable against the environment scale.",
+      "Subject 2: Citizens of the Emerald City remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "oz focuses toward the active scene action."
+    ],
+    "environment_subzone": "palace_steps",
+    "key_visible_environment_features": [
+      "palace_steps",
+      "Chapter-local beat subzone match for 'palace_steps'."
+    ],
+    "continuity_from_previous_shot": "Oz beginning to speak",
+    "continuity_to_next_shot": "BT002",
+    "pose_anchor_frame": "Oz stands before the crowd",
+    "pose_end_frame": "Oz claims he is visiting a brother Wizard",
+    "shot_title": "Authority Single 2: Oz's formal announcement of departure",
+    "shot_type": "authority_single",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in emerald_city_palace_exterior featuring oz, Citizens of the Emerald City.",
+    "target_seconds": 7.0,
+    "characters_in_frame": [
+      {
+        "label": "Oz (The Wizard)",
+        "canonical_id": "oz",
+        "display_name": "oz",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH017/oz_the_wizard.md",
+        "notes": "Direct registry match for 'oz_the_wizard'."
+      },
+      {
+        "label": "Citizens of the Emerald City",
+        "canonical_id": null,
+        "display_name": "Citizens of the Emerald City",
+        "status": "review",
+        "entity_kind": "individual",
+        "resolution_score": 16,
+        "source_path": "",
+        "notes": "Low-confidence character match requires review."
+      }
+    ],
+    "environment": {
+      "label": "emerald_city_palace_exterior",
+      "canonical_id": "emerald_city_palace_exterior",
+      "display_name": "emerald_city_palace_exterior",
+      "status": "canonical",
+      "entity_kind": "city",
+      "resolution_score": null,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH017/emerald_city_palace_exterior.md",
+      "notes": "Chapter-local beat subzone match for 'palace_steps'."
+    },
+    "beat_ids": [
+      "BT001"
+    ],
+    "continuity_constraints": [
+      "Crowd density and placement must remain consistent across coverage.",
+      "the_scarecrow must maintain a regal/official posture during the appointment.",
+      "Oz's formal announcement of departure",
+      "Resolve Citizens of the Emerald City -> Citizens of the Emerald City"
+    ],
+    "prompt_seed": "Authority Single 2: Oz's formal announcement of departure. authority_single. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Rea...",
+    "shot_notes": "Oz's formal announcement of departure",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH017_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH017",
+        "scene_id": "CH017_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH017",
+        "scene_id": "CH017_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH017",
+        "scene_id": "CH017_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH017",
+        "scene_id": "CH017_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH017",
+        "scene_id": "CH017_SC003"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH017",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH017_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH015",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH015_chapter_xv.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH017",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH017_chapter_xvii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH010",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH010_chapter_x.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH017",
+        "canonical_id": "oz"
+      }
+    ],
+    "evidence_summary": [
+      "Establish the political transition and public stakes through a formal announcement. The scene must visually communicate the shift from Oz's deceptive authority to the Scarecrow's temporary governance as Oz departs for the clouds.",
+      "Oz makes a formal announcement to the citizens of the Emerald City. He claims he is traveling to visit a \"brother Wizard\" in the clouds. To maintain order, he appoints the Scarecrow as the temporary ruler of the city.",
+      "From public spectacle to a sense of formal transition.",
+      "Oz stands before a large crowd, preparing for a formal address.",
+      "the_scarecrow stands in an official capacity as the city transitions to his rule.",
+      "Oz announces his departure and appoints the Scarecrow as ruler.",
+      "oz | [CH002] Chapter II (book index hit) [CH010] Chapter X (book index hit) [CH011] Chapter XI (book index hit)",
+      "the_scarecrow | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH003/the_scarecrow.md] Physical Description: A living figure stuffed with straw. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/cha...",
+      "emerald_city_palace_exterior | No specific visual descriptors are provided in the current evidence. The location functions as a secondary setting and transit hub within the narrative structure. | Unknown. | Unknown. | Unknown."
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "montage_travel",
+    "coverage_role": "authority_single",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT001",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "major",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = major"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH017_SC003_SH002_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "22d6313bfa6f878299a20c63f6aa50749d6b331b",
+      "created_at_utc": "2026-04-27T18:57:12.951211+00:00",
+      "updated_at_utc": "2026-04-27T20:55:02.712117+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH017_SC003",
+          "version": "c6b5dc5dfd1fad8589ec85158ea9d70fc5550734"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH017_SC003",
+          "version": "edb8f7943b8235931797a55cc07e2215e1e46b8d"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH017_SC003",
+          "version": "567f96dc1d89bbc78905874f4039984a3b4da6e4"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T18:58:19.422001+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "fe132e4e1956d2918c31b0059d7f97ea5eceb000"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:03.870506+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "22d6313bfa6f878299a20c63f6aa50749d6b331b"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:55:02.712616+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "22d6313bfa6f878299a20c63f6aa50749d6b331b"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH003",
+    "scene_id": "CH017_SC003",
+    "chapter_id": "CH017",
+    "shot_order": 3,
+    "previous_shot_id": "SH002",
+    "next_shot_id": "SH004",
+    "primary_subject": "oz",
+    "secondary_subjects": [],
+    "shot_moment_summary": "Oz's formal announcement of departure",
+    "start_state": "Oz stands before the crowd",
+    "end_state": "Oz claims he is visiting a brother Wizard",
+    "action_during_shot": "Oz's formal announcement of departure",
+    "action_continues_from": "Oz claims he is visiting a brother Wizard",
+    "action_hands_off_to": "BT002",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "oz",
+    "visible_secondary_subject_ids": [],
+    "primary_subject_frame_position": "foreground right within palace_steps",
+    "primary_subject_scale_relation": "preserve readable body-to-environment scale in frame",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "Oz stands before the crowd",
+    "subject_relation_summary": "oz carries the frame alone",
+    "required_environment_anchor_1": "palace_steps",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "preserve readable body-to-environment scale in frame",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "Oz at center high point",
+      "emerald_city_palace_exterior_steps",
+      "oz remains readable within the active playing space.",
+      "Citizens of the Emerald City remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the palace_steps.",
+      "Background depth should keep emerald_city_palace_exterior legible as the location anchor.",
+      "Subject 1: oz remains visually readable against the environment scale.",
+      "Subject 2: Citizens of the Emerald City remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "oz focuses toward the active scene action."
+    ],
+    "environment_subzone": "palace_steps",
+    "key_visible_environment_features": [
+      "palace_steps",
+      "Chapter-local beat subzone match for 'palace_steps'."
+    ],
+    "continuity_from_previous_shot": "Oz claims he is visiting a brother Wizard",
+    "continuity_to_next_shot": "BT002",
+    "pose_anchor_frame": "Oz stands before the crowd",
+    "pose_end_frame": "Oz claims he is visiting a brother Wizard",
+    "shot_title": "Petitioner Group 3: Oz's formal announcement of departure",
+    "shot_type": "petitioner_group",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in emerald_city_palace_exterior featuring oz, Citizens of the Emerald City.",
+    "target_seconds": 7.0,
+    "characters_in_frame": [
+      {
+        "label": "Oz (The Wizard)",
+        "canonical_id": "oz",
+        "display_name": "oz",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH017/oz_the_wizard.md",
+        "notes": "Direct registry match for 'oz_the_wizard'."
+      },
+      {
+        "label": "Citizens of the Emerald City",
+        "canonical_id": null,
+        "display_name": "Citizens of the Emerald City",
+        "status": "review",
+        "entity_kind": "individual",
+        "resolution_score": 16,
+        "source_path": "",
+        "notes": "Low-confidence character match requires review."
+      }
+    ],
+    "environment": {
+      "label": "emerald_city_palace_exterior",
+      "canonical_id": "emerald_city_palace_exterior",
+      "display_name": "emerald_city_palace_exterior",
+      "status": "canonical",
+      "entity_kind": "city",
+      "resolution_score": null,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH017/emerald_city_palace_exterior.md",
+      "notes": "Chapter-local beat subzone match for 'palace_steps'."
+    },
+    "beat_ids": [
+      "BT001"
+    ],
+    "continuity_constraints": [
+      "Crowd density and placement must remain consistent across coverage.",
+      "the_scarecrow must maintain a regal/official posture during the appointment.",
+      "Oz's formal announcement of departure",
+      "Resolve Citizens of the Emerald City -> Citizens of the Emerald City"
+    ],
+    "prompt_seed": "Petitioner Group 3: Oz's formal announcement of departure. petitioner_group. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Rea...",
+    "shot_notes": "Oz's formal announcement of departure",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH017_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH017",
+        "scene_id": "CH017_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH017",
+        "scene_id": "CH017_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH017",
+        "scene_id": "CH017_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH017",
+        "scene_id": "CH017_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH017",
+        "scene_id": "CH017_SC003"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH017",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH017_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH015",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH015_chapter_xv.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH017",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH017_chapter_xvii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH010",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH010_chapter_x.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH017",
+        "canonical_id": "oz"
+      }
+    ],
+    "evidence_summary": [
+      "Establish the political transition and public stakes through a formal announcement. The scene must visually communicate the shift from Oz's deceptive authority to the Scarecrow's temporary governance as Oz departs for the clouds.",
+      "Oz makes a formal announcement to the citizens of the Emerald City. He claims he is traveling to visit a \"brother Wizard\" in the clouds. To maintain order, he appoints the Scarecrow as the temporary ruler of the city.",
+      "From public spectacle to a sense of formal transition.",
+      "Oz stands before a large crowd, preparing for a formal address.",
+      "the_scarecrow stands in an official capacity as the city transitions to his rule.",
+      "Oz announces his departure and appoints the Scarecrow as ruler.",
+      "oz | [CH002] Chapter II (book index hit) [CH010] Chapter X (book index hit) [CH011] Chapter XI (book index hit)",
+      "the_scarecrow | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH003/the_scarecrow.md] Physical Description: A living figure stuffed with straw. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/cha...",
+      "emerald_city_palace_exterior | No specific visual descriptors are provided in the current evidence. The location functions as a secondary setting and transit hub within the narrative structure. | Unknown. | Unknown. | Unknown."
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "montage_travel",
+    "coverage_role": "petitioner_group",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT001",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "major",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = major"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH017_SC003_SH003_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "22d6313bfa6f878299a20c63f6aa50749d6b331b",
+      "created_at_utc": "2026-04-27T18:58:19.424001+00:00",
+      "updated_at_utc": "2026-04-27T20:55:02.718616+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH017_SC003",
+          "version": "c6b5dc5dfd1fad8589ec85158ea9d70fc5550734"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH017_SC003",
+          "version": "edb8f7943b8235931797a55cc07e2215e1e46b8d"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH017_SC003",
+          "version": "567f96dc1d89bbc78905874f4039984a3b4da6e4"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T18:59:25.717009+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "fe132e4e1956d2918c31b0059d7f97ea5eceb000"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:03.877008+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "22d6313bfa6f878299a20c63f6aa50749d6b331b"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:55:02.719116+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "22d6313bfa6f878299a20c63f6aa50749d6b331b"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH004",
+    "scene_id": "CH017_SC003",
+    "chapter_id": "CH017",
+    "shot_order": 4,
+    "previous_shot_id": "SH003",
+    "next_shot_id": "SH005",
+    "primary_subject": "oz",
+    "secondary_subjects": [],
+    "shot_moment_summary": "Oz's formal announcement of departure",
+    "start_state": "Oz stands before the crowd",
+    "end_state": "Oz claims he is visiting a brother Wizard",
+    "action_during_shot": "Oz's formal announcement of departure",
+    "action_continues_from": "Oz claims he is visiting a brother Wizard",
+    "action_hands_off_to": "BT002",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "oz",
+    "visible_secondary_subject_ids": [],
+    "primary_subject_frame_position": "foreground right within palace_steps",
+    "primary_subject_scale_relation": "preserve readable body-to-environment scale in frame",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "Oz stands before the crowd",
+    "subject_relation_summary": "oz carries the frame alone",
+    "required_environment_anchor_1": "palace_steps",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "preserve readable body-to-environment scale in frame",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "Oz at center high point",
+      "emerald_city_palace_exterior_steps",
+      "oz remains readable within the active playing space.",
+      "Citizens of the Emerald City remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the palace_steps.",
+      "Background depth should keep emerald_city_palace_exterior legible as the location anchor.",
+      "Subject 1: oz remains visually readable against the environment scale.",
+      "Subject 2: Citizens of the Emerald City remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "oz focuses toward the active scene action."
+    ],
+    "environment_subzone": "palace_steps",
+    "key_visible_environment_features": [
+      "palace_steps",
+      "Chapter-local beat subzone match for 'palace_steps'."
+    ],
+    "continuity_from_previous_shot": "Oz claims he is visiting a brother Wizard",
+    "continuity_to_next_shot": "BT002",
+    "pose_anchor_frame": "Oz stands before the crowd",
+    "pose_end_frame": "Oz claims he is visiting a brother Wizard",
+    "shot_title": "Crowd Response 4: Oz's formal announcement of departure",
+    "shot_type": "crowd_response",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in emerald_city_palace_exterior featuring oz, Citizens of the Emerald City.",
+    "target_seconds": 7.0,
+    "characters_in_frame": [
+      {
+        "label": "Oz (The Wizard)",
+        "canonical_id": "oz",
+        "display_name": "oz",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH017/oz_the_wizard.md",
+        "notes": "Direct registry match for 'oz_the_wizard'."
+      },
+      {
+        "label": "Citizens of the Emerald City",
+        "canonical_id": null,
+        "display_name": "Citizens of the Emerald City",
+        "status": "review",
+        "entity_kind": "individual",
+        "resolution_score": 16,
+        "source_path": "",
+        "notes": "Low-confidence character match requires review."
+      }
+    ],
+    "environment": {
+      "label": "emerald_city_palace_exterior",
+      "canonical_id": "emerald_city_palace_exterior",
+      "display_name": "emerald_city_palace_exterior",
+      "status": "canonical",
+      "entity_kind": "city",
+      "resolution_score": null,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH017/emerald_city_palace_exterior.md",
+      "notes": "Chapter-local beat subzone match for 'palace_steps'."
+    },
+    "beat_ids": [
+      "BT001"
+    ],
+    "continuity_constraints": [
+      "Crowd density and placement must remain consistent across coverage.",
+      "the_scarecrow must maintain a regal/official posture during the appointment.",
+      "Oz's formal announcement of departure",
+      "Resolve Citizens of the Emerald City -> Citizens of the Emerald City"
+    ],
+    "prompt_seed": "Crowd Response 4: Oz's formal announcement of departure. crowd_response. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Readabl...",
+    "shot_notes": "Oz's formal announcement of departure",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH017_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH017",
+        "scene_id": "CH017_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH017",
+        "scene_id": "CH017_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH017",
+        "scene_id": "CH017_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH017",
+        "scene_id": "CH017_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH017",
+        "scene_id": "CH017_SC003"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH017",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH017_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH015",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH015_chapter_xv.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH017",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH017_chapter_xvii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH010",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH010_chapter_x.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH017",
+        "canonical_id": "oz"
+      }
+    ],
+    "evidence_summary": [
+      "Establish the political transition and public stakes through a formal announcement. The scene must visually communicate the shift from Oz's deceptive authority to the Scarecrow's temporary governance as Oz departs for the clouds.",
+      "Oz makes a formal announcement to the citizens of the Emerald City. He claims he is traveling to visit a \"brother Wizard\" in the clouds. To maintain order, he appoints the Scarecrow as the temporary ruler of the city.",
+      "From public spectacle to a sense of formal transition.",
+      "Oz stands before a large crowd, preparing for a formal address.",
+      "the_scarecrow stands in an official capacity as the city transitions to his rule.",
+      "Oz announces his departure and appoints the Scarecrow as ruler.",
+      "oz | [CH002] Chapter II (book index hit) [CH010] Chapter X (book index hit) [CH011] Chapter XI (book index hit)",
+      "the_scarecrow | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH003/the_scarecrow.md] Physical Description: A living figure stuffed with straw. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/cha...",
+      "emerald_city_palace_exterior | No specific visual descriptors are provided in the current evidence. The location functions as a secondary setting and transit hub within the narrative structure. | Unknown. | Unknown. | Unknown."
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "montage_travel",
+    "coverage_role": "crowd_response",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT001",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "major",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = major"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH017_SC003_SH004_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "22d6313bfa6f878299a20c63f6aa50749d6b331b",
+      "created_at_utc": "2026-04-27T20:54:03.878010+00:00",
+      "updated_at_utc": "2026-04-27T20:55:02.724630+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH017_SC003",
+          "version": "c6b5dc5dfd1fad8589ec85158ea9d70fc5550734"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH017_SC003",
+          "version": "edb8f7943b8235931797a55cc07e2215e1e46b8d"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH017_SC003",
+          "version": "567f96dc1d89bbc78905874f4039984a3b4da6e4"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:54:03.878509+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "22d6313bfa6f878299a20c63f6aa50749d6b331b"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:55:02.725629+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "22d6313bfa6f878299a20c63f6aa50749d6b331b"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH005",
+    "scene_id": "CH017_SC003",
+    "chapter_id": "CH017",
+    "shot_order": 5,
+    "previous_shot_id": "SH004",
+    "next_shot_id": "SH006",
+    "primary_subject": "oz",
+    "secondary_subjects": [],
+    "shot_moment_summary": "Oz's formal announcement of departure",
+    "start_state": "Oz stands before the crowd",
+    "end_state": "Oz claims he is visiting a brother Wizard",
+    "action_during_shot": "Oz's formal announcement of departure",
+    "action_continues_from": "Oz claims he is visiting a brother Wizard",
+    "action_hands_off_to": "BT002",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "oz",
+    "visible_secondary_subject_ids": [],
+    "primary_subject_frame_position": "foreground right within palace_steps",
+    "primary_subject_scale_relation": "preserve readable body-to-environment scale in frame",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "Oz stands before the crowd",
+    "subject_relation_summary": "oz carries the frame alone",
+    "required_environment_anchor_1": "palace_steps",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "preserve readable body-to-environment scale in frame",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "Oz at center high point",
+      "emerald_city_palace_exterior_steps",
+      "oz remains readable within the active playing space.",
+      "Citizens of the Emerald City remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the palace_steps.",
+      "Background depth should keep emerald_city_palace_exterior legible as the location anchor.",
+      "Subject 1: oz remains visually readable against the environment scale.",
+      "Subject 2: Citizens of the Emerald City remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "oz focuses toward the active scene action."
+    ],
+    "environment_subzone": "palace_steps",
+    "key_visible_environment_features": [
+      "palace_steps",
+      "Chapter-local beat subzone match for 'palace_steps'."
+    ],
+    "continuity_from_previous_shot": "Oz claims he is visiting a brother Wizard",
+    "continuity_to_next_shot": "BT002",
+    "pose_anchor_frame": "Oz stands before the crowd",
+    "pose_end_frame": "Oz claims he is visiting a brother Wizard",
+    "shot_title": "Symbol Insert 5: Oz's formal announcement of departure",
+    "shot_type": "symbol_insert",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in emerald_city_palace_exterior featuring oz, Citizens of the Emerald City.",
+    "target_seconds": 5.4,
+    "characters_in_frame": [
+      {
+        "label": "Oz (The Wizard)",
+        "canonical_id": "oz",
+        "display_name": "oz",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH017/oz_the_wizard.md",
+        "notes": "Direct registry match for 'oz_the_wizard'."
+      },
+      {
+        "label": "Citizens of the Emerald City",
+        "canonical_id": null,
+        "display_name": "Citizens of the Emerald City",
+        "status": "review",
+        "entity_kind": "individual",
+        "resolution_score": 16,
+        "source_path": "",
+        "notes": "Low-confidence character match requires review."
+      }
+    ],
+    "environment": {
+      "label": "emerald_city_palace_exterior",
+      "canonical_id": "emerald_city_palace_exterior",
+      "display_name": "emerald_city_palace_exterior",
+      "status": "canonical",
+      "entity_kind": "city",
+      "resolution_score": null,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH017/emerald_city_palace_exterior.md",
+      "notes": "Chapter-local beat subzone match for 'palace_steps'."
+    },
+    "beat_ids": [
+      "BT001"
+    ],
+    "continuity_constraints": [
+      "Crowd density and placement must remain consistent across coverage.",
+      "the_scarecrow must maintain a regal/official posture during the appointment.",
+      "Oz's formal announcement of departure",
+      "Resolve Citizens of the Emerald City -> Citizens of the Emerald City"
+    ],
+    "prompt_seed": "Symbol Insert 5: Oz's formal announcement of departure. symbol_insert. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Readable...",
+    "shot_notes": "Oz's formal announcement of departure",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH017_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH017",
+        "scene_id": "CH017_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH017",
+        "scene_id": "CH017_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH017",
+        "scene_id": "CH017_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH017",
+        "scene_id": "CH017_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH017",
+        "scene_id": "CH017_SC003"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH017",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH017_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH015",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH015_chapter_xv.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH017",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH017_chapter_xvii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH010",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH010_chapter_x.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH017",
+        "canonical_id": "oz"
+      }
+    ],
+    "evidence_summary": [
+      "Establish the political transition and public stakes through a formal announcement. The scene must visually communicate the shift from Oz's deceptive authority to the Scarecrow's temporary governance as Oz departs for the clouds.",
+      "Oz makes a formal announcement to the citizens of the Emerald City. He claims he is traveling to visit a \"brother Wizard\" in the clouds. To maintain order, he appoints the Scarecrow as the temporary ruler of the city.",
+      "From public spectacle to a sense of formal transition.",
+      "Oz stands before a large crowd, preparing for a formal address.",
+      "the_scarecrow stands in an official capacity as the city transitions to his rule.",
+      "Oz announces his departure and appoints the Scarecrow as ruler.",
+      "oz | [CH002] Chapter II (book index hit) [CH010] Chapter X (book index hit) [CH011] Chapter XI (book index hit)",
+      "the_scarecrow | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH003/the_scarecrow.md] Physical Description: A living figure stuffed with straw. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/cha...",
+      "emerald_city_palace_exterior | No specific visual descriptors are provided in the current evidence. The location functions as a secondary setting and transit hub within the narrative structure. | Unknown. | Unknown. | Unknown."
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "montage_travel",
+    "coverage_role": "symbol_insert",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT001",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "major",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = major"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH017_SC003_SH005_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "22d6313bfa6f878299a20c63f6aa50749d6b331b",
+      "created_at_utc": "2026-04-27T20:54:03.879510+00:00",
+      "updated_at_utc": "2026-04-27T20:55:02.731128+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH017_SC003",
+          "version": "c6b5dc5dfd1fad8589ec85158ea9d70fc5550734"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH017_SC003",
+          "version": "edb8f7943b8235931797a55cc07e2215e1e46b8d"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH017_SC003",
+          "version": "567f96dc1d89bbc78905874f4039984a3b4da6e4"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:54:03.880012+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "22d6313bfa6f878299a20c63f6aa50749d6b331b"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:55:02.731629+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "22d6313bfa6f878299a20c63f6aa50749d6b331b"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH006",
+    "scene_id": "CH017_SC003",
+    "chapter_id": "CH017",
+    "shot_order": 6,
+    "previous_shot_id": "SH005",
+    "next_shot_id": "SH007",
+    "primary_subject": "oz",
+    "secondary_subjects": [],
+    "shot_moment_summary": "Oz's formal announcement of departure",
+    "start_state": "Oz stands before the crowd",
+    "end_state": "Oz claims he is visiting a brother Wizard",
+    "action_during_shot": "Oz's formal announcement of departure",
+    "action_continues_from": "Oz claims he is visiting a brother Wizard",
+    "action_hands_off_to": "BT002",
+    "shot_size": "close_up",
+    "camera_angle": "eye_level",
+    "lens_family": "portrait",
+    "camera_motion": "push_in",
+    "zoom_behavior": "subtle_in",
+    "focus_strategy": "shallow_subject",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "oz",
+    "visible_secondary_subject_ids": [],
+    "primary_subject_frame_position": "foreground inside palace_steps",
+    "primary_subject_scale_relation": "preserve readable body-to-environment scale in frame",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "Oz stands before the crowd",
+    "subject_relation_summary": "oz carries the frame alone",
+    "required_environment_anchor_1": "palace_steps",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "preserve readable body-to-environment scale in frame",
+    "camera_package_description": "close-up, eye level, portrait lens, push in, zoom subtle in, shallow subject, hard directional",
+    "subject_blocking": [
+      "Oz at center high point",
+      "emerald_city_palace_exterior_steps",
+      "oz remains readable within the active playing space.",
+      "Citizens of the Emerald City remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the palace_steps.",
+      "Background depth should keep emerald_city_palace_exterior legible as the location anchor.",
+      "Subject 1: oz remains visually readable against the environment scale.",
+      "Subject 2: Citizens of the Emerald City remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "oz focuses toward the active scene action."
+    ],
+    "environment_subzone": "palace_steps",
+    "key_visible_environment_features": [
+      "palace_steps",
+      "Chapter-local beat subzone match for 'palace_steps'."
+    ],
+    "continuity_from_previous_shot": "Oz claims he is visiting a brother Wizard",
+    "continuity_to_next_shot": "BT002",
+    "pose_anchor_frame": "Oz stands before the crowd",
+    "pose_end_frame": "Oz claims he is visiting a brother Wizard",
+    "shot_title": "Reaction Closeup 6: Oz's formal announcement of departure",
+    "shot_type": "reaction_closeup",
+    "camera_description": "Close framing that isolates reaction and emotional emphasis.",
+    "composition": "Intimate composition that isolates oz, Citizens of the Emerald City against emerald_city_palace_exterior to capture the beat's emotional turn.",
+    "target_seconds": 7.0,
+    "characters_in_frame": [
+      {
+        "label": "Oz (The Wizard)",
+        "canonical_id": "oz",
+        "display_name": "oz",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH017/oz_the_wizard.md",
+        "notes": "Direct registry match for 'oz_the_wizard'."
+      },
+      {
+        "label": "Citizens of the Emerald City",
+        "canonical_id": null,
+        "display_name": "Citizens of the Emerald City",
+        "status": "review",
+        "entity_kind": "individual",
+        "resolution_score": 16,
+        "source_path": "",
+        "notes": "Low-confidence character match requires review."
+      }
+    ],
+    "environment": {
+      "label": "emerald_city_palace_exterior",
+      "canonical_id": "emerald_city_palace_exterior",
+      "display_name": "emerald_city_palace_exterior",
+      "status": "canonical",
+      "entity_kind": "city",
+      "resolution_score": null,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH017/emerald_city_palace_exterior.md",
+      "notes": "Chapter-local beat subzone match for 'palace_steps'."
+    },
+    "beat_ids": [
+      "BT001"
+    ],
+    "continuity_constraints": [
+      "Crowd density and placement must remain consistent across coverage.",
+      "the_scarecrow must maintain a regal/official posture during the appointment.",
+      "Oz's formal announcement of departure",
+      "Resolve Citizens of the Emerald City -> Citizens of the Emerald City"
+    ],
+    "prompt_seed": "Reaction Closeup 6: Oz's formal announcement of departure. reaction_closeup. size=close_up. angle=eye_level. lens=portrait. motion=push_in. zoom=subtle_in. focus=shallow_subject. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Close framing that isolates reaction and emotiona...",
+    "shot_notes": "Oz's formal announcement of departure",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH017_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH017",
+        "scene_id": "CH017_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH017",
+        "scene_id": "CH017_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH017",
+        "scene_id": "CH017_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH017",
+        "scene_id": "CH017_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH017",
+        "scene_id": "CH017_SC003"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH017",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH017_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH015",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH015_chapter_xv.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH017",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH017_chapter_xvii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH010",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH010_chapter_x.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH017",
+        "canonical_id": "oz"
+      }
+    ],
+    "evidence_summary": [
+      "Establish the political transition and public stakes through a formal announcement. The scene must visually communicate the shift from Oz's deceptive authority to the Scarecrow's temporary governance as Oz departs for the clouds.",
+      "Oz makes a formal announcement to the citizens of the Emerald City. He claims he is traveling to visit a \"brother Wizard\" in the clouds. To maintain order, he appoints the Scarecrow as the temporary ruler of the city.",
+      "From public spectacle to a sense of formal transition.",
+      "Oz stands before a large crowd, preparing for a formal address.",
+      "the_scarecrow stands in an official capacity as the city transitions to his rule.",
+      "Oz announces his departure and appoints the Scarecrow as ruler.",
+      "oz | [CH002] Chapter II (book index hit) [CH010] Chapter X (book index hit) [CH011] Chapter XI (book index hit)",
+      "the_scarecrow | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH003/the_scarecrow.md] Physical Description: A living figure stuffed with straw. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/cha...",
+      "emerald_city_palace_exterior | No specific visual descriptors are provided in the current evidence. The location functions as a secondary setting and transit hub within the narrative structure. | Unknown. | Unknown. | Unknown."
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "montage_travel",
+    "coverage_role": "decision_closeup",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT001",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "major",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = major"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH017_SC003_SH006_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "22d6313bfa6f878299a20c63f6aa50749d6b331b",
+      "created_at_utc": "2026-04-27T20:54:03.881009+00:00",
+      "updated_at_utc": "2026-04-27T20:55:02.737138+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH017_SC003",
+          "version": "c6b5dc5dfd1fad8589ec85158ea9d70fc5550734"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH017_SC003",
+          "version": "edb8f7943b8235931797a55cc07e2215e1e46b8d"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH017_SC003",
+          "version": "567f96dc1d89bbc78905874f4039984a3b4da6e4"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:54:03.881511+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "22d6313bfa6f878299a20c63f6aa50749d6b331b"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:55:02.737138+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "22d6313bfa6f878299a20c63f6aa50749d6b331b"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH007",
+    "scene_id": "CH017_SC003",
+    "chapter_id": "CH017",
+    "shot_order": 7,
+    "previous_shot_id": "SH006",
+    "next_shot_id": "SH008",
+    "primary_subject": "oz",
+    "secondary_subjects": [],
+    "shot_moment_summary": "Oz's formal announcement of departure",
+    "start_state": "Oz stands before the crowd",
+    "end_state": "Oz claims he is visiting a brother Wizard",
+    "action_during_shot": "Oz's formal announcement of departure",
+    "action_continues_from": "Oz claims he is visiting a brother Wizard",
+    "action_hands_off_to": "BT002",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "oz",
+    "visible_secondary_subject_ids": [],
+    "primary_subject_frame_position": "foreground right within palace_steps",
+    "primary_subject_scale_relation": "preserve readable body-to-environment scale in frame",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "Oz stands before the crowd",
+    "subject_relation_summary": "oz carries the frame alone",
+    "required_environment_anchor_1": "palace_steps",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "preserve readable body-to-environment scale in frame",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "Oz at center high point",
+      "emerald_city_palace_exterior_steps",
+      "oz remains readable within the active playing space.",
+      "Citizens of the Emerald City remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the palace_steps.",
+      "Background depth should keep emerald_city_palace_exterior legible as the location anchor.",
+      "Subject 1: oz remains visually readable against the environment scale.",
+      "Subject 2: Citizens of the Emerald City remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "oz focuses toward the active scene action."
+    ],
+    "environment_subzone": "palace_steps",
+    "key_visible_environment_features": [
+      "palace_steps",
+      "Chapter-local beat subzone match for 'palace_steps'."
+    ],
+    "continuity_from_previous_shot": "Oz claims he is visiting a brother Wizard",
+    "continuity_to_next_shot": "BT002",
+    "pose_anchor_frame": "Oz stands before the crowd",
+    "pose_end_frame": "Oz claims he is visiting a brother Wizard",
+    "shot_title": "Scale Proof Wide 7: Oz's formal announcement of departure",
+    "shot_type": "scale_proof_wide",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in emerald_city_palace_exterior featuring oz, Citizens of the Emerald City.",
+    "target_seconds": 10.8,
+    "characters_in_frame": [
+      {
+        "label": "Oz (The Wizard)",
+        "canonical_id": "oz",
+        "display_name": "oz",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH017/oz_the_wizard.md",
+        "notes": "Direct registry match for 'oz_the_wizard'."
+      },
+      {
+        "label": "Citizens of the Emerald City",
+        "canonical_id": null,
+        "display_name": "Citizens of the Emerald City",
+        "status": "review",
+        "entity_kind": "individual",
+        "resolution_score": 16,
+        "source_path": "",
+        "notes": "Low-confidence character match requires review."
+      }
+    ],
+    "environment": {
+      "label": "emerald_city_palace_exterior",
+      "canonical_id": "emerald_city_palace_exterior",
+      "display_name": "emerald_city_palace_exterior",
+      "status": "canonical",
+      "entity_kind": "city",
+      "resolution_score": null,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH017/emerald_city_palace_exterior.md",
+      "notes": "Chapter-local beat subzone match for 'palace_steps'."
+    },
+    "beat_ids": [
+      "BT001"
+    ],
+    "continuity_constraints": [
+      "Crowd density and placement must remain consistent across coverage.",
+      "the_scarecrow must maintain a regal/official posture during the appointment.",
+      "Oz's formal announcement of departure",
+      "Resolve Citizens of the Emerald City -> Citizens of the Emerald City"
+    ],
+    "prompt_seed": "Scale Proof Wide 7: Oz's formal announcement of departure. scale_proof_wide. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Rea...",
+    "shot_notes": "Oz's formal announcement of departure",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH017_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH017",
+        "scene_id": "CH017_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH017",
+        "scene_id": "CH017_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH017",
+        "scene_id": "CH017_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH017",
+        "scene_id": "CH017_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH017",
+        "scene_id": "CH017_SC003"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH017",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH017_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH015",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH015_chapter_xv.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH017",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH017_chapter_xvii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH010",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH010_chapter_x.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH017",
+        "canonical_id": "oz"
+      }
+    ],
+    "evidence_summary": [
+      "Establish the political transition and public stakes through a formal announcement. The scene must visually communicate the shift from Oz's deceptive authority to the Scarecrow's temporary governance as Oz departs for the clouds.",
+      "Oz makes a formal announcement to the citizens of the Emerald City. He claims he is traveling to visit a \"brother Wizard\" in the clouds. To maintain order, he appoints the Scarecrow as the temporary ruler of the city.",
+      "From public spectacle to a sense of formal transition.",
+      "Oz stands before a large crowd, preparing for a formal address.",
+      "the_scarecrow stands in an official capacity as the city transitions to his rule.",
+      "Oz announces his departure and appoints the Scarecrow as ruler.",
+      "oz | [CH002] Chapter II (book index hit) [CH010] Chapter X (book index hit) [CH011] Chapter XI (book index hit)",
+      "the_scarecrow | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH003/the_scarecrow.md] Physical Description: A living figure stuffed with straw. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/cha...",
+      "emerald_city_palace_exterior | No specific visual descriptors are provided in the current evidence. The location functions as a secondary setting and transit hub within the narrative structure. | Unknown. | Unknown. | Unknown."
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "montage_travel",
+    "coverage_role": "scale_proof_wide",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT001",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "major",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = major"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH017_SC003_SH007_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "22d6313bfa6f878299a20c63f6aa50749d6b331b",
+      "created_at_utc": "2026-04-27T20:54:03.883010+00:00",
+      "updated_at_utc": "2026-04-27T20:55:02.743648+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH017_SC003",
+          "version": "c6b5dc5dfd1fad8589ec85158ea9d70fc5550734"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH017_SC003",
+          "version": "edb8f7943b8235931797a55cc07e2215e1e46b8d"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH017_SC003",
+          "version": "567f96dc1d89bbc78905874f4039984a3b4da6e4"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:54:03.883513+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "22d6313bfa6f878299a20c63f6aa50749d6b331b"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:55:02.744148+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "22d6313bfa6f878299a20c63f6aa50749d6b331b"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH008",
+    "scene_id": "CH017_SC003",
+    "chapter_id": "CH017",
+    "shot_order": 8,
+    "previous_shot_id": "SH007",
+    "next_shot_id": "SH009",
     "primary_subject": "Citizens of the Emerald City",
     "secondary_subjects": [],
     "shot_moment_summary": "Citizens reacting to the news of the brother Wizard",
     "start_state": "crowd listening",
     "end_state": "crowd murmuring/curious",
     "action_during_shot": "citizens exchange looks",
-    "action_continues_from": "Oz beginning to speak",
+    "action_continues_from": "Oz claims he is visiting a brother Wizard",
     "action_hands_off_to": "BT003",
     "shot_size": "medium",
     "camera_angle": "eye_level",
@@ -247,28 +1686,34 @@
     "camera_package_description": "medium, eye level, normal lens, pan, shallow subject, diffuse ambient",
     "subject_blocking": [
       "scattered throughout square",
-      "Citizens clustered in groups"
+      "Citizens clustered in groups",
+      "public_square",
+      "Citizens of the Emerald City remains readable within the active playing space.",
+      "oz remains readable within the active playing space."
     ],
     "camera_relative_positions": [
       "Camera anchors the action inside the public_square.",
-      "Background depth should keep emerald_city_palace_exterior legible as the location anchor."
+      "Background depth should keep emerald_city_palace_exterior legible as the location anchor.",
+      "Subject 1: Citizens of the Emerald City remains visually readable against the environment scale.",
+      "Subject 2: oz remains visually readable against the environment scale."
     ],
     "gaze_directions": [
       "Citizens of the Emerald City focuses toward the active scene action."
     ],
     "environment_subzone": "public_square",
     "key_visible_environment_features": [
-      "public_square"
+      "public_square",
+      "Chapter-local environment alias match for 'Palace Exterior/Public Square' (key_overlap=2, label_overlap=3, context_ov..."
     ],
-    "continuity_from_previous_shot": "Oz beginning to speak",
+    "continuity_from_previous_shot": "Oz claims he is visiting a brother Wizard",
     "continuity_to_next_shot": "BT003",
     "pose_anchor_frame": "crowd listening",
     "pose_end_frame": "crowd murmuring/curious",
-    "shot_title": "Medium 2: The crowd reacts to the news of the clouds and the...",
-    "shot_type": "medium",
-    "camera_description": "Stable medium framing that keeps action and character readable.",
+    "shot_title": "Ceremonial Master 8: The crowd reacts to the news of the clouds and the...",
+    "shot_type": "ceremonial_master",
+    "camera_description": "Stable readable framing built from the beat requirement.",
     "composition": "Readable medium composition in emerald_city_palace_exterior featuring Citizens of the Emerald City, oz.",
-    "target_seconds": 5.3,
+    "target_seconds": 10.0,
     "characters_in_frame": [
       {
         "label": "Citizens of the Emerald City",
@@ -306,9 +1751,11 @@
     ],
     "continuity_constraints": [
       "Crowd density and placement must remain consistent across coverage.",
-      "the_scarecrow must maintain a regal/official posture during the appointment."
+      "the_scarecrow must maintain a regal/official posture during the appointment.",
+      "The crowd reacts to the news of the clouds and the brother Wizard",
+      "Resolve Citizens of the Emerald City -> Citizens of the Emerald City"
     ],
-    "prompt_seed": "Medium 2: The crowd reacts to the news of the clouds and the.... medium. size=medium. angle=eye_level. lens=normal. motion=pan. zoom=none. focus=shallow_subject. lighting=diffuse_ambient. visibility=on_screen. subject_angle=front. Stable medium framing that keeps action and character readable.",
+    "prompt_seed": "Ceremonial Master 8: The crowd reacts to the news of the clouds and the.... ceremonial_master. size=medium. angle=eye_level. lens=normal. motion=pan. zoom=none. focus=shallow_subject. lighting=diffuse_ambient. visibility=on_screen. subject_angle=front. Stable readable framing built from the beat requirement. Readabl...",
     "shot_notes": "The crowd reacts to the news of the clouds and the brother Wizard",
     "evidence_refs": [
       {
@@ -377,13 +1824,30 @@
       "the_scarecrow | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH003/the_scarecrow.md] Physical Description: A living figure stuffed with straw. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/cha...",
       "emerald_city_palace_exterior | No specific visual descriptors are provided in the current evidence. The location functions as a secondary setting and transit hub within the narrative structure. | Unknown. | Unknown. | Unknown."
     ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "montage_travel",
+    "coverage_role": "ceremonial_master",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "normal",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT002",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "normal",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = normal"
+      ]
+    },
     "metadata": {
-      "artifact_id": "CH017_SC003_SH002_SHOT_PACKAGE",
+      "artifact_id": "CH017_SC003_SH008_SHOT_PACKAGE",
       "artifact_type": "shot_package",
       "status": "generated",
-      "source_fingerprint": "fe132e4e1956d2918c31b0059d7f97ea5eceb000",
-      "created_at_utc": "2026-04-27T18:57:12.951211+00:00",
-      "updated_at_utc": "2026-04-27T18:57:12.951211+00:00",
+      "source_fingerprint": "22d6313bfa6f878299a20c63f6aa50749d6b331b",
+      "created_at_utc": "2026-04-27T20:54:03.884509+00:00",
+      "updated_at_utc": "2026-04-27T20:55:02.749647+00:00",
       "upstream_dependencies": [
         {
           "dependency_type": "scene_contract",
@@ -398,27 +1862,1197 @@
         {
           "dependency_type": "shot_blueprints",
           "dependency_id": "CH017_SC003",
-          "version": "438aaedc772eb7ac5a33689afa165acbc39bdffa"
+          "version": "567f96dc1d89bbc78905874f4039984a3b4da6e4"
         }
       ],
       "locked_fields": {},
       "manual_overrides": {},
       "revision_history": [
         {
-          "timestamp_utc": "2026-04-27T18:58:19.422001+00:00",
+          "timestamp_utc": "2026-04-27T20:54:03.885012+00:00",
           "action": "synthesized",
-          "source_fingerprint": "fe132e4e1956d2918c31b0059d7f97ea5eceb000"
+          "source_fingerprint": "22d6313bfa6f878299a20c63f6aa50749d6b331b"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:55:02.751155+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "22d6313bfa6f878299a20c63f6aa50749d6b331b"
         }
       ]
     }
   },
   {
-    "shot_id": "SH003",
+    "shot_id": "SH009",
     "scene_id": "CH017_SC003",
     "chapter_id": "CH017",
-    "shot_order": 3,
-    "previous_shot_id": "SH002",
-    "next_shot_id": "",
+    "shot_order": 9,
+    "previous_shot_id": "SH008",
+    "next_shot_id": "SH010",
+    "primary_subject": "Citizens of the Emerald City",
+    "secondary_subjects": [],
+    "shot_moment_summary": "The crowd reacts to the news of the clouds and the brother Wizard",
+    "start_state": "Crowd hears announcement",
+    "end_state": "Curiosity spreads through the square",
+    "action_during_shot": "The crowd reacts to the news of the clouds and the brother Wizard",
+    "action_continues_from": "crowd murmuring/curious",
+    "action_hands_off_to": "BT003",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "oz",
+    "visible_secondary_subject_ids": [],
+    "primary_subject_frame_position": "foreground right within public_square",
+    "primary_subject_scale_relation": "preserve readable body-to-environment scale in frame",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "Crowd hears announcement",
+    "subject_relation_summary": "Citizens of the Emerald City carries the frame alone",
+    "required_environment_anchor_1": "public_square",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "preserve readable body-to-environment scale in frame",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "Citizens clustered in groups",
+      "public_square",
+      "Citizens of the Emerald City remains readable within the active playing space.",
+      "oz remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the public_square.",
+      "Background depth should keep emerald_city_palace_exterior legible as the location anchor.",
+      "Subject 1: Citizens of the Emerald City remains visually readable against the environment scale.",
+      "Subject 2: oz remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "Citizens of the Emerald City focuses toward the active scene action."
+    ],
+    "environment_subzone": "public_square",
+    "key_visible_environment_features": [
+      "public_square",
+      "Chapter-local environment alias match for 'Palace Exterior/Public Square' (key_overlap=2, label_overlap=3, context_ov..."
+    ],
+    "continuity_from_previous_shot": "crowd murmuring/curious",
+    "continuity_to_next_shot": "BT003",
+    "pose_anchor_frame": "Crowd hears announcement",
+    "pose_end_frame": "Curiosity spreads through the square",
+    "shot_title": "Authority Single 9: The crowd reacts to the news of the clouds and the...",
+    "shot_type": "authority_single",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in emerald_city_palace_exterior featuring Citizens of the Emerald City, oz.",
+    "target_seconds": 6.5,
+    "characters_in_frame": [
+      {
+        "label": "Citizens of the Emerald City",
+        "canonical_id": null,
+        "display_name": "Citizens of the Emerald City",
+        "status": "review",
+        "entity_kind": "individual",
+        "resolution_score": 16,
+        "source_path": "",
+        "notes": "Low-confidence character match requires review."
+      },
+      {
+        "label": "Oz (The Wizard)",
+        "canonical_id": "oz",
+        "display_name": "oz",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH017/oz_the_wizard.md",
+        "notes": "Direct registry match for 'oz_the_wizard'."
+      }
+    ],
+    "environment": {
+      "label": "Palace Exterior/Public Square",
+      "canonical_id": "emerald_city_palace_exterior",
+      "display_name": "emerald_city_palace_exterior",
+      "status": "canonical",
+      "entity_kind": "city",
+      "resolution_score": 114,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH017/emerald_city_palace_exterior.md",
+      "notes": "Chapter-local environment alias match for 'Palace Exterior/Public Square' (key_overlap=2, label_overlap=3, context_overlap=4)."
+    },
+    "beat_ids": [
+      "BT002"
+    ],
+    "continuity_constraints": [
+      "Crowd density and placement must remain consistent across coverage.",
+      "the_scarecrow must maintain a regal/official posture during the appointment.",
+      "The crowd reacts to the news of the clouds and the brother Wizard",
+      "Resolve Citizens of the Emerald City -> Citizens of the Emerald City"
+    ],
+    "prompt_seed": "Authority Single 9: The crowd reacts to the news of the clouds and the.... authority_single. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat...",
+    "shot_notes": "The crowd reacts to the news of the clouds and the brother Wizard",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH017_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH017",
+        "scene_id": "CH017_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH017",
+        "scene_id": "CH017_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH017",
+        "scene_id": "CH017_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH017",
+        "scene_id": "CH017_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH017",
+        "scene_id": "CH017_SC003"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH017",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH017_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH015",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH015_chapter_xv.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH017",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH017_chapter_xvii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH010",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH010_chapter_x.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH017",
+        "canonical_id": "oz"
+      }
+    ],
+    "evidence_summary": [
+      "Establish the political transition and public stakes through a formal announcement. The scene must visually communicate the shift from Oz's deceptive authority to the Scarecrow's temporary governance as Oz departs for the clouds.",
+      "Oz makes a formal announcement to the citizens of the Emerald City. He claims he is traveling to visit a \"brother Wizard\" in the clouds. To maintain order, he appoints the Scarecrow as the temporary ruler of the city.",
+      "From public spectacle to a sense of formal transition.",
+      "Oz stands before a large crowd, preparing for a formal address.",
+      "the_scarecrow stands in an official capacity as the city transitions to his rule.",
+      "Oz announces his departure and appoints the Scarecrow as ruler.",
+      "oz | [CH002] Chapter II (book index hit) [CH010] Chapter X (book index hit) [CH011] Chapter XI (book index hit)",
+      "the_scarecrow | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH003/the_scarecrow.md] Physical Description: A living figure stuffed with straw. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/cha...",
+      "emerald_city_palace_exterior | No specific visual descriptors are provided in the current evidence. The location functions as a secondary setting and transit hub within the narrative structure. | Unknown. | Unknown. | Unknown."
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "montage_travel",
+    "coverage_role": "authority_single",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "normal",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT002",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "normal",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = normal"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH017_SC003_SH009_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "22d6313bfa6f878299a20c63f6aa50749d6b331b",
+      "created_at_utc": "2026-04-27T20:54:03.886010+00:00",
+      "updated_at_utc": "2026-04-27T20:55:02.756737+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH017_SC003",
+          "version": "c6b5dc5dfd1fad8589ec85158ea9d70fc5550734"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH017_SC003",
+          "version": "edb8f7943b8235931797a55cc07e2215e1e46b8d"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH017_SC003",
+          "version": "567f96dc1d89bbc78905874f4039984a3b4da6e4"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:54:03.886010+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "22d6313bfa6f878299a20c63f6aa50749d6b331b"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:55:02.757237+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "22d6313bfa6f878299a20c63f6aa50749d6b331b"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH010",
+    "scene_id": "CH017_SC003",
+    "chapter_id": "CH017",
+    "shot_order": 10,
+    "previous_shot_id": "SH009",
+    "next_shot_id": "SH011",
+    "primary_subject": "Citizens of the Emerald City",
+    "secondary_subjects": [],
+    "shot_moment_summary": "The crowd reacts to the news of the clouds and the brother Wizard",
+    "start_state": "Crowd hears announcement",
+    "end_state": "Curiosity spreads through the square",
+    "action_during_shot": "The crowd reacts to the news of the clouds and the brother Wizard",
+    "action_continues_from": "Curiosity spreads through the square",
+    "action_hands_off_to": "BT003",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "oz",
+    "visible_secondary_subject_ids": [],
+    "primary_subject_frame_position": "foreground right within public_square",
+    "primary_subject_scale_relation": "preserve readable body-to-environment scale in frame",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "Crowd hears announcement",
+    "subject_relation_summary": "Citizens of the Emerald City carries the frame alone",
+    "required_environment_anchor_1": "public_square",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "preserve readable body-to-environment scale in frame",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "Citizens clustered in groups",
+      "public_square",
+      "Citizens of the Emerald City remains readable within the active playing space.",
+      "oz remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the public_square.",
+      "Background depth should keep emerald_city_palace_exterior legible as the location anchor.",
+      "Subject 1: Citizens of the Emerald City remains visually readable against the environment scale.",
+      "Subject 2: oz remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "Citizens of the Emerald City focuses toward the active scene action."
+    ],
+    "environment_subzone": "public_square",
+    "key_visible_environment_features": [
+      "public_square",
+      "Chapter-local environment alias match for 'Palace Exterior/Public Square' (key_overlap=2, label_overlap=3, context_ov..."
+    ],
+    "continuity_from_previous_shot": "Curiosity spreads through the square",
+    "continuity_to_next_shot": "BT003",
+    "pose_anchor_frame": "Crowd hears announcement",
+    "pose_end_frame": "Curiosity spreads through the square",
+    "shot_title": "Petitioner Group 10: The crowd reacts to the news of the clouds and the...",
+    "shot_type": "petitioner_group",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in emerald_city_palace_exterior featuring Citizens of the Emerald City, oz.",
+    "target_seconds": 6.5,
+    "characters_in_frame": [
+      {
+        "label": "Citizens of the Emerald City",
+        "canonical_id": null,
+        "display_name": "Citizens of the Emerald City",
+        "status": "review",
+        "entity_kind": "individual",
+        "resolution_score": 16,
+        "source_path": "",
+        "notes": "Low-confidence character match requires review."
+      },
+      {
+        "label": "Oz (The Wizard)",
+        "canonical_id": "oz",
+        "display_name": "oz",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH017/oz_the_wizard.md",
+        "notes": "Direct registry match for 'oz_the_wizard'."
+      }
+    ],
+    "environment": {
+      "label": "Palace Exterior/Public Square",
+      "canonical_id": "emerald_city_palace_exterior",
+      "display_name": "emerald_city_palace_exterior",
+      "status": "canonical",
+      "entity_kind": "city",
+      "resolution_score": 114,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH017/emerald_city_palace_exterior.md",
+      "notes": "Chapter-local environment alias match for 'Palace Exterior/Public Square' (key_overlap=2, label_overlap=3, context_overlap=4)."
+    },
+    "beat_ids": [
+      "BT002"
+    ],
+    "continuity_constraints": [
+      "Crowd density and placement must remain consistent across coverage.",
+      "the_scarecrow must maintain a regal/official posture during the appointment.",
+      "The crowd reacts to the news of the clouds and the brother Wizard",
+      "Resolve Citizens of the Emerald City -> Citizens of the Emerald City"
+    ],
+    "prompt_seed": "Petitioner Group 10: The crowd reacts to the news of the clouds and the.... petitioner_group. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat...",
+    "shot_notes": "The crowd reacts to the news of the clouds and the brother Wizard",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH017_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH017",
+        "scene_id": "CH017_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH017",
+        "scene_id": "CH017_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH017",
+        "scene_id": "CH017_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH017",
+        "scene_id": "CH017_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH017",
+        "scene_id": "CH017_SC003"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH017",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH017_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH015",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH015_chapter_xv.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH017",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH017_chapter_xvii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH010",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH010_chapter_x.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH017",
+        "canonical_id": "oz"
+      }
+    ],
+    "evidence_summary": [
+      "Establish the political transition and public stakes through a formal announcement. The scene must visually communicate the shift from Oz's deceptive authority to the Scarecrow's temporary governance as Oz departs for the clouds.",
+      "Oz makes a formal announcement to the citizens of the Emerald City. He claims he is traveling to visit a \"brother Wizard\" in the clouds. To maintain order, he appoints the Scarecrow as the temporary ruler of the city.",
+      "From public spectacle to a sense of formal transition.",
+      "Oz stands before a large crowd, preparing for a formal address.",
+      "the_scarecrow stands in an official capacity as the city transitions to his rule.",
+      "Oz announces his departure and appoints the Scarecrow as ruler.",
+      "oz | [CH002] Chapter II (book index hit) [CH010] Chapter X (book index hit) [CH011] Chapter XI (book index hit)",
+      "the_scarecrow | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH003/the_scarecrow.md] Physical Description: A living figure stuffed with straw. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/cha...",
+      "emerald_city_palace_exterior | No specific visual descriptors are provided in the current evidence. The location functions as a secondary setting and transit hub within the narrative structure. | Unknown. | Unknown. | Unknown."
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "montage_travel",
+    "coverage_role": "petitioner_group",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "normal",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT002",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "normal",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = normal"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH017_SC003_SH010_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "22d6313bfa6f878299a20c63f6aa50749d6b331b",
+      "created_at_utc": "2026-04-27T20:54:03.887518+00:00",
+      "updated_at_utc": "2026-04-27T20:55:02.763237+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH017_SC003",
+          "version": "c6b5dc5dfd1fad8589ec85158ea9d70fc5550734"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH017_SC003",
+          "version": "edb8f7943b8235931797a55cc07e2215e1e46b8d"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH017_SC003",
+          "version": "567f96dc1d89bbc78905874f4039984a3b4da6e4"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:54:03.888018+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "22d6313bfa6f878299a20c63f6aa50749d6b331b"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:55:02.763736+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "22d6313bfa6f878299a20c63f6aa50749d6b331b"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH011",
+    "scene_id": "CH017_SC003",
+    "chapter_id": "CH017",
+    "shot_order": 11,
+    "previous_shot_id": "SH010",
+    "next_shot_id": "SH012",
+    "primary_subject": "Citizens of the Emerald City",
+    "secondary_subjects": [],
+    "shot_moment_summary": "The crowd reacts to the news of the clouds and the brother Wizard",
+    "start_state": "Crowd hears announcement",
+    "end_state": "Curiosity spreads through the square",
+    "action_during_shot": "The crowd reacts to the news of the clouds and the brother Wizard",
+    "action_continues_from": "Curiosity spreads through the square",
+    "action_hands_off_to": "BT003",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "oz",
+    "visible_secondary_subject_ids": [],
+    "primary_subject_frame_position": "foreground right within public_square",
+    "primary_subject_scale_relation": "preserve readable body-to-environment scale in frame",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "Crowd hears announcement",
+    "subject_relation_summary": "Citizens of the Emerald City carries the frame alone",
+    "required_environment_anchor_1": "public_square",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "preserve readable body-to-environment scale in frame",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "Citizens clustered in groups",
+      "public_square",
+      "Citizens of the Emerald City remains readable within the active playing space.",
+      "oz remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the public_square.",
+      "Background depth should keep emerald_city_palace_exterior legible as the location anchor.",
+      "Subject 1: Citizens of the Emerald City remains visually readable against the environment scale.",
+      "Subject 2: oz remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "Citizens of the Emerald City focuses toward the active scene action."
+    ],
+    "environment_subzone": "public_square",
+    "key_visible_environment_features": [
+      "public_square",
+      "Chapter-local environment alias match for 'Palace Exterior/Public Square' (key_overlap=2, label_overlap=3, context_ov..."
+    ],
+    "continuity_from_previous_shot": "Curiosity spreads through the square",
+    "continuity_to_next_shot": "BT003",
+    "pose_anchor_frame": "Crowd hears announcement",
+    "pose_end_frame": "Curiosity spreads through the square",
+    "shot_title": "Crowd Response 11: The crowd reacts to the news of the clouds and the...",
+    "shot_type": "crowd_response",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in emerald_city_palace_exterior featuring Citizens of the Emerald City, oz.",
+    "target_seconds": 6.5,
+    "characters_in_frame": [
+      {
+        "label": "Citizens of the Emerald City",
+        "canonical_id": null,
+        "display_name": "Citizens of the Emerald City",
+        "status": "review",
+        "entity_kind": "individual",
+        "resolution_score": 16,
+        "source_path": "",
+        "notes": "Low-confidence character match requires review."
+      },
+      {
+        "label": "Oz (The Wizard)",
+        "canonical_id": "oz",
+        "display_name": "oz",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH017/oz_the_wizard.md",
+        "notes": "Direct registry match for 'oz_the_wizard'."
+      }
+    ],
+    "environment": {
+      "label": "Palace Exterior/Public Square",
+      "canonical_id": "emerald_city_palace_exterior",
+      "display_name": "emerald_city_palace_exterior",
+      "status": "canonical",
+      "entity_kind": "city",
+      "resolution_score": 114,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH017/emerald_city_palace_exterior.md",
+      "notes": "Chapter-local environment alias match for 'Palace Exterior/Public Square' (key_overlap=2, label_overlap=3, context_overlap=4)."
+    },
+    "beat_ids": [
+      "BT002"
+    ],
+    "continuity_constraints": [
+      "Crowd density and placement must remain consistent across coverage.",
+      "the_scarecrow must maintain a regal/official posture during the appointment.",
+      "The crowd reacts to the news of the clouds and the brother Wizard",
+      "Resolve Citizens of the Emerald City -> Citizens of the Emerald City"
+    ],
+    "prompt_seed": "Crowd Response 11: The crowd reacts to the news of the clouds and the.... crowd_response. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat req...",
+    "shot_notes": "The crowd reacts to the news of the clouds and the brother Wizard",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH017_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH017",
+        "scene_id": "CH017_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH017",
+        "scene_id": "CH017_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH017",
+        "scene_id": "CH017_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH017",
+        "scene_id": "CH017_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH017",
+        "scene_id": "CH017_SC003"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH017",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH017_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH015",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH015_chapter_xv.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH017",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH017_chapter_xvii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH010",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH010_chapter_x.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH017",
+        "canonical_id": "oz"
+      }
+    ],
+    "evidence_summary": [
+      "Establish the political transition and public stakes through a formal announcement. The scene must visually communicate the shift from Oz's deceptive authority to the Scarecrow's temporary governance as Oz departs for the clouds.",
+      "Oz makes a formal announcement to the citizens of the Emerald City. He claims he is traveling to visit a \"brother Wizard\" in the clouds. To maintain order, he appoints the Scarecrow as the temporary ruler of the city.",
+      "From public spectacle to a sense of formal transition.",
+      "Oz stands before a large crowd, preparing for a formal address.",
+      "the_scarecrow stands in an official capacity as the city transitions to his rule.",
+      "Oz announces his departure and appoints the Scarecrow as ruler.",
+      "oz | [CH002] Chapter II (book index hit) [CH010] Chapter X (book index hit) [CH011] Chapter XI (book index hit)",
+      "the_scarecrow | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH003/the_scarecrow.md] Physical Description: A living figure stuffed with straw. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/cha...",
+      "emerald_city_palace_exterior | No specific visual descriptors are provided in the current evidence. The location functions as a secondary setting and transit hub within the narrative structure. | Unknown. | Unknown. | Unknown."
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "montage_travel",
+    "coverage_role": "crowd_response",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "normal",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT002",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "normal",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = normal"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH017_SC003_SH011_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "22d6313bfa6f878299a20c63f6aa50749d6b331b",
+      "created_at_utc": "2026-04-27T20:54:03.889024+00:00",
+      "updated_at_utc": "2026-04-27T20:55:02.769236+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH017_SC003",
+          "version": "c6b5dc5dfd1fad8589ec85158ea9d70fc5550734"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH017_SC003",
+          "version": "edb8f7943b8235931797a55cc07e2215e1e46b8d"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH017_SC003",
+          "version": "567f96dc1d89bbc78905874f4039984a3b4da6e4"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:54:03.889521+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "22d6313bfa6f878299a20c63f6aa50749d6b331b"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:55:02.769236+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "22d6313bfa6f878299a20c63f6aa50749d6b331b"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH012",
+    "scene_id": "CH017_SC003",
+    "chapter_id": "CH017",
+    "shot_order": 12,
+    "previous_shot_id": "SH011",
+    "next_shot_id": "SH013",
+    "primary_subject": "Citizens of the Emerald City",
+    "secondary_subjects": [],
+    "shot_moment_summary": "The crowd reacts to the news of the clouds and the brother Wizard",
+    "start_state": "Crowd hears announcement",
+    "end_state": "Curiosity spreads through the square",
+    "action_during_shot": "The crowd reacts to the news of the clouds and the brother Wizard",
+    "action_continues_from": "Curiosity spreads through the square",
+    "action_hands_off_to": "BT003",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "oz",
+    "visible_secondary_subject_ids": [],
+    "primary_subject_frame_position": "foreground right within public_square",
+    "primary_subject_scale_relation": "preserve readable body-to-environment scale in frame",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "Crowd hears announcement",
+    "subject_relation_summary": "Citizens of the Emerald City carries the frame alone",
+    "required_environment_anchor_1": "public_square",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "preserve readable body-to-environment scale in frame",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "Citizens clustered in groups",
+      "public_square",
+      "Citizens of the Emerald City remains readable within the active playing space.",
+      "oz remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the public_square.",
+      "Background depth should keep emerald_city_palace_exterior legible as the location anchor.",
+      "Subject 1: Citizens of the Emerald City remains visually readable against the environment scale.",
+      "Subject 2: oz remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "Citizens of the Emerald City focuses toward the active scene action."
+    ],
+    "environment_subzone": "public_square",
+    "key_visible_environment_features": [
+      "public_square",
+      "Chapter-local environment alias match for 'Palace Exterior/Public Square' (key_overlap=2, label_overlap=3, context_ov..."
+    ],
+    "continuity_from_previous_shot": "Curiosity spreads through the square",
+    "continuity_to_next_shot": "BT003",
+    "pose_anchor_frame": "Crowd hears announcement",
+    "pose_end_frame": "Curiosity spreads through the square",
+    "shot_title": "Symbol Insert 12: The crowd reacts to the news of the clouds and the...",
+    "shot_type": "symbol_insert",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in emerald_city_palace_exterior featuring Citizens of the Emerald City, oz.",
+    "target_seconds": 5.0,
+    "characters_in_frame": [
+      {
+        "label": "Citizens of the Emerald City",
+        "canonical_id": null,
+        "display_name": "Citizens of the Emerald City",
+        "status": "review",
+        "entity_kind": "individual",
+        "resolution_score": 16,
+        "source_path": "",
+        "notes": "Low-confidence character match requires review."
+      },
+      {
+        "label": "Oz (The Wizard)",
+        "canonical_id": "oz",
+        "display_name": "oz",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH017/oz_the_wizard.md",
+        "notes": "Direct registry match for 'oz_the_wizard'."
+      }
+    ],
+    "environment": {
+      "label": "Palace Exterior/Public Square",
+      "canonical_id": "emerald_city_palace_exterior",
+      "display_name": "emerald_city_palace_exterior",
+      "status": "canonical",
+      "entity_kind": "city",
+      "resolution_score": 114,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH017/emerald_city_palace_exterior.md",
+      "notes": "Chapter-local environment alias match for 'Palace Exterior/Public Square' (key_overlap=2, label_overlap=3, context_overlap=4)."
+    },
+    "beat_ids": [
+      "BT002"
+    ],
+    "continuity_constraints": [
+      "Crowd density and placement must remain consistent across coverage.",
+      "the_scarecrow must maintain a regal/official posture during the appointment.",
+      "The crowd reacts to the news of the clouds and the brother Wizard",
+      "Resolve Citizens of the Emerald City -> Citizens of the Emerald City"
+    ],
+    "prompt_seed": "Symbol Insert 12: The crowd reacts to the news of the clouds and the.... symbol_insert. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requi...",
+    "shot_notes": "The crowd reacts to the news of the clouds and the brother Wizard",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH017_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH017",
+        "scene_id": "CH017_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH017",
+        "scene_id": "CH017_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH017",
+        "scene_id": "CH017_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH017",
+        "scene_id": "CH017_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH017",
+        "scene_id": "CH017_SC003"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH017",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH017_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH015",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH015_chapter_xv.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH017",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH017_chapter_xvii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH010",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH010_chapter_x.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH017",
+        "canonical_id": "oz"
+      }
+    ],
+    "evidence_summary": [
+      "Establish the political transition and public stakes through a formal announcement. The scene must visually communicate the shift from Oz's deceptive authority to the Scarecrow's temporary governance as Oz departs for the clouds.",
+      "Oz makes a formal announcement to the citizens of the Emerald City. He claims he is traveling to visit a \"brother Wizard\" in the clouds. To maintain order, he appoints the Scarecrow as the temporary ruler of the city.",
+      "From public spectacle to a sense of formal transition.",
+      "Oz stands before a large crowd, preparing for a formal address.",
+      "the_scarecrow stands in an official capacity as the city transitions to his rule.",
+      "Oz announces his departure and appoints the Scarecrow as ruler.",
+      "oz | [CH002] Chapter II (book index hit) [CH010] Chapter X (book index hit) [CH011] Chapter XI (book index hit)",
+      "the_scarecrow | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH003/the_scarecrow.md] Physical Description: A living figure stuffed with straw. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/cha...",
+      "emerald_city_palace_exterior | No specific visual descriptors are provided in the current evidence. The location functions as a secondary setting and transit hub within the narrative structure. | Unknown. | Unknown. | Unknown."
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "montage_travel",
+    "coverage_role": "symbol_insert",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "normal",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT002",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "normal",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = normal"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH017_SC003_SH012_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "22d6313bfa6f878299a20c63f6aa50749d6b331b",
+      "created_at_utc": "2026-04-27T20:54:03.890523+00:00",
+      "updated_at_utc": "2026-04-27T20:55:02.775251+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH017_SC003",
+          "version": "c6b5dc5dfd1fad8589ec85158ea9d70fc5550734"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH017_SC003",
+          "version": "edb8f7943b8235931797a55cc07e2215e1e46b8d"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH017_SC003",
+          "version": "567f96dc1d89bbc78905874f4039984a3b4da6e4"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:54:03.891022+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "22d6313bfa6f878299a20c63f6aa50749d6b331b"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:55:02.775751+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "22d6313bfa6f878299a20c63f6aa50749d6b331b"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH013",
+    "scene_id": "CH017_SC003",
+    "chapter_id": "CH017",
+    "shot_order": 13,
+    "previous_shot_id": "SH012",
+    "next_shot_id": "SH014",
+    "primary_subject": "Citizens of the Emerald City",
+    "secondary_subjects": [],
+    "shot_moment_summary": "The crowd reacts to the news of the clouds and the brother Wizard",
+    "start_state": "Crowd hears announcement",
+    "end_state": "Curiosity spreads through the square",
+    "action_during_shot": "The crowd reacts to the news of the clouds and the brother Wizard",
+    "action_continues_from": "Curiosity spreads through the square",
+    "action_hands_off_to": "BT003",
+    "shot_size": "close_up",
+    "camera_angle": "eye_level",
+    "lens_family": "portrait",
+    "camera_motion": "push_in",
+    "zoom_behavior": "subtle_in",
+    "focus_strategy": "shallow_subject",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "oz",
+    "visible_secondary_subject_ids": [],
+    "primary_subject_frame_position": "foreground inside public_square",
+    "primary_subject_scale_relation": "preserve readable body-to-environment scale in frame",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "Crowd hears announcement",
+    "subject_relation_summary": "Citizens of the Emerald City carries the frame alone",
+    "required_environment_anchor_1": "public_square",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "preserve readable body-to-environment scale in frame",
+    "camera_package_description": "close-up, eye level, portrait lens, push in, zoom subtle in, shallow subject, hard directional",
+    "subject_blocking": [
+      "Citizens clustered in groups",
+      "public_square",
+      "Citizens of the Emerald City remains readable within the active playing space.",
+      "oz remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the public_square.",
+      "Background depth should keep emerald_city_palace_exterior legible as the location anchor.",
+      "Subject 1: Citizens of the Emerald City remains visually readable against the environment scale.",
+      "Subject 2: oz remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "Citizens of the Emerald City focuses toward the active scene action."
+    ],
+    "environment_subzone": "public_square",
+    "key_visible_environment_features": [
+      "public_square",
+      "Chapter-local environment alias match for 'Palace Exterior/Public Square' (key_overlap=2, label_overlap=3, context_ov..."
+    ],
+    "continuity_from_previous_shot": "Curiosity spreads through the square",
+    "continuity_to_next_shot": "BT003",
+    "pose_anchor_frame": "Crowd hears announcement",
+    "pose_end_frame": "Curiosity spreads through the square",
+    "shot_title": "Reaction Closeup 13: The crowd reacts to the news of the clouds and the...",
+    "shot_type": "reaction_closeup",
+    "camera_description": "Close framing that isolates reaction and emotional emphasis.",
+    "composition": "Intimate composition that isolates Citizens of the Emerald City, oz against emerald_city_palace_exterior to capture the beat's emotional turn.",
+    "target_seconds": 6.5,
+    "characters_in_frame": [
+      {
+        "label": "Citizens of the Emerald City",
+        "canonical_id": null,
+        "display_name": "Citizens of the Emerald City",
+        "status": "review",
+        "entity_kind": "individual",
+        "resolution_score": 16,
+        "source_path": "",
+        "notes": "Low-confidence character match requires review."
+      },
+      {
+        "label": "Oz (The Wizard)",
+        "canonical_id": "oz",
+        "display_name": "oz",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH017/oz_the_wizard.md",
+        "notes": "Direct registry match for 'oz_the_wizard'."
+      }
+    ],
+    "environment": {
+      "label": "Palace Exterior/Public Square",
+      "canonical_id": "emerald_city_palace_exterior",
+      "display_name": "emerald_city_palace_exterior",
+      "status": "canonical",
+      "entity_kind": "city",
+      "resolution_score": 114,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH017/emerald_city_palace_exterior.md",
+      "notes": "Chapter-local environment alias match for 'Palace Exterior/Public Square' (key_overlap=2, label_overlap=3, context_overlap=4)."
+    },
+    "beat_ids": [
+      "BT002"
+    ],
+    "continuity_constraints": [
+      "Crowd density and placement must remain consistent across coverage.",
+      "the_scarecrow must maintain a regal/official posture during the appointment.",
+      "The crowd reacts to the news of the clouds and the brother Wizard",
+      "Resolve Citizens of the Emerald City -> Citizens of the Emerald City"
+    ],
+    "prompt_seed": "Reaction Closeup 13: The crowd reacts to the news of the clouds and the.... reaction_closeup. size=close_up. angle=eye_level. lens=portrait. motion=push_in. zoom=subtle_in. focus=shallow_subject. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Close framing that isolates reac...",
+    "shot_notes": "The crowd reacts to the news of the clouds and the brother Wizard",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH017_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH017",
+        "scene_id": "CH017_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH017",
+        "scene_id": "CH017_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH017",
+        "scene_id": "CH017_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH017",
+        "scene_id": "CH017_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH017",
+        "scene_id": "CH017_SC003"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH017",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH017_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH015",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH015_chapter_xv.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH017",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH017_chapter_xvii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH010",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH010_chapter_x.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH017",
+        "canonical_id": "oz"
+      }
+    ],
+    "evidence_summary": [
+      "Establish the political transition and public stakes through a formal announcement. The scene must visually communicate the shift from Oz's deceptive authority to the Scarecrow's temporary governance as Oz departs for the clouds.",
+      "Oz makes a formal announcement to the citizens of the Emerald City. He claims he is traveling to visit a \"brother Wizard\" in the clouds. To maintain order, he appoints the Scarecrow as the temporary ruler of the city.",
+      "From public spectacle to a sense of formal transition.",
+      "Oz stands before a large crowd, preparing for a formal address.",
+      "the_scarecrow stands in an official capacity as the city transitions to his rule.",
+      "Oz announces his departure and appoints the Scarecrow as ruler.",
+      "oz | [CH002] Chapter II (book index hit) [CH010] Chapter X (book index hit) [CH011] Chapter XI (book index hit)",
+      "the_scarecrow | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH003/the_scarecrow.md] Physical Description: A living figure stuffed with straw. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/cha...",
+      "emerald_city_palace_exterior | No specific visual descriptors are provided in the current evidence. The location functions as a secondary setting and transit hub within the narrative structure. | Unknown. | Unknown. | Unknown."
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "montage_travel",
+    "coverage_role": "decision_closeup",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "normal",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT002",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "normal",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = normal"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH017_SC003_SH013_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "22d6313bfa6f878299a20c63f6aa50749d6b331b",
+      "created_at_utc": "2026-04-27T20:54:03.892023+00:00",
+      "updated_at_utc": "2026-04-27T20:55:02.781251+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH017_SC003",
+          "version": "c6b5dc5dfd1fad8589ec85158ea9d70fc5550734"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH017_SC003",
+          "version": "edb8f7943b8235931797a55cc07e2215e1e46b8d"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH017_SC003",
+          "version": "567f96dc1d89bbc78905874f4039984a3b4da6e4"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:54:03.893021+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "22d6313bfa6f878299a20c63f6aa50749d6b331b"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:55:02.782253+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "22d6313bfa6f878299a20c63f6aa50749d6b331b"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH014",
+    "scene_id": "CH017_SC003",
+    "chapter_id": "CH017",
+    "shot_order": 14,
+    "previous_shot_id": "SH013",
+    "next_shot_id": "SH015",
     "primary_subject": "the_scarecrow",
     "secondary_subjects": [
       "oz"
@@ -427,7 +3061,7 @@
     "start_state": "Oz gesturing to the Scarecrow",
     "end_state": "the_scarecrow in regal posture",
     "action_during_shot": "Oz appoints the Scarecrow",
-    "action_continues_from": "crowd murmuring/curious",
+    "action_continues_from": "Curiosity spreads through the square",
     "action_hands_off_to": "end_of_scene",
     "shot_size": "medium",
     "camera_angle": "eye_level",
@@ -454,28 +3088,35 @@
     "required_scale_proof_detail": "preserve readable body-to-environment scale in frame",
     "camera_package_description": "medium, eye level, portrait lens, push in, zoom subtle in, rack focus, high contrast ceremonial",
     "subject_blocking": [
-      "Oz and the_scarecrow side-by-side on steps"
+      "Oz and the_scarecrow side-by-side on steps",
+      "Oz and the_scarecrow side-by-side",
+      "palace_steps",
+      "the_scarecrow remains readable within the active playing space.",
+      "oz remains readable within the active playing space."
     ],
     "camera_relative_positions": [
       "Camera anchors the action inside the palace_steps.",
-      "Background depth should keep emerald_city_palace_exterior legible as the location anchor."
+      "Background depth should keep emerald_city_palace_exterior legible as the location anchor.",
+      "Subject 1: the_scarecrow remains visually readable against the environment scale.",
+      "Subject 2: oz remains visually readable against the environment scale."
     ],
     "gaze_directions": [
       "the_scarecrow focuses toward the active scene action."
     ],
     "environment_subzone": "palace_steps",
     "key_visible_environment_features": [
-      "palace_steps"
+      "palace_steps",
+      "Chapter-local environment alias match for 'Palace Exterior/Public Square' (key_overlap=2, label_overlap=3, context_ov..."
     ],
-    "continuity_from_previous_shot": "crowd murmuring/curious",
+    "continuity_from_previous_shot": "Curiosity spreads through the square",
     "continuity_to_next_shot": "end_of_scene",
     "pose_anchor_frame": "Oz gesturing to the Scarecrow",
     "pose_end_frame": "the_scarecrow in regal posture",
-    "shot_title": "Closing Reaction 3: The appointment of the Scarecrow as temporary ruler",
-    "shot_type": "closing_reaction",
-    "camera_description": "Controlled closing frame that lands the consequence of the beat.",
-    "composition": "Closing composition in emerald_city_palace_exterior that emphasizes the consequence of the appointment of the scarecrow as temporary ruler.",
-    "target_seconds": 4.6,
+    "shot_title": "Handoff Medium 14: The appointment of the Scarecrow as temporary ruler",
+    "shot_type": "handoff_medium",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in emerald_city_palace_exterior featuring the_scarecrow, oz, Citizens of the Emerald City.",
+    "target_seconds": 7.0,
     "characters_in_frame": [
       {
         "label": "The Scarecrow",
@@ -496,6 +3137,16 @@
         "resolution_score": 138,
         "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH017/oz_the_wizard.md",
         "notes": "Direct registry match for 'oz_the_wizard'."
+      },
+      {
+        "label": "Citizens of the Emerald City",
+        "canonical_id": null,
+        "display_name": "Citizens of the Emerald City",
+        "status": "review",
+        "entity_kind": "individual",
+        "resolution_score": 16,
+        "source_path": "",
+        "notes": "Low-confidence character match requires review."
       }
     ],
     "environment": {
@@ -513,9 +3164,11 @@
     ],
     "continuity_constraints": [
       "Crowd density and placement must remain consistent across coverage.",
-      "the_scarecrow must maintain a regal/official posture during the appointment."
+      "the_scarecrow must maintain a regal/official posture during the appointment.",
+      "The appointment of the Scarecrow as temporary ruler",
+      "Resolve Citizens of the Emerald City -> Citizens of the Emerald City"
     ],
-    "prompt_seed": "Closing Reaction 3: The appointment of the Scarecrow as temporary ruler. closing_reaction. size=medium. angle=eye_level. lens=portrait. motion=push_in. zoom=subtle_in. focus=rack_focus. lighting=high_contrast_ceremonial. visibility=on_screen. subject_angle=front_three_quarter_left. Controlled closing frame that land...",
+    "prompt_seed": "Handoff Medium 14: The appointment of the Scarecrow as temporary ruler. handoff_medium. size=medium. angle=eye_level. lens=portrait. motion=push_in. zoom=subtle_in. focus=rack_focus. lighting=high_contrast_ceremonial. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from th...",
     "shot_notes": "The appointment of the Scarecrow as temporary ruler",
     "evidence_refs": [
       {
@@ -584,13 +3237,29 @@
       "the_scarecrow | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH003/the_scarecrow.md] Physical Description: A living figure stuffed with straw. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/cha...",
       "emerald_city_palace_exterior | No specific visual descriptors are provided in the current evidence. The location functions as a secondary setting and transit hub within the narrative structure. | Unknown. | Unknown. | Unknown."
     ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "montage_travel",
+    "coverage_role": "handoff_medium",
+    "beat_type": "transition_handoff",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT003",
+      "beat_type": "transition_handoff",
+      "importance": "major",
+      "confidence": 0.55,
+      "reasons": [
+        "importance = major"
+      ]
+    },
     "metadata": {
-      "artifact_id": "CH017_SC003_SH003_SHOT_PACKAGE",
+      "artifact_id": "CH017_SC003_SH014_SHOT_PACKAGE",
       "artifact_type": "shot_package",
       "status": "generated",
-      "source_fingerprint": "fe132e4e1956d2918c31b0059d7f97ea5eceb000",
-      "created_at_utc": "2026-04-27T18:58:19.424001+00:00",
-      "updated_at_utc": "2026-04-27T18:58:19.424001+00:00",
+      "source_fingerprint": "22d6313bfa6f878299a20c63f6aa50749d6b331b",
+      "created_at_utc": "2026-04-27T20:54:03.894021+00:00",
+      "updated_at_utc": "2026-04-27T20:55:02.786753+00:00",
       "upstream_dependencies": [
         {
           "dependency_type": "scene_contract",
@@ -605,16 +3274,267 @@
         {
           "dependency_type": "shot_blueprints",
           "dependency_id": "CH017_SC003",
-          "version": "438aaedc772eb7ac5a33689afa165acbc39bdffa"
+          "version": "567f96dc1d89bbc78905874f4039984a3b4da6e4"
         }
       ],
       "locked_fields": {},
       "manual_overrides": {},
       "revision_history": [
         {
-          "timestamp_utc": "2026-04-27T18:59:25.717009+00:00",
+          "timestamp_utc": "2026-04-27T20:54:03.894521+00:00",
           "action": "synthesized",
-          "source_fingerprint": "fe132e4e1956d2918c31b0059d7f97ea5eceb000"
+          "source_fingerprint": "22d6313bfa6f878299a20c63f6aa50749d6b331b"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:55:02.787763+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "22d6313bfa6f878299a20c63f6aa50749d6b331b"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH015",
+    "scene_id": "CH017_SC003",
+    "chapter_id": "CH017",
+    "shot_order": 15,
+    "previous_shot_id": "SH014",
+    "next_shot_id": "",
+    "primary_subject": "oz",
+    "secondary_subjects": [
+      "the_scarecrow"
+    ],
+    "shot_moment_summary": "The appointment of the Scarecrow as temporary ruler",
+    "start_state": "Oz gestures to the Scarecrow",
+    "end_state": "the_scarecrow assumes a regal posture",
+    "action_during_shot": "The appointment of the Scarecrow as temporary ruler",
+    "action_continues_from": "the_scarecrow in regal posture",
+    "action_hands_off_to": "end_of_scene",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "oz",
+    "visible_secondary_subject_ids": [
+      "the_scarecrow"
+    ],
+    "primary_subject_frame_position": "foreground right within palace_steps",
+    "primary_subject_scale_relation": "preserve readable body-to-environment scale in frame",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "Oz gestures to the Scarecrow",
+    "subject_relation_summary": "oz plays against the_scarecrow in the same frame",
+    "required_environment_anchor_1": "palace_steps",
+    "required_subject_anchor_1": "Oz gestures to the Scarecrow",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "preserve readable body-to-environment scale in frame",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "Oz and the_scarecrow side-by-side",
+      "palace_steps",
+      "oz remains readable within the active playing space.",
+      "the_scarecrow remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the palace_steps.",
+      "Background depth should keep emerald_city_palace_exterior legible as the location anchor.",
+      "Subject 1: oz remains visually readable against the environment scale.",
+      "Subject 2: the_scarecrow remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "oz focuses toward the active scene action."
+    ],
+    "environment_subzone": "palace_steps",
+    "key_visible_environment_features": [
+      "palace_steps",
+      "Chapter-local environment alias match for 'Palace Exterior/Public Square' (key_overlap=2, label_overlap=3, context_ov..."
+    ],
+    "continuity_from_previous_shot": "the_scarecrow in regal posture",
+    "continuity_to_next_shot": "end_of_scene",
+    "pose_anchor_frame": "Oz gestures to the Scarecrow",
+    "pose_end_frame": "the_scarecrow assumes a regal posture",
+    "shot_title": "Transition Wide 15: The appointment of the Scarecrow as temporary ruler",
+    "shot_type": "transition_wide",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in emerald_city_palace_exterior featuring oz, the_scarecrow, Citizens of the Emerald City.",
+    "target_seconds": 10.8,
+    "characters_in_frame": [
+      {
+        "label": "Oz (The Wizard)",
+        "canonical_id": "oz",
+        "display_name": "oz",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH017/oz_the_wizard.md",
+        "notes": "Direct registry match for 'oz_the_wizard'."
+      },
+      {
+        "label": "The Scarecrow",
+        "canonical_id": "the_scarecrow",
+        "display_name": "the_scarecrow",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 130,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH003/the_scarecrow.md",
+        "notes": "Direct registry match for 'the_scarecrow'."
+      },
+      {
+        "label": "Citizens of the Emerald City",
+        "canonical_id": null,
+        "display_name": "Citizens of the Emerald City",
+        "status": "review",
+        "entity_kind": "individual",
+        "resolution_score": 16,
+        "source_path": "",
+        "notes": "Low-confidence character match requires review."
+      }
+    ],
+    "environment": {
+      "label": "Palace Exterior/Public Square",
+      "canonical_id": "emerald_city_palace_exterior",
+      "display_name": "emerald_city_palace_exterior",
+      "status": "canonical",
+      "entity_kind": "city",
+      "resolution_score": 114,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH017/emerald_city_palace_exterior.md",
+      "notes": "Chapter-local environment alias match for 'Palace Exterior/Public Square' (key_overlap=2, label_overlap=3, context_overlap=4)."
+    },
+    "beat_ids": [
+      "BT003"
+    ],
+    "continuity_constraints": [
+      "Crowd density and placement must remain consistent across coverage.",
+      "the_scarecrow must maintain a regal/official posture during the appointment.",
+      "The appointment of the Scarecrow as temporary ruler",
+      "Resolve Citizens of the Emerald City -> Citizens of the Emerald City"
+    ],
+    "prompt_seed": "Transition Wide 15: The appointment of the Scarecrow as temporary ruler. transition_wide. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat req...",
+    "shot_notes": "The appointment of the Scarecrow as temporary ruler",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH017_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH017",
+        "scene_id": "CH017_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH017",
+        "scene_id": "CH017_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH017",
+        "scene_id": "CH017_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH017",
+        "scene_id": "CH017_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH017",
+        "scene_id": "CH017_SC003"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH017",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH017_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH015",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH015_chapter_xv.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH017",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH017_chapter_xvii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH010",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH010_chapter_x.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH017",
+        "canonical_id": "oz"
+      }
+    ],
+    "evidence_summary": [
+      "Establish the political transition and public stakes through a formal announcement. The scene must visually communicate the shift from Oz's deceptive authority to the Scarecrow's temporary governance as Oz departs for the clouds.",
+      "Oz makes a formal announcement to the citizens of the Emerald City. He claims he is traveling to visit a \"brother Wizard\" in the clouds. To maintain order, he appoints the Scarecrow as the temporary ruler of the city.",
+      "From public spectacle to a sense of formal transition.",
+      "Oz stands before a large crowd, preparing for a formal address.",
+      "the_scarecrow stands in an official capacity as the city transitions to his rule.",
+      "Oz announces his departure and appoints the Scarecrow as ruler.",
+      "oz | [CH002] Chapter II (book index hit) [CH010] Chapter X (book index hit) [CH011] Chapter XI (book index hit)",
+      "the_scarecrow | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH003/the_scarecrow.md] Physical Description: A living figure stuffed with straw. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/cha...",
+      "emerald_city_palace_exterior | No specific visual descriptors are provided in the current evidence. The location functions as a secondary setting and transit hub within the narrative structure. | Unknown. | Unknown. | Unknown."
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "montage_travel",
+    "coverage_role": "transition_wide",
+    "beat_type": "transition_handoff",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT003",
+      "beat_type": "transition_handoff",
+      "importance": "major",
+      "confidence": 0.55,
+      "reasons": [
+        "importance = major"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH017_SC003_SH015_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "22d6313bfa6f878299a20c63f6aa50749d6b331b",
+      "created_at_utc": "2026-04-27T20:54:03.895522+00:00",
+      "updated_at_utc": "2026-04-27T20:55:02.793266+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH017_SC003",
+          "version": "c6b5dc5dfd1fad8589ec85158ea9d70fc5550734"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH017_SC003",
+          "version": "edb8f7943b8235931797a55cc07e2215e1e46b8d"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH017_SC003",
+          "version": "567f96dc1d89bbc78905874f4039984a3b4da6e4"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:54:03.896021+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "22d6313bfa6f878299a20c63f6aa50749d6b331b"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:55:02.793766+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "22d6313bfa6f878299a20c63f6aa50749d6b331b"
         }
       ]
     }

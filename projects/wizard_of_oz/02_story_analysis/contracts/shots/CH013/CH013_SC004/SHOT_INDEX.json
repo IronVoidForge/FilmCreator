@@ -45,6 +45,7 @@
     "subject_blocking": [
       "winkies facing the travelers",
       "winkies facing group in a semi-circle",
+      "yellow_castle [[CH013]]",
       "Winkies remains readable within the active playing space.",
       "dorothy remains readable within the active playing space."
     ],
@@ -59,17 +60,18 @@
     ],
     "environment_subzone": "yellow_castle",
     "key_visible_environment_features": [
-      "yellow_castle"
+      "yellow_castle",
+      "Chapter-local beat subzone match for 'yellow_castle'."
     ],
     "continuity_from_previous_shot": "The group is gathered within the yellow_castle receiving gifts from winkies.",
     "continuity_to_next_shot": "BT002",
     "pose_anchor_frame": "winkies approaching with items",
     "pose_end_frame": "items transferred to characters",
-    "shot_title": "Over The Shoulder 1: The Winkies present parting gifts to the group",
-    "shot_type": "over_the_shoulder",
-    "camera_description": "Shoulder-level conversational framing with visible foreground presence.",
-    "composition": "Over-the-shoulder composition in yellow_castle with Winkies, dorothy, cowardly_lion sharing the frame for dialogue or tension.",
-    "target_seconds": 5.5,
+    "shot_title": "Handoff Medium 1: The Winkies present parting gifts to the group",
+    "shot_type": "handoff_medium",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in yellow_castle featuring Winkies, dorothy, cowardly_lion.",
+    "target_seconds": 7.5,
     "characters_in_frame": [
       {
         "label": "Winkies",
@@ -117,9 +119,12 @@
     ],
     "continuity_constraints": [
       "Toto's collar must be visible during gift exchange",
-      "Dorothy's bracelet must be present"
+      "Dorothy's bracelet must be present",
+      "The Golden Cap must remain on Dorothy's head for the final exit",
+      "The Winkies present parting gifts to the group",
+      "Resolve The Witch's Cupboard/Storage area -> The Witch's Cupboard/Storage area"
     ],
-    "prompt_seed": "Over The Shoulder 1: The Winkies present parting gifts to the group. over_the_shoulder. size=medium. angle=eye_level. lens=normal. motion=pan. zoom=none. focus=shallow_subject. lighting=soft_even. visibility=on_screen. subject_angle=front_three_quarter_left. Shoulder-level conversational framing with visible foregro...",
+    "prompt_seed": "Handoff Medium 1: The Winkies present parting gifts to the group. handoff_medium. size=medium. angle=eye_level. lens=normal. motion=pan. zoom=none. focus=shallow_subject. lighting=soft_even. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Readabl...",
     "shot_notes": "The Winkies present parting gifts to the group",
     "evidence_refs": [
       {
@@ -190,13 +195,29 @@
       "yellow_castle | The yellow_castle serves as the central seat of power within the Land of the West. Specific visual characteristics are currently undocumented in the provided evidence. | Unknown. | Unknown. | Unknown.",
       "rocky_plain | No specific visual descriptors are provided in the current evidence. The environment functions as a location for transit and discovery. | Unknown. | Unknown. | Unknown."
     ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "suspense_investigation",
+    "coverage_role": "handoff_medium",
+    "beat_type": "transition_handoff",
+    "coverage_importance": "set_piece",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT001",
+      "beat_type": "transition_handoff",
+      "importance": "set_piece",
+      "confidence": 0.55,
+      "reasons": [
+        "importance = set_piece"
+      ]
+    },
     "metadata": {
       "artifact_id": "CH013_SC004_SH001_SHOT_PACKAGE",
       "artifact_type": "shot_package",
       "status": "generated",
-      "source_fingerprint": "aec3c581466d6ac7534f3891d1ee8d48ff057e92",
+      "source_fingerprint": "de53d83432d97446e309d4ecf2279d385f6a9fb1",
       "created_at_utc": "2026-04-27T17:53:19.820770+00:00",
-      "updated_at_utc": "2026-04-27T17:53:19.820770+00:00",
+      "updated_at_utc": "2026-04-27T20:54:53.257768+00:00",
       "upstream_dependencies": [
         {
           "dependency_type": "scene_contract",
@@ -211,7 +232,7 @@
         {
           "dependency_type": "shot_blueprints",
           "dependency_id": "CH013_SC004",
-          "version": "76a2eb48e2c99338fe1b2c5c7df7e0dfb5f092eb"
+          "version": "cb2f15403576441bcefd8554d6496bcafe85492f"
         }
       ],
       "locked_fields": {},
@@ -221,6 +242,16 @@
           "timestamp_utc": "2026-04-27T17:54:38.446096+00:00",
           "action": "synthesized",
           "source_fingerprint": "aec3c581466d6ac7534f3891d1ee8d48ff057e92"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:53:55.432892+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "de53d83432d97446e309d4ecf2279d385f6a9fb1"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:53.761791+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "de53d83432d97446e309d4ecf2279d385f6a9fb1"
         }
       ]
     }
@@ -232,6 +263,490 @@
     "shot_order": 2,
     "previous_shot_id": "SH001",
     "next_shot_id": "SH003",
+    "primary_subject": "winkies",
+    "secondary_subjects": [
+      "dorothy",
+      "cowardly_lion"
+    ],
+    "shot_moment_summary": "The Winkies present parting gifts to the group",
+    "start_state": "winkies approach with items",
+    "end_state": "gifts are held by travelers",
+    "action_during_shot": "The Winkies present parting gifts to the group",
+    "action_continues_from": "items transferred to characters",
+    "action_hands_off_to": "BT002",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "winkies",
+    "visible_secondary_subject_ids": [
+      "dorothy",
+      "cowardly_lion"
+    ],
+    "primary_subject_frame_position": "foreground right within yellow_castle",
+    "primary_subject_scale_relation": "Group scale (gift exchange) transitioning to individual scale (discovery).",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "winkies approach with items",
+    "subject_relation_summary": "winkies plays against dorothy, cowardly_lion in the same frame",
+    "required_environment_anchor_1": "yellow_castle",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "Group scale (gift exchange) transitioning to individual scale (discovery).",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "winkies facing group in a semi-circle",
+      "yellow_castle [[CH013]]",
+      "Winkies remains readable within the active playing space.",
+      "dorothy remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the yellow_castle.",
+      "Background depth should keep yellow_castle legible as the location anchor.",
+      "Subject 1: Winkies remains visually readable against the environment scale.",
+      "Subject 2: dorothy remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "winkies focuses toward the active scene action."
+    ],
+    "environment_subzone": "yellow_castle",
+    "key_visible_environment_features": [
+      "yellow_castle",
+      "Chapter-local beat subzone match for 'yellow_castle'."
+    ],
+    "continuity_from_previous_shot": "items transferred to characters",
+    "continuity_to_next_shot": "BT002",
+    "pose_anchor_frame": "winkies approach with items",
+    "pose_end_frame": "gifts are held by travelers",
+    "shot_title": "Transition Wide 2: The Winkies present parting gifts to the group",
+    "shot_type": "transition_wide",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in yellow_castle featuring Winkies, dorothy, cowardly_lion.",
+    "target_seconds": 11.5,
+    "characters_in_frame": [
+      {
+        "label": "Winkies",
+        "canonical_id": "winkies",
+        "display_name": "Winkies",
+        "status": "canonical",
+        "entity_kind": "group",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH013/winkies.md",
+        "notes": "Direct registry match for 'winkies'."
+      },
+      {
+        "label": "Dorothy",
+        "canonical_id": "dorothy",
+        "display_name": "dorothy",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH013/dorothy.md",
+        "notes": "Direct registry match for 'dorothy'."
+      },
+      {
+        "label": "Cowardly Lion",
+        "canonical_id": "cowardly_lion",
+        "display_name": "cowardly_lion",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH013/cowardly_lion.md",
+        "notes": "Direct registry match for 'cowardly_lion'."
+      }
+    ],
+    "environment": {
+      "label": "yellow_castle",
+      "canonical_id": "yellow_castle",
+      "display_name": "yellow_castle",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": null,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH013/yellow_castle.md",
+      "notes": "Chapter-local beat subzone match for 'yellow_castle'."
+    },
+    "beat_ids": [
+      "BT001"
+    ],
+    "continuity_constraints": [
+      "Toto's collar must be visible during gift exchange",
+      "Dorothy's bracelet must be present",
+      "The Golden Cap must remain on Dorothy's head for the final exit",
+      "The Winkies present parting gifts to the group",
+      "Resolve The Witch's Cupboard/Storage area -> The Witch's Cupboard/Storage area"
+    ],
+    "prompt_seed": "Transition Wide 2: The Winkies present parting gifts to the group. transition_wide. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requireme...",
+    "shot_notes": "The Winkies present parting gifts to the group",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH013_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH013",
+        "scene_id": "CH013_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH013",
+        "scene_id": "CH013_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH013",
+        "scene_id": "CH013_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH013",
+        "scene_id": "CH013_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH013",
+        "scene_id": "CH013_SC004"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH013",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH013_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH012",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH012_chapter_xii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH002",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH002_chapter_ii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH011",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH011_chapter_xi.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH013",
+        "canonical_id": "dorothy"
+      }
+    ],
+    "evidence_summary": [
+      "Establish the transition from the West arc to the final journey through a ritualized gift exchange and a discovery of power. The sequence must move from the communal warmth of the Winkies' farewell to the individual agency of Dorothy finding the Golden Cap.",
+      "The group prepares to leave for the Emerald City. The Winkies present them with parting gifts (jewelry, gold-headed stick, silver oil-can). During food gathering, Dorothy finds the Golden Cap in the Witch's cupboard and decides to wear it as they depart.",
+      "From communal warmth to adventurous anticipation.",
+      "The group is gathered within the yellow_castle receiving gifts from winkies.",
+      "The group walks away toward the horizon with dorothy wearing the Golden Cap.",
+      "Receiving parting gifts, discovering the Golden Cap, and departing for the Emerald City.",
+      "Winkies | The Winkies are a group of humanoid, bipedal beings of human scale. They are visually defined by their consistent use of yellow clothing and serve as the enslaved population within the territory of the Wicked Witch of the West. | Yellow clothing....",
+      "dorothy | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md] Costume/Silhouette: Unknown. No specific clothing details are provided in this chapter. [source:C:/FilmCreator/projects/wizard_of_oz/02_...",
+      "cowardly_lion | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH008/cowardly_lion.md] Physical Description: Large animal; too heavy to be carried by the others. [source:C:/FilmCreator/projects/wizard_of_oz/02_s...",
+      "yellow_castle | The yellow_castle serves as the central seat of power within the Land of the West. Specific visual characteristics are currently undocumented in the provided evidence. | Unknown. | Unknown. | Unknown.",
+      "rocky_plain | No specific visual descriptors are provided in the current evidence. The environment functions as a location for transit and discovery. | Unknown. | Unknown. | Unknown."
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "suspense_investigation",
+    "coverage_role": "transition_wide",
+    "beat_type": "transition_handoff",
+    "coverage_importance": "set_piece",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT001",
+      "beat_type": "transition_handoff",
+      "importance": "set_piece",
+      "confidence": 0.55,
+      "reasons": [
+        "importance = set_piece"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH013_SC004_SH002_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "de53d83432d97446e309d4ecf2279d385f6a9fb1",
+      "created_at_utc": "2026-04-27T17:54:38.447098+00:00",
+      "updated_at_utc": "2026-04-27T20:54:53.768290+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH013_SC004",
+          "version": "8cff353a0279c6cdc7b92dca2e4d7537a16e26b6"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH013_SC004",
+          "version": "1e66a549f6f8145ec9f745c3e33156a4fafd828e"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH013_SC004",
+          "version": "cb2f15403576441bcefd8554d6496bcafe85492f"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T17:55:50.046442+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "aec3c581466d6ac7534f3891d1ee8d48ff057e92"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:53:55.440402+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "de53d83432d97446e309d4ecf2279d385f6a9fb1"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:53.769290+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "de53d83432d97446e309d4ecf2279d385f6a9fb1"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH003",
+    "scene_id": "CH013_SC004",
+    "chapter_id": "CH013",
+    "shot_order": 3,
+    "previous_shot_id": "SH002",
+    "next_shot_id": "SH004",
+    "primary_subject": "winkies",
+    "secondary_subjects": [],
+    "shot_moment_summary": "The Winkies present parting gifts to the group",
+    "start_state": "winkies approach with items",
+    "end_state": "gifts are held by travelers",
+    "action_during_shot": "The Winkies present parting gifts to the group",
+    "action_continues_from": "gifts are held by travelers",
+    "action_hands_off_to": "BT002",
+    "shot_size": "insert_detail",
+    "camera_angle": "eye_level",
+    "lens_family": "portrait",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "shallow_subject",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "",
+    "visible_primary_subject_id": "winkies",
+    "visible_secondary_subject_ids": [],
+    "primary_subject_frame_position": "foreground right within yellow_castle",
+    "primary_subject_scale_relation": "Group scale (gift exchange) transitioning to individual scale (discovery).",
+    "primary_subject_facing_direction": "angled toward the scene action",
+    "primary_subject_pose_description": "winkies approach with items",
+    "subject_relation_summary": "winkies carries the frame alone",
+    "required_environment_anchor_1": "yellow_castle",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "Group scale (gift exchange) transitioning to individual scale (discovery).",
+    "camera_package_description": "insert-detail, eye level, portrait lens, locked off, shallow subject, hard directional",
+    "subject_blocking": [
+      "winkies facing group in a semi-circle",
+      "yellow_castle [[CH013]]",
+      "Winkies remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the yellow_castle.",
+      "Background depth should keep yellow_castle legible as the location anchor.",
+      "Subject 1: Winkies remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "winkies focuses toward the active scene action."
+    ],
+    "environment_subzone": "yellow_castle",
+    "key_visible_environment_features": [
+      "yellow_castle",
+      "Chapter-local beat subzone match for 'yellow_castle'."
+    ],
+    "continuity_from_previous_shot": "gifts are held by travelers",
+    "continuity_to_next_shot": "BT002",
+    "pose_anchor_frame": "winkies approach with items",
+    "pose_end_frame": "gifts are held by travelers",
+    "shot_title": "Insert Detail 3: The Winkies present parting gifts to the group",
+    "shot_type": "insert_detail",
+    "camera_description": "Tight detail framing focused on a single visual object or gesture.",
+    "composition": "Detail composition centered on the key physical action or prop inside yellow_castle.",
+    "target_seconds": 5.8,
+    "characters_in_frame": [
+      {
+        "label": "Winkies",
+        "canonical_id": "winkies",
+        "display_name": "Winkies",
+        "status": "canonical",
+        "entity_kind": "group",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH013/winkies.md",
+        "notes": "Direct registry match for 'winkies'."
+      }
+    ],
+    "environment": {
+      "label": "yellow_castle",
+      "canonical_id": "yellow_castle",
+      "display_name": "yellow_castle",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": null,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH013/yellow_castle.md",
+      "notes": "Chapter-local beat subzone match for 'yellow_castle'."
+    },
+    "beat_ids": [
+      "BT001"
+    ],
+    "continuity_constraints": [
+      "Toto's collar must be visible during gift exchange",
+      "Dorothy's bracelet must be present",
+      "The Golden Cap must remain on Dorothy's head for the final exit",
+      "The Winkies present parting gifts to the group",
+      "Resolve The Witch's Cupboard/Storage area -> The Witch's Cupboard/Storage area"
+    ],
+    "prompt_seed": "Insert Detail 3: The Winkies present parting gifts to the group. insert_detail. size=insert_detail. angle=eye_level. lens=portrait. motion=locked_off. zoom=none. focus=shallow_subject. lighting=hard_directional. visibility=on_screen. subject_angle=unspecified. Tight detail framing focused on a single visual object o...",
+    "shot_notes": "The Winkies present parting gifts to the group",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH013_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH013",
+        "scene_id": "CH013_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH013",
+        "scene_id": "CH013_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH013",
+        "scene_id": "CH013_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH013",
+        "scene_id": "CH013_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH013",
+        "scene_id": "CH013_SC004"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH013",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH013_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH012",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH012_chapter_xii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH002",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH002_chapter_ii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH011",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH011_chapter_xi.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH013",
+        "canonical_id": "dorothy"
+      }
+    ],
+    "evidence_summary": [
+      "Establish the transition from the West arc to the final journey through a ritualized gift exchange and a discovery of power. The sequence must move from the communal warmth of the Winkies' farewell to the individual agency of Dorothy finding the Golden Cap.",
+      "The group prepares to leave for the Emerald City. The Winkies present them with parting gifts (jewelry, gold-headed stick, silver oil-can). During food gathering, Dorothy finds the Golden Cap in the Witch's cupboard and decides to wear it as they depart.",
+      "From communal warmth to adventurous anticipation.",
+      "The group is gathered within the yellow_castle receiving gifts from winkies.",
+      "The group walks away toward the horizon with dorothy wearing the Golden Cap.",
+      "Receiving parting gifts, discovering the Golden Cap, and departing for the Emerald City.",
+      "Winkies | The Winkies are a group of humanoid, bipedal beings of human scale. They are visually defined by their consistent use of yellow clothing and serve as the enslaved population within the territory of the Wicked Witch of the West. | Yellow clothing....",
+      "dorothy | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md] Costume/Silhouette: Unknown. No specific clothing details are provided in this chapter. [source:C:/FilmCreator/projects/wizard_of_oz/02_...",
+      "cowardly_lion | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH008/cowardly_lion.md] Physical Description: Large animal; too heavy to be carried by the others. [source:C:/FilmCreator/projects/wizard_of_oz/02_s...",
+      "yellow_castle | The yellow_castle serves as the central seat of power within the Land of the West. Specific visual characteristics are currently undocumented in the provided evidence. | Unknown. | Unknown. | Unknown.",
+      "rocky_plain | No specific visual descriptors are provided in the current evidence. The environment functions as a location for transit and discovery. | Unknown. | Unknown. | Unknown."
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "suspense_investigation",
+    "coverage_role": "insert_detail",
+    "beat_type": "transition_handoff",
+    "coverage_importance": "set_piece",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT001",
+      "beat_type": "transition_handoff",
+      "importance": "set_piece",
+      "confidence": 0.55,
+      "reasons": [
+        "importance = set_piece"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH013_SC004_SH003_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "de53d83432d97446e309d4ecf2279d385f6a9fb1",
+      "created_at_utc": "2026-04-27T17:55:50.048441+00:00",
+      "updated_at_utc": "2026-04-27T20:54:53.775301+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH013_SC004",
+          "version": "8cff353a0279c6cdc7b92dca2e4d7537a16e26b6"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH013_SC004",
+          "version": "1e66a549f6f8145ec9f745c3e33156a4fafd828e"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH013_SC004",
+          "version": "cb2f15403576441bcefd8554d6496bcafe85492f"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T17:57:01.692905+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "aec3c581466d6ac7534f3891d1ee8d48ff057e92"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:53:55.446903+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "de53d83432d97446e309d4ecf2279d385f6a9fb1"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:53.776300+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "de53d83432d97446e309d4ecf2279d385f6a9fb1"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH004",
+    "scene_id": "CH013_SC004",
+    "chapter_id": "CH013",
+    "shot_order": 4,
+    "previous_shot_id": "SH003",
+    "next_shot_id": "SH005",
     "primary_subject": "dorothy",
     "secondary_subjects": [
       "toto"
@@ -240,7 +755,7 @@
     "start_state": "dorothy searching through cupboard",
     "end_state": "dorothy holding the Golden Cap",
     "action_during_shot": "searching and finding the cap",
-    "action_continues_from": "items transferred to characters",
+    "action_continues_from": "gifts are held by travelers",
     "action_hands_off_to": "BT003",
     "shot_size": "close_up",
     "camera_angle": "eye_level",
@@ -269,6 +784,7 @@
     "subject_blocking": [
       "dorothy leaning into the cupboard",
       "dorothy hunched over cupboard contents",
+      "The Witch's Cupboard/Storage area",
       "dorothy remains readable within the active playing space.",
       "toto remains readable within the active playing space."
     ],
@@ -283,17 +799,18 @@
     ],
     "environment_subzone": "The Witch's Cupboard/Storage area",
     "key_visible_environment_features": [
-      "The Witch's Cupboard/Storage area"
+      "The Witch's Cupboard/Storage area",
+      "Direct registry match for 'yellow_castle'."
     ],
-    "continuity_from_previous_shot": "items transferred to characters",
+    "continuity_from_previous_shot": "gifts are held by travelers",
     "continuity_to_next_shot": "BT003",
     "pose_anchor_frame": "dorothy searching through cupboard",
     "pose_end_frame": "dorothy holding the Golden Cap",
-    "shot_title": "Reaction Closeup 2: Dorothy discovers the Golden Cap while gathering food",
-    "shot_type": "reaction_closeup",
-    "camera_description": "Close framing that isolates reaction and emotional emphasis.",
-    "composition": "Intimate composition that isolates dorothy, toto against yellow_castle to capture the beat's emotional turn.",
-    "target_seconds": 5.3,
+    "shot_title": "Establishing Wide 4: Dorothy discovers the Golden Cap while gathering food",
+    "shot_type": "establishing_wide",
+    "camera_description": "Wide establishing frame with a steady or lightly drifting camera.",
+    "composition": "Wide composition across yellow_castle with dorothy, toto placed for immediate spatial orientation.",
+    "target_seconds": 11.5,
     "characters_in_frame": [
       {
         "label": "Dorothy",
@@ -332,9 +849,11 @@
     "continuity_constraints": [
       "Toto's collar must be visible during gift exchange",
       "Dorothy's bracelet must be present",
-      "The Golden Cap must remain on Dorothy's head for the final exit"
+      "The Golden Cap must remain on Dorothy's head for the final exit",
+      "Dorothy discovers the Golden Cap while gathering food",
+      "Resolve The Witch's Cupboard/Storage area -> The Witch's Cupboard/Storage area"
     ],
-    "prompt_seed": "Reaction Closeup 2: Dorothy discovers the Golden Cap while gathering food. reaction_closeup. size=close_up. angle=eye_level. lens=portrait. motion=push_in. zoom=none. focus=shallow_subject. lighting=diffuse_ambient. visibility=on_screen. subject_angle=front. Close framing that isolates reaction and emotional emphasi...",
+    "prompt_seed": "Establishing Wide 4: Dorothy discovers the Golden Cap while gathering food. establishing_wide. size=close_up. angle=eye_level. lens=portrait. motion=push_in. zoom=none. focus=shallow_subject. lighting=diffuse_ambient. visibility=on_screen. subject_angle=front. Wide establishing frame with a steady or lightly driftin...",
     "shot_notes": "Dorothy discovers the Golden Cap while gathering food",
     "evidence_refs": [
       {
@@ -405,13 +924,30 @@
       "yellow_castle | The yellow_castle serves as the central seat of power within the Land of the West. Specific visual characteristics are currently undocumented in the provided evidence. | Unknown. | Unknown. | Unknown.",
       "rocky_plain | No specific visual descriptors are provided in the current evidence. The environment functions as a location for transit and discovery. | Unknown. | Unknown. | Unknown."
     ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "suspense_investigation",
+    "coverage_role": "establishing_wide",
+    "beat_type": "establishing_arrival",
+    "coverage_importance": "set_piece",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT002",
+      "beat_type": "establishing_arrival",
+      "importance": "set_piece",
+      "confidence": 0.72,
+      "reasons": [
+        "arrival/entry verb",
+        "importance = set_piece"
+      ]
+    },
     "metadata": {
-      "artifact_id": "CH013_SC004_SH002_SHOT_PACKAGE",
+      "artifact_id": "CH013_SC004_SH004_SHOT_PACKAGE",
       "artifact_type": "shot_package",
       "status": "generated",
-      "source_fingerprint": "aec3c581466d6ac7534f3891d1ee8d48ff057e92",
-      "created_at_utc": "2026-04-27T17:54:38.447098+00:00",
-      "updated_at_utc": "2026-04-27T17:54:38.447098+00:00",
+      "source_fingerprint": "de53d83432d97446e309d4ecf2279d385f6a9fb1",
+      "created_at_utc": "2026-04-27T20:53:55.448403+00:00",
+      "updated_at_utc": "2026-04-27T20:54:53.781300+00:00",
       "upstream_dependencies": [
         {
           "dependency_type": "scene_contract",
@@ -426,27 +962,1264 @@
         {
           "dependency_type": "shot_blueprints",
           "dependency_id": "CH013_SC004",
-          "version": "76a2eb48e2c99338fe1b2c5c7df7e0dfb5f092eb"
+          "version": "cb2f15403576441bcefd8554d6496bcafe85492f"
         }
       ],
       "locked_fields": {},
       "manual_overrides": {},
       "revision_history": [
         {
-          "timestamp_utc": "2026-04-27T17:55:50.046442+00:00",
+          "timestamp_utc": "2026-04-27T20:53:55.448904+00:00",
           "action": "synthesized",
-          "source_fingerprint": "aec3c581466d6ac7534f3891d1ee8d48ff057e92"
+          "source_fingerprint": "de53d83432d97446e309d4ecf2279d385f6a9fb1"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:53.782300+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "de53d83432d97446e309d4ecf2279d385f6a9fb1"
         }
       ]
     }
   },
   {
-    "shot_id": "SH003",
+    "shot_id": "SH005",
     "scene_id": "CH013_SC004",
     "chapter_id": "CH013",
-    "shot_order": 3,
-    "previous_shot_id": "SH002",
-    "next_shot_id": "",
+    "shot_order": 5,
+    "previous_shot_id": "SH004",
+    "next_shot_id": "SH006",
+    "primary_subject": "dorothy",
+    "secondary_subjects": [
+      "toto",
+      "Winkies"
+    ],
+    "shot_moment_summary": "Dorothy discovers the Golden Cap while gathering food",
+    "start_state": "dorothy enters cupboard area",
+    "end_state": "dorothy holds the cap",
+    "action_during_shot": "Dorothy discovers the Golden Cap while gathering food",
+    "action_continues_from": "dorothy holding the Golden Cap",
+    "action_hands_off_to": "BT003",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "dorothy",
+    "visible_secondary_subject_ids": [
+      "toto",
+      "winkies"
+    ],
+    "primary_subject_frame_position": "foreground right within The Witch's Cupboard/Storage area",
+    "primary_subject_scale_relation": "Group scale (gift exchange) transitioning to individual scale (discovery).",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "dorothy enters cupboard area",
+    "subject_relation_summary": "dorothy plays against toto, Winkies in the same frame",
+    "required_environment_anchor_1": "The Witch's Cupboard/Storage area",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "Group scale (gift exchange) transitioning to individual scale (discovery).",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "dorothy hunched over cupboard contents",
+      "The Witch's Cupboard/Storage area",
+      "dorothy remains readable within the active playing space.",
+      "toto remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the The Witch's Cupboard/Storage area.",
+      "Background depth should keep yellow_castle legible as the location anchor.",
+      "Subject 1: dorothy remains visually readable against the environment scale.",
+      "Subject 2: toto remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "dorothy focuses toward the active scene action."
+    ],
+    "environment_subzone": "The Witch's Cupboard/Storage area",
+    "key_visible_environment_features": [
+      "The Witch's Cupboard/Storage area",
+      "Direct registry match for 'yellow_castle'."
+    ],
+    "continuity_from_previous_shot": "dorothy holding the Golden Cap",
+    "continuity_to_next_shot": "BT003",
+    "pose_anchor_frame": "dorothy enters cupboard area",
+    "pose_end_frame": "dorothy holds the cap",
+    "shot_title": "Traveling Medium 5: Dorothy discovers the Golden Cap while gathering food",
+    "shot_type": "traveling_medium",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in yellow_castle featuring dorothy, toto, Winkies.",
+    "target_seconds": 7.5,
+    "characters_in_frame": [
+      {
+        "label": "Dorothy",
+        "canonical_id": "dorothy",
+        "display_name": "dorothy",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH013/dorothy.md",
+        "notes": "Direct registry match for 'dorothy'."
+      },
+      {
+        "label": "Toto",
+        "canonical_id": "toto",
+        "display_name": "toto",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 130,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/toto.md",
+        "notes": "Direct registry match for 'toto'."
+      },
+      {
+        "label": "Winkies",
+        "canonical_id": "winkies",
+        "display_name": "Winkies",
+        "status": "canonical",
+        "entity_kind": "group",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH013/winkies.md",
+        "notes": "Direct registry match for 'winkies'."
+      }
+    ],
+    "environment": {
+      "label": "Yellow Castle",
+      "canonical_id": "yellow_castle",
+      "display_name": "yellow_castle",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH013/yellow_castle.md",
+      "notes": "Direct registry match for 'yellow_castle'."
+    },
+    "beat_ids": [
+      "BT002"
+    ],
+    "continuity_constraints": [
+      "Toto's collar must be visible during gift exchange",
+      "Dorothy's bracelet must be present",
+      "The Golden Cap must remain on Dorothy's head for the final exit",
+      "Dorothy discovers the Golden Cap while gathering food",
+      "Resolve The Witch's Cupboard/Storage area -> The Witch's Cupboard/Storage area"
+    ],
+    "prompt_seed": "Traveling Medium 5: Dorothy discovers the Golden Cap while gathering food. traveling_medium. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat...",
+    "shot_notes": "Dorothy discovers the Golden Cap while gathering food",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH013_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH013",
+        "scene_id": "CH013_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH013",
+        "scene_id": "CH013_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH013",
+        "scene_id": "CH013_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH013",
+        "scene_id": "CH013_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH013",
+        "scene_id": "CH013_SC004"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH013",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH013_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH012",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH012_chapter_xii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH002",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH002_chapter_ii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH011",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH011_chapter_xi.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH013",
+        "canonical_id": "dorothy"
+      }
+    ],
+    "evidence_summary": [
+      "Establish the transition from the West arc to the final journey through a ritualized gift exchange and a discovery of power. The sequence must move from the communal warmth of the Winkies' farewell to the individual agency of Dorothy finding the Golden Cap.",
+      "The group prepares to leave for the Emerald City. The Winkies present them with parting gifts (jewelry, gold-headed stick, silver oil-can). During food gathering, Dorothy finds the Golden Cap in the Witch's cupboard and decides to wear it as they depart.",
+      "From communal warmth to adventurous anticipation.",
+      "The group is gathered within the yellow_castle receiving gifts from winkies.",
+      "The group walks away toward the horizon with dorothy wearing the Golden Cap.",
+      "Receiving parting gifts, discovering the Golden Cap, and departing for the Emerald City.",
+      "Winkies | The Winkies are a group of humanoid, bipedal beings of human scale. They are visually defined by their consistent use of yellow clothing and serve as the enslaved population within the territory of the Wicked Witch of the West. | Yellow clothing....",
+      "dorothy | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md] Costume/Silhouette: Unknown. No specific clothing details are provided in this chapter. [source:C:/FilmCreator/projects/wizard_of_oz/02_...",
+      "cowardly_lion | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH008/cowardly_lion.md] Physical Description: Large animal; too heavy to be carried by the others. [source:C:/FilmCreator/projects/wizard_of_oz/02_s...",
+      "yellow_castle | The yellow_castle serves as the central seat of power within the Land of the West. Specific visual characteristics are currently undocumented in the provided evidence. | Unknown. | Unknown. | Unknown.",
+      "rocky_plain | No specific visual descriptors are provided in the current evidence. The environment functions as a location for transit and discovery. | Unknown. | Unknown. | Unknown."
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "suspense_investigation",
+    "coverage_role": "traveling_medium",
+    "beat_type": "establishing_arrival",
+    "coverage_importance": "set_piece",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT002",
+      "beat_type": "establishing_arrival",
+      "importance": "set_piece",
+      "confidence": 0.72,
+      "reasons": [
+        "arrival/entry verb",
+        "importance = set_piece"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH013_SC004_SH005_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "de53d83432d97446e309d4ecf2279d385f6a9fb1",
+      "created_at_utc": "2026-04-27T20:53:55.449903+00:00",
+      "updated_at_utc": "2026-04-27T20:54:53.787309+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH013_SC004",
+          "version": "8cff353a0279c6cdc7b92dca2e4d7537a16e26b6"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH013_SC004",
+          "version": "1e66a549f6f8145ec9f745c3e33156a4fafd828e"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH013_SC004",
+          "version": "cb2f15403576441bcefd8554d6496bcafe85492f"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:53:55.450903+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "de53d83432d97446e309d4ecf2279d385f6a9fb1"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:53.788311+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "de53d83432d97446e309d4ecf2279d385f6a9fb1"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH006",
+    "scene_id": "CH013_SC004",
+    "chapter_id": "CH013",
+    "shot_order": 6,
+    "previous_shot_id": "SH005",
+    "next_shot_id": "SH007",
+    "primary_subject": "dorothy",
+    "secondary_subjects": [
+      "toto",
+      "Winkies"
+    ],
+    "shot_moment_summary": "Dorothy discovers the Golden Cap while gathering food",
+    "start_state": "dorothy enters cupboard area",
+    "end_state": "dorothy holds the cap",
+    "action_during_shot": "Dorothy discovers the Golden Cap while gathering food",
+    "action_continues_from": "dorothy holds the cap",
+    "action_hands_off_to": "BT003",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "dorothy",
+    "visible_secondary_subject_ids": [
+      "toto",
+      "winkies"
+    ],
+    "primary_subject_frame_position": "foreground right within The Witch's Cupboard/Storage area",
+    "primary_subject_scale_relation": "Group scale (gift exchange) transitioning to individual scale (discovery).",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "dorothy enters cupboard area",
+    "subject_relation_summary": "dorothy plays against toto, Winkies in the same frame",
+    "required_environment_anchor_1": "The Witch's Cupboard/Storage area",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "Group scale (gift exchange) transitioning to individual scale (discovery).",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "dorothy hunched over cupboard contents",
+      "The Witch's Cupboard/Storage area",
+      "dorothy remains readable within the active playing space.",
+      "toto remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the The Witch's Cupboard/Storage area.",
+      "Background depth should keep yellow_castle legible as the location anchor.",
+      "Subject 1: dorothy remains visually readable against the environment scale.",
+      "Subject 2: toto remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "dorothy focuses toward the active scene action."
+    ],
+    "environment_subzone": "The Witch's Cupboard/Storage area",
+    "key_visible_environment_features": [
+      "The Witch's Cupboard/Storage area",
+      "Direct registry match for 'yellow_castle'."
+    ],
+    "continuity_from_previous_shot": "dorothy holds the cap",
+    "continuity_to_next_shot": "BT003",
+    "pose_anchor_frame": "dorothy enters cupboard area",
+    "pose_end_frame": "dorothy holds the cap",
+    "shot_title": "Subject Pov 6: Dorothy discovers the Golden Cap while gathering food",
+    "shot_type": "subject_pov",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in yellow_castle featuring dorothy, toto, Winkies.",
+    "target_seconds": 7.5,
+    "characters_in_frame": [
+      {
+        "label": "Dorothy",
+        "canonical_id": "dorothy",
+        "display_name": "dorothy",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH013/dorothy.md",
+        "notes": "Direct registry match for 'dorothy'."
+      },
+      {
+        "label": "Toto",
+        "canonical_id": "toto",
+        "display_name": "toto",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 130,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/toto.md",
+        "notes": "Direct registry match for 'toto'."
+      },
+      {
+        "label": "Winkies",
+        "canonical_id": "winkies",
+        "display_name": "Winkies",
+        "status": "canonical",
+        "entity_kind": "group",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH013/winkies.md",
+        "notes": "Direct registry match for 'winkies'."
+      }
+    ],
+    "environment": {
+      "label": "Yellow Castle",
+      "canonical_id": "yellow_castle",
+      "display_name": "yellow_castle",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH013/yellow_castle.md",
+      "notes": "Direct registry match for 'yellow_castle'."
+    },
+    "beat_ids": [
+      "BT002"
+    ],
+    "continuity_constraints": [
+      "Toto's collar must be visible during gift exchange",
+      "Dorothy's bracelet must be present",
+      "The Golden Cap must remain on Dorothy's head for the final exit",
+      "Dorothy discovers the Golden Cap while gathering food",
+      "Resolve The Witch's Cupboard/Storage area -> The Witch's Cupboard/Storage area"
+    ],
+    "prompt_seed": "Subject Pov 6: Dorothy discovers the Golden Cap while gathering food. subject_pov. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requiremen...",
+    "shot_notes": "Dorothy discovers the Golden Cap while gathering food",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH013_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH013",
+        "scene_id": "CH013_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH013",
+        "scene_id": "CH013_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH013",
+        "scene_id": "CH013_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH013",
+        "scene_id": "CH013_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH013",
+        "scene_id": "CH013_SC004"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH013",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH013_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH012",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH012_chapter_xii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH002",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH002_chapter_ii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH011",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH011_chapter_xi.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH013",
+        "canonical_id": "dorothy"
+      }
+    ],
+    "evidence_summary": [
+      "Establish the transition from the West arc to the final journey through a ritualized gift exchange and a discovery of power. The sequence must move from the communal warmth of the Winkies' farewell to the individual agency of Dorothy finding the Golden Cap.",
+      "The group prepares to leave for the Emerald City. The Winkies present them with parting gifts (jewelry, gold-headed stick, silver oil-can). During food gathering, Dorothy finds the Golden Cap in the Witch's cupboard and decides to wear it as they depart.",
+      "From communal warmth to adventurous anticipation.",
+      "The group is gathered within the yellow_castle receiving gifts from winkies.",
+      "The group walks away toward the horizon with dorothy wearing the Golden Cap.",
+      "Receiving parting gifts, discovering the Golden Cap, and departing for the Emerald City.",
+      "Winkies | The Winkies are a group of humanoid, bipedal beings of human scale. They are visually defined by their consistent use of yellow clothing and serve as the enslaved population within the territory of the Wicked Witch of the West. | Yellow clothing....",
+      "dorothy | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md] Costume/Silhouette: Unknown. No specific clothing details are provided in this chapter. [source:C:/FilmCreator/projects/wizard_of_oz/02_...",
+      "cowardly_lion | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH008/cowardly_lion.md] Physical Description: Large animal; too heavy to be carried by the others. [source:C:/FilmCreator/projects/wizard_of_oz/02_s...",
+      "yellow_castle | The yellow_castle serves as the central seat of power within the Land of the West. Specific visual characteristics are currently undocumented in the provided evidence. | Unknown. | Unknown. | Unknown.",
+      "rocky_plain | No specific visual descriptors are provided in the current evidence. The environment functions as a location for transit and discovery. | Unknown. | Unknown. | Unknown."
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "suspense_investigation",
+    "coverage_role": "subject_pov_or_reaction",
+    "beat_type": "establishing_arrival",
+    "coverage_importance": "set_piece",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT002",
+      "beat_type": "establishing_arrival",
+      "importance": "set_piece",
+      "confidence": 0.72,
+      "reasons": [
+        "arrival/entry verb",
+        "importance = set_piece"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH013_SC004_SH006_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "de53d83432d97446e309d4ecf2279d385f6a9fb1",
+      "created_at_utc": "2026-04-27T20:53:55.451903+00:00",
+      "updated_at_utc": "2026-04-27T20:54:53.793811+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH013_SC004",
+          "version": "8cff353a0279c6cdc7b92dca2e4d7537a16e26b6"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH013_SC004",
+          "version": "1e66a549f6f8145ec9f745c3e33156a4fafd828e"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH013_SC004",
+          "version": "cb2f15403576441bcefd8554d6496bcafe85492f"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:53:55.452405+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "de53d83432d97446e309d4ecf2279d385f6a9fb1"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:53.794312+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "de53d83432d97446e309d4ecf2279d385f6a9fb1"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH007",
+    "scene_id": "CH013_SC004",
+    "chapter_id": "CH013",
+    "shot_order": 7,
+    "previous_shot_id": "SH006",
+    "next_shot_id": "SH008",
+    "primary_subject": "dorothy",
+    "secondary_subjects": [
+      "toto",
+      "Winkies"
+    ],
+    "shot_moment_summary": "Dorothy discovers the Golden Cap while gathering food",
+    "start_state": "dorothy enters cupboard area",
+    "end_state": "dorothy holds the cap",
+    "action_during_shot": "Dorothy discovers the Golden Cap while gathering food",
+    "action_continues_from": "dorothy holds the cap",
+    "action_hands_off_to": "BT003",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "dorothy",
+    "visible_secondary_subject_ids": [
+      "toto",
+      "winkies"
+    ],
+    "primary_subject_frame_position": "foreground right within The Witch's Cupboard/Storage area",
+    "primary_subject_scale_relation": "Group scale (gift exchange) transitioning to individual scale (discovery).",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "dorothy enters cupboard area",
+    "subject_relation_summary": "dorothy plays against toto, Winkies in the same frame",
+    "required_environment_anchor_1": "The Witch's Cupboard/Storage area",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "Group scale (gift exchange) transitioning to individual scale (discovery).",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "dorothy hunched over cupboard contents",
+      "The Witch's Cupboard/Storage area",
+      "dorothy remains readable within the active playing space.",
+      "toto remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the The Witch's Cupboard/Storage area.",
+      "Background depth should keep yellow_castle legible as the location anchor.",
+      "Subject 1: dorothy remains visually readable against the environment scale.",
+      "Subject 2: toto remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "dorothy focuses toward the active scene action."
+    ],
+    "environment_subzone": "The Witch's Cupboard/Storage area",
+    "key_visible_environment_features": [
+      "The Witch's Cupboard/Storage area",
+      "Direct registry match for 'yellow_castle'."
+    ],
+    "continuity_from_previous_shot": "dorothy holds the cap",
+    "continuity_to_next_shot": "BT003",
+    "pose_anchor_frame": "dorothy enters cupboard area",
+    "pose_end_frame": "dorothy holds the cap",
+    "shot_title": "Handoff Medium 7: Dorothy discovers the Golden Cap while gathering food",
+    "shot_type": "handoff_medium",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in yellow_castle featuring dorothy, toto, Winkies.",
+    "target_seconds": 7.5,
+    "characters_in_frame": [
+      {
+        "label": "Dorothy",
+        "canonical_id": "dorothy",
+        "display_name": "dorothy",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH013/dorothy.md",
+        "notes": "Direct registry match for 'dorothy'."
+      },
+      {
+        "label": "Toto",
+        "canonical_id": "toto",
+        "display_name": "toto",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 130,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/toto.md",
+        "notes": "Direct registry match for 'toto'."
+      },
+      {
+        "label": "Winkies",
+        "canonical_id": "winkies",
+        "display_name": "Winkies",
+        "status": "canonical",
+        "entity_kind": "group",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH013/winkies.md",
+        "notes": "Direct registry match for 'winkies'."
+      }
+    ],
+    "environment": {
+      "label": "Yellow Castle",
+      "canonical_id": "yellow_castle",
+      "display_name": "yellow_castle",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH013/yellow_castle.md",
+      "notes": "Direct registry match for 'yellow_castle'."
+    },
+    "beat_ids": [
+      "BT002"
+    ],
+    "continuity_constraints": [
+      "Toto's collar must be visible during gift exchange",
+      "Dorothy's bracelet must be present",
+      "The Golden Cap must remain on Dorothy's head for the final exit",
+      "Dorothy discovers the Golden Cap while gathering food",
+      "Resolve The Witch's Cupboard/Storage area -> The Witch's Cupboard/Storage area"
+    ],
+    "prompt_seed": "Handoff Medium 7: Dorothy discovers the Golden Cap while gathering food. handoff_medium. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requ...",
+    "shot_notes": "Dorothy discovers the Golden Cap while gathering food",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH013_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH013",
+        "scene_id": "CH013_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH013",
+        "scene_id": "CH013_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH013",
+        "scene_id": "CH013_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH013",
+        "scene_id": "CH013_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH013",
+        "scene_id": "CH013_SC004"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH013",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH013_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH012",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH012_chapter_xii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH002",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH002_chapter_ii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH011",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH011_chapter_xi.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH013",
+        "canonical_id": "dorothy"
+      }
+    ],
+    "evidence_summary": [
+      "Establish the transition from the West arc to the final journey through a ritualized gift exchange and a discovery of power. The sequence must move from the communal warmth of the Winkies' farewell to the individual agency of Dorothy finding the Golden Cap.",
+      "The group prepares to leave for the Emerald City. The Winkies present them with parting gifts (jewelry, gold-headed stick, silver oil-can). During food gathering, Dorothy finds the Golden Cap in the Witch's cupboard and decides to wear it as they depart.",
+      "From communal warmth to adventurous anticipation.",
+      "The group is gathered within the yellow_castle receiving gifts from winkies.",
+      "The group walks away toward the horizon with dorothy wearing the Golden Cap.",
+      "Receiving parting gifts, discovering the Golden Cap, and departing for the Emerald City.",
+      "Winkies | The Winkies are a group of humanoid, bipedal beings of human scale. They are visually defined by their consistent use of yellow clothing and serve as the enslaved population within the territory of the Wicked Witch of the West. | Yellow clothing....",
+      "dorothy | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md] Costume/Silhouette: Unknown. No specific clothing details are provided in this chapter. [source:C:/FilmCreator/projects/wizard_of_oz/02_...",
+      "cowardly_lion | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH008/cowardly_lion.md] Physical Description: Large animal; too heavy to be carried by the others. [source:C:/FilmCreator/projects/wizard_of_oz/02_s...",
+      "yellow_castle | The yellow_castle serves as the central seat of power within the Land of the West. Specific visual characteristics are currently undocumented in the provided evidence. | Unknown. | Unknown. | Unknown.",
+      "rocky_plain | No specific visual descriptors are provided in the current evidence. The environment functions as a location for transit and discovery. | Unknown. | Unknown. | Unknown."
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "suspense_investigation",
+    "coverage_role": "handoff_medium",
+    "beat_type": "establishing_arrival",
+    "coverage_importance": "set_piece",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT002",
+      "beat_type": "establishing_arrival",
+      "importance": "set_piece",
+      "confidence": 0.72,
+      "reasons": [
+        "arrival/entry verb",
+        "importance = set_piece"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH013_SC004_SH007_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "de53d83432d97446e309d4ecf2279d385f6a9fb1",
+      "created_at_utc": "2026-04-27T20:53:55.453408+00:00",
+      "updated_at_utc": "2026-04-27T20:54:53.799811+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH013_SC004",
+          "version": "8cff353a0279c6cdc7b92dca2e4d7537a16e26b6"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH013_SC004",
+          "version": "1e66a549f6f8145ec9f745c3e33156a4fafd828e"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH013_SC004",
+          "version": "cb2f15403576441bcefd8554d6496bcafe85492f"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:53:55.454412+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "de53d83432d97446e309d4ecf2279d385f6a9fb1"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:53.800311+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "de53d83432d97446e309d4ecf2279d385f6a9fb1"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH008",
+    "scene_id": "CH013_SC004",
+    "chapter_id": "CH013",
+    "shot_order": 8,
+    "previous_shot_id": "SH007",
+    "next_shot_id": "SH009",
+    "primary_subject": "dorothy",
+    "secondary_subjects": [
+      "toto",
+      "Winkies"
+    ],
+    "shot_moment_summary": "Dorothy discovers the Golden Cap while gathering food",
+    "start_state": "dorothy enters cupboard area",
+    "end_state": "dorothy holds the cap",
+    "action_during_shot": "Dorothy discovers the Golden Cap while gathering food",
+    "action_continues_from": "dorothy holds the cap",
+    "action_hands_off_to": "BT003",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "dorothy",
+    "visible_secondary_subject_ids": [
+      "toto",
+      "winkies"
+    ],
+    "primary_subject_frame_position": "foreground right within The Witch's Cupboard/Storage area",
+    "primary_subject_scale_relation": "Group scale (gift exchange) transitioning to individual scale (discovery).",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "dorothy enters cupboard area",
+    "subject_relation_summary": "dorothy plays against toto, Winkies in the same frame",
+    "required_environment_anchor_1": "The Witch's Cupboard/Storage area",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "Group scale (gift exchange) transitioning to individual scale (discovery).",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "dorothy hunched over cupboard contents",
+      "The Witch's Cupboard/Storage area",
+      "dorothy remains readable within the active playing space.",
+      "toto remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the The Witch's Cupboard/Storage area.",
+      "Background depth should keep yellow_castle legible as the location anchor.",
+      "Subject 1: dorothy remains visually readable against the environment scale.",
+      "Subject 2: toto remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "dorothy focuses toward the active scene action."
+    ],
+    "environment_subzone": "The Witch's Cupboard/Storage area",
+    "key_visible_environment_features": [
+      "The Witch's Cupboard/Storage area",
+      "Direct registry match for 'yellow_castle'."
+    ],
+    "continuity_from_previous_shot": "dorothy holds the cap",
+    "continuity_to_next_shot": "BT003",
+    "pose_anchor_frame": "dorothy enters cupboard area",
+    "pose_end_frame": "dorothy holds the cap",
+    "shot_title": "Scale Proof Wide 8: Dorothy discovers the Golden Cap while gathering food",
+    "shot_type": "scale_proof_wide",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in yellow_castle featuring dorothy, toto, Winkies.",
+    "target_seconds": 11.5,
+    "characters_in_frame": [
+      {
+        "label": "Dorothy",
+        "canonical_id": "dorothy",
+        "display_name": "dorothy",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH013/dorothy.md",
+        "notes": "Direct registry match for 'dorothy'."
+      },
+      {
+        "label": "Toto",
+        "canonical_id": "toto",
+        "display_name": "toto",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 130,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/toto.md",
+        "notes": "Direct registry match for 'toto'."
+      },
+      {
+        "label": "Winkies",
+        "canonical_id": "winkies",
+        "display_name": "Winkies",
+        "status": "canonical",
+        "entity_kind": "group",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH013/winkies.md",
+        "notes": "Direct registry match for 'winkies'."
+      }
+    ],
+    "environment": {
+      "label": "Yellow Castle",
+      "canonical_id": "yellow_castle",
+      "display_name": "yellow_castle",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH013/yellow_castle.md",
+      "notes": "Direct registry match for 'yellow_castle'."
+    },
+    "beat_ids": [
+      "BT002"
+    ],
+    "continuity_constraints": [
+      "Toto's collar must be visible during gift exchange",
+      "Dorothy's bracelet must be present",
+      "The Golden Cap must remain on Dorothy's head for the final exit",
+      "Dorothy discovers the Golden Cap while gathering food",
+      "Resolve The Witch's Cupboard/Storage area -> The Witch's Cupboard/Storage area"
+    ],
+    "prompt_seed": "Scale Proof Wide 8: Dorothy discovers the Golden Cap while gathering food. scale_proof_wide. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat...",
+    "shot_notes": "Dorothy discovers the Golden Cap while gathering food",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH013_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH013",
+        "scene_id": "CH013_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH013",
+        "scene_id": "CH013_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH013",
+        "scene_id": "CH013_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH013",
+        "scene_id": "CH013_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH013",
+        "scene_id": "CH013_SC004"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH013",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH013_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH012",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH012_chapter_xii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH002",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH002_chapter_ii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH011",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH011_chapter_xi.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH013",
+        "canonical_id": "dorothy"
+      }
+    ],
+    "evidence_summary": [
+      "Establish the transition from the West arc to the final journey through a ritualized gift exchange and a discovery of power. The sequence must move from the communal warmth of the Winkies' farewell to the individual agency of Dorothy finding the Golden Cap.",
+      "The group prepares to leave for the Emerald City. The Winkies present them with parting gifts (jewelry, gold-headed stick, silver oil-can). During food gathering, Dorothy finds the Golden Cap in the Witch's cupboard and decides to wear it as they depart.",
+      "From communal warmth to adventurous anticipation.",
+      "The group is gathered within the yellow_castle receiving gifts from winkies.",
+      "The group walks away toward the horizon with dorothy wearing the Golden Cap.",
+      "Receiving parting gifts, discovering the Golden Cap, and departing for the Emerald City.",
+      "Winkies | The Winkies are a group of humanoid, bipedal beings of human scale. They are visually defined by their consistent use of yellow clothing and serve as the enslaved population within the territory of the Wicked Witch of the West. | Yellow clothing....",
+      "dorothy | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md] Costume/Silhouette: Unknown. No specific clothing details are provided in this chapter. [source:C:/FilmCreator/projects/wizard_of_oz/02_...",
+      "cowardly_lion | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH008/cowardly_lion.md] Physical Description: Large animal; too heavy to be carried by the others. [source:C:/FilmCreator/projects/wizard_of_oz/02_s...",
+      "yellow_castle | The yellow_castle serves as the central seat of power within the Land of the West. Specific visual characteristics are currently undocumented in the provided evidence. | Unknown. | Unknown. | Unknown.",
+      "rocky_plain | No specific visual descriptors are provided in the current evidence. The environment functions as a location for transit and discovery. | Unknown. | Unknown. | Unknown."
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "suspense_investigation",
+    "coverage_role": "scale_proof_wide",
+    "beat_type": "establishing_arrival",
+    "coverage_importance": "set_piece",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT002",
+      "beat_type": "establishing_arrival",
+      "importance": "set_piece",
+      "confidence": 0.72,
+      "reasons": [
+        "arrival/entry verb",
+        "importance = set_piece"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH013_SC004_SH008_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "de53d83432d97446e309d4ecf2279d385f6a9fb1",
+      "created_at_utc": "2026-04-27T20:53:55.455416+00:00",
+      "updated_at_utc": "2026-04-27T20:54:53.806320+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH013_SC004",
+          "version": "8cff353a0279c6cdc7b92dca2e4d7537a16e26b6"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH013_SC004",
+          "version": "1e66a549f6f8145ec9f745c3e33156a4fafd828e"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH013_SC004",
+          "version": "cb2f15403576441bcefd8554d6496bcafe85492f"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:53:55.456414+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "de53d83432d97446e309d4ecf2279d385f6a9fb1"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:53.806819+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "de53d83432d97446e309d4ecf2279d385f6a9fb1"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH009",
+    "scene_id": "CH013_SC004",
+    "chapter_id": "CH013",
+    "shot_order": 9,
+    "previous_shot_id": "SH008",
+    "next_shot_id": "SH010",
+    "primary_subject": "dorothy",
+    "secondary_subjects": [],
+    "shot_moment_summary": "Dorothy discovers the Golden Cap while gathering food",
+    "start_state": "dorothy enters cupboard area",
+    "end_state": "dorothy holds the cap",
+    "action_during_shot": "Dorothy discovers the Golden Cap while gathering food",
+    "action_continues_from": "dorothy holds the cap",
+    "action_hands_off_to": "BT003",
+    "shot_size": "insert_detail",
+    "camera_angle": "eye_level",
+    "lens_family": "portrait",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "shallow_subject",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "",
+    "visible_primary_subject_id": "dorothy",
+    "visible_secondary_subject_ids": [],
+    "primary_subject_frame_position": "foreground right within The Witch's Cupboard/Storage area",
+    "primary_subject_scale_relation": "Group scale (gift exchange) transitioning to individual scale (discovery).",
+    "primary_subject_facing_direction": "angled toward the scene action",
+    "primary_subject_pose_description": "dorothy enters cupboard area",
+    "subject_relation_summary": "dorothy carries the frame alone",
+    "required_environment_anchor_1": "The Witch's Cupboard/Storage area",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "Group scale (gift exchange) transitioning to individual scale (discovery).",
+    "camera_package_description": "insert-detail, eye level, portrait lens, locked off, shallow subject, hard directional",
+    "subject_blocking": [
+      "dorothy hunched over cupboard contents",
+      "The Witch's Cupboard/Storage area",
+      "dorothy remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the The Witch's Cupboard/Storage area.",
+      "Background depth should keep yellow_castle legible as the location anchor.",
+      "Subject 1: dorothy remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "dorothy focuses toward the active scene action."
+    ],
+    "environment_subzone": "The Witch's Cupboard/Storage area",
+    "key_visible_environment_features": [
+      "The Witch's Cupboard/Storage area",
+      "Direct registry match for 'yellow_castle'."
+    ],
+    "continuity_from_previous_shot": "dorothy holds the cap",
+    "continuity_to_next_shot": "BT003",
+    "pose_anchor_frame": "dorothy enters cupboard area",
+    "pose_end_frame": "dorothy holds the cap",
+    "shot_title": "Insert Detail 9: Dorothy discovers the Golden Cap while gathering food",
+    "shot_type": "insert_detail",
+    "camera_description": "Tight detail framing focused on a single visual object or gesture.",
+    "composition": "Detail composition centered on the key physical action or prop inside yellow_castle.",
+    "target_seconds": 5.8,
+    "characters_in_frame": [
+      {
+        "label": "Dorothy",
+        "canonical_id": "dorothy",
+        "display_name": "dorothy",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH013/dorothy.md",
+        "notes": "Direct registry match for 'dorothy'."
+      }
+    ],
+    "environment": {
+      "label": "Yellow Castle",
+      "canonical_id": "yellow_castle",
+      "display_name": "yellow_castle",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH013/yellow_castle.md",
+      "notes": "Direct registry match for 'yellow_castle'."
+    },
+    "beat_ids": [
+      "BT002"
+    ],
+    "continuity_constraints": [
+      "Toto's collar must be visible during gift exchange",
+      "Dorothy's bracelet must be present",
+      "The Golden Cap must remain on Dorothy's head for the final exit",
+      "Dorothy discovers the Golden Cap while gathering food",
+      "Resolve The Witch's Cupboard/Storage area -> The Witch's Cupboard/Storage area"
+    ],
+    "prompt_seed": "Insert Detail 9: Dorothy discovers the Golden Cap while gathering food. insert_detail. size=insert_detail. angle=eye_level. lens=portrait. motion=locked_off. zoom=none. focus=shallow_subject. lighting=hard_directional. visibility=on_screen. subject_angle=unspecified. Tight detail framing focused on a single visual o...",
+    "shot_notes": "Dorothy discovers the Golden Cap while gathering food",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH013_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH013",
+        "scene_id": "CH013_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH013",
+        "scene_id": "CH013_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH013",
+        "scene_id": "CH013_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH013",
+        "scene_id": "CH013_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH013",
+        "scene_id": "CH013_SC004"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH013",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH013_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH012",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH012_chapter_xii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH002",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH002_chapter_ii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH011",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH011_chapter_xi.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH013",
+        "canonical_id": "dorothy"
+      }
+    ],
+    "evidence_summary": [
+      "Establish the transition from the West arc to the final journey through a ritualized gift exchange and a discovery of power. The sequence must move from the communal warmth of the Winkies' farewell to the individual agency of Dorothy finding the Golden Cap.",
+      "The group prepares to leave for the Emerald City. The Winkies present them with parting gifts (jewelry, gold-headed stick, silver oil-can). During food gathering, Dorothy finds the Golden Cap in the Witch's cupboard and decides to wear it as they depart.",
+      "From communal warmth to adventurous anticipation.",
+      "The group is gathered within the yellow_castle receiving gifts from winkies.",
+      "The group walks away toward the horizon with dorothy wearing the Golden Cap.",
+      "Receiving parting gifts, discovering the Golden Cap, and departing for the Emerald City.",
+      "Winkies | The Winkies are a group of humanoid, bipedal beings of human scale. They are visually defined by their consistent use of yellow clothing and serve as the enslaved population within the territory of the Wicked Witch of the West. | Yellow clothing....",
+      "dorothy | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md] Costume/Silhouette: Unknown. No specific clothing details are provided in this chapter. [source:C:/FilmCreator/projects/wizard_of_oz/02_...",
+      "cowardly_lion | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH008/cowardly_lion.md] Physical Description: Large animal; too heavy to be carried by the others. [source:C:/FilmCreator/projects/wizard_of_oz/02_s...",
+      "yellow_castle | The yellow_castle serves as the central seat of power within the Land of the West. Specific visual characteristics are currently undocumented in the provided evidence. | Unknown. | Unknown. | Unknown.",
+      "rocky_plain | No specific visual descriptors are provided in the current evidence. The environment functions as a location for transit and discovery. | Unknown. | Unknown. | Unknown."
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "suspense_investigation",
+    "coverage_role": "destination_insert",
+    "beat_type": "establishing_arrival",
+    "coverage_importance": "set_piece",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT002",
+      "beat_type": "establishing_arrival",
+      "importance": "set_piece",
+      "confidence": 0.72,
+      "reasons": [
+        "arrival/entry verb",
+        "importance = set_piece"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH013_SC004_SH009_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "de53d83432d97446e309d4ecf2279d385f6a9fb1",
+      "created_at_utc": "2026-04-27T20:53:55.457420+00:00",
+      "updated_at_utc": "2026-04-27T20:54:53.812320+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH013_SC004",
+          "version": "8cff353a0279c6cdc7b92dca2e4d7537a16e26b6"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH013_SC004",
+          "version": "1e66a549f6f8145ec9f745c3e33156a4fafd828e"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH013_SC004",
+          "version": "cb2f15403576441bcefd8554d6496bcafe85492f"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:53:55.457919+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "de53d83432d97446e309d4ecf2279d385f6a9fb1"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:53.813319+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "de53d83432d97446e309d4ecf2279d385f6a9fb1"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH010",
+    "scene_id": "CH013_SC004",
+    "chapter_id": "CH013",
+    "shot_order": 10,
+    "previous_shot_id": "SH009",
+    "next_shot_id": "SH011",
     "primary_subject": "dorothy",
     "secondary_subjects": [
       "cowardly_lion",
@@ -456,7 +2229,7 @@
     "start_state": "group assembled with cap on head",
     "end_state": "group walking away",
     "action_during_shot": "walking toward horizon",
-    "action_continues_from": "dorothy holding the Golden Cap",
+    "action_continues_from": "dorothy holds the cap",
     "action_hands_off_to": "end_of_scene",
     "shot_size": "wide",
     "camera_angle": "eye_level",
@@ -486,6 +2259,7 @@
     "subject_blocking": [
       "group moving in single file or cluster",
       "group walking away from camera",
+      "yellow_castle to rocky plain [[CH013]]",
       "dorothy remains readable within the active playing space.",
       "cowardly_lion remains readable within the active playing space."
     ],
@@ -500,17 +2274,18 @@
     ],
     "environment_subzone": "yellow_castle",
     "key_visible_environment_features": [
-      "yellow_castle"
+      "yellow_castle",
+      "Chapter-local beat subzone match for 'yellow_castle'."
     ],
-    "continuity_from_previous_shot": "dorothy holding the Golden Cap",
+    "continuity_from_previous_shot": "dorothy holds the cap",
     "continuity_to_next_shot": "end_of_scene",
     "pose_anchor_frame": "group assembled with cap on head",
     "pose_end_frame": "group walking away",
-    "shot_title": "Establishing Wide 3: The group departs for the Emerald City",
-    "shot_type": "establishing_wide",
-    "camera_description": "Wide establishing frame with a steady or lightly drifting camera.",
-    "composition": "Wide composition across rocky_plain with dorothy, cowardly_lion, tin_woodman placed for immediate spatial orientation.",
-    "target_seconds": 5.1,
+    "shot_title": "Ceremonial Master 10: The group departs for the Emerald City",
+    "shot_type": "ceremonial_master",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in rocky_plain featuring dorothy, cowardly_lion, tin_woodman.",
+    "target_seconds": 11.5,
     "characters_in_frame": [
       {
         "label": "Dorothy",
@@ -559,9 +2334,11 @@
     "continuity_constraints": [
       "Toto's collar must be visible during gift exchange",
       "Dorothy's bracelet must be present",
-      "The Golden Cap must remain on Dorothy's head for the final exit"
+      "The Golden Cap must remain on Dorothy's head for the final exit",
+      "The group departs for the Emerald City",
+      "Resolve The Witch's Cupboard/Storage area -> The Witch's Cupboard/Storage area"
     ],
-    "prompt_seed": "Establishing Wide 3: The group departs for the Emerald City. establishing_wide. size=wide. angle=eye_level. lens=ultra_wide. motion=track. zoom=none. focus=deep_focus. lighting=backlit. visibility=on_screen. subject_angle=rear_three_quarter_left. Wide establishing frame with a steady or lightly drifting camera. Wide...",
+    "prompt_seed": "Ceremonial Master 10: The group departs for the Emerald City. ceremonial_master. size=wide. angle=eye_level. lens=ultra_wide. motion=track. zoom=none. focus=deep_focus. lighting=backlit. visibility=on_screen. subject_angle=rear_three_quarter_left. Stable readable framing built from the beat requirement. Readable med...",
     "shot_notes": "The group departs for the Emerald City",
     "evidence_refs": [
       {
@@ -632,13 +2409,30 @@
       "yellow_castle | The yellow_castle serves as the central seat of power within the Land of the West. Specific visual characteristics are currently undocumented in the provided evidence. | Unknown. | Unknown. | Unknown.",
       "rocky_plain | No specific visual descriptors are provided in the current evidence. The environment functions as a location for transit and discovery. | Unknown. | Unknown. | Unknown."
     ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "suspense_investigation",
+    "coverage_role": "ceremonial_master",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "set_piece",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT003",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "set_piece",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = set_piece"
+      ]
+    },
     "metadata": {
-      "artifact_id": "CH013_SC004_SH003_SHOT_PACKAGE",
+      "artifact_id": "CH013_SC004_SH010_SHOT_PACKAGE",
       "artifact_type": "shot_package",
       "status": "generated",
-      "source_fingerprint": "aec3c581466d6ac7534f3891d1ee8d48ff057e92",
-      "created_at_utc": "2026-04-27T17:55:50.048441+00:00",
-      "updated_at_utc": "2026-04-27T17:55:50.048441+00:00",
+      "source_fingerprint": "de53d83432d97446e309d4ecf2279d385f6a9fb1",
+      "created_at_utc": "2026-04-27T20:53:55.459415+00:00",
+      "updated_at_utc": "2026-04-27T20:54:53.818320+00:00",
       "upstream_dependencies": [
         {
           "dependency_type": "scene_contract",
@@ -653,16 +2447,2013 @@
         {
           "dependency_type": "shot_blueprints",
           "dependency_id": "CH013_SC004",
-          "version": "76a2eb48e2c99338fe1b2c5c7df7e0dfb5f092eb"
+          "version": "cb2f15403576441bcefd8554d6496bcafe85492f"
         }
       ],
       "locked_fields": {},
       "manual_overrides": {},
       "revision_history": [
         {
-          "timestamp_utc": "2026-04-27T17:57:01.692905+00:00",
+          "timestamp_utc": "2026-04-27T20:53:55.459915+00:00",
           "action": "synthesized",
-          "source_fingerprint": "aec3c581466d6ac7534f3891d1ee8d48ff057e92"
+          "source_fingerprint": "de53d83432d97446e309d4ecf2279d385f6a9fb1"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:53.819320+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "de53d83432d97446e309d4ecf2279d385f6a9fb1"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH011",
+    "scene_id": "CH013_SC004",
+    "chapter_id": "CH013",
+    "shot_order": 11,
+    "previous_shot_id": "SH010",
+    "next_shot_id": "SH012",
+    "primary_subject": "dorothy",
+    "secondary_subjects": [
+      "cowardly_lion",
+      "tin_woodman"
+    ],
+    "shot_moment_summary": "The group departs for the Emerald City",
+    "start_state": "dorothy dons the cap",
+    "end_state": "group disappears toward horizon",
+    "action_during_shot": "The group departs for the Emerald City",
+    "action_continues_from": "group walking away",
+    "action_hands_off_to": "end_of_scene",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "dorothy",
+    "visible_secondary_subject_ids": [
+      "cowardly_lion",
+      "tin_woodman"
+    ],
+    "primary_subject_frame_position": "foreground right within yellow_castle",
+    "primary_subject_scale_relation": "Group scale (gift exchange) transitioning to individual scale (discovery).",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "dorothy dons the cap",
+    "subject_relation_summary": "dorothy plays against cowardly_lion, tin_woodman in the same frame",
+    "required_environment_anchor_1": "yellow_castle",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "Group scale (gift exchange) transitioning to individual scale (discovery).",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "group walking away from camera",
+      "yellow_castle to rocky plain [[CH013]]",
+      "dorothy remains readable within the active playing space.",
+      "cowardly_lion remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the yellow_castle.",
+      "Background depth should keep rocky_plain legible as the location anchor.",
+      "Subject 1: dorothy remains visually readable against the environment scale.",
+      "Subject 2: cowardly_lion remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "dorothy focuses toward the active scene action."
+    ],
+    "environment_subzone": "yellow_castle",
+    "key_visible_environment_features": [
+      "yellow_castle",
+      "Chapter-local beat subzone match for 'yellow_castle'."
+    ],
+    "continuity_from_previous_shot": "group walking away",
+    "continuity_to_next_shot": "end_of_scene",
+    "pose_anchor_frame": "dorothy dons the cap",
+    "pose_end_frame": "group disappears toward horizon",
+    "shot_title": "Authority Single 11: The group departs for the Emerald City",
+    "shot_type": "authority_single",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in rocky_plain featuring dorothy, cowardly_lion, tin_woodman.",
+    "target_seconds": 7.5,
+    "characters_in_frame": [
+      {
+        "label": "Dorothy",
+        "canonical_id": "dorothy",
+        "display_name": "dorothy",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH013/dorothy.md",
+        "notes": "Direct registry match for 'dorothy'."
+      },
+      {
+        "label": "Cowardly Lion",
+        "canonical_id": "cowardly_lion",
+        "display_name": "cowardly_lion",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH013/cowardly_lion.md",
+        "notes": "Direct registry match for 'cowardly_lion'."
+      },
+      {
+        "label": "Tin Woodman",
+        "canonical_id": "tin_woodman",
+        "display_name": "tin_woodman",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH013/tin_woodman.md",
+        "notes": "Direct registry match for 'tin_woodman'."
+      }
+    ],
+    "environment": {
+      "label": "rocky_plain",
+      "canonical_id": "rocky_plain",
+      "display_name": "rocky_plain",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": null,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH013/rocky_plain.md",
+      "notes": "Chapter-local beat subzone match for 'yellow_castle'."
+    },
+    "beat_ids": [
+      "BT003"
+    ],
+    "continuity_constraints": [
+      "Toto's collar must be visible during gift exchange",
+      "Dorothy's bracelet must be present",
+      "The Golden Cap must remain on Dorothy's head for the final exit",
+      "The group departs for the Emerald City",
+      "Resolve The Witch's Cupboard/Storage area -> The Witch's Cupboard/Storage area"
+    ],
+    "prompt_seed": "Authority Single 11: The group departs for the Emerald City. authority_single. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. R...",
+    "shot_notes": "The group departs for the Emerald City",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH013_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH013",
+        "scene_id": "CH013_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH013",
+        "scene_id": "CH013_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH013",
+        "scene_id": "CH013_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH013",
+        "scene_id": "CH013_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH013",
+        "scene_id": "CH013_SC004"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH013",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH013_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH012",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH012_chapter_xii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH002",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH002_chapter_ii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH011",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH011_chapter_xi.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH013",
+        "canonical_id": "dorothy"
+      }
+    ],
+    "evidence_summary": [
+      "Establish the transition from the West arc to the final journey through a ritualized gift exchange and a discovery of power. The sequence must move from the communal warmth of the Winkies' farewell to the individual agency of Dorothy finding the Golden Cap.",
+      "The group prepares to leave for the Emerald City. The Winkies present them with parting gifts (jewelry, gold-headed stick, silver oil-can). During food gathering, Dorothy finds the Golden Cap in the Witch's cupboard and decides to wear it as they depart.",
+      "From communal warmth to adventurous anticipation.",
+      "The group is gathered within the yellow_castle receiving gifts from winkies.",
+      "The group walks away toward the horizon with dorothy wearing the Golden Cap.",
+      "Receiving parting gifts, discovering the Golden Cap, and departing for the Emerald City.",
+      "Winkies | The Winkies are a group of humanoid, bipedal beings of human scale. They are visually defined by their consistent use of yellow clothing and serve as the enslaved population within the territory of the Wicked Witch of the West. | Yellow clothing....",
+      "dorothy | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md] Costume/Silhouette: Unknown. No specific clothing details are provided in this chapter. [source:C:/FilmCreator/projects/wizard_of_oz/02_...",
+      "cowardly_lion | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH008/cowardly_lion.md] Physical Description: Large animal; too heavy to be carried by the others. [source:C:/FilmCreator/projects/wizard_of_oz/02_s...",
+      "yellow_castle | The yellow_castle serves as the central seat of power within the Land of the West. Specific visual characteristics are currently undocumented in the provided evidence. | Unknown. | Unknown. | Unknown.",
+      "rocky_plain | No specific visual descriptors are provided in the current evidence. The environment functions as a location for transit and discovery. | Unknown. | Unknown. | Unknown."
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "suspense_investigation",
+    "coverage_role": "authority_single",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "set_piece",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT003",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "set_piece",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = set_piece"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH013_SC004_SH011_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "de53d83432d97446e309d4ecf2279d385f6a9fb1",
+      "created_at_utc": "2026-04-27T20:53:55.460917+00:00",
+      "updated_at_utc": "2026-04-27T20:54:53.824833+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH013_SC004",
+          "version": "8cff353a0279c6cdc7b92dca2e4d7537a16e26b6"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH013_SC004",
+          "version": "1e66a549f6f8145ec9f745c3e33156a4fafd828e"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH013_SC004",
+          "version": "cb2f15403576441bcefd8554d6496bcafe85492f"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:53:55.461915+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "de53d83432d97446e309d4ecf2279d385f6a9fb1"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:53.825836+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "de53d83432d97446e309d4ecf2279d385f6a9fb1"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH012",
+    "scene_id": "CH013_SC004",
+    "chapter_id": "CH013",
+    "shot_order": 12,
+    "previous_shot_id": "SH011",
+    "next_shot_id": "SH013",
+    "primary_subject": "dorothy",
+    "secondary_subjects": [
+      "cowardly_lion",
+      "tin_woodman"
+    ],
+    "shot_moment_summary": "The group departs for the Emerald City",
+    "start_state": "dorothy dons the cap",
+    "end_state": "group disappears toward horizon",
+    "action_during_shot": "The group departs for the Emerald City",
+    "action_continues_from": "group disappears toward horizon",
+    "action_hands_off_to": "end_of_scene",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "dorothy",
+    "visible_secondary_subject_ids": [
+      "cowardly_lion",
+      "tin_woodman"
+    ],
+    "primary_subject_frame_position": "foreground right within yellow_castle",
+    "primary_subject_scale_relation": "Group scale (gift exchange) transitioning to individual scale (discovery).",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "dorothy dons the cap",
+    "subject_relation_summary": "dorothy plays against cowardly_lion, tin_woodman in the same frame",
+    "required_environment_anchor_1": "yellow_castle",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "Group scale (gift exchange) transitioning to individual scale (discovery).",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "group walking away from camera",
+      "yellow_castle to rocky plain [[CH013]]",
+      "dorothy remains readable within the active playing space.",
+      "cowardly_lion remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the yellow_castle.",
+      "Background depth should keep rocky_plain legible as the location anchor.",
+      "Subject 1: dorothy remains visually readable against the environment scale.",
+      "Subject 2: cowardly_lion remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "dorothy focuses toward the active scene action."
+    ],
+    "environment_subzone": "yellow_castle",
+    "key_visible_environment_features": [
+      "yellow_castle",
+      "Chapter-local beat subzone match for 'yellow_castle'."
+    ],
+    "continuity_from_previous_shot": "group disappears toward horizon",
+    "continuity_to_next_shot": "end_of_scene",
+    "pose_anchor_frame": "dorothy dons the cap",
+    "pose_end_frame": "group disappears toward horizon",
+    "shot_title": "Petitioner Group 12: The group departs for the Emerald City",
+    "shot_type": "petitioner_group",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in rocky_plain featuring dorothy, cowardly_lion, tin_woodman.",
+    "target_seconds": 7.5,
+    "characters_in_frame": [
+      {
+        "label": "Dorothy",
+        "canonical_id": "dorothy",
+        "display_name": "dorothy",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH013/dorothy.md",
+        "notes": "Direct registry match for 'dorothy'."
+      },
+      {
+        "label": "Cowardly Lion",
+        "canonical_id": "cowardly_lion",
+        "display_name": "cowardly_lion",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH013/cowardly_lion.md",
+        "notes": "Direct registry match for 'cowardly_lion'."
+      },
+      {
+        "label": "Tin Woodman",
+        "canonical_id": "tin_woodman",
+        "display_name": "tin_woodman",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH013/tin_woodman.md",
+        "notes": "Direct registry match for 'tin_woodman'."
+      }
+    ],
+    "environment": {
+      "label": "rocky_plain",
+      "canonical_id": "rocky_plain",
+      "display_name": "rocky_plain",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": null,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH013/rocky_plain.md",
+      "notes": "Chapter-local beat subzone match for 'yellow_castle'."
+    },
+    "beat_ids": [
+      "BT003"
+    ],
+    "continuity_constraints": [
+      "Toto's collar must be visible during gift exchange",
+      "Dorothy's bracelet must be present",
+      "The Golden Cap must remain on Dorothy's head for the final exit",
+      "The group departs for the Emerald City",
+      "Resolve The Witch's Cupboard/Storage area -> The Witch's Cupboard/Storage area"
+    ],
+    "prompt_seed": "Petitioner Group 12: The group departs for the Emerald City. petitioner_group. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. R...",
+    "shot_notes": "The group departs for the Emerald City",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH013_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH013",
+        "scene_id": "CH013_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH013",
+        "scene_id": "CH013_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH013",
+        "scene_id": "CH013_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH013",
+        "scene_id": "CH013_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH013",
+        "scene_id": "CH013_SC004"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH013",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH013_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH012",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH012_chapter_xii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH002",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH002_chapter_ii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH011",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH011_chapter_xi.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH013",
+        "canonical_id": "dorothy"
+      }
+    ],
+    "evidence_summary": [
+      "Establish the transition from the West arc to the final journey through a ritualized gift exchange and a discovery of power. The sequence must move from the communal warmth of the Winkies' farewell to the individual agency of Dorothy finding the Golden Cap.",
+      "The group prepares to leave for the Emerald City. The Winkies present them with parting gifts (jewelry, gold-headed stick, silver oil-can). During food gathering, Dorothy finds the Golden Cap in the Witch's cupboard and decides to wear it as they depart.",
+      "From communal warmth to adventurous anticipation.",
+      "The group is gathered within the yellow_castle receiving gifts from winkies.",
+      "The group walks away toward the horizon with dorothy wearing the Golden Cap.",
+      "Receiving parting gifts, discovering the Golden Cap, and departing for the Emerald City.",
+      "Winkies | The Winkies are a group of humanoid, bipedal beings of human scale. They are visually defined by their consistent use of yellow clothing and serve as the enslaved population within the territory of the Wicked Witch of the West. | Yellow clothing....",
+      "dorothy | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md] Costume/Silhouette: Unknown. No specific clothing details are provided in this chapter. [source:C:/FilmCreator/projects/wizard_of_oz/02_...",
+      "cowardly_lion | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH008/cowardly_lion.md] Physical Description: Large animal; too heavy to be carried by the others. [source:C:/FilmCreator/projects/wizard_of_oz/02_s...",
+      "yellow_castle | The yellow_castle serves as the central seat of power within the Land of the West. Specific visual characteristics are currently undocumented in the provided evidence. | Unknown. | Unknown. | Unknown.",
+      "rocky_plain | No specific visual descriptors are provided in the current evidence. The environment functions as a location for transit and discovery. | Unknown. | Unknown. | Unknown."
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "suspense_investigation",
+    "coverage_role": "petitioner_group",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "set_piece",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT003",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "set_piece",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = set_piece"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH013_SC004_SH012_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "de53d83432d97446e309d4ecf2279d385f6a9fb1",
+      "created_at_utc": "2026-04-27T20:53:55.462916+00:00",
+      "updated_at_utc": "2026-04-27T20:54:53.831339+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH013_SC004",
+          "version": "8cff353a0279c6cdc7b92dca2e4d7537a16e26b6"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH013_SC004",
+          "version": "1e66a549f6f8145ec9f745c3e33156a4fafd828e"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH013_SC004",
+          "version": "cb2f15403576441bcefd8554d6496bcafe85492f"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:53:55.463415+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "de53d83432d97446e309d4ecf2279d385f6a9fb1"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:53.832339+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "de53d83432d97446e309d4ecf2279d385f6a9fb1"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH013",
+    "scene_id": "CH013_SC004",
+    "chapter_id": "CH013",
+    "shot_order": 13,
+    "previous_shot_id": "SH012",
+    "next_shot_id": "SH014",
+    "primary_subject": "dorothy",
+    "secondary_subjects": [
+      "cowardly_lion",
+      "tin_woodman"
+    ],
+    "shot_moment_summary": "The group departs for the Emerald City",
+    "start_state": "dorothy dons the cap",
+    "end_state": "group disappears toward horizon",
+    "action_during_shot": "The group departs for the Emerald City",
+    "action_continues_from": "group disappears toward horizon",
+    "action_hands_off_to": "end_of_scene",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "dorothy",
+    "visible_secondary_subject_ids": [
+      "cowardly_lion",
+      "tin_woodman"
+    ],
+    "primary_subject_frame_position": "foreground right within yellow_castle",
+    "primary_subject_scale_relation": "Group scale (gift exchange) transitioning to individual scale (discovery).",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "dorothy dons the cap",
+    "subject_relation_summary": "dorothy plays against cowardly_lion, tin_woodman in the same frame",
+    "required_environment_anchor_1": "yellow_castle",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "Group scale (gift exchange) transitioning to individual scale (discovery).",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "group walking away from camera",
+      "yellow_castle to rocky plain [[CH013]]",
+      "dorothy remains readable within the active playing space.",
+      "cowardly_lion remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the yellow_castle.",
+      "Background depth should keep rocky_plain legible as the location anchor.",
+      "Subject 1: dorothy remains visually readable against the environment scale.",
+      "Subject 2: cowardly_lion remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "dorothy focuses toward the active scene action."
+    ],
+    "environment_subzone": "yellow_castle",
+    "key_visible_environment_features": [
+      "yellow_castle",
+      "Chapter-local beat subzone match for 'yellow_castle'."
+    ],
+    "continuity_from_previous_shot": "group disappears toward horizon",
+    "continuity_to_next_shot": "end_of_scene",
+    "pose_anchor_frame": "dorothy dons the cap",
+    "pose_end_frame": "group disappears toward horizon",
+    "shot_title": "Crowd Response 13: The group departs for the Emerald City",
+    "shot_type": "crowd_response",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in rocky_plain featuring dorothy, cowardly_lion, tin_woodman.",
+    "target_seconds": 7.5,
+    "characters_in_frame": [
+      {
+        "label": "Dorothy",
+        "canonical_id": "dorothy",
+        "display_name": "dorothy",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH013/dorothy.md",
+        "notes": "Direct registry match for 'dorothy'."
+      },
+      {
+        "label": "Cowardly Lion",
+        "canonical_id": "cowardly_lion",
+        "display_name": "cowardly_lion",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH013/cowardly_lion.md",
+        "notes": "Direct registry match for 'cowardly_lion'."
+      },
+      {
+        "label": "Tin Woodman",
+        "canonical_id": "tin_woodman",
+        "display_name": "tin_woodman",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH013/tin_woodman.md",
+        "notes": "Direct registry match for 'tin_woodman'."
+      }
+    ],
+    "environment": {
+      "label": "rocky_plain",
+      "canonical_id": "rocky_plain",
+      "display_name": "rocky_plain",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": null,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH013/rocky_plain.md",
+      "notes": "Chapter-local beat subzone match for 'yellow_castle'."
+    },
+    "beat_ids": [
+      "BT003"
+    ],
+    "continuity_constraints": [
+      "Toto's collar must be visible during gift exchange",
+      "Dorothy's bracelet must be present",
+      "The Golden Cap must remain on Dorothy's head for the final exit",
+      "The group departs for the Emerald City",
+      "Resolve The Witch's Cupboard/Storage area -> The Witch's Cupboard/Storage area"
+    ],
+    "prompt_seed": "Crowd Response 13: The group departs for the Emerald City. crowd_response. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Reada...",
+    "shot_notes": "The group departs for the Emerald City",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH013_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH013",
+        "scene_id": "CH013_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH013",
+        "scene_id": "CH013_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH013",
+        "scene_id": "CH013_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH013",
+        "scene_id": "CH013_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH013",
+        "scene_id": "CH013_SC004"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH013",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH013_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH012",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH012_chapter_xii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH002",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH002_chapter_ii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH011",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH011_chapter_xi.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH013",
+        "canonical_id": "dorothy"
+      }
+    ],
+    "evidence_summary": [
+      "Establish the transition from the West arc to the final journey through a ritualized gift exchange and a discovery of power. The sequence must move from the communal warmth of the Winkies' farewell to the individual agency of Dorothy finding the Golden Cap.",
+      "The group prepares to leave for the Emerald City. The Winkies present them with parting gifts (jewelry, gold-headed stick, silver oil-can). During food gathering, Dorothy finds the Golden Cap in the Witch's cupboard and decides to wear it as they depart.",
+      "From communal warmth to adventurous anticipation.",
+      "The group is gathered within the yellow_castle receiving gifts from winkies.",
+      "The group walks away toward the horizon with dorothy wearing the Golden Cap.",
+      "Receiving parting gifts, discovering the Golden Cap, and departing for the Emerald City.",
+      "Winkies | The Winkies are a group of humanoid, bipedal beings of human scale. They are visually defined by their consistent use of yellow clothing and serve as the enslaved population within the territory of the Wicked Witch of the West. | Yellow clothing....",
+      "dorothy | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md] Costume/Silhouette: Unknown. No specific clothing details are provided in this chapter. [source:C:/FilmCreator/projects/wizard_of_oz/02_...",
+      "cowardly_lion | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH008/cowardly_lion.md] Physical Description: Large animal; too heavy to be carried by the others. [source:C:/FilmCreator/projects/wizard_of_oz/02_s...",
+      "yellow_castle | The yellow_castle serves as the central seat of power within the Land of the West. Specific visual characteristics are currently undocumented in the provided evidence. | Unknown. | Unknown. | Unknown.",
+      "rocky_plain | No specific visual descriptors are provided in the current evidence. The environment functions as a location for transit and discovery. | Unknown. | Unknown. | Unknown."
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "suspense_investigation",
+    "coverage_role": "crowd_response",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "set_piece",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT003",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "set_piece",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = set_piece"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH013_SC004_SH013_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "de53d83432d97446e309d4ecf2279d385f6a9fb1",
+      "created_at_utc": "2026-04-27T20:53:55.464917+00:00",
+      "updated_at_utc": "2026-04-27T20:54:53.837347+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH013_SC004",
+          "version": "8cff353a0279c6cdc7b92dca2e4d7537a16e26b6"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH013_SC004",
+          "version": "1e66a549f6f8145ec9f745c3e33156a4fafd828e"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH013_SC004",
+          "version": "cb2f15403576441bcefd8554d6496bcafe85492f"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:53:55.465416+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "de53d83432d97446e309d4ecf2279d385f6a9fb1"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:53.838348+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "de53d83432d97446e309d4ecf2279d385f6a9fb1"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH014",
+    "scene_id": "CH013_SC004",
+    "chapter_id": "CH013",
+    "shot_order": 14,
+    "previous_shot_id": "SH013",
+    "next_shot_id": "SH015",
+    "primary_subject": "dorothy",
+    "secondary_subjects": [
+      "cowardly_lion",
+      "tin_woodman"
+    ],
+    "shot_moment_summary": "The group departs for the Emerald City",
+    "start_state": "dorothy dons the cap",
+    "end_state": "group disappears toward horizon",
+    "action_during_shot": "The group departs for the Emerald City",
+    "action_continues_from": "group disappears toward horizon",
+    "action_hands_off_to": "end_of_scene",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "dorothy",
+    "visible_secondary_subject_ids": [
+      "cowardly_lion",
+      "tin_woodman"
+    ],
+    "primary_subject_frame_position": "foreground right within yellow_castle",
+    "primary_subject_scale_relation": "Group scale (gift exchange) transitioning to individual scale (discovery).",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "dorothy dons the cap",
+    "subject_relation_summary": "dorothy plays against cowardly_lion, tin_woodman in the same frame",
+    "required_environment_anchor_1": "yellow_castle",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "Group scale (gift exchange) transitioning to individual scale (discovery).",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "group walking away from camera",
+      "yellow_castle to rocky plain [[CH013]]",
+      "dorothy remains readable within the active playing space.",
+      "cowardly_lion remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the yellow_castle.",
+      "Background depth should keep rocky_plain legible as the location anchor.",
+      "Subject 1: dorothy remains visually readable against the environment scale.",
+      "Subject 2: cowardly_lion remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "dorothy focuses toward the active scene action."
+    ],
+    "environment_subzone": "yellow_castle",
+    "key_visible_environment_features": [
+      "yellow_castle",
+      "Chapter-local beat subzone match for 'yellow_castle'."
+    ],
+    "continuity_from_previous_shot": "group disappears toward horizon",
+    "continuity_to_next_shot": "end_of_scene",
+    "pose_anchor_frame": "dorothy dons the cap",
+    "pose_end_frame": "group disappears toward horizon",
+    "shot_title": "Symbol Insert 14: The group departs for the Emerald City",
+    "shot_type": "symbol_insert",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in rocky_plain featuring dorothy, cowardly_lion, tin_woodman.",
+    "target_seconds": 5.8,
+    "characters_in_frame": [
+      {
+        "label": "Dorothy",
+        "canonical_id": "dorothy",
+        "display_name": "dorothy",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH013/dorothy.md",
+        "notes": "Direct registry match for 'dorothy'."
+      },
+      {
+        "label": "Cowardly Lion",
+        "canonical_id": "cowardly_lion",
+        "display_name": "cowardly_lion",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH013/cowardly_lion.md",
+        "notes": "Direct registry match for 'cowardly_lion'."
+      },
+      {
+        "label": "Tin Woodman",
+        "canonical_id": "tin_woodman",
+        "display_name": "tin_woodman",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH013/tin_woodman.md",
+        "notes": "Direct registry match for 'tin_woodman'."
+      }
+    ],
+    "environment": {
+      "label": "rocky_plain",
+      "canonical_id": "rocky_plain",
+      "display_name": "rocky_plain",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": null,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH013/rocky_plain.md",
+      "notes": "Chapter-local beat subzone match for 'yellow_castle'."
+    },
+    "beat_ids": [
+      "BT003"
+    ],
+    "continuity_constraints": [
+      "Toto's collar must be visible during gift exchange",
+      "Dorothy's bracelet must be present",
+      "The Golden Cap must remain on Dorothy's head for the final exit",
+      "The group departs for the Emerald City",
+      "Resolve The Witch's Cupboard/Storage area -> The Witch's Cupboard/Storage area"
+    ],
+    "prompt_seed": "Symbol Insert 14: The group departs for the Emerald City. symbol_insert. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Readabl...",
+    "shot_notes": "The group departs for the Emerald City",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH013_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH013",
+        "scene_id": "CH013_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH013",
+        "scene_id": "CH013_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH013",
+        "scene_id": "CH013_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH013",
+        "scene_id": "CH013_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH013",
+        "scene_id": "CH013_SC004"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH013",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH013_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH012",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH012_chapter_xii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH002",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH002_chapter_ii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH011",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH011_chapter_xi.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH013",
+        "canonical_id": "dorothy"
+      }
+    ],
+    "evidence_summary": [
+      "Establish the transition from the West arc to the final journey through a ritualized gift exchange and a discovery of power. The sequence must move from the communal warmth of the Winkies' farewell to the individual agency of Dorothy finding the Golden Cap.",
+      "The group prepares to leave for the Emerald City. The Winkies present them with parting gifts (jewelry, gold-headed stick, silver oil-can). During food gathering, Dorothy finds the Golden Cap in the Witch's cupboard and decides to wear it as they depart.",
+      "From communal warmth to adventurous anticipation.",
+      "The group is gathered within the yellow_castle receiving gifts from winkies.",
+      "The group walks away toward the horizon with dorothy wearing the Golden Cap.",
+      "Receiving parting gifts, discovering the Golden Cap, and departing for the Emerald City.",
+      "Winkies | The Winkies are a group of humanoid, bipedal beings of human scale. They are visually defined by their consistent use of yellow clothing and serve as the enslaved population within the territory of the Wicked Witch of the West. | Yellow clothing....",
+      "dorothy | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md] Costume/Silhouette: Unknown. No specific clothing details are provided in this chapter. [source:C:/FilmCreator/projects/wizard_of_oz/02_...",
+      "cowardly_lion | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH008/cowardly_lion.md] Physical Description: Large animal; too heavy to be carried by the others. [source:C:/FilmCreator/projects/wizard_of_oz/02_s...",
+      "yellow_castle | The yellow_castle serves as the central seat of power within the Land of the West. Specific visual characteristics are currently undocumented in the provided evidence. | Unknown. | Unknown. | Unknown.",
+      "rocky_plain | No specific visual descriptors are provided in the current evidence. The environment functions as a location for transit and discovery. | Unknown. | Unknown. | Unknown."
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "suspense_investigation",
+    "coverage_role": "symbol_insert",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "set_piece",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT003",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "set_piece",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = set_piece"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH013_SC004_SH014_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "de53d83432d97446e309d4ecf2279d385f6a9fb1",
+      "created_at_utc": "2026-04-27T20:53:55.466416+00:00",
+      "updated_at_utc": "2026-04-27T20:54:53.843852+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH013_SC004",
+          "version": "8cff353a0279c6cdc7b92dca2e4d7537a16e26b6"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH013_SC004",
+          "version": "1e66a549f6f8145ec9f745c3e33156a4fafd828e"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH013_SC004",
+          "version": "cb2f15403576441bcefd8554d6496bcafe85492f"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:53:55.466920+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "de53d83432d97446e309d4ecf2279d385f6a9fb1"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:53.843852+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "de53d83432d97446e309d4ecf2279d385f6a9fb1"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH015",
+    "scene_id": "CH013_SC004",
+    "chapter_id": "CH013",
+    "shot_order": 15,
+    "previous_shot_id": "SH014",
+    "next_shot_id": "SH016",
+    "primary_subject": "dorothy",
+    "secondary_subjects": [
+      "cowardly_lion"
+    ],
+    "shot_moment_summary": "The group departs for the Emerald City",
+    "start_state": "dorothy dons the cap",
+    "end_state": "group disappears toward horizon",
+    "action_during_shot": "The group departs for the Emerald City",
+    "action_continues_from": "group disappears toward horizon",
+    "action_hands_off_to": "end_of_scene",
+    "shot_size": "close_up",
+    "camera_angle": "eye_level",
+    "lens_family": "portrait",
+    "camera_motion": "push_in",
+    "zoom_behavior": "subtle_in",
+    "focus_strategy": "shallow_subject",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "dorothy",
+    "visible_secondary_subject_ids": [
+      "cowardly_lion"
+    ],
+    "primary_subject_frame_position": "foreground inside yellow_castle",
+    "primary_subject_scale_relation": "Group scale (gift exchange) transitioning to individual scale (discovery).",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "dorothy dons the cap",
+    "subject_relation_summary": "dorothy plays against cowardly_lion in the same frame",
+    "required_environment_anchor_1": "yellow_castle",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "Group scale (gift exchange) transitioning to individual scale (discovery).",
+    "camera_package_description": "close-up, eye level, portrait lens, push in, zoom subtle in, shallow subject, hard directional",
+    "subject_blocking": [
+      "group walking away from camera",
+      "yellow_castle to rocky plain [[CH013]]",
+      "dorothy remains readable within the active playing space.",
+      "cowardly_lion remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the yellow_castle.",
+      "Background depth should keep rocky_plain legible as the location anchor.",
+      "Subject 1: dorothy remains visually readable against the environment scale.",
+      "Subject 2: cowardly_lion remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "dorothy focuses toward the active scene action."
+    ],
+    "environment_subzone": "yellow_castle",
+    "key_visible_environment_features": [
+      "yellow_castle",
+      "Chapter-local beat subzone match for 'yellow_castle'."
+    ],
+    "continuity_from_previous_shot": "group disappears toward horizon",
+    "continuity_to_next_shot": "end_of_scene",
+    "pose_anchor_frame": "dorothy dons the cap",
+    "pose_end_frame": "group disappears toward horizon",
+    "shot_title": "Reaction Closeup 15: The group departs for the Emerald City",
+    "shot_type": "reaction_closeup",
+    "camera_description": "Close framing that isolates reaction and emotional emphasis.",
+    "composition": "Intimate composition that isolates dorothy, cowardly_lion against rocky_plain to capture the beat's emotional turn.",
+    "target_seconds": 7.5,
+    "characters_in_frame": [
+      {
+        "label": "Dorothy",
+        "canonical_id": "dorothy",
+        "display_name": "dorothy",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH013/dorothy.md",
+        "notes": "Direct registry match for 'dorothy'."
+      },
+      {
+        "label": "Cowardly Lion",
+        "canonical_id": "cowardly_lion",
+        "display_name": "cowardly_lion",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH013/cowardly_lion.md",
+        "notes": "Direct registry match for 'cowardly_lion'."
+      }
+    ],
+    "environment": {
+      "label": "rocky_plain",
+      "canonical_id": "rocky_plain",
+      "display_name": "rocky_plain",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": null,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH013/rocky_plain.md",
+      "notes": "Chapter-local beat subzone match for 'yellow_castle'."
+    },
+    "beat_ids": [
+      "BT003"
+    ],
+    "continuity_constraints": [
+      "Toto's collar must be visible during gift exchange",
+      "Dorothy's bracelet must be present",
+      "The Golden Cap must remain on Dorothy's head for the final exit",
+      "The group departs for the Emerald City",
+      "Resolve The Witch's Cupboard/Storage area -> The Witch's Cupboard/Storage area"
+    ],
+    "prompt_seed": "Reaction Closeup 15: The group departs for the Emerald City. reaction_closeup. size=close_up. angle=eye_level. lens=portrait. motion=push_in. zoom=subtle_in. focus=shallow_subject. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Close framing that isolates reaction and emotio...",
+    "shot_notes": "The group departs for the Emerald City",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH013_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH013",
+        "scene_id": "CH013_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH013",
+        "scene_id": "CH013_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH013",
+        "scene_id": "CH013_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH013",
+        "scene_id": "CH013_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH013",
+        "scene_id": "CH013_SC004"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH013",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH013_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH012",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH012_chapter_xii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH002",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH002_chapter_ii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH011",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH011_chapter_xi.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH013",
+        "canonical_id": "dorothy"
+      }
+    ],
+    "evidence_summary": [
+      "Establish the transition from the West arc to the final journey through a ritualized gift exchange and a discovery of power. The sequence must move from the communal warmth of the Winkies' farewell to the individual agency of Dorothy finding the Golden Cap.",
+      "The group prepares to leave for the Emerald City. The Winkies present them with parting gifts (jewelry, gold-headed stick, silver oil-can). During food gathering, Dorothy finds the Golden Cap in the Witch's cupboard and decides to wear it as they depart.",
+      "From communal warmth to adventurous anticipation.",
+      "The group is gathered within the yellow_castle receiving gifts from winkies.",
+      "The group walks away toward the horizon with dorothy wearing the Golden Cap.",
+      "Receiving parting gifts, discovering the Golden Cap, and departing for the Emerald City.",
+      "Winkies | The Winkies are a group of humanoid, bipedal beings of human scale. They are visually defined by their consistent use of yellow clothing and serve as the enslaved population within the territory of the Wicked Witch of the West. | Yellow clothing....",
+      "dorothy | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md] Costume/Silhouette: Unknown. No specific clothing details are provided in this chapter. [source:C:/FilmCreator/projects/wizard_of_oz/02_...",
+      "cowardly_lion | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH008/cowardly_lion.md] Physical Description: Large animal; too heavy to be carried by the others. [source:C:/FilmCreator/projects/wizard_of_oz/02_s...",
+      "yellow_castle | The yellow_castle serves as the central seat of power within the Land of the West. Specific visual characteristics are currently undocumented in the provided evidence. | Unknown. | Unknown. | Unknown.",
+      "rocky_plain | No specific visual descriptors are provided in the current evidence. The environment functions as a location for transit and discovery. | Unknown. | Unknown. | Unknown."
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "suspense_investigation",
+    "coverage_role": "decision_closeup",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "set_piece",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT003",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "set_piece",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = set_piece"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH013_SC004_SH015_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "de53d83432d97446e309d4ecf2279d385f6a9fb1",
+      "created_at_utc": "2026-04-27T20:53:55.467919+00:00",
+      "updated_at_utc": "2026-04-27T20:54:53.849861+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH013_SC004",
+          "version": "8cff353a0279c6cdc7b92dca2e4d7537a16e26b6"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH013_SC004",
+          "version": "1e66a549f6f8145ec9f745c3e33156a4fafd828e"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH013_SC004",
+          "version": "cb2f15403576441bcefd8554d6496bcafe85492f"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:53:55.468915+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "de53d83432d97446e309d4ecf2279d385f6a9fb1"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:53.850358+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "de53d83432d97446e309d4ecf2279d385f6a9fb1"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH016",
+    "scene_id": "CH013_SC004",
+    "chapter_id": "CH013",
+    "shot_order": 16,
+    "previous_shot_id": "SH015",
+    "next_shot_id": "SH017",
+    "primary_subject": "dorothy",
+    "secondary_subjects": [
+      "cowardly_lion",
+      "tin_woodman"
+    ],
+    "shot_moment_summary": "The group departs for the Emerald City",
+    "start_state": "dorothy dons the cap",
+    "end_state": "group disappears toward horizon",
+    "action_during_shot": "The group departs for the Emerald City",
+    "action_continues_from": "group disappears toward horizon",
+    "action_hands_off_to": "end_of_scene",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "dorothy",
+    "visible_secondary_subject_ids": [
+      "cowardly_lion",
+      "tin_woodman"
+    ],
+    "primary_subject_frame_position": "foreground right within yellow_castle",
+    "primary_subject_scale_relation": "Group scale (gift exchange) transitioning to individual scale (discovery).",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "dorothy dons the cap",
+    "subject_relation_summary": "dorothy plays against cowardly_lion, tin_woodman in the same frame",
+    "required_environment_anchor_1": "yellow_castle",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "Group scale (gift exchange) transitioning to individual scale (discovery).",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "group walking away from camera",
+      "yellow_castle to rocky plain [[CH013]]",
+      "dorothy remains readable within the active playing space.",
+      "cowardly_lion remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the yellow_castle.",
+      "Background depth should keep rocky_plain legible as the location anchor.",
+      "Subject 1: dorothy remains visually readable against the environment scale.",
+      "Subject 2: cowardly_lion remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "dorothy focuses toward the active scene action."
+    ],
+    "environment_subzone": "yellow_castle",
+    "key_visible_environment_features": [
+      "yellow_castle",
+      "Chapter-local beat subzone match for 'yellow_castle'."
+    ],
+    "continuity_from_previous_shot": "group disappears toward horizon",
+    "continuity_to_next_shot": "end_of_scene",
+    "pose_anchor_frame": "dorothy dons the cap",
+    "pose_end_frame": "group disappears toward horizon",
+    "shot_title": "Scale Proof Wide 16: The group departs for the Emerald City",
+    "shot_type": "scale_proof_wide",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in rocky_plain featuring dorothy, cowardly_lion, tin_woodman.",
+    "target_seconds": 11.5,
+    "characters_in_frame": [
+      {
+        "label": "Dorothy",
+        "canonical_id": "dorothy",
+        "display_name": "dorothy",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH013/dorothy.md",
+        "notes": "Direct registry match for 'dorothy'."
+      },
+      {
+        "label": "Cowardly Lion",
+        "canonical_id": "cowardly_lion",
+        "display_name": "cowardly_lion",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH013/cowardly_lion.md",
+        "notes": "Direct registry match for 'cowardly_lion'."
+      },
+      {
+        "label": "Tin Woodman",
+        "canonical_id": "tin_woodman",
+        "display_name": "tin_woodman",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH013/tin_woodman.md",
+        "notes": "Direct registry match for 'tin_woodman'."
+      }
+    ],
+    "environment": {
+      "label": "rocky_plain",
+      "canonical_id": "rocky_plain",
+      "display_name": "rocky_plain",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": null,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH013/rocky_plain.md",
+      "notes": "Chapter-local beat subzone match for 'yellow_castle'."
+    },
+    "beat_ids": [
+      "BT003"
+    ],
+    "continuity_constraints": [
+      "Toto's collar must be visible during gift exchange",
+      "Dorothy's bracelet must be present",
+      "The Golden Cap must remain on Dorothy's head for the final exit",
+      "The group departs for the Emerald City",
+      "Resolve The Witch's Cupboard/Storage area -> The Witch's Cupboard/Storage area"
+    ],
+    "prompt_seed": "Scale Proof Wide 16: The group departs for the Emerald City. scale_proof_wide. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. R...",
+    "shot_notes": "The group departs for the Emerald City",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH013_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH013",
+        "scene_id": "CH013_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH013",
+        "scene_id": "CH013_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH013",
+        "scene_id": "CH013_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH013",
+        "scene_id": "CH013_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH013",
+        "scene_id": "CH013_SC004"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH013",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH013_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH012",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH012_chapter_xii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH002",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH002_chapter_ii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH011",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH011_chapter_xi.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH013",
+        "canonical_id": "dorothy"
+      }
+    ],
+    "evidence_summary": [
+      "Establish the transition from the West arc to the final journey through a ritualized gift exchange and a discovery of power. The sequence must move from the communal warmth of the Winkies' farewell to the individual agency of Dorothy finding the Golden Cap.",
+      "The group prepares to leave for the Emerald City. The Winkies present them with parting gifts (jewelry, gold-headed stick, silver oil-can). During food gathering, Dorothy finds the Golden Cap in the Witch's cupboard and decides to wear it as they depart.",
+      "From communal warmth to adventurous anticipation.",
+      "The group is gathered within the yellow_castle receiving gifts from winkies.",
+      "The group walks away toward the horizon with dorothy wearing the Golden Cap.",
+      "Receiving parting gifts, discovering the Golden Cap, and departing for the Emerald City.",
+      "Winkies | The Winkies are a group of humanoid, bipedal beings of human scale. They are visually defined by their consistent use of yellow clothing and serve as the enslaved population within the territory of the Wicked Witch of the West. | Yellow clothing....",
+      "dorothy | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md] Costume/Silhouette: Unknown. No specific clothing details are provided in this chapter. [source:C:/FilmCreator/projects/wizard_of_oz/02_...",
+      "cowardly_lion | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH008/cowardly_lion.md] Physical Description: Large animal; too heavy to be carried by the others. [source:C:/FilmCreator/projects/wizard_of_oz/02_s...",
+      "yellow_castle | The yellow_castle serves as the central seat of power within the Land of the West. Specific visual characteristics are currently undocumented in the provided evidence. | Unknown. | Unknown. | Unknown.",
+      "rocky_plain | No specific visual descriptors are provided in the current evidence. The environment functions as a location for transit and discovery. | Unknown. | Unknown. | Unknown."
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "suspense_investigation",
+    "coverage_role": "scale_proof_wide",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "set_piece",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT003",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "set_piece",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = set_piece"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH013_SC004_SH016_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "de53d83432d97446e309d4ecf2279d385f6a9fb1",
+      "created_at_utc": "2026-04-27T20:53:55.469416+00:00",
+      "updated_at_utc": "2026-04-27T20:54:53.855869+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH013_SC004",
+          "version": "8cff353a0279c6cdc7b92dca2e4d7537a16e26b6"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH013_SC004",
+          "version": "1e66a549f6f8145ec9f745c3e33156a4fafd828e"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH013_SC004",
+          "version": "cb2f15403576441bcefd8554d6496bcafe85492f"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:53:55.470419+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "de53d83432d97446e309d4ecf2279d385f6a9fb1"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:53.856870+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "de53d83432d97446e309d4ecf2279d385f6a9fb1"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH017",
+    "scene_id": "CH013_SC004",
+    "chapter_id": "CH013",
+    "shot_order": 17,
+    "previous_shot_id": "SH016",
+    "next_shot_id": "SH018",
+    "primary_subject": "dorothy",
+    "secondary_subjects": [
+      "cowardly_lion",
+      "tin_woodman"
+    ],
+    "shot_moment_summary": "The group departs for the Emerald City",
+    "start_state": "dorothy dons the cap",
+    "end_state": "group disappears toward horizon",
+    "action_during_shot": "The group departs for the Emerald City",
+    "action_continues_from": "group disappears toward horizon",
+    "action_hands_off_to": "end_of_scene",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "dorothy",
+    "visible_secondary_subject_ids": [
+      "cowardly_lion",
+      "tin_woodman"
+    ],
+    "primary_subject_frame_position": "foreground right within yellow_castle",
+    "primary_subject_scale_relation": "Group scale (gift exchange) transitioning to individual scale (discovery).",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "dorothy dons the cap",
+    "subject_relation_summary": "dorothy plays against cowardly_lion, tin_woodman in the same frame",
+    "required_environment_anchor_1": "yellow_castle",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "Group scale (gift exchange) transitioning to individual scale (discovery).",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "group walking away from camera",
+      "yellow_castle to rocky plain [[CH013]]",
+      "dorothy remains readable within the active playing space.",
+      "cowardly_lion remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the yellow_castle.",
+      "Background depth should keep rocky_plain legible as the location anchor.",
+      "Subject 1: dorothy remains visually readable against the environment scale.",
+      "Subject 2: cowardly_lion remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "dorothy focuses toward the active scene action."
+    ],
+    "environment_subzone": "yellow_castle",
+    "key_visible_environment_features": [
+      "yellow_castle",
+      "Chapter-local beat subzone match for 'yellow_castle'."
+    ],
+    "continuity_from_previous_shot": "group disappears toward horizon",
+    "continuity_to_next_shot": "end_of_scene",
+    "pose_anchor_frame": "dorothy dons the cap",
+    "pose_end_frame": "group disappears toward horizon",
+    "shot_title": "Clean Single 17: The group departs for the Emerald City",
+    "shot_type": "clean_single",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in rocky_plain featuring dorothy, cowardly_lion, tin_woodman.",
+    "target_seconds": 7.5,
+    "characters_in_frame": [
+      {
+        "label": "Dorothy",
+        "canonical_id": "dorothy",
+        "display_name": "dorothy",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH013/dorothy.md",
+        "notes": "Direct registry match for 'dorothy'."
+      },
+      {
+        "label": "Cowardly Lion",
+        "canonical_id": "cowardly_lion",
+        "display_name": "cowardly_lion",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH013/cowardly_lion.md",
+        "notes": "Direct registry match for 'cowardly_lion'."
+      },
+      {
+        "label": "Tin Woodman",
+        "canonical_id": "tin_woodman",
+        "display_name": "tin_woodman",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH013/tin_woodman.md",
+        "notes": "Direct registry match for 'tin_woodman'."
+      }
+    ],
+    "environment": {
+      "label": "rocky_plain",
+      "canonical_id": "rocky_plain",
+      "display_name": "rocky_plain",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": null,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH013/rocky_plain.md",
+      "notes": "Chapter-local beat subzone match for 'yellow_castle'."
+    },
+    "beat_ids": [
+      "BT003"
+    ],
+    "continuity_constraints": [
+      "Toto's collar must be visible during gift exchange",
+      "Dorothy's bracelet must be present",
+      "The Golden Cap must remain on Dorothy's head for the final exit",
+      "The group departs for the Emerald City",
+      "Resolve The Witch's Cupboard/Storage area -> The Witch's Cupboard/Storage area"
+    ],
+    "prompt_seed": "Clean Single 17: The group departs for the Emerald City. clean_single. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Readable...",
+    "shot_notes": "The group departs for the Emerald City",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH013_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH013",
+        "scene_id": "CH013_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH013",
+        "scene_id": "CH013_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH013",
+        "scene_id": "CH013_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH013",
+        "scene_id": "CH013_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH013",
+        "scene_id": "CH013_SC004"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH013",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH013_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH012",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH012_chapter_xii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH002",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH002_chapter_ii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH011",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH011_chapter_xi.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH013",
+        "canonical_id": "dorothy"
+      }
+    ],
+    "evidence_summary": [
+      "Establish the transition from the West arc to the final journey through a ritualized gift exchange and a discovery of power. The sequence must move from the communal warmth of the Winkies' farewell to the individual agency of Dorothy finding the Golden Cap.",
+      "The group prepares to leave for the Emerald City. The Winkies present them with parting gifts (jewelry, gold-headed stick, silver oil-can). During food gathering, Dorothy finds the Golden Cap in the Witch's cupboard and decides to wear it as they depart.",
+      "From communal warmth to adventurous anticipation.",
+      "The group is gathered within the yellow_castle receiving gifts from winkies.",
+      "The group walks away toward the horizon with dorothy wearing the Golden Cap.",
+      "Receiving parting gifts, discovering the Golden Cap, and departing for the Emerald City.",
+      "Winkies | The Winkies are a group of humanoid, bipedal beings of human scale. They are visually defined by their consistent use of yellow clothing and serve as the enslaved population within the territory of the Wicked Witch of the West. | Yellow clothing....",
+      "dorothy | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md] Costume/Silhouette: Unknown. No specific clothing details are provided in this chapter. [source:C:/FilmCreator/projects/wizard_of_oz/02_...",
+      "cowardly_lion | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH008/cowardly_lion.md] Physical Description: Large animal; too heavy to be carried by the others. [source:C:/FilmCreator/projects/wizard_of_oz/02_s...",
+      "yellow_castle | The yellow_castle serves as the central seat of power within the Land of the West. Specific visual characteristics are currently undocumented in the provided evidence. | Unknown. | Unknown. | Unknown.",
+      "rocky_plain | No specific visual descriptors are provided in the current evidence. The environment functions as a location for transit and discovery. | Unknown. | Unknown. | Unknown."
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "suspense_investigation",
+    "coverage_role": "petitioner_single",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "set_piece",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT003",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "set_piece",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = set_piece"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH013_SC004_SH017_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "de53d83432d97446e309d4ecf2279d385f6a9fb1",
+      "created_at_utc": "2026-04-27T20:53:55.471795+00:00",
+      "updated_at_utc": "2026-04-27T20:54:53.862368+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH013_SC004",
+          "version": "8cff353a0279c6cdc7b92dca2e4d7537a16e26b6"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH013_SC004",
+          "version": "1e66a549f6f8145ec9f745c3e33156a4fafd828e"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH013_SC004",
+          "version": "cb2f15403576441bcefd8554d6496bcafe85492f"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:53:55.472299+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "de53d83432d97446e309d4ecf2279d385f6a9fb1"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:53.863369+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "de53d83432d97446e309d4ecf2279d385f6a9fb1"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH018",
+    "scene_id": "CH013_SC004",
+    "chapter_id": "CH013",
+    "shot_order": 18,
+    "previous_shot_id": "SH017",
+    "next_shot_id": "",
+    "primary_subject": "dorothy",
+    "secondary_subjects": [
+      "cowardly_lion"
+    ],
+    "shot_moment_summary": "The group departs for the Emerald City",
+    "start_state": "dorothy dons the cap",
+    "end_state": "group disappears toward horizon",
+    "action_during_shot": "The group departs for the Emerald City",
+    "action_continues_from": "group disappears toward horizon",
+    "action_hands_off_to": "end_of_scene",
+    "shot_size": "close_up",
+    "camera_angle": "eye_level",
+    "lens_family": "portrait",
+    "camera_motion": "push_in",
+    "zoom_behavior": "subtle_in",
+    "focus_strategy": "shallow_subject",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "dorothy",
+    "visible_secondary_subject_ids": [
+      "cowardly_lion"
+    ],
+    "primary_subject_frame_position": "foreground inside yellow_castle",
+    "primary_subject_scale_relation": "Group scale (gift exchange) transitioning to individual scale (discovery).",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "dorothy dons the cap",
+    "subject_relation_summary": "dorothy plays against cowardly_lion in the same frame",
+    "required_environment_anchor_1": "yellow_castle",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "Group scale (gift exchange) transitioning to individual scale (discovery).",
+    "camera_package_description": "close-up, eye level, portrait lens, push in, zoom subtle in, shallow subject, hard directional",
+    "subject_blocking": [
+      "group walking away from camera",
+      "yellow_castle to rocky plain [[CH013]]",
+      "dorothy remains readable within the active playing space.",
+      "cowardly_lion remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the yellow_castle.",
+      "Background depth should keep rocky_plain legible as the location anchor.",
+      "Subject 1: dorothy remains visually readable against the environment scale.",
+      "Subject 2: cowardly_lion remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "dorothy focuses toward the active scene action."
+    ],
+    "environment_subzone": "yellow_castle",
+    "key_visible_environment_features": [
+      "yellow_castle",
+      "Chapter-local beat subzone match for 'yellow_castle'."
+    ],
+    "continuity_from_previous_shot": "group disappears toward horizon",
+    "continuity_to_next_shot": "end_of_scene",
+    "pose_anchor_frame": "dorothy dons the cap",
+    "pose_end_frame": "group disappears toward horizon",
+    "shot_title": "Reaction Closeup 18: The group departs for the Emerald City",
+    "shot_type": "reaction_closeup",
+    "camera_description": "Close framing that isolates reaction and emotional emphasis.",
+    "composition": "Intimate composition that isolates dorothy, cowardly_lion against rocky_plain to capture the beat's emotional turn.",
+    "target_seconds": 7.5,
+    "characters_in_frame": [
+      {
+        "label": "Dorothy",
+        "canonical_id": "dorothy",
+        "display_name": "dorothy",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH013/dorothy.md",
+        "notes": "Direct registry match for 'dorothy'."
+      },
+      {
+        "label": "Cowardly Lion",
+        "canonical_id": "cowardly_lion",
+        "display_name": "cowardly_lion",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH013/cowardly_lion.md",
+        "notes": "Direct registry match for 'cowardly_lion'."
+      }
+    ],
+    "environment": {
+      "label": "rocky_plain",
+      "canonical_id": "rocky_plain",
+      "display_name": "rocky_plain",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": null,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH013/rocky_plain.md",
+      "notes": "Chapter-local beat subzone match for 'yellow_castle'."
+    },
+    "beat_ids": [
+      "BT003"
+    ],
+    "continuity_constraints": [
+      "Toto's collar must be visible during gift exchange",
+      "Dorothy's bracelet must be present",
+      "The Golden Cap must remain on Dorothy's head for the final exit",
+      "The group departs for the Emerald City",
+      "Resolve The Witch's Cupboard/Storage area -> The Witch's Cupboard/Storage area"
+    ],
+    "prompt_seed": "Reaction Closeup 18: The group departs for the Emerald City. reaction_closeup. size=close_up. angle=eye_level. lens=portrait. motion=push_in. zoom=subtle_in. focus=shallow_subject. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Close framing that isolates reaction and emotio...",
+    "shot_notes": "The group departs for the Emerald City",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH013_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH013",
+        "scene_id": "CH013_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH013",
+        "scene_id": "CH013_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH013",
+        "scene_id": "CH013_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH013",
+        "scene_id": "CH013_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH013",
+        "scene_id": "CH013_SC004"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH013",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH013_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH012",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH012_chapter_xii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH002",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH002_chapter_ii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH011",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH011_chapter_xi.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH013",
+        "canonical_id": "dorothy"
+      }
+    ],
+    "evidence_summary": [
+      "Establish the transition from the West arc to the final journey through a ritualized gift exchange and a discovery of power. The sequence must move from the communal warmth of the Winkies' farewell to the individual agency of Dorothy finding the Golden Cap.",
+      "The group prepares to leave for the Emerald City. The Winkies present them with parting gifts (jewelry, gold-headed stick, silver oil-can). During food gathering, Dorothy finds the Golden Cap in the Witch's cupboard and decides to wear it as they depart.",
+      "From communal warmth to adventurous anticipation.",
+      "The group is gathered within the yellow_castle receiving gifts from winkies.",
+      "The group walks away toward the horizon with dorothy wearing the Golden Cap.",
+      "Receiving parting gifts, discovering the Golden Cap, and departing for the Emerald City.",
+      "Winkies | The Winkies are a group of humanoid, bipedal beings of human scale. They are visually defined by their consistent use of yellow clothing and serve as the enslaved population within the territory of the Wicked Witch of the West. | Yellow clothing....",
+      "dorothy | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md] Costume/Silhouette: Unknown. No specific clothing details are provided in this chapter. [source:C:/FilmCreator/projects/wizard_of_oz/02_...",
+      "cowardly_lion | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH008/cowardly_lion.md] Physical Description: Large animal; too heavy to be carried by the others. [source:C:/FilmCreator/projects/wizard_of_oz/02_s...",
+      "yellow_castle | The yellow_castle serves as the central seat of power within the Land of the West. Specific visual characteristics are currently undocumented in the provided evidence. | Unknown. | Unknown. | Unknown.",
+      "rocky_plain | No specific visual descriptors are provided in the current evidence. The environment functions as a location for transit and discovery. | Unknown. | Unknown. | Unknown."
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "suspense_investigation",
+    "coverage_role": "reverse_reaction",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "set_piece",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT003",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "set_piece",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = set_piece"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH013_SC004_SH018_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "de53d83432d97446e309d4ecf2279d385f6a9fb1",
+      "created_at_utc": "2026-04-27T20:53:55.473302+00:00",
+      "updated_at_utc": "2026-04-27T20:54:53.868868+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH013_SC004",
+          "version": "8cff353a0279c6cdc7b92dca2e4d7537a16e26b6"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH013_SC004",
+          "version": "1e66a549f6f8145ec9f745c3e33156a4fafd828e"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH013_SC004",
+          "version": "cb2f15403576441bcefd8554d6496bcafe85492f"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:53:55.474301+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "de53d83432d97446e309d4ecf2279d385f6a9fb1"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:53.869369+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "de53d83432d97446e309d4ecf2279d385f6a9fb1"
         }
       ]
     }

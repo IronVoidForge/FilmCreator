@@ -1,5 +1,15 @@
 # Shot Index
 
-- `SH001` - Establishing Wide 1: Ritual of the Golden Cap (type=establishing_wide, target=5.5s, beat_ids=BT001, cast=3, env=scarlet_flower_fields, prev=(none), next=SH002)
-- `SH002` - Establishing Wide 2: Descent of the Monkeys (type=establishing_wide, target=5.3s, beat_ids=BT002, cast=3, env=scarlet_flower_fields, prev=SH001, next=SH003)
-- `SH003` - Establishing Wide 3: Aerial Ascent (type=establishing_wide, target=5.1s, beat_ids=BT003, cast=3, env=scarlet_flower_fields, prev=SH002, next=(none))
+- `SH001` - Task Medium 1: Ritual of the Golden Cap (type=task_medium, target=7.5s, beat_ids=BT001, cast=3, env=scarlet_flower_fields, prev=(none), next=SH002)
+- `SH002` - Hands Insert 2: Ritual of the Golden Cap (type=hands_insert, target=5.8s, beat_ids=BT001, cast=3, env=scarlet_flower_fields, prev=SH001, next=SH003)
+- `SH003` - Object Insert 3: Ritual of the Golden Cap (type=object_insert, target=5.8s, beat_ids=BT001, cast=3, env=scarlet_flower_fields, prev=SH002, next=SH004)
+- `SH004` - Result Medium 4: Ritual of the Golden Cap (type=result_medium, target=7.5s, beat_ids=BT001, cast=3, env=scarlet_flower_fields, prev=SH003, next=SH005)
+- `SH005` - Process Detail 5: Ritual of the Golden Cap (type=process_detail, target=5.8s, beat_ids=BT001, cast=3, env=scarlet_flower_fields, prev=SH004, next=SH006)
+- `SH006` - Reaction Closeup 6: Ritual of the Golden Cap (type=reaction_closeup, target=7.5s, beat_ids=BT001, cast=2, env=scarlet_flower_fields, prev=SH005, next=SH007)
+- `SH007` - Handoff Medium 7: Ritual of the Golden Cap (type=handoff_medium, target=7.5s, beat_ids=BT001, cast=3, env=scarlet_flower_fields, prev=SH006, next=SH008)
+- `SH008` - Handoff Medium 8: Descent of the Monkeys (type=handoff_medium, target=7.5s, beat_ids=BT002, cast=3, env=scarlet_flower_fields, prev=SH007, next=SH009)
+- `SH009` - Transition Wide 9: Descent of the Monkeys (type=transition_wide, target=11.5s, beat_ids=BT002, cast=3, env=scarlet_flower_fields, prev=SH008, next=SH010)
+- `SH010` - Insert Detail 10: Descent of the Monkeys (type=insert_detail, target=5.8s, beat_ids=BT002, cast=1, env=scarlet_flower_fields, prev=SH009, next=SH011)
+- `SH011` - Handoff Medium 11: Aerial Ascent (type=handoff_medium, target=7.5s, beat_ids=BT003, cast=3, env=scarlet_flower_fields, prev=SH010, next=SH012)
+- `SH012` - Transition Wide 12: Aerial Ascent (type=transition_wide, target=11.5s, beat_ids=BT003, cast=3, env=scarlet_flower_fields, prev=SH011, next=SH013)
+- `SH013` - Insert Detail 13: Aerial Ascent (type=insert_detail, target=5.8s, beat_ids=BT003, cast=1, env=scarlet_flower_fields, prev=SH012, next=(none))

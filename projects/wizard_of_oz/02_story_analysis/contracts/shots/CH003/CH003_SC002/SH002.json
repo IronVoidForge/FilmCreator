@@ -5,79 +5,75 @@
   "shot_order": 2,
   "previous_shot_id": "",
   "next_shot_id": "",
-  "primary_subject": "boq",
-  "secondary_subjects": [
-    "dorothy"
-  ],
-  "shot_moment_summary": "Boq identifies Dorothy's attire",
-  "start_state": "Boq approaching Dorothy",
-  "end_state": "Boq speaking to Dorothy",
-  "action_during_shot": "Boq stops in front of Dorothy",
+  "primary_subject": "Munchkin party guests",
+  "secondary_subjects": [],
+  "shot_moment_summary": "Festive celebration in the grounds",
+  "start_state": "guests dancing and eating",
+  "end_state": "Dorothy moving through crowd",
+  "action_during_shot": "Festive celebration in the grounds",
   "action_continues_from": "medium shot of crowd",
-  "action_hands_off_to": "BT003",
-  "shot_size": "medium_close",
+  "action_hands_off_to": "BT002",
+  "shot_size": "medium",
   "camera_angle": "eye_level",
   "lens_family": "normal",
-  "camera_motion": "push_in",
-  "zoom_behavior": "subtle_in",
-  "focus_strategy": "shallow_subject",
-  "lighting_style": "soft_even",
+  "camera_motion": "locked_off",
+  "zoom_behavior": "none",
+  "focus_strategy": "deep_focus",
+  "lighting_style": "hard_directional",
   "subject_visibility": "on_screen",
-  "narration_mode": "in_scene_speaker",
-  "primary_subject_angle": "front_three_quarter_right",
-  "visible_primary_subject_id": "boq",
-  "visible_secondary_subject_ids": [
-    "dorothy"
-  ],
-  "primary_subject_frame_position": "foreground inside celebration_grounds",
+  "narration_mode": "none",
+  "primary_subject_angle": "front_three_quarter_left",
+  "visible_primary_subject_id": "dorothy",
+  "visible_secondary_subject_ids": [],
+  "primary_subject_frame_position": "foreground right within celebration_grounds",
   "primary_subject_scale_relation": "Boq's wealth relative to the surrounding munchkin_country_farms.",
-  "primary_subject_facing_direction": "front three-quarter right toward the scene action",
-  "primary_subject_pose_description": "Boq approaching Dorothy",
-  "subject_relation_summary": "boq plays against dorothy in the same frame",
+  "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+  "primary_subject_pose_description": "guests dancing and eating",
+  "subject_relation_summary": "Munchkin party guests carries the frame alone",
   "required_environment_anchor_1": "celebration_grounds",
   "required_subject_anchor_1": "",
   "required_celestial_anchor_1": "",
   "required_scale_proof_detail": "Boq's wealth relative to the surrounding munchkin_country_farms.",
-  "camera_package_description": "medium-close, eye level, normal lens, push in, zoom subtle in, shallow subject, soft even",
+  "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
   "subject_blocking": [
-    "Boq moves into Dorothy's personal space",
-    "Boq breaks from the crowd toward Dorothy",
-    "near the center of festivities",
-    "Boq remains readable within the active playing space.",
+    "fluid movement across the courtyard",
+    "celebration_grounds",
+    "Munchkin party guests remains readable within the active playing space.",
     "dorothy remains readable within the active playing space."
   ],
   "camera_relative_positions": [
     "Camera anchors the action inside the celebration_grounds.",
     "Background depth should keep munchkin_country_farms legible as the location anchor.",
-    "Subject 1: Boq remains visually readable against the environment scale.",
+    "Subject 1: Munchkin party guests remains visually readable against the environment scale.",
     "Subject 2: dorothy remains visually readable against the environment scale."
   ],
   "gaze_directions": [
-    "boq focuses toward the active scene action."
+    "Munchkin party guests focuses toward the active scene action."
   ],
   "environment_subzone": "celebration_grounds",
   "key_visible_environment_features": [
-    "celebration_grounds"
+    "celebration_grounds",
+    "Chapter-local environment alias match for 'Boq's wealthy Munchkin home/Celebration grounds' (key_overlap=1, label_ove..."
   ],
   "continuity_from_previous_shot": "medium shot of crowd",
-  "continuity_to_next_shot": "BT003",
-  "pose_anchor_frame": "Boq approaching Dorothy",
-  "pose_end_frame": "Boq speaking to Dorothy",
-  "shot_title": "Reaction Closeup 2: Boq's approach and observation",
-  "shot_type": "reaction_closeup",
-  "camera_description": "Close framing that isolates reaction and emotional emphasis.",
-  "composition": "Intimate composition that isolates Boq, dorothy against munchkin_country_farms to capture the beat's emotional turn.",
-  "target_seconds": 5.3,
+  "continuity_to_next_shot": "BT002",
+  "pose_anchor_frame": "guests dancing and eating",
+  "pose_end_frame": "Dorothy moving through crowd",
+  "shot_title": "Authority Single 2: Festive celebration in the grounds",
+  "shot_type": "authority_single",
+  "camera_description": "Stable readable framing built from the beat requirement.",
+  "composition": "Readable medium composition in munchkin_country_farms featuring Munchkin party guests, dorothy.",
+  "target_seconds": 7.0,
   "characters_in_frame": [
     {
-      "label": "Boq",
-      "canonical_id": "boq",
-      "display_name": "Boq",
-      "status": "canonical",
+      "label": "Munchkin party guests",
+      "canonical_id": null,
+      "display_name": "Munchkin party guests",
+      "status": "review",
       "entity_kind": "individual",
-      "resolution_score": 138,
-      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH003/boq.md",
-      "notes": "Direct registry match for 'boq'."
+      "resolution_score": 16,
+      "source_path": "",
+      "notes": "Low-confidence character match requires review."
     },
     {
       "label": "Dorothy",
@@ -101,14 +97,16 @@
     "notes": "Chapter-local environment alias match for 'Boq's wealthy Munchkin home/Celebration grounds' (key_overlap=1, label_overlap=1, context_overlap=3)."
   },
   "beat_ids": [
-    "BT002"
+    "BT001"
   ],
   "continuity_constraints": [
     "Food and drink prop levels must remain consistent during celebration beats.",
-    "Lighting transition from day to night if following into night's rest."
+    "Lighting transition from day to night if following into night's rest.",
+    "Festive celebration in the grounds",
+    "Resolve Munchkin party guests -> Munchkin party guests"
   ],
-  "prompt_seed": "Reaction Closeup 2: Boq's approach and observation. reaction_closeup. size=medium_close. angle=eye_level. lens=normal. motion=push_in. zoom=subtle_in. focus=shallow_subject. lighting=soft_even. visibility=on_screen. subject_angle=front_three_quarter_right. Close framing that isolates reaction and emotional emphasis....",
-  "shot_notes": "Boq's approach and observation",
+  "prompt_seed": "Authority Single 2: Festive celebration in the grounds. authority_single. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Readab...",
+  "shot_notes": "Festive celebration in the grounds",
   "evidence_refs": [
     {
       "source": "scene_contract",
@@ -172,17 +170,34 @@
     "High-energy festive dancing and communal eating in a wealthy courtyard.",
     "Stagnant social tension following the witch accusation.",
     "Dorothy navigates a party until Boq misidentifies her as a friendly witch.",
-    "dorothy | Dorothy is a young human girl characterized by an expressive face and the appearance of a weary traveler. Her visual identity evolves during her journey, transitioning from previously green clothing to a white dress or clothing. She is most notabl...",
-    "Boq | Boq is a small-scale, bipedal humanoid of the Munchkin race. He possesses a high socioeconomic status within his community, characterized as one of the richest Munchkins in the land. While specific facial or bodily details are unstated, his visual ide...",
+    "dorothy | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md] Costume/Silhouette: Unknown. No specific clothing details are provided in this chapter. [source:C:/FilmCreator/projects/wizard_of_oz/02_...",
+    "Boq | Boq is a small-scale, bipedal humanoid of the Munchkin species. He possesses a visual identity defined by his significant wealth within his community. While specific facial or bodily details are unstated, he carries the presence of a high-status indiv...",
     "munchkin_country_farms | An idyllic landscape characterized by low-slung, rounded architecture. The environment features repetitive patterns of blue domes integrated with domestic farm structures, suggesting a prosperous and communal settlement. | Low-slung..."
   ],
+  "coverage_density": "medium",
+  "coverage_profile": "classic_adventure",
+  "coverage_intent": "economical_storybook",
+  "coverage_role": "authority_single",
+  "beat_type": "dialogue_council_or_court",
+  "coverage_importance": "major",
+  "coverage_blueprint_source": "deterministic_v1",
+  "coverage_classification": {
+    "beat_id": "BT001",
+    "beat_type": "dialogue_council_or_court",
+    "importance": "major",
+    "confidence": 0.82,
+    "reasons": [
+      "court/council authority language",
+      "importance = major"
+    ]
+  },
   "metadata": {
     "artifact_id": "CH003_SC002_SH002_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "d026cccda1894f61fb046181db3f836999f28ca6",
+    "source_fingerprint": "ca7a7c7c6b9e95c6902a22e06feb57de77c6bd05",
     "created_at_utc": "2026-04-27T09:52:45.270174+00:00",
-    "updated_at_utc": "2026-04-27T14:57:41.689959+00:00",
+    "updated_at_utc": "2026-04-27T20:54:25.826238+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
@@ -197,7 +212,7 @@
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH003_SC002",
-        "version": "11b6090f8cf05c3963caed0189ac7a41026f866c"
+        "version": "47f59525d2328a5c35ce6b7a79e3076fb5a31ef7"
       }
     ],
     "locked_fields": {},
@@ -212,6 +227,16 @@
         "timestamp_utc": "2026-04-27T14:58:56.989925+00:00",
         "action": "synthesized",
         "source_fingerprint": "d026cccda1894f61fb046181db3f836999f28ca6"
+      },
+      {
+        "timestamp_utc": "2026-04-27T20:53:28.812345+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "ca7a7c7c6b9e95c6902a22e06feb57de77c6bd05"
+      },
+      {
+        "timestamp_utc": "2026-04-27T20:54:25.826738+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "ca7a7c7c6b9e95c6902a22e06feb57de77c6bd05"
       }
     ]
   }

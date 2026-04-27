@@ -55,17 +55,18 @@
     ],
     "environment_subzone": "mossy_clearing_center",
     "key_visible_environment_features": [
-      "mossy_clearing_center"
+      "mossy_clearing_center",
+      "Chapter-local environment alias match for 'Forest Clearing' (key_overlap=1, label_overlap=2, context_overlap=3)."
     ],
     "continuity_from_previous_shot": "Lion appearing fearful/cowardly amidst forest beasts.",
     "continuity_to_next_shot": "BT002",
     "pose_anchor_frame": "Tiger speaking",
     "pose_end_frame": "Tiger finishing description",
-    "shot_title": "Reaction Closeup 1: Tiger describes the spider monster",
-    "shot_type": "reaction_closeup",
-    "camera_description": "Close framing that isolates reaction and emotional emphasis.",
-    "composition": "Intimate composition that isolates tiger, various forest beasts against ancient_forest_interior to capture the beat's emotional turn.",
-    "target_seconds": 5.5,
+    "shot_title": "Ceremonial Master 1: Tiger describes the spider monster",
+    "shot_type": "ceremonial_master",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in ancient_forest_interior featuring tiger, various forest beasts.",
+    "target_seconds": 10.8,
     "characters_in_frame": [
       {
         "label": "Tiger",
@@ -104,9 +105,12 @@
     "continuity_constraints": [
       "Maintain consistent eye contact between animals during negotiation",
       "Monitor Lion's posture shift from cowardice to bravado",
-      "Tiger describes the spider monster"
+      "Tiger describes the spider monster",
+      "Resolve Lion -> Lion",
+      "Resolve various forest beasts -> various forest beasts",
+      "Resolve Dorothy and companions (as observers) -> Dorothy and companions (as observers)"
     ],
-    "prompt_seed": "Reaction Closeup 1: Tiger describes the spider monster. reaction_closeup. size=medium_close. angle=eye_level. lens=portrait. motion=locked_off. zoom=none. focus=shallow_subject. lighting=diffuse_ambient. visibility=on_screen. subject_angle=front_three_quarter_right. Close framing that isolates reaction and emotional...",
+    "prompt_seed": "Ceremonial Master 1: Tiger describes the spider monster. ceremonial_master. size=medium_close. angle=eye_level. lens=portrait. motion=locked_off. zoom=none. focus=shallow_subject. lighting=diffuse_ambient. visibility=on_screen. subject_angle=front_three_quarter_right. Stable readable framing built from the beat requ...",
     "shot_notes": "Tiger describes the spider monster",
     "evidence_refs": [
       {
@@ -174,13 +178,30 @@
       "tiger | A large-scale quadrupedal beast characterized by a feline, tiger-like head. While the specific body morphology is linked to \"monstrous beasts\" (Kalidahs) possessing bear-like bodies, the primary identifier is the distinct tiger visage. | unknown | u...",
       "ancient_forest_interior | No specific visual descriptors are provided in the current evidence. The location is identified as an ancient forest interior serving as a primary setting. | Unknown | Unknown | Unknown"
     ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "adventure_action",
+    "coverage_role": "ceremonial_master",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT001",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "major",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = major"
+      ]
+    },
     "metadata": {
       "artifact_id": "CH021_SC003_SH001_SHOT_PACKAGE",
       "artifact_type": "shot_package",
       "status": "generated",
-      "source_fingerprint": "d7952d4eaa56314641b6c3816d1634e087147966",
+      "source_fingerprint": "45bb62d402aae9b35f37b9db337b58524d6257a1",
       "created_at_utc": "2026-04-27T20:01:58.906840+00:00",
-      "updated_at_utc": "2026-04-27T20:01:58.906840+00:00",
+      "updated_at_utc": "2026-04-27T20:55:12.149350+00:00",
       "upstream_dependencies": [
         {
           "dependency_type": "scene_contract",
@@ -195,7 +216,7 @@
         {
           "dependency_type": "shot_blueprints",
           "dependency_id": "CH021_SC003",
-          "version": "dac286ea1a2979542e8005d5f739e65b267b9003"
+          "version": "36e57941030b952a00311672c84e13e8b6c82be8"
         }
       ],
       "locked_fields": {},
@@ -205,6 +226,16 @@
           "timestamp_utc": "2026-04-27T20:03:17.912255+00:00",
           "action": "synthesized",
           "source_fingerprint": "d7952d4eaa56314641b6c3816d1634e087147966"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:12.857959+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "45bb62d402aae9b35f37b9db337b58524d6257a1"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:55:12.615770+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "45bb62d402aae9b35f37b9db337b58524d6257a1"
         }
       ]
     }
@@ -216,13 +247,1477 @@
     "shot_order": 2,
     "previous_shot_id": "SH001",
     "next_shot_id": "SH003",
+    "primary_subject": "tiger",
+    "secondary_subjects": [],
+    "shot_moment_summary": "Tiger describes the spider monster",
+    "start_state": "Tiger begins speaking",
+    "end_state": "Description of the beast is complete",
+    "action_during_shot": "Tiger describes the spider monster",
+    "action_continues_from": "Tiger finishing description",
+    "action_hands_off_to": "BT002",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "tiger",
+    "visible_secondary_subject_ids": [],
+    "primary_subject_frame_position": "foreground right within mossy_clearing_center",
+    "primary_subject_scale_relation": "Tiger is a large-scale quadrupedal beast compared to the Lion and observers.",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "Tiger begins speaking",
+    "subject_relation_summary": "tiger carries the frame alone",
+    "required_environment_anchor_1": "mossy_clearing_center",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "Tiger is a large-scale quadrupedal beast compared to the Lion and observers.",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "Tiger at center of circle",
+      "mossy_clearing_center",
+      "tiger remains readable within the active playing space.",
+      "various forest beasts remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the mossy_clearing_center.",
+      "Background depth should keep ancient_forest_interior legible as the location anchor.",
+      "Subject 1: tiger remains visually readable against the environment scale.",
+      "Subject 2: various forest beasts remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "tiger focuses toward the active scene action."
+    ],
+    "environment_subzone": "mossy_clearing_center",
+    "key_visible_environment_features": [
+      "mossy_clearing_center",
+      "Chapter-local environment alias match for 'Forest Clearing' (key_overlap=1, label_overlap=2, context_overlap=3)."
+    ],
+    "continuity_from_previous_shot": "Tiger finishing description",
+    "continuity_to_next_shot": "BT002",
+    "pose_anchor_frame": "Tiger begins speaking",
+    "pose_end_frame": "Description of the beast is complete",
+    "shot_title": "Authority Single 2: Tiger describes the spider monster",
+    "shot_type": "authority_single",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in ancient_forest_interior featuring tiger, various forest beasts, Dorothy and companions (as observers).",
+    "target_seconds": 7.0,
+    "characters_in_frame": [
+      {
+        "label": "Tiger",
+        "canonical_id": "tiger",
+        "display_name": "tiger",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH021/tiger.md",
+        "notes": "Direct registry match for 'tiger'."
+      },
+      {
+        "label": "various forest beasts",
+        "canonical_id": null,
+        "display_name": "various forest beasts",
+        "status": "review",
+        "entity_kind": "individual",
+        "resolution_score": 16,
+        "source_path": "",
+        "notes": "Low-confidence character match requires review."
+      },
+      {
+        "label": "Dorothy and companions (as observers)",
+        "canonical_id": null,
+        "display_name": "Dorothy and companions (as observers)",
+        "status": "review",
+        "entity_kind": "individual",
+        "resolution_score": 16,
+        "source_path": "",
+        "notes": "Low-confidence character match requires review."
+      }
+    ],
+    "environment": {
+      "label": "Forest Clearing",
+      "canonical_id": "ancient_forest_interior",
+      "display_name": "ancient_forest_interior",
+      "status": "canonical",
+      "entity_kind": "sub_location",
+      "resolution_score": 74,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH021/ancient_forest_interior.md",
+      "notes": "Chapter-local environment alias match for 'Forest Clearing' (key_overlap=1, label_overlap=2, context_overlap=3)."
+    },
+    "beat_ids": [
+      "BT001"
+    ],
+    "continuity_constraints": [
+      "Maintain consistent eye contact between animals during negotiation",
+      "Monitor Lion's posture shift from cowardice to bravado",
+      "Tiger describes the spider monster",
+      "Resolve Lion -> Lion",
+      "Resolve various forest beasts -> various forest beasts",
+      "Resolve Dorothy and companions (as observers) -> Dorothy and companions (as observers)"
+    ],
+    "prompt_seed": "Authority Single 2: Tiger describes the spider monster. authority_single. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Readab...",
+    "shot_notes": "Tiger describes the spider monster",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH021_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH021",
+        "scene_id": "CH021_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH021",
+        "scene_id": "CH021_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH021",
+        "scene_id": "CH021_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH021",
+        "scene_id": "CH021_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH021",
+        "scene_id": "CH021_SC003"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH021",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH021_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH021",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH021_chapter_xxi.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH006",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH006_chapter_vi.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH007",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH007_chapter_vii.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH021",
+        "canonical_id": "tiger"
+      }
+    ],
+    "evidence_summary": [
+      "Establish the Lion's transition from a fearful observer to an ambitious leader through a high-stakes negotiation triggered by a shared threat. The scale of the tiger and the ancient forest must emphasize the gravity of the spider-monster threat.",
+      "A tiger explains that a giant spider-like monster is terrorizing the forest. The Lion seizes the opportunity, striking a deal with the animals: if he kills the beast, they will crown him King of the Forest.",
+      "Fear to ambitious determination (Lion).",
+      "Lion appearing fearful/cowardly amidst forest beasts.",
+      "Lion standing with bravado, claiming kingship.",
+      "Tiger describes the spider monster; Lion proposes a deal for kingship.",
+      "tiger | A large-scale quadrupedal beast characterized by a feline, tiger-like head. While the specific body morphology is linked to \"monstrous beasts\" (Kalidahs) possessing bear-like bodies, the primary identifier is the distinct tiger visage. | unknown | u...",
+      "ancient_forest_interior | No specific visual descriptors are provided in the current evidence. The location is identified as an ancient forest interior serving as a primary setting. | Unknown | Unknown | Unknown"
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "adventure_action",
+    "coverage_role": "authority_single",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT001",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "major",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = major"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH021_SC003_SH002_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "45bb62d402aae9b35f37b9db337b58524d6257a1",
+      "created_at_utc": "2026-04-27T20:03:17.913256+00:00",
+      "updated_at_utc": "2026-04-27T20:55:12.622279+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH021_SC003",
+          "version": "c27419634059cdca954f0d3d312be680781fd0d2"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH021_SC003",
+          "version": "0d620289d2b867830358bc641367944b82208341"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH021_SC003",
+          "version": "36e57941030b952a00311672c84e13e8b6c82be8"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:04:30.327536+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "d7952d4eaa56314641b6c3816d1634e087147966"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:12.865459+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "45bb62d402aae9b35f37b9db337b58524d6257a1"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:55:12.623277+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "45bb62d402aae9b35f37b9db337b58524d6257a1"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH003",
+    "scene_id": "CH021_SC003",
+    "chapter_id": "CH021",
+    "shot_order": 3,
+    "previous_shot_id": "SH002",
+    "next_shot_id": "SH004",
+    "primary_subject": "tiger",
+    "secondary_subjects": [],
+    "shot_moment_summary": "Tiger describes the spider monster",
+    "start_state": "Tiger begins speaking",
+    "end_state": "Description of the beast is complete",
+    "action_during_shot": "Tiger describes the spider monster",
+    "action_continues_from": "Description of the beast is complete",
+    "action_hands_off_to": "BT002",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "tiger",
+    "visible_secondary_subject_ids": [],
+    "primary_subject_frame_position": "foreground right within mossy_clearing_center",
+    "primary_subject_scale_relation": "Tiger is a large-scale quadrupedal beast compared to the Lion and observers.",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "Tiger begins speaking",
+    "subject_relation_summary": "tiger carries the frame alone",
+    "required_environment_anchor_1": "mossy_clearing_center",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "Tiger is a large-scale quadrupedal beast compared to the Lion and observers.",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "Tiger at center of circle",
+      "mossy_clearing_center",
+      "tiger remains readable within the active playing space.",
+      "various forest beasts remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the mossy_clearing_center.",
+      "Background depth should keep ancient_forest_interior legible as the location anchor.",
+      "Subject 1: tiger remains visually readable against the environment scale.",
+      "Subject 2: various forest beasts remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "tiger focuses toward the active scene action."
+    ],
+    "environment_subzone": "mossy_clearing_center",
+    "key_visible_environment_features": [
+      "mossy_clearing_center",
+      "Chapter-local environment alias match for 'Forest Clearing' (key_overlap=1, label_overlap=2, context_overlap=3)."
+    ],
+    "continuity_from_previous_shot": "Description of the beast is complete",
+    "continuity_to_next_shot": "BT002",
+    "pose_anchor_frame": "Tiger begins speaking",
+    "pose_end_frame": "Description of the beast is complete",
+    "shot_title": "Petitioner Group 3: Tiger describes the spider monster",
+    "shot_type": "petitioner_group",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in ancient_forest_interior featuring tiger, various forest beasts, Dorothy and companions (as observers).",
+    "target_seconds": 7.0,
+    "characters_in_frame": [
+      {
+        "label": "Tiger",
+        "canonical_id": "tiger",
+        "display_name": "tiger",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH021/tiger.md",
+        "notes": "Direct registry match for 'tiger'."
+      },
+      {
+        "label": "various forest beasts",
+        "canonical_id": null,
+        "display_name": "various forest beasts",
+        "status": "review",
+        "entity_kind": "individual",
+        "resolution_score": 16,
+        "source_path": "",
+        "notes": "Low-confidence character match requires review."
+      },
+      {
+        "label": "Dorothy and companions (as observers)",
+        "canonical_id": null,
+        "display_name": "Dorothy and companions (as observers)",
+        "status": "review",
+        "entity_kind": "individual",
+        "resolution_score": 16,
+        "source_path": "",
+        "notes": "Low-confidence character match requires review."
+      }
+    ],
+    "environment": {
+      "label": "Forest Clearing",
+      "canonical_id": "ancient_forest_interior",
+      "display_name": "ancient_forest_interior",
+      "status": "canonical",
+      "entity_kind": "sub_location",
+      "resolution_score": 74,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH021/ancient_forest_interior.md",
+      "notes": "Chapter-local environment alias match for 'Forest Clearing' (key_overlap=1, label_overlap=2, context_overlap=3)."
+    },
+    "beat_ids": [
+      "BT001"
+    ],
+    "continuity_constraints": [
+      "Maintain consistent eye contact between animals during negotiation",
+      "Monitor Lion's posture shift from cowardice to bravado",
+      "Tiger describes the spider monster",
+      "Resolve Lion -> Lion",
+      "Resolve various forest beasts -> various forest beasts",
+      "Resolve Dorothy and companions (as observers) -> Dorothy and companions (as observers)"
+    ],
+    "prompt_seed": "Petitioner Group 3: Tiger describes the spider monster. petitioner_group. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Readab...",
+    "shot_notes": "Tiger describes the spider monster",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH021_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH021",
+        "scene_id": "CH021_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH021",
+        "scene_id": "CH021_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH021",
+        "scene_id": "CH021_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH021",
+        "scene_id": "CH021_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH021",
+        "scene_id": "CH021_SC003"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH021",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH021_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH021",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH021_chapter_xxi.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH006",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH006_chapter_vi.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH007",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH007_chapter_vii.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH021",
+        "canonical_id": "tiger"
+      }
+    ],
+    "evidence_summary": [
+      "Establish the Lion's transition from a fearful observer to an ambitious leader through a high-stakes negotiation triggered by a shared threat. The scale of the tiger and the ancient forest must emphasize the gravity of the spider-monster threat.",
+      "A tiger explains that a giant spider-like monster is terrorizing the forest. The Lion seizes the opportunity, striking a deal with the animals: if he kills the beast, they will crown him King of the Forest.",
+      "Fear to ambitious determination (Lion).",
+      "Lion appearing fearful/cowardly amidst forest beasts.",
+      "Lion standing with bravado, claiming kingship.",
+      "Tiger describes the spider monster; Lion proposes a deal for kingship.",
+      "tiger | A large-scale quadrupedal beast characterized by a feline, tiger-like head. While the specific body morphology is linked to \"monstrous beasts\" (Kalidahs) possessing bear-like bodies, the primary identifier is the distinct tiger visage. | unknown | u...",
+      "ancient_forest_interior | No specific visual descriptors are provided in the current evidence. The location is identified as an ancient forest interior serving as a primary setting. | Unknown | Unknown | Unknown"
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "adventure_action",
+    "coverage_role": "petitioner_group",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT001",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "major",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = major"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH021_SC003_SH003_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "45bb62d402aae9b35f37b9db337b58524d6257a1",
+      "created_at_utc": "2026-04-27T20:04:30.329037+00:00",
+      "updated_at_utc": "2026-04-27T20:55:12.629286+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH021_SC003",
+          "version": "c27419634059cdca954f0d3d312be680781fd0d2"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH021_SC003",
+          "version": "0d620289d2b867830358bc641367944b82208341"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH021_SC003",
+          "version": "36e57941030b952a00311672c84e13e8b6c82be8"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:05:43.874269+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "d7952d4eaa56314641b6c3816d1634e087147966"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:12.871971+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "45bb62d402aae9b35f37b9db337b58524d6257a1"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:55:12.630286+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "45bb62d402aae9b35f37b9db337b58524d6257a1"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH004",
+    "scene_id": "CH021_SC003",
+    "chapter_id": "CH021",
+    "shot_order": 4,
+    "previous_shot_id": "SH003",
+    "next_shot_id": "SH005",
+    "primary_subject": "tiger",
+    "secondary_subjects": [],
+    "shot_moment_summary": "Tiger describes the spider monster",
+    "start_state": "Tiger begins speaking",
+    "end_state": "Description of the beast is complete",
+    "action_during_shot": "Tiger describes the spider monster",
+    "action_continues_from": "Description of the beast is complete",
+    "action_hands_off_to": "BT002",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "tiger",
+    "visible_secondary_subject_ids": [],
+    "primary_subject_frame_position": "foreground right within mossy_clearing_center",
+    "primary_subject_scale_relation": "Tiger is a large-scale quadrupedal beast compared to the Lion and observers.",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "Tiger begins speaking",
+    "subject_relation_summary": "tiger carries the frame alone",
+    "required_environment_anchor_1": "mossy_clearing_center",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "Tiger is a large-scale quadrupedal beast compared to the Lion and observers.",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "Tiger at center of circle",
+      "mossy_clearing_center",
+      "tiger remains readable within the active playing space.",
+      "various forest beasts remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the mossy_clearing_center.",
+      "Background depth should keep ancient_forest_interior legible as the location anchor.",
+      "Subject 1: tiger remains visually readable against the environment scale.",
+      "Subject 2: various forest beasts remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "tiger focuses toward the active scene action."
+    ],
+    "environment_subzone": "mossy_clearing_center",
+    "key_visible_environment_features": [
+      "mossy_clearing_center",
+      "Chapter-local environment alias match for 'Forest Clearing' (key_overlap=1, label_overlap=2, context_overlap=3)."
+    ],
+    "continuity_from_previous_shot": "Description of the beast is complete",
+    "continuity_to_next_shot": "BT002",
+    "pose_anchor_frame": "Tiger begins speaking",
+    "pose_end_frame": "Description of the beast is complete",
+    "shot_title": "Crowd Response 4: Tiger describes the spider monster",
+    "shot_type": "crowd_response",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in ancient_forest_interior featuring tiger, various forest beasts, Dorothy and companions (as observers).",
+    "target_seconds": 7.0,
+    "characters_in_frame": [
+      {
+        "label": "Tiger",
+        "canonical_id": "tiger",
+        "display_name": "tiger",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH021/tiger.md",
+        "notes": "Direct registry match for 'tiger'."
+      },
+      {
+        "label": "various forest beasts",
+        "canonical_id": null,
+        "display_name": "various forest beasts",
+        "status": "review",
+        "entity_kind": "individual",
+        "resolution_score": 16,
+        "source_path": "",
+        "notes": "Low-confidence character match requires review."
+      },
+      {
+        "label": "Dorothy and companions (as observers)",
+        "canonical_id": null,
+        "display_name": "Dorothy and companions (as observers)",
+        "status": "review",
+        "entity_kind": "individual",
+        "resolution_score": 16,
+        "source_path": "",
+        "notes": "Low-confidence character match requires review."
+      }
+    ],
+    "environment": {
+      "label": "Forest Clearing",
+      "canonical_id": "ancient_forest_interior",
+      "display_name": "ancient_forest_interior",
+      "status": "canonical",
+      "entity_kind": "sub_location",
+      "resolution_score": 74,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH021/ancient_forest_interior.md",
+      "notes": "Chapter-local environment alias match for 'Forest Clearing' (key_overlap=1, label_overlap=2, context_overlap=3)."
+    },
+    "beat_ids": [
+      "BT001"
+    ],
+    "continuity_constraints": [
+      "Maintain consistent eye contact between animals during negotiation",
+      "Monitor Lion's posture shift from cowardice to bravado",
+      "Tiger describes the spider monster",
+      "Resolve Lion -> Lion",
+      "Resolve various forest beasts -> various forest beasts",
+      "Resolve Dorothy and companions (as observers) -> Dorothy and companions (as observers)"
+    ],
+    "prompt_seed": "Crowd Response 4: Tiger describes the spider monster. crowd_response. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Readable m...",
+    "shot_notes": "Tiger describes the spider monster",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH021_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH021",
+        "scene_id": "CH021_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH021",
+        "scene_id": "CH021_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH021",
+        "scene_id": "CH021_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH021",
+        "scene_id": "CH021_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH021",
+        "scene_id": "CH021_SC003"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH021",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH021_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH021",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH021_chapter_xxi.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH006",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH006_chapter_vi.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH007",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH007_chapter_vii.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH021",
+        "canonical_id": "tiger"
+      }
+    ],
+    "evidence_summary": [
+      "Establish the Lion's transition from a fearful observer to an ambitious leader through a high-stakes negotiation triggered by a shared threat. The scale of the tiger and the ancient forest must emphasize the gravity of the spider-monster threat.",
+      "A tiger explains that a giant spider-like monster is terrorizing the forest. The Lion seizes the opportunity, striking a deal with the animals: if he kills the beast, they will crown him King of the Forest.",
+      "Fear to ambitious determination (Lion).",
+      "Lion appearing fearful/cowardly amidst forest beasts.",
+      "Lion standing with bravado, claiming kingship.",
+      "Tiger describes the spider monster; Lion proposes a deal for kingship.",
+      "tiger | A large-scale quadrupedal beast characterized by a feline, tiger-like head. While the specific body morphology is linked to \"monstrous beasts\" (Kalidahs) possessing bear-like bodies, the primary identifier is the distinct tiger visage. | unknown | u...",
+      "ancient_forest_interior | No specific visual descriptors are provided in the current evidence. The location is identified as an ancient forest interior serving as a primary setting. | Unknown | Unknown | Unknown"
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "adventure_action",
+    "coverage_role": "crowd_response",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT001",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "major",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = major"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH021_SC003_SH004_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "45bb62d402aae9b35f37b9db337b58524d6257a1",
+      "created_at_utc": "2026-04-27T20:54:12.872972+00:00",
+      "updated_at_utc": "2026-04-27T20:55:12.635786+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH021_SC003",
+          "version": "c27419634059cdca954f0d3d312be680781fd0d2"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH021_SC003",
+          "version": "0d620289d2b867830358bc641367944b82208341"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH021_SC003",
+          "version": "36e57941030b952a00311672c84e13e8b6c82be8"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:54:12.873971+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "45bb62d402aae9b35f37b9db337b58524d6257a1"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:55:12.636788+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "45bb62d402aae9b35f37b9db337b58524d6257a1"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH005",
+    "scene_id": "CH021_SC003",
+    "chapter_id": "CH021",
+    "shot_order": 5,
+    "previous_shot_id": "SH004",
+    "next_shot_id": "SH006",
+    "primary_subject": "tiger",
+    "secondary_subjects": [],
+    "shot_moment_summary": "Tiger describes the spider monster",
+    "start_state": "Tiger begins speaking",
+    "end_state": "Description of the beast is complete",
+    "action_during_shot": "Tiger describes the spider monster",
+    "action_continues_from": "Description of the beast is complete",
+    "action_hands_off_to": "BT002",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "tiger",
+    "visible_secondary_subject_ids": [],
+    "primary_subject_frame_position": "foreground right within mossy_clearing_center",
+    "primary_subject_scale_relation": "Tiger is a large-scale quadrupedal beast compared to the Lion and observers.",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "Tiger begins speaking",
+    "subject_relation_summary": "tiger carries the frame alone",
+    "required_environment_anchor_1": "mossy_clearing_center",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "Tiger is a large-scale quadrupedal beast compared to the Lion and observers.",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "Tiger at center of circle",
+      "mossy_clearing_center",
+      "tiger remains readable within the active playing space.",
+      "various forest beasts remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the mossy_clearing_center.",
+      "Background depth should keep ancient_forest_interior legible as the location anchor.",
+      "Subject 1: tiger remains visually readable against the environment scale.",
+      "Subject 2: various forest beasts remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "tiger focuses toward the active scene action."
+    ],
+    "environment_subzone": "mossy_clearing_center",
+    "key_visible_environment_features": [
+      "mossy_clearing_center",
+      "Chapter-local environment alias match for 'Forest Clearing' (key_overlap=1, label_overlap=2, context_overlap=3)."
+    ],
+    "continuity_from_previous_shot": "Description of the beast is complete",
+    "continuity_to_next_shot": "BT002",
+    "pose_anchor_frame": "Tiger begins speaking",
+    "pose_end_frame": "Description of the beast is complete",
+    "shot_title": "Symbol Insert 5: Tiger describes the spider monster",
+    "shot_type": "symbol_insert",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in ancient_forest_interior featuring tiger, various forest beasts, Dorothy and companions (as observers).",
+    "target_seconds": 5.4,
+    "characters_in_frame": [
+      {
+        "label": "Tiger",
+        "canonical_id": "tiger",
+        "display_name": "tiger",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH021/tiger.md",
+        "notes": "Direct registry match for 'tiger'."
+      },
+      {
+        "label": "various forest beasts",
+        "canonical_id": null,
+        "display_name": "various forest beasts",
+        "status": "review",
+        "entity_kind": "individual",
+        "resolution_score": 16,
+        "source_path": "",
+        "notes": "Low-confidence character match requires review."
+      },
+      {
+        "label": "Dorothy and companions (as observers)",
+        "canonical_id": null,
+        "display_name": "Dorothy and companions (as observers)",
+        "status": "review",
+        "entity_kind": "individual",
+        "resolution_score": 16,
+        "source_path": "",
+        "notes": "Low-confidence character match requires review."
+      }
+    ],
+    "environment": {
+      "label": "Forest Clearing",
+      "canonical_id": "ancient_forest_interior",
+      "display_name": "ancient_forest_interior",
+      "status": "canonical",
+      "entity_kind": "sub_location",
+      "resolution_score": 74,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH021/ancient_forest_interior.md",
+      "notes": "Chapter-local environment alias match for 'Forest Clearing' (key_overlap=1, label_overlap=2, context_overlap=3)."
+    },
+    "beat_ids": [
+      "BT001"
+    ],
+    "continuity_constraints": [
+      "Maintain consistent eye contact between animals during negotiation",
+      "Monitor Lion's posture shift from cowardice to bravado",
+      "Tiger describes the spider monster",
+      "Resolve Lion -> Lion",
+      "Resolve various forest beasts -> various forest beasts",
+      "Resolve Dorothy and companions (as observers) -> Dorothy and companions (as observers)"
+    ],
+    "prompt_seed": "Symbol Insert 5: Tiger describes the spider monster. symbol_insert. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Readable med...",
+    "shot_notes": "Tiger describes the spider monster",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH021_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH021",
+        "scene_id": "CH021_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH021",
+        "scene_id": "CH021_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH021",
+        "scene_id": "CH021_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH021",
+        "scene_id": "CH021_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH021",
+        "scene_id": "CH021_SC003"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH021",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH021_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH021",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH021_chapter_xxi.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH006",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH006_chapter_vi.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH007",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH007_chapter_vii.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH021",
+        "canonical_id": "tiger"
+      }
+    ],
+    "evidence_summary": [
+      "Establish the Lion's transition from a fearful observer to an ambitious leader through a high-stakes negotiation triggered by a shared threat. The scale of the tiger and the ancient forest must emphasize the gravity of the spider-monster threat.",
+      "A tiger explains that a giant spider-like monster is terrorizing the forest. The Lion seizes the opportunity, striking a deal with the animals: if he kills the beast, they will crown him King of the Forest.",
+      "Fear to ambitious determination (Lion).",
+      "Lion appearing fearful/cowardly amidst forest beasts.",
+      "Lion standing with bravado, claiming kingship.",
+      "Tiger describes the spider monster; Lion proposes a deal for kingship.",
+      "tiger | A large-scale quadrupedal beast characterized by a feline, tiger-like head. While the specific body morphology is linked to \"monstrous beasts\" (Kalidahs) possessing bear-like bodies, the primary identifier is the distinct tiger visage. | unknown | u...",
+      "ancient_forest_interior | No specific visual descriptors are provided in the current evidence. The location is identified as an ancient forest interior serving as a primary setting. | Unknown | Unknown | Unknown"
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "adventure_action",
+    "coverage_role": "symbol_insert",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT001",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "major",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = major"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH021_SC003_SH005_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "45bb62d402aae9b35f37b9db337b58524d6257a1",
+      "created_at_utc": "2026-04-27T20:54:12.875472+00:00",
+      "updated_at_utc": "2026-04-27T20:55:12.642303+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH021_SC003",
+          "version": "c27419634059cdca954f0d3d312be680781fd0d2"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH021_SC003",
+          "version": "0d620289d2b867830358bc641367944b82208341"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH021_SC003",
+          "version": "36e57941030b952a00311672c84e13e8b6c82be8"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:54:12.875973+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "45bb62d402aae9b35f37b9db337b58524d6257a1"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:55:12.643303+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "45bb62d402aae9b35f37b9db337b58524d6257a1"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH006",
+    "scene_id": "CH021_SC003",
+    "chapter_id": "CH021",
+    "shot_order": 6,
+    "previous_shot_id": "SH005",
+    "next_shot_id": "SH007",
+    "primary_subject": "tiger",
+    "secondary_subjects": [],
+    "shot_moment_summary": "Tiger describes the spider monster",
+    "start_state": "Tiger begins speaking",
+    "end_state": "Description of the beast is complete",
+    "action_during_shot": "Tiger describes the spider monster",
+    "action_continues_from": "Description of the beast is complete",
+    "action_hands_off_to": "BT002",
+    "shot_size": "close_up",
+    "camera_angle": "eye_level",
+    "lens_family": "portrait",
+    "camera_motion": "push_in",
+    "zoom_behavior": "subtle_in",
+    "focus_strategy": "shallow_subject",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "tiger",
+    "visible_secondary_subject_ids": [],
+    "primary_subject_frame_position": "foreground inside mossy_clearing_center",
+    "primary_subject_scale_relation": "Tiger is a large-scale quadrupedal beast compared to the Lion and observers.",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "Tiger begins speaking",
+    "subject_relation_summary": "tiger carries the frame alone",
+    "required_environment_anchor_1": "mossy_clearing_center",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "Tiger is a large-scale quadrupedal beast compared to the Lion and observers.",
+    "camera_package_description": "close-up, eye level, portrait lens, push in, zoom subtle in, shallow subject, hard directional",
+    "subject_blocking": [
+      "Tiger at center of circle",
+      "mossy_clearing_center",
+      "tiger remains readable within the active playing space.",
+      "various forest beasts remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the mossy_clearing_center.",
+      "Background depth should keep ancient_forest_interior legible as the location anchor.",
+      "Subject 1: tiger remains visually readable against the environment scale.",
+      "Subject 2: various forest beasts remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "tiger focuses toward the active scene action."
+    ],
+    "environment_subzone": "mossy_clearing_center",
+    "key_visible_environment_features": [
+      "mossy_clearing_center",
+      "Chapter-local environment alias match for 'Forest Clearing' (key_overlap=1, label_overlap=2, context_overlap=3)."
+    ],
+    "continuity_from_previous_shot": "Description of the beast is complete",
+    "continuity_to_next_shot": "BT002",
+    "pose_anchor_frame": "Tiger begins speaking",
+    "pose_end_frame": "Description of the beast is complete",
+    "shot_title": "Reaction Closeup 6: Tiger describes the spider monster",
+    "shot_type": "reaction_closeup",
+    "camera_description": "Close framing that isolates reaction and emotional emphasis.",
+    "composition": "Intimate composition that isolates tiger, various forest beasts against ancient_forest_interior to capture the beat's emotional turn.",
+    "target_seconds": 7.0,
+    "characters_in_frame": [
+      {
+        "label": "Tiger",
+        "canonical_id": "tiger",
+        "display_name": "tiger",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH021/tiger.md",
+        "notes": "Direct registry match for 'tiger'."
+      },
+      {
+        "label": "various forest beasts",
+        "canonical_id": null,
+        "display_name": "various forest beasts",
+        "status": "review",
+        "entity_kind": "individual",
+        "resolution_score": 16,
+        "source_path": "",
+        "notes": "Low-confidence character match requires review."
+      }
+    ],
+    "environment": {
+      "label": "Forest Clearing",
+      "canonical_id": "ancient_forest_interior",
+      "display_name": "ancient_forest_interior",
+      "status": "canonical",
+      "entity_kind": "sub_location",
+      "resolution_score": 74,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH021/ancient_forest_interior.md",
+      "notes": "Chapter-local environment alias match for 'Forest Clearing' (key_overlap=1, label_overlap=2, context_overlap=3)."
+    },
+    "beat_ids": [
+      "BT001"
+    ],
+    "continuity_constraints": [
+      "Maintain consistent eye contact between animals during negotiation",
+      "Monitor Lion's posture shift from cowardice to bravado",
+      "Tiger describes the spider monster",
+      "Resolve Lion -> Lion",
+      "Resolve various forest beasts -> various forest beasts",
+      "Resolve Dorothy and companions (as observers) -> Dorothy and companions (as observers)"
+    ],
+    "prompt_seed": "Reaction Closeup 6: Tiger describes the spider monster. reaction_closeup. size=close_up. angle=eye_level. lens=portrait. motion=push_in. zoom=subtle_in. focus=shallow_subject. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Close framing that isolates reaction and emotional e...",
+    "shot_notes": "Tiger describes the spider monster",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH021_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH021",
+        "scene_id": "CH021_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH021",
+        "scene_id": "CH021_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH021",
+        "scene_id": "CH021_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH021",
+        "scene_id": "CH021_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH021",
+        "scene_id": "CH021_SC003"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH021",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH021_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH021",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH021_chapter_xxi.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH006",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH006_chapter_vi.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH007",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH007_chapter_vii.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH021",
+        "canonical_id": "tiger"
+      }
+    ],
+    "evidence_summary": [
+      "Establish the Lion's transition from a fearful observer to an ambitious leader through a high-stakes negotiation triggered by a shared threat. The scale of the tiger and the ancient forest must emphasize the gravity of the spider-monster threat.",
+      "A tiger explains that a giant spider-like monster is terrorizing the forest. The Lion seizes the opportunity, striking a deal with the animals: if he kills the beast, they will crown him King of the Forest.",
+      "Fear to ambitious determination (Lion).",
+      "Lion appearing fearful/cowardly amidst forest beasts.",
+      "Lion standing with bravado, claiming kingship.",
+      "Tiger describes the spider monster; Lion proposes a deal for kingship.",
+      "tiger | A large-scale quadrupedal beast characterized by a feline, tiger-like head. While the specific body morphology is linked to \"monstrous beasts\" (Kalidahs) possessing bear-like bodies, the primary identifier is the distinct tiger visage. | unknown | u...",
+      "ancient_forest_interior | No specific visual descriptors are provided in the current evidence. The location is identified as an ancient forest interior serving as a primary setting. | Unknown | Unknown | Unknown"
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "adventure_action",
+    "coverage_role": "decision_closeup",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT001",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "major",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = major"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH021_SC003_SH006_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "45bb62d402aae9b35f37b9db337b58524d6257a1",
+      "created_at_utc": "2026-04-27T20:54:12.877473+00:00",
+      "updated_at_utc": "2026-04-27T20:55:12.648804+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH021_SC003",
+          "version": "c27419634059cdca954f0d3d312be680781fd0d2"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH021_SC003",
+          "version": "0d620289d2b867830358bc641367944b82208341"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH021_SC003",
+          "version": "36e57941030b952a00311672c84e13e8b6c82be8"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:54:12.877972+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "45bb62d402aae9b35f37b9db337b58524d6257a1"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:55:12.649806+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "45bb62d402aae9b35f37b9db337b58524d6257a1"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH007",
+    "scene_id": "CH021_SC003",
+    "chapter_id": "CH021",
+    "shot_order": 7,
+    "previous_shot_id": "SH006",
+    "next_shot_id": "SH008",
+    "primary_subject": "tiger",
+    "secondary_subjects": [],
+    "shot_moment_summary": "Tiger describes the spider monster",
+    "start_state": "Tiger begins speaking",
+    "end_state": "Description of the beast is complete",
+    "action_during_shot": "Tiger describes the spider monster",
+    "action_continues_from": "Description of the beast is complete",
+    "action_hands_off_to": "BT002",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "tiger",
+    "visible_secondary_subject_ids": [],
+    "primary_subject_frame_position": "foreground right within mossy_clearing_center",
+    "primary_subject_scale_relation": "Tiger is a large-scale quadrupedal beast compared to the Lion and observers.",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "Tiger begins speaking",
+    "subject_relation_summary": "tiger carries the frame alone",
+    "required_environment_anchor_1": "mossy_clearing_center",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "Tiger is a large-scale quadrupedal beast compared to the Lion and observers.",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "Tiger at center of circle",
+      "mossy_clearing_center",
+      "tiger remains readable within the active playing space.",
+      "various forest beasts remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the mossy_clearing_center.",
+      "Background depth should keep ancient_forest_interior legible as the location anchor.",
+      "Subject 1: tiger remains visually readable against the environment scale.",
+      "Subject 2: various forest beasts remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "tiger focuses toward the active scene action."
+    ],
+    "environment_subzone": "mossy_clearing_center",
+    "key_visible_environment_features": [
+      "mossy_clearing_center",
+      "Chapter-local environment alias match for 'Forest Clearing' (key_overlap=1, label_overlap=2, context_overlap=3)."
+    ],
+    "continuity_from_previous_shot": "Description of the beast is complete",
+    "continuity_to_next_shot": "BT002",
+    "pose_anchor_frame": "Tiger begins speaking",
+    "pose_end_frame": "Description of the beast is complete",
+    "shot_title": "Scale Proof Wide 7: Tiger describes the spider monster",
+    "shot_type": "scale_proof_wide",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in ancient_forest_interior featuring tiger, various forest beasts, Dorothy and companions (as observers).",
+    "target_seconds": 10.8,
+    "characters_in_frame": [
+      {
+        "label": "Tiger",
+        "canonical_id": "tiger",
+        "display_name": "tiger",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH021/tiger.md",
+        "notes": "Direct registry match for 'tiger'."
+      },
+      {
+        "label": "various forest beasts",
+        "canonical_id": null,
+        "display_name": "various forest beasts",
+        "status": "review",
+        "entity_kind": "individual",
+        "resolution_score": 16,
+        "source_path": "",
+        "notes": "Low-confidence character match requires review."
+      },
+      {
+        "label": "Dorothy and companions (as observers)",
+        "canonical_id": null,
+        "display_name": "Dorothy and companions (as observers)",
+        "status": "review",
+        "entity_kind": "individual",
+        "resolution_score": 16,
+        "source_path": "",
+        "notes": "Low-confidence character match requires review."
+      }
+    ],
+    "environment": {
+      "label": "Forest Clearing",
+      "canonical_id": "ancient_forest_interior",
+      "display_name": "ancient_forest_interior",
+      "status": "canonical",
+      "entity_kind": "sub_location",
+      "resolution_score": 74,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH021/ancient_forest_interior.md",
+      "notes": "Chapter-local environment alias match for 'Forest Clearing' (key_overlap=1, label_overlap=2, context_overlap=3)."
+    },
+    "beat_ids": [
+      "BT001"
+    ],
+    "continuity_constraints": [
+      "Maintain consistent eye contact between animals during negotiation",
+      "Monitor Lion's posture shift from cowardice to bravado",
+      "Tiger describes the spider monster",
+      "Resolve Lion -> Lion",
+      "Resolve various forest beasts -> various forest beasts",
+      "Resolve Dorothy and companions (as observers) -> Dorothy and companions (as observers)"
+    ],
+    "prompt_seed": "Scale Proof Wide 7: Tiger describes the spider monster. scale_proof_wide. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Readab...",
+    "shot_notes": "Tiger describes the spider monster",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH021_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH021",
+        "scene_id": "CH021_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH021",
+        "scene_id": "CH021_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH021",
+        "scene_id": "CH021_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH021",
+        "scene_id": "CH021_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH021",
+        "scene_id": "CH021_SC003"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH021",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH021_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH021",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH021_chapter_xxi.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH006",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH006_chapter_vi.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH007",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH007_chapter_vii.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH021",
+        "canonical_id": "tiger"
+      }
+    ],
+    "evidence_summary": [
+      "Establish the Lion's transition from a fearful observer to an ambitious leader through a high-stakes negotiation triggered by a shared threat. The scale of the tiger and the ancient forest must emphasize the gravity of the spider-monster threat.",
+      "A tiger explains that a giant spider-like monster is terrorizing the forest. The Lion seizes the opportunity, striking a deal with the animals: if he kills the beast, they will crown him King of the Forest.",
+      "Fear to ambitious determination (Lion).",
+      "Lion appearing fearful/cowardly amidst forest beasts.",
+      "Lion standing with bravado, claiming kingship.",
+      "Tiger describes the spider monster; Lion proposes a deal for kingship.",
+      "tiger | A large-scale quadrupedal beast characterized by a feline, tiger-like head. While the specific body morphology is linked to \"monstrous beasts\" (Kalidahs) possessing bear-like bodies, the primary identifier is the distinct tiger visage. | unknown | u...",
+      "ancient_forest_interior | No specific visual descriptors are provided in the current evidence. The location is identified as an ancient forest interior serving as a primary setting. | Unknown | Unknown | Unknown"
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "adventure_action",
+    "coverage_role": "scale_proof_wide",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT001",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "major",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = major"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH021_SC003_SH007_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "45bb62d402aae9b35f37b9db337b58524d6257a1",
+      "created_at_utc": "2026-04-27T20:54:12.878971+00:00",
+      "updated_at_utc": "2026-04-27T20:55:12.655814+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH021_SC003",
+          "version": "c27419634059cdca954f0d3d312be680781fd0d2"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH021_SC003",
+          "version": "0d620289d2b867830358bc641367944b82208341"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH021_SC003",
+          "version": "36e57941030b952a00311672c84e13e8b6c82be8"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:54:12.879472+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "45bb62d402aae9b35f37b9db337b58524d6257a1"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:55:12.656314+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "45bb62d402aae9b35f37b9db337b58524d6257a1"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH008",
+    "scene_id": "CH021_SC003",
+    "chapter_id": "CH021",
+    "shot_order": 8,
+    "previous_shot_id": "SH007",
+    "next_shot_id": "SH009",
     "primary_subject": "Lion",
     "secondary_subjects": [],
     "shot_moment_summary": "Lion reacts to the threat and opportunity",
     "start_state": "Lion looking fearful",
     "end_state": "Lion looking determined",
     "action_during_shot": "Lion straightens spine and lifts head",
-    "action_continues_from": "Tiger finishing description",
+    "action_continues_from": "Description of the beast is complete",
     "action_hands_off_to": "BT003",
     "shot_size": "medium_full",
     "camera_angle": "low_angle",
@@ -264,17 +1759,18 @@
     ],
     "environment_subzone": "mossy_clearing_center",
     "key_visible_environment_features": [
-      "mossy_clearing_center"
+      "mossy_clearing_center",
+      "Chapter-local environment alias match for 'Forest Clearing' (key_overlap=1, label_overlap=2, context_overlap=3)."
     ],
-    "continuity_from_previous_shot": "Tiger finishing description",
+    "continuity_from_previous_shot": "Description of the beast is complete",
     "continuity_to_next_shot": "BT003",
     "pose_anchor_frame": "Lion looking fearful",
     "pose_end_frame": "Lion looking determined",
-    "shot_title": "Medium 2: Lion processes the threat and opportunity",
-    "shot_type": "medium",
-    "camera_description": "Stable medium framing that keeps action and character readable.",
+    "shot_title": "Handoff Medium 8: Lion processes the threat and opportunity",
+    "shot_type": "handoff_medium",
+    "camera_description": "Stable readable framing built from the beat requirement.",
     "composition": "Readable medium composition in ancient_forest_interior featuring Lion, tiger.",
-    "target_seconds": 5.3,
+    "target_seconds": 6.0,
     "characters_in_frame": [
       {
         "label": "Lion",
@@ -313,9 +1809,12 @@
     "continuity_constraints": [
       "Maintain consistent eye contact between animals during negotiation",
       "Monitor Lion's posture shift from cowardice to bravado",
-      "Lion processes the threat and opportunity"
+      "Lion processes the threat and opportunity",
+      "Resolve Lion -> Lion",
+      "Resolve various forest beasts -> various forest beasts",
+      "Resolve Dorothy and companions (as observers) -> Dorothy and companions (as observers)"
     ],
-    "prompt_seed": "Medium 2: Lion processes the threat and opportunity. medium. size=medium_full. angle=low_angle. lens=normal. motion=push_in. zoom=subtle_in. focus=shallow_subject. lighting=high_contrast_ceremonial. visibility=on_screen. subject_angle=front. Stable medium framing that keeps action and character readable. Readable me...",
+    "prompt_seed": "Handoff Medium 8: Lion processes the threat and opportunity. handoff_medium. size=medium_full. angle=low_angle. lens=normal. motion=push_in. zoom=subtle_in. focus=shallow_subject. lighting=high_contrast_ceremonial. visibility=on_screen. subject_angle=front. Stable readable framing built from the beat requirement. Re...",
     "shot_notes": "Lion processes the threat and opportunity",
     "evidence_refs": [
       {
@@ -383,13 +1882,29 @@
       "tiger | A large-scale quadrupedal beast characterized by a feline, tiger-like head. While the specific body morphology is linked to \"monstrous beasts\" (Kalidahs) possessing bear-like bodies, the primary identifier is the distinct tiger visage. | unknown | u...",
       "ancient_forest_interior | No specific visual descriptors are provided in the current evidence. The location is identified as an ancient forest interior serving as a primary setting. | Unknown | Unknown | Unknown"
     ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "adventure_action",
+    "coverage_role": "handoff_medium",
+    "beat_type": "transition_handoff",
+    "coverage_importance": "minor",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT002",
+      "beat_type": "transition_handoff",
+      "importance": "minor",
+      "confidence": 0.55,
+      "reasons": [
+        "importance = minor"
+      ]
+    },
     "metadata": {
-      "artifact_id": "CH021_SC003_SH002_SHOT_PACKAGE",
+      "artifact_id": "CH021_SC003_SH008_SHOT_PACKAGE",
       "artifact_type": "shot_package",
       "status": "generated",
-      "source_fingerprint": "d7952d4eaa56314641b6c3816d1634e087147966",
-      "created_at_utc": "2026-04-27T20:03:17.913256+00:00",
-      "updated_at_utc": "2026-04-27T20:03:17.913256+00:00",
+      "source_fingerprint": "45bb62d402aae9b35f37b9db337b58524d6257a1",
+      "created_at_utc": "2026-04-27T20:54:12.880473+00:00",
+      "updated_at_utc": "2026-04-27T20:55:12.663330+00:00",
       "upstream_dependencies": [
         {
           "dependency_type": "scene_contract",
@@ -404,36 +1919,274 @@
         {
           "dependency_type": "shot_blueprints",
           "dependency_id": "CH021_SC003",
-          "version": "dac286ea1a2979542e8005d5f739e65b267b9003"
+          "version": "36e57941030b952a00311672c84e13e8b6c82be8"
         }
       ],
       "locked_fields": {},
       "manual_overrides": {},
       "revision_history": [
         {
-          "timestamp_utc": "2026-04-27T20:04:30.327536+00:00",
+          "timestamp_utc": "2026-04-27T20:54:12.880973+00:00",
           "action": "synthesized",
-          "source_fingerprint": "d7952d4eaa56314641b6c3816d1634e087147966"
+          "source_fingerprint": "45bb62d402aae9b35f37b9db337b58524d6257a1"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:55:12.663830+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "45bb62d402aae9b35f37b9db337b58524d6257a1"
         }
       ]
     }
   },
   {
-    "shot_id": "SH003",
+    "shot_id": "SH009",
     "scene_id": "CH021_SC003",
     "chapter_id": "CH021",
-    "shot_order": 3,
-    "previous_shot_id": "SH002",
-    "next_shot_id": "",
+    "shot_order": 9,
+    "previous_shot_id": "SH008",
+    "next_shot_id": "SH010",
+    "primary_subject": "Lion",
+    "secondary_subjects": [],
+    "shot_moment_summary": "Lion processes the threat and opportunity",
+    "start_state": "Lion listening with fear",
+    "end_state": "Lion's expression shifts to ambition",
+    "action_during_shot": "Lion processes the threat and opportunity",
+    "action_continues_from": "Lion looking determined",
+    "action_hands_off_to": "BT003",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "tiger",
+    "visible_secondary_subject_ids": [],
+    "primary_subject_frame_position": "foreground right within mossy_clearing_center",
+    "primary_subject_scale_relation": "Tiger is a large-scale quadrupedal beast compared to the Lion and observers.",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "Lion listening with fear",
+    "subject_relation_summary": "Lion carries the frame alone",
+    "required_environment_anchor_1": "mossy_clearing_center",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "Tiger is a large-scale quadrupedal beast compared to the Lion and observers.",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "Lion reacting within the circle",
+      "mossy_clearing_center",
+      "Lion remains readable within the active playing space.",
+      "tiger remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the mossy_clearing_center.",
+      "Background depth should keep ancient_forest_interior legible as the location anchor.",
+      "Subject 1: Lion remains visually readable against the environment scale.",
+      "Subject 2: tiger remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "Lion focuses toward the active scene action."
+    ],
+    "environment_subzone": "mossy_clearing_center",
+    "key_visible_environment_features": [
+      "mossy_clearing_center",
+      "Chapter-local environment alias match for 'Forest Clearing' (key_overlap=1, label_overlap=2, context_overlap=3)."
+    ],
+    "continuity_from_previous_shot": "Lion looking determined",
+    "continuity_to_next_shot": "BT003",
+    "pose_anchor_frame": "Lion listening with fear",
+    "pose_end_frame": "Lion's expression shifts to ambition",
+    "shot_title": "Transition Wide 9: Lion processes the threat and opportunity",
+    "shot_type": "transition_wide",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in ancient_forest_interior featuring Lion, tiger.",
+    "target_seconds": 9.2,
+    "characters_in_frame": [
+      {
+        "label": "Lion",
+        "canonical_id": null,
+        "display_name": "Lion",
+        "status": "review",
+        "entity_kind": "individual",
+        "resolution_score": 16,
+        "source_path": "",
+        "notes": "Low-confidence character match requires review."
+      },
+      {
+        "label": "Tiger",
+        "canonical_id": "tiger",
+        "display_name": "tiger",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH021/tiger.md",
+        "notes": "Direct registry match for 'tiger'."
+      }
+    ],
+    "environment": {
+      "label": "Forest Clearing",
+      "canonical_id": "ancient_forest_interior",
+      "display_name": "ancient_forest_interior",
+      "status": "canonical",
+      "entity_kind": "sub_location",
+      "resolution_score": 74,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH021/ancient_forest_interior.md",
+      "notes": "Chapter-local environment alias match for 'Forest Clearing' (key_overlap=1, label_overlap=2, context_overlap=3)."
+    },
+    "beat_ids": [
+      "BT002"
+    ],
+    "continuity_constraints": [
+      "Maintain consistent eye contact between animals during negotiation",
+      "Monitor Lion's posture shift from cowardice to bravado",
+      "Lion processes the threat and opportunity",
+      "Resolve Lion -> Lion",
+      "Resolve various forest beasts -> various forest beasts",
+      "Resolve Dorothy and companions (as observers) -> Dorothy and companions (as observers)"
+    ],
+    "prompt_seed": "Transition Wide 9: Lion processes the threat and opportunity. transition_wide. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. R...",
+    "shot_notes": "Lion processes the threat and opportunity",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH021_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH021",
+        "scene_id": "CH021_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH021",
+        "scene_id": "CH021_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH021",
+        "scene_id": "CH021_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH021",
+        "scene_id": "CH021_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH021",
+        "scene_id": "CH021_SC003"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH021",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH021_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH021",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH021_chapter_xxi.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH006",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH006_chapter_vi.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH007",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH007_chapter_vii.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH021",
+        "canonical_id": "tiger"
+      }
+    ],
+    "evidence_summary": [
+      "Establish the Lion's transition from a fearful observer to an ambitious leader through a high-stakes negotiation triggered by a shared threat. The scale of the tiger and the ancient forest must emphasize the gravity of the spider-monster threat.",
+      "A tiger explains that a giant spider-like monster is terrorizing the forest. The Lion seizes the opportunity, striking a deal with the animals: if he kills the beast, they will crown him King of the Forest.",
+      "Fear to ambitious determination (Lion).",
+      "Lion appearing fearful/cowardly amidst forest beasts.",
+      "Lion standing with bravado, claiming kingship.",
+      "Tiger describes the spider monster; Lion proposes a deal for kingship.",
+      "tiger | A large-scale quadrupedal beast characterized by a feline, tiger-like head. While the specific body morphology is linked to \"monstrous beasts\" (Kalidahs) possessing bear-like bodies, the primary identifier is the distinct tiger visage. | unknown | u...",
+      "ancient_forest_interior | No specific visual descriptors are provided in the current evidence. The location is identified as an ancient forest interior serving as a primary setting. | Unknown | Unknown | Unknown"
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "adventure_action",
+    "coverage_role": "transition_wide",
+    "beat_type": "transition_handoff",
+    "coverage_importance": "minor",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT002",
+      "beat_type": "transition_handoff",
+      "importance": "minor",
+      "confidence": 0.55,
+      "reasons": [
+        "importance = minor"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH021_SC003_SH009_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "45bb62d402aae9b35f37b9db337b58524d6257a1",
+      "created_at_utc": "2026-04-27T20:54:12.881971+00:00",
+      "updated_at_utc": "2026-04-27T20:55:12.669331+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH021_SC003",
+          "version": "c27419634059cdca954f0d3d312be680781fd0d2"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH021_SC003",
+          "version": "0d620289d2b867830358bc641367944b82208341"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH021_SC003",
+          "version": "36e57941030b952a00311672c84e13e8b6c82be8"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:54:12.882474+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "45bb62d402aae9b35f37b9db337b58524d6257a1"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:55:12.670334+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "45bb62d402aae9b35f37b9db337b58524d6257a1"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH010",
+    "scene_id": "CH021_SC003",
+    "chapter_id": "CH021",
+    "shot_order": 10,
+    "previous_shot_id": "SH009",
+    "next_shot_id": "SH011",
     "primary_subject": "Lion",
     "secondary_subjects": [],
     "shot_moment_summary": "Lion declares his intent to be King",
     "start_state": "Lion speaking",
     "end_state": "Lion standing tall",
     "action_during_shot": "Lion makes a deal with the animals",
-    "action_continues_from": "Lion looking determined",
+    "action_continues_from": "Lion's expression shifts to ambition",
     "action_hands_off_to": "END",
-    "shot_size": "close_up",
+    "shot_size": "medium",
     "camera_angle": "low_angle",
     "lens_family": "wide",
     "camera_motion": "locked_off",
@@ -443,9 +2196,9 @@
     "subject_visibility": "on_screen",
     "narration_mode": "in_scene_speaker",
     "primary_subject_angle": "front_three_quarter_left",
-    "visible_primary_subject_id": "",
+    "visible_primary_subject_id": "tiger",
     "visible_secondary_subject_ids": [],
-    "primary_subject_frame_position": "foreground inside mossy_clearing_center",
+    "primary_subject_frame_position": "foreground right within mossy_clearing_center",
     "primary_subject_scale_relation": "Lion's height relative to beasts",
     "primary_subject_facing_direction": "front three-quarter left toward the scene action",
     "primary_subject_pose_description": "Lion speaking",
@@ -454,7 +2207,7 @@
     "required_subject_anchor_1": "",
     "required_celestial_anchor_1": "",
     "required_scale_proof_detail": "Lion's height relative to beasts",
-    "camera_package_description": "close-up, low angle, wide lens, locked off, deep focus, high contrast ceremonial",
+    "camera_package_description": "medium, low angle, wide lens, locked off, deep focus, high contrast ceremonial",
     "subject_blocking": [
       "Lion facing the group",
       "Lion facing the group of beasts",
@@ -473,17 +2226,18 @@
     ],
     "environment_subzone": "mossy_clearing_center",
     "key_visible_environment_features": [
-      "mossy_clearing_center"
+      "mossy_clearing_center",
+      "Chapter-local environment alias match for 'Forest Clearing' (key_overlap=1, label_overlap=2, context_overlap=3)."
     ],
-    "continuity_from_previous_shot": "Lion looking determined",
+    "continuity_from_previous_shot": "Lion's expression shifts to ambition",
     "continuity_to_next_shot": "END",
     "pose_anchor_frame": "Lion speaking",
     "pose_end_frame": "Lion standing tall",
-    "shot_title": "Reaction Closeup 3: Lion strikes the deal for kingship",
-    "shot_type": "reaction_closeup",
-    "camera_description": "Close framing that isolates reaction and emotional emphasis.",
-    "composition": "Intimate composition that isolates Lion, various forest beasts against ancient_forest_interior to capture the beat's emotional turn.",
-    "target_seconds": 5.1,
+    "shot_title": "Ceremonial Master 10: Lion strikes the deal for kingship",
+    "shot_type": "ceremonial_master",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in ancient_forest_interior featuring Lion, various forest beasts, tiger.",
+    "target_seconds": 10.8,
     "characters_in_frame": [
       {
         "label": "Lion",
@@ -504,6 +2258,16 @@
         "resolution_score": 16,
         "source_path": "",
         "notes": "Low-confidence character match requires review."
+      },
+      {
+        "label": "Tiger",
+        "canonical_id": "tiger",
+        "display_name": "tiger",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH021/tiger.md",
+        "notes": "Direct registry match for 'tiger'."
       }
     ],
     "environment": {
@@ -522,9 +2286,12 @@
     "continuity_constraints": [
       "Maintain consistent eye contact between animals during negotiation",
       "Monitor Lion's posture shift from cowardice to bravado",
-      "Lion strikes the deal for kingship"
+      "Lion strikes the deal for kingship",
+      "Resolve Lion -> Lion",
+      "Resolve various forest beasts -> various forest beasts",
+      "Resolve Dorothy and companions (as observers) -> Dorothy and companions (as observers)"
     ],
-    "prompt_seed": "Reaction Closeup 3: Lion strikes the deal for kingship. reaction_closeup. size=close_up. angle=low_angle. lens=wide. motion=locked_off. zoom=none. focus=deep_focus. lighting=high_contrast_ceremonial. visibility=on_screen. subject_angle=front_three_quarter_left. Close framing that isolates reaction and emotional emph...",
+    "prompt_seed": "Ceremonial Master 10: Lion strikes the deal for kingship. ceremonial_master. size=medium. angle=low_angle. lens=wide. motion=locked_off. zoom=none. focus=deep_focus. lighting=high_contrast_ceremonial. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requiremen...",
     "shot_notes": "Lion strikes the deal for kingship",
     "evidence_refs": [
       {
@@ -592,13 +2359,30 @@
       "tiger | A large-scale quadrupedal beast characterized by a feline, tiger-like head. While the specific body morphology is linked to \"monstrous beasts\" (Kalidahs) possessing bear-like bodies, the primary identifier is the distinct tiger visage. | unknown | u...",
       "ancient_forest_interior | No specific visual descriptors are provided in the current evidence. The location is identified as an ancient forest interior serving as a primary setting. | Unknown | Unknown | Unknown"
     ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "adventure_action",
+    "coverage_role": "ceremonial_master",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT003",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "major",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = major"
+      ]
+    },
     "metadata": {
-      "artifact_id": "CH021_SC003_SH003_SHOT_PACKAGE",
+      "artifact_id": "CH021_SC003_SH010_SHOT_PACKAGE",
       "artifact_type": "shot_package",
       "status": "generated",
-      "source_fingerprint": "d7952d4eaa56314641b6c3816d1634e087147966",
-      "created_at_utc": "2026-04-27T20:04:30.329037+00:00",
-      "updated_at_utc": "2026-04-27T20:04:30.329037+00:00",
+      "source_fingerprint": "45bb62d402aae9b35f37b9db337b58524d6257a1",
+      "created_at_utc": "2026-04-27T20:54:12.883471+00:00",
+      "updated_at_utc": "2026-04-27T20:55:12.675844+00:00",
       "upstream_dependencies": [
         {
           "dependency_type": "scene_contract",
@@ -613,16 +2397,1475 @@
         {
           "dependency_type": "shot_blueprints",
           "dependency_id": "CH021_SC003",
-          "version": "dac286ea1a2979542e8005d5f739e65b267b9003"
+          "version": "36e57941030b952a00311672c84e13e8b6c82be8"
         }
       ],
       "locked_fields": {},
       "manual_overrides": {},
       "revision_history": [
         {
-          "timestamp_utc": "2026-04-27T20:05:43.874269+00:00",
+          "timestamp_utc": "2026-04-27T20:54:12.883972+00:00",
           "action": "synthesized",
-          "source_fingerprint": "d7952d4eaa56314641b6c3816d1634e087147966"
+          "source_fingerprint": "45bb62d402aae9b35f37b9db337b58524d6257a1"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:55:12.676342+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "45bb62d402aae9b35f37b9db337b58524d6257a1"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH011",
+    "scene_id": "CH021_SC003",
+    "chapter_id": "CH021",
+    "shot_order": 11,
+    "previous_shot_id": "SH010",
+    "next_shot_id": "SH012",
+    "primary_subject": "Lion",
+    "secondary_subjects": [],
+    "shot_moment_summary": "Lion strikes the deal for kingship",
+    "start_state": "Lion speaks his terms",
+    "end_state": "The animals accept/listen to the deal",
+    "action_during_shot": "Lion strikes the deal for kingship",
+    "action_continues_from": "Lion standing tall",
+    "action_hands_off_to": "END",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "tiger",
+    "visible_secondary_subject_ids": [],
+    "primary_subject_frame_position": "foreground right within mossy_clearing_center",
+    "primary_subject_scale_relation": "Tiger is a large-scale quadrupedal beast compared to the Lion and observers.",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "Lion speaks his terms",
+    "subject_relation_summary": "Lion carries the frame alone",
+    "required_environment_anchor_1": "mossy_clearing_center",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "Tiger is a large-scale quadrupedal beast compared to the Lion and observers.",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "Lion facing the group of beasts",
+      "mossy_clearing_center",
+      "Lion remains readable within the active playing space.",
+      "various forest beasts remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the mossy_clearing_center.",
+      "Background depth should keep ancient_forest_interior legible as the location anchor.",
+      "Subject 1: Lion remains visually readable against the environment scale.",
+      "Subject 2: various forest beasts remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "Lion focuses toward the active scene action."
+    ],
+    "environment_subzone": "mossy_clearing_center",
+    "key_visible_environment_features": [
+      "mossy_clearing_center",
+      "Chapter-local environment alias match for 'Forest Clearing' (key_overlap=1, label_overlap=2, context_overlap=3)."
+    ],
+    "continuity_from_previous_shot": "Lion standing tall",
+    "continuity_to_next_shot": "END",
+    "pose_anchor_frame": "Lion speaks his terms",
+    "pose_end_frame": "The animals accept/listen to the deal",
+    "shot_title": "Authority Single 11: Lion strikes the deal for kingship",
+    "shot_type": "authority_single",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in ancient_forest_interior featuring Lion, various forest beasts, tiger.",
+    "target_seconds": 7.0,
+    "characters_in_frame": [
+      {
+        "label": "Lion",
+        "canonical_id": null,
+        "display_name": "Lion",
+        "status": "review",
+        "entity_kind": "individual",
+        "resolution_score": 16,
+        "source_path": "",
+        "notes": "Low-confidence character match requires review."
+      },
+      {
+        "label": "various forest beasts",
+        "canonical_id": null,
+        "display_name": "various forest beasts",
+        "status": "review",
+        "entity_kind": "individual",
+        "resolution_score": 16,
+        "source_path": "",
+        "notes": "Low-confidence character match requires review."
+      },
+      {
+        "label": "Tiger",
+        "canonical_id": "tiger",
+        "display_name": "tiger",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH021/tiger.md",
+        "notes": "Direct registry match for 'tiger'."
+      }
+    ],
+    "environment": {
+      "label": "Forest Clearing",
+      "canonical_id": "ancient_forest_interior",
+      "display_name": "ancient_forest_interior",
+      "status": "canonical",
+      "entity_kind": "sub_location",
+      "resolution_score": 74,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH021/ancient_forest_interior.md",
+      "notes": "Chapter-local environment alias match for 'Forest Clearing' (key_overlap=1, label_overlap=2, context_overlap=3)."
+    },
+    "beat_ids": [
+      "BT003"
+    ],
+    "continuity_constraints": [
+      "Maintain consistent eye contact between animals during negotiation",
+      "Monitor Lion's posture shift from cowardice to bravado",
+      "Lion strikes the deal for kingship",
+      "Resolve Lion -> Lion",
+      "Resolve various forest beasts -> various forest beasts",
+      "Resolve Dorothy and companions (as observers) -> Dorothy and companions (as observers)"
+    ],
+    "prompt_seed": "Authority Single 11: Lion strikes the deal for kingship. authority_single. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Reada...",
+    "shot_notes": "Lion strikes the deal for kingship",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH021_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH021",
+        "scene_id": "CH021_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH021",
+        "scene_id": "CH021_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH021",
+        "scene_id": "CH021_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH021",
+        "scene_id": "CH021_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH021",
+        "scene_id": "CH021_SC003"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH021",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH021_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH021",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH021_chapter_xxi.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH006",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH006_chapter_vi.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH007",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH007_chapter_vii.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH021",
+        "canonical_id": "tiger"
+      }
+    ],
+    "evidence_summary": [
+      "Establish the Lion's transition from a fearful observer to an ambitious leader through a high-stakes negotiation triggered by a shared threat. The scale of the tiger and the ancient forest must emphasize the gravity of the spider-monster threat.",
+      "A tiger explains that a giant spider-like monster is terrorizing the forest. The Lion seizes the opportunity, striking a deal with the animals: if he kills the beast, they will crown him King of the Forest.",
+      "Fear to ambitious determination (Lion).",
+      "Lion appearing fearful/cowardly amidst forest beasts.",
+      "Lion standing with bravado, claiming kingship.",
+      "Tiger describes the spider monster; Lion proposes a deal for kingship.",
+      "tiger | A large-scale quadrupedal beast characterized by a feline, tiger-like head. While the specific body morphology is linked to \"monstrous beasts\" (Kalidahs) possessing bear-like bodies, the primary identifier is the distinct tiger visage. | unknown | u...",
+      "ancient_forest_interior | No specific visual descriptors are provided in the current evidence. The location is identified as an ancient forest interior serving as a primary setting. | Unknown | Unknown | Unknown"
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "adventure_action",
+    "coverage_role": "authority_single",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT003",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "major",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = major"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH021_SC003_SH011_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "45bb62d402aae9b35f37b9db337b58524d6257a1",
+      "created_at_utc": "2026-04-27T20:54:12.885471+00:00",
+      "updated_at_utc": "2026-04-27T20:55:12.681342+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH021_SC003",
+          "version": "c27419634059cdca954f0d3d312be680781fd0d2"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH021_SC003",
+          "version": "0d620289d2b867830358bc641367944b82208341"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH021_SC003",
+          "version": "36e57941030b952a00311672c84e13e8b6c82be8"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:54:12.885471+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "45bb62d402aae9b35f37b9db337b58524d6257a1"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:55:12.682342+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "45bb62d402aae9b35f37b9db337b58524d6257a1"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH012",
+    "scene_id": "CH021_SC003",
+    "chapter_id": "CH021",
+    "shot_order": 12,
+    "previous_shot_id": "SH011",
+    "next_shot_id": "SH013",
+    "primary_subject": "Lion",
+    "secondary_subjects": [],
+    "shot_moment_summary": "Lion strikes the deal for kingship",
+    "start_state": "Lion speaks his terms",
+    "end_state": "The animals accept/listen to the deal",
+    "action_during_shot": "Lion strikes the deal for kingship",
+    "action_continues_from": "The animals accept/listen to the deal",
+    "action_hands_off_to": "END",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "tiger",
+    "visible_secondary_subject_ids": [],
+    "primary_subject_frame_position": "foreground right within mossy_clearing_center",
+    "primary_subject_scale_relation": "Tiger is a large-scale quadrupedal beast compared to the Lion and observers.",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "Lion speaks his terms",
+    "subject_relation_summary": "Lion carries the frame alone",
+    "required_environment_anchor_1": "mossy_clearing_center",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "Tiger is a large-scale quadrupedal beast compared to the Lion and observers.",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "Lion facing the group of beasts",
+      "mossy_clearing_center",
+      "Lion remains readable within the active playing space.",
+      "various forest beasts remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the mossy_clearing_center.",
+      "Background depth should keep ancient_forest_interior legible as the location anchor.",
+      "Subject 1: Lion remains visually readable against the environment scale.",
+      "Subject 2: various forest beasts remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "Lion focuses toward the active scene action."
+    ],
+    "environment_subzone": "mossy_clearing_center",
+    "key_visible_environment_features": [
+      "mossy_clearing_center",
+      "Chapter-local environment alias match for 'Forest Clearing' (key_overlap=1, label_overlap=2, context_overlap=3)."
+    ],
+    "continuity_from_previous_shot": "The animals accept/listen to the deal",
+    "continuity_to_next_shot": "END",
+    "pose_anchor_frame": "Lion speaks his terms",
+    "pose_end_frame": "The animals accept/listen to the deal",
+    "shot_title": "Petitioner Group 12: Lion strikes the deal for kingship",
+    "shot_type": "petitioner_group",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in ancient_forest_interior featuring Lion, various forest beasts, tiger.",
+    "target_seconds": 7.0,
+    "characters_in_frame": [
+      {
+        "label": "Lion",
+        "canonical_id": null,
+        "display_name": "Lion",
+        "status": "review",
+        "entity_kind": "individual",
+        "resolution_score": 16,
+        "source_path": "",
+        "notes": "Low-confidence character match requires review."
+      },
+      {
+        "label": "various forest beasts",
+        "canonical_id": null,
+        "display_name": "various forest beasts",
+        "status": "review",
+        "entity_kind": "individual",
+        "resolution_score": 16,
+        "source_path": "",
+        "notes": "Low-confidence character match requires review."
+      },
+      {
+        "label": "Tiger",
+        "canonical_id": "tiger",
+        "display_name": "tiger",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH021/tiger.md",
+        "notes": "Direct registry match for 'tiger'."
+      }
+    ],
+    "environment": {
+      "label": "Forest Clearing",
+      "canonical_id": "ancient_forest_interior",
+      "display_name": "ancient_forest_interior",
+      "status": "canonical",
+      "entity_kind": "sub_location",
+      "resolution_score": 74,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH021/ancient_forest_interior.md",
+      "notes": "Chapter-local environment alias match for 'Forest Clearing' (key_overlap=1, label_overlap=2, context_overlap=3)."
+    },
+    "beat_ids": [
+      "BT003"
+    ],
+    "continuity_constraints": [
+      "Maintain consistent eye contact between animals during negotiation",
+      "Monitor Lion's posture shift from cowardice to bravado",
+      "Lion strikes the deal for kingship",
+      "Resolve Lion -> Lion",
+      "Resolve various forest beasts -> various forest beasts",
+      "Resolve Dorothy and companions (as observers) -> Dorothy and companions (as observers)"
+    ],
+    "prompt_seed": "Petitioner Group 12: Lion strikes the deal for kingship. petitioner_group. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Reada...",
+    "shot_notes": "Lion strikes the deal for kingship",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH021_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH021",
+        "scene_id": "CH021_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH021",
+        "scene_id": "CH021_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH021",
+        "scene_id": "CH021_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH021",
+        "scene_id": "CH021_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH021",
+        "scene_id": "CH021_SC003"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH021",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH021_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH021",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH021_chapter_xxi.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH006",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH006_chapter_vi.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH007",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH007_chapter_vii.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH021",
+        "canonical_id": "tiger"
+      }
+    ],
+    "evidence_summary": [
+      "Establish the Lion's transition from a fearful observer to an ambitious leader through a high-stakes negotiation triggered by a shared threat. The scale of the tiger and the ancient forest must emphasize the gravity of the spider-monster threat.",
+      "A tiger explains that a giant spider-like monster is terrorizing the forest. The Lion seizes the opportunity, striking a deal with the animals: if he kills the beast, they will crown him King of the Forest.",
+      "Fear to ambitious determination (Lion).",
+      "Lion appearing fearful/cowardly amidst forest beasts.",
+      "Lion standing with bravado, claiming kingship.",
+      "Tiger describes the spider monster; Lion proposes a deal for kingship.",
+      "tiger | A large-scale quadrupedal beast characterized by a feline, tiger-like head. While the specific body morphology is linked to \"monstrous beasts\" (Kalidahs) possessing bear-like bodies, the primary identifier is the distinct tiger visage. | unknown | u...",
+      "ancient_forest_interior | No specific visual descriptors are provided in the current evidence. The location is identified as an ancient forest interior serving as a primary setting. | Unknown | Unknown | Unknown"
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "adventure_action",
+    "coverage_role": "petitioner_group",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT003",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "major",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = major"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH021_SC003_SH012_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "45bb62d402aae9b35f37b9db337b58524d6257a1",
+      "created_at_utc": "2026-04-27T20:54:12.886980+00:00",
+      "updated_at_utc": "2026-04-27T20:55:12.687350+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH021_SC003",
+          "version": "c27419634059cdca954f0d3d312be680781fd0d2"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH021_SC003",
+          "version": "0d620289d2b867830358bc641367944b82208341"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH021_SC003",
+          "version": "36e57941030b952a00311672c84e13e8b6c82be8"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:54:12.887479+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "45bb62d402aae9b35f37b9db337b58524d6257a1"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:55:12.688348+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "45bb62d402aae9b35f37b9db337b58524d6257a1"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH013",
+    "scene_id": "CH021_SC003",
+    "chapter_id": "CH021",
+    "shot_order": 13,
+    "previous_shot_id": "SH012",
+    "next_shot_id": "SH014",
+    "primary_subject": "Lion",
+    "secondary_subjects": [],
+    "shot_moment_summary": "Lion strikes the deal for kingship",
+    "start_state": "Lion speaks his terms",
+    "end_state": "The animals accept/listen to the deal",
+    "action_during_shot": "Lion strikes the deal for kingship",
+    "action_continues_from": "The animals accept/listen to the deal",
+    "action_hands_off_to": "END",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "tiger",
+    "visible_secondary_subject_ids": [],
+    "primary_subject_frame_position": "foreground right within mossy_clearing_center",
+    "primary_subject_scale_relation": "Tiger is a large-scale quadrupedal beast compared to the Lion and observers.",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "Lion speaks his terms",
+    "subject_relation_summary": "Lion carries the frame alone",
+    "required_environment_anchor_1": "mossy_clearing_center",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "Tiger is a large-scale quadrupedal beast compared to the Lion and observers.",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "Lion facing the group of beasts",
+      "mossy_clearing_center",
+      "Lion remains readable within the active playing space.",
+      "various forest beasts remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the mossy_clearing_center.",
+      "Background depth should keep ancient_forest_interior legible as the location anchor.",
+      "Subject 1: Lion remains visually readable against the environment scale.",
+      "Subject 2: various forest beasts remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "Lion focuses toward the active scene action."
+    ],
+    "environment_subzone": "mossy_clearing_center",
+    "key_visible_environment_features": [
+      "mossy_clearing_center",
+      "Chapter-local environment alias match for 'Forest Clearing' (key_overlap=1, label_overlap=2, context_overlap=3)."
+    ],
+    "continuity_from_previous_shot": "The animals accept/listen to the deal",
+    "continuity_to_next_shot": "END",
+    "pose_anchor_frame": "Lion speaks his terms",
+    "pose_end_frame": "The animals accept/listen to the deal",
+    "shot_title": "Crowd Response 13: Lion strikes the deal for kingship",
+    "shot_type": "crowd_response",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in ancient_forest_interior featuring Lion, various forest beasts, tiger.",
+    "target_seconds": 7.0,
+    "characters_in_frame": [
+      {
+        "label": "Lion",
+        "canonical_id": null,
+        "display_name": "Lion",
+        "status": "review",
+        "entity_kind": "individual",
+        "resolution_score": 16,
+        "source_path": "",
+        "notes": "Low-confidence character match requires review."
+      },
+      {
+        "label": "various forest beasts",
+        "canonical_id": null,
+        "display_name": "various forest beasts",
+        "status": "review",
+        "entity_kind": "individual",
+        "resolution_score": 16,
+        "source_path": "",
+        "notes": "Low-confidence character match requires review."
+      },
+      {
+        "label": "Tiger",
+        "canonical_id": "tiger",
+        "display_name": "tiger",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH021/tiger.md",
+        "notes": "Direct registry match for 'tiger'."
+      }
+    ],
+    "environment": {
+      "label": "Forest Clearing",
+      "canonical_id": "ancient_forest_interior",
+      "display_name": "ancient_forest_interior",
+      "status": "canonical",
+      "entity_kind": "sub_location",
+      "resolution_score": 74,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH021/ancient_forest_interior.md",
+      "notes": "Chapter-local environment alias match for 'Forest Clearing' (key_overlap=1, label_overlap=2, context_overlap=3)."
+    },
+    "beat_ids": [
+      "BT003"
+    ],
+    "continuity_constraints": [
+      "Maintain consistent eye contact between animals during negotiation",
+      "Monitor Lion's posture shift from cowardice to bravado",
+      "Lion strikes the deal for kingship",
+      "Resolve Lion -> Lion",
+      "Resolve various forest beasts -> various forest beasts",
+      "Resolve Dorothy and companions (as observers) -> Dorothy and companions (as observers)"
+    ],
+    "prompt_seed": "Crowd Response 13: Lion strikes the deal for kingship. crowd_response. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Readable...",
+    "shot_notes": "Lion strikes the deal for kingship",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH021_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH021",
+        "scene_id": "CH021_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH021",
+        "scene_id": "CH021_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH021",
+        "scene_id": "CH021_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH021",
+        "scene_id": "CH021_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH021",
+        "scene_id": "CH021_SC003"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH021",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH021_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH021",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH021_chapter_xxi.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH006",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH006_chapter_vi.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH007",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH007_chapter_vii.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH021",
+        "canonical_id": "tiger"
+      }
+    ],
+    "evidence_summary": [
+      "Establish the Lion's transition from a fearful observer to an ambitious leader through a high-stakes negotiation triggered by a shared threat. The scale of the tiger and the ancient forest must emphasize the gravity of the spider-monster threat.",
+      "A tiger explains that a giant spider-like monster is terrorizing the forest. The Lion seizes the opportunity, striking a deal with the animals: if he kills the beast, they will crown him King of the Forest.",
+      "Fear to ambitious determination (Lion).",
+      "Lion appearing fearful/cowardly amidst forest beasts.",
+      "Lion standing with bravado, claiming kingship.",
+      "Tiger describes the spider monster; Lion proposes a deal for kingship.",
+      "tiger | A large-scale quadrupedal beast characterized by a feline, tiger-like head. While the specific body morphology is linked to \"monstrous beasts\" (Kalidahs) possessing bear-like bodies, the primary identifier is the distinct tiger visage. | unknown | u...",
+      "ancient_forest_interior | No specific visual descriptors are provided in the current evidence. The location is identified as an ancient forest interior serving as a primary setting. | Unknown | Unknown | Unknown"
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "adventure_action",
+    "coverage_role": "crowd_response",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT003",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "major",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = major"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH021_SC003_SH013_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "45bb62d402aae9b35f37b9db337b58524d6257a1",
+      "created_at_utc": "2026-04-27T20:54:12.888484+00:00",
+      "updated_at_utc": "2026-04-27T20:55:12.693358+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH021_SC003",
+          "version": "c27419634059cdca954f0d3d312be680781fd0d2"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH021_SC003",
+          "version": "0d620289d2b867830358bc641367944b82208341"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH021_SC003",
+          "version": "36e57941030b952a00311672c84e13e8b6c82be8"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:54:12.888983+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "45bb62d402aae9b35f37b9db337b58524d6257a1"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:55:12.694359+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "45bb62d402aae9b35f37b9db337b58524d6257a1"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH014",
+    "scene_id": "CH021_SC003",
+    "chapter_id": "CH021",
+    "shot_order": 14,
+    "previous_shot_id": "SH013",
+    "next_shot_id": "SH015",
+    "primary_subject": "Lion",
+    "secondary_subjects": [],
+    "shot_moment_summary": "Lion strikes the deal for kingship",
+    "start_state": "Lion speaks his terms",
+    "end_state": "The animals accept/listen to the deal",
+    "action_during_shot": "Lion strikes the deal for kingship",
+    "action_continues_from": "The animals accept/listen to the deal",
+    "action_hands_off_to": "END",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "tiger",
+    "visible_secondary_subject_ids": [],
+    "primary_subject_frame_position": "foreground right within mossy_clearing_center",
+    "primary_subject_scale_relation": "Tiger is a large-scale quadrupedal beast compared to the Lion and observers.",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "Lion speaks his terms",
+    "subject_relation_summary": "Lion carries the frame alone",
+    "required_environment_anchor_1": "mossy_clearing_center",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "Tiger is a large-scale quadrupedal beast compared to the Lion and observers.",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "Lion facing the group of beasts",
+      "mossy_clearing_center",
+      "Lion remains readable within the active playing space.",
+      "various forest beasts remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the mossy_clearing_center.",
+      "Background depth should keep ancient_forest_interior legible as the location anchor.",
+      "Subject 1: Lion remains visually readable against the environment scale.",
+      "Subject 2: various forest beasts remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "Lion focuses toward the active scene action."
+    ],
+    "environment_subzone": "mossy_clearing_center",
+    "key_visible_environment_features": [
+      "mossy_clearing_center",
+      "Chapter-local environment alias match for 'Forest Clearing' (key_overlap=1, label_overlap=2, context_overlap=3)."
+    ],
+    "continuity_from_previous_shot": "The animals accept/listen to the deal",
+    "continuity_to_next_shot": "END",
+    "pose_anchor_frame": "Lion speaks his terms",
+    "pose_end_frame": "The animals accept/listen to the deal",
+    "shot_title": "Symbol Insert 14: Lion strikes the deal for kingship",
+    "shot_type": "symbol_insert",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in ancient_forest_interior featuring Lion, various forest beasts, tiger.",
+    "target_seconds": 5.4,
+    "characters_in_frame": [
+      {
+        "label": "Lion",
+        "canonical_id": null,
+        "display_name": "Lion",
+        "status": "review",
+        "entity_kind": "individual",
+        "resolution_score": 16,
+        "source_path": "",
+        "notes": "Low-confidence character match requires review."
+      },
+      {
+        "label": "various forest beasts",
+        "canonical_id": null,
+        "display_name": "various forest beasts",
+        "status": "review",
+        "entity_kind": "individual",
+        "resolution_score": 16,
+        "source_path": "",
+        "notes": "Low-confidence character match requires review."
+      },
+      {
+        "label": "Tiger",
+        "canonical_id": "tiger",
+        "display_name": "tiger",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH021/tiger.md",
+        "notes": "Direct registry match for 'tiger'."
+      }
+    ],
+    "environment": {
+      "label": "Forest Clearing",
+      "canonical_id": "ancient_forest_interior",
+      "display_name": "ancient_forest_interior",
+      "status": "canonical",
+      "entity_kind": "sub_location",
+      "resolution_score": 74,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH021/ancient_forest_interior.md",
+      "notes": "Chapter-local environment alias match for 'Forest Clearing' (key_overlap=1, label_overlap=2, context_overlap=3)."
+    },
+    "beat_ids": [
+      "BT003"
+    ],
+    "continuity_constraints": [
+      "Maintain consistent eye contact between animals during negotiation",
+      "Monitor Lion's posture shift from cowardice to bravado",
+      "Lion strikes the deal for kingship",
+      "Resolve Lion -> Lion",
+      "Resolve various forest beasts -> various forest beasts",
+      "Resolve Dorothy and companions (as observers) -> Dorothy and companions (as observers)"
+    ],
+    "prompt_seed": "Symbol Insert 14: Lion strikes the deal for kingship. symbol_insert. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Readable me...",
+    "shot_notes": "Lion strikes the deal for kingship",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH021_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH021",
+        "scene_id": "CH021_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH021",
+        "scene_id": "CH021_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH021",
+        "scene_id": "CH021_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH021",
+        "scene_id": "CH021_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH021",
+        "scene_id": "CH021_SC003"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH021",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH021_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH021",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH021_chapter_xxi.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH006",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH006_chapter_vi.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH007",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH007_chapter_vii.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH021",
+        "canonical_id": "tiger"
+      }
+    ],
+    "evidence_summary": [
+      "Establish the Lion's transition from a fearful observer to an ambitious leader through a high-stakes negotiation triggered by a shared threat. The scale of the tiger and the ancient forest must emphasize the gravity of the spider-monster threat.",
+      "A tiger explains that a giant spider-like monster is terrorizing the forest. The Lion seizes the opportunity, striking a deal with the animals: if he kills the beast, they will crown him King of the Forest.",
+      "Fear to ambitious determination (Lion).",
+      "Lion appearing fearful/cowardly amidst forest beasts.",
+      "Lion standing with bravado, claiming kingship.",
+      "Tiger describes the spider monster; Lion proposes a deal for kingship.",
+      "tiger | A large-scale quadrupedal beast characterized by a feline, tiger-like head. While the specific body morphology is linked to \"monstrous beasts\" (Kalidahs) possessing bear-like bodies, the primary identifier is the distinct tiger visage. | unknown | u...",
+      "ancient_forest_interior | No specific visual descriptors are provided in the current evidence. The location is identified as an ancient forest interior serving as a primary setting. | Unknown | Unknown | Unknown"
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "adventure_action",
+    "coverage_role": "symbol_insert",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT003",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "major",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = major"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH021_SC003_SH014_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "45bb62d402aae9b35f37b9db337b58524d6257a1",
+      "created_at_utc": "2026-04-27T20:54:12.889982+00:00",
+      "updated_at_utc": "2026-04-27T20:55:12.699358+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH021_SC003",
+          "version": "c27419634059cdca954f0d3d312be680781fd0d2"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH021_SC003",
+          "version": "0d620289d2b867830358bc641367944b82208341"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH021_SC003",
+          "version": "36e57941030b952a00311672c84e13e8b6c82be8"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:54:12.890486+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "45bb62d402aae9b35f37b9db337b58524d6257a1"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:55:12.700359+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "45bb62d402aae9b35f37b9db337b58524d6257a1"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH015",
+    "scene_id": "CH021_SC003",
+    "chapter_id": "CH021",
+    "shot_order": 15,
+    "previous_shot_id": "SH014",
+    "next_shot_id": "SH016",
+    "primary_subject": "Lion",
+    "secondary_subjects": [],
+    "shot_moment_summary": "Lion strikes the deal for kingship",
+    "start_state": "Lion speaks his terms",
+    "end_state": "The animals accept/listen to the deal",
+    "action_during_shot": "Lion strikes the deal for kingship",
+    "action_continues_from": "The animals accept/listen to the deal",
+    "action_hands_off_to": "END",
+    "shot_size": "close_up",
+    "camera_angle": "eye_level",
+    "lens_family": "portrait",
+    "camera_motion": "push_in",
+    "zoom_behavior": "subtle_in",
+    "focus_strategy": "shallow_subject",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "",
+    "visible_secondary_subject_ids": [],
+    "primary_subject_frame_position": "foreground inside mossy_clearing_center",
+    "primary_subject_scale_relation": "Tiger is a large-scale quadrupedal beast compared to the Lion and observers.",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "Lion speaks his terms",
+    "subject_relation_summary": "Lion carries the frame alone",
+    "required_environment_anchor_1": "mossy_clearing_center",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "Tiger is a large-scale quadrupedal beast compared to the Lion and observers.",
+    "camera_package_description": "close-up, eye level, portrait lens, push in, zoom subtle in, shallow subject, hard directional",
+    "subject_blocking": [
+      "Lion facing the group of beasts",
+      "mossy_clearing_center",
+      "Lion remains readable within the active playing space.",
+      "various forest beasts remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the mossy_clearing_center.",
+      "Background depth should keep ancient_forest_interior legible as the location anchor.",
+      "Subject 1: Lion remains visually readable against the environment scale.",
+      "Subject 2: various forest beasts remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "Lion focuses toward the active scene action."
+    ],
+    "environment_subzone": "mossy_clearing_center",
+    "key_visible_environment_features": [
+      "mossy_clearing_center",
+      "Chapter-local environment alias match for 'Forest Clearing' (key_overlap=1, label_overlap=2, context_overlap=3)."
+    ],
+    "continuity_from_previous_shot": "The animals accept/listen to the deal",
+    "continuity_to_next_shot": "END",
+    "pose_anchor_frame": "Lion speaks his terms",
+    "pose_end_frame": "The animals accept/listen to the deal",
+    "shot_title": "Reaction Closeup 15: Lion strikes the deal for kingship",
+    "shot_type": "reaction_closeup",
+    "camera_description": "Close framing that isolates reaction and emotional emphasis.",
+    "composition": "Intimate composition that isolates Lion, various forest beasts against ancient_forest_interior to capture the beat's emotional turn.",
+    "target_seconds": 7.0,
+    "characters_in_frame": [
+      {
+        "label": "Lion",
+        "canonical_id": null,
+        "display_name": "Lion",
+        "status": "review",
+        "entity_kind": "individual",
+        "resolution_score": 16,
+        "source_path": "",
+        "notes": "Low-confidence character match requires review."
+      },
+      {
+        "label": "various forest beasts",
+        "canonical_id": null,
+        "display_name": "various forest beasts",
+        "status": "review",
+        "entity_kind": "individual",
+        "resolution_score": 16,
+        "source_path": "",
+        "notes": "Low-confidence character match requires review."
+      }
+    ],
+    "environment": {
+      "label": "Forest Clearing",
+      "canonical_id": "ancient_forest_interior",
+      "display_name": "ancient_forest_interior",
+      "status": "canonical",
+      "entity_kind": "sub_location",
+      "resolution_score": 74,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH021/ancient_forest_interior.md",
+      "notes": "Chapter-local environment alias match for 'Forest Clearing' (key_overlap=1, label_overlap=2, context_overlap=3)."
+    },
+    "beat_ids": [
+      "BT003"
+    ],
+    "continuity_constraints": [
+      "Maintain consistent eye contact between animals during negotiation",
+      "Monitor Lion's posture shift from cowardice to bravado",
+      "Lion strikes the deal for kingship",
+      "Resolve Lion -> Lion",
+      "Resolve various forest beasts -> various forest beasts",
+      "Resolve Dorothy and companions (as observers) -> Dorothy and companions (as observers)"
+    ],
+    "prompt_seed": "Reaction Closeup 15: Lion strikes the deal for kingship. reaction_closeup. size=close_up. angle=eye_level. lens=portrait. motion=push_in. zoom=subtle_in. focus=shallow_subject. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Close framing that isolates reaction and emotional...",
+    "shot_notes": "Lion strikes the deal for kingship",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH021_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH021",
+        "scene_id": "CH021_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH021",
+        "scene_id": "CH021_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH021",
+        "scene_id": "CH021_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH021",
+        "scene_id": "CH021_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH021",
+        "scene_id": "CH021_SC003"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH021",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH021_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH021",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH021_chapter_xxi.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH006",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH006_chapter_vi.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH007",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH007_chapter_vii.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH021",
+        "canonical_id": "tiger"
+      }
+    ],
+    "evidence_summary": [
+      "Establish the Lion's transition from a fearful observer to an ambitious leader through a high-stakes negotiation triggered by a shared threat. The scale of the tiger and the ancient forest must emphasize the gravity of the spider-monster threat.",
+      "A tiger explains that a giant spider-like monster is terrorizing the forest. The Lion seizes the opportunity, striking a deal with the animals: if he kills the beast, they will crown him King of the Forest.",
+      "Fear to ambitious determination (Lion).",
+      "Lion appearing fearful/cowardly amidst forest beasts.",
+      "Lion standing with bravado, claiming kingship.",
+      "Tiger describes the spider monster; Lion proposes a deal for kingship.",
+      "tiger | A large-scale quadrupedal beast characterized by a feline, tiger-like head. While the specific body morphology is linked to \"monstrous beasts\" (Kalidahs) possessing bear-like bodies, the primary identifier is the distinct tiger visage. | unknown | u...",
+      "ancient_forest_interior | No specific visual descriptors are provided in the current evidence. The location is identified as an ancient forest interior serving as a primary setting. | Unknown | Unknown | Unknown"
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "adventure_action",
+    "coverage_role": "decision_closeup",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT003",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "major",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = major"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH021_SC003_SH015_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "45bb62d402aae9b35f37b9db337b58524d6257a1",
+      "created_at_utc": "2026-04-27T20:54:12.891484+00:00",
+      "updated_at_utc": "2026-04-27T20:55:12.705367+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH021_SC003",
+          "version": "c27419634059cdca954f0d3d312be680781fd0d2"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH021_SC003",
+          "version": "0d620289d2b867830358bc641367944b82208341"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH021_SC003",
+          "version": "36e57941030b952a00311672c84e13e8b6c82be8"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:54:12.892486+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "45bb62d402aae9b35f37b9db337b58524d6257a1"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:55:12.706366+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "45bb62d402aae9b35f37b9db337b58524d6257a1"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH016",
+    "scene_id": "CH021_SC003",
+    "chapter_id": "CH021",
+    "shot_order": 16,
+    "previous_shot_id": "SH015",
+    "next_shot_id": "",
+    "primary_subject": "Lion",
+    "secondary_subjects": [],
+    "shot_moment_summary": "Lion strikes the deal for kingship",
+    "start_state": "Lion speaks his terms",
+    "end_state": "The animals accept/listen to the deal",
+    "action_during_shot": "Lion strikes the deal for kingship",
+    "action_continues_from": "The animals accept/listen to the deal",
+    "action_hands_off_to": "END",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "tiger",
+    "visible_secondary_subject_ids": [],
+    "primary_subject_frame_position": "foreground right within mossy_clearing_center",
+    "primary_subject_scale_relation": "Tiger is a large-scale quadrupedal beast compared to the Lion and observers.",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "Lion speaks his terms",
+    "subject_relation_summary": "Lion carries the frame alone",
+    "required_environment_anchor_1": "mossy_clearing_center",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "Tiger is a large-scale quadrupedal beast compared to the Lion and observers.",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "Lion facing the group of beasts",
+      "mossy_clearing_center",
+      "Lion remains readable within the active playing space.",
+      "various forest beasts remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the mossy_clearing_center.",
+      "Background depth should keep ancient_forest_interior legible as the location anchor.",
+      "Subject 1: Lion remains visually readable against the environment scale.",
+      "Subject 2: various forest beasts remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "Lion focuses toward the active scene action."
+    ],
+    "environment_subzone": "mossy_clearing_center",
+    "key_visible_environment_features": [
+      "mossy_clearing_center",
+      "Chapter-local environment alias match for 'Forest Clearing' (key_overlap=1, label_overlap=2, context_overlap=3)."
+    ],
+    "continuity_from_previous_shot": "The animals accept/listen to the deal",
+    "continuity_to_next_shot": "END",
+    "pose_anchor_frame": "Lion speaks his terms",
+    "pose_end_frame": "The animals accept/listen to the deal",
+    "shot_title": "Scale Proof Wide 16: Lion strikes the deal for kingship",
+    "shot_type": "scale_proof_wide",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in ancient_forest_interior featuring Lion, various forest beasts, tiger.",
+    "target_seconds": 10.8,
+    "characters_in_frame": [
+      {
+        "label": "Lion",
+        "canonical_id": null,
+        "display_name": "Lion",
+        "status": "review",
+        "entity_kind": "individual",
+        "resolution_score": 16,
+        "source_path": "",
+        "notes": "Low-confidence character match requires review."
+      },
+      {
+        "label": "various forest beasts",
+        "canonical_id": null,
+        "display_name": "various forest beasts",
+        "status": "review",
+        "entity_kind": "individual",
+        "resolution_score": 16,
+        "source_path": "",
+        "notes": "Low-confidence character match requires review."
+      },
+      {
+        "label": "Tiger",
+        "canonical_id": "tiger",
+        "display_name": "tiger",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH021/tiger.md",
+        "notes": "Direct registry match for 'tiger'."
+      }
+    ],
+    "environment": {
+      "label": "Forest Clearing",
+      "canonical_id": "ancient_forest_interior",
+      "display_name": "ancient_forest_interior",
+      "status": "canonical",
+      "entity_kind": "sub_location",
+      "resolution_score": 74,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH021/ancient_forest_interior.md",
+      "notes": "Chapter-local environment alias match for 'Forest Clearing' (key_overlap=1, label_overlap=2, context_overlap=3)."
+    },
+    "beat_ids": [
+      "BT003"
+    ],
+    "continuity_constraints": [
+      "Maintain consistent eye contact between animals during negotiation",
+      "Monitor Lion's posture shift from cowardice to bravado",
+      "Lion strikes the deal for kingship",
+      "Resolve Lion -> Lion",
+      "Resolve various forest beasts -> various forest beasts",
+      "Resolve Dorothy and companions (as observers) -> Dorothy and companions (as observers)"
+    ],
+    "prompt_seed": "Scale Proof Wide 16: Lion strikes the deal for kingship. scale_proof_wide. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Reada...",
+    "shot_notes": "Lion strikes the deal for kingship",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH021_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH021",
+        "scene_id": "CH021_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH021",
+        "scene_id": "CH021_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH021",
+        "scene_id": "CH021_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH021",
+        "scene_id": "CH021_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH021",
+        "scene_id": "CH021_SC003"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH021",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH021_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH021",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH021_chapter_xxi.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH006",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH006_chapter_vi.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH007",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH007_chapter_vii.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH021",
+        "canonical_id": "tiger"
+      }
+    ],
+    "evidence_summary": [
+      "Establish the Lion's transition from a fearful observer to an ambitious leader through a high-stakes negotiation triggered by a shared threat. The scale of the tiger and the ancient forest must emphasize the gravity of the spider-monster threat.",
+      "A tiger explains that a giant spider-like monster is terrorizing the forest. The Lion seizes the opportunity, striking a deal with the animals: if he kills the beast, they will crown him King of the Forest.",
+      "Fear to ambitious determination (Lion).",
+      "Lion appearing fearful/cowardly amidst forest beasts.",
+      "Lion standing with bravado, claiming kingship.",
+      "Tiger describes the spider monster; Lion proposes a deal for kingship.",
+      "tiger | A large-scale quadrupedal beast characterized by a feline, tiger-like head. While the specific body morphology is linked to \"monstrous beasts\" (Kalidahs) possessing bear-like bodies, the primary identifier is the distinct tiger visage. | unknown | u...",
+      "ancient_forest_interior | No specific visual descriptors are provided in the current evidence. The location is identified as an ancient forest interior serving as a primary setting. | Unknown | Unknown | Unknown"
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "adventure_action",
+    "coverage_role": "scale_proof_wide",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT003",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "major",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = major"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH021_SC003_SH016_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "45bb62d402aae9b35f37b9db337b58524d6257a1",
+      "created_at_utc": "2026-04-27T20:54:12.893482+00:00",
+      "updated_at_utc": "2026-04-27T20:55:12.711866+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH021_SC003",
+          "version": "c27419634059cdca954f0d3d312be680781fd0d2"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH021_SC003",
+          "version": "0d620289d2b867830358bc641367944b82208341"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH021_SC003",
+          "version": "36e57941030b952a00311672c84e13e8b6c82be8"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:54:12.893983+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "45bb62d402aae9b35f37b9db337b58524d6257a1"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:55:12.712866+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "45bb62d402aae9b35f37b9db337b58524d6257a1"
         }
       ]
     }

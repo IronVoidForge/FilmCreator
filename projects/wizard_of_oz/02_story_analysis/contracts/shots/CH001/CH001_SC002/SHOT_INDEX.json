@@ -39,6 +39,7 @@
     "subject_blocking": [
       "moving from center to cellar edge",
       "Dorothy moves from center room to cellar entrance",
+      "farmhouse_interior_and_cellar",
       "dorothy remains readable within the active playing space."
     ],
     "camera_relative_positions": [
@@ -51,17 +52,18 @@
     ],
     "environment_subzone": "farmhouse_interior_and_cellar",
     "key_visible_environment_features": [
-      "farmhouse_interior_and_cellar"
+      "farmhouse_interior_and_cellar",
+      "Chapter-local environment alias match for 'Inside/Exterior of the farmhouse' (key_overlap=1, label_overlap=1, context..."
     ],
     "continuity_from_previous_shot": "Dorothy moves toward the cellar as wind pressure builds.",
     "continuity_to_next_shot": "BT002",
     "pose_anchor_frame": "walking fast",
     "pose_end_frame": "stumbling",
-    "shot_title": "Medium 1: Dorothy attempts to reach the cellar amidst rising...",
-    "shot_type": "medium",
-    "camera_description": "Stable medium framing that keeps action and character readable.",
+    "shot_title": "Ceremonial Master 1: Dorothy attempts to reach the cellar amidst rising...",
+    "shot_type": "ceremonial_master",
+    "camera_description": "Stable readable framing built from the beat requirement.",
     "composition": "Readable medium composition in farmhouse_interior_and_cellar featuring dorothy.",
-    "target_seconds": 5.5,
+    "target_seconds": 10.8,
     "characters_in_frame": [
       {
         "label": "Dorothy",
@@ -93,7 +95,7 @@
       "Dust and debris movement directionality",
       "Dorothy attempts to reach the cellar amidst rising wind"
     ],
-    "prompt_seed": "Medium 1: Dorothy attempts to reach the cellar amidst rising.... medium. size=medium_full. angle=eye_level. lens=wide. motion=handheld. zoom=none. focus=shallow_subject. lighting=diffuse_ambient. visibility=on_screen. subject_angle=front_three_quarter_left. Stable medium framing that keeps action and character reada...",
+    "prompt_seed": "Ceremonial Master 1: Dorothy attempts to reach the cellar amidst rising.... ceremonial_master. size=medium_full. angle=eye_level. lens=wide. motion=handheld. zoom=none. focus=shallow_subject. lighting=diffuse_ambient. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from th...",
     "shot_notes": "Dorothy attempts to reach the cellar amidst rising wind",
     "evidence_refs": [
       {
@@ -158,17 +160,34 @@
       "Dorothy moves toward the cellar as wind pressure builds.",
       "The house is airborne and spinning within the storm void.",
       "Wind strikes, lifting the structure from its foundations.",
-      "dorothy | Dorothy is a young human girl characterized by an expressive face and the appearance of a weary traveler. Her visual identity evolves during her journey, transitioning from previously green clothing to a white dress or clothing. She is most notabl...",
+      "dorothy | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md] Costume/Silhouette: Unknown. No specific clothing details are provided in this chapter. [source:C:/FilmCreator/projects/wizard_of_oz/02_...",
       "farmhouse_interior_and_cellar | No specific visual details are provided in the current evidence. The location is identified as a farmhouse interior and its associated cellar. | Includes an interior living space and a cellar. | unknown | unknown",
       "cyclone_storm_void | No specific visual descriptors are provided in the current evidence. The environment functions as a dynamic transit setting associated with a cyclone or storm void. | Unknown. | Unknown. | Unknown."
     ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "economical_storybook",
+    "coverage_role": "ceremonial_master",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT001",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "major",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = major"
+      ]
+    },
     "metadata": {
       "artifact_id": "CH001_SC002_SH001_SHOT_PACKAGE",
       "artifact_type": "shot_package",
       "status": "generated",
-      "source_fingerprint": "3c275fef836ad2a0aef884dfea9124fb60c21559",
+      "source_fingerprint": "1bfce1ff86e6f86e1d177e52da6a901603900a95",
       "created_at_utc": "2026-04-27T09:19:46.733778+00:00",
-      "updated_at_utc": "2026-04-27T14:23:38.751881+00:00",
+      "updated_at_utc": "2026-04-27T20:54:20.808006+00:00",
       "upstream_dependencies": [
         {
           "dependency_type": "scene_contract",
@@ -183,7 +202,7 @@
         {
           "dependency_type": "shot_blueprints",
           "dependency_id": "CH001_SC002",
-          "version": "d7a0088b9c7adae6460b619f451449013a7149e0"
+          "version": "4703802c5f56485afd8fa4ecf2ca1d8337bf20c0"
         }
       ],
       "locked_fields": {},
@@ -198,6 +217,16 @@
           "timestamp_utc": "2026-04-27T14:24:53.732114+00:00",
           "action": "synthesized",
           "source_fingerprint": "3c275fef836ad2a0aef884dfea9124fb60c21559"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:53:24.096920+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "1bfce1ff86e6f86e1d177e52da6a901603900a95"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:21.182394+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "1bfce1ff86e6f86e1d177e52da6a901603900a95"
         }
       ]
     }
@@ -209,13 +238,1138 @@
     "shot_order": 2,
     "previous_shot_id": "SH001",
     "next_shot_id": "SH003",
+    "primary_subject": "dorothy",
+    "secondary_subjects": [],
+    "shot_moment_summary": "Dorothy attempts to reach the cellar amidst rising wind",
+    "start_state": "walking toward cellar",
+    "end_state": "reaching for cellar door",
+    "action_during_shot": "Dorothy attempts to reach the cellar amidst rising wind",
+    "action_continues_from": "stumbling",
+    "action_hands_off_to": "BT002",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "dorothy",
+    "visible_secondary_subject_ids": [],
+    "primary_subject_frame_position": "foreground right within farmhouse_interior_and_cellar",
+    "primary_subject_scale_relation": "Human scale interior vs. massive environmental displacement.",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "walking toward cellar",
+    "subject_relation_summary": "dorothy carries the frame alone",
+    "required_environment_anchor_1": "farmhouse_interior_and_cellar",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "Human scale interior vs. massive environmental displacement.",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "Dorothy moves from center room to cellar entrance",
+      "farmhouse_interior_and_cellar",
+      "dorothy remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the farmhouse_interior_and_cellar.",
+      "Background depth should keep farmhouse_interior_and_cellar legible as the location anchor.",
+      "Subject 1: dorothy remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "dorothy focuses toward the active scene action."
+    ],
+    "environment_subzone": "farmhouse_interior_and_cellar",
+    "key_visible_environment_features": [
+      "farmhouse_interior_and_cellar",
+      "Chapter-local environment alias match for 'Inside/Exterior of the farmhouse' (key_overlap=1, label_overlap=1, context..."
+    ],
+    "continuity_from_previous_shot": "stumbling",
+    "continuity_to_next_shot": "BT002",
+    "pose_anchor_frame": "walking toward cellar",
+    "pose_end_frame": "reaching for cellar door",
+    "shot_title": "Authority Single 2: Dorothy attempts to reach the cellar amidst rising...",
+    "shot_type": "authority_single",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in farmhouse_interior_and_cellar featuring dorothy.",
+    "target_seconds": 7.0,
+    "characters_in_frame": [
+      {
+        "label": "Dorothy",
+        "canonical_id": "dorothy",
+        "display_name": "dorothy",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md",
+        "notes": "Direct registry match for 'dorothy'."
+      }
+    ],
+    "environment": {
+      "label": "Inside/Exterior of the farmhouse",
+      "canonical_id": "farmhouse_interior_and_cellar",
+      "display_name": "farmhouse_interior_and_cellar",
+      "status": "canonical",
+      "entity_kind": "sub_location",
+      "resolution_score": 58,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH001/farmhouse_interior_and_cellar.md",
+      "notes": "Chapter-local environment alias match for 'Inside/Exterior of the farmhouse' (key_overlap=1, label_overlap=1, context_overlap=4)."
+    },
+    "beat_ids": [
+      "BT001"
+    ],
+    "continuity_constraints": [
+      "Interior objects flying through air",
+      "Rapidly shifting light levels from cloud rotation",
+      "Dust and debris movement directionality",
+      "Dorothy attempts to reach the cellar amidst rising wind"
+    ],
+    "prompt_seed": "Authority Single 2: Dorothy attempts to reach the cellar amidst rising.... authority_single. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat...",
+    "shot_notes": "Dorothy attempts to reach the cellar amidst rising wind",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH001_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC002"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH001",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH001_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH012",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH012_chapter_xii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH023",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH023_chapter_xxiii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH002",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH002_chapter_ii.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH001",
+        "canonical_id": "dorothy"
+      }
+    ],
+    "evidence_summary": [
+      "Execute the physical transition of the farmhouse from a grounded structure to an airborne vessel via high-pressure wind forces. The sequence requires synchronized movement between interior debris, character reaction, and external VFX sky/ground shifts to si...",
+      "Just as Dorothy attempts to reach the cellar, a powerful cyclone hits. The house is ripped from its foundations and lifted into the air by intense wind pressure.",
+      "Panic $\\rightarrow$ Disorientation/Terror.",
+      "Dorothy moves toward the cellar as wind pressure builds.",
+      "The house is airborne and spinning within the storm void.",
+      "Wind strikes, lifting the structure from its foundations.",
+      "dorothy | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md] Costume/Silhouette: Unknown. No specific clothing details are provided in this chapter. [source:C:/FilmCreator/projects/wizard_of_oz/02_...",
+      "farmhouse_interior_and_cellar | No specific visual details are provided in the current evidence. The location is identified as a farmhouse interior and its associated cellar. | Includes an interior living space and a cellar. | unknown | unknown",
+      "cyclone_storm_void | No specific visual descriptors are provided in the current evidence. The environment functions as a dynamic transit setting associated with a cyclone or storm void. | Unknown. | Unknown. | Unknown."
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "economical_storybook",
+    "coverage_role": "authority_single",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT001",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "major",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = major"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH001_SC002_SH002_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "1bfce1ff86e6f86e1d177e52da6a901603900a95",
+      "created_at_utc": "2026-04-27T09:20:58.772435+00:00",
+      "updated_at_utc": "2026-04-27T20:54:21.187905+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH001_SC002",
+          "version": "f713ef0f4551801831d6bb4b8e57fa6a618d4963"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH001_SC002",
+          "version": "dd9d7172734a93fa3642a7197f7326f658fdc7ac"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH001_SC002",
+          "version": "4703802c5f56485afd8fa4ecf2ca1d8337bf20c0"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T09:22:04.696831+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "202ea6d0f8df3e0f94cb60e828e7ce25a5c6f0e6"
+        },
+        {
+          "timestamp_utc": "2026-04-27T14:26:02.972854+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "3c275fef836ad2a0aef884dfea9124fb60c21559"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:53:24.104938+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "1bfce1ff86e6f86e1d177e52da6a901603900a95"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:21.188405+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "1bfce1ff86e6f86e1d177e52da6a901603900a95"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH003",
+    "scene_id": "CH001_SC002",
+    "chapter_id": "CH001",
+    "shot_order": 3,
+    "previous_shot_id": "SH002",
+    "next_shot_id": "SH004",
+    "primary_subject": "dorothy",
+    "secondary_subjects": [],
+    "shot_moment_summary": "Dorothy attempts to reach the cellar amidst rising wind",
+    "start_state": "walking toward cellar",
+    "end_state": "reaching for cellar door",
+    "action_during_shot": "Dorothy attempts to reach the cellar amidst rising wind",
+    "action_continues_from": "reaching for cellar door",
+    "action_hands_off_to": "BT002",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "dorothy",
+    "visible_secondary_subject_ids": [],
+    "primary_subject_frame_position": "foreground right within farmhouse_interior_and_cellar",
+    "primary_subject_scale_relation": "Human scale interior vs. massive environmental displacement.",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "walking toward cellar",
+    "subject_relation_summary": "dorothy carries the frame alone",
+    "required_environment_anchor_1": "farmhouse_interior_and_cellar",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "Human scale interior vs. massive environmental displacement.",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "Dorothy moves from center room to cellar entrance",
+      "farmhouse_interior_and_cellar",
+      "dorothy remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the farmhouse_interior_and_cellar.",
+      "Background depth should keep farmhouse_interior_and_cellar legible as the location anchor.",
+      "Subject 1: dorothy remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "dorothy focuses toward the active scene action."
+    ],
+    "environment_subzone": "farmhouse_interior_and_cellar",
+    "key_visible_environment_features": [
+      "farmhouse_interior_and_cellar",
+      "Chapter-local environment alias match for 'Inside/Exterior of the farmhouse' (key_overlap=1, label_overlap=1, context..."
+    ],
+    "continuity_from_previous_shot": "reaching for cellar door",
+    "continuity_to_next_shot": "BT002",
+    "pose_anchor_frame": "walking toward cellar",
+    "pose_end_frame": "reaching for cellar door",
+    "shot_title": "Petitioner Group 3: Dorothy attempts to reach the cellar amidst rising...",
+    "shot_type": "petitioner_group",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in farmhouse_interior_and_cellar featuring dorothy.",
+    "target_seconds": 7.0,
+    "characters_in_frame": [
+      {
+        "label": "Dorothy",
+        "canonical_id": "dorothy",
+        "display_name": "dorothy",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md",
+        "notes": "Direct registry match for 'dorothy'."
+      }
+    ],
+    "environment": {
+      "label": "Inside/Exterior of the farmhouse",
+      "canonical_id": "farmhouse_interior_and_cellar",
+      "display_name": "farmhouse_interior_and_cellar",
+      "status": "canonical",
+      "entity_kind": "sub_location",
+      "resolution_score": 58,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH001/farmhouse_interior_and_cellar.md",
+      "notes": "Chapter-local environment alias match for 'Inside/Exterior of the farmhouse' (key_overlap=1, label_overlap=1, context_overlap=4)."
+    },
+    "beat_ids": [
+      "BT001"
+    ],
+    "continuity_constraints": [
+      "Interior objects flying through air",
+      "Rapidly shifting light levels from cloud rotation",
+      "Dust and debris movement directionality",
+      "Dorothy attempts to reach the cellar amidst rising wind"
+    ],
+    "prompt_seed": "Petitioner Group 3: Dorothy attempts to reach the cellar amidst rising.... petitioner_group. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat...",
+    "shot_notes": "Dorothy attempts to reach the cellar amidst rising wind",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH001_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC002"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH001",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH001_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH012",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH012_chapter_xii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH023",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH023_chapter_xxiii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH002",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH002_chapter_ii.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH001",
+        "canonical_id": "dorothy"
+      }
+    ],
+    "evidence_summary": [
+      "Execute the physical transition of the farmhouse from a grounded structure to an airborne vessel via high-pressure wind forces. The sequence requires synchronized movement between interior debris, character reaction, and external VFX sky/ground shifts to si...",
+      "Just as Dorothy attempts to reach the cellar, a powerful cyclone hits. The house is ripped from its foundations and lifted into the air by intense wind pressure.",
+      "Panic $\\rightarrow$ Disorientation/Terror.",
+      "Dorothy moves toward the cellar as wind pressure builds.",
+      "The house is airborne and spinning within the storm void.",
+      "Wind strikes, lifting the structure from its foundations.",
+      "dorothy | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md] Costume/Silhouette: Unknown. No specific clothing details are provided in this chapter. [source:C:/FilmCreator/projects/wizard_of_oz/02_...",
+      "farmhouse_interior_and_cellar | No specific visual details are provided in the current evidence. The location is identified as a farmhouse interior and its associated cellar. | Includes an interior living space and a cellar. | unknown | unknown",
+      "cyclone_storm_void | No specific visual descriptors are provided in the current evidence. The environment functions as a dynamic transit setting associated with a cyclone or storm void. | Unknown. | Unknown. | Unknown."
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "economical_storybook",
+    "coverage_role": "petitioner_group",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT001",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "major",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = major"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH001_SC002_SH003_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "1bfce1ff86e6f86e1d177e52da6a901603900a95",
+      "created_at_utc": "2026-04-27T09:22:04.697829+00:00",
+      "updated_at_utc": "2026-04-27T20:54:21.193906+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH001_SC002",
+          "version": "f713ef0f4551801831d6bb4b8e57fa6a618d4963"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH001_SC002",
+          "version": "dd9d7172734a93fa3642a7197f7326f658fdc7ac"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH001_SC002",
+          "version": "4703802c5f56485afd8fa4ecf2ca1d8337bf20c0"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T09:23:10.842598+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "202ea6d0f8df3e0f94cb60e828e7ce25a5c6f0e6"
+        },
+        {
+          "timestamp_utc": "2026-04-27T14:27:12.315813+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "3c275fef836ad2a0aef884dfea9124fb60c21559"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:53:24.111939+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "1bfce1ff86e6f86e1d177e52da6a901603900a95"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:21.194406+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "1bfce1ff86e6f86e1d177e52da6a901603900a95"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH004",
+    "scene_id": "CH001_SC002",
+    "chapter_id": "CH001",
+    "shot_order": 4,
+    "previous_shot_id": "SH003",
+    "next_shot_id": "SH005",
+    "primary_subject": "dorothy",
+    "secondary_subjects": [],
+    "shot_moment_summary": "Dorothy attempts to reach the cellar amidst rising wind",
+    "start_state": "walking toward cellar",
+    "end_state": "reaching for cellar door",
+    "action_during_shot": "Dorothy attempts to reach the cellar amidst rising wind",
+    "action_continues_from": "reaching for cellar door",
+    "action_hands_off_to": "BT002",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "dorothy",
+    "visible_secondary_subject_ids": [],
+    "primary_subject_frame_position": "foreground right within farmhouse_interior_and_cellar",
+    "primary_subject_scale_relation": "Human scale interior vs. massive environmental displacement.",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "walking toward cellar",
+    "subject_relation_summary": "dorothy carries the frame alone",
+    "required_environment_anchor_1": "farmhouse_interior_and_cellar",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "Human scale interior vs. massive environmental displacement.",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "Dorothy moves from center room to cellar entrance",
+      "farmhouse_interior_and_cellar",
+      "dorothy remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the farmhouse_interior_and_cellar.",
+      "Background depth should keep farmhouse_interior_and_cellar legible as the location anchor.",
+      "Subject 1: dorothy remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "dorothy focuses toward the active scene action."
+    ],
+    "environment_subzone": "farmhouse_interior_and_cellar",
+    "key_visible_environment_features": [
+      "farmhouse_interior_and_cellar",
+      "Chapter-local environment alias match for 'Inside/Exterior of the farmhouse' (key_overlap=1, label_overlap=1, context..."
+    ],
+    "continuity_from_previous_shot": "reaching for cellar door",
+    "continuity_to_next_shot": "BT002",
+    "pose_anchor_frame": "walking toward cellar",
+    "pose_end_frame": "reaching for cellar door",
+    "shot_title": "Crowd Response 4: Dorothy attempts to reach the cellar amidst rising...",
+    "shot_type": "crowd_response",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in farmhouse_interior_and_cellar featuring dorothy.",
+    "target_seconds": 7.0,
+    "characters_in_frame": [
+      {
+        "label": "Dorothy",
+        "canonical_id": "dorothy",
+        "display_name": "dorothy",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md",
+        "notes": "Direct registry match for 'dorothy'."
+      }
+    ],
+    "environment": {
+      "label": "Inside/Exterior of the farmhouse",
+      "canonical_id": "farmhouse_interior_and_cellar",
+      "display_name": "farmhouse_interior_and_cellar",
+      "status": "canonical",
+      "entity_kind": "sub_location",
+      "resolution_score": 58,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH001/farmhouse_interior_and_cellar.md",
+      "notes": "Chapter-local environment alias match for 'Inside/Exterior of the farmhouse' (key_overlap=1, label_overlap=1, context_overlap=4)."
+    },
+    "beat_ids": [
+      "BT001"
+    ],
+    "continuity_constraints": [
+      "Interior objects flying through air",
+      "Rapidly shifting light levels from cloud rotation",
+      "Dust and debris movement directionality",
+      "Dorothy attempts to reach the cellar amidst rising wind"
+    ],
+    "prompt_seed": "Crowd Response 4: Dorothy attempts to reach the cellar amidst rising.... crowd_response. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requ...",
+    "shot_notes": "Dorothy attempts to reach the cellar amidst rising wind",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH001_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC002"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH001",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH001_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH012",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH012_chapter_xii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH023",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH023_chapter_xxiii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH002",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH002_chapter_ii.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH001",
+        "canonical_id": "dorothy"
+      }
+    ],
+    "evidence_summary": [
+      "Execute the physical transition of the farmhouse from a grounded structure to an airborne vessel via high-pressure wind forces. The sequence requires synchronized movement between interior debris, character reaction, and external VFX sky/ground shifts to si...",
+      "Just as Dorothy attempts to reach the cellar, a powerful cyclone hits. The house is ripped from its foundations and lifted into the air by intense wind pressure.",
+      "Panic $\\rightarrow$ Disorientation/Terror.",
+      "Dorothy moves toward the cellar as wind pressure builds.",
+      "The house is airborne and spinning within the storm void.",
+      "Wind strikes, lifting the structure from its foundations.",
+      "dorothy | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md] Costume/Silhouette: Unknown. No specific clothing details are provided in this chapter. [source:C:/FilmCreator/projects/wizard_of_oz/02_...",
+      "farmhouse_interior_and_cellar | No specific visual details are provided in the current evidence. The location is identified as a farmhouse interior and its associated cellar. | Includes an interior living space and a cellar. | unknown | unknown",
+      "cyclone_storm_void | No specific visual descriptors are provided in the current evidence. The environment functions as a dynamic transit setting associated with a cyclone or storm void. | Unknown. | Unknown. | Unknown."
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "economical_storybook",
+    "coverage_role": "crowd_response",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT001",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "major",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = major"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH001_SC002_SH004_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "1bfce1ff86e6f86e1d177e52da6a901603900a95",
+      "created_at_utc": "2026-04-27T20:53:24.113166+00:00",
+      "updated_at_utc": "2026-04-27T20:54:21.199405+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH001_SC002",
+          "version": "f713ef0f4551801831d6bb4b8e57fa6a618d4963"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH001_SC002",
+          "version": "dd9d7172734a93fa3642a7197f7326f658fdc7ac"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH001_SC002",
+          "version": "4703802c5f56485afd8fa4ecf2ca1d8337bf20c0"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:53:24.114165+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "1bfce1ff86e6f86e1d177e52da6a901603900a95"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:21.200407+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "1bfce1ff86e6f86e1d177e52da6a901603900a95"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH005",
+    "scene_id": "CH001_SC002",
+    "chapter_id": "CH001",
+    "shot_order": 5,
+    "previous_shot_id": "SH004",
+    "next_shot_id": "SH006",
+    "primary_subject": "dorothy",
+    "secondary_subjects": [],
+    "shot_moment_summary": "Dorothy attempts to reach the cellar amidst rising wind",
+    "start_state": "walking toward cellar",
+    "end_state": "reaching for cellar door",
+    "action_during_shot": "Dorothy attempts to reach the cellar amidst rising wind",
+    "action_continues_from": "reaching for cellar door",
+    "action_hands_off_to": "BT002",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "dorothy",
+    "visible_secondary_subject_ids": [],
+    "primary_subject_frame_position": "foreground right within farmhouse_interior_and_cellar",
+    "primary_subject_scale_relation": "Human scale interior vs. massive environmental displacement.",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "walking toward cellar",
+    "subject_relation_summary": "dorothy carries the frame alone",
+    "required_environment_anchor_1": "farmhouse_interior_and_cellar",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "Human scale interior vs. massive environmental displacement.",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "Dorothy moves from center room to cellar entrance",
+      "farmhouse_interior_and_cellar",
+      "dorothy remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the farmhouse_interior_and_cellar.",
+      "Background depth should keep farmhouse_interior_and_cellar legible as the location anchor.",
+      "Subject 1: dorothy remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "dorothy focuses toward the active scene action."
+    ],
+    "environment_subzone": "farmhouse_interior_and_cellar",
+    "key_visible_environment_features": [
+      "farmhouse_interior_and_cellar",
+      "Chapter-local environment alias match for 'Inside/Exterior of the farmhouse' (key_overlap=1, label_overlap=1, context..."
+    ],
+    "continuity_from_previous_shot": "reaching for cellar door",
+    "continuity_to_next_shot": "BT002",
+    "pose_anchor_frame": "walking toward cellar",
+    "pose_end_frame": "reaching for cellar door",
+    "shot_title": "Symbol Insert 5: Dorothy attempts to reach the cellar amidst rising...",
+    "shot_type": "symbol_insert",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in farmhouse_interior_and_cellar featuring dorothy.",
+    "target_seconds": 5.4,
+    "characters_in_frame": [
+      {
+        "label": "Dorothy",
+        "canonical_id": "dorothy",
+        "display_name": "dorothy",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md",
+        "notes": "Direct registry match for 'dorothy'."
+      }
+    ],
+    "environment": {
+      "label": "Inside/Exterior of the farmhouse",
+      "canonical_id": "farmhouse_interior_and_cellar",
+      "display_name": "farmhouse_interior_and_cellar",
+      "status": "canonical",
+      "entity_kind": "sub_location",
+      "resolution_score": 58,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH001/farmhouse_interior_and_cellar.md",
+      "notes": "Chapter-local environment alias match for 'Inside/Exterior of the farmhouse' (key_overlap=1, label_overlap=1, context_overlap=4)."
+    },
+    "beat_ids": [
+      "BT001"
+    ],
+    "continuity_constraints": [
+      "Interior objects flying through air",
+      "Rapidly shifting light levels from cloud rotation",
+      "Dust and debris movement directionality",
+      "Dorothy attempts to reach the cellar amidst rising wind"
+    ],
+    "prompt_seed": "Symbol Insert 5: Dorothy attempts to reach the cellar amidst rising.... symbol_insert. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requir...",
+    "shot_notes": "Dorothy attempts to reach the cellar amidst rising wind",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH001_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC002"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH001",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH001_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH012",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH012_chapter_xii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH023",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH023_chapter_xxiii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH002",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH002_chapter_ii.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH001",
+        "canonical_id": "dorothy"
+      }
+    ],
+    "evidence_summary": [
+      "Execute the physical transition of the farmhouse from a grounded structure to an airborne vessel via high-pressure wind forces. The sequence requires synchronized movement between interior debris, character reaction, and external VFX sky/ground shifts to si...",
+      "Just as Dorothy attempts to reach the cellar, a powerful cyclone hits. The house is ripped from its foundations and lifted into the air by intense wind pressure.",
+      "Panic $\\rightarrow$ Disorientation/Terror.",
+      "Dorothy moves toward the cellar as wind pressure builds.",
+      "The house is airborne and spinning within the storm void.",
+      "Wind strikes, lifting the structure from its foundations.",
+      "dorothy | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md] Costume/Silhouette: Unknown. No specific clothing details are provided in this chapter. [source:C:/FilmCreator/projects/wizard_of_oz/02_...",
+      "farmhouse_interior_and_cellar | No specific visual details are provided in the current evidence. The location is identified as a farmhouse interior and its associated cellar. | Includes an interior living space and a cellar. | unknown | unknown",
+      "cyclone_storm_void | No specific visual descriptors are provided in the current evidence. The environment functions as a dynamic transit setting associated with a cyclone or storm void. | Unknown. | Unknown. | Unknown."
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "economical_storybook",
+    "coverage_role": "symbol_insert",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT001",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "major",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = major"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH001_SC002_SH005_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "1bfce1ff86e6f86e1d177e52da6a901603900a95",
+      "created_at_utc": "2026-04-27T20:53:24.115166+00:00",
+      "updated_at_utc": "2026-04-27T20:54:21.205409+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH001_SC002",
+          "version": "f713ef0f4551801831d6bb4b8e57fa6a618d4963"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH001_SC002",
+          "version": "dd9d7172734a93fa3642a7197f7326f658fdc7ac"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH001_SC002",
+          "version": "4703802c5f56485afd8fa4ecf2ca1d8337bf20c0"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:53:24.115666+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "1bfce1ff86e6f86e1d177e52da6a901603900a95"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:21.205911+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "1bfce1ff86e6f86e1d177e52da6a901603900a95"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH006",
+    "scene_id": "CH001_SC002",
+    "chapter_id": "CH001",
+    "shot_order": 6,
+    "previous_shot_id": "SH005",
+    "next_shot_id": "SH007",
+    "primary_subject": "dorothy",
+    "secondary_subjects": [],
+    "shot_moment_summary": "Dorothy attempts to reach the cellar amidst rising wind",
+    "start_state": "walking toward cellar",
+    "end_state": "reaching for cellar door",
+    "action_during_shot": "Dorothy attempts to reach the cellar amidst rising wind",
+    "action_continues_from": "reaching for cellar door",
+    "action_hands_off_to": "BT002",
+    "shot_size": "close_up",
+    "camera_angle": "eye_level",
+    "lens_family": "portrait",
+    "camera_motion": "push_in",
+    "zoom_behavior": "subtle_in",
+    "focus_strategy": "shallow_subject",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "dorothy",
+    "visible_secondary_subject_ids": [],
+    "primary_subject_frame_position": "foreground inside farmhouse_interior_and_cellar",
+    "primary_subject_scale_relation": "Human scale interior vs. massive environmental displacement.",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "walking toward cellar",
+    "subject_relation_summary": "dorothy carries the frame alone",
+    "required_environment_anchor_1": "farmhouse_interior_and_cellar",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "Human scale interior vs. massive environmental displacement.",
+    "camera_package_description": "close-up, eye level, portrait lens, push in, zoom subtle in, shallow subject, hard directional",
+    "subject_blocking": [
+      "Dorothy moves from center room to cellar entrance",
+      "farmhouse_interior_and_cellar",
+      "dorothy remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the farmhouse_interior_and_cellar.",
+      "Background depth should keep farmhouse_interior_and_cellar legible as the location anchor.",
+      "Subject 1: dorothy remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "dorothy focuses toward the active scene action."
+    ],
+    "environment_subzone": "farmhouse_interior_and_cellar",
+    "key_visible_environment_features": [
+      "farmhouse_interior_and_cellar",
+      "Chapter-local environment alias match for 'Inside/Exterior of the farmhouse' (key_overlap=1, label_overlap=1, context..."
+    ],
+    "continuity_from_previous_shot": "reaching for cellar door",
+    "continuity_to_next_shot": "BT002",
+    "pose_anchor_frame": "walking toward cellar",
+    "pose_end_frame": "reaching for cellar door",
+    "shot_title": "Reaction Closeup 6: Dorothy attempts to reach the cellar amidst rising...",
+    "shot_type": "reaction_closeup",
+    "camera_description": "Close framing that isolates reaction and emotional emphasis.",
+    "composition": "Intimate composition that isolates dorothy against farmhouse_interior_and_cellar to capture the beat's emotional turn.",
+    "target_seconds": 7.0,
+    "characters_in_frame": [
+      {
+        "label": "Dorothy",
+        "canonical_id": "dorothy",
+        "display_name": "dorothy",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md",
+        "notes": "Direct registry match for 'dorothy'."
+      }
+    ],
+    "environment": {
+      "label": "Inside/Exterior of the farmhouse",
+      "canonical_id": "farmhouse_interior_and_cellar",
+      "display_name": "farmhouse_interior_and_cellar",
+      "status": "canonical",
+      "entity_kind": "sub_location",
+      "resolution_score": 58,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH001/farmhouse_interior_and_cellar.md",
+      "notes": "Chapter-local environment alias match for 'Inside/Exterior of the farmhouse' (key_overlap=1, label_overlap=1, context_overlap=4)."
+    },
+    "beat_ids": [
+      "BT001"
+    ],
+    "continuity_constraints": [
+      "Interior objects flying through air",
+      "Rapidly shifting light levels from cloud rotation",
+      "Dust and debris movement directionality",
+      "Dorothy attempts to reach the cellar amidst rising wind"
+    ],
+    "prompt_seed": "Reaction Closeup 6: Dorothy attempts to reach the cellar amidst rising.... reaction_closeup. size=close_up. angle=eye_level. lens=portrait. motion=push_in. zoom=subtle_in. focus=shallow_subject. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Close framing that isolates react...",
+    "shot_notes": "Dorothy attempts to reach the cellar amidst rising wind",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH001_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC002"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH001",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH001_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH012",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH012_chapter_xii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH023",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH023_chapter_xxiii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH002",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH002_chapter_ii.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH001",
+        "canonical_id": "dorothy"
+      }
+    ],
+    "evidence_summary": [
+      "Execute the physical transition of the farmhouse from a grounded structure to an airborne vessel via high-pressure wind forces. The sequence requires synchronized movement between interior debris, character reaction, and external VFX sky/ground shifts to si...",
+      "Just as Dorothy attempts to reach the cellar, a powerful cyclone hits. The house is ripped from its foundations and lifted into the air by intense wind pressure.",
+      "Panic $\\rightarrow$ Disorientation/Terror.",
+      "Dorothy moves toward the cellar as wind pressure builds.",
+      "The house is airborne and spinning within the storm void.",
+      "Wind strikes, lifting the structure from its foundations.",
+      "dorothy | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md] Costume/Silhouette: Unknown. No specific clothing details are provided in this chapter. [source:C:/FilmCreator/projects/wizard_of_oz/02_...",
+      "farmhouse_interior_and_cellar | No specific visual details are provided in the current evidence. The location is identified as a farmhouse interior and its associated cellar. | Includes an interior living space and a cellar. | unknown | unknown",
+      "cyclone_storm_void | No specific visual descriptors are provided in the current evidence. The environment functions as a dynamic transit setting associated with a cyclone or storm void. | Unknown. | Unknown. | Unknown."
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "economical_storybook",
+    "coverage_role": "decision_closeup",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT001",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "major",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = major"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH001_SC002_SH006_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "1bfce1ff86e6f86e1d177e52da6a901603900a95",
+      "created_at_utc": "2026-04-27T20:53:24.116665+00:00",
+      "updated_at_utc": "2026-04-27T20:54:21.211409+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH001_SC002",
+          "version": "f713ef0f4551801831d6bb4b8e57fa6a618d4963"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH001_SC002",
+          "version": "dd9d7172734a93fa3642a7197f7326f658fdc7ac"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH001_SC002",
+          "version": "4703802c5f56485afd8fa4ecf2ca1d8337bf20c0"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:53:24.117164+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "1bfce1ff86e6f86e1d177e52da6a901603900a95"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:21.211909+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "1bfce1ff86e6f86e1d177e52da6a901603900a95"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH007",
+    "scene_id": "CH001_SC002",
+    "chapter_id": "CH001",
+    "shot_order": 7,
+    "previous_shot_id": "SH006",
+    "next_shot_id": "SH008",
     "primary_subject": "farmhouse_interior_and_cellar",
     "secondary_subjects": [],
     "shot_moment_summary": "The house shudders violently as the cyclone hits",
     "start_state": "stable interior",
     "end_state": "chaotic debris field",
     "action_during_shot": "objects lift and fly",
-    "action_continues_from": "stumbling",
+    "action_continues_from": "reaching for cellar door",
     "action_hands_off_to": "BT003",
     "shot_size": "medium",
     "camera_angle": "dutch",
@@ -255,17 +1409,18 @@
     ],
     "environment_subzone": "farmhouse_interior_and_cellar",
     "key_visible_environment_features": [
-      "farmhouse_interior_and_cellar"
+      "farmhouse_interior_and_cellar",
+      "Chapter-local environment alias match for 'Inside/Exterior of the farmhouse' (key_overlap=1, label_overlap=1, context..."
     ],
-    "continuity_from_previous_shot": "stumbling",
+    "continuity_from_previous_shot": "reaching for cellar door",
     "continuity_to_next_shot": "BT003",
     "pose_anchor_frame": "stable interior",
     "pose_end_frame": "chaotic debris field",
-    "shot_title": "The cyclone strikes the house",
-    "shot_type": "insert_detail",
-    "camera_description": "Tight detail framing focused on a single visual object or gesture.",
-    "composition": "Detail composition centered on the key physical action or prop inside farmhouse_interior_and_cellar.",
-    "target_seconds": 5.3,
+    "shot_title": "Geography Wide 7: The cyclone strikes the house with massive force",
+    "shot_type": "geography_wide",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in farmhouse_interior_and_cellar featuring dorothy.",
+    "target_seconds": 10.8,
     "characters_in_frame": [
       {
         "label": "Dorothy",
@@ -297,7 +1452,7 @@
       "Dust and debris movement directionality",
       "The cyclone strikes the house with massive force"
     ],
-    "prompt_seed": "Insert Detail 2: The cyclone strikes the house with massive force. insert_detail. size=medium. angle=dutch. lens=wide. motion=handheld. zoom=none. focus=environment_priority. lighting=high_contrast_ceremonial. visibility=on_screen. subject_angle=front. Tight detail framing focused on a single visual object or gestur...",
+    "prompt_seed": "Geography Wide 7: The cyclone strikes the house with massive force. geography_wide. size=medium. angle=dutch. lens=wide. motion=handheld. zoom=none. focus=environment_priority. lighting=high_contrast_ceremonial. visibility=on_screen. subject_angle=front. Stable readable framing built from the beat requirement. Reada...",
     "shot_notes": "The cyclone strikes the house with massive force",
     "evidence_refs": [
       {
@@ -362,17 +1517,34 @@
       "Dorothy moves toward the cellar as wind pressure builds.",
       "The house is airborne and spinning within the storm void.",
       "Wind strikes, lifting the structure from its foundations.",
-      "dorothy | Dorothy is a young human girl characterized by an expressive face and the appearance of a weary traveler. Her visual identity evolves during her journey, transitioning from previously green clothing to a white dress or clothing. She is most notabl...",
+      "dorothy | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md] Costume/Silhouette: Unknown. No specific clothing details are provided in this chapter. [source:C:/FilmCreator/projects/wizard_of_oz/02_...",
       "farmhouse_interior_and_cellar | No specific visual details are provided in the current evidence. The location is identified as a farmhouse interior and its associated cellar. | Includes an interior living space and a cellar. | unknown | unknown",
       "cyclone_storm_void | No specific visual descriptors are provided in the current evidence. The environment functions as a dynamic transit setting associated with a cyclone or storm void. | Unknown. | Unknown. | Unknown."
     ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "economical_storybook",
+    "coverage_role": "geography_wide",
+    "beat_type": "action_conflict",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT002",
+      "beat_type": "action_conflict",
+      "importance": "major",
+      "confidence": 0.78,
+      "reasons": [
+        "conflict/action verb",
+        "importance = major"
+      ]
+    },
     "metadata": {
-      "artifact_id": "CH001_SC002_SH002_SHOT_PACKAGE",
+      "artifact_id": "CH001_SC002_SH007_SHOT_PACKAGE",
       "artifact_type": "shot_package",
       "status": "generated",
-      "source_fingerprint": "3c275fef836ad2a0aef884dfea9124fb60c21559",
-      "created_at_utc": "2026-04-27T09:20:58.772435+00:00",
-      "updated_at_utc": "2026-04-27T14:24:53.733616+00:00",
+      "source_fingerprint": "1bfce1ff86e6f86e1d177e52da6a901603900a95",
+      "created_at_utc": "2026-04-27T20:53:24.118165+00:00",
+      "updated_at_utc": "2026-04-27T20:54:21.216911+00:00",
       "upstream_dependencies": [
         {
           "dependency_type": "scene_contract",
@@ -387,39 +1559,1144 @@
         {
           "dependency_type": "shot_blueprints",
           "dependency_id": "CH001_SC002",
-          "version": "d7a0088b9c7adae6460b619f451449013a7149e0"
+          "version": "4703802c5f56485afd8fa4ecf2ca1d8337bf20c0"
         }
       ],
       "locked_fields": {},
       "manual_overrides": {},
       "revision_history": [
         {
-          "timestamp_utc": "2026-04-27T09:22:04.696831+00:00",
+          "timestamp_utc": "2026-04-27T20:53:24.119169+00:00",
           "action": "synthesized",
-          "source_fingerprint": "202ea6d0f8df3e0f94cb60e828e7ce25a5c6f0e6"
+          "source_fingerprint": "1bfce1ff86e6f86e1d177e52da6a901603900a95"
         },
         {
-          "timestamp_utc": "2026-04-27T14:26:02.972854+00:00",
+          "timestamp_utc": "2026-04-27T20:54:21.217913+00:00",
           "action": "synthesized",
-          "source_fingerprint": "3c275fef836ad2a0aef884dfea9124fb60c21559"
+          "source_fingerprint": "1bfce1ff86e6f86e1d177e52da6a901603900a95"
         }
       ]
     }
   },
   {
-    "shot_id": "SH003",
+    "shot_id": "SH008",
     "scene_id": "CH001_SC002",
     "chapter_id": "CH001",
-    "shot_order": 3,
-    "previous_shot_id": "SH002",
-    "next_shot_id": "",
+    "shot_order": 8,
+    "previous_shot_id": "SH007",
+    "next_shot_id": "SH009",
+    "primary_subject": "dorothy",
+    "secondary_subjects": [],
+    "shot_moment_summary": "The cyclone strikes the house with massive force",
+    "start_state": "sudden shudder",
+    "end_state": "objects flying through air",
+    "action_during_shot": "The cyclone strikes the house with massive force",
+    "action_continues_from": "chaotic debris field",
+    "action_hands_off_to": "BT003",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "dorothy",
+    "visible_secondary_subject_ids": [],
+    "primary_subject_frame_position": "foreground right within farmhouse_interior_and_cellar",
+    "primary_subject_scale_relation": "Human scale interior vs. massive environmental displacement.",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "sudden shudder",
+    "subject_relation_summary": "dorothy carries the frame alone",
+    "required_environment_anchor_1": "farmhouse_interior_and_cellar",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "Human scale interior vs. massive environmental displacement.",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "Dorothy recoils from impact",
+      "farmhouse_interior_and_cellar",
+      "dorothy remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the farmhouse_interior_and_cellar.",
+      "Background depth should keep farmhouse_interior_and_cellar legible as the location anchor.",
+      "Subject 1: dorothy remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "dorothy focuses toward the active scene action."
+    ],
+    "environment_subzone": "farmhouse_interior_and_cellar",
+    "key_visible_environment_features": [
+      "farmhouse_interior_and_cellar",
+      "Chapter-local environment alias match for 'Inside/Exterior of the farmhouse' (key_overlap=1, label_overlap=1, context..."
+    ],
+    "continuity_from_previous_shot": "chaotic debris field",
+    "continuity_to_next_shot": "BT003",
+    "pose_anchor_frame": "sudden shudder",
+    "pose_end_frame": "objects flying through air",
+    "shot_title": "Threat Reveal 8: The cyclone strikes the house with massive force",
+    "shot_type": "threat_reveal",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in farmhouse_interior_and_cellar featuring dorothy.",
+    "target_seconds": 7.0,
+    "characters_in_frame": [
+      {
+        "label": "Dorothy",
+        "canonical_id": "dorothy",
+        "display_name": "dorothy",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md",
+        "notes": "Direct registry match for 'dorothy'."
+      }
+    ],
+    "environment": {
+      "label": "Inside/Exterior of the farmhouse",
+      "canonical_id": "farmhouse_interior_and_cellar",
+      "display_name": "farmhouse_interior_and_cellar",
+      "status": "canonical",
+      "entity_kind": "sub_location",
+      "resolution_score": 58,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH001/farmhouse_interior_and_cellar.md",
+      "notes": "Chapter-local environment alias match for 'Inside/Exterior of the farmhouse' (key_overlap=1, label_overlap=1, context_overlap=4)."
+    },
+    "beat_ids": [
+      "BT002"
+    ],
+    "continuity_constraints": [
+      "Interior objects flying through air",
+      "Rapidly shifting light levels from cloud rotation",
+      "Dust and debris movement directionality",
+      "The cyclone strikes the house with massive force"
+    ],
+    "prompt_seed": "Threat Reveal 8: The cyclone strikes the house with massive force. threat_reveal. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement...",
+    "shot_notes": "The cyclone strikes the house with massive force",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH001_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC002"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH001",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH001_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH012",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH012_chapter_xii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH023",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH023_chapter_xxiii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH002",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH002_chapter_ii.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH001",
+        "canonical_id": "dorothy"
+      }
+    ],
+    "evidence_summary": [
+      "Execute the physical transition of the farmhouse from a grounded structure to an airborne vessel via high-pressure wind forces. The sequence requires synchronized movement between interior debris, character reaction, and external VFX sky/ground shifts to si...",
+      "Just as Dorothy attempts to reach the cellar, a powerful cyclone hits. The house is ripped from its foundations and lifted into the air by intense wind pressure.",
+      "Panic $\\rightarrow$ Disorientation/Terror.",
+      "Dorothy moves toward the cellar as wind pressure builds.",
+      "The house is airborne and spinning within the storm void.",
+      "Wind strikes, lifting the structure from its foundations.",
+      "dorothy | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md] Costume/Silhouette: Unknown. No specific clothing details are provided in this chapter. [source:C:/FilmCreator/projects/wizard_of_oz/02_...",
+      "farmhouse_interior_and_cellar | No specific visual details are provided in the current evidence. The location is identified as a farmhouse interior and its associated cellar. | Includes an interior living space and a cellar. | unknown | unknown",
+      "cyclone_storm_void | No specific visual descriptors are provided in the current evidence. The environment functions as a dynamic transit setting associated with a cyclone or storm void. | Unknown. | Unknown. | Unknown."
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "economical_storybook",
+    "coverage_role": "threat_reveal",
+    "beat_type": "action_conflict",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT002",
+      "beat_type": "action_conflict",
+      "importance": "major",
+      "confidence": 0.78,
+      "reasons": [
+        "conflict/action verb",
+        "importance = major"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH001_SC002_SH008_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "1bfce1ff86e6f86e1d177e52da6a901603900a95",
+      "created_at_utc": "2026-04-27T20:53:24.120173+00:00",
+      "updated_at_utc": "2026-04-27T20:54:21.222930+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH001_SC002",
+          "version": "f713ef0f4551801831d6bb4b8e57fa6a618d4963"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH001_SC002",
+          "version": "dd9d7172734a93fa3642a7197f7326f658fdc7ac"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH001_SC002",
+          "version": "4703802c5f56485afd8fa4ecf2ca1d8337bf20c0"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:53:24.120673+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "1bfce1ff86e6f86e1d177e52da6a901603900a95"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:21.223430+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "1bfce1ff86e6f86e1d177e52da6a901603900a95"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH009",
+    "scene_id": "CH001_SC002",
+    "chapter_id": "CH001",
+    "shot_order": 9,
+    "previous_shot_id": "SH008",
+    "next_shot_id": "SH010",
+    "primary_subject": "dorothy",
+    "secondary_subjects": [],
+    "shot_moment_summary": "The cyclone strikes the house with massive force",
+    "start_state": "sudden shudder",
+    "end_state": "objects flying through air",
+    "action_during_shot": "The cyclone strikes the house with massive force",
+    "action_continues_from": "objects flying through air",
+    "action_hands_off_to": "BT003",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "dorothy",
+    "visible_secondary_subject_ids": [],
+    "primary_subject_frame_position": "foreground right within farmhouse_interior_and_cellar",
+    "primary_subject_scale_relation": "Human scale interior vs. massive environmental displacement.",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "sudden shudder",
+    "subject_relation_summary": "dorothy carries the frame alone",
+    "required_environment_anchor_1": "farmhouse_interior_and_cellar",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "Human scale interior vs. massive environmental displacement.",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "Dorothy recoils from impact",
+      "farmhouse_interior_and_cellar",
+      "dorothy remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the farmhouse_interior_and_cellar.",
+      "Background depth should keep farmhouse_interior_and_cellar legible as the location anchor.",
+      "Subject 1: dorothy remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "dorothy focuses toward the active scene action."
+    ],
+    "environment_subzone": "farmhouse_interior_and_cellar",
+    "key_visible_environment_features": [
+      "farmhouse_interior_and_cellar",
+      "Chapter-local environment alias match for 'Inside/Exterior of the farmhouse' (key_overlap=1, label_overlap=1, context..."
+    ],
+    "continuity_from_previous_shot": "objects flying through air",
+    "continuity_to_next_shot": "BT003",
+    "pose_anchor_frame": "sudden shudder",
+    "pose_end_frame": "objects flying through air",
+    "shot_title": "Action Medium 9: The cyclone strikes the house with massive force",
+    "shot_type": "action_medium",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in farmhouse_interior_and_cellar featuring dorothy.",
+    "target_seconds": 7.0,
+    "characters_in_frame": [
+      {
+        "label": "Dorothy",
+        "canonical_id": "dorothy",
+        "display_name": "dorothy",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md",
+        "notes": "Direct registry match for 'dorothy'."
+      }
+    ],
+    "environment": {
+      "label": "Inside/Exterior of the farmhouse",
+      "canonical_id": "farmhouse_interior_and_cellar",
+      "display_name": "farmhouse_interior_and_cellar",
+      "status": "canonical",
+      "entity_kind": "sub_location",
+      "resolution_score": 58,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH001/farmhouse_interior_and_cellar.md",
+      "notes": "Chapter-local environment alias match for 'Inside/Exterior of the farmhouse' (key_overlap=1, label_overlap=1, context_overlap=4)."
+    },
+    "beat_ids": [
+      "BT002"
+    ],
+    "continuity_constraints": [
+      "Interior objects flying through air",
+      "Rapidly shifting light levels from cloud rotation",
+      "Dust and debris movement directionality",
+      "The cyclone strikes the house with massive force"
+    ],
+    "prompt_seed": "Action Medium 9: The cyclone strikes the house with massive force. action_medium. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement...",
+    "shot_notes": "The cyclone strikes the house with massive force",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH001_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC002"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH001",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH001_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH012",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH012_chapter_xii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH023",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH023_chapter_xxiii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH002",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH002_chapter_ii.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH001",
+        "canonical_id": "dorothy"
+      }
+    ],
+    "evidence_summary": [
+      "Execute the physical transition of the farmhouse from a grounded structure to an airborne vessel via high-pressure wind forces. The sequence requires synchronized movement between interior debris, character reaction, and external VFX sky/ground shifts to si...",
+      "Just as Dorothy attempts to reach the cellar, a powerful cyclone hits. The house is ripped from its foundations and lifted into the air by intense wind pressure.",
+      "Panic $\\rightarrow$ Disorientation/Terror.",
+      "Dorothy moves toward the cellar as wind pressure builds.",
+      "The house is airborne and spinning within the storm void.",
+      "Wind strikes, lifting the structure from its foundations.",
+      "dorothy | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md] Costume/Silhouette: Unknown. No specific clothing details are provided in this chapter. [source:C:/FilmCreator/projects/wizard_of_oz/02_...",
+      "farmhouse_interior_and_cellar | No specific visual details are provided in the current evidence. The location is identified as a farmhouse interior and its associated cellar. | Includes an interior living space and a cellar. | unknown | unknown",
+      "cyclone_storm_void | No specific visual descriptors are provided in the current evidence. The environment functions as a dynamic transit setting associated with a cyclone or storm void. | Unknown. | Unknown. | Unknown."
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "economical_storybook",
+    "coverage_role": "defender_action",
+    "beat_type": "action_conflict",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT002",
+      "beat_type": "action_conflict",
+      "importance": "major",
+      "confidence": 0.78,
+      "reasons": [
+        "conflict/action verb",
+        "importance = major"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH001_SC002_SH009_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "1bfce1ff86e6f86e1d177e52da6a901603900a95",
+      "created_at_utc": "2026-04-27T20:53:24.122173+00:00",
+      "updated_at_utc": "2026-04-27T20:54:21.229930+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH001_SC002",
+          "version": "f713ef0f4551801831d6bb4b8e57fa6a618d4963"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH001_SC002",
+          "version": "dd9d7172734a93fa3642a7197f7326f658fdc7ac"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH001_SC002",
+          "version": "4703802c5f56485afd8fa4ecf2ca1d8337bf20c0"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:53:24.122672+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "1bfce1ff86e6f86e1d177e52da6a901603900a95"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:21.230430+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "1bfce1ff86e6f86e1d177e52da6a901603900a95"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH010",
+    "scene_id": "CH001_SC002",
+    "chapter_id": "CH001",
+    "shot_order": 10,
+    "previous_shot_id": "SH009",
+    "next_shot_id": "SH011",
+    "primary_subject": "dorothy",
+    "secondary_subjects": [],
+    "shot_moment_summary": "The cyclone strikes the house with massive force",
+    "start_state": "sudden shudder",
+    "end_state": "objects flying through air",
+    "action_during_shot": "The cyclone strikes the house with massive force",
+    "action_continues_from": "objects flying through air",
+    "action_hands_off_to": "BT003",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "dorothy",
+    "visible_secondary_subject_ids": [],
+    "primary_subject_frame_position": "foreground right within farmhouse_interior_and_cellar",
+    "primary_subject_scale_relation": "Human scale interior vs. massive environmental displacement.",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "sudden shudder",
+    "subject_relation_summary": "dorothy carries the frame alone",
+    "required_environment_anchor_1": "farmhouse_interior_and_cellar",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "Human scale interior vs. massive environmental displacement.",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "Dorothy recoils from impact",
+      "farmhouse_interior_and_cellar",
+      "dorothy remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the farmhouse_interior_and_cellar.",
+      "Background depth should keep farmhouse_interior_and_cellar legible as the location anchor.",
+      "Subject 1: dorothy remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "dorothy focuses toward the active scene action."
+    ],
+    "environment_subzone": "farmhouse_interior_and_cellar",
+    "key_visible_environment_features": [
+      "farmhouse_interior_and_cellar",
+      "Chapter-local environment alias match for 'Inside/Exterior of the farmhouse' (key_overlap=1, label_overlap=1, context..."
+    ],
+    "continuity_from_previous_shot": "objects flying through air",
+    "continuity_to_next_shot": "BT003",
+    "pose_anchor_frame": "sudden shudder",
+    "pose_end_frame": "objects flying through air",
+    "shot_title": "Impact Insert 10: The cyclone strikes the house with massive force",
+    "shot_type": "impact_insert",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in farmhouse_interior_and_cellar featuring dorothy.",
+    "target_seconds": 5.4,
+    "characters_in_frame": [
+      {
+        "label": "Dorothy",
+        "canonical_id": "dorothy",
+        "display_name": "dorothy",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md",
+        "notes": "Direct registry match for 'dorothy'."
+      }
+    ],
+    "environment": {
+      "label": "Inside/Exterior of the farmhouse",
+      "canonical_id": "farmhouse_interior_and_cellar",
+      "display_name": "farmhouse_interior_and_cellar",
+      "status": "canonical",
+      "entity_kind": "sub_location",
+      "resolution_score": 58,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH001/farmhouse_interior_and_cellar.md",
+      "notes": "Chapter-local environment alias match for 'Inside/Exterior of the farmhouse' (key_overlap=1, label_overlap=1, context_overlap=4)."
+    },
+    "beat_ids": [
+      "BT002"
+    ],
+    "continuity_constraints": [
+      "Interior objects flying through air",
+      "Rapidly shifting light levels from cloud rotation",
+      "Dust and debris movement directionality",
+      "The cyclone strikes the house with massive force"
+    ],
+    "prompt_seed": "Impact Insert 10: The cyclone strikes the house with massive force. impact_insert. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requiremen...",
+    "shot_notes": "The cyclone strikes the house with massive force",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH001_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC002"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH001",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH001_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH012",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH012_chapter_xii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH023",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH023_chapter_xxiii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH002",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH002_chapter_ii.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH001",
+        "canonical_id": "dorothy"
+      }
+    ],
+    "evidence_summary": [
+      "Execute the physical transition of the farmhouse from a grounded structure to an airborne vessel via high-pressure wind forces. The sequence requires synchronized movement between interior debris, character reaction, and external VFX sky/ground shifts to si...",
+      "Just as Dorothy attempts to reach the cellar, a powerful cyclone hits. The house is ripped from its foundations and lifted into the air by intense wind pressure.",
+      "Panic $\\rightarrow$ Disorientation/Terror.",
+      "Dorothy moves toward the cellar as wind pressure builds.",
+      "The house is airborne and spinning within the storm void.",
+      "Wind strikes, lifting the structure from its foundations.",
+      "dorothy | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md] Costume/Silhouette: Unknown. No specific clothing details are provided in this chapter. [source:C:/FilmCreator/projects/wizard_of_oz/02_...",
+      "farmhouse_interior_and_cellar | No specific visual details are provided in the current evidence. The location is identified as a farmhouse interior and its associated cellar. | Includes an interior living space and a cellar. | unknown | unknown",
+      "cyclone_storm_void | No specific visual descriptors are provided in the current evidence. The environment functions as a dynamic transit setting associated with a cyclone or storm void. | Unknown. | Unknown. | Unknown."
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "economical_storybook",
+    "coverage_role": "impact_insert",
+    "beat_type": "action_conflict",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT002",
+      "beat_type": "action_conflict",
+      "importance": "major",
+      "confidence": 0.78,
+      "reasons": [
+        "conflict/action verb",
+        "importance = major"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH001_SC002_SH010_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "1bfce1ff86e6f86e1d177e52da6a901603900a95",
+      "created_at_utc": "2026-04-27T20:53:24.123673+00:00",
+      "updated_at_utc": "2026-04-27T20:54:21.235437+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH001_SC002",
+          "version": "f713ef0f4551801831d6bb4b8e57fa6a618d4963"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH001_SC002",
+          "version": "dd9d7172734a93fa3642a7197f7326f658fdc7ac"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH001_SC002",
+          "version": "4703802c5f56485afd8fa4ecf2ca1d8337bf20c0"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:53:24.124174+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "1bfce1ff86e6f86e1d177e52da6a901603900a95"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:21.235937+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "1bfce1ff86e6f86e1d177e52da6a901603900a95"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH011",
+    "scene_id": "CH001_SC002",
+    "chapter_id": "CH001",
+    "shot_order": 11,
+    "previous_shot_id": "SH010",
+    "next_shot_id": "SH012",
+    "primary_subject": "dorothy",
+    "secondary_subjects": [],
+    "shot_moment_summary": "The cyclone strikes the house with massive force",
+    "start_state": "sudden shudder",
+    "end_state": "objects flying through air",
+    "action_during_shot": "The cyclone strikes the house with massive force",
+    "action_continues_from": "objects flying through air",
+    "action_hands_off_to": "BT003",
+    "shot_size": "close_up",
+    "camera_angle": "eye_level",
+    "lens_family": "portrait",
+    "camera_motion": "push_in",
+    "zoom_behavior": "subtle_in",
+    "focus_strategy": "shallow_subject",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "dorothy",
+    "visible_secondary_subject_ids": [],
+    "primary_subject_frame_position": "foreground inside farmhouse_interior_and_cellar",
+    "primary_subject_scale_relation": "Human scale interior vs. massive environmental displacement.",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "sudden shudder",
+    "subject_relation_summary": "dorothy carries the frame alone",
+    "required_environment_anchor_1": "farmhouse_interior_and_cellar",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "Human scale interior vs. massive environmental displacement.",
+    "camera_package_description": "close-up, eye level, portrait lens, push in, zoom subtle in, shallow subject, hard directional",
+    "subject_blocking": [
+      "Dorothy recoils from impact",
+      "farmhouse_interior_and_cellar",
+      "dorothy remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the farmhouse_interior_and_cellar.",
+      "Background depth should keep farmhouse_interior_and_cellar legible as the location anchor.",
+      "Subject 1: dorothy remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "dorothy focuses toward the active scene action."
+    ],
+    "environment_subzone": "farmhouse_interior_and_cellar",
+    "key_visible_environment_features": [
+      "farmhouse_interior_and_cellar",
+      "Chapter-local environment alias match for 'Inside/Exterior of the farmhouse' (key_overlap=1, label_overlap=1, context..."
+    ],
+    "continuity_from_previous_shot": "objects flying through air",
+    "continuity_to_next_shot": "BT003",
+    "pose_anchor_frame": "sudden shudder",
+    "pose_end_frame": "objects flying through air",
+    "shot_title": "Reaction Closeup 11: The cyclone strikes the house with massive force",
+    "shot_type": "reaction_closeup",
+    "camera_description": "Close framing that isolates reaction and emotional emphasis.",
+    "composition": "Intimate composition that isolates dorothy against farmhouse_interior_and_cellar to capture the beat's emotional turn.",
+    "target_seconds": 7.0,
+    "characters_in_frame": [
+      {
+        "label": "Dorothy",
+        "canonical_id": "dorothy",
+        "display_name": "dorothy",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md",
+        "notes": "Direct registry match for 'dorothy'."
+      }
+    ],
+    "environment": {
+      "label": "Inside/Exterior of the farmhouse",
+      "canonical_id": "farmhouse_interior_and_cellar",
+      "display_name": "farmhouse_interior_and_cellar",
+      "status": "canonical",
+      "entity_kind": "sub_location",
+      "resolution_score": 58,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH001/farmhouse_interior_and_cellar.md",
+      "notes": "Chapter-local environment alias match for 'Inside/Exterior of the farmhouse' (key_overlap=1, label_overlap=1, context_overlap=4)."
+    },
+    "beat_ids": [
+      "BT002"
+    ],
+    "continuity_constraints": [
+      "Interior objects flying through air",
+      "Rapidly shifting light levels from cloud rotation",
+      "Dust and debris movement directionality",
+      "The cyclone strikes the house with massive force"
+    ],
+    "prompt_seed": "Reaction Closeup 11: The cyclone strikes the house with massive force. reaction_closeup. size=close_up. angle=eye_level. lens=portrait. motion=push_in. zoom=subtle_in. focus=shallow_subject. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Close framing that isolates reaction...",
+    "shot_notes": "The cyclone strikes the house with massive force",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH001_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC002"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH001",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH001_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH012",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH012_chapter_xii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH023",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH023_chapter_xxiii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH002",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH002_chapter_ii.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH001",
+        "canonical_id": "dorothy"
+      }
+    ],
+    "evidence_summary": [
+      "Execute the physical transition of the farmhouse from a grounded structure to an airborne vessel via high-pressure wind forces. The sequence requires synchronized movement between interior debris, character reaction, and external VFX sky/ground shifts to si...",
+      "Just as Dorothy attempts to reach the cellar, a powerful cyclone hits. The house is ripped from its foundations and lifted into the air by intense wind pressure.",
+      "Panic $\\rightarrow$ Disorientation/Terror.",
+      "Dorothy moves toward the cellar as wind pressure builds.",
+      "The house is airborne and spinning within the storm void.",
+      "Wind strikes, lifting the structure from its foundations.",
+      "dorothy | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md] Costume/Silhouette: Unknown. No specific clothing details are provided in this chapter. [source:C:/FilmCreator/projects/wizard_of_oz/02_...",
+      "farmhouse_interior_and_cellar | No specific visual details are provided in the current evidence. The location is identified as a farmhouse interior and its associated cellar. | Includes an interior living space and a cellar. | unknown | unknown",
+      "cyclone_storm_void | No specific visual descriptors are provided in the current evidence. The environment functions as a dynamic transit setting associated with a cyclone or storm void. | Unknown. | Unknown. | Unknown."
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "economical_storybook",
+    "coverage_role": "reaction_closeup",
+    "beat_type": "action_conflict",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT002",
+      "beat_type": "action_conflict",
+      "importance": "major",
+      "confidence": 0.78,
+      "reasons": [
+        "conflict/action verb",
+        "importance = major"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH001_SC002_SH011_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "1bfce1ff86e6f86e1d177e52da6a901603900a95",
+      "created_at_utc": "2026-04-27T20:53:24.125178+00:00",
+      "updated_at_utc": "2026-04-27T20:54:21.240944+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH001_SC002",
+          "version": "f713ef0f4551801831d6bb4b8e57fa6a618d4963"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH001_SC002",
+          "version": "dd9d7172734a93fa3642a7197f7326f658fdc7ac"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH001_SC002",
+          "version": "4703802c5f56485afd8fa4ecf2ca1d8337bf20c0"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:53:24.125674+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "1bfce1ff86e6f86e1d177e52da6a901603900a95"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:21.241444+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "1bfce1ff86e6f86e1d177e52da6a901603900a95"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH012",
+    "scene_id": "CH001_SC002",
+    "chapter_id": "CH001",
+    "shot_order": 12,
+    "previous_shot_id": "SH011",
+    "next_shot_id": "SH013",
+    "primary_subject": "dorothy",
+    "secondary_subjects": [],
+    "shot_moment_summary": "The cyclone strikes the house with massive force",
+    "start_state": "sudden shudder",
+    "end_state": "objects flying through air",
+    "action_during_shot": "The cyclone strikes the house with massive force",
+    "action_continues_from": "objects flying through air",
+    "action_hands_off_to": "BT003",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "dorothy",
+    "visible_secondary_subject_ids": [],
+    "primary_subject_frame_position": "foreground right within farmhouse_interior_and_cellar",
+    "primary_subject_scale_relation": "Human scale interior vs. massive environmental displacement.",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "sudden shudder",
+    "subject_relation_summary": "dorothy carries the frame alone",
+    "required_environment_anchor_1": "farmhouse_interior_and_cellar",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "Human scale interior vs. massive environmental displacement.",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "Dorothy recoils from impact",
+      "farmhouse_interior_and_cellar",
+      "dorothy remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the farmhouse_interior_and_cellar.",
+      "Background depth should keep farmhouse_interior_and_cellar legible as the location anchor.",
+      "Subject 1: dorothy remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "dorothy focuses toward the active scene action."
+    ],
+    "environment_subzone": "farmhouse_interior_and_cellar",
+    "key_visible_environment_features": [
+      "farmhouse_interior_and_cellar",
+      "Chapter-local environment alias match for 'Inside/Exterior of the farmhouse' (key_overlap=1, label_overlap=1, context..."
+    ],
+    "continuity_from_previous_shot": "objects flying through air",
+    "continuity_to_next_shot": "BT003",
+    "pose_anchor_frame": "sudden shudder",
+    "pose_end_frame": "objects flying through air",
+    "shot_title": "Handoff Action 12: The cyclone strikes the house with massive force",
+    "shot_type": "handoff_action",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in farmhouse_interior_and_cellar featuring dorothy.",
+    "target_seconds": 7.0,
+    "characters_in_frame": [
+      {
+        "label": "Dorothy",
+        "canonical_id": "dorothy",
+        "display_name": "dorothy",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md",
+        "notes": "Direct registry match for 'dorothy'."
+      }
+    ],
+    "environment": {
+      "label": "Inside/Exterior of the farmhouse",
+      "canonical_id": "farmhouse_interior_and_cellar",
+      "display_name": "farmhouse_interior_and_cellar",
+      "status": "canonical",
+      "entity_kind": "sub_location",
+      "resolution_score": 58,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH001/farmhouse_interior_and_cellar.md",
+      "notes": "Chapter-local environment alias match for 'Inside/Exterior of the farmhouse' (key_overlap=1, label_overlap=1, context_overlap=4)."
+    },
+    "beat_ids": [
+      "BT002"
+    ],
+    "continuity_constraints": [
+      "Interior objects flying through air",
+      "Rapidly shifting light levels from cloud rotation",
+      "Dust and debris movement directionality",
+      "The cyclone strikes the house with massive force"
+    ],
+    "prompt_seed": "Handoff Action 12: The cyclone strikes the house with massive force. handoff_action. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirem...",
+    "shot_notes": "The cyclone strikes the house with massive force",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH001_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC002"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH001",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH001_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH012",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH012_chapter_xii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH023",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH023_chapter_xxiii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH002",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH002_chapter_ii.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH001",
+        "canonical_id": "dorothy"
+      }
+    ],
+    "evidence_summary": [
+      "Execute the physical transition of the farmhouse from a grounded structure to an airborne vessel via high-pressure wind forces. The sequence requires synchronized movement between interior debris, character reaction, and external VFX sky/ground shifts to si...",
+      "Just as Dorothy attempts to reach the cellar, a powerful cyclone hits. The house is ripped from its foundations and lifted into the air by intense wind pressure.",
+      "Panic $\\rightarrow$ Disorientation/Terror.",
+      "Dorothy moves toward the cellar as wind pressure builds.",
+      "The house is airborne and spinning within the storm void.",
+      "Wind strikes, lifting the structure from its foundations.",
+      "dorothy | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md] Costume/Silhouette: Unknown. No specific clothing details are provided in this chapter. [source:C:/FilmCreator/projects/wizard_of_oz/02_...",
+      "farmhouse_interior_and_cellar | No specific visual details are provided in the current evidence. The location is identified as a farmhouse interior and its associated cellar. | Includes an interior living space and a cellar. | unknown | unknown",
+      "cyclone_storm_void | No specific visual descriptors are provided in the current evidence. The environment functions as a dynamic transit setting associated with a cyclone or storm void. | Unknown. | Unknown. | Unknown."
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "economical_storybook",
+    "coverage_role": "handoff_action",
+    "beat_type": "action_conflict",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT002",
+      "beat_type": "action_conflict",
+      "importance": "major",
+      "confidence": 0.78,
+      "reasons": [
+        "conflict/action verb",
+        "importance = major"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH001_SC002_SH012_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "1bfce1ff86e6f86e1d177e52da6a901603900a95",
+      "created_at_utc": "2026-04-27T20:53:24.126673+00:00",
+      "updated_at_utc": "2026-04-27T20:54:21.246945+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH001_SC002",
+          "version": "f713ef0f4551801831d6bb4b8e57fa6a618d4963"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH001_SC002",
+          "version": "dd9d7172734a93fa3642a7197f7326f658fdc7ac"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH001_SC002",
+          "version": "4703802c5f56485afd8fa4ecf2ca1d8337bf20c0"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:53:24.127174+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "1bfce1ff86e6f86e1d177e52da6a901603900a95"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:21.247445+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "1bfce1ff86e6f86e1d177e52da6a901603900a95"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH013",
+    "scene_id": "CH001_SC002",
+    "chapter_id": "CH001",
+    "shot_order": 13,
+    "previous_shot_id": "SH012",
+    "next_shot_id": "SH014",
     "primary_subject": "cyclone_storm_void",
     "secondary_subjects": [],
     "shot_moment_summary": "POV looking out window as ground falls away",
     "start_state": "static ground view",
     "end_state": "receding ground/spinning sky",
     "action_during_shot": "vertical and rotational ascent",
-    "action_continues_from": "chaotic debris field",
+    "action_continues_from": "objects flying through air",
     "action_hands_off_to": "end_of_scene",
     "shot_size": "wide",
     "camera_angle": "eye_level",
@@ -459,17 +2736,18 @@
     ],
     "environment_subzone": "farmhouse_interior_and_cellar",
     "key_visible_environment_features": [
-      "cyclone_storm_void"
+      "cyclone_storm_void",
+      "Chapter-local environment alias match for 'the eye of the storm' (key_overlap=1, label_overlap=2, context_overlap=4)."
     ],
-    "continuity_from_previous_shot": "chaotic debris field",
+    "continuity_from_previous_shot": "objects flying through air",
     "continuity_to_next_shot": "end_of_scene",
     "pose_anchor_frame": "static ground view",
     "pose_end_frame": "receding ground/spinning sky",
-    "shot_title": "The house is lifted into the air",
-    "shot_type": "establishing_wide",
-    "camera_description": "Wide establishing frame with a steady or lightly drifting camera.",
-    "composition": "Wide composition across cyclone_storm_void with dorothy placed for immediate spatial orientation.",
-    "target_seconds": 5.1,
+    "shot_title": "Handoff Medium 13: The house is ripped from the ground and lifted into...",
+    "shot_type": "handoff_medium",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in cyclone_storm_void that keeps dorothy together so the physical effort stays obvious.",
+    "target_seconds": 7.0,
     "characters_in_frame": [
       {
         "label": "Dorothy",
@@ -501,7 +2779,7 @@
       "Dust and debris movement directionality",
       "The house is ripped from the ground and lifted into the air"
     ],
-    "prompt_seed": "Establishing Wide 3: The house is ripped from the ground and lifted into.... establishing_wide. size=wide. angle=eye_level. lens=ultra_wide. motion=handheld. zoom=none. focus=deep_focus. lighting=diffuse_ambient. visibility=on_screen. subject_angle=front. Wide establishing frame with a steady or lightly drifting cam...",
+    "prompt_seed": "Handoff Medium 13: The house is ripped from the ground and lifted into.... handoff_medium. size=wide. angle=eye_level. lens=ultra_wide. motion=handheld. zoom=none. focus=deep_focus. lighting=diffuse_ambient. visibility=on_screen. subject_angle=front. Stable readable framing built from the beat requirement. Readable...",
     "shot_notes": "The house is ripped from the ground and lifted into the air",
     "evidence_refs": [
       {
@@ -566,17 +2844,33 @@
       "Dorothy moves toward the cellar as wind pressure builds.",
       "The house is airborne and spinning within the storm void.",
       "Wind strikes, lifting the structure from its foundations.",
-      "dorothy | Dorothy is a young human girl characterized by an expressive face and the appearance of a weary traveler. Her visual identity evolves during her journey, transitioning from previously green clothing to a white dress or clothing. She is most notabl...",
+      "dorothy | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md] Costume/Silhouette: Unknown. No specific clothing details are provided in this chapter. [source:C:/FilmCreator/projects/wizard_of_oz/02_...",
       "farmhouse_interior_and_cellar | No specific visual details are provided in the current evidence. The location is identified as a farmhouse interior and its associated cellar. | Includes an interior living space and a cellar. | unknown | unknown",
       "cyclone_storm_void | No specific visual descriptors are provided in the current evidence. The environment functions as a dynamic transit setting associated with a cyclone or storm void. | Unknown. | Unknown. | Unknown."
     ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "economical_storybook",
+    "coverage_role": "handoff_medium",
+    "beat_type": "transition_handoff",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT003",
+      "beat_type": "transition_handoff",
+      "importance": "major",
+      "confidence": 0.55,
+      "reasons": [
+        "importance = major"
+      ]
+    },
     "metadata": {
-      "artifact_id": "CH001_SC002_SH003_SHOT_PACKAGE",
+      "artifact_id": "CH001_SC002_SH013_SHOT_PACKAGE",
       "artifact_type": "shot_package",
       "status": "generated",
-      "source_fingerprint": "3c275fef836ad2a0aef884dfea9124fb60c21559",
-      "created_at_utc": "2026-04-27T09:22:04.697829+00:00",
-      "updated_at_utc": "2026-04-27T14:26:02.974354+00:00",
+      "source_fingerprint": "1bfce1ff86e6f86e1d177e52da6a901603900a95",
+      "created_at_utc": "2026-04-27T20:53:24.128173+00:00",
+      "updated_at_utc": "2026-04-27T20:54:21.252459+00:00",
       "upstream_dependencies": [
         {
           "dependency_type": "scene_contract",
@@ -591,21 +2885,241 @@
         {
           "dependency_type": "shot_blueprints",
           "dependency_id": "CH001_SC002",
-          "version": "d7a0088b9c7adae6460b619f451449013a7149e0"
+          "version": "4703802c5f56485afd8fa4ecf2ca1d8337bf20c0"
         }
       ],
       "locked_fields": {},
       "manual_overrides": {},
       "revision_history": [
         {
-          "timestamp_utc": "2026-04-27T09:23:10.842598+00:00",
+          "timestamp_utc": "2026-04-27T20:53:24.128672+00:00",
           "action": "synthesized",
-          "source_fingerprint": "202ea6d0f8df3e0f94cb60e828e7ce25a5c6f0e6"
+          "source_fingerprint": "1bfce1ff86e6f86e1d177e52da6a901603900a95"
         },
         {
-          "timestamp_utc": "2026-04-27T14:27:12.315813+00:00",
+          "timestamp_utc": "2026-04-27T20:54:21.253461+00:00",
           "action": "synthesized",
-          "source_fingerprint": "3c275fef836ad2a0aef884dfea9124fb60c21559"
+          "source_fingerprint": "1bfce1ff86e6f86e1d177e52da6a901603900a95"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH014",
+    "scene_id": "CH001_SC002",
+    "chapter_id": "CH001",
+    "shot_order": 14,
+    "previous_shot_id": "SH013",
+    "next_shot_id": "",
+    "primary_subject": "dorothy",
+    "secondary_subjects": [],
+    "shot_moment_summary": "The house is ripped from the ground and lifted into the air",
+    "start_state": "structural lift",
+    "end_state": "spinning in storm void",
+    "action_during_shot": "The house is ripped from the ground and lifted into the air",
+    "action_continues_from": "receding ground/spinning sky",
+    "action_hands_off_to": "end_of_scene",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "dorothy",
+    "visible_secondary_subject_ids": [],
+    "primary_subject_frame_position": "foreground right within cyclone_storm_void",
+    "primary_subject_scale_relation": "Human scale interior vs. massive environmental displacement.",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "structural lift",
+    "subject_relation_summary": "dorothy carries the frame alone",
+    "required_environment_anchor_1": "cyclone_storm_void",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "Human scale interior vs. massive environmental displacement.",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "Dorothy loses footing as floor tilts",
+      "cyclone_storm_void",
+      "dorothy remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the cyclone_storm_void.",
+      "Background depth should keep cyclone_storm_void legible as the location anchor.",
+      "Subject 1: dorothy remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "dorothy focuses toward the active scene action."
+    ],
+    "environment_subzone": "cyclone_storm_void",
+    "key_visible_environment_features": [
+      "cyclone_storm_void",
+      "Chapter-local environment alias match for 'the eye of the storm' (key_overlap=1, label_overlap=2, context_overlap=4)."
+    ],
+    "continuity_from_previous_shot": "receding ground/spinning sky",
+    "continuity_to_next_shot": "end_of_scene",
+    "pose_anchor_frame": "structural lift",
+    "pose_end_frame": "spinning in storm void",
+    "shot_title": "Transition Wide 14: The house is ripped from the ground and lifted into...",
+    "shot_type": "transition_wide",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in cyclone_storm_void that keeps dorothy together so the physical effort stays obvious.",
+    "target_seconds": 10.8,
+    "characters_in_frame": [
+      {
+        "label": "Dorothy",
+        "canonical_id": "dorothy",
+        "display_name": "dorothy",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md",
+        "notes": "Direct registry match for 'dorothy'."
+      }
+    ],
+    "environment": {
+      "label": "the eye of the storm",
+      "canonical_id": "cyclone_storm_void",
+      "display_name": "cyclone_storm_void",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 68,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH001/cyclone_storm_void.md",
+      "notes": "Chapter-local environment alias match for 'the eye of the storm' (key_overlap=1, label_overlap=2, context_overlap=4)."
+    },
+    "beat_ids": [
+      "BT003"
+    ],
+    "continuity_constraints": [
+      "Interior objects flying through air",
+      "Rapidly shifting light levels from cloud rotation",
+      "Dust and debris movement directionality",
+      "The house is ripped from the ground and lifted into the air"
+    ],
+    "prompt_seed": "Transition Wide 14: The house is ripped from the ground and lifted into.... transition_wide. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat...",
+    "shot_notes": "The house is ripped from the ground and lifted into the air",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH001_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC002"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH001",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH001_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH012",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH012_chapter_xii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH023",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH023_chapter_xxiii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH002",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH002_chapter_ii.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH001",
+        "canonical_id": "dorothy"
+      }
+    ],
+    "evidence_summary": [
+      "Execute the physical transition of the farmhouse from a grounded structure to an airborne vessel via high-pressure wind forces. The sequence requires synchronized movement between interior debris, character reaction, and external VFX sky/ground shifts to si...",
+      "Just as Dorothy attempts to reach the cellar, a powerful cyclone hits. The house is ripped from its foundations and lifted into the air by intense wind pressure.",
+      "Panic $\\rightarrow$ Disorientation/Terror.",
+      "Dorothy moves toward the cellar as wind pressure builds.",
+      "The house is airborne and spinning within the storm void.",
+      "Wind strikes, lifting the structure from its foundations.",
+      "dorothy | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md] Costume/Silhouette: Unknown. No specific clothing details are provided in this chapter. [source:C:/FilmCreator/projects/wizard_of_oz/02_...",
+      "farmhouse_interior_and_cellar | No specific visual details are provided in the current evidence. The location is identified as a farmhouse interior and its associated cellar. | Includes an interior living space and a cellar. | unknown | unknown",
+      "cyclone_storm_void | No specific visual descriptors are provided in the current evidence. The environment functions as a dynamic transit setting associated with a cyclone or storm void. | Unknown. | Unknown. | Unknown."
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "economical_storybook",
+    "coverage_role": "transition_wide",
+    "beat_type": "transition_handoff",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT003",
+      "beat_type": "transition_handoff",
+      "importance": "major",
+      "confidence": 0.55,
+      "reasons": [
+        "importance = major"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH001_SC002_SH014_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "1bfce1ff86e6f86e1d177e52da6a901603900a95",
+      "created_at_utc": "2026-04-27T20:53:24.130174+00:00",
+      "updated_at_utc": "2026-04-27T20:54:21.259465+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH001_SC002",
+          "version": "f713ef0f4551801831d6bb4b8e57fa6a618d4963"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH001_SC002",
+          "version": "dd9d7172734a93fa3642a7197f7326f658fdc7ac"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH001_SC002",
+          "version": "4703802c5f56485afd8fa4ecf2ca1d8337bf20c0"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:53:24.130674+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "1bfce1ff86e6f86e1d177e52da6a901603900a95"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:21.259965+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "1bfce1ff86e6f86e1d177e52da6a901603900a95"
         }
       ]
     }

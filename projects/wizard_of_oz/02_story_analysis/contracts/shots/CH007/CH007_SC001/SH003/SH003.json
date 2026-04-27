@@ -4,71 +4,84 @@
   "chapter_id": "CH007",
   "shot_order": 3,
   "previous_shot_id": "SH002",
-  "next_shot_id": "",
-  "primary_subject": "the_scarecrow",
+  "next_shot_id": "SH004",
+  "primary_subject": "tin_woodman",
   "secondary_subjects": [
-    "dorothy"
+    "the_scarecrow",
+    "cowardly_lion"
   ],
-  "shot_moment_summary": "close up of gathered nuts",
-  "start_state": "hands entering frame",
-  "end_state": "nuts placed in pile",
-  "action_during_shot": "placing collected food",
-  "action_continues_from": "tin_woodman returning with wood",
-  "action_hands_off_to": "end_of_scene",
-  "shot_size": "close_up",
+  "shot_moment_summary": "tin_woodman and scarecrow working",
+  "start_state": "tin_woodman walking to edge",
+  "end_state": "tin_woodman returning with wood",
+  "action_during_shot": "gathering resources",
+  "action_continues_from": "group settles near tree",
+  "action_hands_off_to": "BT003",
+  "shot_size": "medium_full",
   "camera_angle": "eye_level",
-  "lens_family": "portrait",
-  "camera_motion": "locked_off",
+  "lens_family": "normal",
+  "camera_motion": "track",
   "zoom_behavior": "none",
   "focus_strategy": "shallow_subject",
   "lighting_style": "diffuse_ambient",
   "subject_visibility": "on_screen",
   "narration_mode": "none",
-  "primary_subject_angle": "front",
-  "visible_primary_subject_id": "the_scarecrow",
+  "primary_subject_angle": "profile_right",
+  "visible_primary_subject_id": "tin_woodman",
   "visible_secondary_subject_ids": [
-    "dorothy"
+    "the_scarecrow",
+    "cowardly_lion"
   ],
-  "primary_subject_frame_position": "foreground inside camp_center",
-  "primary_subject_scale_relation": "Large scale forest canopy vs small scale domestic camp circle.",
-  "primary_subject_facing_direction": "facing directly toward camera",
-  "primary_subject_pose_description": "hands entering frame",
-  "subject_relation_summary": "the_scarecrow plays against dorothy in the same frame",
-  "required_environment_anchor_1": "campfire_site",
-  "required_subject_anchor_1": "hands entering frame",
+  "primary_subject_frame_position": "foreground right within forest_edge",
+  "primary_subject_scale_relation": "wood pile height",
+  "primary_subject_facing_direction": "profile right toward the scene action",
+  "primary_subject_pose_description": "tin_woodman walking to edge",
+  "subject_relation_summary": "tin_woodman plays against the_scarecrow, cowardly_lion in the same frame",
+  "required_environment_anchor_1": "forest_edge",
+  "required_subject_anchor_1": "tin_woodman at edge, scarecrow mid-ground, lion distant",
   "required_celestial_anchor_1": "",
-  "required_scale_proof_detail": "Large scale forest canopy vs small scale domestic camp circle.",
-  "camera_package_description": "close-up, eye level, portrait lens, locked off, shallow subject, diffuse ambient",
+  "required_scale_proof_detail": "wood pile height",
+  "camera_package_description": "medium-full, eye level, normal lens, track, shallow subject, diffuse ambient",
   "subject_blocking": [
-    "the_scarecrow kneeling near campfire_site",
-    "characters gather near campfire_site",
-    "camp_center",
-    "the_scarecrow remains readable within the active playing space.",
-    "dorothy remains readable within the active playing space."
+    "tin_woodman moves between forest_edge and camp_center",
+    "tin_woodman at edge, scarecrow mid-ground, lion distant",
+    "forest_edge and hunting_perimeter",
+    "tin_woodman remains readable within the active playing space.",
+    "the_scarecrow remains readable within the active playing space."
   ],
   "camera_relative_positions": [
-    "Camera anchors the action inside the camp_center.",
+    "Camera anchors the action inside the forest_edge.",
     "Background depth should keep arizona_dense_forest_and_ditches legible as the location anchor.",
-    "Subject 1: the_scarecrow remains visually readable against the environment scale.",
-    "Subject 2: dorothy remains visually readable against the environment scale."
+    "Subject 1: tin_woodman remains visually readable against the environment scale.",
+    "Subject 2: the_scarecrow remains visually readable against the environment scale."
   ],
   "gaze_directions": [
-    "the_scarecrow focuses toward the active scene action."
+    "tin_woodman focuses toward the active scene action."
   ],
-  "environment_subzone": "camp_center",
+  "environment_subzone": "forest_edge",
   "key_visible_environment_features": [
-    "camp_center"
+    "forest_edge",
+    "Chapter-local environment alias match for 'Dense Forest (under a large tree)' (key_overlap=2, label_overlap=4, contex..."
   ],
-  "continuity_from_previous_shot": "tin_woodman returning with wood",
-  "continuity_to_next_shot": "end_of_scene",
-  "pose_anchor_frame": "hands entering frame",
-  "pose_end_frame": "nuts placed in pile",
-  "shot_title": "Insert Detail 3: Camp stabilization",
-  "shot_type": "insert_detail",
-  "camera_description": "Tight detail framing focused on a single visual object or gesture.",
-  "composition": "Detail composition centered on the key physical action or prop inside arizona_dense_forest_and_ditches.",
-  "target_seconds": 5.1,
+  "continuity_from_previous_shot": "group settles near tree",
+  "continuity_to_next_shot": "BT003",
+  "pose_anchor_frame": "tin_woodman walking to edge",
+  "pose_end_frame": "tin_woodman returning with wood",
+  "shot_title": "Ceremonial Master 3: Resource gathering phase",
+  "shot_type": "ceremonial_master",
+  "camera_description": "Stable readable framing built from the beat requirement.",
+  "composition": "Readable medium composition in arizona_dense_forest_and_ditches featuring tin_woodman, the_scarecrow, cowardly_lion.",
+  "target_seconds": 10.0,
   "characters_in_frame": [
+    {
+      "label": "Tin Woodman",
+      "canonical_id": "tin_woodman",
+      "display_name": "tin_woodman",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH007/tin_woodman.md",
+      "notes": "Direct registry match for 'tin_woodman'."
+    },
     {
       "label": "Scarecrow",
       "canonical_id": "the_scarecrow",
@@ -80,14 +93,14 @@
       "notes": "asset id exactly matches canonical id | query matches alias 'scarecrow'"
     },
     {
-      "label": "Dorothy",
-      "canonical_id": "dorothy",
-      "display_name": "dorothy",
+      "label": "Cowardly Lion",
+      "canonical_id": "cowardly_lion",
+      "display_name": "cowardly_lion",
       "status": "canonical",
       "entity_kind": "individual",
       "resolution_score": 138,
-      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH007/dorothy.md",
-      "notes": "Direct registry match for 'dorothy'."
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH007/cowardly_lion.md",
+      "notes": "Direct registry match for 'cowardly_lion'."
     }
   ],
   "environment": {
@@ -101,15 +114,15 @@
     "notes": "Chapter-local environment alias match for 'Dense Forest (under a large tree)' (key_overlap=2, label_overlap=4, context_overlap=4)."
   },
   "beat_ids": [
-    "BT003"
+    "BT002"
   ],
   "continuity_constraints": [
     "Cumulative volume of collected wood and nuts.",
     "Fixed position of the campfire and central camp setup.",
-    "Camp stabilization"
+    "Resource gathering phase"
   ],
-  "prompt_seed": "Insert Detail 3: Camp stabilization. insert_detail. size=close_up. angle=eye_level. lens=portrait. motion=locked_off. zoom=none. focus=shallow_subject. lighting=diffuse_ambient. visibility=on_screen. subject_angle=front. Tight detail framing focused on a single visual object or gesture. Detail composition centered o...",
-  "shot_notes": "Camp stabilization",
+  "prompt_seed": "Ceremonial Master 3: Resource gathering phase. ceremonial_master. size=medium_full. angle=eye_level. lens=normal. motion=track. zoom=none. focus=shallow_subject. lighting=diffuse_ambient. visibility=on_screen. subject_angle=profile_right. Stable readable framing built from the beat requirement. Readable medium compo...",
+  "shot_notes": "Resource gathering phase",
   "evidence_refs": [
     {
       "source": "scene_contract",
@@ -178,13 +191,30 @@
     "tin_woodman | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH005/tin_woodman.md] Costume/Silhouette: Entirely metallic (tin) body; carries an axe. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis...",
     "arizona_dense_forest_and_ditches | A dense forest environment located in Arizona, characterized by the presence of ditches. | Contains forested areas and ditch structures. | unknown | unknown"
   ],
+  "coverage_density": "medium",
+  "coverage_profile": "classic_adventure",
+  "coverage_intent": "montage_travel",
+  "coverage_role": "ceremonial_master",
+  "beat_type": "dialogue_council_or_court",
+  "coverage_importance": "normal",
+  "coverage_blueprint_source": "deterministic_v1",
+  "coverage_classification": {
+    "beat_id": "BT002",
+    "beat_type": "dialogue_council_or_court",
+    "importance": "normal",
+    "confidence": 0.82,
+    "reasons": [
+      "court/council authority language",
+      "importance = normal"
+    ]
+  },
   "metadata": {
     "artifact_id": "CH007_SC001_SH003_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "7e9a78d5123989ff043edf7bb55b1e93a5c9b1b6",
+    "source_fingerprint": "b1eb0a1d51d2512c73e283fbec1a4a120ca4f56d",
     "created_at_utc": "2026-04-27T15:57:52.973121+00:00",
-    "updated_at_utc": "2026-04-27T15:57:52.973121+00:00",
+    "updated_at_utc": "2026-04-27T20:54:34.831457+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
@@ -199,7 +229,7 @@
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH007_SC001",
-        "version": "360b0df26eed5ea1befa3aab8a463c0cbe1333d0"
+        "version": "afd59e8ebb9aba4a654b2d7897968da44e95088b"
       }
     ],
     "locked_fields": {},
@@ -209,6 +239,16 @@
         "timestamp_utc": "2026-04-27T15:59:06.485155+00:00",
         "action": "synthesized",
         "source_fingerprint": "7e9a78d5123989ff043edf7bb55b1e93a5c9b1b6"
+      },
+      {
+        "timestamp_utc": "2026-04-27T20:53:37.558870+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "b1eb0a1d51d2512c73e283fbec1a4a120ca4f56d"
+      },
+      {
+        "timestamp_utc": "2026-04-27T20:54:34.831962+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "b1eb0a1d51d2512c73e283fbec1a4a120ca4f56d"
       }
     ]
   }

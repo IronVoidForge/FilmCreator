@@ -1,0 +1,24 @@
+# Scene Dialogue Index: CH015_SC002
+
+- `CH015_DLG012` -> `SH001` speaker=dorothy
+- `CH015_DLG013` -> `SH001` speaker=unresolved
+- `CH015_DLG014` -> `SH002` speaker=dorothy
+- `CH015_DLG015` -> `SH002` speaker=unresolved
+- `CH015_DLG016` -> `SH003` speaker=oz
+- `CH015_DLG017` -> `SH003` speaker=the girl
+- `CH015_DLG018` -> `SH004` speaker=unresolved
+- `CH015_DLG019` -> `SH004` speaker=tin_woodman
+- `CH015_DLG020` -> `SH005` speaker=cowardly_lion
+- `CH015_DLG021` -> `SH005` speaker=unresolved
+- `CH015_DLG022` -> `SH006` speaker=unresolved
+- `CH015_DLG023` -> `SH006` speaker=unresolved
+- `CH015_DLG024` -> `SH007` speaker=unresolved
+- `CH015_DLG025` -> `SH007` speaker=unresolved
+- `CH015_DLG026` -> `SH008` speaker=tin_woodman
+- `CH015_DLG027` -> `SH008` speaker=unresolved
+- `CH015_DLG028` -> `SH009` speaker=dorothy
+- `CH015_DLG029` -> `SH009` speaker=unresolved
+- `CH015_DLG030` -> `SH010` speaker=unresolved
+- `CH015_DLG031` -> `SH010` speaker=unresolved
+- `CH015_DLG032` -> `SH011` speaker=dorothy
+- `CH015_DLG033` -> `SH011` speaker=unresolved

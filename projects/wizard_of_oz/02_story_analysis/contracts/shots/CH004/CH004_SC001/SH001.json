@@ -44,6 +44,7 @@
   "subject_blocking": [
     "linear progression",
     "linear walking line",
+    "farmland_transition",
     "dorothy remains readable within the active playing space.",
     "the_scarecrow remains readable within the active playing space."
   ],
@@ -58,17 +59,18 @@
   ],
   "environment_subzone": "farmland_transition",
   "key_visible_environment_features": [
-    "farmland_transition"
+    "farmland_transition",
+    "Chapter-local environment alias match for 'uneven stretch of the Yellow Brick Road transitioning from farmland to was..."
   ],
   "continuity_from_previous_shot": "Dorothy, Toto, and the Scarecrow walking with purpose across farmland.",
   "continuity_to_next_shot": "BT002",
   "pose_anchor_frame": "steady walking",
   "pose_end_frame": "approaching first crack",
-  "shot_title": "Establishing Wide 1: Steady progress through farmland",
-  "shot_type": "establishing_wide",
-  "camera_description": "Wide establishing frame with a steady or lightly drifting camera.",
-  "composition": "Wide composition across deteriorating_yellow_brick_road with dorothy, the_scarecrow, toto placed for immediate spatial orientation.",
-  "target_seconds": 5.5,
+  "shot_title": "Ceremonial Master 1: Steady progress through farmland",
+  "shot_type": "ceremonial_master",
+  "camera_description": "Stable readable framing built from the beat requirement.",
+  "composition": "Readable medium composition in deteriorating_yellow_brick_road featuring dorothy, the_scarecrow, toto.",
+  "target_seconds": 10.0,
   "characters_in_frame": [
     {
       "label": "Dorothy",
@@ -117,9 +119,10 @@
   "continuity_constraints": [
     "Specific pattern of broken yellow bricks",
     "Straw displacement on the_scarecrow after each fall",
-    "Steady progress through farmland"
+    "Steady progress through farmland",
+    "Resolve A desolate -> A desolate"
   ],
-  "prompt_seed": "Establishing Wide 1: Steady progress through farmland. establishing_wide. size=wide. angle=eye_level. lens=wide. motion=track. zoom=none. focus=deep_focus. lighting=diffuse_ambient. visibility=on_screen. subject_angle=front_three_quarter_right. Wide establishing frame with a steady or lightly drifting camera.",
+  "prompt_seed": "Ceremonial Master 1: Steady progress through farmland. ceremonial_master. size=wide. angle=eye_level. lens=wide. motion=track. zoom=none. focus=deep_focus. lighting=diffuse_ambient. visibility=on_screen. subject_angle=front_three_quarter_right. Stable readable framing built from the beat requirement. Readable medium...",
   "shot_notes": "Steady progress through farmland",
   "evidence_refs": [
     {
@@ -184,18 +187,35 @@
     "Dorothy, Toto, and the Scarecrow walking with purpose across farmland.",
     "The trio exhausted and frustrated amidst a desolate wasteland.",
     "Navigating a crumbling path while dealing with repeated stumbles.",
-    "dorothy | Dorothy is a young human girl characterized by an expressive face and the appearance of a weary traveler. Her visual identity evolves during her journey, transitioning from previously green clothing to a white dress or clothing. She is most notabl...",
-    "the_scarecrow | The Scarecrow is a bipedal, human-scale humanoid figure of rustic construction, appearing as a living entity stuffed entirely with straw. His movement is characterized by a distinct clumsiness. He lacks flesh and is visually defined by his t...",
-    "toto | Toto is a small quadruped dog characterized by a compact build and consistent black fur. The character possesses an alert physical presence with keen, observant eyes suitable for a companion animal. | black fur. | companion animal; alert.",
+    "dorothy | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md] Costume/Silhouette: Unknown. No specific clothing details are provided in this chapter. [source:C:/FilmCreator/projects/wizard_of_oz/02_...",
+    "the_scarecrow | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH003/the_scarecrow.md] Physical Description: A living figure stuffed with straw. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/cha...",
+    "toto | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/toto.md] Costume/Silhouette: Small quadruped with black fur. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapte...",
     "deteriorating_yellow_brick_road | A path characterized by its yellow brick construction, currently in a state of deterioration. It serves as the central artery for movement through the setting. | Functions as a primary transit route. | unknown | unknown"
   ],
+  "coverage_density": "medium",
+  "coverage_profile": "classic_adventure",
+  "coverage_intent": "montage_travel",
+  "coverage_role": "ceremonial_master",
+  "beat_type": "dialogue_council_or_court",
+  "coverage_importance": "normal",
+  "coverage_blueprint_source": "deterministic_v1",
+  "coverage_classification": {
+    "beat_id": "BT001",
+    "beat_type": "dialogue_council_or_court",
+    "importance": "normal",
+    "confidence": 0.82,
+    "reasons": [
+      "court/council authority language",
+      "importance = normal"
+    ]
+  },
   "metadata": {
     "artifact_id": "CH004_SC001_SH001_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "275b7cfb43d3bdbddc11f2228e4f521db285de49",
+    "source_fingerprint": "62f72fd5c70ebc2d3c2f17a8c0820d223e161ff9",
     "created_at_utc": "2026-04-27T15:07:55.508471+00:00",
-    "updated_at_utc": "2026-04-27T15:07:55.508471+00:00",
+    "updated_at_utc": "2026-04-27T20:54:27.007698+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
@@ -210,7 +230,7 @@
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH004_SC001",
-        "version": "ec57de13abe6ed4a800b45890a71eacdb1d35dda"
+        "version": "306b623f73e470adbb7042805178ff950eb7adef"
       }
     ],
     "locked_fields": {},
@@ -220,6 +240,16 @@
         "timestamp_utc": "2026-04-27T15:09:13.082761+00:00",
         "action": "synthesized",
         "source_fingerprint": "275b7cfb43d3bdbddc11f2228e4f521db285de49"
+      },
+      {
+        "timestamp_utc": "2026-04-27T20:53:30.425175+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "62f72fd5c70ebc2d3c2f17a8c0820d223e161ff9"
+      },
+      {
+        "timestamp_utc": "2026-04-27T20:54:27.427855+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "62f72fd5c70ebc2d3c2f17a8c0820d223e161ff9"
       }
     ]
   }

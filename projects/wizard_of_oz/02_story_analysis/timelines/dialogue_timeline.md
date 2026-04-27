@@ -1,0 +1,28 @@
+# Dialogue Timeline Index
+
+- project_slug: `wizard_of_oz`
+
+- `CH001` - Chapter I (dialogue_events=4, unresolved=4)
+- `CH002` - Chapter II (dialogue_events=61, unresolved=41)
+- `CH003` - Chapter III (dialogue_events=55, unresolved=19)
+- `CH004` - Chapter IV (dialogue_events=33, unresolved=23)
+- `CH005` - Chapter V (dialogue_events=48, unresolved=26)
+- `CH006` - Chapter VI (dialogue_events=58, unresolved=22)
+- `CH007` - Chapter VII (dialogue_events=38, unresolved=9)
+- `CH008` - Chapter VIII (dialogue_events=52, unresolved=15)
+- `CH009` - Chapter IX (dialogue_events=39, unresolved=25)
+- `CH010` - Chapter X (dialogue_events=59, unresolved=14)
+- `CH011` - Chapter XI (dialogue_events=90, unresolved=57)
+- `CH012` - Chapter XII (dialogue_events=55, unresolved=31)
+- `CH013` - Chapter XIII (dialogue_events=19, unresolved=5)
+- `CH014` - Chapter XIV (dialogue_events=45, unresolved=19)
+- `CH015` - Chapter XV (dialogue_events=111, unresolved=58)
+- `CH016` - Chapter XVI (dialogue_events=44, unresolved=21)
+- `CH017` - Chapter XVII (dialogue_events=32, unresolved=15)
+- `CH018` - Chapter XVIII (dialogue_events=55, unresolved=36)
+- `CH019` - Chapter XIX (dialogue_events=25, unresolved=12)
+- `CH020` - Chapter XX (dialogue_events=43, unresolved=15)
+- `CH021` - Chapter XXI (dialogue_events=22, unresolved=14)
+- `CH022` - Chapter XXII (dialogue_events=28, unresolved=17)
+- `CH023` - Chapter XXIII (dialogue_events=42, unresolved=22)
+- `CH024` - Chapter XXIV (dialogue_events=4, unresolved=2)

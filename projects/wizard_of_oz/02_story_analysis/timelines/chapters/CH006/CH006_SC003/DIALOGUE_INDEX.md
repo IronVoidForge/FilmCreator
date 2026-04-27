@@ -1,0 +1,19 @@
+# Scene Dialogue Index: CH006_SC003
+
+- `CH006_DLG028` -> `SH001` speaker=cowardly_lion
+- `CH006_DLG029` -> `SH001` speaker=cowardly_lion
+- `CH006_DLG030` -> `SH002` speaker=the_scarecrow
+- `CH006_DLG031` -> `SH002` speaker=unresolved
+- `CH006_DLG032` -> `SH003` speaker=unresolved
+- `CH006_DLG033` -> `SH004` speaker=tin_woodman
+- `CH006_DLG034` -> `SH004` speaker=cowardly_lion
+- `CH006_DLG035` -> `SH005` speaker=unresolved
+- `CH006_DLG036` -> `SH006` speaker=unresolved
+- `CH006_DLG037` -> `SH006` speaker=cowardly_lion
+- `CH006_DLG038` -> `SH007` speaker=cowardly_lion
+- `CH006_DLG039` -> `SH008` speaker=the_scarecrow
+- `CH006_DLG040` -> `SH008` speaker=cowardly_lion
+- `CH006_DLG041` -> `SH009` speaker=unresolved
+- `CH006_DLG042` -> `SH010` speaker=unresolved
+- `CH006_DLG043` -> `SH010` speaker=tin_woodman
+- `CH006_DLG044` -> `SH011` speaker=unresolved

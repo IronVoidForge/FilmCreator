@@ -1,5 +1,15 @@
 # Shot Index
 
-- `SH001` - Insert Detail 1: Dorothy surrenders the Golden Cap (type=insert_detail, target=5.5s, beat_ids=BT001, cast=2, env=glinda_castle_throne_room, prev=(none), next=SH002)
-- `SH002` - Medium 2: Glinda prepares the magic (type=medium, target=5.3s, beat_ids=BT002, cast=3, env=glinda_castle_throne_room, prev=SH001, next=SH003)
-- `SH003` - Establishing Wide 3: The Winged Monkeys arrive and receive commands (type=establishing_wide, target=5.1s, beat_ids=BT003, cast=3, env=glinda_castle_throne_room, prev=SH002, next=(none))
+- `SH001` - Ceremonial Master 1: Dorothy surrenders the Golden Cap (type=ceremonial_master, target=10.8s, beat_ids=BT001, cast=2, env=glinda_castle_throne_room, prev=(none), next=SH002)
+- `SH002` - Authority Single 2: Dorothy surrenders the Golden Cap (type=authority_single, target=7.0s, beat_ids=BT001, cast=3, env=glinda_castle_throne_room, prev=SH001, next=SH003)
+- `SH003` - Petitioner Group 3: Dorothy surrenders the Golden Cap (type=petitioner_group, target=7.0s, beat_ids=BT001, cast=3, env=glinda_castle_throne_room, prev=SH002, next=SH004)
+- `SH004` - Crowd Response 4: Dorothy surrenders the Golden Cap (type=crowd_response, target=7.0s, beat_ids=BT001, cast=3, env=glinda_castle_throne_room, prev=SH003, next=SH005)
+- `SH005` - Symbol Insert 5: Dorothy surrenders the Golden Cap (type=symbol_insert, target=5.4s, beat_ids=BT001, cast=3, env=glinda_castle_throne_room, prev=SH004, next=SH006)
+- `SH006` - Reaction Closeup 6: Dorothy surrenders the Golden Cap (type=reaction_closeup, target=7.0s, beat_ids=BT001, cast=2, env=glinda_castle_throne_room, prev=SH005, next=SH007)
+- `SH007` - Scale Proof Wide 7: Dorothy surrenders the Golden Cap (type=scale_proof_wide, target=10.8s, beat_ids=BT001, cast=3, env=glinda_castle_throne_room, prev=SH006, next=SH008)
+- `SH008` - Task Medium 8: Glinda prepares the magic (type=task_medium, target=6.5s, beat_ids=BT002, cast=3, env=glinda_castle_throne_room, prev=SH007, next=SH009)
+- `SH009` - Hands Insert 9: Glinda prepares the magic (type=hands_insert, target=5.0s, beat_ids=BT002, cast=3, env=glinda_castle_throne_room, prev=SH008, next=SH010)
+- `SH010` - Object Insert 10: Glinda prepares the magic (type=object_insert, target=5.0s, beat_ids=BT002, cast=3, env=glinda_castle_throne_room, prev=SH009, next=SH011)
+- `SH011` - Result Medium 11: Glinda prepares the magic (type=result_medium, target=6.5s, beat_ids=BT002, cast=3, env=glinda_castle_throne_room, prev=SH010, next=SH012)
+- `SH012` - Handoff Medium 12: The Winged Monkeys arrive and receive commands (type=handoff_medium, target=6.0s, beat_ids=BT003, cast=3, env=glinda_castle_throne_room, prev=SH011, next=SH013)
+- `SH013` - Transition Wide 13: The Winged Monkeys arrive and receive commands (type=transition_wide, target=9.2s, beat_ids=BT003, cast=3, env=glinda_castle_throne_room, prev=SH012, next=SH014)

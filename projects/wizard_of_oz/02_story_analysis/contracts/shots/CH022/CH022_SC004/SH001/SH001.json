@@ -39,11 +39,12 @@
   "required_environment_anchor_1": "quadling_countryside",
   "required_subject_anchor_1": "",
   "required_celestial_anchor_1": "",
-  "required_scale_proof_detail": "vastness of red terrain",
+  "required_scale_proof_detail": "preserve readable body-to-environment scale in frame",
   "camera_package_description": "wide, eye level, wide lens, pan, environment priority, diffuse ambient",
   "subject_blocking": [
     "group cluster moving across frame",
     "traveling cluster",
+    "quadling_countryside",
     "the_scarecrow remains readable within the active playing space.",
     "dorothy remains readable within the active playing space."
   ],
@@ -58,17 +59,18 @@
   ],
   "environment_subzone": "quadling_countryside",
   "key_visible_environment_features": [
-    "quadling_countryside"
+    "quadling_countryside",
+    "Chapter-local beat subzone match for 'quadling_countryside'."
   ],
   "continuity_from_previous_shot": "The group arrives looking exhausted and travel-worn against a red backdrop.",
   "continuity_to_next_shot": "BT002",
   "pose_anchor_frame": "group walking through red landscape",
   "pose_end_frame": "approaching farmhouse/homestead",
-  "shot_title": "Establishing Wide 1: Arrival in Quadling Country",
-  "shot_type": "establishing_wide",
-  "camera_description": "Wide establishing frame with a steady or lightly drifting camera.",
-  "composition": "Wide composition across quadling_countryside with the_scarecrow, dorothy, tin_woodman placed for immediate spatial orientation.",
-  "target_seconds": 5.5,
+  "shot_title": "Ceremonial Master 1: Arrival in Quadling Country",
+  "shot_type": "ceremonial_master",
+  "camera_description": "Stable readable framing built from the beat requirement.",
+  "composition": "Readable medium composition in quadling_countryside featuring the_scarecrow, dorothy, tin_woodman.",
+  "target_seconds": 10.8,
   "characters_in_frame": [
     {
       "label": "Scarecrow",
@@ -116,9 +118,13 @@
   ],
   "continuity_constraints": [
     "Character clothing must remain dirty from travel throughout the scene",
-    "Track consumption levels of food and drink provided by Farmer's Wife"
+    "Track consumption levels of food and drink provided by Farmer's Wife",
+    "Arrival in Quadling Country",
+    "Resolve Farmer's Wife -> Farmer's Wife",
+    "Resolve The lush -> The lush",
+    "Resolve a farmhouse/homestead -> a farmhouse/homestead"
   ],
-  "prompt_seed": "Establishing Wide 1: Arrival in Quadling Country. establishing_wide. size=wide. angle=eye_level. lens=wide. motion=pan. zoom=none. focus=environment_priority. lighting=diffuse_ambient. visibility=on_screen. subject_angle=front_three_quarter_right. Wide establishing frame with a steady or lightly drifting camera. Wid...",
+  "prompt_seed": "Ceremonial Master 1: Arrival in Quadling Country. ceremonial_master. size=wide. angle=eye_level. lens=wide. motion=pan. zoom=none. focus=environment_priority. lighting=diffuse_ambient. visibility=on_screen. subject_angle=front_three_quarter_right. Stable readable framing built from the beat requirement. Readable med...",
   "shot_notes": "Arrival in Quadling Country",
   "evidence_refs": [
     {
@@ -188,13 +194,30 @@
     "tin_woodman | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH005/tin_woodman.md] Costume/Silhouette: Entirely metallic (tin) body; carries an axe. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis...",
     "quadling_countryside | Insufficient descriptive evidence is available to establish a visual profile for the quadling_countryside. The environment is identified as a primary setting within the narrative structure. | Unknown | Unknown | Unknown"
   ],
+  "coverage_density": "medium",
+  "coverage_profile": "classic_adventure",
+  "coverage_intent": "montage_travel",
+  "coverage_role": "ceremonial_master",
+  "beat_type": "dialogue_council_or_court",
+  "coverage_importance": "major",
+  "coverage_blueprint_source": "deterministic_v1",
+  "coverage_classification": {
+    "beat_id": "BT001",
+    "beat_type": "dialogue_council_or_court",
+    "importance": "major",
+    "confidence": 0.82,
+    "reasons": [
+      "court/council authority language",
+      "importance = major"
+    ]
+  },
   "metadata": {
     "artifact_id": "CH022_SC004_SH001_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "daa9c2684a341d2e589222d035a5a5ea8e51bbbc",
+    "source_fingerprint": "910a6a9792d15891e72bd474714a35e3a0bdeaa7",
     "created_at_utc": "2026-04-27T20:27:20.325180+00:00",
-    "updated_at_utc": "2026-04-27T20:27:20.325180+00:00",
+    "updated_at_utc": "2026-04-27T20:55:16.479389+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
@@ -209,7 +232,7 @@
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH022_SC004",
-        "version": "21b4fc15abba3da1441fc4ead9b9719679a607de"
+        "version": "61a2d209c9eaaf0fdd50212411295f463c7306ba"
       }
     ],
     "locked_fields": {},
@@ -219,6 +242,16 @@
         "timestamp_utc": "2026-04-27T20:28:40.268519+00:00",
         "action": "synthesized",
         "source_fingerprint": "daa9c2684a341d2e589222d035a5a5ea8e51bbbc"
+      },
+      {
+        "timestamp_utc": "2026-04-27T20:54:16.572053+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "910a6a9792d15891e72bd474714a35e3a0bdeaa7"
+      },
+      {
+        "timestamp_utc": "2026-04-27T20:55:16.879949+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "910a6a9792d15891e72bd474714a35e3a0bdeaa7"
       }
     ]
   }

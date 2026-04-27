@@ -5,62 +5,92 @@
   "shot_order": 2,
   "previous_shot_id": "SH001",
   "next_shot_id": "SH003",
-  "primary_subject": "tin_woodman",
-  "secondary_subjects": [],
-  "shot_moment_summary": "foot crushing beetle",
-  "start_state": "stepping down",
-  "end_state": "crushing contact",
-  "action_during_shot": "foot lands on beetle",
+  "primary_subject": "dorothy",
+  "secondary_subjects": [
+    "the_scarecrow",
+    "tin_woodman"
+  ],
+  "shot_moment_summary": "Routine travel through the forest",
+  "start_state": "group walking",
+  "end_state": "sudden stop",
+  "action_during_shot": "Routine travel through the forest",
   "action_continues_from": "sudden step change",
-  "action_hands_off_to": "BT003",
-  "shot_size": "extreme_close_up",
-  "camera_angle": "low_angle",
-  "lens_family": "telephoto",
+  "action_hands_off_to": "BT002",
+  "shot_size": "medium",
+  "camera_angle": "eye_level",
+  "lens_family": "normal",
   "camera_motion": "locked_off",
   "zoom_behavior": "none",
-  "focus_strategy": "shallow_subject",
-  "lighting_style": "diffuse_ambient",
+  "focus_strategy": "deep_focus",
+  "lighting_style": "hard_directional",
   "subject_visibility": "on_screen",
   "narration_mode": "none",
-  "primary_subject_angle": "profile_right",
-  "visible_primary_subject_id": "tin_woodman",
-  "visible_secondary_subject_ids": [],
-  "primary_subject_frame_position": "foreground inside leaf litter layer",
-  "primary_subject_scale_relation": "macro scale of insect vs metal",
-  "primary_subject_facing_direction": "profile right toward the scene action",
-  "primary_subject_pose_description": "stepping down",
-  "subject_relation_summary": "tin_woodman carries the frame alone",
-  "required_environment_anchor_1": "leaf litter layer",
+  "primary_subject_angle": "front_three_quarter_left",
+  "visible_primary_subject_id": "dorothy",
+  "visible_secondary_subject_ids": [
+    "the_scarecrow",
+    "tin_woodman"
+  ],
+  "primary_subject_frame_position": "foreground right within thick_dark_forest path",
+  "primary_subject_scale_relation": "preserve readable body-to-environment scale in frame",
+  "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+  "primary_subject_pose_description": "group walking",
+  "subject_relation_summary": "dorothy plays against the_scarecrow, tin_woodman in the same frame",
+  "required_environment_anchor_1": "thick_dark_forest path",
   "required_subject_anchor_1": "",
   "required_celestial_anchor_1": "",
-  "required_scale_proof_detail": "macro scale of insect vs metal",
-  "camera_package_description": "extreme-close-up, low angle, telephoto lens, locked off, shallow subject, diffuse ambient",
+  "required_scale_proof_detail": "preserve readable body-to-environment scale in frame",
+  "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
   "subject_blocking": [
-    "static ground level",
-    "foot landing on specific spot",
-    "leaf litter layer"
+    "walking in a line",
+    "thick_dark_forest path",
+    "dorothy remains readable within the active playing space.",
+    "the_scarecrow remains readable within the active playing space."
   ],
   "camera_relative_positions": [
-    "Camera anchors the action inside the leaf litter layer.",
-    "Background depth should keep thick_dark_forest legible as the location anchor."
+    "Camera anchors the action inside the thick_dark_forest path.",
+    "Background depth should keep thick_dark_forest legible as the location anchor.",
+    "Subject 1: dorothy remains visually readable against the environment scale.",
+    "Subject 2: the_scarecrow remains visually readable against the environment scale."
   ],
   "gaze_directions": [
-    "tin_woodman focuses toward the active scene action."
+    "dorothy focuses toward the active scene action."
   ],
-  "environment_subzone": "leaf litter layer",
+  "environment_subzone": "thick_dark_forest path",
   "key_visible_environment_features": [
-    "leaf litter layer"
+    "thick_dark_forest path",
+    "Chapter-local beat subzone match for 'thick_dark_forest path'."
   ],
   "continuity_from_previous_shot": "sudden step change",
-  "continuity_to_next_shot": "BT003",
-  "pose_anchor_frame": "stepping down",
-  "pose_end_frame": "crushing contact",
-  "shot_title": "Reaction Closeup 2: The accident occurs",
-  "shot_type": "reaction_closeup",
-  "camera_description": "Close framing that isolates reaction and emotional emphasis.",
-  "composition": "Intimate composition that isolates tin_woodman against thick_dark_forest to capture the beat's emotional turn.",
-  "target_seconds": 5.3,
+  "continuity_to_next_shot": "BT002",
+  "pose_anchor_frame": "group walking",
+  "pose_end_frame": "sudden stop",
+  "shot_title": "Authority Single 2: Routine travel through the forest",
+  "shot_type": "authority_single",
+  "camera_description": "Stable readable framing built from the beat requirement.",
+  "composition": "Readable medium composition in thick_dark_forest featuring dorothy, the_scarecrow, tin_woodman.",
+  "target_seconds": 6.5,
   "characters_in_frame": [
+    {
+      "label": "Dorothy",
+      "canonical_id": "dorothy",
+      "display_name": "dorothy",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH006/dorothy.md",
+      "notes": "Direct registry match for 'dorothy'."
+    },
+    {
+      "label": "Scarecrow",
+      "canonical_id": "the_scarecrow",
+      "display_name": "the_scarecrow",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 186,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH006/the_scarecrow.md",
+      "notes": "asset id exactly matches canonical id | query matches alias 'scarecrow'"
+    },
     {
       "label": "Tin Woodman",
       "canonical_id": "tin_woodman",
@@ -73,24 +103,25 @@
     }
   ],
   "environment": {
-    "label": "The forest path",
+    "label": "thick_dark_forest",
     "canonical_id": "thick_dark_forest",
     "display_name": "thick_dark_forest",
     "status": "canonical",
     "entity_kind": "environment",
-    "resolution_score": 56,
+    "resolution_score": null,
     "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH006/thick_dark_forest.md",
-    "notes": "Chapter-local environment alias match for 'The forest path' (key_overlap=1, label_overlap=2, context_overlap=2)."
+    "notes": "Chapter-local beat subzone match for 'thick_dark_forest path'."
   },
   "beat_ids": [
-    "BT002"
+    "BT001"
   ],
   "continuity_constraints": [
     "Exact spatial coordinate of the beetle relative to path debris",
-    "Visual progression and texture of rust spread on metal jaw"
+    "Visual progression and texture of rust spread on metal jaw",
+    "Routine travel through the forest"
   ],
-  "prompt_seed": "Reaction Closeup 2: The accident occurs. reaction_closeup. size=extreme_close_up. angle=low_angle. lens=telephoto. motion=locked_off. zoom=none. focus=shallow_subject. lighting=diffuse_ambient. visibility=on_screen. subject_angle=profile_right.",
-  "shot_notes": "The accident occurs",
+  "prompt_seed": "Authority Single 2: Routine travel through the forest. authority_single. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Readabl...",
+  "shot_notes": "Routine travel through the forest",
   "evidence_refs": [
     {
       "source": "scene_contract",
@@ -159,13 +190,30 @@
     "cowardly_lion | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH008/cowardly_lion.md] Physical Description: Large animal; too heavy to be carried by the others. [source:C:/FilmCreator/projects/wizard_of_oz/02_s...",
     "thick_dark_forest | No specific visual descriptors are provided in the current evidence. The environment is identified as a \"thick dark forest.\" | Unknown. | Dark (per name). | Unknown."
   ],
+  "coverage_density": "medium",
+  "coverage_profile": "classic_adventure",
+  "coverage_intent": "montage_travel",
+  "coverage_role": "authority_single",
+  "beat_type": "dialogue_council_or_court",
+  "coverage_importance": "normal",
+  "coverage_blueprint_source": "deterministic_v1",
+  "coverage_classification": {
+    "beat_id": "BT001",
+    "beat_type": "dialogue_council_or_court",
+    "importance": "normal",
+    "confidence": 0.82,
+    "reasons": [
+      "court/council authority language",
+      "importance = normal"
+    ]
+  },
   "metadata": {
     "artifact_id": "CH006_SC003_SH002_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "63a4e6f935314aa499fa73fa4afc0a73cd6cecbe",
+    "source_fingerprint": "9e30dab2916695fb064c2e582a01399585922da7",
     "created_at_utc": "2026-04-27T15:49:08.706778+00:00",
-    "updated_at_utc": "2026-04-27T15:49:08.706778+00:00",
+    "updated_at_utc": "2026-04-27T20:54:34.006373+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
@@ -180,7 +228,7 @@
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH006_SC003",
-        "version": "ba132840d924f6cc368eff8ba7a0a2b258f190b2"
+        "version": "c66654924715e4dc78770cb490f739294a3daec3"
       }
     ],
     "locked_fields": {},
@@ -190,6 +238,16 @@
         "timestamp_utc": "2026-04-27T15:50:15.788606+00:00",
         "action": "synthesized",
         "source_fingerprint": "63a4e6f935314aa499fa73fa4afc0a73cd6cecbe"
+      },
+      {
+        "timestamp_utc": "2026-04-27T20:53:36.728785+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "9e30dab2916695fb064c2e582a01399585922da7"
+      },
+      {
+        "timestamp_utc": "2026-04-27T20:54:34.006874+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "9e30dab2916695fb064c2e582a01399585922da7"
       }
     ]
   }

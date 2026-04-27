@@ -5,70 +5,82 @@
   "shot_order": 2,
   "previous_shot_id": "",
   "next_shot_id": "",
-  "primary_subject": "the_scarecrow",
+  "primary_subject": "dorothy",
   "secondary_subjects": [
+    "the_scarecrow",
     "tin_woodman"
   ],
-  "shot_moment_summary": "individual characters agreeing to the plan",
-  "start_state": "uncertainty",
-  "end_state": "resolve",
-  "action_during_shot": "nodding/verbal agreement",
+  "shot_moment_summary": "Group reunites and discusses individual encounters",
+  "start_state": "characters gathering in the quarters",
+  "end_state": "discussion of trials concludes",
+  "action_during_shot": "Group reunites and discusses individual encounters",
   "action_continues_from": "discussion of trials",
-  "action_hands_off_to": "BT003",
-  "shot_size": "close_up",
+  "action_hands_off_to": "BT002",
+  "shot_size": "medium",
   "camera_angle": "eye_level",
-  "lens_family": "portrait",
+  "lens_family": "normal",
   "camera_motion": "locked_off",
-  "zoom_behavior": "subtle_in",
-  "focus_strategy": "shallow_subject",
-  "lighting_style": "soft_even",
+  "zoom_behavior": "none",
+  "focus_strategy": "deep_focus",
+  "lighting_style": "hard_directional",
   "subject_visibility": "on_screen",
-  "narration_mode": "in_scene_speaker",
-  "primary_subject_angle": "front",
-  "visible_primary_subject_id": "the_scarecrow",
+  "narration_mode": "none",
+  "primary_subject_angle": "front_three_quarter_left",
+  "visible_primary_subject_id": "dorothy",
   "visible_secondary_subject_ids": [
+    "the_scarecrow",
     "tin_woodman"
   ],
-  "primary_subject_frame_position": "foreground inside central_seating_area",
+  "primary_subject_frame_position": "foreground right within central_seating_area",
   "primary_subject_scale_relation": "preserve readable body-to-environment scale in frame",
-  "primary_subject_facing_direction": "facing directly toward camera",
-  "primary_subject_pose_description": "uncertainty",
-  "subject_relation_summary": "the_scarecrow plays against tin_woodman in the same frame",
+  "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+  "primary_subject_pose_description": "characters gathering in the quarters",
+  "subject_relation_summary": "dorothy plays against the_scarecrow, tin_woodman in the same frame",
   "required_environment_anchor_1": "central_seating_area",
-  "required_subject_anchor_1": "tightening the circle/eye contact",
+  "required_subject_anchor_1": "",
   "required_celestial_anchor_1": "",
   "required_scale_proof_detail": "preserve readable body-to-environment scale in frame",
-  "camera_package_description": "close-up, eye level, portrait lens, locked off, zoom subtle in, shallow subject, soft even",
+  "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
   "subject_blocking": [
-    "close proximity",
-    "tightening the circle/eye contact",
-    "the_scarecrow remains readable within the active playing space.",
-    "tin_woodman remains readable within the active playing space."
+    "seated or standing in a loose circle",
+    "palace_guest_quarters",
+    "dorothy remains readable within the active playing space.",
+    "the_scarecrow remains readable within the active playing space."
   ],
   "camera_relative_positions": [
     "Camera anchors the action inside the central_seating_area.",
     "Background depth should keep palace_guest_quarters legible as the location anchor.",
-    "Subject 1: the_scarecrow remains visually readable against the environment scale.",
-    "Subject 2: tin_woodman remains visually readable against the environment scale."
+    "Subject 1: dorothy remains visually readable against the environment scale.",
+    "Subject 2: the_scarecrow remains visually readable against the environment scale."
   ],
   "gaze_directions": [
-    "the_scarecrow focuses toward the active scene action."
+    "dorothy focuses toward the active scene action."
   ],
   "environment_subzone": "central_seating_area",
   "key_visible_environment_features": [
     "central_seating_area",
-    "palace_guest_quarters decor"
+    "Direct registry match for 'palace_guest_quarters'."
   ],
   "continuity_from_previous_shot": "discussion of trials",
-  "continuity_to_next_shot": "BT003",
-  "pose_anchor_frame": "uncertainty",
-  "pose_end_frame": "resolve",
-  "shot_title": "Reaction Closeup 2: Realization and agreement to face the Witch",
-  "shot_type": "reaction_closeup",
-  "camera_description": "Close framing that isolates reaction and emotional emphasis.",
-  "composition": "Intimate composition that isolates the_scarecrow, tin_woodman against palace_guest_quarters to capture the beat's emotional turn.",
-  "target_seconds": 5.3,
+  "continuity_to_next_shot": "BT002",
+  "pose_anchor_frame": "characters gathering in the quarters",
+  "pose_end_frame": "discussion of trials concludes",
+  "shot_title": "Transition Wide 2: Group reunites and discusses individual encounters",
+  "shot_type": "transition_wide",
+  "camera_description": "Stable readable framing built from the beat requirement.",
+  "composition": "Readable medium composition in palace_guest_quarters featuring dorothy, the_scarecrow, tin_woodman.",
+  "target_seconds": 9.2,
   "characters_in_frame": [
+    {
+      "label": "Dorothy",
+      "canonical_id": "dorothy",
+      "display_name": "dorothy",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH011/dorothy.md",
+      "notes": "Direct registry match for 'dorothy'."
+    },
     {
       "label": "Scarecrow",
       "canonical_id": "the_scarecrow",
@@ -101,15 +113,15 @@
     "notes": "Direct registry match for 'palace_guest_quarters'."
   },
   "beat_ids": [
-    "BT002"
+    "BT001"
   ],
   "continuity_constraints": [
     "Visible character fatigue and emotional residue from individual trials",
     "Dorothy's transition to white clothing/dress",
-    "Realization and agreement to face the Witch"
+    "Group reunites and discusses individual encounters"
   ],
-  "prompt_seed": "Reaction Closeup 2: Realization and agreement to face the Witch. reaction_closeup. size=close_up. angle=eye_level. lens=portrait. motion=locked_off. zoom=subtle_in. focus=shallow_subject. lighting=soft_even. visibility=on_screen. subject_angle=front. Close framing that isolates reaction and emotional emphasis. Intim...",
-  "shot_notes": "Realization and agreement to face the Witch",
+  "prompt_seed": "Transition Wide 2: Group reunites and discusses individual encounters. transition_wide. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requi...",
+  "shot_notes": "Group reunites and discusses individual encounters",
   "evidence_refs": [
     {
       "source": "scene_contract",
@@ -178,13 +190,29 @@
     "tin_woodman | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH005/tin_woodman.md] Costume/Silhouette: Entirely metallic (tin) body; carries an axe. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis...",
     "palace_guest_quarters | Opulent guest chambers located within the emerald palace interiors. The space features formal palace decor and ornate furniture, maintaining a domestic scale despite being situated within a grander structure. | Interior rooms defined..."
   ],
+  "coverage_density": "medium",
+  "coverage_profile": "classic_adventure",
+  "coverage_intent": "montage_travel",
+  "coverage_role": "transition_wide",
+  "beat_type": "transition_handoff",
+  "coverage_importance": "minor",
+  "coverage_blueprint_source": "deterministic_v1",
+  "coverage_classification": {
+    "beat_id": "BT001",
+    "beat_type": "transition_handoff",
+    "importance": "minor",
+    "confidence": 0.55,
+    "reasons": [
+      "importance = minor"
+    ]
+  },
   "metadata": {
     "artifact_id": "CH011_SC007_SH002_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "88d859050940f7791458addb72f0540f8aacf9c0",
+    "source_fingerprint": "4da06d8dc2eac7cd8eba5d6f9d5f88be27d4b45d",
     "created_at_utc": "2026-04-27T17:19:56.044853+00:00",
-    "updated_at_utc": "2026-04-27T17:19:56.044853+00:00",
+    "updated_at_utc": "2026-04-27T20:54:48.312320+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
@@ -199,7 +227,7 @@
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH011_SC007",
-        "version": "d73313cef1450d12a65959242d5482a726d62f6c"
+        "version": "bd622f629561e1d5956eeb201c534c3d3a6d7c14"
       }
     ],
     "locked_fields": {},
@@ -209,6 +237,16 @@
         "timestamp_utc": "2026-04-27T17:21:09.083500+00:00",
         "action": "synthesized",
         "source_fingerprint": "88d859050940f7791458addb72f0540f8aacf9c0"
+      },
+      {
+        "timestamp_utc": "2026-04-27T20:53:50.237075+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "4da06d8dc2eac7cd8eba5d6f9d5f88be27d4b45d"
+      },
+      {
+        "timestamp_utc": "2026-04-27T20:54:48.312320+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "4da06d8dc2eac7cd8eba5d6f9d5f88be27d4b45d"
       }
     ]
   }

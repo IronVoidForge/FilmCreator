@@ -5,55 +5,56 @@
   "shot_order": 2,
   "previous_shot_id": "SH001",
   "next_shot_id": "SH003",
-  "primary_subject": "tin_woodman",
+  "primary_subject": "the_scarecrow",
   "secondary_subjects": [
-    "the_scarecrow"
+    "tin_woodman",
+    "dorothy"
   ],
-  "shot_moment_summary": "tin_woodman_argues_for_heart",
-  "start_state": "walking_formation",
-  "end_state": "walking_formation",
-  "action_during_shot": "tin_woodman_responds_with_conviction",
+  "shot_moment_summary": "Scarecrow advocates for brains",
+  "start_state": "walking_debate",
+  "end_state": "scarecrow_finishes_point",
+  "action_during_shot": "Scarecrow advocates for brains",
   "action_continues_from": "walking_formation",
-  "action_hands_off_to": "BT003",
-  "shot_size": "close_up",
+  "action_hands_off_to": "BT002",
+  "shot_size": "medium",
   "camera_angle": "eye_level",
-  "lens_family": "portrait",
-  "camera_motion": "track",
+  "lens_family": "normal",
+  "camera_motion": "locked_off",
   "zoom_behavior": "none",
-  "focus_strategy": "shallow_subject",
-  "lighting_style": "diffuse_ambient",
+  "focus_strategy": "deep_focus",
+  "lighting_style": "hard_directional",
   "subject_visibility": "on_screen",
-  "narration_mode": "in_scene_speaker",
-  "primary_subject_angle": "front_three_quarter_right",
-  "visible_primary_subject_id": "tin_woodman",
+  "narration_mode": "none",
+  "primary_subject_angle": "front_three_quarter_left",
+  "visible_primary_subject_id": "the_scarecrow",
   "visible_secondary_subject_ids": [
-    "the_scarecrow"
+    "tin_woodman",
+    "dorothy"
   ],
-  "primary_subject_frame_position": "foreground inside yellow_brick_road",
-  "primary_subject_scale_relation": "character_height_vs_road_width",
-  "primary_subject_facing_direction": "front three-quarter right toward the scene action",
-  "primary_subject_pose_description": "walking_formation",
-  "subject_relation_summary": "tin_woodman plays against the_scarecrow in the same frame",
+  "primary_subject_frame_position": "foreground right within yellow_brick_road",
+  "primary_subject_scale_relation": "The group is centered on the width of the yellow brick road.",
+  "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+  "primary_subject_pose_description": "walking_debate",
+  "subject_relation_summary": "the_scarecrow plays against tin_woodman, dorothy in the same frame",
   "required_environment_anchor_1": "yellow_brick_road",
-  "required_subject_anchor_1": "woodman_facing_scarecrow",
+  "required_subject_anchor_1": "scarecrow_leading_or_side-by-side",
   "required_celestial_anchor_1": "",
-  "required_scale_proof_detail": "character_height_vs_road_width",
-  "camera_package_description": "close-up, eye level, portrait lens, track, shallow subject, diffuse ambient",
+  "required_scale_proof_detail": "The group is centered on the width of the yellow brick road.",
+  "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
   "subject_blocking": [
-    "linear_walk",
-    "woodman_facing_scarecrow",
+    "scarecrow_leading_or_side-by-side",
     "yellow_brick_road",
-    "tin_woodman remains readable within the active playing space.",
-    "the_scarecrow remains readable within the active playing space."
+    "the_scarecrow remains readable within the active playing space.",
+    "tin_woodman remains readable within the active playing space."
   ],
   "camera_relative_positions": [
     "Camera anchors the action inside the yellow_brick_road.",
     "Background depth should keep yellow_brick_road legible as the location anchor.",
-    "Subject 1: tin_woodman remains visually readable against the environment scale.",
-    "Subject 2: the_scarecrow remains visually readable against the environment scale."
+    "Subject 1: the_scarecrow remains visually readable against the environment scale.",
+    "Subject 2: tin_woodman remains visually readable against the environment scale."
   ],
   "gaze_directions": [
-    "tin_woodman focuses toward the active scene action."
+    "the_scarecrow focuses toward the active scene action."
   ],
   "environment_subzone": "yellow_brick_road",
   "key_visible_environment_features": [
@@ -61,15 +62,25 @@
     "Chapter-local beat subzone match for 'yellow_brick_road'."
   ],
   "continuity_from_previous_shot": "walking_formation",
-  "continuity_to_next_shot": "BT003",
-  "pose_anchor_frame": "walking_formation",
-  "pose_end_frame": "walking_formation",
-  "shot_title": "Reaction Closeup 2: Woodman advocates for a heart",
-  "shot_type": "reaction_closeup",
-  "camera_description": "Close framing that isolates reaction and emotional emphasis.",
-  "composition": "Intimate composition that isolates tin_woodman, the_scarecrow against yellow_brick_road to capture the beat's emotional turn.",
-  "target_seconds": 5.3,
+  "continuity_to_next_shot": "BT002",
+  "pose_anchor_frame": "walking_debate",
+  "pose_end_frame": "scarecrow_finishes_point",
+  "shot_title": "Authority Single 2: Scarecrow advocates for brains",
+  "shot_type": "authority_single",
+  "camera_description": "Stable readable framing built from the beat requirement.",
+  "composition": "Readable medium composition in yellow_brick_road featuring the_scarecrow, tin_woodman, dorothy.",
+  "target_seconds": 6.5,
   "characters_in_frame": [
+    {
+      "label": "Scarecrow",
+      "canonical_id": "the_scarecrow",
+      "display_name": "the_scarecrow",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 186,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH005/the_scarecrow.md",
+      "notes": "asset id exactly matches canonical id | query matches alias 'scarecrow'"
+    },
     {
       "label": "Tin Woodman",
       "canonical_id": "tin_woodman",
@@ -81,14 +92,14 @@
       "notes": "Direct registry match for 'tin_woodman'."
     },
     {
-      "label": "Scarecrow",
-      "canonical_id": "the_scarecrow",
-      "display_name": "the_scarecrow",
+      "label": "Dorothy",
+      "canonical_id": "dorothy",
+      "display_name": "dorothy",
       "status": "canonical",
       "entity_kind": "individual",
-      "resolution_score": 186,
-      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH005/the_scarecrow.md",
-      "notes": "asset id exactly matches canonical id | query matches alias 'scarecrow'"
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH005/dorothy.md",
+      "notes": "Direct registry match for 'dorothy'."
     }
   ],
   "environment": {
@@ -102,14 +113,14 @@
     "notes": "Chapter-local beat subzone match for 'yellow_brick_road'."
   },
   "beat_ids": [
-    "BT002"
+    "BT001"
   ],
   "continuity_constraints": [
     "Physical distance between travelers must remain consistent during walking dialogue",
-    "Woodman advocates for a heart"
+    "Scarecrow advocates for brains"
   ],
-  "prompt_seed": "Reaction Closeup 2: Woodman advocates for a heart. reaction_closeup. size=close_up. angle=eye_level. lens=portrait. motion=track. zoom=none. focus=shallow_subject. lighting=diffuse_ambient. visibility=on_screen. subject_angle=front_three_quarter_right. Close framing that isolates reaction and emotional emphasis. Int...",
-  "shot_notes": "Woodman advocates for a heart",
+  "prompt_seed": "Authority Single 2: Scarecrow advocates for brains. authority_single. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Readable m...",
+  "shot_notes": "Scarecrow advocates for brains",
   "evidence_refs": [
     {
       "source": "scene_contract",
@@ -178,13 +189,30 @@
     "dorothy | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md] Costume/Silhouette: Unknown. No specific clothing details are provided in this chapter. [source:C:/FilmCreator/projects/wizard_of_oz/02_...",
     "yellow_brick_road | No specific visual descriptors are provided in the current evidence. The environment functions primarily as a transit setting. | Unknown. | Unknown. | Unknown."
   ],
+  "coverage_density": "medium",
+  "coverage_profile": "classic_adventure",
+  "coverage_intent": "montage_travel",
+  "coverage_role": "authority_single",
+  "beat_type": "dialogue_council_or_court",
+  "coverage_importance": "normal",
+  "coverage_blueprint_source": "deterministic_v1",
+  "coverage_classification": {
+    "beat_id": "BT001",
+    "beat_type": "dialogue_council_or_court",
+    "importance": "normal",
+    "confidence": 0.82,
+    "reasons": [
+      "court/council authority language",
+      "importance = normal"
+    ]
+  },
   "metadata": {
     "artifact_id": "CH005_SC005_SH002_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "d54090cd561883103b3063a1bf77c06907f0edc7",
+    "source_fingerprint": "26fca4182e9284baee8cbdd0a93b8388f393724a",
     "created_at_utc": "2026-04-27T15:37:23.496268+00:00",
-    "updated_at_utc": "2026-04-27T15:37:23.496268+00:00",
+    "updated_at_utc": "2026-04-27T20:54:32.329963+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
@@ -199,7 +227,7 @@
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH005_SC005",
-        "version": "ab99259aa1017d8f13b087d1a1c07f1820d7e399"
+        "version": "d25679b827107f8a83e3021bae13ba83875eaf0e"
       }
     ],
     "locked_fields": {},
@@ -209,6 +237,16 @@
         "timestamp_utc": "2026-04-27T15:38:58.654277+00:00",
         "action": "synthesized",
         "source_fingerprint": "d54090cd561883103b3063a1bf77c06907f0edc7"
+      },
+      {
+        "timestamp_utc": "2026-04-27T20:53:35.145534+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "26fca4182e9284baee8cbdd0a93b8388f393724a"
+      },
+      {
+        "timestamp_utc": "2026-04-27T20:54:32.330963+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "26fca4182e9284baee8cbdd0a93b8388f393724a"
       }
     ]
   }

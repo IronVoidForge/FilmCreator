@@ -5,79 +5,72 @@
   "shot_order": 2,
   "previous_shot_id": "SH001",
   "next_shot_id": "SH003",
-  "primary_subject": "snapping_ropes",
+  "primary_subject": "dorothy",
   "secondary_subjects": [
-    "dorothy"
+    "the_scarecrow",
+    "tin_woodman"
   ],
-  "shot_moment_summary": "Close-up of the ropes under tension snapping.",
-  "start_state": "ropes under tension",
-  "end_state": "ropes severed",
-  "action_during_shot": "snapping",
+  "shot_moment_summary": "Dorothy realizes Toto is missing and rushes to the basket",
+  "start_state": "Dorothy stops mid-action",
+  "end_state": "Dorothy reaches the balloon ropes",
+  "action_during_shot": "Dorothy realizes Toto is missing and rushes to the basket",
   "action_continues_from": "Dorothy reaching for ropes",
-  "action_hands_off_to": "BT003",
-  "shot_size": "extreme_close_up",
+  "action_hands_off_to": "BT002",
+  "shot_size": "medium",
   "camera_angle": "eye_level",
-  "lens_family": "telephoto",
+  "lens_family": "normal",
   "camera_motion": "locked_off",
   "zoom_behavior": "none",
   "focus_strategy": "deep_focus",
   "lighting_style": "hard_directional",
   "subject_visibility": "on_screen",
   "narration_mode": "none",
-  "primary_subject_angle": "profile_left",
-  "visible_primary_subject_id": "oz",
+  "primary_subject_angle": "front_three_quarter_left",
+  "visible_primary_subject_id": "dorothy",
   "visible_secondary_subject_ids": [
-    "dorothy"
+    "the_scarecrow",
+    "tin_woodman"
   ],
-  "primary_subject_frame_position": "foreground inside balloon_launch_platform",
+  "primary_subject_frame_position": "foreground right within balloon_launch_platform",
   "primary_subject_scale_relation": "The scale shift from ground-level intimacy to the vast sky separation.",
-  "primary_subject_facing_direction": "profile left toward the scene action",
-  "primary_subject_pose_description": "ropes under tension",
-  "subject_relation_summary": "snapping_ropes plays against dorothy in the same frame",
+  "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+  "primary_subject_pose_description": "Dorothy stops mid-action",
+  "subject_relation_summary": "dorothy plays against the_scarecrow, tin_woodman in the same frame",
   "required_environment_anchor_1": "balloon_launch_platform",
-  "required_subject_anchor_1": "Dorothy's hands reaching for the rope as it breaks",
+  "required_subject_anchor_1": "",
   "required_celestial_anchor_1": "",
   "required_scale_proof_detail": "The scale shift from ground-level intimacy to the vast sky separation.",
-  "camera_package_description": "extreme-close-up, eye level, telephoto lens, locked off, deep focus, hard directional",
+  "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
   "subject_blocking": [
-    "close-up on rope attachment points",
-    "Dorothy's hands reaching for the rope as it breaks",
-    "oz remains readable within the active playing space.",
-    "dorothy remains readable within the active playing space."
+    "Dorothy sprinting across the platform toward the basket",
+    "balloon_launch_platform",
+    "dorothy remains readable within the active playing space.",
+    "the_scarecrow remains readable within the active playing space."
   ],
   "camera_relative_positions": [
     "Camera anchors the action inside the balloon_launch_platform.",
     "Background depth should keep balloon_launch_platform legible as the location anchor.",
-    "Subject 1: oz remains visually readable against the environment scale.",
-    "Subject 2: dorothy remains visually readable against the environment scale."
+    "Subject 1: dorothy remains visually readable against the environment scale.",
+    "Subject 2: the_scarecrow remains visually readable against the environment scale."
   ],
   "gaze_directions": [
-    "snapping_ropes focuses toward the active scene action."
+    "dorothy focuses toward the active scene action."
   ],
   "environment_subzone": "balloon_launch_platform",
   "key_visible_environment_features": [
-    "balloon_launch_platform"
+    "balloon_launch_platform",
+    "Chapter-local environment alias match for 'Launch site' (key_overlap=1, label_overlap=1, context_overlap=4)."
   ],
   "continuity_from_previous_shot": "Dorothy reaching for ropes",
-  "continuity_to_next_shot": "BT003",
-  "pose_anchor_frame": "ropes under tension",
-  "pose_end_frame": "ropes severed",
-  "shot_title": "Insert Detail 2: The ropes snap prematurely",
-  "shot_type": "insert_detail",
-  "camera_description": "Tight detail framing focused on a single visual object or gesture.",
-  "composition": "Detail composition centered on the key physical action or prop inside balloon_launch_platform.",
-  "target_seconds": 5.3,
+  "continuity_to_next_shot": "BT002",
+  "pose_anchor_frame": "Dorothy stops mid-action",
+  "pose_end_frame": "Dorothy reaches the balloon ropes",
+  "shot_title": "Authority Single 2: Dorothy realizes Toto is missing and rushes to the...",
+  "shot_type": "authority_single",
+  "camera_description": "Stable readable framing built from the beat requirement.",
+  "composition": "Readable medium composition in balloon_launch_platform featuring dorothy, the_scarecrow, tin_woodman.",
+  "target_seconds": 7.0,
   "characters_in_frame": [
-    {
-      "label": "Oz (The Wizard)",
-      "canonical_id": "oz",
-      "display_name": "oz",
-      "status": "canonical",
-      "entity_kind": "individual",
-      "resolution_score": 138,
-      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH017/oz_the_wizard.md",
-      "notes": "Direct registry match for 'oz_the_wizard'."
-    },
     {
       "label": "Dorothy",
       "canonical_id": "dorothy",
@@ -87,6 +80,26 @@
       "resolution_score": 138,
       "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH017/dorothy.md",
       "notes": "Direct registry match for 'dorothy'."
+    },
+    {
+      "label": "Scarecrow",
+      "canonical_id": "the_scarecrow",
+      "display_name": "the_scarecrow",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 186,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH003/the_scarecrow.md",
+      "notes": "asset id exactly matches canonical id | query matches alias 'scarecrow'"
+    },
+    {
+      "label": "Tin Woodman",
+      "canonical_id": "tin_woodman",
+      "display_name": "tin_woodman",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH017/tin_woodman.md",
+      "notes": "Direct registry match for 'tin_woodman'."
     }
   ],
   "environment": {
@@ -100,14 +113,16 @@
     "notes": "Chapter-local environment alias match for 'Launch site' (key_overlap=1, label_overlap=1, context_overlap=4)."
   },
   "beat_ids": [
-    "BT002"
+    "BT001"
   ],
   "continuity_constraints": [
     "Precise timing of rope snap relative to Dorothy's proximity to the basket",
-    "Consistent vertical velocity of the balloon ascent"
+    "Consistent vertical velocity of the balloon ascent",
+    "Dorothy realizes Toto is missing and rushes to the basket",
+    "Resolve Lion -> Lion"
   ],
-  "prompt_seed": "Insert Detail 2: The ropes snap prematurely. insert_detail. size=extreme_close_up. angle=eye_level. lens=telephoto. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=profile_left. Tight detail framing focused on a single visual object or gesture.",
-  "shot_notes": "The ropes snap prematurely",
+  "prompt_seed": "Authority Single 2: Dorothy realizes Toto is missing and rushes to the.... authority_single. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat...",
+  "shot_notes": "Dorothy realizes Toto is missing and rushes to the basket",
   "evidence_refs": [
     {
       "source": "scene_contract",
@@ -176,13 +191,30 @@
     "tin_woodman | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH005/tin_woodman.md] Costume/Silhouette: Entirely metallic (tin) body; carries an axe. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis...",
     "balloon_launch_platform | No specific visual details are provided in the current evidence. The environment functions primarily as a transit setting and an action location. | Unknown. | Unknown. | Unknown."
   ],
+  "coverage_density": "medium",
+  "coverage_profile": "classic_adventure",
+  "coverage_intent": "economical_storybook",
+  "coverage_role": "authority_single",
+  "beat_type": "dialogue_council_or_court",
+  "coverage_importance": "major",
+  "coverage_blueprint_source": "deterministic_v1",
+  "coverage_classification": {
+    "beat_id": "BT001",
+    "beat_type": "dialogue_council_or_court",
+    "importance": "major",
+    "confidence": 0.82,
+    "reasons": [
+      "court/council authority language",
+      "importance = major"
+    ]
+  },
   "metadata": {
     "artifact_id": "CH017_SC004_SH002_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "b6416d3ad3edfd4f8b22e3b05f37d143a32a4443",
+    "source_fingerprint": "c853a8c1868d3a9768cee9674a39aae1f377d3da",
     "created_at_utc": "2026-04-27T19:00:44.426233+00:00",
-    "updated_at_utc": "2026-04-27T19:00:44.426233+00:00",
+    "updated_at_utc": "2026-04-27T20:55:03.303246+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
@@ -197,7 +229,7 @@
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH017_SC004",
-        "version": "7a76ed2bc7587e1212300fae7698b933801b6f43"
+        "version": "de6a6626c7329e9040ac3a5def4c3f23dc0275bc"
       }
     ],
     "locked_fields": {},
@@ -207,6 +239,16 @@
         "timestamp_utc": "2026-04-27T19:01:55.170055+00:00",
         "action": "synthesized",
         "source_fingerprint": "b6416d3ad3edfd4f8b22e3b05f37d143a32a4443"
+      },
+      {
+        "timestamp_utc": "2026-04-27T20:54:04.417937+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "c853a8c1868d3a9768cee9674a39aae1f377d3da"
+      },
+      {
+        "timestamp_utc": "2026-04-27T20:55:03.304250+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "c853a8c1868d3a9768cee9674a39aae1f377d3da"
       }
     ]
   }

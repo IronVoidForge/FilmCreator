@@ -44,29 +44,33 @@
   "subject_blocking": [
     "linear file",
     "walking in a line",
+    "thick_dark_forest path",
     "the_scarecrow remains readable within the active playing space.",
     "dorothy remains readable within the active playing space."
   ],
   "camera_relative_positions": [
     "Camera anchors the action inside the thick_dark_forest path.",
-    "Background depth should keep thick_dark_forest legible as the location anchor."
+    "Background depth should keep thick_dark_forest legible as the location anchor.",
+    "Subject 1: the_scarecrow remains visually readable against the environment scale.",
+    "Subject 2: dorothy remains visually readable against the environment scale."
   ],
   "gaze_directions": [
     "the_scarecrow focuses toward the active scene action."
   ],
   "environment_subzone": "thick_dark_forest path",
   "key_visible_environment_features": [
-    "thick_dark_forest path"
+    "thick_dark_forest path",
+    "Chapter-local beat subzone match for 'thick_dark_forest path'."
   ],
   "continuity_from_previous_shot": "The group moves rhythmically through the thick forest path.",
   "continuity_to_next_shot": "BT002",
   "pose_anchor_frame": "walking rhythm",
   "pose_end_frame": "sudden step change",
-  "shot_title": "Establishing Wide 1: Routine travel through the forest",
-  "shot_type": "establishing_wide",
-  "camera_description": "Wide establishing frame with a steady or lightly drifting camera.",
-  "composition": "Wide composition across thick_dark_forest with the_scarecrow, dorothy, cowardly_lion placed for immediate spatial orientation.",
-  "target_seconds": 5.5,
+  "shot_title": "Ceremonial Master 1: Routine travel through the forest",
+  "shot_type": "ceremonial_master",
+  "camera_description": "Stable readable framing built from the beat requirement.",
+  "composition": "Readable medium composition in thick_dark_forest featuring the_scarecrow, dorothy, cowardly_lion.",
+  "target_seconds": 10.0,
   "characters_in_frame": [
     {
       "label": "Scarecrow",
@@ -117,7 +121,7 @@
     "Visual progression and texture of rust spread on metal jaw",
     "Routine travel through the forest"
   ],
-  "prompt_seed": "Establishing Wide 1: Routine travel through the forest. establishing_wide. size=wide. angle=eye_level. lens=wide. motion=track. zoom=none. focus=deep_focus. lighting=diffuse_ambient. visibility=on_screen. subject_angle=front_three_quarter_left. Wide establishing frame with a steady or lightly drifting camera.",
+  "prompt_seed": "Ceremonial Master 1: Routine travel through the forest. ceremonial_master. size=wide. angle=eye_level. lens=wide. motion=track. zoom=none. focus=deep_focus. lighting=diffuse_ambient. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Readable medium...",
   "shot_notes": "Routine travel through the forest",
   "evidence_refs": [
     {
@@ -187,13 +191,30 @@
     "cowardly_lion | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH008/cowardly_lion.md] Physical Description: Large animal; too heavy to be carried by the others. [source:C:/FilmCreator/projects/wizard_of_oz/02_s...",
     "thick_dark_forest | No specific visual descriptors are provided in the current evidence. The environment is identified as a \"thick dark forest.\" | Unknown. | Dark (per name). | Unknown."
   ],
+  "coverage_density": "medium",
+  "coverage_profile": "classic_adventure",
+  "coverage_intent": "montage_travel",
+  "coverage_role": "ceremonial_master",
+  "beat_type": "dialogue_council_or_court",
+  "coverage_importance": "normal",
+  "coverage_blueprint_source": "deterministic_v1",
+  "coverage_classification": {
+    "beat_id": "BT001",
+    "beat_type": "dialogue_council_or_court",
+    "importance": "normal",
+    "confidence": 0.82,
+    "reasons": [
+      "court/council authority language",
+      "importance = normal"
+    ]
+  },
   "metadata": {
     "artifact_id": "CH006_SC003_SH001_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "63a4e6f935314aa499fa73fa4afc0a73cd6cecbe",
+    "source_fingerprint": "9e30dab2916695fb064c2e582a01399585922da7",
     "created_at_utc": "2026-04-27T15:47:55.285975+00:00",
-    "updated_at_utc": "2026-04-27T15:47:55.285975+00:00",
+    "updated_at_utc": "2026-04-27T20:54:33.637027+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
@@ -208,7 +229,7 @@
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH006_SC003",
-        "version": "ba132840d924f6cc368eff8ba7a0a2b258f190b2"
+        "version": "c66654924715e4dc78770cb490f739294a3daec3"
       }
     ],
     "locked_fields": {},
@@ -218,6 +239,16 @@
         "timestamp_utc": "2026-04-27T15:49:08.705279+00:00",
         "action": "synthesized",
         "source_fingerprint": "63a4e6f935314aa499fa73fa4afc0a73cd6cecbe"
+      },
+      {
+        "timestamp_utc": "2026-04-27T20:53:36.721786+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "9e30dab2916695fb064c2e582a01399585922da7"
+      },
+      {
+        "timestamp_utc": "2026-04-27T20:54:34.000356+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "9e30dab2916695fb064c2e582a01399585922da7"
       }
     ]
   }

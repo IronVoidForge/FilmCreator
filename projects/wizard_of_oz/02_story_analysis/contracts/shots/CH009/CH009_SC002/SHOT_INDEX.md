@@ -1,5 +1,15 @@
 # Shot Index
 
-- `SH001` - Reaction Closeup 1: The Scarecrow's plea to the Queen (type=reaction_closeup, target=5.5s, beat_ids=BT001, cast=2, env=poppy_field_bed, prev=(none), next=SH002)
-- `SH002` - Medium 2: The Woodman begins construction (type=medium, target=5.3s, beat_ids=BT002, cast=1, env=poppy_field_bed, prev=SH001, next=SH003)
-- `SH003` - Establishing Wide 3: The Mouse Army arrives (type=establishing_wide, target=5.1s, beat_ids=BT003, cast=2, env=poppy_field_bed, prev=SH002, next=(none))
+- `SH001` - Ceremonial Master 1: The Scarecrow's plea to the Queen (type=ceremonial_master, target=10.8s, beat_ids=BT001, cast=2, env=poppy_field_bed, prev=(none), next=SH002)
+- `SH002` - Authority Single 2: The Scarecrow's plea to the Queen (type=authority_single, target=7.0s, beat_ids=BT001, cast=2, env=poppy_field_bed, prev=SH001, next=SH003)
+- `SH003` - Petitioner Group 3: The Scarecrow's plea to the Queen (type=petitioner_group, target=7.0s, beat_ids=BT001, cast=2, env=poppy_field_bed, prev=SH002, next=SH004)
+- `SH004` - Crowd Response 4: The Scarecrow's plea to the Queen (type=crowd_response, target=7.0s, beat_ids=BT001, cast=2, env=poppy_field_bed, prev=SH003, next=SH005)
+- `SH005` - Symbol Insert 5: The Scarecrow's plea to the Queen (type=symbol_insert, target=5.4s, beat_ids=BT001, cast=2, env=poppy_field_bed, prev=SH004, next=SH006)
+- `SH006` - Reaction Closeup 6: The Scarecrow's plea to the Queen (type=reaction_closeup, target=7.0s, beat_ids=BT001, cast=2, env=poppy_field_bed, prev=SH005, next=SH007)
+- `SH007` - Scale Proof Wide 7: The Scarecrow's plea to the Queen (type=scale_proof_wide, target=10.8s, beat_ids=BT001, cast=2, env=poppy_field_bed, prev=SH006, next=SH008)
+- `SH008` - Handoff Medium 8: The Woodman begins construction (type=handoff_medium, target=6.0s, beat_ids=BT002, cast=1, env=poppy_field_bed, prev=SH007, next=SH009)
+- `SH009` - Transition Wide 9: The Woodman begins construction (type=transition_wide, target=9.2s, beat_ids=BT002, cast=1, env=poppy_field_bed, prev=SH008, next=SH010)
+- `SH010` - Establishing Wide 10: The Mouse Army arrives (type=establishing_wide, target=10.8s, beat_ids=BT003, cast=2, env=poppy_field_bed, prev=SH009, next=SH011)
+- `SH011` - Traveling Medium 11: The Mouse Army arrives (type=traveling_medium, target=7.0s, beat_ids=BT003, cast=1, env=poppy_field_bed, prev=SH010, next=SH012)
+- `SH012` - Subject Pov 12: The Mouse Army arrives (type=subject_pov, target=7.0s, beat_ids=BT003, cast=2, env=poppy_field_bed, prev=SH011, next=SH013)
+- `SH013` - Handoff Medium 13: The Mouse Army arrives (type=handoff_medium, target=7.0s, beat_ids=BT003, cast=2, env=poppy_field_bed, prev=SH012, next=(none))

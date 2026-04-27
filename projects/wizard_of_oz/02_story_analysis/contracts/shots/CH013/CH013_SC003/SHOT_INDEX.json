@@ -12,7 +12,7 @@
       "tin_woodman"
     ],
     "shot_moment_summary": "looking up at clothes in canopy",
-    "start_state": "characters looking up with expressions of despair",
+    "start_state": "characters looking up",
     "end_state": "tin_woodman stepping forward",
     "action_during_shot": "searching the canopy",
     "action_continues_from": "Characters looking up at empty clothes hanging in a tall tree with expressions of despair.",
@@ -40,11 +40,12 @@
     "required_environment_anchor_1": "tree_canopy",
     "required_subject_anchor_1": "",
     "required_celestial_anchor_1": "",
-    "required_scale_proof_detail": "clothes visible high above ground",
+    "required_scale_proof_detail": "The height of the tall_tree_location relative to the characters.",
     "camera_package_description": "wide, low angle, ultra-wide lens, tilt, deep focus, diffuse ambient",
     "subject_blocking": [
       "group clustered at base",
       "group looking upward in unison",
+      "base of tall_tree_location",
       "dorothy remains readable within the active playing space.",
       "cowardly_lion remains readable within the active playing space."
     ],
@@ -60,17 +61,17 @@
     "environment_subzone": "tree_canopy",
     "key_visible_environment_features": [
       "tree_canopy",
-      "smooth-trunked tree"
+      "Chapter-local environment alias match for 'smooth-trunked tree' (key_overlap=1, label_overlap=2, context_overlap=4)."
     ],
     "continuity_from_previous_shot": "Characters looking up at empty clothes hanging in a tall tree with expressions of despair.",
     "continuity_to_next_shot": "BT002",
     "pose_anchor_frame": "characters looking up",
     "pose_end_frame": "tin_woodman stepping forward",
-    "shot_title": "Establishing Wide 1: Discovery of clothes in the canopy",
-    "shot_type": "establishing_wide",
-    "camera_description": "Wide establishing frame with a steady or lightly drifting camera.",
-    "composition": "Wide composition across tall_tree_location with dorothy, cowardly_lion, tin_woodman placed for immediate spatial orientation.",
-    "target_seconds": 5.5,
+    "shot_title": "Ceremonial Master 1: Discovery of clothes in the canopy",
+    "shot_type": "ceremonial_master",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in tall_tree_location featuring dorothy, cowardly_lion, tin_woodman.",
+    "target_seconds": 10.8,
     "characters_in_frame": [
       {
         "label": "Dorothy",
@@ -121,7 +122,7 @@
       "Appearance of the new gold-handled axe",
       "Discovery of clothes in the canopy"
     ],
-    "prompt_seed": "Establishing Wide 1: Discovery of clothes in the canopy. establishing_wide. size=wide. angle=low_angle. lens=ultra_wide. motion=tilt. zoom=none. focus=deep_focus. lighting=diffuse_ambient. visibility=on_screen. subject_angle=front_three_quarter_left. Wide establishing frame with a steady or lightly drifting camera.",
+    "prompt_seed": "Ceremonial Master 1: Discovery of clothes in the canopy. ceremonial_master. size=wide. angle=low_angle. lens=ultra_wide. motion=tilt. zoom=none. focus=deep_focus. lighting=diffuse_ambient. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Readable...",
     "shot_notes": "Discovery of clothes in the canopy",
     "evidence_refs": [
       {
@@ -192,13 +193,30 @@
       "tall_tree_location | Insufficient descriptive data available to establish a visual profile. The location is identified as a specific landmark within the narrative. | Unknown. | Unknown. | Unknown.",
       "rocky_plain | No specific visual descriptors are provided in the current evidence. The environment functions as a location for transit and discovery. | Unknown. | Unknown. | Unknown."
     ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "suspense_investigation",
+    "coverage_role": "ceremonial_master",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT001",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "major",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = major"
+      ]
+    },
     "metadata": {
       "artifact_id": "CH013_SC003_SH001_SHOT_PACKAGE",
       "artifact_type": "shot_package",
       "status": "generated",
-      "source_fingerprint": "6b8d715d561747254774675f23fdd7cd7996ae4d",
+      "source_fingerprint": "69836fda1f03464542ee80910d7f8d9b2fbf35b3",
       "created_at_utc": "2026-04-27T17:49:37.002656+00:00",
-      "updated_at_utc": "2026-04-27T17:49:37.002656+00:00",
+      "updated_at_utc": "2026-04-27T20:54:52.735802+00:00",
       "upstream_dependencies": [
         {
           "dependency_type": "scene_contract",
@@ -213,7 +231,7 @@
         {
           "dependency_type": "shot_blueprints",
           "dependency_id": "CH013_SC003",
-          "version": "16e578da5a83287e06755214d7b361dcc6b11ec7"
+          "version": "e9e51a68584e12b285b9572123b2fac7de80c58b"
         }
       ],
       "locked_fields": {},
@@ -223,6 +241,16 @@
           "timestamp_utc": "2026-04-27T17:50:56.298148+00:00",
           "action": "synthesized",
           "source_fingerprint": "6b8d715d561747254774675f23fdd7cd7996ae4d"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:53:54.782506+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "69836fda1f03464542ee80910d7f8d9b2fbf35b3"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:53.121649+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "69836fda1f03464542ee80910d7f8d9b2fbf35b3"
         }
       ]
     }
@@ -234,6 +262,1504 @@
     "shot_order": 2,
     "previous_shot_id": "SH001",
     "next_shot_id": "SH003",
+    "primary_subject": "dorothy",
+    "secondary_subjects": [
+      "cowardly_lion",
+      "tin_woodman"
+    ],
+    "shot_moment_summary": "Discovery of clothes in the canopy",
+    "start_state": "characters looking up",
+    "end_state": "clothes identified",
+    "action_during_shot": "Discovery of clothes in the canopy",
+    "action_continues_from": "tin_woodman stepping forward",
+    "action_hands_off_to": "BT002",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "dorothy",
+    "visible_secondary_subject_ids": [
+      "cowardly_lion",
+      "tin_woodman"
+    ],
+    "primary_subject_frame_position": "foreground right within tree_canopy",
+    "primary_subject_scale_relation": "The height of the tall_tree_location relative to the characters.",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "characters looking up",
+    "subject_relation_summary": "dorothy plays against cowardly_lion, tin_woodman in the same frame",
+    "required_environment_anchor_1": "tree_canopy",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "The height of the tall_tree_location relative to the characters.",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "group looking upward in unison",
+      "base of tall_tree_location",
+      "dorothy remains readable within the active playing space.",
+      "cowardly_lion remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the tree_canopy.",
+      "Background depth should keep tall_tree_location legible as the location anchor.",
+      "Subject 1: dorothy remains visually readable against the environment scale.",
+      "Subject 2: cowardly_lion remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "dorothy focuses toward the active scene action."
+    ],
+    "environment_subzone": "tree_canopy",
+    "key_visible_environment_features": [
+      "tree_canopy",
+      "Chapter-local environment alias match for 'smooth-trunked tree' (key_overlap=1, label_overlap=2, context_overlap=4)."
+    ],
+    "continuity_from_previous_shot": "tin_woodman stepping forward",
+    "continuity_to_next_shot": "BT002",
+    "pose_anchor_frame": "characters looking up",
+    "pose_end_frame": "clothes identified",
+    "shot_title": "Authority Single 2: Discovery of clothes in the canopy",
+    "shot_type": "authority_single",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in tall_tree_location featuring dorothy, cowardly_lion, tin_woodman.",
+    "target_seconds": 7.0,
+    "characters_in_frame": [
+      {
+        "label": "Dorothy",
+        "canonical_id": "dorothy",
+        "display_name": "dorothy",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH013/dorothy.md",
+        "notes": "Direct registry match for 'dorothy'."
+      },
+      {
+        "label": "Cowardly Lion",
+        "canonical_id": "cowardly_lion",
+        "display_name": "cowardly_lion",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH013/cowardly_lion.md",
+        "notes": "Direct registry match for 'cowardly_lion'."
+      },
+      {
+        "label": "Tin Woodman",
+        "canonical_id": "tin_woodman",
+        "display_name": "tin_woodman",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH013/tin_woodman.md",
+        "notes": "Direct registry match for 'tin_woodman'."
+      }
+    ],
+    "environment": {
+      "label": "smooth-trunked tree",
+      "canonical_id": "tall_tree_location",
+      "display_name": "tall_tree_location",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 68,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH013/tall_tree_location.md",
+      "notes": "Chapter-local environment alias match for 'smooth-trunked tree' (key_overlap=1, label_overlap=2, context_overlap=4)."
+    },
+    "beat_ids": [
+      "BT001"
+    ],
+    "continuity_constraints": [
+      "Scarecrow's clothes state (empty vs. stuffed)",
+      "Appearance of the new gold-handled axe",
+      "Discovery of clothes in the canopy"
+    ],
+    "prompt_seed": "Authority Single 2: Discovery of clothes in the canopy. authority_single. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Readab...",
+    "shot_notes": "Discovery of clothes in the canopy",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH013_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH013",
+        "scene_id": "CH013_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH013",
+        "scene_id": "CH013_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH013",
+        "scene_id": "CH013_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH013",
+        "scene_id": "CH013_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH013",
+        "scene_id": "CH013_SC003"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH013",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH013_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH005",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH005_chapter_v.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH012",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH012_chapter_xii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH011",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH011_chapter_xi.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH013",
+        "canonical_id": "dorothy"
+      }
+    ],
+    "evidence_summary": [
+      "The search party locates the Scarecrow's discarded clothing high in a smooth-trunked tree. The Tin Woodman uses his new gold-handled axe to fell the tree, allowing the group to retrieve the clothes and restuff them with fresh straw to physically restore the...",
+      "The search party finds the Scarecrow's discarded clothes in a tall tree. Using his new axe, the Tin Woodman chops down the tree. They retrieve the clothes, restuff them with fresh straw, and restore the Scarecrow to life.",
+      "From loss/despair to triumph and joy.",
+      "Characters looking up at empty clothes hanging in a tall tree with expressions of despair.",
+      "The Scarecrow is fully stuffed and standing, surrounded by a joyful group.",
+      "Felling the tree to retrieve clothing and stuffing the straw back into the character.",
+      "dorothy | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md] Costume/Silhouette: Unknown. No specific clothing details are provided in this chapter. [source:C:/FilmCreator/projects/wizard_of_oz/02_...",
+      "cowardly_lion | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH008/cowardly_lion.md] Physical Description: Large animal; too heavy to be carried by the others. [source:C:/FilmCreator/projects/wizard_of_oz/02_s...",
+      "tin_woodman | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH005/tin_woodman.md] Costume/Silhouette: Entirely metallic (tin) body; carries an axe. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis...",
+      "tall_tree_location | Insufficient descriptive data available to establish a visual profile. The location is identified as a specific landmark within the narrative. | Unknown. | Unknown. | Unknown.",
+      "rocky_plain | No specific visual descriptors are provided in the current evidence. The environment functions as a location for transit and discovery. | Unknown. | Unknown. | Unknown."
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "suspense_investigation",
+    "coverage_role": "authority_single",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT001",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "major",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = major"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH013_SC003_SH002_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "69836fda1f03464542ee80910d7f8d9b2fbf35b3",
+      "created_at_utc": "2026-04-27T17:50:56.299149+00:00",
+      "updated_at_utc": "2026-04-27T20:54:53.128150+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH013_SC003",
+          "version": "ccf693732b32d415935dbcae18346dd50cbe6e65"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH013_SC003",
+          "version": "bf6bba8b5867f87bdbc39f3df97ea2ead3800e02"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH013_SC003",
+          "version": "e9e51a68584e12b285b9572123b2fac7de80c58b"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T17:52:08.039744+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "6b8d715d561747254774675f23fdd7cd7996ae4d"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:53:54.790026+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "69836fda1f03464542ee80910d7f8d9b2fbf35b3"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:53.128649+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "69836fda1f03464542ee80910d7f8d9b2fbf35b3"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH003",
+    "scene_id": "CH013_SC003",
+    "chapter_id": "CH013",
+    "shot_order": 3,
+    "previous_shot_id": "SH002",
+    "next_shot_id": "SH004",
+    "primary_subject": "dorothy",
+    "secondary_subjects": [
+      "cowardly_lion",
+      "tin_woodman"
+    ],
+    "shot_moment_summary": "Discovery of clothes in the canopy",
+    "start_state": "characters looking up",
+    "end_state": "clothes identified",
+    "action_during_shot": "Discovery of clothes in the canopy",
+    "action_continues_from": "clothes identified",
+    "action_hands_off_to": "BT002",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "dorothy",
+    "visible_secondary_subject_ids": [
+      "cowardly_lion",
+      "tin_woodman"
+    ],
+    "primary_subject_frame_position": "foreground right within tree_canopy",
+    "primary_subject_scale_relation": "The height of the tall_tree_location relative to the characters.",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "characters looking up",
+    "subject_relation_summary": "dorothy plays against cowardly_lion, tin_woodman in the same frame",
+    "required_environment_anchor_1": "tree_canopy",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "The height of the tall_tree_location relative to the characters.",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "group looking upward in unison",
+      "base of tall_tree_location",
+      "dorothy remains readable within the active playing space.",
+      "cowardly_lion remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the tree_canopy.",
+      "Background depth should keep tall_tree_location legible as the location anchor.",
+      "Subject 1: dorothy remains visually readable against the environment scale.",
+      "Subject 2: cowardly_lion remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "dorothy focuses toward the active scene action."
+    ],
+    "environment_subzone": "tree_canopy",
+    "key_visible_environment_features": [
+      "tree_canopy",
+      "Chapter-local environment alias match for 'smooth-trunked tree' (key_overlap=1, label_overlap=2, context_overlap=4)."
+    ],
+    "continuity_from_previous_shot": "clothes identified",
+    "continuity_to_next_shot": "BT002",
+    "pose_anchor_frame": "characters looking up",
+    "pose_end_frame": "clothes identified",
+    "shot_title": "Petitioner Group 3: Discovery of clothes in the canopy",
+    "shot_type": "petitioner_group",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in tall_tree_location featuring dorothy, cowardly_lion, tin_woodman.",
+    "target_seconds": 7.0,
+    "characters_in_frame": [
+      {
+        "label": "Dorothy",
+        "canonical_id": "dorothy",
+        "display_name": "dorothy",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH013/dorothy.md",
+        "notes": "Direct registry match for 'dorothy'."
+      },
+      {
+        "label": "Cowardly Lion",
+        "canonical_id": "cowardly_lion",
+        "display_name": "cowardly_lion",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH013/cowardly_lion.md",
+        "notes": "Direct registry match for 'cowardly_lion'."
+      },
+      {
+        "label": "Tin Woodman",
+        "canonical_id": "tin_woodman",
+        "display_name": "tin_woodman",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH013/tin_woodman.md",
+        "notes": "Direct registry match for 'tin_woodman'."
+      }
+    ],
+    "environment": {
+      "label": "smooth-trunked tree",
+      "canonical_id": "tall_tree_location",
+      "display_name": "tall_tree_location",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 68,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH013/tall_tree_location.md",
+      "notes": "Chapter-local environment alias match for 'smooth-trunked tree' (key_overlap=1, label_overlap=2, context_overlap=4)."
+    },
+    "beat_ids": [
+      "BT001"
+    ],
+    "continuity_constraints": [
+      "Scarecrow's clothes state (empty vs. stuffed)",
+      "Appearance of the new gold-handled axe",
+      "Discovery of clothes in the canopy"
+    ],
+    "prompt_seed": "Petitioner Group 3: Discovery of clothes in the canopy. petitioner_group. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Readab...",
+    "shot_notes": "Discovery of clothes in the canopy",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH013_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH013",
+        "scene_id": "CH013_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH013",
+        "scene_id": "CH013_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH013",
+        "scene_id": "CH013_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH013",
+        "scene_id": "CH013_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH013",
+        "scene_id": "CH013_SC003"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH013",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH013_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH005",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH005_chapter_v.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH012",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH012_chapter_xii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH011",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH011_chapter_xi.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH013",
+        "canonical_id": "dorothy"
+      }
+    ],
+    "evidence_summary": [
+      "The search party locates the Scarecrow's discarded clothing high in a smooth-trunked tree. The Tin Woodman uses his new gold-handled axe to fell the tree, allowing the group to retrieve the clothes and restuff them with fresh straw to physically restore the...",
+      "The search party finds the Scarecrow's discarded clothes in a tall tree. Using his new axe, the Tin Woodman chops down the tree. They retrieve the clothes, restuff them with fresh straw, and restore the Scarecrow to life.",
+      "From loss/despair to triumph and joy.",
+      "Characters looking up at empty clothes hanging in a tall tree with expressions of despair.",
+      "The Scarecrow is fully stuffed and standing, surrounded by a joyful group.",
+      "Felling the tree to retrieve clothing and stuffing the straw back into the character.",
+      "dorothy | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md] Costume/Silhouette: Unknown. No specific clothing details are provided in this chapter. [source:C:/FilmCreator/projects/wizard_of_oz/02_...",
+      "cowardly_lion | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH008/cowardly_lion.md] Physical Description: Large animal; too heavy to be carried by the others. [source:C:/FilmCreator/projects/wizard_of_oz/02_s...",
+      "tin_woodman | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH005/tin_woodman.md] Costume/Silhouette: Entirely metallic (tin) body; carries an axe. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis...",
+      "tall_tree_location | Insufficient descriptive data available to establish a visual profile. The location is identified as a specific landmark within the narrative. | Unknown. | Unknown. | Unknown.",
+      "rocky_plain | No specific visual descriptors are provided in the current evidence. The environment functions as a location for transit and discovery. | Unknown. | Unknown. | Unknown."
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "suspense_investigation",
+    "coverage_role": "petitioner_group",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT001",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "major",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = major"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH013_SC003_SH003_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "69836fda1f03464542ee80910d7f8d9b2fbf35b3",
+      "created_at_utc": "2026-04-27T17:52:08.041741+00:00",
+      "updated_at_utc": "2026-04-27T20:54:53.134150+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH013_SC003",
+          "version": "ccf693732b32d415935dbcae18346dd50cbe6e65"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH013_SC003",
+          "version": "bf6bba8b5867f87bdbc39f3df97ea2ead3800e02"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH013_SC003",
+          "version": "e9e51a68584e12b285b9572123b2fac7de80c58b"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T17:53:19.792767+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "6b8d715d561747254774675f23fdd7cd7996ae4d"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:53:54.797033+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "69836fda1f03464542ee80910d7f8d9b2fbf35b3"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:53.134651+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "69836fda1f03464542ee80910d7f8d9b2fbf35b3"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH004",
+    "scene_id": "CH013_SC003",
+    "chapter_id": "CH013",
+    "shot_order": 4,
+    "previous_shot_id": "SH003",
+    "next_shot_id": "SH005",
+    "primary_subject": "dorothy",
+    "secondary_subjects": [
+      "cowardly_lion",
+      "tin_woodman"
+    ],
+    "shot_moment_summary": "Discovery of clothes in the canopy",
+    "start_state": "characters looking up",
+    "end_state": "clothes identified",
+    "action_during_shot": "Discovery of clothes in the canopy",
+    "action_continues_from": "clothes identified",
+    "action_hands_off_to": "BT002",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "dorothy",
+    "visible_secondary_subject_ids": [
+      "cowardly_lion",
+      "tin_woodman"
+    ],
+    "primary_subject_frame_position": "foreground right within tree_canopy",
+    "primary_subject_scale_relation": "The height of the tall_tree_location relative to the characters.",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "characters looking up",
+    "subject_relation_summary": "dorothy plays against cowardly_lion, tin_woodman in the same frame",
+    "required_environment_anchor_1": "tree_canopy",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "The height of the tall_tree_location relative to the characters.",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "group looking upward in unison",
+      "base of tall_tree_location",
+      "dorothy remains readable within the active playing space.",
+      "cowardly_lion remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the tree_canopy.",
+      "Background depth should keep tall_tree_location legible as the location anchor.",
+      "Subject 1: dorothy remains visually readable against the environment scale.",
+      "Subject 2: cowardly_lion remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "dorothy focuses toward the active scene action."
+    ],
+    "environment_subzone": "tree_canopy",
+    "key_visible_environment_features": [
+      "tree_canopy",
+      "Chapter-local environment alias match for 'smooth-trunked tree' (key_overlap=1, label_overlap=2, context_overlap=4)."
+    ],
+    "continuity_from_previous_shot": "clothes identified",
+    "continuity_to_next_shot": "BT002",
+    "pose_anchor_frame": "characters looking up",
+    "pose_end_frame": "clothes identified",
+    "shot_title": "Crowd Response 4: Discovery of clothes in the canopy",
+    "shot_type": "crowd_response",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in tall_tree_location featuring dorothy, cowardly_lion, tin_woodman.",
+    "target_seconds": 7.0,
+    "characters_in_frame": [
+      {
+        "label": "Dorothy",
+        "canonical_id": "dorothy",
+        "display_name": "dorothy",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH013/dorothy.md",
+        "notes": "Direct registry match for 'dorothy'."
+      },
+      {
+        "label": "Cowardly Lion",
+        "canonical_id": "cowardly_lion",
+        "display_name": "cowardly_lion",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH013/cowardly_lion.md",
+        "notes": "Direct registry match for 'cowardly_lion'."
+      },
+      {
+        "label": "Tin Woodman",
+        "canonical_id": "tin_woodman",
+        "display_name": "tin_woodman",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH013/tin_woodman.md",
+        "notes": "Direct registry match for 'tin_woodman'."
+      }
+    ],
+    "environment": {
+      "label": "smooth-trunked tree",
+      "canonical_id": "tall_tree_location",
+      "display_name": "tall_tree_location",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 68,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH013/tall_tree_location.md",
+      "notes": "Chapter-local environment alias match for 'smooth-trunked tree' (key_overlap=1, label_overlap=2, context_overlap=4)."
+    },
+    "beat_ids": [
+      "BT001"
+    ],
+    "continuity_constraints": [
+      "Scarecrow's clothes state (empty vs. stuffed)",
+      "Appearance of the new gold-handled axe",
+      "Discovery of clothes in the canopy"
+    ],
+    "prompt_seed": "Crowd Response 4: Discovery of clothes in the canopy. crowd_response. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Readable m...",
+    "shot_notes": "Discovery of clothes in the canopy",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH013_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH013",
+        "scene_id": "CH013_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH013",
+        "scene_id": "CH013_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH013",
+        "scene_id": "CH013_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH013",
+        "scene_id": "CH013_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH013",
+        "scene_id": "CH013_SC003"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH013",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH013_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH005",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH005_chapter_v.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH012",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH012_chapter_xii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH011",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH011_chapter_xi.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH013",
+        "canonical_id": "dorothy"
+      }
+    ],
+    "evidence_summary": [
+      "The search party locates the Scarecrow's discarded clothing high in a smooth-trunked tree. The Tin Woodman uses his new gold-handled axe to fell the tree, allowing the group to retrieve the clothes and restuff them with fresh straw to physically restore the...",
+      "The search party finds the Scarecrow's discarded clothes in a tall tree. Using his new axe, the Tin Woodman chops down the tree. They retrieve the clothes, restuff them with fresh straw, and restore the Scarecrow to life.",
+      "From loss/despair to triumph and joy.",
+      "Characters looking up at empty clothes hanging in a tall tree with expressions of despair.",
+      "The Scarecrow is fully stuffed and standing, surrounded by a joyful group.",
+      "Felling the tree to retrieve clothing and stuffing the straw back into the character.",
+      "dorothy | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md] Costume/Silhouette: Unknown. No specific clothing details are provided in this chapter. [source:C:/FilmCreator/projects/wizard_of_oz/02_...",
+      "cowardly_lion | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH008/cowardly_lion.md] Physical Description: Large animal; too heavy to be carried by the others. [source:C:/FilmCreator/projects/wizard_of_oz/02_s...",
+      "tin_woodman | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH005/tin_woodman.md] Costume/Silhouette: Entirely metallic (tin) body; carries an axe. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis...",
+      "tall_tree_location | Insufficient descriptive data available to establish a visual profile. The location is identified as a specific landmark within the narrative. | Unknown. | Unknown. | Unknown.",
+      "rocky_plain | No specific visual descriptors are provided in the current evidence. The environment functions as a location for transit and discovery. | Unknown. | Unknown. | Unknown."
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "suspense_investigation",
+    "coverage_role": "crowd_response",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT001",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "major",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = major"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH013_SC003_SH004_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "69836fda1f03464542ee80910d7f8d9b2fbf35b3",
+      "created_at_utc": "2026-04-27T20:53:54.798533+00:00",
+      "updated_at_utc": "2026-04-27T20:54:53.140158+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH013_SC003",
+          "version": "ccf693732b32d415935dbcae18346dd50cbe6e65"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH013_SC003",
+          "version": "bf6bba8b5867f87bdbc39f3df97ea2ead3800e02"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH013_SC003",
+          "version": "e9e51a68584e12b285b9572123b2fac7de80c58b"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:53:54.799033+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "69836fda1f03464542ee80910d7f8d9b2fbf35b3"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:53.141158+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "69836fda1f03464542ee80910d7f8d9b2fbf35b3"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH005",
+    "scene_id": "CH013_SC003",
+    "chapter_id": "CH013",
+    "shot_order": 5,
+    "previous_shot_id": "SH004",
+    "next_shot_id": "SH006",
+    "primary_subject": "dorothy",
+    "secondary_subjects": [
+      "cowardly_lion",
+      "tin_woodman"
+    ],
+    "shot_moment_summary": "Discovery of clothes in the canopy",
+    "start_state": "characters looking up",
+    "end_state": "clothes identified",
+    "action_during_shot": "Discovery of clothes in the canopy",
+    "action_continues_from": "clothes identified",
+    "action_hands_off_to": "BT002",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "dorothy",
+    "visible_secondary_subject_ids": [
+      "cowardly_lion",
+      "tin_woodman"
+    ],
+    "primary_subject_frame_position": "foreground right within tree_canopy",
+    "primary_subject_scale_relation": "The height of the tall_tree_location relative to the characters.",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "characters looking up",
+    "subject_relation_summary": "dorothy plays against cowardly_lion, tin_woodman in the same frame",
+    "required_environment_anchor_1": "tree_canopy",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "The height of the tall_tree_location relative to the characters.",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "group looking upward in unison",
+      "base of tall_tree_location",
+      "dorothy remains readable within the active playing space.",
+      "cowardly_lion remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the tree_canopy.",
+      "Background depth should keep tall_tree_location legible as the location anchor.",
+      "Subject 1: dorothy remains visually readable against the environment scale.",
+      "Subject 2: cowardly_lion remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "dorothy focuses toward the active scene action."
+    ],
+    "environment_subzone": "tree_canopy",
+    "key_visible_environment_features": [
+      "tree_canopy",
+      "Chapter-local environment alias match for 'smooth-trunked tree' (key_overlap=1, label_overlap=2, context_overlap=4)."
+    ],
+    "continuity_from_previous_shot": "clothes identified",
+    "continuity_to_next_shot": "BT002",
+    "pose_anchor_frame": "characters looking up",
+    "pose_end_frame": "clothes identified",
+    "shot_title": "Symbol Insert 5: Discovery of clothes in the canopy",
+    "shot_type": "symbol_insert",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in tall_tree_location featuring dorothy, cowardly_lion, tin_woodman.",
+    "target_seconds": 5.4,
+    "characters_in_frame": [
+      {
+        "label": "Dorothy",
+        "canonical_id": "dorothy",
+        "display_name": "dorothy",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH013/dorothy.md",
+        "notes": "Direct registry match for 'dorothy'."
+      },
+      {
+        "label": "Cowardly Lion",
+        "canonical_id": "cowardly_lion",
+        "display_name": "cowardly_lion",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH013/cowardly_lion.md",
+        "notes": "Direct registry match for 'cowardly_lion'."
+      },
+      {
+        "label": "Tin Woodman",
+        "canonical_id": "tin_woodman",
+        "display_name": "tin_woodman",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH013/tin_woodman.md",
+        "notes": "Direct registry match for 'tin_woodman'."
+      }
+    ],
+    "environment": {
+      "label": "smooth-trunked tree",
+      "canonical_id": "tall_tree_location",
+      "display_name": "tall_tree_location",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 68,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH013/tall_tree_location.md",
+      "notes": "Chapter-local environment alias match for 'smooth-trunked tree' (key_overlap=1, label_overlap=2, context_overlap=4)."
+    },
+    "beat_ids": [
+      "BT001"
+    ],
+    "continuity_constraints": [
+      "Scarecrow's clothes state (empty vs. stuffed)",
+      "Appearance of the new gold-handled axe",
+      "Discovery of clothes in the canopy"
+    ],
+    "prompt_seed": "Symbol Insert 5: Discovery of clothes in the canopy. symbol_insert. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Readable med...",
+    "shot_notes": "Discovery of clothes in the canopy",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH013_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH013",
+        "scene_id": "CH013_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH013",
+        "scene_id": "CH013_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH013",
+        "scene_id": "CH013_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH013",
+        "scene_id": "CH013_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH013",
+        "scene_id": "CH013_SC003"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH013",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH013_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH005",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH005_chapter_v.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH012",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH012_chapter_xii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH011",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH011_chapter_xi.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH013",
+        "canonical_id": "dorothy"
+      }
+    ],
+    "evidence_summary": [
+      "The search party locates the Scarecrow's discarded clothing high in a smooth-trunked tree. The Tin Woodman uses his new gold-handled axe to fell the tree, allowing the group to retrieve the clothes and restuff them with fresh straw to physically restore the...",
+      "The search party finds the Scarecrow's discarded clothes in a tall tree. Using his new axe, the Tin Woodman chops down the tree. They retrieve the clothes, restuff them with fresh straw, and restore the Scarecrow to life.",
+      "From loss/despair to triumph and joy.",
+      "Characters looking up at empty clothes hanging in a tall tree with expressions of despair.",
+      "The Scarecrow is fully stuffed and standing, surrounded by a joyful group.",
+      "Felling the tree to retrieve clothing and stuffing the straw back into the character.",
+      "dorothy | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md] Costume/Silhouette: Unknown. No specific clothing details are provided in this chapter. [source:C:/FilmCreator/projects/wizard_of_oz/02_...",
+      "cowardly_lion | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH008/cowardly_lion.md] Physical Description: Large animal; too heavy to be carried by the others. [source:C:/FilmCreator/projects/wizard_of_oz/02_s...",
+      "tin_woodman | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH005/tin_woodman.md] Costume/Silhouette: Entirely metallic (tin) body; carries an axe. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis...",
+      "tall_tree_location | Insufficient descriptive data available to establish a visual profile. The location is identified as a specific landmark within the narrative. | Unknown. | Unknown. | Unknown.",
+      "rocky_plain | No specific visual descriptors are provided in the current evidence. The environment functions as a location for transit and discovery. | Unknown. | Unknown. | Unknown."
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "suspense_investigation",
+    "coverage_role": "symbol_insert",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT001",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "major",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = major"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH013_SC003_SH005_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "69836fda1f03464542ee80910d7f8d9b2fbf35b3",
+      "created_at_utc": "2026-04-27T20:53:54.800036+00:00",
+      "updated_at_utc": "2026-04-27T20:54:53.146166+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH013_SC003",
+          "version": "ccf693732b32d415935dbcae18346dd50cbe6e65"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH013_SC003",
+          "version": "bf6bba8b5867f87bdbc39f3df97ea2ead3800e02"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH013_SC003",
+          "version": "e9e51a68584e12b285b9572123b2fac7de80c58b"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:53:54.800536+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "69836fda1f03464542ee80910d7f8d9b2fbf35b3"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:53.146667+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "69836fda1f03464542ee80910d7f8d9b2fbf35b3"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH006",
+    "scene_id": "CH013_SC003",
+    "chapter_id": "CH013",
+    "shot_order": 6,
+    "previous_shot_id": "SH005",
+    "next_shot_id": "SH007",
+    "primary_subject": "dorothy",
+    "secondary_subjects": [
+      "cowardly_lion"
+    ],
+    "shot_moment_summary": "Discovery of clothes in the canopy",
+    "start_state": "characters looking up",
+    "end_state": "clothes identified",
+    "action_during_shot": "Discovery of clothes in the canopy",
+    "action_continues_from": "clothes identified",
+    "action_hands_off_to": "BT002",
+    "shot_size": "close_up",
+    "camera_angle": "eye_level",
+    "lens_family": "portrait",
+    "camera_motion": "push_in",
+    "zoom_behavior": "subtle_in",
+    "focus_strategy": "shallow_subject",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "dorothy",
+    "visible_secondary_subject_ids": [
+      "cowardly_lion"
+    ],
+    "primary_subject_frame_position": "foreground inside tree_canopy",
+    "primary_subject_scale_relation": "The height of the tall_tree_location relative to the characters.",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "characters looking up",
+    "subject_relation_summary": "dorothy plays against cowardly_lion in the same frame",
+    "required_environment_anchor_1": "tree_canopy",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "The height of the tall_tree_location relative to the characters.",
+    "camera_package_description": "close-up, eye level, portrait lens, push in, zoom subtle in, shallow subject, hard directional",
+    "subject_blocking": [
+      "group looking upward in unison",
+      "base of tall_tree_location",
+      "dorothy remains readable within the active playing space.",
+      "cowardly_lion remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the tree_canopy.",
+      "Background depth should keep tall_tree_location legible as the location anchor.",
+      "Subject 1: dorothy remains visually readable against the environment scale.",
+      "Subject 2: cowardly_lion remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "dorothy focuses toward the active scene action."
+    ],
+    "environment_subzone": "tree_canopy",
+    "key_visible_environment_features": [
+      "tree_canopy",
+      "Chapter-local environment alias match for 'smooth-trunked tree' (key_overlap=1, label_overlap=2, context_overlap=4)."
+    ],
+    "continuity_from_previous_shot": "clothes identified",
+    "continuity_to_next_shot": "BT002",
+    "pose_anchor_frame": "characters looking up",
+    "pose_end_frame": "clothes identified",
+    "shot_title": "Reaction Closeup 6: Discovery of clothes in the canopy",
+    "shot_type": "reaction_closeup",
+    "camera_description": "Close framing that isolates reaction and emotional emphasis.",
+    "composition": "Intimate composition that isolates dorothy, cowardly_lion against tall_tree_location to capture the beat's emotional turn.",
+    "target_seconds": 7.0,
+    "characters_in_frame": [
+      {
+        "label": "Dorothy",
+        "canonical_id": "dorothy",
+        "display_name": "dorothy",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH013/dorothy.md",
+        "notes": "Direct registry match for 'dorothy'."
+      },
+      {
+        "label": "Cowardly Lion",
+        "canonical_id": "cowardly_lion",
+        "display_name": "cowardly_lion",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH013/cowardly_lion.md",
+        "notes": "Direct registry match for 'cowardly_lion'."
+      }
+    ],
+    "environment": {
+      "label": "smooth-trunked tree",
+      "canonical_id": "tall_tree_location",
+      "display_name": "tall_tree_location",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 68,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH013/tall_tree_location.md",
+      "notes": "Chapter-local environment alias match for 'smooth-trunked tree' (key_overlap=1, label_overlap=2, context_overlap=4)."
+    },
+    "beat_ids": [
+      "BT001"
+    ],
+    "continuity_constraints": [
+      "Scarecrow's clothes state (empty vs. stuffed)",
+      "Appearance of the new gold-handled axe",
+      "Discovery of clothes in the canopy"
+    ],
+    "prompt_seed": "Reaction Closeup 6: Discovery of clothes in the canopy. reaction_closeup. size=close_up. angle=eye_level. lens=portrait. motion=push_in. zoom=subtle_in. focus=shallow_subject. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Close framing that isolates reaction and emotional e...",
+    "shot_notes": "Discovery of clothes in the canopy",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH013_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH013",
+        "scene_id": "CH013_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH013",
+        "scene_id": "CH013_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH013",
+        "scene_id": "CH013_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH013",
+        "scene_id": "CH013_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH013",
+        "scene_id": "CH013_SC003"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH013",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH013_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH005",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH005_chapter_v.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH012",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH012_chapter_xii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH011",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH011_chapter_xi.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH013",
+        "canonical_id": "dorothy"
+      }
+    ],
+    "evidence_summary": [
+      "The search party locates the Scarecrow's discarded clothing high in a smooth-trunked tree. The Tin Woodman uses his new gold-handled axe to fell the tree, allowing the group to retrieve the clothes and restuff them with fresh straw to physically restore the...",
+      "The search party finds the Scarecrow's discarded clothes in a tall tree. Using his new axe, the Tin Woodman chops down the tree. They retrieve the clothes, restuff them with fresh straw, and restore the Scarecrow to life.",
+      "From loss/despair to triumph and joy.",
+      "Characters looking up at empty clothes hanging in a tall tree with expressions of despair.",
+      "The Scarecrow is fully stuffed and standing, surrounded by a joyful group.",
+      "Felling the tree to retrieve clothing and stuffing the straw back into the character.",
+      "dorothy | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md] Costume/Silhouette: Unknown. No specific clothing details are provided in this chapter. [source:C:/FilmCreator/projects/wizard_of_oz/02_...",
+      "cowardly_lion | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH008/cowardly_lion.md] Physical Description: Large animal; too heavy to be carried by the others. [source:C:/FilmCreator/projects/wizard_of_oz/02_s...",
+      "tin_woodman | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH005/tin_woodman.md] Costume/Silhouette: Entirely metallic (tin) body; carries an axe. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis...",
+      "tall_tree_location | Insufficient descriptive data available to establish a visual profile. The location is identified as a specific landmark within the narrative. | Unknown. | Unknown. | Unknown.",
+      "rocky_plain | No specific visual descriptors are provided in the current evidence. The environment functions as a location for transit and discovery. | Unknown. | Unknown. | Unknown."
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "suspense_investigation",
+    "coverage_role": "decision_closeup",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT001",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "major",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = major"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH013_SC003_SH006_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "69836fda1f03464542ee80910d7f8d9b2fbf35b3",
+      "created_at_utc": "2026-04-27T20:53:54.801534+00:00",
+      "updated_at_utc": "2026-04-27T20:54:53.152166+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH013_SC003",
+          "version": "ccf693732b32d415935dbcae18346dd50cbe6e65"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH013_SC003",
+          "version": "bf6bba8b5867f87bdbc39f3df97ea2ead3800e02"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH013_SC003",
+          "version": "e9e51a68584e12b285b9572123b2fac7de80c58b"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:53:54.802033+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "69836fda1f03464542ee80910d7f8d9b2fbf35b3"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:53.153169+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "69836fda1f03464542ee80910d7f8d9b2fbf35b3"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH007",
+    "scene_id": "CH013_SC003",
+    "chapter_id": "CH013",
+    "shot_order": 7,
+    "previous_shot_id": "SH006",
+    "next_shot_id": "SH008",
+    "primary_subject": "dorothy",
+    "secondary_subjects": [
+      "cowardly_lion",
+      "tin_woodman"
+    ],
+    "shot_moment_summary": "Discovery of clothes in the canopy",
+    "start_state": "characters looking up",
+    "end_state": "clothes identified",
+    "action_during_shot": "Discovery of clothes in the canopy",
+    "action_continues_from": "clothes identified",
+    "action_hands_off_to": "BT002",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "dorothy",
+    "visible_secondary_subject_ids": [
+      "cowardly_lion",
+      "tin_woodman"
+    ],
+    "primary_subject_frame_position": "foreground right within tree_canopy",
+    "primary_subject_scale_relation": "The height of the tall_tree_location relative to the characters.",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "characters looking up",
+    "subject_relation_summary": "dorothy plays against cowardly_lion, tin_woodman in the same frame",
+    "required_environment_anchor_1": "tree_canopy",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "The height of the tall_tree_location relative to the characters.",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "group looking upward in unison",
+      "base of tall_tree_location",
+      "dorothy remains readable within the active playing space.",
+      "cowardly_lion remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the tree_canopy.",
+      "Background depth should keep tall_tree_location legible as the location anchor.",
+      "Subject 1: dorothy remains visually readable against the environment scale.",
+      "Subject 2: cowardly_lion remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "dorothy focuses toward the active scene action."
+    ],
+    "environment_subzone": "tree_canopy",
+    "key_visible_environment_features": [
+      "tree_canopy",
+      "Chapter-local environment alias match for 'smooth-trunked tree' (key_overlap=1, label_overlap=2, context_overlap=4)."
+    ],
+    "continuity_from_previous_shot": "clothes identified",
+    "continuity_to_next_shot": "BT002",
+    "pose_anchor_frame": "characters looking up",
+    "pose_end_frame": "clothes identified",
+    "shot_title": "Scale Proof Wide 7: Discovery of clothes in the canopy",
+    "shot_type": "scale_proof_wide",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in tall_tree_location featuring dorothy, cowardly_lion, tin_woodman.",
+    "target_seconds": 10.8,
+    "characters_in_frame": [
+      {
+        "label": "Dorothy",
+        "canonical_id": "dorothy",
+        "display_name": "dorothy",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH013/dorothy.md",
+        "notes": "Direct registry match for 'dorothy'."
+      },
+      {
+        "label": "Cowardly Lion",
+        "canonical_id": "cowardly_lion",
+        "display_name": "cowardly_lion",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH013/cowardly_lion.md",
+        "notes": "Direct registry match for 'cowardly_lion'."
+      },
+      {
+        "label": "Tin Woodman",
+        "canonical_id": "tin_woodman",
+        "display_name": "tin_woodman",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH013/tin_woodman.md",
+        "notes": "Direct registry match for 'tin_woodman'."
+      }
+    ],
+    "environment": {
+      "label": "smooth-trunked tree",
+      "canonical_id": "tall_tree_location",
+      "display_name": "tall_tree_location",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 68,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH013/tall_tree_location.md",
+      "notes": "Chapter-local environment alias match for 'smooth-trunked tree' (key_overlap=1, label_overlap=2, context_overlap=4)."
+    },
+    "beat_ids": [
+      "BT001"
+    ],
+    "continuity_constraints": [
+      "Scarecrow's clothes state (empty vs. stuffed)",
+      "Appearance of the new gold-handled axe",
+      "Discovery of clothes in the canopy"
+    ],
+    "prompt_seed": "Scale Proof Wide 7: Discovery of clothes in the canopy. scale_proof_wide. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Readab...",
+    "shot_notes": "Discovery of clothes in the canopy",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH013_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH013",
+        "scene_id": "CH013_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH013",
+        "scene_id": "CH013_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH013",
+        "scene_id": "CH013_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH013",
+        "scene_id": "CH013_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH013",
+        "scene_id": "CH013_SC003"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH013",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH013_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH005",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH005_chapter_v.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH012",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH012_chapter_xii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH011",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH011_chapter_xi.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH013",
+        "canonical_id": "dorothy"
+      }
+    ],
+    "evidence_summary": [
+      "The search party locates the Scarecrow's discarded clothing high in a smooth-trunked tree. The Tin Woodman uses his new gold-handled axe to fell the tree, allowing the group to retrieve the clothes and restuff them with fresh straw to physically restore the...",
+      "The search party finds the Scarecrow's discarded clothes in a tall tree. Using his new axe, the Tin Woodman chops down the tree. They retrieve the clothes, restuff them with fresh straw, and restore the Scarecrow to life.",
+      "From loss/despair to triumph and joy.",
+      "Characters looking up at empty clothes hanging in a tall tree with expressions of despair.",
+      "The Scarecrow is fully stuffed and standing, surrounded by a joyful group.",
+      "Felling the tree to retrieve clothing and stuffing the straw back into the character.",
+      "dorothy | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md] Costume/Silhouette: Unknown. No specific clothing details are provided in this chapter. [source:C:/FilmCreator/projects/wizard_of_oz/02_...",
+      "cowardly_lion | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH008/cowardly_lion.md] Physical Description: Large animal; too heavy to be carried by the others. [source:C:/FilmCreator/projects/wizard_of_oz/02_s...",
+      "tin_woodman | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH005/tin_woodman.md] Costume/Silhouette: Entirely metallic (tin) body; carries an axe. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis...",
+      "tall_tree_location | Insufficient descriptive data available to establish a visual profile. The location is identified as a specific landmark within the narrative. | Unknown. | Unknown. | Unknown.",
+      "rocky_plain | No specific visual descriptors are provided in the current evidence. The environment functions as a location for transit and discovery. | Unknown. | Unknown. | Unknown."
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "suspense_investigation",
+    "coverage_role": "scale_proof_wide",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT001",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "major",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = major"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH013_SC003_SH007_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "69836fda1f03464542ee80910d7f8d9b2fbf35b3",
+      "created_at_utc": "2026-04-27T20:53:54.802533+00:00",
+      "updated_at_utc": "2026-04-27T20:54:53.158176+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH013_SC003",
+          "version": "ccf693732b32d415935dbcae18346dd50cbe6e65"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH013_SC003",
+          "version": "bf6bba8b5867f87bdbc39f3df97ea2ead3800e02"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH013_SC003",
+          "version": "e9e51a68584e12b285b9572123b2fac7de80c58b"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:53:54.803535+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "69836fda1f03464542ee80910d7f8d9b2fbf35b3"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:53.158676+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "69836fda1f03464542ee80910d7f8d9b2fbf35b3"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH008",
+    "scene_id": "CH013_SC003",
+    "chapter_id": "CH013",
+    "shot_order": 8,
+    "previous_shot_id": "SH007",
+    "next_shot_id": "SH009",
     "primary_subject": "tin_woodman",
     "secondary_subjects": [
       "dorothy",
@@ -243,7 +1769,7 @@
     "start_state": "axe raised",
     "end_state": "tree falling",
     "action_during_shot": "chopping the tree",
-    "action_continues_from": "tin_woodman stepping forward",
+    "action_continues_from": "clothes identified",
     "action_hands_off_to": "BT003",
     "shot_size": "medium_full",
     "camera_angle": "eye_level",
@@ -289,17 +1815,17 @@
     "environment_subzone": "tree_base",
     "key_visible_environment_features": [
       "tree_base",
-      "smooth-trunked tree"
+      "Chapter-local environment alias match for 'smooth-trunked tree' (key_overlap=1, label_overlap=2, context_overlap=4)."
     ],
-    "continuity_from_previous_shot": "tin_woodman stepping forward",
+    "continuity_from_previous_shot": "clothes identified",
     "continuity_to_next_shot": "BT003",
     "pose_anchor_frame": "axe raised",
     "pose_end_frame": "tree falling",
-    "shot_title": "Action 2: Felling the tree",
-    "shot_type": "action",
-    "camera_description": "Active camera with tracking energy and clear spatial orientation.",
-    "composition": "Dynamic composition in tall_tree_location with clear pursuit vectors and readable movement for tin_woodman, dorothy, cowardly_lion.",
-    "target_seconds": 5.8,
+    "shot_title": "Handoff Medium 8: Felling the tree",
+    "shot_type": "handoff_medium",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in tall_tree_location featuring tin_woodman, dorothy, cowardly_lion.",
+    "target_seconds": 7.0,
     "characters_in_frame": [
       {
         "label": "Tin Woodman",
@@ -350,7 +1876,7 @@
       "Appearance of the new gold-handled axe",
       "Felling the tree"
     ],
-    "prompt_seed": "Action 2: Felling the tree. action. size=medium_full. angle=eye_level. lens=normal. motion=handheld. zoom=none. focus=shallow_subject. lighting=hard_directional. visibility=on_screen. subject_angle=profile_right. Active camera with tracking energy and clear spatial orientation. Dynamic composition in tall_tree_locat...",
+    "prompt_seed": "Handoff Medium 8: Felling the tree. handoff_medium. size=medium_full. angle=eye_level. lens=normal. motion=handheld. zoom=none. focus=shallow_subject. lighting=hard_directional. visibility=on_screen. subject_angle=profile_right. Stable readable framing built from the beat requirement. Readable medium composition in...",
     "shot_notes": "Felling the tree",
     "evidence_refs": [
       {
@@ -421,13 +1947,29 @@
       "tall_tree_location | Insufficient descriptive data available to establish a visual profile. The location is identified as a specific landmark within the narrative. | Unknown. | Unknown. | Unknown.",
       "rocky_plain | No specific visual descriptors are provided in the current evidence. The environment functions as a location for transit and discovery. | Unknown. | Unknown. | Unknown."
     ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "suspense_investigation",
+    "coverage_role": "handoff_medium",
+    "beat_type": "transition_handoff",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT002",
+      "beat_type": "transition_handoff",
+      "importance": "major",
+      "confidence": 0.55,
+      "reasons": [
+        "importance = major"
+      ]
+    },
     "metadata": {
-      "artifact_id": "CH013_SC003_SH002_SHOT_PACKAGE",
+      "artifact_id": "CH013_SC003_SH008_SHOT_PACKAGE",
       "artifact_type": "shot_package",
       "status": "generated",
-      "source_fingerprint": "6b8d715d561747254774675f23fdd7cd7996ae4d",
-      "created_at_utc": "2026-04-27T17:50:56.299149+00:00",
-      "updated_at_utc": "2026-04-27T17:50:56.299149+00:00",
+      "source_fingerprint": "69836fda1f03464542ee80910d7f8d9b2fbf35b3",
+      "created_at_utc": "2026-04-27T20:53:54.805044+00:00",
+      "updated_at_utc": "2026-04-27T20:54:53.164176+00:00",
       "upstream_dependencies": [
         {
           "dependency_type": "scene_contract",
@@ -442,27 +1984,281 @@
         {
           "dependency_type": "shot_blueprints",
           "dependency_id": "CH013_SC003",
-          "version": "16e578da5a83287e06755214d7b361dcc6b11ec7"
+          "version": "e9e51a68584e12b285b9572123b2fac7de80c58b"
         }
       ],
       "locked_fields": {},
       "manual_overrides": {},
       "revision_history": [
         {
-          "timestamp_utc": "2026-04-27T17:52:08.039744+00:00",
+          "timestamp_utc": "2026-04-27T20:53:54.805543+00:00",
           "action": "synthesized",
-          "source_fingerprint": "6b8d715d561747254774675f23fdd7cd7996ae4d"
+          "source_fingerprint": "69836fda1f03464542ee80910d7f8d9b2fbf35b3"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:53.164677+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "69836fda1f03464542ee80910d7f8d9b2fbf35b3"
         }
       ]
     }
   },
   {
-    "shot_id": "SH003",
+    "shot_id": "SH009",
     "scene_id": "CH013_SC003",
     "chapter_id": "CH013",
-    "shot_order": 3,
-    "previous_shot_id": "SH002",
-    "next_shot_id": "",
+    "shot_order": 9,
+    "previous_shot_id": "SH008",
+    "next_shot_id": "SH010",
+    "primary_subject": "tin_woodman",
+    "secondary_subjects": [
+      "dorothy",
+      "cowardly_lion"
+    ],
+    "shot_moment_summary": "Felling the tree",
+    "start_state": "tin_woodman raises axe",
+    "end_state": "tree hits ground",
+    "action_during_shot": "Felling the tree",
+    "action_continues_from": "tree falling",
+    "action_hands_off_to": "BT003",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "tin_woodman",
+    "visible_secondary_subject_ids": [
+      "dorothy",
+      "cowardly_lion"
+    ],
+    "primary_subject_frame_position": "foreground right within tree_base",
+    "primary_subject_scale_relation": "The height of the tall_tree_location relative to the characters.",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "tin_woodman raises axe",
+    "subject_relation_summary": "tin_woodman plays against dorothy, cowardly_lion in the same frame",
+    "required_environment_anchor_1": "tree_base",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "The height of the tall_tree_location relative to the characters.",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "tin_woodman centered at trunk",
+      "base of tall_tree_location",
+      "tin_woodman remains readable within the active playing space.",
+      "dorothy remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the tree_base.",
+      "Background depth should keep tall_tree_location legible as the location anchor.",
+      "Subject 1: tin_woodman remains visually readable against the environment scale.",
+      "Subject 2: dorothy remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "tin_woodman focuses toward the active scene action."
+    ],
+    "environment_subzone": "tree_base",
+    "key_visible_environment_features": [
+      "tree_base",
+      "Chapter-local environment alias match for 'smooth-trunked tree' (key_overlap=1, label_overlap=2, context_overlap=4)."
+    ],
+    "continuity_from_previous_shot": "tree falling",
+    "continuity_to_next_shot": "BT003",
+    "pose_anchor_frame": "tin_woodman raises axe",
+    "pose_end_frame": "tree hits ground",
+    "shot_title": "Transition Wide 9: Felling the tree",
+    "shot_type": "transition_wide",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in tall_tree_location featuring tin_woodman, dorothy, cowardly_lion.",
+    "target_seconds": 10.8,
+    "characters_in_frame": [
+      {
+        "label": "Tin Woodman",
+        "canonical_id": "tin_woodman",
+        "display_name": "tin_woodman",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH013/tin_woodman.md",
+        "notes": "Direct registry match for 'tin_woodman'."
+      },
+      {
+        "label": "Dorothy",
+        "canonical_id": "dorothy",
+        "display_name": "dorothy",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH013/dorothy.md",
+        "notes": "Direct registry match for 'dorothy'."
+      },
+      {
+        "label": "Cowardly Lion",
+        "canonical_id": "cowardly_lion",
+        "display_name": "cowardly_lion",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH013/cowardly_lion.md",
+        "notes": "Direct registry match for 'cowardly_lion'."
+      }
+    ],
+    "environment": {
+      "label": "smooth-trunked tree",
+      "canonical_id": "tall_tree_location",
+      "display_name": "tall_tree_location",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 68,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH013/tall_tree_location.md",
+      "notes": "Chapter-local environment alias match for 'smooth-trunked tree' (key_overlap=1, label_overlap=2, context_overlap=4)."
+    },
+    "beat_ids": [
+      "BT002"
+    ],
+    "continuity_constraints": [
+      "Scarecrow's clothes state (empty vs. stuffed)",
+      "Appearance of the new gold-handled axe",
+      "Felling the tree"
+    ],
+    "prompt_seed": "Transition Wide 9: Felling the tree. transition_wide. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Readable medium compositio...",
+    "shot_notes": "Felling the tree",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH013_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH013",
+        "scene_id": "CH013_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH013",
+        "scene_id": "CH013_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH013",
+        "scene_id": "CH013_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH013",
+        "scene_id": "CH013_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH013",
+        "scene_id": "CH013_SC003"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH013",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH013_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH005",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH005_chapter_v.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH012",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH012_chapter_xii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH011",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH011_chapter_xi.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH013",
+        "canonical_id": "dorothy"
+      }
+    ],
+    "evidence_summary": [
+      "The search party locates the Scarecrow's discarded clothing high in a smooth-trunked tree. The Tin Woodman uses his new gold-handled axe to fell the tree, allowing the group to retrieve the clothes and restuff them with fresh straw to physically restore the...",
+      "The search party finds the Scarecrow's discarded clothes in a tall tree. Using his new axe, the Tin Woodman chops down the tree. They retrieve the clothes, restuff them with fresh straw, and restore the Scarecrow to life.",
+      "From loss/despair to triumph and joy.",
+      "Characters looking up at empty clothes hanging in a tall tree with expressions of despair.",
+      "The Scarecrow is fully stuffed and standing, surrounded by a joyful group.",
+      "Felling the tree to retrieve clothing and stuffing the straw back into the character.",
+      "dorothy | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md] Costume/Silhouette: Unknown. No specific clothing details are provided in this chapter. [source:C:/FilmCreator/projects/wizard_of_oz/02_...",
+      "cowardly_lion | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH008/cowardly_lion.md] Physical Description: Large animal; too heavy to be carried by the others. [source:C:/FilmCreator/projects/wizard_of_oz/02_s...",
+      "tin_woodman | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH005/tin_woodman.md] Costume/Silhouette: Entirely metallic (tin) body; carries an axe. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis...",
+      "tall_tree_location | Insufficient descriptive data available to establish a visual profile. The location is identified as a specific landmark within the narrative. | Unknown. | Unknown. | Unknown.",
+      "rocky_plain | No specific visual descriptors are provided in the current evidence. The environment functions as a location for transit and discovery. | Unknown. | Unknown. | Unknown."
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "suspense_investigation",
+    "coverage_role": "transition_wide",
+    "beat_type": "transition_handoff",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT002",
+      "beat_type": "transition_handoff",
+      "importance": "major",
+      "confidence": 0.55,
+      "reasons": [
+        "importance = major"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH013_SC003_SH009_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "69836fda1f03464542ee80910d7f8d9b2fbf35b3",
+      "created_at_utc": "2026-04-27T20:53:54.807044+00:00",
+      "updated_at_utc": "2026-04-27T20:54:53.170178+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH013_SC003",
+          "version": "ccf693732b32d415935dbcae18346dd50cbe6e65"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH013_SC003",
+          "version": "bf6bba8b5867f87bdbc39f3df97ea2ead3800e02"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH013_SC003",
+          "version": "e9e51a68584e12b285b9572123b2fac7de80c58b"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:53:54.807543+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "69836fda1f03464542ee80910d7f8d9b2fbf35b3"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:53.170681+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "69836fda1f03464542ee80910d7f8d9b2fbf35b3"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH010",
+    "scene_id": "CH013_SC003",
+    "chapter_id": "CH013",
+    "shot_order": 10,
+    "previous_shot_id": "SH009",
+    "next_shot_id": "SH011",
     "primary_subject": "the_scarecrow",
     "secondary_subjects": [
       "dorothy"
@@ -471,7 +2267,7 @@
     "start_state": "empty clothes on ground",
     "end_state": "stuffed scarecrow standing",
     "action_during_shot": "stuffing straw into clothes",
-    "action_continues_from": "tree falling",
+    "action_continues_from": "tree hits ground",
     "action_hands_off_to": "none",
     "shot_size": "close_up",
     "camera_angle": "eye_level",
@@ -515,17 +2311,18 @@
     ],
     "environment_subzone": "rocky_plain_floor",
     "key_visible_environment_features": [
-      "rocky_plain_floor"
+      "rocky_plain_floor",
+      "Chapter-local environment alias match for 'A rocky plain featuring a tall' (key_overlap=2, label_overlap=2, context_o..."
     ],
-    "continuity_from_previous_shot": "tree falling",
+    "continuity_from_previous_shot": "tree hits ground",
     "continuity_to_next_shot": "none",
     "pose_anchor_frame": "empty clothes on ground",
     "pose_end_frame": "stuffed scarecrow standing",
-    "shot_title": "Reaction Closeup 3: Physical restoration",
-    "shot_type": "reaction_closeup",
-    "camera_description": "Close framing that isolates reaction and emotional emphasis.",
-    "composition": "Intimate composition that isolates the_scarecrow, dorothy against rocky_plain to capture the beat's emotional turn.",
-    "target_seconds": 5.1,
+    "shot_title": "Handoff Medium 10: Physical restoration",
+    "shot_type": "handoff_medium",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in rocky_plain featuring the_scarecrow, dorothy.",
+    "target_seconds": 6.0,
     "characters_in_frame": [
       {
         "label": "Scarecrow",
@@ -566,7 +2363,7 @@
       "Appearance of the new gold-handled axe",
       "Physical restoration"
     ],
-    "prompt_seed": "Reaction Closeup 3: Physical restoration. reaction_closeup. size=close_up. angle=eye_level. lens=portrait. motion=locked_off. zoom=none. focus=shallow_subject. lighting=soft_even. visibility=on_screen. subject_angle=front. Close framing that isolates reaction and emotional emphasis. Intimate composition that isolate...",
+    "prompt_seed": "Handoff Medium 10: Physical restoration. handoff_medium. size=close_up. angle=eye_level. lens=portrait. motion=locked_off. zoom=none. focus=shallow_subject. lighting=soft_even. visibility=on_screen. subject_angle=front. Stable readable framing built from the beat requirement. Readable medium composition in rocky_pla...",
     "shot_notes": "Physical restoration",
     "evidence_refs": [
       {
@@ -637,13 +2434,29 @@
       "tall_tree_location | Insufficient descriptive data available to establish a visual profile. The location is identified as a specific landmark within the narrative. | Unknown. | Unknown. | Unknown.",
       "rocky_plain | No specific visual descriptors are provided in the current evidence. The environment functions as a location for transit and discovery. | Unknown. | Unknown. | Unknown."
     ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "suspense_investigation",
+    "coverage_role": "handoff_medium",
+    "beat_type": "transition_handoff",
+    "coverage_importance": "minor",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT003",
+      "beat_type": "transition_handoff",
+      "importance": "minor",
+      "confidence": 0.55,
+      "reasons": [
+        "importance = minor"
+      ]
+    },
     "metadata": {
-      "artifact_id": "CH013_SC003_SH003_SHOT_PACKAGE",
+      "artifact_id": "CH013_SC003_SH010_SHOT_PACKAGE",
       "artifact_type": "shot_package",
       "status": "generated",
-      "source_fingerprint": "6b8d715d561747254774675f23fdd7cd7996ae4d",
-      "created_at_utc": "2026-04-27T17:52:08.041741+00:00",
-      "updated_at_utc": "2026-04-27T17:52:08.041741+00:00",
+      "source_fingerprint": "69836fda1f03464542ee80910d7f8d9b2fbf35b3",
+      "created_at_utc": "2026-04-27T20:53:54.809045+00:00",
+      "updated_at_utc": "2026-04-27T20:54:53.176684+00:00",
       "upstream_dependencies": [
         {
           "dependency_type": "scene_contract",
@@ -658,16 +2471,270 @@
         {
           "dependency_type": "shot_blueprints",
           "dependency_id": "CH013_SC003",
-          "version": "16e578da5a83287e06755214d7b361dcc6b11ec7"
+          "version": "e9e51a68584e12b285b9572123b2fac7de80c58b"
         }
       ],
       "locked_fields": {},
       "manual_overrides": {},
       "revision_history": [
         {
-          "timestamp_utc": "2026-04-27T17:53:19.792767+00:00",
+          "timestamp_utc": "2026-04-27T20:53:54.809543+00:00",
           "action": "synthesized",
-          "source_fingerprint": "6b8d715d561747254774675f23fdd7cd7996ae4d"
+          "source_fingerprint": "69836fda1f03464542ee80910d7f8d9b2fbf35b3"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:53.177184+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "69836fda1f03464542ee80910d7f8d9b2fbf35b3"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH011",
+    "scene_id": "CH013_SC003",
+    "chapter_id": "CH013",
+    "shot_order": 11,
+    "previous_shot_id": "SH010",
+    "next_shot_id": "",
+    "primary_subject": "dorothy",
+    "secondary_subjects": [
+      "tin_woodman",
+      "Winkies"
+    ],
+    "shot_moment_summary": "Physical restoration",
+    "start_state": "clothes laid on ground",
+    "end_state": "the_scarecrow is standing and stuffed",
+    "action_during_shot": "Physical restoration",
+    "action_continues_from": "stuffed scarecrow standing",
+    "action_hands_off_to": "none",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "dorothy",
+    "visible_secondary_subject_ids": [
+      "tin_woodman",
+      "winkies"
+    ],
+    "primary_subject_frame_position": "foreground right within rocky_plain_floor",
+    "primary_subject_scale_relation": "The height of the tall_tree_location relative to the characters.",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "clothes laid on ground",
+    "subject_relation_summary": "dorothy plays against tin_woodman, Winkies in the same frame",
+    "required_environment_anchor_1": "rocky_plain_floor",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "The height of the tall_tree_location relative to the characters.",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "characters kneeling around the clothes",
+      "rocky_plain_floor",
+      "dorothy remains readable within the active playing space.",
+      "tin_woodman remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the rocky_plain_floor.",
+      "Background depth should keep rocky_plain legible as the location anchor.",
+      "Subject 1: dorothy remains visually readable against the environment scale.",
+      "Subject 2: tin_woodman remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "dorothy focuses toward the active scene action."
+    ],
+    "environment_subzone": "rocky_plain_floor",
+    "key_visible_environment_features": [
+      "rocky_plain_floor",
+      "Chapter-local environment alias match for 'A rocky plain featuring a tall' (key_overlap=2, label_overlap=2, context_o..."
+    ],
+    "continuity_from_previous_shot": "stuffed scarecrow standing",
+    "continuity_to_next_shot": "none",
+    "pose_anchor_frame": "clothes laid on ground",
+    "pose_end_frame": "the_scarecrow is standing and stuffed",
+    "shot_title": "Transition Wide 11: Physical restoration",
+    "shot_type": "transition_wide",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in rocky_plain featuring dorothy, tin_woodman, Winkies.",
+    "target_seconds": 9.2,
+    "characters_in_frame": [
+      {
+        "label": "Dorothy",
+        "canonical_id": "dorothy",
+        "display_name": "dorothy",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH013/dorothy.md",
+        "notes": "Direct registry match for 'dorothy'."
+      },
+      {
+        "label": "Tin Woodman",
+        "canonical_id": "tin_woodman",
+        "display_name": "tin_woodman",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH013/tin_woodman.md",
+        "notes": "Direct registry match for 'tin_woodman'."
+      },
+      {
+        "label": "Winkies",
+        "canonical_id": "winkies",
+        "display_name": "Winkies",
+        "status": "canonical",
+        "entity_kind": "group",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH013/winkies.md",
+        "notes": "Direct registry match for 'winkies'."
+      }
+    ],
+    "environment": {
+      "label": "A rocky plain featuring a tall",
+      "canonical_id": "rocky_plain",
+      "display_name": "rocky_plain",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 92,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH013/rocky_plain.md",
+      "notes": "Chapter-local environment alias match for 'A rocky plain featuring a tall' (key_overlap=2, label_overlap=2, context_overlap=4)."
+    },
+    "beat_ids": [
+      "BT003"
+    ],
+    "continuity_constraints": [
+      "Scarecrow's clothes state (empty vs. stuffed)",
+      "Appearance of the new gold-handled axe",
+      "Physical restoration"
+    ],
+    "prompt_seed": "Transition Wide 11: Physical restoration. transition_wide. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Readable medium compo...",
+    "shot_notes": "Physical restoration",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH013_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH013",
+        "scene_id": "CH013_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH013",
+        "scene_id": "CH013_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH013",
+        "scene_id": "CH013_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH013",
+        "scene_id": "CH013_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH013",
+        "scene_id": "CH013_SC003"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH013",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH013_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH005",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH005_chapter_v.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH012",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH012_chapter_xii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH011",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH011_chapter_xi.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH013",
+        "canonical_id": "dorothy"
+      }
+    ],
+    "evidence_summary": [
+      "The search party locates the Scarecrow's discarded clothing high in a smooth-trunked tree. The Tin Woodman uses his new gold-handled axe to fell the tree, allowing the group to retrieve the clothes and restuff them with fresh straw to physically restore the...",
+      "The search party finds the Scarecrow's discarded clothes in a tall tree. Using his new axe, the Tin Woodman chops down the tree. They retrieve the clothes, restuff them with fresh straw, and restore the Scarecrow to life.",
+      "From loss/despair to triumph and joy.",
+      "Characters looking up at empty clothes hanging in a tall tree with expressions of despair.",
+      "The Scarecrow is fully stuffed and standing, surrounded by a joyful group.",
+      "Felling the tree to retrieve clothing and stuffing the straw back into the character.",
+      "dorothy | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md] Costume/Silhouette: Unknown. No specific clothing details are provided in this chapter. [source:C:/FilmCreator/projects/wizard_of_oz/02_...",
+      "cowardly_lion | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH008/cowardly_lion.md] Physical Description: Large animal; too heavy to be carried by the others. [source:C:/FilmCreator/projects/wizard_of_oz/02_s...",
+      "tin_woodman | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH005/tin_woodman.md] Costume/Silhouette: Entirely metallic (tin) body; carries an axe. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis...",
+      "tall_tree_location | Insufficient descriptive data available to establish a visual profile. The location is identified as a specific landmark within the narrative. | Unknown. | Unknown. | Unknown.",
+      "rocky_plain | No specific visual descriptors are provided in the current evidence. The environment functions as a location for transit and discovery. | Unknown. | Unknown. | Unknown."
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "suspense_investigation",
+    "coverage_role": "transition_wide",
+    "beat_type": "transition_handoff",
+    "coverage_importance": "minor",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT003",
+      "beat_type": "transition_handoff",
+      "importance": "minor",
+      "confidence": 0.55,
+      "reasons": [
+        "importance = minor"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH013_SC003_SH011_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "69836fda1f03464542ee80910d7f8d9b2fbf35b3",
+      "created_at_utc": "2026-04-27T20:53:54.810543+00:00",
+      "updated_at_utc": "2026-04-27T20:54:53.182684+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH013_SC003",
+          "version": "ccf693732b32d415935dbcae18346dd50cbe6e65"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH013_SC003",
+          "version": "bf6bba8b5867f87bdbc39f3df97ea2ead3800e02"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH013_SC003",
+          "version": "e9e51a68584e12b285b9572123b2fac7de80c58b"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:53:54.811043+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "69836fda1f03464542ee80910d7f8d9b2fbf35b3"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:53.183185+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "69836fda1f03464542ee80910d7f8d9b2fbf35b3"
         }
       ]
     }

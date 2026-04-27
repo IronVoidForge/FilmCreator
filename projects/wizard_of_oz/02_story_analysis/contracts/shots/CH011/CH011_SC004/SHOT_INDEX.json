@@ -43,6 +43,7 @@
     "subject_blocking": [
       "the_great_oz centered",
       "the_scarecrow stands before the seated figure",
+      "throne_area",
       "the_great_oz remains readable within the active playing space.",
       "the_scarecrow remains readable within the active playing space."
     ],
@@ -57,17 +58,18 @@
     ],
     "environment_subzone": "throne_area",
     "key_visible_environment_features": [
-      "throne_area"
+      "throne_area",
+      "Chapter-local environment alias match for 'The Throne Room/Audience Chamber' (key_overlap=0, label_overlap=2, context..."
     ],
     "continuity_from_previous_shot": "the_scarecrow enters the audience chamber seeking wisdom.",
     "continuity_to_next_shot": "BT002",
     "pose_anchor_frame": "dim lighting",
     "pose_end_frame": "shift to Lovely Lady persona lighting",
-    "shot_title": "Medium 1: The manifestation of the Lovely Lady",
-    "shot_type": "medium",
-    "camera_description": "Stable medium framing that keeps action and character readable.",
+    "shot_title": "Ceremonial Master 1: The manifestation of the Lovely Lady",
+    "shot_type": "ceremonial_master",
+    "camera_description": "Stable readable framing built from the beat requirement.",
     "composition": "Readable medium composition in palace_of_oz featuring the_great_oz, the_scarecrow.",
-    "target_seconds": 5.5,
+    "target_seconds": 10.8,
     "characters_in_frame": [
       {
         "label": "The Great Oz (Lovely Lady)",
@@ -108,7 +110,7 @@
       "Maintain straw texture and clumsy movement for the_scarecrow",
       "The manifestation of the Lovely Lady"
     ],
-    "prompt_seed": "Medium 1: The manifestation of the Lovely Lady. medium. size=medium_full. angle=eye_level. lens=normal. motion=push_in. zoom=none. focus=shallow_subject. lighting=high_contrast_ceremonial. visibility=on_screen. subject_angle=front_three_quarter_right. Stable medium framing that keeps action and character readable.",
+    "prompt_seed": "Ceremonial Master 1: The manifestation of the Lovely Lady. ceremonial_master. size=medium_full. angle=eye_level. lens=normal. motion=push_in. zoom=none. focus=shallow_subject. lighting=high_contrast_ceremonial. visibility=on_screen. subject_angle=front_three_quarter_right. Stable readable framing built from the beat...",
     "shot_notes": "The manifestation of the Lovely Lady",
     "evidence_refs": [
       {
@@ -177,13 +179,30 @@
       "the_scarecrow | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH003/the_scarecrow.md] Physical Description: A living figure stuffed with straw. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/cha...",
       "palace_of_oz | A grandiose emerald-themed sovereign residence featuring monumental ceremonial halls and royal audience chambers. The interior is characterized by large-scale chambers designed to accommodate massive, non-human manifestations of the Wizard. |..."
     ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "ceremonial_tableau",
+    "coverage_role": "ceremonial_master",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT001",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "major",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = major"
+      ]
+    },
     "metadata": {
       "artifact_id": "CH011_SC004_SH001_SHOT_PACKAGE",
       "artifact_type": "shot_package",
       "status": "generated",
-      "source_fingerprint": "0bd84815c24c4f2b36c96085336d512fc90a3364",
+      "source_fingerprint": "4d323d109a7a4abf6e9fa2e89ebff2013cd35b6c",
       "created_at_utc": "2026-04-27T17:07:16.519419+00:00",
-      "updated_at_utc": "2026-04-27T17:07:16.519419+00:00",
+      "updated_at_utc": "2026-04-27T20:54:46.264501+00:00",
       "upstream_dependencies": [
         {
           "dependency_type": "scene_contract",
@@ -198,7 +217,7 @@
         {
           "dependency_type": "shot_blueprints",
           "dependency_id": "CH011_SC004",
-          "version": "8dd024d5579f7f44c303df1a842057fe31ba3ff6"
+          "version": "83f5ca8081b60607a5d34a5e6de7644c5c0a0267"
         }
       ],
       "locked_fields": {},
@@ -208,6 +227,16 @@
           "timestamp_utc": "2026-04-27T17:08:37.775456+00:00",
           "action": "synthesized",
           "source_fingerprint": "0bd84815c24c4f2b36c96085336d512fc90a3364"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:53:48.873122+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "4d323d109a7a4abf6e9fa2e89ebff2013cd35b6c"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:46.719212+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "4d323d109a7a4abf6e9fa2e89ebff2013cd35b6c"
         }
       ]
     }
@@ -223,39 +252,39 @@
     "secondary_subjects": [
       "the_great_oz"
     ],
-    "shot_moment_summary": "the_scarecrow reacts to the demand to kill the Witch",
-    "start_state": "hopeful expression",
-    "end_state": "conflicted/heavy expression",
-    "action_during_shot": "processing the demand",
+    "shot_moment_summary": "The manifestation of the Lovely Lady",
+    "start_state": "the_scarecrow approaches throne",
+    "end_state": "the_great_oz is revealed as a woman",
+    "action_during_shot": "The manifestation of the Lovely Lady",
     "action_continues_from": "shift to Lovely Lady persona lighting",
-    "action_hands_off_to": "BT003",
-    "shot_size": "close_up",
+    "action_hands_off_to": "BT002",
+    "shot_size": "medium",
     "camera_angle": "eye_level",
-    "lens_family": "portrait",
+    "lens_family": "normal",
     "camera_motion": "locked_off",
-    "zoom_behavior": "subtle_in",
-    "focus_strategy": "shallow_subject",
-    "lighting_style": "soft_even",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
     "subject_visibility": "on_screen",
-    "narration_mode": "in_scene_speaker",
-    "primary_subject_angle": "front",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
     "visible_primary_subject_id": "the_scarecrow",
     "visible_secondary_subject_ids": [
       "the_great_oz"
     ],
-    "primary_subject_frame_position": "foreground inside audience_floor",
+    "primary_subject_frame_position": "foreground right within throne_area",
     "primary_subject_scale_relation": "Humanoid scale vs. authoritative presence in palace_of_oz.",
-    "primary_subject_facing_direction": "facing directly toward camera",
-    "primary_subject_pose_description": "hopeful expression",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "the_scarecrow approaches throne",
     "subject_relation_summary": "the_scarecrow plays against the_great_oz in the same frame",
-    "required_environment_anchor_1": "audience_floor",
-    "required_subject_anchor_1": "hopeful expression",
+    "required_environment_anchor_1": "throne_area",
+    "required_subject_anchor_1": "the_scarecrow approaches throne",
     "required_celestial_anchor_1": "",
     "required_scale_proof_detail": "Humanoid scale vs. authoritative presence in palace_of_oz.",
-    "camera_package_description": "close-up, eye level, portrait lens, locked off, zoom subtle in, shallow subject, soft even",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
     "subject_blocking": [
-      "the_scarecrow stationary",
-      "interaction across the floor space",
+      "the_scarecrow stands before the seated figure",
+      "throne_area",
       "the_scarecrow remains readable within the active playing space.",
       "the_great_oz remains readable within the active playing space."
     ],
@@ -268,19 +297,20 @@
     "gaze_directions": [
       "the_scarecrow focuses toward the active scene action."
     ],
-    "environment_subzone": "audience_floor",
+    "environment_subzone": "throne_area",
     "key_visible_environment_features": [
-      "throne_area"
+      "throne_area",
+      "Chapter-local environment alias match for 'The Throne Room/Audience Chamber' (key_overlap=0, label_overlap=2, context..."
     ],
     "continuity_from_previous_shot": "shift to Lovely Lady persona lighting",
-    "continuity_to_next_shot": "BT003",
-    "pose_anchor_frame": "hopeful expression",
-    "pose_end_frame": "conflicted/heavy expression",
-    "shot_title": "Reaction Closeup 2: The promise of brains",
-    "shot_type": "reaction_closeup",
-    "camera_description": "Close framing that isolates reaction and emotional emphasis.",
-    "composition": "Intimate composition that isolates the_scarecrow, the_great_oz against palace_of_oz to capture the beat's emotional turn.",
-    "target_seconds": 5.3,
+    "continuity_to_next_shot": "BT002",
+    "pose_anchor_frame": "the_scarecrow approaches throne",
+    "pose_end_frame": "the_great_oz is revealed as a woman",
+    "shot_title": "Authority Single 2: The manifestation of the Lovely Lady",
+    "shot_type": "authority_single",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in palace_of_oz featuring the_scarecrow, the_great_oz.",
+    "target_seconds": 7.0,
     "characters_in_frame": [
       {
         "label": "Scarecrow",
@@ -314,6 +344,1432 @@
       "notes": "Chapter-local environment alias match for 'The Throne Room/Audience Chamber' (key_overlap=0, label_overlap=2, context_overlap=4)."
     },
     "beat_ids": [
+      "BT001"
+    ],
+    "continuity_constraints": [
+      "Lighting must shift to match the Lovely Lady persona",
+      "Maintain straw texture and clumsy movement for the_scarecrow",
+      "The manifestation of the Lovely Lady"
+    ],
+    "prompt_seed": "Authority Single 2: The manifestation of the Lovely Lady. authority_single. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Read...",
+    "shot_notes": "The manifestation of the Lovely Lady",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH011_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC004"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH011",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH011_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH011",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH011_chapter_xi.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH015",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH015_chapter_xv.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH018",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH018_chapter_xviii.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH011",
+        "canonical_id": "the_scarecrow"
+      }
+    ],
+    "evidence_summary": [
+      "Establish the second manifestation of Oz through a persona shift to a Lovely Lady. The interaction must pivot from the Scarecrow's hopeful expectation of receiving brains to the heavy moral weight of a lethal condition imposed by the Wizard.",
+      "The Scarecrow meets the Wizard, who appears as a Lovely Lady. She promises him brains on the condition that he kills the Witch.",
+      "Hope $\\rightarrow$ Moral Conflict.",
+      "the_scarecrow enters the audience chamber seeking wisdom.",
+      "the_scarecrow stands in silent contemplation of a violent demand.",
+      "The Wizard offers brains in exchange for the Witch's death.",
+      "the_great_oz | [CH003] Chapter III (query appears in paragraph preview) [CH005] Chapter V (query appears in paragraph preview) [CH006] Chapter VI (query appears in paragraph preview)",
+      "the_scarecrow | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH003/the_scarecrow.md] Physical Description: A living figure stuffed with straw. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/cha...",
+      "palace_of_oz | A grandiose emerald-themed sovereign residence featuring monumental ceremonial halls and royal audience chambers. The interior is characterized by large-scale chambers designed to accommodate massive, non-human manifestations of the Wizard. |..."
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "ceremonial_tableau",
+    "coverage_role": "authority_single",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT001",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "major",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = major"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH011_SC004_SH002_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "4d323d109a7a4abf6e9fa2e89ebff2013cd35b6c",
+      "created_at_utc": "2026-04-27T17:08:37.776958+00:00",
+      "updated_at_utc": "2026-04-27T20:54:46.726233+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH011_SC004",
+          "version": "68c4e2a6e8ac63b631f1dade3939ce4fd6f57c17"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH011_SC004",
+          "version": "ea52a76074721824f86534ed604f7d0326402b73"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH011_SC004",
+          "version": "83f5ca8081b60607a5d34a5e6de7644c5c0a0267"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T17:09:52.808091+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "0bd84815c24c4f2b36c96085336d512fc90a3364"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:53:48.880125+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "4d323d109a7a4abf6e9fa2e89ebff2013cd35b6c"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:46.727231+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "4d323d109a7a4abf6e9fa2e89ebff2013cd35b6c"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH003",
+    "scene_id": "CH011_SC004",
+    "chapter_id": "CH011",
+    "shot_order": 3,
+    "previous_shot_id": "SH002",
+    "next_shot_id": "SH004",
+    "primary_subject": "the_scarecrow",
+    "secondary_subjects": [
+      "the_great_oz"
+    ],
+    "shot_moment_summary": "The manifestation of the Lovely Lady",
+    "start_state": "the_scarecrow approaches throne",
+    "end_state": "the_great_oz is revealed as a woman",
+    "action_during_shot": "The manifestation of the Lovely Lady",
+    "action_continues_from": "the_great_oz is revealed as a woman",
+    "action_hands_off_to": "BT002",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "the_scarecrow",
+    "visible_secondary_subject_ids": [
+      "the_great_oz"
+    ],
+    "primary_subject_frame_position": "foreground right within throne_area",
+    "primary_subject_scale_relation": "Humanoid scale vs. authoritative presence in palace_of_oz.",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "the_scarecrow approaches throne",
+    "subject_relation_summary": "the_scarecrow plays against the_great_oz in the same frame",
+    "required_environment_anchor_1": "throne_area",
+    "required_subject_anchor_1": "the_scarecrow approaches throne",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "Humanoid scale vs. authoritative presence in palace_of_oz.",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "the_scarecrow stands before the seated figure",
+      "throne_area",
+      "the_scarecrow remains readable within the active playing space.",
+      "the_great_oz remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the throne_area.",
+      "Background depth should keep palace_of_oz legible as the location anchor.",
+      "Subject 1: the_scarecrow remains visually readable against the environment scale.",
+      "Subject 2: the_great_oz remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "the_scarecrow focuses toward the active scene action."
+    ],
+    "environment_subzone": "throne_area",
+    "key_visible_environment_features": [
+      "throne_area",
+      "Chapter-local environment alias match for 'The Throne Room/Audience Chamber' (key_overlap=0, label_overlap=2, context..."
+    ],
+    "continuity_from_previous_shot": "the_great_oz is revealed as a woman",
+    "continuity_to_next_shot": "BT002",
+    "pose_anchor_frame": "the_scarecrow approaches throne",
+    "pose_end_frame": "the_great_oz is revealed as a woman",
+    "shot_title": "Petitioner Group 3: The manifestation of the Lovely Lady",
+    "shot_type": "petitioner_group",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in palace_of_oz featuring the_scarecrow, the_great_oz.",
+    "target_seconds": 7.0,
+    "characters_in_frame": [
+      {
+        "label": "Scarecrow",
+        "canonical_id": "the_scarecrow",
+        "display_name": "the_scarecrow",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 186,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH011/the_scarecrow.md",
+        "notes": "asset id exactly matches canonical id | query matches alias 'scarecrow'"
+      },
+      {
+        "label": "The Great Oz (Lovely Lady)",
+        "canonical_id": "the_great_oz",
+        "display_name": "the_great_oz",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH011/the_great_oz.md",
+        "notes": "Direct registry match for 'the_great_oz'."
+      }
+    ],
+    "environment": {
+      "label": "The Throne Room/Audience Chamber",
+      "canonical_id": "palace_of_oz",
+      "display_name": "palace_of_oz",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 56,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH011/palace_of_oz.md",
+      "notes": "Chapter-local environment alias match for 'The Throne Room/Audience Chamber' (key_overlap=0, label_overlap=2, context_overlap=4)."
+    },
+    "beat_ids": [
+      "BT001"
+    ],
+    "continuity_constraints": [
+      "Lighting must shift to match the Lovely Lady persona",
+      "Maintain straw texture and clumsy movement for the_scarecrow",
+      "The manifestation of the Lovely Lady"
+    ],
+    "prompt_seed": "Petitioner Group 3: The manifestation of the Lovely Lady. petitioner_group. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Read...",
+    "shot_notes": "The manifestation of the Lovely Lady",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH011_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC004"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH011",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH011_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH011",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH011_chapter_xi.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH015",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH015_chapter_xv.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH018",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH018_chapter_xviii.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH011",
+        "canonical_id": "the_scarecrow"
+      }
+    ],
+    "evidence_summary": [
+      "Establish the second manifestation of Oz through a persona shift to a Lovely Lady. The interaction must pivot from the Scarecrow's hopeful expectation of receiving brains to the heavy moral weight of a lethal condition imposed by the Wizard.",
+      "The Scarecrow meets the Wizard, who appears as a Lovely Lady. She promises him brains on the condition that he kills the Witch.",
+      "Hope $\\rightarrow$ Moral Conflict.",
+      "the_scarecrow enters the audience chamber seeking wisdom.",
+      "the_scarecrow stands in silent contemplation of a violent demand.",
+      "The Wizard offers brains in exchange for the Witch's death.",
+      "the_great_oz | [CH003] Chapter III (query appears in paragraph preview) [CH005] Chapter V (query appears in paragraph preview) [CH006] Chapter VI (query appears in paragraph preview)",
+      "the_scarecrow | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH003/the_scarecrow.md] Physical Description: A living figure stuffed with straw. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/cha...",
+      "palace_of_oz | A grandiose emerald-themed sovereign residence featuring monumental ceremonial halls and royal audience chambers. The interior is characterized by large-scale chambers designed to accommodate massive, non-human manifestations of the Wizard. |..."
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "ceremonial_tableau",
+    "coverage_role": "petitioner_group",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT001",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "major",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = major"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH011_SC004_SH003_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "4d323d109a7a4abf6e9fa2e89ebff2013cd35b6c",
+      "created_at_utc": "2026-04-27T17:09:52.809594+00:00",
+      "updated_at_utc": "2026-04-27T20:54:46.732233+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH011_SC004",
+          "version": "68c4e2a6e8ac63b631f1dade3939ce4fd6f57c17"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH011_SC004",
+          "version": "ea52a76074721824f86534ed604f7d0326402b73"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH011_SC004",
+          "version": "83f5ca8081b60607a5d34a5e6de7644c5c0a0267"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T17:11:07.820711+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "0bd84815c24c4f2b36c96085336d512fc90a3364"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:53:48.885623+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "4d323d109a7a4abf6e9fa2e89ebff2013cd35b6c"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:46.733231+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "4d323d109a7a4abf6e9fa2e89ebff2013cd35b6c"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH004",
+    "scene_id": "CH011_SC004",
+    "chapter_id": "CH011",
+    "shot_order": 4,
+    "previous_shot_id": "SH003",
+    "next_shot_id": "SH005",
+    "primary_subject": "the_scarecrow",
+    "secondary_subjects": [
+      "the_great_oz"
+    ],
+    "shot_moment_summary": "The manifestation of the Lovely Lady",
+    "start_state": "the_scarecrow approaches throne",
+    "end_state": "the_great_oz is revealed as a woman",
+    "action_during_shot": "The manifestation of the Lovely Lady",
+    "action_continues_from": "the_great_oz is revealed as a woman",
+    "action_hands_off_to": "BT002",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "the_scarecrow",
+    "visible_secondary_subject_ids": [
+      "the_great_oz"
+    ],
+    "primary_subject_frame_position": "foreground right within throne_area",
+    "primary_subject_scale_relation": "Humanoid scale vs. authoritative presence in palace_of_oz.",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "the_scarecrow approaches throne",
+    "subject_relation_summary": "the_scarecrow plays against the_great_oz in the same frame",
+    "required_environment_anchor_1": "throne_area",
+    "required_subject_anchor_1": "the_scarecrow approaches throne",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "Humanoid scale vs. authoritative presence in palace_of_oz.",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "the_scarecrow stands before the seated figure",
+      "throne_area",
+      "the_scarecrow remains readable within the active playing space.",
+      "the_great_oz remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the throne_area.",
+      "Background depth should keep palace_of_oz legible as the location anchor.",
+      "Subject 1: the_scarecrow remains visually readable against the environment scale.",
+      "Subject 2: the_great_oz remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "the_scarecrow focuses toward the active scene action."
+    ],
+    "environment_subzone": "throne_area",
+    "key_visible_environment_features": [
+      "throne_area",
+      "Chapter-local environment alias match for 'The Throne Room/Audience Chamber' (key_overlap=0, label_overlap=2, context..."
+    ],
+    "continuity_from_previous_shot": "the_great_oz is revealed as a woman",
+    "continuity_to_next_shot": "BT002",
+    "pose_anchor_frame": "the_scarecrow approaches throne",
+    "pose_end_frame": "the_great_oz is revealed as a woman",
+    "shot_title": "Crowd Response 4: The manifestation of the Lovely Lady",
+    "shot_type": "crowd_response",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in palace_of_oz featuring the_scarecrow, the_great_oz.",
+    "target_seconds": 7.0,
+    "characters_in_frame": [
+      {
+        "label": "Scarecrow",
+        "canonical_id": "the_scarecrow",
+        "display_name": "the_scarecrow",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 186,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH011/the_scarecrow.md",
+        "notes": "asset id exactly matches canonical id | query matches alias 'scarecrow'"
+      },
+      {
+        "label": "The Great Oz (Lovely Lady)",
+        "canonical_id": "the_great_oz",
+        "display_name": "the_great_oz",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH011/the_great_oz.md",
+        "notes": "Direct registry match for 'the_great_oz'."
+      }
+    ],
+    "environment": {
+      "label": "The Throne Room/Audience Chamber",
+      "canonical_id": "palace_of_oz",
+      "display_name": "palace_of_oz",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 56,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH011/palace_of_oz.md",
+      "notes": "Chapter-local environment alias match for 'The Throne Room/Audience Chamber' (key_overlap=0, label_overlap=2, context_overlap=4)."
+    },
+    "beat_ids": [
+      "BT001"
+    ],
+    "continuity_constraints": [
+      "Lighting must shift to match the Lovely Lady persona",
+      "Maintain straw texture and clumsy movement for the_scarecrow",
+      "The manifestation of the Lovely Lady"
+    ],
+    "prompt_seed": "Crowd Response 4: The manifestation of the Lovely Lady. crowd_response. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Readable...",
+    "shot_notes": "The manifestation of the Lovely Lady",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH011_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC004"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH011",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH011_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH011",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH011_chapter_xi.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH015",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH015_chapter_xv.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH018",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH018_chapter_xviii.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH011",
+        "canonical_id": "the_scarecrow"
+      }
+    ],
+    "evidence_summary": [
+      "Establish the second manifestation of Oz through a persona shift to a Lovely Lady. The interaction must pivot from the Scarecrow's hopeful expectation of receiving brains to the heavy moral weight of a lethal condition imposed by the Wizard.",
+      "The Scarecrow meets the Wizard, who appears as a Lovely Lady. She promises him brains on the condition that he kills the Witch.",
+      "Hope $\\rightarrow$ Moral Conflict.",
+      "the_scarecrow enters the audience chamber seeking wisdom.",
+      "the_scarecrow stands in silent contemplation of a violent demand.",
+      "The Wizard offers brains in exchange for the Witch's death.",
+      "the_great_oz | [CH003] Chapter III (query appears in paragraph preview) [CH005] Chapter V (query appears in paragraph preview) [CH006] Chapter VI (query appears in paragraph preview)",
+      "the_scarecrow | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH003/the_scarecrow.md] Physical Description: A living figure stuffed with straw. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/cha...",
+      "palace_of_oz | A grandiose emerald-themed sovereign residence featuring monumental ceremonial halls and royal audience chambers. The interior is characterized by large-scale chambers designed to accommodate massive, non-human manifestations of the Wizard. |..."
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "ceremonial_tableau",
+    "coverage_role": "crowd_response",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT001",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "major",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = major"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH011_SC004_SH004_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "4d323d109a7a4abf6e9fa2e89ebff2013cd35b6c",
+      "created_at_utc": "2026-04-27T20:53:48.887136+00:00",
+      "updated_at_utc": "2026-04-27T20:54:46.737761+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH011_SC004",
+          "version": "68c4e2a6e8ac63b631f1dade3939ce4fd6f57c17"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH011_SC004",
+          "version": "ea52a76074721824f86534ed604f7d0326402b73"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH011_SC004",
+          "version": "83f5ca8081b60607a5d34a5e6de7644c5c0a0267"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:53:48.888136+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "4d323d109a7a4abf6e9fa2e89ebff2013cd35b6c"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:46.738777+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "4d323d109a7a4abf6e9fa2e89ebff2013cd35b6c"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH005",
+    "scene_id": "CH011_SC004",
+    "chapter_id": "CH011",
+    "shot_order": 5,
+    "previous_shot_id": "SH004",
+    "next_shot_id": "SH006",
+    "primary_subject": "the_scarecrow",
+    "secondary_subjects": [
+      "the_great_oz"
+    ],
+    "shot_moment_summary": "The manifestation of the Lovely Lady",
+    "start_state": "the_scarecrow approaches throne",
+    "end_state": "the_great_oz is revealed as a woman",
+    "action_during_shot": "The manifestation of the Lovely Lady",
+    "action_continues_from": "the_great_oz is revealed as a woman",
+    "action_hands_off_to": "BT002",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "the_scarecrow",
+    "visible_secondary_subject_ids": [
+      "the_great_oz"
+    ],
+    "primary_subject_frame_position": "foreground right within throne_area",
+    "primary_subject_scale_relation": "Humanoid scale vs. authoritative presence in palace_of_oz.",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "the_scarecrow approaches throne",
+    "subject_relation_summary": "the_scarecrow plays against the_great_oz in the same frame",
+    "required_environment_anchor_1": "throne_area",
+    "required_subject_anchor_1": "the_scarecrow approaches throne",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "Humanoid scale vs. authoritative presence in palace_of_oz.",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "the_scarecrow stands before the seated figure",
+      "throne_area",
+      "the_scarecrow remains readable within the active playing space.",
+      "the_great_oz remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the throne_area.",
+      "Background depth should keep palace_of_oz legible as the location anchor.",
+      "Subject 1: the_scarecrow remains visually readable against the environment scale.",
+      "Subject 2: the_great_oz remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "the_scarecrow focuses toward the active scene action."
+    ],
+    "environment_subzone": "throne_area",
+    "key_visible_environment_features": [
+      "throne_area",
+      "Chapter-local environment alias match for 'The Throne Room/Audience Chamber' (key_overlap=0, label_overlap=2, context..."
+    ],
+    "continuity_from_previous_shot": "the_great_oz is revealed as a woman",
+    "continuity_to_next_shot": "BT002",
+    "pose_anchor_frame": "the_scarecrow approaches throne",
+    "pose_end_frame": "the_great_oz is revealed as a woman",
+    "shot_title": "Symbol Insert 5: The manifestation of the Lovely Lady",
+    "shot_type": "symbol_insert",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in palace_of_oz featuring the_scarecrow, the_great_oz.",
+    "target_seconds": 5.4,
+    "characters_in_frame": [
+      {
+        "label": "Scarecrow",
+        "canonical_id": "the_scarecrow",
+        "display_name": "the_scarecrow",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 186,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH011/the_scarecrow.md",
+        "notes": "asset id exactly matches canonical id | query matches alias 'scarecrow'"
+      },
+      {
+        "label": "The Great Oz (Lovely Lady)",
+        "canonical_id": "the_great_oz",
+        "display_name": "the_great_oz",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH011/the_great_oz.md",
+        "notes": "Direct registry match for 'the_great_oz'."
+      }
+    ],
+    "environment": {
+      "label": "The Throne Room/Audience Chamber",
+      "canonical_id": "palace_of_oz",
+      "display_name": "palace_of_oz",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 56,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH011/palace_of_oz.md",
+      "notes": "Chapter-local environment alias match for 'The Throne Room/Audience Chamber' (key_overlap=0, label_overlap=2, context_overlap=4)."
+    },
+    "beat_ids": [
+      "BT001"
+    ],
+    "continuity_constraints": [
+      "Lighting must shift to match the Lovely Lady persona",
+      "Maintain straw texture and clumsy movement for the_scarecrow",
+      "The manifestation of the Lovely Lady"
+    ],
+    "prompt_seed": "Symbol Insert 5: The manifestation of the Lovely Lady. symbol_insert. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Readable m...",
+    "shot_notes": "The manifestation of the Lovely Lady",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH011_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC004"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH011",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH011_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH011",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH011_chapter_xi.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH015",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH015_chapter_xv.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH018",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH018_chapter_xviii.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH011",
+        "canonical_id": "the_scarecrow"
+      }
+    ],
+    "evidence_summary": [
+      "Establish the second manifestation of Oz through a persona shift to a Lovely Lady. The interaction must pivot from the Scarecrow's hopeful expectation of receiving brains to the heavy moral weight of a lethal condition imposed by the Wizard.",
+      "The Scarecrow meets the Wizard, who appears as a Lovely Lady. She promises him brains on the condition that he kills the Witch.",
+      "Hope $\\rightarrow$ Moral Conflict.",
+      "the_scarecrow enters the audience chamber seeking wisdom.",
+      "the_scarecrow stands in silent contemplation of a violent demand.",
+      "The Wizard offers brains in exchange for the Witch's death.",
+      "the_great_oz | [CH003] Chapter III (query appears in paragraph preview) [CH005] Chapter V (query appears in paragraph preview) [CH006] Chapter VI (query appears in paragraph preview)",
+      "the_scarecrow | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH003/the_scarecrow.md] Physical Description: A living figure stuffed with straw. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/cha...",
+      "palace_of_oz | A grandiose emerald-themed sovereign residence featuring monumental ceremonial halls and royal audience chambers. The interior is characterized by large-scale chambers designed to accommodate massive, non-human manifestations of the Wizard. |..."
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "ceremonial_tableau",
+    "coverage_role": "symbol_insert",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT001",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "major",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = major"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH011_SC004_SH005_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "4d323d109a7a4abf6e9fa2e89ebff2013cd35b6c",
+      "created_at_utc": "2026-04-27T20:53:48.889135+00:00",
+      "updated_at_utc": "2026-04-27T20:54:46.744282+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH011_SC004",
+          "version": "68c4e2a6e8ac63b631f1dade3939ce4fd6f57c17"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH011_SC004",
+          "version": "ea52a76074721824f86534ed604f7d0326402b73"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH011_SC004",
+          "version": "83f5ca8081b60607a5d34a5e6de7644c5c0a0267"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:53:48.889636+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "4d323d109a7a4abf6e9fa2e89ebff2013cd35b6c"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:46.744780+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "4d323d109a7a4abf6e9fa2e89ebff2013cd35b6c"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH006",
+    "scene_id": "CH011_SC004",
+    "chapter_id": "CH011",
+    "shot_order": 6,
+    "previous_shot_id": "SH005",
+    "next_shot_id": "SH007",
+    "primary_subject": "the_scarecrow",
+    "secondary_subjects": [
+      "the_great_oz"
+    ],
+    "shot_moment_summary": "The manifestation of the Lovely Lady",
+    "start_state": "the_scarecrow approaches throne",
+    "end_state": "the_great_oz is revealed as a woman",
+    "action_during_shot": "The manifestation of the Lovely Lady",
+    "action_continues_from": "the_great_oz is revealed as a woman",
+    "action_hands_off_to": "BT002",
+    "shot_size": "close_up",
+    "camera_angle": "eye_level",
+    "lens_family": "portrait",
+    "camera_motion": "push_in",
+    "zoom_behavior": "subtle_in",
+    "focus_strategy": "shallow_subject",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "the_scarecrow",
+    "visible_secondary_subject_ids": [
+      "the_great_oz"
+    ],
+    "primary_subject_frame_position": "foreground inside throne_area",
+    "primary_subject_scale_relation": "Humanoid scale vs. authoritative presence in palace_of_oz.",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "the_scarecrow approaches throne",
+    "subject_relation_summary": "the_scarecrow plays against the_great_oz in the same frame",
+    "required_environment_anchor_1": "throne_area",
+    "required_subject_anchor_1": "the_scarecrow approaches throne",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "Humanoid scale vs. authoritative presence in palace_of_oz.",
+    "camera_package_description": "close-up, eye level, portrait lens, push in, zoom subtle in, shallow subject, hard directional",
+    "subject_blocking": [
+      "the_scarecrow stands before the seated figure",
+      "throne_area",
+      "the_scarecrow remains readable within the active playing space.",
+      "the_great_oz remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the throne_area.",
+      "Background depth should keep palace_of_oz legible as the location anchor.",
+      "Subject 1: the_scarecrow remains visually readable against the environment scale.",
+      "Subject 2: the_great_oz remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "the_scarecrow focuses toward the active scene action."
+    ],
+    "environment_subzone": "throne_area",
+    "key_visible_environment_features": [
+      "throne_area",
+      "Chapter-local environment alias match for 'The Throne Room/Audience Chamber' (key_overlap=0, label_overlap=2, context..."
+    ],
+    "continuity_from_previous_shot": "the_great_oz is revealed as a woman",
+    "continuity_to_next_shot": "BT002",
+    "pose_anchor_frame": "the_scarecrow approaches throne",
+    "pose_end_frame": "the_great_oz is revealed as a woman",
+    "shot_title": "Reaction Closeup 6: The manifestation of the Lovely Lady",
+    "shot_type": "reaction_closeup",
+    "camera_description": "Close framing that isolates reaction and emotional emphasis.",
+    "composition": "Intimate composition that isolates the_scarecrow, the_great_oz against palace_of_oz to capture the beat's emotional turn.",
+    "target_seconds": 7.0,
+    "characters_in_frame": [
+      {
+        "label": "Scarecrow",
+        "canonical_id": "the_scarecrow",
+        "display_name": "the_scarecrow",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 186,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH011/the_scarecrow.md",
+        "notes": "asset id exactly matches canonical id | query matches alias 'scarecrow'"
+      },
+      {
+        "label": "The Great Oz (Lovely Lady)",
+        "canonical_id": "the_great_oz",
+        "display_name": "the_great_oz",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH011/the_great_oz.md",
+        "notes": "Direct registry match for 'the_great_oz'."
+      }
+    ],
+    "environment": {
+      "label": "The Throne Room/Audience Chamber",
+      "canonical_id": "palace_of_oz",
+      "display_name": "palace_of_oz",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 56,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH011/palace_of_oz.md",
+      "notes": "Chapter-local environment alias match for 'The Throne Room/Audience Chamber' (key_overlap=0, label_overlap=2, context_overlap=4)."
+    },
+    "beat_ids": [
+      "BT001"
+    ],
+    "continuity_constraints": [
+      "Lighting must shift to match the Lovely Lady persona",
+      "Maintain straw texture and clumsy movement for the_scarecrow",
+      "The manifestation of the Lovely Lady"
+    ],
+    "prompt_seed": "Reaction Closeup 6: The manifestation of the Lovely Lady. reaction_closeup. size=close_up. angle=eye_level. lens=portrait. motion=push_in. zoom=subtle_in. focus=shallow_subject. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Close framing that isolates reaction and emotional...",
+    "shot_notes": "The manifestation of the Lovely Lady",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH011_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC004"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH011",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH011_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH011",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH011_chapter_xi.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH015",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH015_chapter_xv.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH018",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH018_chapter_xviii.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH011",
+        "canonical_id": "the_scarecrow"
+      }
+    ],
+    "evidence_summary": [
+      "Establish the second manifestation of Oz through a persona shift to a Lovely Lady. The interaction must pivot from the Scarecrow's hopeful expectation of receiving brains to the heavy moral weight of a lethal condition imposed by the Wizard.",
+      "The Scarecrow meets the Wizard, who appears as a Lovely Lady. She promises him brains on the condition that he kills the Witch.",
+      "Hope $\\rightarrow$ Moral Conflict.",
+      "the_scarecrow enters the audience chamber seeking wisdom.",
+      "the_scarecrow stands in silent contemplation of a violent demand.",
+      "The Wizard offers brains in exchange for the Witch's death.",
+      "the_great_oz | [CH003] Chapter III (query appears in paragraph preview) [CH005] Chapter V (query appears in paragraph preview) [CH006] Chapter VI (query appears in paragraph preview)",
+      "the_scarecrow | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH003/the_scarecrow.md] Physical Description: A living figure stuffed with straw. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/cha...",
+      "palace_of_oz | A grandiose emerald-themed sovereign residence featuring monumental ceremonial halls and royal audience chambers. The interior is characterized by large-scale chambers designed to accommodate massive, non-human manifestations of the Wizard. |..."
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "ceremonial_tableau",
+    "coverage_role": "decision_closeup",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT001",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "major",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = major"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH011_SC004_SH006_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "4d323d109a7a4abf6e9fa2e89ebff2013cd35b6c",
+      "created_at_utc": "2026-04-27T20:53:48.890637+00:00",
+      "updated_at_utc": "2026-04-27T20:54:46.750282+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH011_SC004",
+          "version": "68c4e2a6e8ac63b631f1dade3939ce4fd6f57c17"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH011_SC004",
+          "version": "ea52a76074721824f86534ed604f7d0326402b73"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH011_SC004",
+          "version": "83f5ca8081b60607a5d34a5e6de7644c5c0a0267"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:53:48.891136+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "4d323d109a7a4abf6e9fa2e89ebff2013cd35b6c"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:46.750781+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "4d323d109a7a4abf6e9fa2e89ebff2013cd35b6c"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH007",
+    "scene_id": "CH011_SC004",
+    "chapter_id": "CH011",
+    "shot_order": 7,
+    "previous_shot_id": "SH006",
+    "next_shot_id": "SH008",
+    "primary_subject": "the_scarecrow",
+    "secondary_subjects": [
+      "the_great_oz"
+    ],
+    "shot_moment_summary": "The manifestation of the Lovely Lady",
+    "start_state": "the_scarecrow approaches throne",
+    "end_state": "the_great_oz is revealed as a woman",
+    "action_during_shot": "The manifestation of the Lovely Lady",
+    "action_continues_from": "the_great_oz is revealed as a woman",
+    "action_hands_off_to": "BT002",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "the_scarecrow",
+    "visible_secondary_subject_ids": [
+      "the_great_oz"
+    ],
+    "primary_subject_frame_position": "foreground right within throne_area",
+    "primary_subject_scale_relation": "Humanoid scale vs. authoritative presence in palace_of_oz.",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "the_scarecrow approaches throne",
+    "subject_relation_summary": "the_scarecrow plays against the_great_oz in the same frame",
+    "required_environment_anchor_1": "throne_area",
+    "required_subject_anchor_1": "the_scarecrow approaches throne",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "Humanoid scale vs. authoritative presence in palace_of_oz.",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "the_scarecrow stands before the seated figure",
+      "throne_area",
+      "the_scarecrow remains readable within the active playing space.",
+      "the_great_oz remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the throne_area.",
+      "Background depth should keep palace_of_oz legible as the location anchor.",
+      "Subject 1: the_scarecrow remains visually readable against the environment scale.",
+      "Subject 2: the_great_oz remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "the_scarecrow focuses toward the active scene action."
+    ],
+    "environment_subzone": "throne_area",
+    "key_visible_environment_features": [
+      "throne_area",
+      "Chapter-local environment alias match for 'The Throne Room/Audience Chamber' (key_overlap=0, label_overlap=2, context..."
+    ],
+    "continuity_from_previous_shot": "the_great_oz is revealed as a woman",
+    "continuity_to_next_shot": "BT002",
+    "pose_anchor_frame": "the_scarecrow approaches throne",
+    "pose_end_frame": "the_great_oz is revealed as a woman",
+    "shot_title": "Scale Proof Wide 7: The manifestation of the Lovely Lady",
+    "shot_type": "scale_proof_wide",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in palace_of_oz featuring the_scarecrow, the_great_oz.",
+    "target_seconds": 10.8,
+    "characters_in_frame": [
+      {
+        "label": "Scarecrow",
+        "canonical_id": "the_scarecrow",
+        "display_name": "the_scarecrow",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 186,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH011/the_scarecrow.md",
+        "notes": "asset id exactly matches canonical id | query matches alias 'scarecrow'"
+      },
+      {
+        "label": "The Great Oz (Lovely Lady)",
+        "canonical_id": "the_great_oz",
+        "display_name": "the_great_oz",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH011/the_great_oz.md",
+        "notes": "Direct registry match for 'the_great_oz'."
+      }
+    ],
+    "environment": {
+      "label": "The Throne Room/Audience Chamber",
+      "canonical_id": "palace_of_oz",
+      "display_name": "palace_of_oz",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 56,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH011/palace_of_oz.md",
+      "notes": "Chapter-local environment alias match for 'The Throne Room/Audience Chamber' (key_overlap=0, label_overlap=2, context_overlap=4)."
+    },
+    "beat_ids": [
+      "BT001"
+    ],
+    "continuity_constraints": [
+      "Lighting must shift to match the Lovely Lady persona",
+      "Maintain straw texture and clumsy movement for the_scarecrow",
+      "The manifestation of the Lovely Lady"
+    ],
+    "prompt_seed": "Scale Proof Wide 7: The manifestation of the Lovely Lady. scale_proof_wide. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Read...",
+    "shot_notes": "The manifestation of the Lovely Lady",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH011_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC004"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH011",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH011_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH011",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH011_chapter_xi.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH015",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH015_chapter_xv.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH018",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH018_chapter_xviii.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH011",
+        "canonical_id": "the_scarecrow"
+      }
+    ],
+    "evidence_summary": [
+      "Establish the second manifestation of Oz through a persona shift to a Lovely Lady. The interaction must pivot from the Scarecrow's hopeful expectation of receiving brains to the heavy moral weight of a lethal condition imposed by the Wizard.",
+      "The Scarecrow meets the Wizard, who appears as a Lovely Lady. She promises him brains on the condition that he kills the Witch.",
+      "Hope $\\rightarrow$ Moral Conflict.",
+      "the_scarecrow enters the audience chamber seeking wisdom.",
+      "the_scarecrow stands in silent contemplation of a violent demand.",
+      "The Wizard offers brains in exchange for the Witch's death.",
+      "the_great_oz | [CH003] Chapter III (query appears in paragraph preview) [CH005] Chapter V (query appears in paragraph preview) [CH006] Chapter VI (query appears in paragraph preview)",
+      "the_scarecrow | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH003/the_scarecrow.md] Physical Description: A living figure stuffed with straw. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/cha...",
+      "palace_of_oz | A grandiose emerald-themed sovereign residence featuring monumental ceremonial halls and royal audience chambers. The interior is characterized by large-scale chambers designed to accommodate massive, non-human manifestations of the Wizard. |..."
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "ceremonial_tableau",
+    "coverage_role": "scale_proof_wide",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT001",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "major",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = major"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH011_SC004_SH007_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "4d323d109a7a4abf6e9fa2e89ebff2013cd35b6c",
+      "created_at_utc": "2026-04-27T20:53:48.892140+00:00",
+      "updated_at_utc": "2026-04-27T20:54:46.756294+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH011_SC004",
+          "version": "68c4e2a6e8ac63b631f1dade3939ce4fd6f57c17"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH011_SC004",
+          "version": "ea52a76074721824f86534ed604f7d0326402b73"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH011_SC004",
+          "version": "83f5ca8081b60607a5d34a5e6de7644c5c0a0267"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:53:48.892645+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "4d323d109a7a4abf6e9fa2e89ebff2013cd35b6c"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:46.756793+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "4d323d109a7a4abf6e9fa2e89ebff2013cd35b6c"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH008",
+    "scene_id": "CH011_SC004",
+    "chapter_id": "CH011",
+    "shot_order": 8,
+    "previous_shot_id": "SH007",
+    "next_shot_id": "SH009",
+    "primary_subject": "the_great_oz",
+    "secondary_subjects": [
+      "the_scarecrow"
+    ],
+    "shot_moment_summary": "The promise of brains",
+    "start_state": "the_great_oz speaks",
+    "end_state": "the_scarecrow listens with hope",
+    "action_during_shot": "The promise of brains",
+    "action_continues_from": "the_great_oz is revealed as a woman",
+    "action_hands_off_to": "BT003",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "the_great_oz",
+    "visible_secondary_subject_ids": [
+      "the_scarecrow"
+    ],
+    "primary_subject_frame_position": "foreground right within throne_area",
+    "primary_subject_scale_relation": "Humanoid scale vs. authoritative presence in palace_of_oz.",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "the_great_oz speaks",
+    "subject_relation_summary": "the_great_oz plays against the_scarecrow in the same frame",
+    "required_environment_anchor_1": "throne_area",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "Humanoid scale vs. authoritative presence in palace_of_oz.",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "interaction across the floor space",
+      "audience_floor/throne_area",
+      "the_great_oz remains readable within the active playing space.",
+      "the_scarecrow remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the throne_area.",
+      "Background depth should keep palace_of_oz legible as the location anchor.",
+      "Subject 1: the_great_oz remains visually readable against the environment scale.",
+      "Subject 2: the_scarecrow remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "the_great_oz focuses toward the active scene action."
+    ],
+    "environment_subzone": "throne_area",
+    "key_visible_environment_features": [
+      "throne_area",
+      "Chapter-local environment alias match for 'The Throne Room/Audience Chamber' (key_overlap=0, label_overlap=2, context..."
+    ],
+    "continuity_from_previous_shot": "the_great_oz is revealed as a woman",
+    "continuity_to_next_shot": "BT003",
+    "pose_anchor_frame": "the_great_oz speaks",
+    "pose_end_frame": "the_scarecrow listens with hope",
+    "shot_title": "Ceremonial Master 8: The promise of brains",
+    "shot_type": "ceremonial_master",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in palace_of_oz featuring the_great_oz, the_scarecrow.",
+    "target_seconds": 10.8,
+    "characters_in_frame": [
+      {
+        "label": "The Great Oz (Lovely Lady)",
+        "canonical_id": "the_great_oz",
+        "display_name": "the_great_oz",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH011/the_great_oz.md",
+        "notes": "Direct registry match for 'the_great_oz'."
+      },
+      {
+        "label": "Scarecrow",
+        "canonical_id": "the_scarecrow",
+        "display_name": "the_scarecrow",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 186,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH011/the_scarecrow.md",
+        "notes": "asset id exactly matches canonical id | query matches alias 'scarecrow'"
+      }
+    ],
+    "environment": {
+      "label": "The Throne Room/Audience Chamber",
+      "canonical_id": "palace_of_oz",
+      "display_name": "palace_of_oz",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 56,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH011/palace_of_oz.md",
+      "notes": "Chapter-local environment alias match for 'The Throne Room/Audience Chamber' (key_overlap=0, label_overlap=2, context_overlap=4)."
+    },
+    "beat_ids": [
       "BT002"
     ],
     "continuity_constraints": [
@@ -321,7 +1777,7 @@
       "Maintain straw texture and clumsy movement for the_scarecrow",
       "The promise of brains"
     ],
-    "prompt_seed": "Reaction Closeup 2: The promise of brains. reaction_closeup. size=close_up. angle=eye_level. lens=portrait. motion=locked_off. zoom=subtle_in. focus=shallow_subject. lighting=soft_even. visibility=on_screen. subject_angle=front. Close framing that isolates reaction and emotional emphasis.",
+    "prompt_seed": "Ceremonial Master 8: The promise of brains. ceremonial_master. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Readable medium c...",
     "shot_notes": "The promise of brains",
     "evidence_refs": [
       {
@@ -390,13 +1846,31 @@
       "the_scarecrow | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH003/the_scarecrow.md] Physical Description: A living figure stuffed with straw. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/cha...",
       "palace_of_oz | A grandiose emerald-themed sovereign residence featuring monumental ceremonial halls and royal audience chambers. The interior is characterized by large-scale chambers designed to accommodate massive, non-human manifestations of the Wizard. |..."
     ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "ceremonial_tableau",
+    "coverage_role": "ceremonial_master",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT002",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "major",
+      "confidence": 0.76,
+      "reasons": [
+        "dialogue verb with subject count = 2",
+        "scene intent is ceremonial_tableau",
+        "importance = major"
+      ]
+    },
     "metadata": {
-      "artifact_id": "CH011_SC004_SH002_SHOT_PACKAGE",
+      "artifact_id": "CH011_SC004_SH008_SHOT_PACKAGE",
       "artifact_type": "shot_package",
       "status": "generated",
-      "source_fingerprint": "0bd84815c24c4f2b36c96085336d512fc90a3364",
-      "created_at_utc": "2026-04-27T17:08:37.776958+00:00",
-      "updated_at_utc": "2026-04-27T17:08:37.776958+00:00",
+      "source_fingerprint": "4d323d109a7a4abf6e9fa2e89ebff2013cd35b6c",
+      "created_at_utc": "2026-04-27T20:53:48.893645+00:00",
+      "updated_at_utc": "2026-04-27T20:54:46.762293+00:00",
       "upstream_dependencies": [
         {
           "dependency_type": "scene_contract",
@@ -411,43 +1885,48 @@
         {
           "dependency_type": "shot_blueprints",
           "dependency_id": "CH011_SC004",
-          "version": "8dd024d5579f7f44c303df1a842057fe31ba3ff6"
+          "version": "83f5ca8081b60607a5d34a5e6de7644c5c0a0267"
         }
       ],
       "locked_fields": {},
       "manual_overrides": {},
       "revision_history": [
         {
-          "timestamp_utc": "2026-04-27T17:09:52.808091+00:00",
+          "timestamp_utc": "2026-04-27T20:53:48.894145+00:00",
           "action": "synthesized",
-          "source_fingerprint": "0bd84815c24c4f2b36c96085336d512fc90a3364"
+          "source_fingerprint": "4d323d109a7a4abf6e9fa2e89ebff2013cd35b6c"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:46.762792+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "4d323d109a7a4abf6e9fa2e89ebff2013cd35b6c"
         }
       ]
     }
   },
   {
-    "shot_id": "SH003",
+    "shot_id": "SH009",
     "scene_id": "CH011_SC004",
     "chapter_id": "CH011",
-    "shot_order": 3,
-    "previous_shot_id": "SH002",
-    "next_shot_id": "",
+    "shot_order": 9,
+    "previous_shot_id": "SH008",
+    "next_shot_id": "SH010",
     "primary_subject": "the_great_oz",
     "secondary_subjects": [
       "the_scarecrow"
     ],
-    "shot_moment_summary": "The lethal condition",
-    "start_state": "the_great_oz demands the Witch's death",
-    "end_state": "the_scarecrow processes the moral conflict",
-    "action_during_shot": "The lethal condition",
-    "action_continues_from": "conflicted/heavy expression",
-    "action_hands_off_to": "end_of_scene",
-    "shot_size": "close_up",
+    "shot_moment_summary": "The promise of brains",
+    "start_state": "the_great_oz speaks",
+    "end_state": "the_scarecrow listens with hope",
+    "action_during_shot": "The promise of brains",
+    "action_continues_from": "the_scarecrow listens with hope",
+    "action_hands_off_to": "BT003",
+    "shot_size": "medium",
     "camera_angle": "eye_level",
-    "lens_family": "portrait",
-    "camera_motion": "push_in",
-    "zoom_behavior": "subtle_in",
-    "focus_strategy": "shallow_subject",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
     "lighting_style": "hard_directional",
     "subject_visibility": "on_screen",
     "narration_mode": "none",
@@ -456,23 +1935,24 @@
     "visible_secondary_subject_ids": [
       "the_scarecrow"
     ],
-    "primary_subject_frame_position": "foreground inside audience_floor",
+    "primary_subject_frame_position": "foreground right within throne_area",
     "primary_subject_scale_relation": "Humanoid scale vs. authoritative presence in palace_of_oz.",
     "primary_subject_facing_direction": "front three-quarter left toward the scene action",
-    "primary_subject_pose_description": "the_great_oz demands the Witch's death",
+    "primary_subject_pose_description": "the_great_oz speaks",
     "subject_relation_summary": "the_great_oz plays against the_scarecrow in the same frame",
-    "required_environment_anchor_1": "audience_floor",
-    "required_subject_anchor_1": "the_scarecrow remains still/clumsy",
+    "required_environment_anchor_1": "throne_area",
+    "required_subject_anchor_1": "",
     "required_celestial_anchor_1": "",
     "required_scale_proof_detail": "Humanoid scale vs. authoritative presence in palace_of_oz.",
-    "camera_package_description": "close-up, eye level, portrait lens, push in, zoom subtle in, shallow subject, hard directional",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
     "subject_blocking": [
-      "the_scarecrow remains still/clumsy",
+      "interaction across the floor space",
+      "audience_floor/throne_area",
       "the_great_oz remains readable within the active playing space.",
       "the_scarecrow remains readable within the active playing space."
     ],
     "camera_relative_positions": [
-      "Camera anchors the action inside the audience_floor.",
+      "Camera anchors the action inside the throne_area.",
       "Background depth should keep palace_of_oz legible as the location anchor.",
       "Subject 1: the_great_oz remains visually readable against the environment scale.",
       "Subject 2: the_scarecrow remains visually readable against the environment scale."
@@ -480,19 +1960,20 @@
     "gaze_directions": [
       "the_great_oz focuses toward the active scene action."
     ],
-    "environment_subzone": "audience_floor",
+    "environment_subzone": "throne_area",
     "key_visible_environment_features": [
-      "audience_floor"
+      "throne_area",
+      "Chapter-local environment alias match for 'The Throne Room/Audience Chamber' (key_overlap=0, label_overlap=2, context..."
     ],
-    "continuity_from_previous_shot": "conflicted/heavy expression",
-    "continuity_to_next_shot": "end_of_scene",
-    "pose_anchor_frame": "the_great_oz demands the Witch's death",
-    "pose_end_frame": "the_scarecrow processes the moral conflict",
-    "shot_title": "Reaction Closeup 3: The lethal condition",
-    "shot_type": "reaction_closeup",
-    "camera_description": "Close framing that isolates reaction and emotional emphasis.",
-    "composition": "Intimate composition that isolates the_great_oz, the_scarecrow against palace_of_oz to capture the beat's emotional turn.",
-    "target_seconds": 5.1,
+    "continuity_from_previous_shot": "the_scarecrow listens with hope",
+    "continuity_to_next_shot": "BT003",
+    "pose_anchor_frame": "the_great_oz speaks",
+    "pose_end_frame": "the_scarecrow listens with hope",
+    "shot_title": "Authority Single 9: The promise of brains",
+    "shot_type": "authority_single",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in palace_of_oz featuring the_great_oz, the_scarecrow.",
+    "target_seconds": 7.0,
     "characters_in_frame": [
       {
         "label": "The Great Oz (Lovely Lady)",
@@ -526,6 +2007,1429 @@
       "notes": "Chapter-local environment alias match for 'The Throne Room/Audience Chamber' (key_overlap=0, label_overlap=2, context_overlap=4)."
     },
     "beat_ids": [
+      "BT002"
+    ],
+    "continuity_constraints": [
+      "Lighting must shift to match the Lovely Lady persona",
+      "Maintain straw texture and clumsy movement for the_scarecrow",
+      "The promise of brains"
+    ],
+    "prompt_seed": "Authority Single 9: The promise of brains. authority_single. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Readable medium com...",
+    "shot_notes": "The promise of brains",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH011_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC004"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH011",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH011_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH011",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH011_chapter_xi.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH015",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH015_chapter_xv.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH018",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH018_chapter_xviii.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH011",
+        "canonical_id": "the_scarecrow"
+      }
+    ],
+    "evidence_summary": [
+      "Establish the second manifestation of Oz through a persona shift to a Lovely Lady. The interaction must pivot from the Scarecrow's hopeful expectation of receiving brains to the heavy moral weight of a lethal condition imposed by the Wizard.",
+      "The Scarecrow meets the Wizard, who appears as a Lovely Lady. She promises him brains on the condition that he kills the Witch.",
+      "Hope $\\rightarrow$ Moral Conflict.",
+      "the_scarecrow enters the audience chamber seeking wisdom.",
+      "the_scarecrow stands in silent contemplation of a violent demand.",
+      "The Wizard offers brains in exchange for the Witch's death.",
+      "the_great_oz | [CH003] Chapter III (query appears in paragraph preview) [CH005] Chapter V (query appears in paragraph preview) [CH006] Chapter VI (query appears in paragraph preview)",
+      "the_scarecrow | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH003/the_scarecrow.md] Physical Description: A living figure stuffed with straw. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/cha...",
+      "palace_of_oz | A grandiose emerald-themed sovereign residence featuring monumental ceremonial halls and royal audience chambers. The interior is characterized by large-scale chambers designed to accommodate massive, non-human manifestations of the Wizard. |..."
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "ceremonial_tableau",
+    "coverage_role": "authority_single",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT002",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "major",
+      "confidence": 0.76,
+      "reasons": [
+        "dialogue verb with subject count = 2",
+        "scene intent is ceremonial_tableau",
+        "importance = major"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH011_SC004_SH009_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "4d323d109a7a4abf6e9fa2e89ebff2013cd35b6c",
+      "created_at_utc": "2026-04-27T20:53:48.895146+00:00",
+      "updated_at_utc": "2026-04-27T20:54:46.767794+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH011_SC004",
+          "version": "68c4e2a6e8ac63b631f1dade3939ce4fd6f57c17"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH011_SC004",
+          "version": "ea52a76074721824f86534ed604f7d0326402b73"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH011_SC004",
+          "version": "83f5ca8081b60607a5d34a5e6de7644c5c0a0267"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:53:48.895646+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "4d323d109a7a4abf6e9fa2e89ebff2013cd35b6c"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:46.768793+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "4d323d109a7a4abf6e9fa2e89ebff2013cd35b6c"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH010",
+    "scene_id": "CH011_SC004",
+    "chapter_id": "CH011",
+    "shot_order": 10,
+    "previous_shot_id": "SH009",
+    "next_shot_id": "SH011",
+    "primary_subject": "the_great_oz",
+    "secondary_subjects": [
+      "the_scarecrow"
+    ],
+    "shot_moment_summary": "The promise of brains",
+    "start_state": "the_great_oz speaks",
+    "end_state": "the_scarecrow listens with hope",
+    "action_during_shot": "The promise of brains",
+    "action_continues_from": "the_scarecrow listens with hope",
+    "action_hands_off_to": "BT003",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "the_great_oz",
+    "visible_secondary_subject_ids": [
+      "the_scarecrow"
+    ],
+    "primary_subject_frame_position": "foreground right within throne_area",
+    "primary_subject_scale_relation": "Humanoid scale vs. authoritative presence in palace_of_oz.",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "the_great_oz speaks",
+    "subject_relation_summary": "the_great_oz plays against the_scarecrow in the same frame",
+    "required_environment_anchor_1": "throne_area",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "Humanoid scale vs. authoritative presence in palace_of_oz.",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "interaction across the floor space",
+      "audience_floor/throne_area",
+      "the_great_oz remains readable within the active playing space.",
+      "the_scarecrow remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the throne_area.",
+      "Background depth should keep palace_of_oz legible as the location anchor.",
+      "Subject 1: the_great_oz remains visually readable against the environment scale.",
+      "Subject 2: the_scarecrow remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "the_great_oz focuses toward the active scene action."
+    ],
+    "environment_subzone": "throne_area",
+    "key_visible_environment_features": [
+      "throne_area",
+      "Chapter-local environment alias match for 'The Throne Room/Audience Chamber' (key_overlap=0, label_overlap=2, context..."
+    ],
+    "continuity_from_previous_shot": "the_scarecrow listens with hope",
+    "continuity_to_next_shot": "BT003",
+    "pose_anchor_frame": "the_great_oz speaks",
+    "pose_end_frame": "the_scarecrow listens with hope",
+    "shot_title": "Petitioner Group 10: The promise of brains",
+    "shot_type": "petitioner_group",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in palace_of_oz featuring the_great_oz, the_scarecrow.",
+    "target_seconds": 7.0,
+    "characters_in_frame": [
+      {
+        "label": "The Great Oz (Lovely Lady)",
+        "canonical_id": "the_great_oz",
+        "display_name": "the_great_oz",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH011/the_great_oz.md",
+        "notes": "Direct registry match for 'the_great_oz'."
+      },
+      {
+        "label": "Scarecrow",
+        "canonical_id": "the_scarecrow",
+        "display_name": "the_scarecrow",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 186,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH011/the_scarecrow.md",
+        "notes": "asset id exactly matches canonical id | query matches alias 'scarecrow'"
+      }
+    ],
+    "environment": {
+      "label": "The Throne Room/Audience Chamber",
+      "canonical_id": "palace_of_oz",
+      "display_name": "palace_of_oz",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 56,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH011/palace_of_oz.md",
+      "notes": "Chapter-local environment alias match for 'The Throne Room/Audience Chamber' (key_overlap=0, label_overlap=2, context_overlap=4)."
+    },
+    "beat_ids": [
+      "BT002"
+    ],
+    "continuity_constraints": [
+      "Lighting must shift to match the Lovely Lady persona",
+      "Maintain straw texture and clumsy movement for the_scarecrow",
+      "The promise of brains"
+    ],
+    "prompt_seed": "Petitioner Group 10: The promise of brains. petitioner_group. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Readable medium co...",
+    "shot_notes": "The promise of brains",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH011_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC004"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH011",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH011_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH011",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH011_chapter_xi.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH015",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH015_chapter_xv.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH018",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH018_chapter_xviii.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH011",
+        "canonical_id": "the_scarecrow"
+      }
+    ],
+    "evidence_summary": [
+      "Establish the second manifestation of Oz through a persona shift to a Lovely Lady. The interaction must pivot from the Scarecrow's hopeful expectation of receiving brains to the heavy moral weight of a lethal condition imposed by the Wizard.",
+      "The Scarecrow meets the Wizard, who appears as a Lovely Lady. She promises him brains on the condition that he kills the Witch.",
+      "Hope $\\rightarrow$ Moral Conflict.",
+      "the_scarecrow enters the audience chamber seeking wisdom.",
+      "the_scarecrow stands in silent contemplation of a violent demand.",
+      "The Wizard offers brains in exchange for the Witch's death.",
+      "the_great_oz | [CH003] Chapter III (query appears in paragraph preview) [CH005] Chapter V (query appears in paragraph preview) [CH006] Chapter VI (query appears in paragraph preview)",
+      "the_scarecrow | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH003/the_scarecrow.md] Physical Description: A living figure stuffed with straw. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/cha...",
+      "palace_of_oz | A grandiose emerald-themed sovereign residence featuring monumental ceremonial halls and royal audience chambers. The interior is characterized by large-scale chambers designed to accommodate massive, non-human manifestations of the Wizard. |..."
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "ceremonial_tableau",
+    "coverage_role": "petitioner_group",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT002",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "major",
+      "confidence": 0.76,
+      "reasons": [
+        "dialogue verb with subject count = 2",
+        "scene intent is ceremonial_tableau",
+        "importance = major"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH011_SC004_SH010_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "4d323d109a7a4abf6e9fa2e89ebff2013cd35b6c",
+      "created_at_utc": "2026-04-27T20:53:48.896645+00:00",
+      "updated_at_utc": "2026-04-27T20:54:46.773805+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH011_SC004",
+          "version": "68c4e2a6e8ac63b631f1dade3939ce4fd6f57c17"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH011_SC004",
+          "version": "ea52a76074721824f86534ed604f7d0326402b73"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH011_SC004",
+          "version": "83f5ca8081b60607a5d34a5e6de7644c5c0a0267"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:53:48.897146+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "4d323d109a7a4abf6e9fa2e89ebff2013cd35b6c"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:46.774803+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "4d323d109a7a4abf6e9fa2e89ebff2013cd35b6c"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH011",
+    "scene_id": "CH011_SC004",
+    "chapter_id": "CH011",
+    "shot_order": 11,
+    "previous_shot_id": "SH010",
+    "next_shot_id": "SH012",
+    "primary_subject": "the_great_oz",
+    "secondary_subjects": [
+      "the_scarecrow"
+    ],
+    "shot_moment_summary": "The promise of brains",
+    "start_state": "the_great_oz speaks",
+    "end_state": "the_scarecrow listens with hope",
+    "action_during_shot": "The promise of brains",
+    "action_continues_from": "the_scarecrow listens with hope",
+    "action_hands_off_to": "BT003",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "the_great_oz",
+    "visible_secondary_subject_ids": [
+      "the_scarecrow"
+    ],
+    "primary_subject_frame_position": "foreground right within throne_area",
+    "primary_subject_scale_relation": "Humanoid scale vs. authoritative presence in palace_of_oz.",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "the_great_oz speaks",
+    "subject_relation_summary": "the_great_oz plays against the_scarecrow in the same frame",
+    "required_environment_anchor_1": "throne_area",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "Humanoid scale vs. authoritative presence in palace_of_oz.",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "interaction across the floor space",
+      "audience_floor/throne_area",
+      "the_great_oz remains readable within the active playing space.",
+      "the_scarecrow remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the throne_area.",
+      "Background depth should keep palace_of_oz legible as the location anchor.",
+      "Subject 1: the_great_oz remains visually readable against the environment scale.",
+      "Subject 2: the_scarecrow remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "the_great_oz focuses toward the active scene action."
+    ],
+    "environment_subzone": "throne_area",
+    "key_visible_environment_features": [
+      "throne_area",
+      "Chapter-local environment alias match for 'The Throne Room/Audience Chamber' (key_overlap=0, label_overlap=2, context..."
+    ],
+    "continuity_from_previous_shot": "the_scarecrow listens with hope",
+    "continuity_to_next_shot": "BT003",
+    "pose_anchor_frame": "the_great_oz speaks",
+    "pose_end_frame": "the_scarecrow listens with hope",
+    "shot_title": "Crowd Response 11: The promise of brains",
+    "shot_type": "crowd_response",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in palace_of_oz featuring the_great_oz, the_scarecrow.",
+    "target_seconds": 7.0,
+    "characters_in_frame": [
+      {
+        "label": "The Great Oz (Lovely Lady)",
+        "canonical_id": "the_great_oz",
+        "display_name": "the_great_oz",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH011/the_great_oz.md",
+        "notes": "Direct registry match for 'the_great_oz'."
+      },
+      {
+        "label": "Scarecrow",
+        "canonical_id": "the_scarecrow",
+        "display_name": "the_scarecrow",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 186,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH011/the_scarecrow.md",
+        "notes": "asset id exactly matches canonical id | query matches alias 'scarecrow'"
+      }
+    ],
+    "environment": {
+      "label": "The Throne Room/Audience Chamber",
+      "canonical_id": "palace_of_oz",
+      "display_name": "palace_of_oz",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 56,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH011/palace_of_oz.md",
+      "notes": "Chapter-local environment alias match for 'The Throne Room/Audience Chamber' (key_overlap=0, label_overlap=2, context_overlap=4)."
+    },
+    "beat_ids": [
+      "BT002"
+    ],
+    "continuity_constraints": [
+      "Lighting must shift to match the Lovely Lady persona",
+      "Maintain straw texture and clumsy movement for the_scarecrow",
+      "The promise of brains"
+    ],
+    "prompt_seed": "Crowd Response 11: The promise of brains. crowd_response. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Readable medium compos...",
+    "shot_notes": "The promise of brains",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH011_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC004"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH011",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH011_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH011",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH011_chapter_xi.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH015",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH015_chapter_xv.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH018",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH018_chapter_xviii.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH011",
+        "canonical_id": "the_scarecrow"
+      }
+    ],
+    "evidence_summary": [
+      "Establish the second manifestation of Oz through a persona shift to a Lovely Lady. The interaction must pivot from the Scarecrow's hopeful expectation of receiving brains to the heavy moral weight of a lethal condition imposed by the Wizard.",
+      "The Scarecrow meets the Wizard, who appears as a Lovely Lady. She promises him brains on the condition that he kills the Witch.",
+      "Hope $\\rightarrow$ Moral Conflict.",
+      "the_scarecrow enters the audience chamber seeking wisdom.",
+      "the_scarecrow stands in silent contemplation of a violent demand.",
+      "The Wizard offers brains in exchange for the Witch's death.",
+      "the_great_oz | [CH003] Chapter III (query appears in paragraph preview) [CH005] Chapter V (query appears in paragraph preview) [CH006] Chapter VI (query appears in paragraph preview)",
+      "the_scarecrow | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH003/the_scarecrow.md] Physical Description: A living figure stuffed with straw. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/cha...",
+      "palace_of_oz | A grandiose emerald-themed sovereign residence featuring monumental ceremonial halls and royal audience chambers. The interior is characterized by large-scale chambers designed to accommodate massive, non-human manifestations of the Wizard. |..."
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "ceremonial_tableau",
+    "coverage_role": "crowd_response",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT002",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "major",
+      "confidence": 0.76,
+      "reasons": [
+        "dialogue verb with subject count = 2",
+        "scene intent is ceremonial_tableau",
+        "importance = major"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH011_SC004_SH011_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "4d323d109a7a4abf6e9fa2e89ebff2013cd35b6c",
+      "created_at_utc": "2026-04-27T20:53:48.898645+00:00",
+      "updated_at_utc": "2026-04-27T20:54:46.779803+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH011_SC004",
+          "version": "68c4e2a6e8ac63b631f1dade3939ce4fd6f57c17"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH011_SC004",
+          "version": "ea52a76074721824f86534ed604f7d0326402b73"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH011_SC004",
+          "version": "83f5ca8081b60607a5d34a5e6de7644c5c0a0267"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:53:48.899145+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "4d323d109a7a4abf6e9fa2e89ebff2013cd35b6c"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:46.780304+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "4d323d109a7a4abf6e9fa2e89ebff2013cd35b6c"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH012",
+    "scene_id": "CH011_SC004",
+    "chapter_id": "CH011",
+    "shot_order": 12,
+    "previous_shot_id": "SH011",
+    "next_shot_id": "SH013",
+    "primary_subject": "the_great_oz",
+    "secondary_subjects": [
+      "the_scarecrow"
+    ],
+    "shot_moment_summary": "The promise of brains",
+    "start_state": "the_great_oz speaks",
+    "end_state": "the_scarecrow listens with hope",
+    "action_during_shot": "The promise of brains",
+    "action_continues_from": "the_scarecrow listens with hope",
+    "action_hands_off_to": "BT003",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "the_great_oz",
+    "visible_secondary_subject_ids": [
+      "the_scarecrow"
+    ],
+    "primary_subject_frame_position": "foreground right within throne_area",
+    "primary_subject_scale_relation": "Humanoid scale vs. authoritative presence in palace_of_oz.",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "the_great_oz speaks",
+    "subject_relation_summary": "the_great_oz plays against the_scarecrow in the same frame",
+    "required_environment_anchor_1": "throne_area",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "Humanoid scale vs. authoritative presence in palace_of_oz.",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "interaction across the floor space",
+      "audience_floor/throne_area",
+      "the_great_oz remains readable within the active playing space.",
+      "the_scarecrow remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the throne_area.",
+      "Background depth should keep palace_of_oz legible as the location anchor.",
+      "Subject 1: the_great_oz remains visually readable against the environment scale.",
+      "Subject 2: the_scarecrow remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "the_great_oz focuses toward the active scene action."
+    ],
+    "environment_subzone": "throne_area",
+    "key_visible_environment_features": [
+      "throne_area",
+      "Chapter-local environment alias match for 'The Throne Room/Audience Chamber' (key_overlap=0, label_overlap=2, context..."
+    ],
+    "continuity_from_previous_shot": "the_scarecrow listens with hope",
+    "continuity_to_next_shot": "BT003",
+    "pose_anchor_frame": "the_great_oz speaks",
+    "pose_end_frame": "the_scarecrow listens with hope",
+    "shot_title": "Symbol Insert 12: The promise of brains",
+    "shot_type": "symbol_insert",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in palace_of_oz featuring the_great_oz, the_scarecrow.",
+    "target_seconds": 5.4,
+    "characters_in_frame": [
+      {
+        "label": "The Great Oz (Lovely Lady)",
+        "canonical_id": "the_great_oz",
+        "display_name": "the_great_oz",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH011/the_great_oz.md",
+        "notes": "Direct registry match for 'the_great_oz'."
+      },
+      {
+        "label": "Scarecrow",
+        "canonical_id": "the_scarecrow",
+        "display_name": "the_scarecrow",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 186,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH011/the_scarecrow.md",
+        "notes": "asset id exactly matches canonical id | query matches alias 'scarecrow'"
+      }
+    ],
+    "environment": {
+      "label": "The Throne Room/Audience Chamber",
+      "canonical_id": "palace_of_oz",
+      "display_name": "palace_of_oz",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 56,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH011/palace_of_oz.md",
+      "notes": "Chapter-local environment alias match for 'The Throne Room/Audience Chamber' (key_overlap=0, label_overlap=2, context_overlap=4)."
+    },
+    "beat_ids": [
+      "BT002"
+    ],
+    "continuity_constraints": [
+      "Lighting must shift to match the Lovely Lady persona",
+      "Maintain straw texture and clumsy movement for the_scarecrow",
+      "The promise of brains"
+    ],
+    "prompt_seed": "Symbol Insert 12: The promise of brains. symbol_insert. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Readable medium composit...",
+    "shot_notes": "The promise of brains",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH011_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC004"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH011",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH011_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH011",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH011_chapter_xi.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH015",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH015_chapter_xv.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH018",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH018_chapter_xviii.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH011",
+        "canonical_id": "the_scarecrow"
+      }
+    ],
+    "evidence_summary": [
+      "Establish the second manifestation of Oz through a persona shift to a Lovely Lady. The interaction must pivot from the Scarecrow's hopeful expectation of receiving brains to the heavy moral weight of a lethal condition imposed by the Wizard.",
+      "The Scarecrow meets the Wizard, who appears as a Lovely Lady. She promises him brains on the condition that he kills the Witch.",
+      "Hope $\\rightarrow$ Moral Conflict.",
+      "the_scarecrow enters the audience chamber seeking wisdom.",
+      "the_scarecrow stands in silent contemplation of a violent demand.",
+      "The Wizard offers brains in exchange for the Witch's death.",
+      "the_great_oz | [CH003] Chapter III (query appears in paragraph preview) [CH005] Chapter V (query appears in paragraph preview) [CH006] Chapter VI (query appears in paragraph preview)",
+      "the_scarecrow | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH003/the_scarecrow.md] Physical Description: A living figure stuffed with straw. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/cha...",
+      "palace_of_oz | A grandiose emerald-themed sovereign residence featuring monumental ceremonial halls and royal audience chambers. The interior is characterized by large-scale chambers designed to accommodate massive, non-human manifestations of the Wizard. |..."
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "ceremonial_tableau",
+    "coverage_role": "symbol_insert",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT002",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "major",
+      "confidence": 0.76,
+      "reasons": [
+        "dialogue verb with subject count = 2",
+        "scene intent is ceremonial_tableau",
+        "importance = major"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH011_SC004_SH012_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "4d323d109a7a4abf6e9fa2e89ebff2013cd35b6c",
+      "created_at_utc": "2026-04-27T20:53:48.900145+00:00",
+      "updated_at_utc": "2026-04-27T20:54:46.785804+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH011_SC004",
+          "version": "68c4e2a6e8ac63b631f1dade3939ce4fd6f57c17"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH011_SC004",
+          "version": "ea52a76074721824f86534ed604f7d0326402b73"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH011_SC004",
+          "version": "83f5ca8081b60607a5d34a5e6de7644c5c0a0267"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:53:48.900644+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "4d323d109a7a4abf6e9fa2e89ebff2013cd35b6c"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:46.786808+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "4d323d109a7a4abf6e9fa2e89ebff2013cd35b6c"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH013",
+    "scene_id": "CH011_SC004",
+    "chapter_id": "CH011",
+    "shot_order": 13,
+    "previous_shot_id": "SH012",
+    "next_shot_id": "SH014",
+    "primary_subject": "the_great_oz",
+    "secondary_subjects": [
+      "the_scarecrow"
+    ],
+    "shot_moment_summary": "The promise of brains",
+    "start_state": "the_great_oz speaks",
+    "end_state": "the_scarecrow listens with hope",
+    "action_during_shot": "The promise of brains",
+    "action_continues_from": "the_scarecrow listens with hope",
+    "action_hands_off_to": "BT003",
+    "shot_size": "close_up",
+    "camera_angle": "eye_level",
+    "lens_family": "portrait",
+    "camera_motion": "push_in",
+    "zoom_behavior": "subtle_in",
+    "focus_strategy": "shallow_subject",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "the_great_oz",
+    "visible_secondary_subject_ids": [
+      "the_scarecrow"
+    ],
+    "primary_subject_frame_position": "foreground inside throne_area",
+    "primary_subject_scale_relation": "Humanoid scale vs. authoritative presence in palace_of_oz.",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "the_great_oz speaks",
+    "subject_relation_summary": "the_great_oz plays against the_scarecrow in the same frame",
+    "required_environment_anchor_1": "throne_area",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "Humanoid scale vs. authoritative presence in palace_of_oz.",
+    "camera_package_description": "close-up, eye level, portrait lens, push in, zoom subtle in, shallow subject, hard directional",
+    "subject_blocking": [
+      "interaction across the floor space",
+      "audience_floor/throne_area",
+      "the_great_oz remains readable within the active playing space.",
+      "the_scarecrow remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the throne_area.",
+      "Background depth should keep palace_of_oz legible as the location anchor.",
+      "Subject 1: the_great_oz remains visually readable against the environment scale.",
+      "Subject 2: the_scarecrow remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "the_great_oz focuses toward the active scene action."
+    ],
+    "environment_subzone": "throne_area",
+    "key_visible_environment_features": [
+      "throne_area",
+      "Chapter-local environment alias match for 'The Throne Room/Audience Chamber' (key_overlap=0, label_overlap=2, context..."
+    ],
+    "continuity_from_previous_shot": "the_scarecrow listens with hope",
+    "continuity_to_next_shot": "BT003",
+    "pose_anchor_frame": "the_great_oz speaks",
+    "pose_end_frame": "the_scarecrow listens with hope",
+    "shot_title": "Reaction Closeup 13: The promise of brains",
+    "shot_type": "reaction_closeup",
+    "camera_description": "Close framing that isolates reaction and emotional emphasis.",
+    "composition": "Intimate composition that isolates the_great_oz, the_scarecrow against palace_of_oz to capture the beat's emotional turn.",
+    "target_seconds": 7.0,
+    "characters_in_frame": [
+      {
+        "label": "The Great Oz (Lovely Lady)",
+        "canonical_id": "the_great_oz",
+        "display_name": "the_great_oz",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH011/the_great_oz.md",
+        "notes": "Direct registry match for 'the_great_oz'."
+      },
+      {
+        "label": "Scarecrow",
+        "canonical_id": "the_scarecrow",
+        "display_name": "the_scarecrow",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 186,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH011/the_scarecrow.md",
+        "notes": "asset id exactly matches canonical id | query matches alias 'scarecrow'"
+      }
+    ],
+    "environment": {
+      "label": "The Throne Room/Audience Chamber",
+      "canonical_id": "palace_of_oz",
+      "display_name": "palace_of_oz",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 56,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH011/palace_of_oz.md",
+      "notes": "Chapter-local environment alias match for 'The Throne Room/Audience Chamber' (key_overlap=0, label_overlap=2, context_overlap=4)."
+    },
+    "beat_ids": [
+      "BT002"
+    ],
+    "continuity_constraints": [
+      "Lighting must shift to match the Lovely Lady persona",
+      "Maintain straw texture and clumsy movement for the_scarecrow",
+      "The promise of brains"
+    ],
+    "prompt_seed": "Reaction Closeup 13: The promise of brains. reaction_closeup. size=close_up. angle=eye_level. lens=portrait. motion=push_in. zoom=subtle_in. focus=shallow_subject. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Close framing that isolates reaction and emotional emphasis. Int...",
+    "shot_notes": "The promise of brains",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH011_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC004"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH011",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH011_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH011",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH011_chapter_xi.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH015",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH015_chapter_xv.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH018",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH018_chapter_xviii.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH011",
+        "canonical_id": "the_scarecrow"
+      }
+    ],
+    "evidence_summary": [
+      "Establish the second manifestation of Oz through a persona shift to a Lovely Lady. The interaction must pivot from the Scarecrow's hopeful expectation of receiving brains to the heavy moral weight of a lethal condition imposed by the Wizard.",
+      "The Scarecrow meets the Wizard, who appears as a Lovely Lady. She promises him brains on the condition that he kills the Witch.",
+      "Hope $\\rightarrow$ Moral Conflict.",
+      "the_scarecrow enters the audience chamber seeking wisdom.",
+      "the_scarecrow stands in silent contemplation of a violent demand.",
+      "The Wizard offers brains in exchange for the Witch's death.",
+      "the_great_oz | [CH003] Chapter III (query appears in paragraph preview) [CH005] Chapter V (query appears in paragraph preview) [CH006] Chapter VI (query appears in paragraph preview)",
+      "the_scarecrow | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH003/the_scarecrow.md] Physical Description: A living figure stuffed with straw. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/cha...",
+      "palace_of_oz | A grandiose emerald-themed sovereign residence featuring monumental ceremonial halls and royal audience chambers. The interior is characterized by large-scale chambers designed to accommodate massive, non-human manifestations of the Wizard. |..."
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "ceremonial_tableau",
+    "coverage_role": "decision_closeup",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT002",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "major",
+      "confidence": 0.76,
+      "reasons": [
+        "dialogue verb with subject count = 2",
+        "scene intent is ceremonial_tableau",
+        "importance = major"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH011_SC004_SH013_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "4d323d109a7a4abf6e9fa2e89ebff2013cd35b6c",
+      "created_at_utc": "2026-04-27T20:53:48.901646+00:00",
+      "updated_at_utc": "2026-04-27T20:54:46.791322+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH011_SC004",
+          "version": "68c4e2a6e8ac63b631f1dade3939ce4fd6f57c17"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH011_SC004",
+          "version": "ea52a76074721824f86534ed604f7d0326402b73"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH011_SC004",
+          "version": "83f5ca8081b60607a5d34a5e6de7644c5c0a0267"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:53:48.902147+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "4d323d109a7a4abf6e9fa2e89ebff2013cd35b6c"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:46.792828+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "4d323d109a7a4abf6e9fa2e89ebff2013cd35b6c"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH014",
+    "scene_id": "CH011_SC004",
+    "chapter_id": "CH011",
+    "shot_order": 14,
+    "previous_shot_id": "SH013",
+    "next_shot_id": "SH015",
+    "primary_subject": "the_great_oz",
+    "secondary_subjects": [
+      "the_scarecrow"
+    ],
+    "shot_moment_summary": "The promise of brains",
+    "start_state": "the_great_oz speaks",
+    "end_state": "the_scarecrow listens with hope",
+    "action_during_shot": "The promise of brains",
+    "action_continues_from": "the_scarecrow listens with hope",
+    "action_hands_off_to": "BT003",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "the_great_oz",
+    "visible_secondary_subject_ids": [
+      "the_scarecrow"
+    ],
+    "primary_subject_frame_position": "foreground right within throne_area",
+    "primary_subject_scale_relation": "Humanoid scale vs. authoritative presence in palace_of_oz.",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "the_great_oz speaks",
+    "subject_relation_summary": "the_great_oz plays against the_scarecrow in the same frame",
+    "required_environment_anchor_1": "throne_area",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "Humanoid scale vs. authoritative presence in palace_of_oz.",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "interaction across the floor space",
+      "audience_floor/throne_area",
+      "the_great_oz remains readable within the active playing space.",
+      "the_scarecrow remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the throne_area.",
+      "Background depth should keep palace_of_oz legible as the location anchor.",
+      "Subject 1: the_great_oz remains visually readable against the environment scale.",
+      "Subject 2: the_scarecrow remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "the_great_oz focuses toward the active scene action."
+    ],
+    "environment_subzone": "throne_area",
+    "key_visible_environment_features": [
+      "throne_area",
+      "Chapter-local environment alias match for 'The Throne Room/Audience Chamber' (key_overlap=0, label_overlap=2, context..."
+    ],
+    "continuity_from_previous_shot": "the_scarecrow listens with hope",
+    "continuity_to_next_shot": "BT003",
+    "pose_anchor_frame": "the_great_oz speaks",
+    "pose_end_frame": "the_scarecrow listens with hope",
+    "shot_title": "Scale Proof Wide 14: The promise of brains",
+    "shot_type": "scale_proof_wide",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in palace_of_oz featuring the_great_oz, the_scarecrow.",
+    "target_seconds": 10.8,
+    "characters_in_frame": [
+      {
+        "label": "The Great Oz (Lovely Lady)",
+        "canonical_id": "the_great_oz",
+        "display_name": "the_great_oz",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH011/the_great_oz.md",
+        "notes": "Direct registry match for 'the_great_oz'."
+      },
+      {
+        "label": "Scarecrow",
+        "canonical_id": "the_scarecrow",
+        "display_name": "the_scarecrow",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 186,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH011/the_scarecrow.md",
+        "notes": "asset id exactly matches canonical id | query matches alias 'scarecrow'"
+      }
+    ],
+    "environment": {
+      "label": "The Throne Room/Audience Chamber",
+      "canonical_id": "palace_of_oz",
+      "display_name": "palace_of_oz",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 56,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH011/palace_of_oz.md",
+      "notes": "Chapter-local environment alias match for 'The Throne Room/Audience Chamber' (key_overlap=0, label_overlap=2, context_overlap=4)."
+    },
+    "beat_ids": [
+      "BT002"
+    ],
+    "continuity_constraints": [
+      "Lighting must shift to match the Lovely Lady persona",
+      "Maintain straw texture and clumsy movement for the_scarecrow",
+      "The promise of brains"
+    ],
+    "prompt_seed": "Scale Proof Wide 14: The promise of brains. scale_proof_wide. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Readable medium co...",
+    "shot_notes": "The promise of brains",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH011_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC004"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH011",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH011_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH011",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH011_chapter_xi.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH015",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH015_chapter_xv.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH018",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH018_chapter_xviii.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH011",
+        "canonical_id": "the_scarecrow"
+      }
+    ],
+    "evidence_summary": [
+      "Establish the second manifestation of Oz through a persona shift to a Lovely Lady. The interaction must pivot from the Scarecrow's hopeful expectation of receiving brains to the heavy moral weight of a lethal condition imposed by the Wizard.",
+      "The Scarecrow meets the Wizard, who appears as a Lovely Lady. She promises him brains on the condition that he kills the Witch.",
+      "Hope $\\rightarrow$ Moral Conflict.",
+      "the_scarecrow enters the audience chamber seeking wisdom.",
+      "the_scarecrow stands in silent contemplation of a violent demand.",
+      "The Wizard offers brains in exchange for the Witch's death.",
+      "the_great_oz | [CH003] Chapter III (query appears in paragraph preview) [CH005] Chapter V (query appears in paragraph preview) [CH006] Chapter VI (query appears in paragraph preview)",
+      "the_scarecrow | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH003/the_scarecrow.md] Physical Description: A living figure stuffed with straw. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/cha...",
+      "palace_of_oz | A grandiose emerald-themed sovereign residence featuring monumental ceremonial halls and royal audience chambers. The interior is characterized by large-scale chambers designed to accommodate massive, non-human manifestations of the Wizard. |..."
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "ceremonial_tableau",
+    "coverage_role": "scale_proof_wide",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT002",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "major",
+      "confidence": 0.76,
+      "reasons": [
+        "dialogue verb with subject count = 2",
+        "scene intent is ceremonial_tableau",
+        "importance = major"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH011_SC004_SH014_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "4d323d109a7a4abf6e9fa2e89ebff2013cd35b6c",
+      "created_at_utc": "2026-04-27T20:53:48.902645+00:00",
+      "updated_at_utc": "2026-04-27T20:54:46.797829+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH011_SC004",
+          "version": "68c4e2a6e8ac63b631f1dade3939ce4fd6f57c17"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH011_SC004",
+          "version": "ea52a76074721824f86534ed604f7d0326402b73"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH011_SC004",
+          "version": "83f5ca8081b60607a5d34a5e6de7644c5c0a0267"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:53:48.903648+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "4d323d109a7a4abf6e9fa2e89ebff2013cd35b6c"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:46.798828+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "4d323d109a7a4abf6e9fa2e89ebff2013cd35b6c"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH015",
+    "scene_id": "CH011_SC004",
+    "chapter_id": "CH011",
+    "shot_order": 15,
+    "previous_shot_id": "SH014",
+    "next_shot_id": "SH016",
+    "primary_subject": "the_scarecrow",
+    "secondary_subjects": [
+      "the_great_oz"
+    ],
+    "shot_moment_summary": "the_scarecrow reacts to the demand to kill the Witch",
+    "start_state": "hopeful expression",
+    "end_state": "conflicted/heavy expression",
+    "action_during_shot": "processing the demand",
+    "action_continues_from": "the_scarecrow listens with hope",
+    "action_hands_off_to": "end_of_scene",
+    "shot_size": "close_up",
+    "camera_angle": "eye_level",
+    "lens_family": "portrait",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "subtle_in",
+    "focus_strategy": "shallow_subject",
+    "lighting_style": "soft_even",
+    "subject_visibility": "on_screen",
+    "narration_mode": "in_scene_speaker",
+    "primary_subject_angle": "front",
+    "visible_primary_subject_id": "the_scarecrow",
+    "visible_secondary_subject_ids": [
+      "the_great_oz"
+    ],
+    "primary_subject_frame_position": "foreground inside audience_floor",
+    "primary_subject_scale_relation": "Humanoid scale vs. authoritative presence in palace_of_oz.",
+    "primary_subject_facing_direction": "facing directly toward camera",
+    "primary_subject_pose_description": "hopeful expression",
+    "subject_relation_summary": "the_scarecrow plays against the_great_oz in the same frame",
+    "required_environment_anchor_1": "audience_floor",
+    "required_subject_anchor_1": "hopeful expression",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "Humanoid scale vs. authoritative presence in palace_of_oz.",
+    "camera_package_description": "close-up, eye level, portrait lens, locked off, zoom subtle in, shallow subject, soft even",
+    "subject_blocking": [
+      "the_scarecrow stationary",
+      "the_scarecrow remains still/clumsy",
+      "audience_floor",
+      "the_scarecrow remains readable within the active playing space.",
+      "the_great_oz remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the audience_floor.",
+      "Background depth should keep palace_of_oz legible as the location anchor.",
+      "Subject 1: the_scarecrow remains visually readable against the environment scale.",
+      "Subject 2: the_great_oz remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "the_scarecrow focuses toward the active scene action."
+    ],
+    "environment_subzone": "audience_floor",
+    "key_visible_environment_features": [
+      "audience_floor",
+      "Chapter-local environment alias match for 'The Throne Room/Audience Chamber' (key_overlap=0, label_overlap=2, context..."
+    ],
+    "continuity_from_previous_shot": "the_scarecrow listens with hope",
+    "continuity_to_next_shot": "end_of_scene",
+    "pose_anchor_frame": "hopeful expression",
+    "pose_end_frame": "conflicted/heavy expression",
+    "shot_title": "Handoff Medium 15: The lethal condition",
+    "shot_type": "handoff_medium",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in palace_of_oz featuring the_scarecrow, the_great_oz.",
+    "target_seconds": 7.0,
+    "characters_in_frame": [
+      {
+        "label": "Scarecrow",
+        "canonical_id": "the_scarecrow",
+        "display_name": "the_scarecrow",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 186,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH011/the_scarecrow.md",
+        "notes": "asset id exactly matches canonical id | query matches alias 'scarecrow'"
+      },
+      {
+        "label": "The Great Oz (Lovely Lady)",
+        "canonical_id": "the_great_oz",
+        "display_name": "the_great_oz",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH011/the_great_oz.md",
+        "notes": "Direct registry match for 'the_great_oz'."
+      }
+    ],
+    "environment": {
+      "label": "The Throne Room/Audience Chamber",
+      "canonical_id": "palace_of_oz",
+      "display_name": "palace_of_oz",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 56,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH011/palace_of_oz.md",
+      "notes": "Chapter-local environment alias match for 'The Throne Room/Audience Chamber' (key_overlap=0, label_overlap=2, context_overlap=4)."
+    },
+    "beat_ids": [
       "BT003"
     ],
     "continuity_constraints": [
@@ -533,7 +3437,7 @@
       "Maintain straw texture and clumsy movement for the_scarecrow",
       "The lethal condition"
     ],
-    "prompt_seed": "Reaction Closeup 3: The lethal condition. reaction_closeup. size=close_up. angle=eye_level. lens=portrait. motion=push_in. zoom=subtle_in. focus=shallow_subject. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Close framing that isolates reaction and emotional emphasis.",
+    "prompt_seed": "Handoff Medium 15: The lethal condition. handoff_medium. size=close_up. angle=eye_level. lens=portrait. motion=locked_off. zoom=subtle_in. focus=shallow_subject. lighting=soft_even. visibility=on_screen. subject_angle=front. Stable readable framing built from the beat requirement. Readable medium composition in pala...",
     "shot_notes": "The lethal condition",
     "evidence_refs": [
       {
@@ -602,13 +3506,29 @@
       "the_scarecrow | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH003/the_scarecrow.md] Physical Description: A living figure stuffed with straw. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/cha...",
       "palace_of_oz | A grandiose emerald-themed sovereign residence featuring monumental ceremonial halls and royal audience chambers. The interior is characterized by large-scale chambers designed to accommodate massive, non-human manifestations of the Wizard. |..."
     ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "ceremonial_tableau",
+    "coverage_role": "handoff_medium",
+    "beat_type": "transition_handoff",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT003",
+      "beat_type": "transition_handoff",
+      "importance": "major",
+      "confidence": 0.55,
+      "reasons": [
+        "importance = major"
+      ]
+    },
     "metadata": {
-      "artifact_id": "CH011_SC004_SH003_SHOT_PACKAGE",
+      "artifact_id": "CH011_SC004_SH015_SHOT_PACKAGE",
       "artifact_type": "shot_package",
       "status": "generated",
-      "source_fingerprint": "0bd84815c24c4f2b36c96085336d512fc90a3364",
-      "created_at_utc": "2026-04-27T17:09:52.809594+00:00",
-      "updated_at_utc": "2026-04-27T17:09:52.809594+00:00",
+      "source_fingerprint": "4d323d109a7a4abf6e9fa2e89ebff2013cd35b6c",
+      "created_at_utc": "2026-04-27T20:53:48.905155+00:00",
+      "updated_at_utc": "2026-04-27T20:54:46.804332+00:00",
       "upstream_dependencies": [
         {
           "dependency_type": "scene_contract",
@@ -623,16 +3543,256 @@
         {
           "dependency_type": "shot_blueprints",
           "dependency_id": "CH011_SC004",
-          "version": "8dd024d5579f7f44c303df1a842057fe31ba3ff6"
+          "version": "83f5ca8081b60607a5d34a5e6de7644c5c0a0267"
         }
       ],
       "locked_fields": {},
       "manual_overrides": {},
       "revision_history": [
         {
-          "timestamp_utc": "2026-04-27T17:11:07.820711+00:00",
+          "timestamp_utc": "2026-04-27T20:53:48.905655+00:00",
           "action": "synthesized",
-          "source_fingerprint": "0bd84815c24c4f2b36c96085336d512fc90a3364"
+          "source_fingerprint": "4d323d109a7a4abf6e9fa2e89ebff2013cd35b6c"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:46.804332+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "4d323d109a7a4abf6e9fa2e89ebff2013cd35b6c"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH016",
+    "scene_id": "CH011_SC004",
+    "chapter_id": "CH011",
+    "shot_order": 16,
+    "previous_shot_id": "SH015",
+    "next_shot_id": "",
+    "primary_subject": "the_great_oz",
+    "secondary_subjects": [
+      "the_scarecrow"
+    ],
+    "shot_moment_summary": "The lethal condition",
+    "start_state": "the_great_oz demands the Witch's death",
+    "end_state": "the_scarecrow processes the moral conflict",
+    "action_during_shot": "The lethal condition",
+    "action_continues_from": "conflicted/heavy expression",
+    "action_hands_off_to": "end_of_scene",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "the_great_oz",
+    "visible_secondary_subject_ids": [
+      "the_scarecrow"
+    ],
+    "primary_subject_frame_position": "foreground right within audience_floor",
+    "primary_subject_scale_relation": "Humanoid scale vs. authoritative presence in palace_of_oz.",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "the_great_oz demands the Witch's death",
+    "subject_relation_summary": "the_great_oz plays against the_scarecrow in the same frame",
+    "required_environment_anchor_1": "audience_floor",
+    "required_subject_anchor_1": "the_scarecrow remains still/clumsy",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "Humanoid scale vs. authoritative presence in palace_of_oz.",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "the_scarecrow remains still/clumsy",
+      "audience_floor",
+      "the_great_oz remains readable within the active playing space.",
+      "the_scarecrow remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the audience_floor.",
+      "Background depth should keep palace_of_oz legible as the location anchor.",
+      "Subject 1: the_great_oz remains visually readable against the environment scale.",
+      "Subject 2: the_scarecrow remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "the_great_oz focuses toward the active scene action."
+    ],
+    "environment_subzone": "audience_floor",
+    "key_visible_environment_features": [
+      "audience_floor",
+      "Chapter-local environment alias match for 'The Throne Room/Audience Chamber' (key_overlap=0, label_overlap=2, context..."
+    ],
+    "continuity_from_previous_shot": "conflicted/heavy expression",
+    "continuity_to_next_shot": "end_of_scene",
+    "pose_anchor_frame": "the_great_oz demands the Witch's death",
+    "pose_end_frame": "the_scarecrow processes the moral conflict",
+    "shot_title": "Transition Wide 16: The lethal condition",
+    "shot_type": "transition_wide",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in palace_of_oz featuring the_great_oz, the_scarecrow.",
+    "target_seconds": 10.8,
+    "characters_in_frame": [
+      {
+        "label": "The Great Oz (Lovely Lady)",
+        "canonical_id": "the_great_oz",
+        "display_name": "the_great_oz",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH011/the_great_oz.md",
+        "notes": "Direct registry match for 'the_great_oz'."
+      },
+      {
+        "label": "Scarecrow",
+        "canonical_id": "the_scarecrow",
+        "display_name": "the_scarecrow",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 186,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH011/the_scarecrow.md",
+        "notes": "asset id exactly matches canonical id | query matches alias 'scarecrow'"
+      }
+    ],
+    "environment": {
+      "label": "The Throne Room/Audience Chamber",
+      "canonical_id": "palace_of_oz",
+      "display_name": "palace_of_oz",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 56,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH011/palace_of_oz.md",
+      "notes": "Chapter-local environment alias match for 'The Throne Room/Audience Chamber' (key_overlap=0, label_overlap=2, context_overlap=4)."
+    },
+    "beat_ids": [
+      "BT003"
+    ],
+    "continuity_constraints": [
+      "Lighting must shift to match the Lovely Lady persona",
+      "Maintain straw texture and clumsy movement for the_scarecrow",
+      "The lethal condition"
+    ],
+    "prompt_seed": "Transition Wide 16: The lethal condition. transition_wide. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Readable medium compo...",
+    "shot_notes": "The lethal condition",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH011_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH011",
+        "scene_id": "CH011_SC004"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH011",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH011_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH011",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH011_chapter_xi.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH015",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH015_chapter_xv.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH018",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH018_chapter_xviii.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH011",
+        "canonical_id": "the_scarecrow"
+      }
+    ],
+    "evidence_summary": [
+      "Establish the second manifestation of Oz through a persona shift to a Lovely Lady. The interaction must pivot from the Scarecrow's hopeful expectation of receiving brains to the heavy moral weight of a lethal condition imposed by the Wizard.",
+      "The Scarecrow meets the Wizard, who appears as a Lovely Lady. She promises him brains on the condition that he kills the Witch.",
+      "Hope $\\rightarrow$ Moral Conflict.",
+      "the_scarecrow enters the audience chamber seeking wisdom.",
+      "the_scarecrow stands in silent contemplation of a violent demand.",
+      "The Wizard offers brains in exchange for the Witch's death.",
+      "the_great_oz | [CH003] Chapter III (query appears in paragraph preview) [CH005] Chapter V (query appears in paragraph preview) [CH006] Chapter VI (query appears in paragraph preview)",
+      "the_scarecrow | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH003/the_scarecrow.md] Physical Description: A living figure stuffed with straw. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/cha...",
+      "palace_of_oz | A grandiose emerald-themed sovereign residence featuring monumental ceremonial halls and royal audience chambers. The interior is characterized by large-scale chambers designed to accommodate massive, non-human manifestations of the Wizard. |..."
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "ceremonial_tableau",
+    "coverage_role": "transition_wide",
+    "beat_type": "transition_handoff",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT003",
+      "beat_type": "transition_handoff",
+      "importance": "major",
+      "confidence": 0.55,
+      "reasons": [
+        "importance = major"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH011_SC004_SH016_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "4d323d109a7a4abf6e9fa2e89ebff2013cd35b6c",
+      "created_at_utc": "2026-04-27T20:53:48.906657+00:00",
+      "updated_at_utc": "2026-04-27T20:54:46.809850+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH011_SC004",
+          "version": "68c4e2a6e8ac63b631f1dade3939ce4fd6f57c17"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH011_SC004",
+          "version": "ea52a76074721824f86534ed604f7d0326402b73"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH011_SC004",
+          "version": "83f5ca8081b60607a5d34a5e6de7644c5c0a0267"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:53:48.907158+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "4d323d109a7a4abf6e9fa2e89ebff2013cd35b6c"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:46.810349+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "4d323d109a7a4abf6e9fa2e89ebff2013cd35b6c"
         }
       ]
     }

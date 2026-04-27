@@ -64,11 +64,11 @@
   "continuity_to_next_shot": "BT002",
   "pose_anchor_frame": "searching cottage",
   "pose_end_frame": "holding oil-can",
-  "shot_title": "Insert Detail 1: discovery of the oil-can",
-  "shot_type": "insert_detail",
-  "camera_description": "Tight detail framing focused on a single visual object or gesture.",
-  "composition": "Detail composition centered on the key physical action or prop inside forest_and_cottage_setting.",
-  "target_seconds": 5.5,
+  "shot_title": "Handoff Medium 1: discovery of the oil-can",
+  "shot_type": "handoff_medium",
+  "camera_description": "Stable readable framing built from the beat requirement.",
+  "composition": "Readable medium composition in forest_and_cottage_setting featuring dorothy, the_scarecrow.",
+  "target_seconds": 6.0,
   "characters_in_frame": [
     {
       "label": "Dorothy",
@@ -109,7 +109,7 @@
     "Progression of joint movement from rigid to fluid",
     "discovery of the oil-can"
   ],
-  "prompt_seed": "Insert Detail 1: discovery of the oil-can. insert_detail. size=medium_close. angle=eye_level. lens=normal. motion=push_in. zoom=none. focus=shallow_subject. lighting=diffuse_ambient. visibility=on_screen. subject_angle=front_three_quarter_left. Tight detail framing focused on a single visual object or gesture. Detai...",
+  "prompt_seed": "Handoff Medium 1: discovery of the oil-can. handoff_medium. size=medium_close. angle=eye_level. lens=normal. motion=push_in. zoom=none. focus=shallow_subject. lighting=diffuse_ambient. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Readable medi...",
   "shot_notes": "discovery of the oil-can",
   "evidence_refs": [
     {
@@ -176,16 +176,32 @@
     "Dorothy applies oil to the Tin Woodman's joints to restore movement.",
     "dorothy | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md] Costume/Silhouette: Unknown. No specific clothing details are provided in this chapter. [source:C:/FilmCreator/projects/wizard_of_oz/02_...",
     "the_scarecrow | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH003/the_scarecrow.md] Physical Description: A living figure stuffed with straw. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/cha...",
-    "tin_woodman | The Tin Woodman is a bipedal humanoid entity composed entirely of articulated tin. He possesses a non-flesh, metallic silhouette and is characterized by his fully metallic construction. His primary equipment is an axe, which he carries as part...",
+    "tin_woodman | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH005/tin_woodman.md] Costume/Silhouette: Entirely metallic (tin) body; carries an axe. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis...",
     "forest_and_cottage_setting | The environment consists of a forest and a cottage, serving as the primary location for initial character encounters. Specific visual details regarding the architecture or flora are currently undocumented in the provided evidenc..."
   ],
+  "coverage_density": "medium",
+  "coverage_profile": "classic_adventure",
+  "coverage_intent": "adventure_action",
+  "coverage_role": "handoff_medium",
+  "beat_type": "transition_handoff",
+  "coverage_importance": "minor",
+  "coverage_blueprint_source": "deterministic_v1",
+  "coverage_classification": {
+    "beat_id": "BT001",
+    "beat_type": "transition_handoff",
+    "importance": "minor",
+    "confidence": 0.55,
+    "reasons": [
+      "importance = minor"
+    ]
+  },
   "metadata": {
     "artifact_id": "CH005_SC003_SH001_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "2970ea595936b65752867075ff9c961cb69906c8",
+    "source_fingerprint": "264714d3d8285552b50df6978c5e897cb45ec30a",
     "created_at_utc": "2026-04-27T15:30:18.325391+00:00",
-    "updated_at_utc": "2026-04-27T15:30:18.325391+00:00",
+    "updated_at_utc": "2026-04-27T20:54:30.924552+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
@@ -200,7 +216,7 @@
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH005_SC003",
-        "version": "164426aec5d0f89f68c86af8c8c53f648a08f734"
+        "version": "836c03a8515d007319d5c0d5a7365cf72cedca02"
       }
     ],
     "locked_fields": {},
@@ -210,6 +226,16 @@
         "timestamp_utc": "2026-04-27T15:30:27.324369+00:00",
         "action": "synthesized",
         "source_fingerprint": "2970ea595936b65752867075ff9c961cb69906c8"
+      },
+      {
+        "timestamp_utc": "2026-04-27T20:53:34.065738+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "264714d3d8285552b50df6978c5e897cb45ec30a"
+      },
+      {
+        "timestamp_utc": "2026-04-27T20:54:31.217884+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "264714d3d8285552b50df6978c5e897cb45ec30a"
       }
     ]
   }

@@ -5,76 +5,70 @@
   "shot_order": 2,
   "previous_shot_id": "",
   "next_shot_id": "",
-  "primary_subject": "oz",
+  "primary_subject": "dorothy",
   "secondary_subjects": [
-    "dorothy"
+    "oz"
   ],
-  "shot_moment_summary": "Oz proposes the balloon journey",
-  "start_state": "Oz speaking",
-  "end_state": "Dorothy reacting",
-  "action_during_shot": "discussing the plan",
+  "shot_moment_summary": "The silence is broken after three days",
+  "start_state": "Dorothy standing in silence",
+  "end_state": "Oz summons Dorothy",
+  "action_during_shot": "The silence is broken after three days",
   "action_continues_from": "Dorothy looking toward the throne",
-  "action_hands_off_to": "BT003",
+  "action_hands_off_to": "BT002",
   "shot_size": "medium",
   "camera_angle": "eye_level",
   "lens_family": "normal",
-  "camera_motion": "push_in",
-  "zoom_behavior": "subtle_in",
-  "focus_strategy": "shallow_subject",
-  "lighting_style": "high_contrast_ceremonial",
+  "camera_motion": "locked_off",
+  "zoom_behavior": "none",
+  "focus_strategy": "deep_focus",
+  "lighting_style": "hard_directional",
   "subject_visibility": "on_screen",
-  "narration_mode": "in_scene_speaker",
-  "primary_subject_angle": "front_three_quarter_right",
-  "visible_primary_subject_id": "oz",
+  "narration_mode": "none",
+  "primary_subject_angle": "front_three_quarter_left",
+  "visible_primary_subject_id": "dorothy",
   "visible_secondary_subject_ids": [
-    "dorothy"
+    "oz"
   ],
-  "primary_subject_frame_position": "foreground right within throne_area",
+  "primary_subject_frame_position": "foreground right within central_floor",
   "primary_subject_scale_relation": "Large scale architecture vs small human figures to emphasize isolation.",
-  "primary_subject_facing_direction": "front three-quarter right toward the scene action",
-  "primary_subject_pose_description": "Oz speaking in Wizard persona",
-  "subject_relation_summary": "oz plays against dorothy in the same frame",
-  "required_environment_anchor_1": "throne_area",
+  "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+  "primary_subject_pose_description": "Dorothy standing in silence",
+  "subject_relation_summary": "dorothy plays against oz in the same frame",
+  "required_environment_anchor_1": "central_floor",
   "required_subject_anchor_1": "",
   "required_celestial_anchor_1": "",
   "required_scale_proof_detail": "Large scale architecture vs small human figures to emphasize isolation.",
-  "camera_package_description": "medium, eye level, normal lens, push in, zoom subtle in, shallow subject, high contrast ceremonial",
+  "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
   "subject_blocking": [
-    "Oz seated",
-    "Dorothy standing",
-    "Two-shot interaction"
+    "Dorothy isolated in center floor",
+    "emerald_city_throne_room",
+    "dorothy remains readable within the active playing space.",
+    "oz remains readable within the active playing space."
   ],
   "camera_relative_positions": [
-    "Camera anchors the action inside the throne_area.",
-    "Background depth keeps emerald_city_throne_room legible."
+    "Camera anchors the action inside the central_floor.",
+    "Background depth should keep emerald_city_throne_room legible as the location anchor.",
+    "Subject 1: dorothy remains visually readable against the environment scale.",
+    "Subject 2: oz remains visually readable against the environment scale."
   ],
   "gaze_directions": [
-    "oz focuses toward the active scene action."
+    "dorothy focuses toward the active scene action."
   ],
-  "environment_subzone": "throne_area",
+  "environment_subzone": "central_floor",
   "key_visible_environment_features": [
-    "throne_area"
+    "central_floor",
+    "Chapter-local environment alias match for 'The Throne Room' (key_overlap=2, label_overlap=2, context_overlap=4)."
   ],
   "continuity_from_previous_shot": "Dorothy looking toward the throne",
-  "continuity_to_next_shot": "BT003",
-  "pose_anchor_frame": "Oz speaking",
-  "pose_end_frame": "Dorothy reacting",
-  "shot_title": "Insert Detail 2: The Balloon Proposal",
-  "shot_type": "insert_detail",
-  "camera_description": "Tight detail framing focused on a single visual object or gesture.",
-  "composition": "Detail composition centered on the key physical action or prop inside emerald_city_throne_room.",
-  "target_seconds": 5.3,
+  "continuity_to_next_shot": "BT002",
+  "pose_anchor_frame": "Dorothy standing in silence",
+  "pose_end_frame": "Oz summons Dorothy",
+  "shot_title": "Transition Wide 2: The silence is broken after three days",
+  "shot_type": "transition_wide",
+  "camera_description": "Stable readable framing built from the beat requirement.",
+  "composition": "Readable medium composition in emerald_city_throne_room featuring dorothy, oz.",
+  "target_seconds": 10.8,
   "characters_in_frame": [
-    {
-      "label": "Oz (The Wizard)",
-      "canonical_id": "oz",
-      "display_name": "oz",
-      "status": "canonical",
-      "entity_kind": "individual",
-      "resolution_score": 138,
-      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH017/oz_the_wizard.md",
-      "notes": "Direct registry match for 'oz_the_wizard'."
-    },
     {
       "label": "Dorothy",
       "canonical_id": "dorothy",
@@ -84,6 +78,16 @@
       "resolution_score": 138,
       "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH017/dorothy.md",
       "notes": "Direct registry match for 'dorothy'."
+    },
+    {
+      "label": "Oz (The Wizard)",
+      "canonical_id": "oz",
+      "display_name": "oz",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH017/oz_the_wizard.md",
+      "notes": "Direct registry match for 'oz_the_wizard'."
     }
   ],
   "environment": {
@@ -97,14 +101,15 @@
     "notes": "Chapter-local environment alias match for 'The Throne Room' (key_overlap=2, label_overlap=2, context_overlap=4)."
   },
   "beat_ids": [
-    "BT002"
+    "BT001"
   ],
   "continuity_constraints": [
     "Oz physical demeanor transition from Wizard persona to Humbug performer.",
-    "Dorothy wardrobe must be white dress or clothing."
+    "Dorothy wardrobe must be white dress or clothing.",
+    "The silence is broken after three days"
   ],
-  "prompt_seed": "Insert Detail 2: The Balloon Proposal. insert_detail. size=medium. angle=eye_level. lens=normal. motion=push_in. zoom=subtle_in. focus=shallow_subject. lighting=high_contrast_ceremonial. visibility=on_screen. subject_angle=front_three_quarter_right. Tight detail framing focused on a single visual object or gesture.",
-  "shot_notes": "The Balloon Proposal",
+  "prompt_seed": "Transition Wide 2: The silence is broken after three days. transition_wide. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Read...",
+  "shot_notes": "The silence is broken after three days",
   "evidence_refs": [
     {
       "source": "scene_contract",
@@ -172,13 +177,29 @@
     "oz | [CH002] Chapter II (book index hit) [CH010] Chapter X (book index hit) [CH011] Chapter XI (book index hit)",
     "emerald_city_throne_room | A vast, high-status ceremonial hall designed for large gatherings of officials and travelers. The space is anchored by a central throne that serves as the primary focal point of the room. | Large-scale floor space; central throne..."
   ],
+  "coverage_density": "medium",
+  "coverage_profile": "classic_adventure",
+  "coverage_intent": "ceremonial_tableau",
+  "coverage_role": "transition_wide",
+  "beat_type": "transition_handoff",
+  "coverage_importance": "major",
+  "coverage_blueprint_source": "deterministic_v1",
+  "coverage_classification": {
+    "beat_id": "BT001",
+    "beat_type": "transition_handoff",
+    "importance": "major",
+    "confidence": 0.55,
+    "reasons": [
+      "importance = major"
+    ]
+  },
   "metadata": {
     "artifact_id": "CH017_SC001_SH002_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "0d857be844e1ee23de61c94fc14af16773f0a0c7",
+    "source_fingerprint": "76e7695324997a4c56d1d49f1d11cae07d628a79",
     "created_at_utc": "2026-04-27T18:49:14.727997+00:00",
-    "updated_at_utc": "2026-04-27T18:49:14.727997+00:00",
+    "updated_at_utc": "2026-04-27T20:55:01.626091+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
@@ -193,7 +214,7 @@
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH017_SC001",
-        "version": "6c7268385593e67d3727a7915509363aa54caa91"
+        "version": "46ff251a5b856fff2a6bf1b8116533913ed9db2c"
       }
     ],
     "locked_fields": {},
@@ -203,6 +224,16 @@
         "timestamp_utc": "2026-04-27T18:50:18.232478+00:00",
         "action": "synthesized",
         "source_fingerprint": "0d857be844e1ee23de61c94fc14af16773f0a0c7"
+      },
+      {
+        "timestamp_utc": "2026-04-27T20:54:02.851140+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "76e7695324997a4c56d1d49f1d11cae07d628a79"
+      },
+      {
+        "timestamp_utc": "2026-04-27T20:55:01.627091+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "76e7695324997a4c56d1d49f1d11cae07d628a79"
       }
     ]
   }

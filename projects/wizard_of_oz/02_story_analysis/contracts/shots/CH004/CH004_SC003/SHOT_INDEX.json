@@ -34,33 +34,36 @@
     "required_environment_anchor_1": "brookside_meadow",
     "required_subject_anchor_1": "Scarecrow's face",
     "required_celestial_anchor_1": "",
-    "required_scale_proof_detail": "close-up detail of straw texture",
+    "required_scale_proof_detail": "preserve readable body-to-environment scale in frame",
     "camera_package_description": "close-up, eye level, portrait lens, locked off, shallow subject, diffuse ambient",
     "subject_blocking": [
       "seated",
       "Seated near water",
+      "brookside_meadow",
       "Scarecrow (as narrator) remains readable within the active playing space."
     ],
     "camera_relative_positions": [
       "Camera anchors the action inside the brookside_meadow.",
-      "Background depth should keep brookside_meadow legible as the location anchor."
+      "Background depth should keep brookside_meadow legible as the location anchor.",
+      "Subject 1: Scarecrow (as narrator) remains visually readable against the environment scale."
     ],
     "gaze_directions": [
       "Scarecrow (as narrator) focuses toward the active scene action."
     ],
     "environment_subzone": "brookside_meadow",
     "key_visible_environment_features": [
-      "brookside_meadow"
+      "brookside_meadow",
+      "Chapter-local beat subzone match for 'brookside_meadow'."
     ],
     "continuity_from_previous_shot": "Scarecrow sitting calmly by the brookside.",
     "continuity_to_next_shot": "BT002",
     "pose_anchor_frame": "calm expression",
     "pose_end_frame": "reflective gaze",
-    "shot_title": "Reaction Closeup 1: Present day narration of calm reflection",
-    "shot_type": "reaction_closeup",
-    "camera_description": "Close framing that isolates reaction and emotional emphasis.",
-    "composition": "Intimate composition that isolates Scarecrow (as narrator) against brookside_meadow to capture the beat's emotional turn.",
-    "target_seconds": 5.5,
+    "shot_title": "Ceremonial Master 1: Present day narration of calm reflection",
+    "shot_type": "ceremonial_master",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in brookside_meadow featuring Scarecrow (as narrator).",
+    "target_seconds": 10.8,
     "characters_in_frame": [
       {
         "label": "Scarecrow (as narrator)",
@@ -88,9 +91,12 @@
     ],
     "continuity_constraints": [
       "Lighting/color grade shift between brookside_meadow and A cornfield (memory/flashback)",
-      "Present day narration of calm reflection"
+      "Present day narration of calm reflection",
+      "Resolve Scarecrow (as narrator) -> Scarecrow (as narrator)",
+      "Resolve Crow (flashback/implied) -> Crow (flashback/implied)",
+      "Resolve A cornfield (memory/flashback) -> A cornfield (memory/flashback)"
     ],
-    "prompt_seed": "Reaction Closeup 1: Present day narration of calm reflection. reaction_closeup. size=close_up. angle=eye_level. lens=portrait. motion=locked_off. zoom=none. focus=shallow_subject. lighting=diffuse_ambient. visibility=on_screen. subject_angle=front_three_quarter_right. Close framing that isolates reaction and emotion...",
+    "prompt_seed": "Ceremonial Master 1: Present day narration of calm reflection. ceremonial_master. size=close_up. angle=eye_level. lens=portrait. motion=locked_off. zoom=none. focus=shallow_subject. lighting=diffuse_ambient. visibility=on_screen. subject_angle=front_three_quarter_right. Stable readable framing built from the beat re...",
     "shot_notes": "Present day narration of calm reflection",
     "evidence_refs": [
       {
@@ -155,17 +161,34 @@
       "Scarecrow sitting calmly by the brookside.",
       "Scarecrow expressing existential longing/inadequacy.",
       "The narration of creation and the subsequent realization of missing brains.",
-      "farmer | A rustic individual inhabiting the great Kansas prairies. The character is associated with a small, humble household and engages in agricultural tasks, such as tending to corn (ears). Visual identity is defined by practical, rustic clothing suitabl...",
-      "munchkin | A small-scale, bipedal humanoid fantasy creature. While specific clothing or facial details are not provided in the evidence, the character is defined by a diminutive physical scale relative to standard humanoids. | unknown | unknown",
+      "farmer | A rustic individual inhabiting the great Kansas prairies. The character is associated with a small, humble household and engages in manual agricultural tasks, such as the construction of scarecrows. Visual presentation should be grounded in rural,...",
+      "munchkin | A small-scale humanoid fantasy creature of bipedal morphology. While specific clothing or movement patterns are not detailed, the character is defined by its diminutive scale relative to other entities. | unknown | unknown",
       "brookside_meadow | Insufficient descriptive data available to establish a visual profile. The location functions as a secondary setting used for rest stops. | Unknown | Unknown | Unknown"
     ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "economical_storybook",
+    "coverage_role": "ceremonial_master",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT001",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "major",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = major"
+      ]
+    },
     "metadata": {
       "artifact_id": "CH004_SC003_SH001_SHOT_PACKAGE",
       "artifact_type": "shot_package",
       "status": "generated",
-      "source_fingerprint": "27bdbbbdba017d5d46999482882a4ae3f7c76208",
+      "source_fingerprint": "6979e472ff07b1d33f0cb650d8e372c51469c8b5",
       "created_at_utc": "2026-04-27T15:15:21.739959+00:00",
-      "updated_at_utc": "2026-04-27T15:15:21.739959+00:00",
+      "updated_at_utc": "2026-04-27T20:54:28.018342+00:00",
       "upstream_dependencies": [
         {
           "dependency_type": "scene_contract",
@@ -180,7 +203,7 @@
         {
           "dependency_type": "shot_blueprints",
           "dependency_id": "CH004_SC003",
-          "version": "17d7be46a07cddf0afb0217e162e961573da02c6"
+          "version": "48f7a1b36578e468e38895a720c1f064b082071b"
         }
       ],
       "locked_fields": {},
@@ -190,6 +213,16 @@
           "timestamp_utc": "2026-04-27T15:16:39.418574+00:00",
           "action": "synthesized",
           "source_fingerprint": "27bdbbbdba017d5d46999482882a4ae3f7c76208"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:53:31.435886+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "6979e472ff07b1d33f0cb650d8e372c51469c8b5"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:28.469919+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "6979e472ff07b1d33f0cb650d8e372c51469c8b5"
         }
       ]
     }
@@ -201,6 +234,1126 @@
     "shot_order": 2,
     "previous_shot_id": "SH001",
     "next_shot_id": "SH003",
+    "primary_subject": "Scarecrow (as narrator)",
+    "secondary_subjects": [],
+    "shot_moment_summary": "Present day narration of calm reflection",
+    "start_state": "Scarecrow speaking",
+    "end_state": "Transition to memory",
+    "action_during_shot": "Present day narration of calm reflection",
+    "action_continues_from": "reflective gaze",
+    "action_hands_off_to": "BT002",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "",
+    "visible_secondary_subject_ids": [],
+    "primary_subject_frame_position": "foreground right within brookside_meadow",
+    "primary_subject_scale_relation": "preserve readable body-to-environment scale in frame",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "Scarecrow speaking",
+    "subject_relation_summary": "Scarecrow (as narrator) carries the frame alone",
+    "required_environment_anchor_1": "brookside_meadow",
+    "required_subject_anchor_1": "Scarecrow speaking",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "preserve readable body-to-environment scale in frame",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "Seated near water",
+      "brookside_meadow",
+      "Scarecrow (as narrator) remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the brookside_meadow.",
+      "Background depth should keep brookside_meadow legible as the location anchor.",
+      "Subject 1: Scarecrow (as narrator) remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "Scarecrow (as narrator) focuses toward the active scene action."
+    ],
+    "environment_subzone": "brookside_meadow",
+    "key_visible_environment_features": [
+      "brookside_meadow",
+      "Chapter-local beat subzone match for 'brookside_meadow'."
+    ],
+    "continuity_from_previous_shot": "reflective gaze",
+    "continuity_to_next_shot": "BT002",
+    "pose_anchor_frame": "Scarecrow speaking",
+    "pose_end_frame": "Transition to memory",
+    "shot_title": "Authority Single 2: Present day narration of calm reflection",
+    "shot_type": "authority_single",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in brookside_meadow featuring Scarecrow (as narrator).",
+    "target_seconds": 7.0,
+    "characters_in_frame": [
+      {
+        "label": "Scarecrow (as narrator)",
+        "canonical_id": null,
+        "display_name": "Scarecrow (as narrator)",
+        "status": "review",
+        "entity_kind": "individual",
+        "resolution_score": 6,
+        "source_path": "",
+        "notes": "Low-confidence character match requires review."
+      }
+    ],
+    "environment": {
+      "label": "brookside_meadow",
+      "canonical_id": "brookside_meadow",
+      "display_name": "brookside_meadow",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": null,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH004/brookside_meadow.md",
+      "notes": "Chapter-local beat subzone match for 'brookside_meadow'."
+    },
+    "beat_ids": [
+      "BT001"
+    ],
+    "continuity_constraints": [
+      "Lighting/color grade shift between brookside_meadow and A cornfield (memory/flashback)",
+      "Present day narration of calm reflection",
+      "Resolve Scarecrow (as narrator) -> Scarecrow (as narrator)",
+      "Resolve Crow (flashback/implied) -> Crow (flashback/implied)",
+      "Resolve A cornfield (memory/flashback) -> A cornfield (memory/flashback)"
+    ],
+    "prompt_seed": "Authority Single 2: Present day narration of calm reflection. authority_single. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement....",
+    "shot_notes": "Present day narration of calm reflection",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH004_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH004",
+        "scene_id": "CH004_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH004",
+        "scene_id": "CH004_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH004",
+        "scene_id": "CH004_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH004",
+        "scene_id": "CH004_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH004",
+        "scene_id": "CH004_SC003"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH004",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH004_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH003",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH003_chapter_iii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH004",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH004_chapter_iv.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH005",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH005_chapter_v.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH004",
+        "canonical_id": "farmer"
+      }
+    ],
+    "evidence_summary": [
+      "Establish the Scarecrow's origin through a narrative bridge between present-day reflection and stylized memory. The sequence must transition from the grounded, calm atmosphere of the brookside to a dream-like cornfield flashback that emphasizes his lack of...",
+      "The Scarecrow recounts his creation by a farmer and a Munchkin. He describes his first moments of consciousness on a pole and the pivotal moment when a crow informed him that he lacked brains.",
+      "Calm $\\rightarrow$ Existential longing/Inadequacy.",
+      "Scarecrow sitting calmly by the brookside.",
+      "Scarecrow expressing existential longing/inadequacy.",
+      "The narration of creation and the subsequent realization of missing brains.",
+      "farmer | A rustic individual inhabiting the great Kansas prairies. The character is associated with a small, humble household and engages in manual agricultural tasks, such as the construction of scarecrows. Visual presentation should be grounded in rural,...",
+      "munchkin | A small-scale humanoid fantasy creature of bipedal morphology. While specific clothing or movement patterns are not detailed, the character is defined by its diminutive scale relative to other entities. | unknown | unknown",
+      "brookside_meadow | Insufficient descriptive data available to establish a visual profile. The location functions as a secondary setting used for rest stops. | Unknown | Unknown | Unknown"
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "economical_storybook",
+    "coverage_role": "authority_single",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT001",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "major",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = major"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH004_SC003_SH002_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "6979e472ff07b1d33f0cb650d8e372c51469c8b5",
+      "created_at_utc": "2026-04-27T15:16:39.420582+00:00",
+      "updated_at_utc": "2026-04-27T20:54:28.475928+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH004_SC003",
+          "version": "06df1307104c9cacfcab004f0f9f8d3078ef2b24"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH004_SC003",
+          "version": "e0430f10f99a4566dce1bade949c532e9788e555"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH004_SC003",
+          "version": "48f7a1b36578e468e38895a720c1f064b082071b"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T15:17:48.914622+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "27bdbbbdba017d5d46999482882a4ae3f7c76208"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:53:31.443900+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "6979e472ff07b1d33f0cb650d8e372c51469c8b5"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:28.476929+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "6979e472ff07b1d33f0cb650d8e372c51469c8b5"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH003",
+    "scene_id": "CH004_SC003",
+    "chapter_id": "CH004",
+    "shot_order": 3,
+    "previous_shot_id": "SH002",
+    "next_shot_id": "SH004",
+    "primary_subject": "Scarecrow (as narrator)",
+    "secondary_subjects": [],
+    "shot_moment_summary": "Present day narration of calm reflection",
+    "start_state": "Scarecrow speaking",
+    "end_state": "Transition to memory",
+    "action_during_shot": "Present day narration of calm reflection",
+    "action_continues_from": "Transition to memory",
+    "action_hands_off_to": "BT002",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "",
+    "visible_secondary_subject_ids": [],
+    "primary_subject_frame_position": "foreground right within brookside_meadow",
+    "primary_subject_scale_relation": "preserve readable body-to-environment scale in frame",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "Scarecrow speaking",
+    "subject_relation_summary": "Scarecrow (as narrator) carries the frame alone",
+    "required_environment_anchor_1": "brookside_meadow",
+    "required_subject_anchor_1": "Scarecrow speaking",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "preserve readable body-to-environment scale in frame",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "Seated near water",
+      "brookside_meadow",
+      "Scarecrow (as narrator) remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the brookside_meadow.",
+      "Background depth should keep brookside_meadow legible as the location anchor.",
+      "Subject 1: Scarecrow (as narrator) remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "Scarecrow (as narrator) focuses toward the active scene action."
+    ],
+    "environment_subzone": "brookside_meadow",
+    "key_visible_environment_features": [
+      "brookside_meadow",
+      "Chapter-local beat subzone match for 'brookside_meadow'."
+    ],
+    "continuity_from_previous_shot": "Transition to memory",
+    "continuity_to_next_shot": "BT002",
+    "pose_anchor_frame": "Scarecrow speaking",
+    "pose_end_frame": "Transition to memory",
+    "shot_title": "Petitioner Group 3: Present day narration of calm reflection",
+    "shot_type": "petitioner_group",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in brookside_meadow featuring Scarecrow (as narrator).",
+    "target_seconds": 7.0,
+    "characters_in_frame": [
+      {
+        "label": "Scarecrow (as narrator)",
+        "canonical_id": null,
+        "display_name": "Scarecrow (as narrator)",
+        "status": "review",
+        "entity_kind": "individual",
+        "resolution_score": 6,
+        "source_path": "",
+        "notes": "Low-confidence character match requires review."
+      }
+    ],
+    "environment": {
+      "label": "brookside_meadow",
+      "canonical_id": "brookside_meadow",
+      "display_name": "brookside_meadow",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": null,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH004/brookside_meadow.md",
+      "notes": "Chapter-local beat subzone match for 'brookside_meadow'."
+    },
+    "beat_ids": [
+      "BT001"
+    ],
+    "continuity_constraints": [
+      "Lighting/color grade shift between brookside_meadow and A cornfield (memory/flashback)",
+      "Present day narration of calm reflection",
+      "Resolve Scarecrow (as narrator) -> Scarecrow (as narrator)",
+      "Resolve Crow (flashback/implied) -> Crow (flashback/implied)",
+      "Resolve A cornfield (memory/flashback) -> A cornfield (memory/flashback)"
+    ],
+    "prompt_seed": "Petitioner Group 3: Present day narration of calm reflection. petitioner_group. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement....",
+    "shot_notes": "Present day narration of calm reflection",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH004_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH004",
+        "scene_id": "CH004_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH004",
+        "scene_id": "CH004_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH004",
+        "scene_id": "CH004_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH004",
+        "scene_id": "CH004_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH004",
+        "scene_id": "CH004_SC003"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH004",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH004_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH003",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH003_chapter_iii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH004",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH004_chapter_iv.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH005",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH005_chapter_v.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH004",
+        "canonical_id": "farmer"
+      }
+    ],
+    "evidence_summary": [
+      "Establish the Scarecrow's origin through a narrative bridge between present-day reflection and stylized memory. The sequence must transition from the grounded, calm atmosphere of the brookside to a dream-like cornfield flashback that emphasizes his lack of...",
+      "The Scarecrow recounts his creation by a farmer and a Munchkin. He describes his first moments of consciousness on a pole and the pivotal moment when a crow informed him that he lacked brains.",
+      "Calm $\\rightarrow$ Existential longing/Inadequacy.",
+      "Scarecrow sitting calmly by the brookside.",
+      "Scarecrow expressing existential longing/inadequacy.",
+      "The narration of creation and the subsequent realization of missing brains.",
+      "farmer | A rustic individual inhabiting the great Kansas prairies. The character is associated with a small, humble household and engages in manual agricultural tasks, such as the construction of scarecrows. Visual presentation should be grounded in rural,...",
+      "munchkin | A small-scale humanoid fantasy creature of bipedal morphology. While specific clothing or movement patterns are not detailed, the character is defined by its diminutive scale relative to other entities. | unknown | unknown",
+      "brookside_meadow | Insufficient descriptive data available to establish a visual profile. The location functions as a secondary setting used for rest stops. | Unknown | Unknown | Unknown"
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "economical_storybook",
+    "coverage_role": "petitioner_group",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT001",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "major",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = major"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH004_SC003_SH003_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "6979e472ff07b1d33f0cb650d8e372c51469c8b5",
+      "created_at_utc": "2026-04-27T15:17:48.915621+00:00",
+      "updated_at_utc": "2026-04-27T20:54:28.482930+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH004_SC003",
+          "version": "06df1307104c9cacfcab004f0f9f8d3078ef2b24"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH004_SC003",
+          "version": "e0430f10f99a4566dce1bade949c532e9788e555"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH004_SC003",
+          "version": "48f7a1b36578e468e38895a720c1f064b082071b"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T15:18:57.080204+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "27bdbbbdba017d5d46999482882a4ae3f7c76208"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:53:31.452399+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "6979e472ff07b1d33f0cb650d8e372c51469c8b5"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:28.483928+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "6979e472ff07b1d33f0cb650d8e372c51469c8b5"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH004",
+    "scene_id": "CH004_SC003",
+    "chapter_id": "CH004",
+    "shot_order": 4,
+    "previous_shot_id": "SH003",
+    "next_shot_id": "SH005",
+    "primary_subject": "Scarecrow (as narrator)",
+    "secondary_subjects": [],
+    "shot_moment_summary": "Present day narration of calm reflection",
+    "start_state": "Scarecrow speaking",
+    "end_state": "Transition to memory",
+    "action_during_shot": "Present day narration of calm reflection",
+    "action_continues_from": "Transition to memory",
+    "action_hands_off_to": "BT002",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "",
+    "visible_secondary_subject_ids": [],
+    "primary_subject_frame_position": "foreground right within brookside_meadow",
+    "primary_subject_scale_relation": "preserve readable body-to-environment scale in frame",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "Scarecrow speaking",
+    "subject_relation_summary": "Scarecrow (as narrator) carries the frame alone",
+    "required_environment_anchor_1": "brookside_meadow",
+    "required_subject_anchor_1": "Scarecrow speaking",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "preserve readable body-to-environment scale in frame",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "Seated near water",
+      "brookside_meadow",
+      "Scarecrow (as narrator) remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the brookside_meadow.",
+      "Background depth should keep brookside_meadow legible as the location anchor.",
+      "Subject 1: Scarecrow (as narrator) remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "Scarecrow (as narrator) focuses toward the active scene action."
+    ],
+    "environment_subzone": "brookside_meadow",
+    "key_visible_environment_features": [
+      "brookside_meadow",
+      "Chapter-local beat subzone match for 'brookside_meadow'."
+    ],
+    "continuity_from_previous_shot": "Transition to memory",
+    "continuity_to_next_shot": "BT002",
+    "pose_anchor_frame": "Scarecrow speaking",
+    "pose_end_frame": "Transition to memory",
+    "shot_title": "Crowd Response 4: Present day narration of calm reflection",
+    "shot_type": "crowd_response",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in brookside_meadow featuring Scarecrow (as narrator).",
+    "target_seconds": 7.0,
+    "characters_in_frame": [
+      {
+        "label": "Scarecrow (as narrator)",
+        "canonical_id": null,
+        "display_name": "Scarecrow (as narrator)",
+        "status": "review",
+        "entity_kind": "individual",
+        "resolution_score": 6,
+        "source_path": "",
+        "notes": "Low-confidence character match requires review."
+      }
+    ],
+    "environment": {
+      "label": "brookside_meadow",
+      "canonical_id": "brookside_meadow",
+      "display_name": "brookside_meadow",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": null,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH004/brookside_meadow.md",
+      "notes": "Chapter-local beat subzone match for 'brookside_meadow'."
+    },
+    "beat_ids": [
+      "BT001"
+    ],
+    "continuity_constraints": [
+      "Lighting/color grade shift between brookside_meadow and A cornfield (memory/flashback)",
+      "Present day narration of calm reflection",
+      "Resolve Scarecrow (as narrator) -> Scarecrow (as narrator)",
+      "Resolve Crow (flashback/implied) -> Crow (flashback/implied)",
+      "Resolve A cornfield (memory/flashback) -> A cornfield (memory/flashback)"
+    ],
+    "prompt_seed": "Crowd Response 4: Present day narration of calm reflection. crowd_response. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Read...",
+    "shot_notes": "Present day narration of calm reflection",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH004_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH004",
+        "scene_id": "CH004_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH004",
+        "scene_id": "CH004_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH004",
+        "scene_id": "CH004_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH004",
+        "scene_id": "CH004_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH004",
+        "scene_id": "CH004_SC003"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH004",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH004_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH003",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH003_chapter_iii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH004",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH004_chapter_iv.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH005",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH005_chapter_v.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH004",
+        "canonical_id": "farmer"
+      }
+    ],
+    "evidence_summary": [
+      "Establish the Scarecrow's origin through a narrative bridge between present-day reflection and stylized memory. The sequence must transition from the grounded, calm atmosphere of the brookside to a dream-like cornfield flashback that emphasizes his lack of...",
+      "The Scarecrow recounts his creation by a farmer and a Munchkin. He describes his first moments of consciousness on a pole and the pivotal moment when a crow informed him that he lacked brains.",
+      "Calm $\\rightarrow$ Existential longing/Inadequacy.",
+      "Scarecrow sitting calmly by the brookside.",
+      "Scarecrow expressing existential longing/inadequacy.",
+      "The narration of creation and the subsequent realization of missing brains.",
+      "farmer | A rustic individual inhabiting the great Kansas prairies. The character is associated with a small, humble household and engages in manual agricultural tasks, such as the construction of scarecrows. Visual presentation should be grounded in rural,...",
+      "munchkin | A small-scale humanoid fantasy creature of bipedal morphology. While specific clothing or movement patterns are not detailed, the character is defined by its diminutive scale relative to other entities. | unknown | unknown",
+      "brookside_meadow | Insufficient descriptive data available to establish a visual profile. The location functions as a secondary setting used for rest stops. | Unknown | Unknown | Unknown"
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "economical_storybook",
+    "coverage_role": "crowd_response",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT001",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "major",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = major"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH004_SC003_SH004_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "6979e472ff07b1d33f0cb650d8e372c51469c8b5",
+      "created_at_utc": "2026-04-27T20:53:31.453405+00:00",
+      "updated_at_utc": "2026-04-27T20:54:28.489442+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH004_SC003",
+          "version": "06df1307104c9cacfcab004f0f9f8d3078ef2b24"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH004_SC003",
+          "version": "e0430f10f99a4566dce1bade949c532e9788e555"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH004_SC003",
+          "version": "48f7a1b36578e468e38895a720c1f064b082071b"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:53:31.453910+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "6979e472ff07b1d33f0cb650d8e372c51469c8b5"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:28.490437+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "6979e472ff07b1d33f0cb650d8e372c51469c8b5"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH005",
+    "scene_id": "CH004_SC003",
+    "chapter_id": "CH004",
+    "shot_order": 5,
+    "previous_shot_id": "SH004",
+    "next_shot_id": "SH006",
+    "primary_subject": "Scarecrow (as narrator)",
+    "secondary_subjects": [],
+    "shot_moment_summary": "Present day narration of calm reflection",
+    "start_state": "Scarecrow speaking",
+    "end_state": "Transition to memory",
+    "action_during_shot": "Present day narration of calm reflection",
+    "action_continues_from": "Transition to memory",
+    "action_hands_off_to": "BT002",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "",
+    "visible_secondary_subject_ids": [],
+    "primary_subject_frame_position": "foreground right within brookside_meadow",
+    "primary_subject_scale_relation": "preserve readable body-to-environment scale in frame",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "Scarecrow speaking",
+    "subject_relation_summary": "Scarecrow (as narrator) carries the frame alone",
+    "required_environment_anchor_1": "brookside_meadow",
+    "required_subject_anchor_1": "Scarecrow speaking",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "preserve readable body-to-environment scale in frame",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "Seated near water",
+      "brookside_meadow",
+      "Scarecrow (as narrator) remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the brookside_meadow.",
+      "Background depth should keep brookside_meadow legible as the location anchor.",
+      "Subject 1: Scarecrow (as narrator) remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "Scarecrow (as narrator) focuses toward the active scene action."
+    ],
+    "environment_subzone": "brookside_meadow",
+    "key_visible_environment_features": [
+      "brookside_meadow",
+      "Chapter-local beat subzone match for 'brookside_meadow'."
+    ],
+    "continuity_from_previous_shot": "Transition to memory",
+    "continuity_to_next_shot": "BT002",
+    "pose_anchor_frame": "Scarecrow speaking",
+    "pose_end_frame": "Transition to memory",
+    "shot_title": "Symbol Insert 5: Present day narration of calm reflection",
+    "shot_type": "symbol_insert",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in brookside_meadow featuring Scarecrow (as narrator).",
+    "target_seconds": 5.4,
+    "characters_in_frame": [
+      {
+        "label": "Scarecrow (as narrator)",
+        "canonical_id": null,
+        "display_name": "Scarecrow (as narrator)",
+        "status": "review",
+        "entity_kind": "individual",
+        "resolution_score": 6,
+        "source_path": "",
+        "notes": "Low-confidence character match requires review."
+      }
+    ],
+    "environment": {
+      "label": "brookside_meadow",
+      "canonical_id": "brookside_meadow",
+      "display_name": "brookside_meadow",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": null,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH004/brookside_meadow.md",
+      "notes": "Chapter-local beat subzone match for 'brookside_meadow'."
+    },
+    "beat_ids": [
+      "BT001"
+    ],
+    "continuity_constraints": [
+      "Lighting/color grade shift between brookside_meadow and A cornfield (memory/flashback)",
+      "Present day narration of calm reflection",
+      "Resolve Scarecrow (as narrator) -> Scarecrow (as narrator)",
+      "Resolve Crow (flashback/implied) -> Crow (flashback/implied)",
+      "Resolve A cornfield (memory/flashback) -> A cornfield (memory/flashback)"
+    ],
+    "prompt_seed": "Symbol Insert 5: Present day narration of calm reflection. symbol_insert. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Readab...",
+    "shot_notes": "Present day narration of calm reflection",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH004_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH004",
+        "scene_id": "CH004_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH004",
+        "scene_id": "CH004_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH004",
+        "scene_id": "CH004_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH004",
+        "scene_id": "CH004_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH004",
+        "scene_id": "CH004_SC003"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH004",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH004_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH003",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH003_chapter_iii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH004",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH004_chapter_iv.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH005",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH005_chapter_v.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH004",
+        "canonical_id": "farmer"
+      }
+    ],
+    "evidence_summary": [
+      "Establish the Scarecrow's origin through a narrative bridge between present-day reflection and stylized memory. The sequence must transition from the grounded, calm atmosphere of the brookside to a dream-like cornfield flashback that emphasizes his lack of...",
+      "The Scarecrow recounts his creation by a farmer and a Munchkin. He describes his first moments of consciousness on a pole and the pivotal moment when a crow informed him that he lacked brains.",
+      "Calm $\\rightarrow$ Existential longing/Inadequacy.",
+      "Scarecrow sitting calmly by the brookside.",
+      "Scarecrow expressing existential longing/inadequacy.",
+      "The narration of creation and the subsequent realization of missing brains.",
+      "farmer | A rustic individual inhabiting the great Kansas prairies. The character is associated with a small, humble household and engages in manual agricultural tasks, such as the construction of scarecrows. Visual presentation should be grounded in rural,...",
+      "munchkin | A small-scale humanoid fantasy creature of bipedal morphology. While specific clothing or movement patterns are not detailed, the character is defined by its diminutive scale relative to other entities. | unknown | unknown",
+      "brookside_meadow | Insufficient descriptive data available to establish a visual profile. The location functions as a secondary setting used for rest stops. | Unknown | Unknown | Unknown"
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "economical_storybook",
+    "coverage_role": "symbol_insert",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT001",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "major",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = major"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH004_SC003_SH005_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "6979e472ff07b1d33f0cb650d8e372c51469c8b5",
+      "created_at_utc": "2026-04-27T20:53:31.454409+00:00",
+      "updated_at_utc": "2026-04-27T20:54:28.495937+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH004_SC003",
+          "version": "06df1307104c9cacfcab004f0f9f8d3078ef2b24"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH004_SC003",
+          "version": "e0430f10f99a4566dce1bade949c532e9788e555"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH004_SC003",
+          "version": "48f7a1b36578e468e38895a720c1f064b082071b"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:53:31.455414+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "6979e472ff07b1d33f0cb650d8e372c51469c8b5"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:28.496437+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "6979e472ff07b1d33f0cb650d8e372c51469c8b5"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH006",
+    "scene_id": "CH004_SC003",
+    "chapter_id": "CH004",
+    "shot_order": 6,
+    "previous_shot_id": "SH005",
+    "next_shot_id": "SH007",
+    "primary_subject": "Scarecrow (as narrator)",
+    "secondary_subjects": [],
+    "shot_moment_summary": "Present day narration of calm reflection",
+    "start_state": "Scarecrow speaking",
+    "end_state": "Transition to memory",
+    "action_during_shot": "Present day narration of calm reflection",
+    "action_continues_from": "Transition to memory",
+    "action_hands_off_to": "BT002",
+    "shot_size": "close_up",
+    "camera_angle": "eye_level",
+    "lens_family": "portrait",
+    "camera_motion": "push_in",
+    "zoom_behavior": "subtle_in",
+    "focus_strategy": "shallow_subject",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "",
+    "visible_secondary_subject_ids": [],
+    "primary_subject_frame_position": "foreground inside brookside_meadow",
+    "primary_subject_scale_relation": "preserve readable body-to-environment scale in frame",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "Scarecrow speaking",
+    "subject_relation_summary": "Scarecrow (as narrator) carries the frame alone",
+    "required_environment_anchor_1": "brookside_meadow",
+    "required_subject_anchor_1": "Scarecrow speaking",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "preserve readable body-to-environment scale in frame",
+    "camera_package_description": "close-up, eye level, portrait lens, push in, zoom subtle in, shallow subject, hard directional",
+    "subject_blocking": [
+      "Seated near water",
+      "brookside_meadow",
+      "Scarecrow (as narrator) remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the brookside_meadow.",
+      "Background depth should keep brookside_meadow legible as the location anchor.",
+      "Subject 1: Scarecrow (as narrator) remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "Scarecrow (as narrator) focuses toward the active scene action."
+    ],
+    "environment_subzone": "brookside_meadow",
+    "key_visible_environment_features": [
+      "brookside_meadow",
+      "Chapter-local beat subzone match for 'brookside_meadow'."
+    ],
+    "continuity_from_previous_shot": "Transition to memory",
+    "continuity_to_next_shot": "BT002",
+    "pose_anchor_frame": "Scarecrow speaking",
+    "pose_end_frame": "Transition to memory",
+    "shot_title": "Reaction Closeup 6: Present day narration of calm reflection",
+    "shot_type": "reaction_closeup",
+    "camera_description": "Close framing that isolates reaction and emotional emphasis.",
+    "composition": "Intimate composition that isolates Scarecrow (as narrator) against brookside_meadow to capture the beat's emotional turn.",
+    "target_seconds": 7.0,
+    "characters_in_frame": [
+      {
+        "label": "Scarecrow (as narrator)",
+        "canonical_id": null,
+        "display_name": "Scarecrow (as narrator)",
+        "status": "review",
+        "entity_kind": "individual",
+        "resolution_score": 6,
+        "source_path": "",
+        "notes": "Low-confidence character match requires review."
+      }
+    ],
+    "environment": {
+      "label": "brookside_meadow",
+      "canonical_id": "brookside_meadow",
+      "display_name": "brookside_meadow",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": null,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH004/brookside_meadow.md",
+      "notes": "Chapter-local beat subzone match for 'brookside_meadow'."
+    },
+    "beat_ids": [
+      "BT001"
+    ],
+    "continuity_constraints": [
+      "Lighting/color grade shift between brookside_meadow and A cornfield (memory/flashback)",
+      "Present day narration of calm reflection",
+      "Resolve Scarecrow (as narrator) -> Scarecrow (as narrator)",
+      "Resolve Crow (flashback/implied) -> Crow (flashback/implied)",
+      "Resolve A cornfield (memory/flashback) -> A cornfield (memory/flashback)"
+    ],
+    "prompt_seed": "Reaction Closeup 6: Present day narration of calm reflection. reaction_closeup. size=close_up. angle=eye_level. lens=portrait. motion=push_in. zoom=subtle_in. focus=shallow_subject. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Close framing that isolates reaction and emoti...",
+    "shot_notes": "Present day narration of calm reflection",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH004_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH004",
+        "scene_id": "CH004_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH004",
+        "scene_id": "CH004_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH004",
+        "scene_id": "CH004_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH004",
+        "scene_id": "CH004_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH004",
+        "scene_id": "CH004_SC003"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH004",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH004_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH003",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH003_chapter_iii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH004",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH004_chapter_iv.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH005",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH005_chapter_v.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH004",
+        "canonical_id": "farmer"
+      }
+    ],
+    "evidence_summary": [
+      "Establish the Scarecrow's origin through a narrative bridge between present-day reflection and stylized memory. The sequence must transition from the grounded, calm atmosphere of the brookside to a dream-like cornfield flashback that emphasizes his lack of...",
+      "The Scarecrow recounts his creation by a farmer and a Munchkin. He describes his first moments of consciousness on a pole and the pivotal moment when a crow informed him that he lacked brains.",
+      "Calm $\\rightarrow$ Existential longing/Inadequacy.",
+      "Scarecrow sitting calmly by the brookside.",
+      "Scarecrow expressing existential longing/inadequacy.",
+      "The narration of creation and the subsequent realization of missing brains.",
+      "farmer | A rustic individual inhabiting the great Kansas prairies. The character is associated with a small, humble household and engages in manual agricultural tasks, such as the construction of scarecrows. Visual presentation should be grounded in rural,...",
+      "munchkin | A small-scale humanoid fantasy creature of bipedal morphology. While specific clothing or movement patterns are not detailed, the character is defined by its diminutive scale relative to other entities. | unknown | unknown",
+      "brookside_meadow | Insufficient descriptive data available to establish a visual profile. The location functions as a secondary setting used for rest stops. | Unknown | Unknown | Unknown"
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "economical_storybook",
+    "coverage_role": "decision_closeup",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT001",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "major",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = major"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH004_SC003_SH006_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "6979e472ff07b1d33f0cb650d8e372c51469c8b5",
+      "created_at_utc": "2026-04-27T20:53:31.456424+00:00",
+      "updated_at_utc": "2026-04-27T20:54:28.501939+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH004_SC003",
+          "version": "06df1307104c9cacfcab004f0f9f8d3078ef2b24"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH004_SC003",
+          "version": "e0430f10f99a4566dce1bade949c532e9788e555"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH004_SC003",
+          "version": "48f7a1b36578e468e38895a720c1f064b082071b"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:53:31.456918+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "6979e472ff07b1d33f0cb650d8e372c51469c8b5"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:28.502438+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "6979e472ff07b1d33f0cb650d8e372c51469c8b5"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH007",
+    "scene_id": "CH004_SC003",
+    "chapter_id": "CH004",
+    "shot_order": 7,
+    "previous_shot_id": "SH006",
+    "next_shot_id": "SH008",
     "primary_subject": "farmer",
     "secondary_subjects": [
       "munchkin"
@@ -209,7 +1362,7 @@
     "start_state": "dream-like haze",
     "end_state": "assembly complete",
     "action_during_shot": "tending to corn and straw",
-    "action_continues_from": "reflective gaze",
+    "action_continues_from": "Transition to memory",
     "action_hands_off_to": "BT003",
     "shot_size": "medium_full",
     "camera_angle": "low_angle",
@@ -237,27 +1390,34 @@
     "camera_package_description": "medium-full, low angle, wide lens, push in, deep focus, high contrast ceremonial",
     "subject_blocking": [
       "standing near pole",
-      "Figures working near a central pole"
+      "Figures working near a central pole",
+      "A cornfield (memory/flashback)",
+      "farmer remains readable within the active playing space.",
+      "munchkin remains readable within the active playing space."
     ],
     "camera_relative_positions": [
-      "Camera anchors the action inside the A cornfield (memory/flashback)."
+      "Camera anchors the action inside the A cornfield (memory/flashback).",
+      "Background depth should keep brookside_meadow legible as the location anchor.",
+      "Subject 1: farmer remains visually readable against the environment scale.",
+      "Subject 2: munchkin remains visually readable against the environment scale."
     ],
     "gaze_directions": [
       "farmer focuses toward the active scene action."
     ],
     "environment_subzone": "A cornfield (memory/flashback)",
     "key_visible_environment_features": [
-      "Cornfield pole"
+      "A cornfield (memory/flashback)",
+      "Chapter-local environment alias match for 'The brookside (present)' (key_overlap=1, label_overlap=1, context_overlap=3)."
     ],
-    "continuity_from_previous_shot": "reflective gaze",
+    "continuity_from_previous_shot": "Transition to memory",
     "continuity_to_next_shot": "BT003",
     "pose_anchor_frame": "dream-like haze",
     "pose_end_frame": "assembly complete",
-    "shot_title": "Medium 2: Flashback to creation by farmer and munchkin",
-    "shot_type": "medium",
-    "camera_description": "Stable medium framing that keeps action and character readable.",
-    "composition": "Readable medium composition in A cornfield (memory/flashback) featuring farmer, munchkin, Scarecrow (as narrator).",
-    "target_seconds": 5.3,
+    "shot_title": "Ceremonial Master 7: Flashback to creation by farmer and munchkin",
+    "shot_type": "ceremonial_master",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in brookside_meadow featuring farmer, munchkin, Scarecrow (as narrator).",
+    "target_seconds": 10.0,
     "characters_in_frame": [
       {
         "label": "Farmer (flashback/implied)",
@@ -305,9 +1465,12 @@
     ],
     "continuity_constraints": [
       "Lighting/color grade shift between brookside_meadow and A cornfield (memory/flashback)",
-      "Flashback to creation by farmer and munchkin"
+      "Flashback to creation by farmer and munchkin",
+      "Resolve Scarecrow (as narrator) -> Scarecrow (as narrator)",
+      "Resolve Crow (flashback/implied) -> Crow (flashback/implied)",
+      "Resolve A cornfield (memory/flashback) -> A cornfield (memory/flashback)"
     ],
-    "prompt_seed": "Medium 2: Flashback to creation by farmer and munchkin. medium. size=medium_full. angle=low_angle. lens=wide. motion=push_in. zoom=none. focus=deep_focus. lighting=high_contrast_ceremonial. visibility=on_screen. subject_angle=profile_left. Stable medium framing that keeps action and character readable.",
+    "prompt_seed": "Ceremonial Master 7: Flashback to creation by farmer and munchkin. ceremonial_master. size=medium_full. angle=low_angle. lens=wide. motion=push_in. zoom=none. focus=deep_focus. lighting=high_contrast_ceremonial. visibility=on_screen. subject_angle=profile_left. Stable readable framing built from the beat requirement...",
     "shot_notes": "Flashback to creation by farmer and munchkin",
     "evidence_refs": [
       {
@@ -372,17 +1535,34 @@
       "Scarecrow sitting calmly by the brookside.",
       "Scarecrow expressing existential longing/inadequacy.",
       "The narration of creation and the subsequent realization of missing brains.",
-      "farmer | A rustic individual inhabiting the great Kansas prairies. The character is associated with a small, humble household and engages in agricultural tasks, such as tending to corn (ears). Visual identity is defined by practical, rustic clothing suitabl...",
-      "munchkin | A small-scale, bipedal humanoid fantasy creature. While specific clothing or facial details are not provided in the evidence, the character is defined by a diminutive physical scale relative to standard humanoids. | unknown | unknown",
+      "farmer | A rustic individual inhabiting the great Kansas prairies. The character is associated with a small, humble household and engages in manual agricultural tasks, such as the construction of scarecrows. Visual presentation should be grounded in rural,...",
+      "munchkin | A small-scale humanoid fantasy creature of bipedal morphology. While specific clothing or movement patterns are not detailed, the character is defined by its diminutive scale relative to other entities. | unknown | unknown",
       "brookside_meadow | Insufficient descriptive data available to establish a visual profile. The location functions as a secondary setting used for rest stops. | Unknown | Unknown | Unknown"
     ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "economical_storybook",
+    "coverage_role": "ceremonial_master",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "normal",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT002",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "normal",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = normal"
+      ]
+    },
     "metadata": {
-      "artifact_id": "CH004_SC003_SH002_SHOT_PACKAGE",
+      "artifact_id": "CH004_SC003_SH007_SHOT_PACKAGE",
       "artifact_type": "shot_package",
       "status": "generated",
-      "source_fingerprint": "27bdbbbdba017d5d46999482882a4ae3f7c76208",
-      "created_at_utc": "2026-04-27T15:16:39.420582+00:00",
-      "updated_at_utc": "2026-04-27T15:16:39.421586+00:00",
+      "source_fingerprint": "6979e472ff07b1d33f0cb650d8e372c51469c8b5",
+      "created_at_utc": "2026-04-27T20:53:31.457918+00:00",
+      "updated_at_utc": "2026-04-27T20:54:28.508452+00:00",
       "upstream_dependencies": [
         {
           "dependency_type": "scene_contract",
@@ -397,39 +1577,1036 @@
         {
           "dependency_type": "shot_blueprints",
           "dependency_id": "CH004_SC003",
-          "version": "17d7be46a07cddf0afb0217e162e961573da02c6"
+          "version": "48f7a1b36578e468e38895a720c1f064b082071b"
         }
       ],
       "locked_fields": {},
       "manual_overrides": {},
       "revision_history": [
         {
-          "timestamp_utc": "2026-04-27T15:17:48.914622+00:00",
+          "timestamp_utc": "2026-04-27T20:53:31.457918+00:00",
           "action": "synthesized",
-          "source_fingerprint": "27bdbbbdba017d5d46999482882a4ae3f7c76208"
+          "source_fingerprint": "6979e472ff07b1d33f0cb650d8e372c51469c8b5"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:28.509450+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "6979e472ff07b1d33f0cb650d8e372c51469c8b5"
         }
       ]
     }
   },
   {
-    "shot_id": "SH003",
+    "shot_id": "SH008",
     "scene_id": "CH004_SC003",
     "chapter_id": "CH004",
-    "shot_order": 3,
-    "previous_shot_id": "SH002",
-    "next_shot_id": "",
+    "shot_order": 8,
+    "previous_shot_id": "SH007",
+    "next_shot_id": "SH009",
+    "primary_subject": "farmer",
+    "secondary_subjects": [
+      "munchkin"
+    ],
+    "shot_moment_summary": "Flashback to creation by farmer and munchkin",
+    "start_state": "Dream-like fade in",
+    "end_state": "Scarecrow is fully formed on pole",
+    "action_during_shot": "Flashback to creation by farmer and munchkin",
+    "action_continues_from": "assembly complete",
+    "action_hands_off_to": "BT003",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "farmer",
+    "visible_secondary_subject_ids": [
+      "munchkin"
+    ],
+    "primary_subject_frame_position": "foreground right within A cornfield (memory/flashback)",
+    "primary_subject_scale_relation": "preserve readable body-to-environment scale in frame",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "Dream-like fade in",
+    "subject_relation_summary": "farmer plays against munchkin in the same frame",
+    "required_environment_anchor_1": "A cornfield (memory/flashback)",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "preserve readable body-to-environment scale in frame",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "Figures working near a central pole",
+      "A cornfield (memory/flashback)",
+      "farmer remains readable within the active playing space.",
+      "munchkin remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the A cornfield (memory/flashback).",
+      "Background depth should keep brookside_meadow legible as the location anchor.",
+      "Subject 1: farmer remains visually readable against the environment scale.",
+      "Subject 2: munchkin remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "farmer focuses toward the active scene action."
+    ],
+    "environment_subzone": "A cornfield (memory/flashback)",
+    "key_visible_environment_features": [
+      "A cornfield (memory/flashback)",
+      "Chapter-local environment alias match for 'The brookside (present)' (key_overlap=1, label_overlap=1, context_overlap=3)."
+    ],
+    "continuity_from_previous_shot": "assembly complete",
+    "continuity_to_next_shot": "BT003",
+    "pose_anchor_frame": "Dream-like fade in",
+    "pose_end_frame": "Scarecrow is fully formed on pole",
+    "shot_title": "Authority Single 8: Flashback to creation by farmer and munchkin",
+    "shot_type": "authority_single",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in brookside_meadow featuring farmer, munchkin, Scarecrow (as narrator).",
+    "target_seconds": 6.5,
+    "characters_in_frame": [
+      {
+        "label": "Farmer (flashback/implied)",
+        "canonical_id": "farmer",
+        "display_name": "farmer",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH004/farmer.md",
+        "notes": "Direct registry match for 'farmer'."
+      },
+      {
+        "label": "Munchkin (flashback/implied)",
+        "canonical_id": "munchkin",
+        "display_name": "munchkin",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH004/munchkin.md",
+        "notes": "Direct registry match for 'munchkin'."
+      },
+      {
+        "label": "Scarecrow (as narrator)",
+        "canonical_id": null,
+        "display_name": "Scarecrow (as narrator)",
+        "status": "review",
+        "entity_kind": "individual",
+        "resolution_score": 6,
+        "source_path": "",
+        "notes": "Low-confidence character match requires review."
+      }
+    ],
+    "environment": {
+      "label": "The brookside (present)",
+      "canonical_id": "brookside_meadow",
+      "display_name": "brookside_meadow",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 52,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH004/brookside_meadow.md",
+      "notes": "Chapter-local environment alias match for 'The brookside (present)' (key_overlap=1, label_overlap=1, context_overlap=3)."
+    },
+    "beat_ids": [
+      "BT002"
+    ],
+    "continuity_constraints": [
+      "Lighting/color grade shift between brookside_meadow and A cornfield (memory/flashback)",
+      "Flashback to creation by farmer and munchkin",
+      "Resolve Scarecrow (as narrator) -> Scarecrow (as narrator)",
+      "Resolve Crow (flashback/implied) -> Crow (flashback/implied)",
+      "Resolve A cornfield (memory/flashback) -> A cornfield (memory/flashback)"
+    ],
+    "prompt_seed": "Authority Single 8: Flashback to creation by farmer and munchkin. authority_single. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requireme...",
+    "shot_notes": "Flashback to creation by farmer and munchkin",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH004_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH004",
+        "scene_id": "CH004_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH004",
+        "scene_id": "CH004_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH004",
+        "scene_id": "CH004_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH004",
+        "scene_id": "CH004_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH004",
+        "scene_id": "CH004_SC003"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH004",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH004_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH003",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH003_chapter_iii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH004",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH004_chapter_iv.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH005",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH005_chapter_v.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH004",
+        "canonical_id": "farmer"
+      }
+    ],
+    "evidence_summary": [
+      "Establish the Scarecrow's origin through a narrative bridge between present-day reflection and stylized memory. The sequence must transition from the grounded, calm atmosphere of the brookside to a dream-like cornfield flashback that emphasizes his lack of...",
+      "The Scarecrow recounts his creation by a farmer and a Munchkin. He describes his first moments of consciousness on a pole and the pivotal moment when a crow informed him that he lacked brains.",
+      "Calm $\\rightarrow$ Existential longing/Inadequacy.",
+      "Scarecrow sitting calmly by the brookside.",
+      "Scarecrow expressing existential longing/inadequacy.",
+      "The narration of creation and the subsequent realization of missing brains.",
+      "farmer | A rustic individual inhabiting the great Kansas prairies. The character is associated with a small, humble household and engages in manual agricultural tasks, such as the construction of scarecrows. Visual presentation should be grounded in rural,...",
+      "munchkin | A small-scale humanoid fantasy creature of bipedal morphology. While specific clothing or movement patterns are not detailed, the character is defined by its diminutive scale relative to other entities. | unknown | unknown",
+      "brookside_meadow | Insufficient descriptive data available to establish a visual profile. The location functions as a secondary setting used for rest stops. | Unknown | Unknown | Unknown"
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "economical_storybook",
+    "coverage_role": "authority_single",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "normal",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT002",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "normal",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = normal"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH004_SC003_SH008_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "6979e472ff07b1d33f0cb650d8e372c51469c8b5",
+      "created_at_utc": "2026-04-27T20:53:31.459426+00:00",
+      "updated_at_utc": "2026-04-27T20:54:28.514952+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH004_SC003",
+          "version": "06df1307104c9cacfcab004f0f9f8d3078ef2b24"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH004_SC003",
+          "version": "e0430f10f99a4566dce1bade949c532e9788e555"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH004_SC003",
+          "version": "48f7a1b36578e468e38895a720c1f064b082071b"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:53:31.459928+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "6979e472ff07b1d33f0cb650d8e372c51469c8b5"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:28.515950+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "6979e472ff07b1d33f0cb650d8e372c51469c8b5"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH009",
+    "scene_id": "CH004_SC003",
+    "chapter_id": "CH004",
+    "shot_order": 9,
+    "previous_shot_id": "SH008",
+    "next_shot_id": "SH010",
+    "primary_subject": "farmer",
+    "secondary_subjects": [
+      "munchkin"
+    ],
+    "shot_moment_summary": "Flashback to creation by farmer and munchkin",
+    "start_state": "Dream-like fade in",
+    "end_state": "Scarecrow is fully formed on pole",
+    "action_during_shot": "Flashback to creation by farmer and munchkin",
+    "action_continues_from": "Scarecrow is fully formed on pole",
+    "action_hands_off_to": "BT003",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "farmer",
+    "visible_secondary_subject_ids": [
+      "munchkin"
+    ],
+    "primary_subject_frame_position": "foreground right within A cornfield (memory/flashback)",
+    "primary_subject_scale_relation": "preserve readable body-to-environment scale in frame",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "Dream-like fade in",
+    "subject_relation_summary": "farmer plays against munchkin in the same frame",
+    "required_environment_anchor_1": "A cornfield (memory/flashback)",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "preserve readable body-to-environment scale in frame",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "Figures working near a central pole",
+      "A cornfield (memory/flashback)",
+      "farmer remains readable within the active playing space.",
+      "munchkin remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the A cornfield (memory/flashback).",
+      "Background depth should keep brookside_meadow legible as the location anchor.",
+      "Subject 1: farmer remains visually readable against the environment scale.",
+      "Subject 2: munchkin remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "farmer focuses toward the active scene action."
+    ],
+    "environment_subzone": "A cornfield (memory/flashback)",
+    "key_visible_environment_features": [
+      "A cornfield (memory/flashback)",
+      "Chapter-local environment alias match for 'The brookside (present)' (key_overlap=1, label_overlap=1, context_overlap=3)."
+    ],
+    "continuity_from_previous_shot": "Scarecrow is fully formed on pole",
+    "continuity_to_next_shot": "BT003",
+    "pose_anchor_frame": "Dream-like fade in",
+    "pose_end_frame": "Scarecrow is fully formed on pole",
+    "shot_title": "Petitioner Group 9: Flashback to creation by farmer and munchkin",
+    "shot_type": "petitioner_group",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in brookside_meadow featuring farmer, munchkin, Scarecrow (as narrator).",
+    "target_seconds": 6.5,
+    "characters_in_frame": [
+      {
+        "label": "Farmer (flashback/implied)",
+        "canonical_id": "farmer",
+        "display_name": "farmer",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH004/farmer.md",
+        "notes": "Direct registry match for 'farmer'."
+      },
+      {
+        "label": "Munchkin (flashback/implied)",
+        "canonical_id": "munchkin",
+        "display_name": "munchkin",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH004/munchkin.md",
+        "notes": "Direct registry match for 'munchkin'."
+      },
+      {
+        "label": "Scarecrow (as narrator)",
+        "canonical_id": null,
+        "display_name": "Scarecrow (as narrator)",
+        "status": "review",
+        "entity_kind": "individual",
+        "resolution_score": 6,
+        "source_path": "",
+        "notes": "Low-confidence character match requires review."
+      }
+    ],
+    "environment": {
+      "label": "The brookside (present)",
+      "canonical_id": "brookside_meadow",
+      "display_name": "brookside_meadow",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 52,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH004/brookside_meadow.md",
+      "notes": "Chapter-local environment alias match for 'The brookside (present)' (key_overlap=1, label_overlap=1, context_overlap=3)."
+    },
+    "beat_ids": [
+      "BT002"
+    ],
+    "continuity_constraints": [
+      "Lighting/color grade shift between brookside_meadow and A cornfield (memory/flashback)",
+      "Flashback to creation by farmer and munchkin",
+      "Resolve Scarecrow (as narrator) -> Scarecrow (as narrator)",
+      "Resolve Crow (flashback/implied) -> Crow (flashback/implied)",
+      "Resolve A cornfield (memory/flashback) -> A cornfield (memory/flashback)"
+    ],
+    "prompt_seed": "Petitioner Group 9: Flashback to creation by farmer and munchkin. petitioner_group. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requireme...",
+    "shot_notes": "Flashback to creation by farmer and munchkin",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH004_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH004",
+        "scene_id": "CH004_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH004",
+        "scene_id": "CH004_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH004",
+        "scene_id": "CH004_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH004",
+        "scene_id": "CH004_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH004",
+        "scene_id": "CH004_SC003"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH004",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH004_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH003",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH003_chapter_iii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH004",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH004_chapter_iv.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH005",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH005_chapter_v.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH004",
+        "canonical_id": "farmer"
+      }
+    ],
+    "evidence_summary": [
+      "Establish the Scarecrow's origin through a narrative bridge between present-day reflection and stylized memory. The sequence must transition from the grounded, calm atmosphere of the brookside to a dream-like cornfield flashback that emphasizes his lack of...",
+      "The Scarecrow recounts his creation by a farmer and a Munchkin. He describes his first moments of consciousness on a pole and the pivotal moment when a crow informed him that he lacked brains.",
+      "Calm $\\rightarrow$ Existential longing/Inadequacy.",
+      "Scarecrow sitting calmly by the brookside.",
+      "Scarecrow expressing existential longing/inadequacy.",
+      "The narration of creation and the subsequent realization of missing brains.",
+      "farmer | A rustic individual inhabiting the great Kansas prairies. The character is associated with a small, humble household and engages in manual agricultural tasks, such as the construction of scarecrows. Visual presentation should be grounded in rural,...",
+      "munchkin | A small-scale humanoid fantasy creature of bipedal morphology. While specific clothing or movement patterns are not detailed, the character is defined by its diminutive scale relative to other entities. | unknown | unknown",
+      "brookside_meadow | Insufficient descriptive data available to establish a visual profile. The location functions as a secondary setting used for rest stops. | Unknown | Unknown | Unknown"
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "economical_storybook",
+    "coverage_role": "petitioner_group",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "normal",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT002",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "normal",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = normal"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH004_SC003_SH009_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "6979e472ff07b1d33f0cb650d8e372c51469c8b5",
+      "created_at_utc": "2026-04-27T20:53:31.461429+00:00",
+      "updated_at_utc": "2026-04-27T20:54:28.521460+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH004_SC003",
+          "version": "06df1307104c9cacfcab004f0f9f8d3078ef2b24"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH004_SC003",
+          "version": "e0430f10f99a4566dce1bade949c532e9788e555"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH004_SC003",
+          "version": "48f7a1b36578e468e38895a720c1f064b082071b"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:53:31.461926+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "6979e472ff07b1d33f0cb650d8e372c51469c8b5"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:28.522460+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "6979e472ff07b1d33f0cb650d8e372c51469c8b5"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH010",
+    "scene_id": "CH004_SC003",
+    "chapter_id": "CH004",
+    "shot_order": 10,
+    "previous_shot_id": "SH009",
+    "next_shot_id": "SH011",
+    "primary_subject": "farmer",
+    "secondary_subjects": [
+      "munchkin"
+    ],
+    "shot_moment_summary": "Flashback to creation by farmer and munchkin",
+    "start_state": "Dream-like fade in",
+    "end_state": "Scarecrow is fully formed on pole",
+    "action_during_shot": "Flashback to creation by farmer and munchkin",
+    "action_continues_from": "Scarecrow is fully formed on pole",
+    "action_hands_off_to": "BT003",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "farmer",
+    "visible_secondary_subject_ids": [
+      "munchkin"
+    ],
+    "primary_subject_frame_position": "foreground right within A cornfield (memory/flashback)",
+    "primary_subject_scale_relation": "preserve readable body-to-environment scale in frame",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "Dream-like fade in",
+    "subject_relation_summary": "farmer plays against munchkin in the same frame",
+    "required_environment_anchor_1": "A cornfield (memory/flashback)",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "preserve readable body-to-environment scale in frame",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "Figures working near a central pole",
+      "A cornfield (memory/flashback)",
+      "farmer remains readable within the active playing space.",
+      "munchkin remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the A cornfield (memory/flashback).",
+      "Background depth should keep brookside_meadow legible as the location anchor.",
+      "Subject 1: farmer remains visually readable against the environment scale.",
+      "Subject 2: munchkin remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "farmer focuses toward the active scene action."
+    ],
+    "environment_subzone": "A cornfield (memory/flashback)",
+    "key_visible_environment_features": [
+      "A cornfield (memory/flashback)",
+      "Chapter-local environment alias match for 'The brookside (present)' (key_overlap=1, label_overlap=1, context_overlap=3)."
+    ],
+    "continuity_from_previous_shot": "Scarecrow is fully formed on pole",
+    "continuity_to_next_shot": "BT003",
+    "pose_anchor_frame": "Dream-like fade in",
+    "pose_end_frame": "Scarecrow is fully formed on pole",
+    "shot_title": "Crowd Response 10: Flashback to creation by farmer and munchkin",
+    "shot_type": "crowd_response",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in brookside_meadow featuring farmer, munchkin, Scarecrow (as narrator).",
+    "target_seconds": 6.5,
+    "characters_in_frame": [
+      {
+        "label": "Farmer (flashback/implied)",
+        "canonical_id": "farmer",
+        "display_name": "farmer",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH004/farmer.md",
+        "notes": "Direct registry match for 'farmer'."
+      },
+      {
+        "label": "Munchkin (flashback/implied)",
+        "canonical_id": "munchkin",
+        "display_name": "munchkin",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH004/munchkin.md",
+        "notes": "Direct registry match for 'munchkin'."
+      },
+      {
+        "label": "Scarecrow (as narrator)",
+        "canonical_id": null,
+        "display_name": "Scarecrow (as narrator)",
+        "status": "review",
+        "entity_kind": "individual",
+        "resolution_score": 6,
+        "source_path": "",
+        "notes": "Low-confidence character match requires review."
+      }
+    ],
+    "environment": {
+      "label": "The brookside (present)",
+      "canonical_id": "brookside_meadow",
+      "display_name": "brookside_meadow",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 52,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH004/brookside_meadow.md",
+      "notes": "Chapter-local environment alias match for 'The brookside (present)' (key_overlap=1, label_overlap=1, context_overlap=3)."
+    },
+    "beat_ids": [
+      "BT002"
+    ],
+    "continuity_constraints": [
+      "Lighting/color grade shift between brookside_meadow and A cornfield (memory/flashback)",
+      "Flashback to creation by farmer and munchkin",
+      "Resolve Scarecrow (as narrator) -> Scarecrow (as narrator)",
+      "Resolve Crow (flashback/implied) -> Crow (flashback/implied)",
+      "Resolve A cornfield (memory/flashback) -> A cornfield (memory/flashback)"
+    ],
+    "prompt_seed": "Crowd Response 10: Flashback to creation by farmer and munchkin. crowd_response. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement....",
+    "shot_notes": "Flashback to creation by farmer and munchkin",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH004_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH004",
+        "scene_id": "CH004_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH004",
+        "scene_id": "CH004_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH004",
+        "scene_id": "CH004_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH004",
+        "scene_id": "CH004_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH004",
+        "scene_id": "CH004_SC003"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH004",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH004_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH003",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH003_chapter_iii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH004",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH004_chapter_iv.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH005",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH005_chapter_v.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH004",
+        "canonical_id": "farmer"
+      }
+    ],
+    "evidence_summary": [
+      "Establish the Scarecrow's origin through a narrative bridge between present-day reflection and stylized memory. The sequence must transition from the grounded, calm atmosphere of the brookside to a dream-like cornfield flashback that emphasizes his lack of...",
+      "The Scarecrow recounts his creation by a farmer and a Munchkin. He describes his first moments of consciousness on a pole and the pivotal moment when a crow informed him that he lacked brains.",
+      "Calm $\\rightarrow$ Existential longing/Inadequacy.",
+      "Scarecrow sitting calmly by the brookside.",
+      "Scarecrow expressing existential longing/inadequacy.",
+      "The narration of creation and the subsequent realization of missing brains.",
+      "farmer | A rustic individual inhabiting the great Kansas prairies. The character is associated with a small, humble household and engages in manual agricultural tasks, such as the construction of scarecrows. Visual presentation should be grounded in rural,...",
+      "munchkin | A small-scale humanoid fantasy creature of bipedal morphology. While specific clothing or movement patterns are not detailed, the character is defined by its diminutive scale relative to other entities. | unknown | unknown",
+      "brookside_meadow | Insufficient descriptive data available to establish a visual profile. The location functions as a secondary setting used for rest stops. | Unknown | Unknown | Unknown"
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "economical_storybook",
+    "coverage_role": "crowd_response",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "normal",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT002",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "normal",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = normal"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH004_SC003_SH010_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "6979e472ff07b1d33f0cb650d8e372c51469c8b5",
+      "created_at_utc": "2026-04-27T20:53:31.462928+00:00",
+      "updated_at_utc": "2026-04-27T20:54:28.527965+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH004_SC003",
+          "version": "06df1307104c9cacfcab004f0f9f8d3078ef2b24"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH004_SC003",
+          "version": "e0430f10f99a4566dce1bade949c532e9788e555"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH004_SC003",
+          "version": "48f7a1b36578e468e38895a720c1f064b082071b"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:53:31.463426+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "6979e472ff07b1d33f0cb650d8e372c51469c8b5"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:28.528965+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "6979e472ff07b1d33f0cb650d8e372c51469c8b5"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH011",
+    "scene_id": "CH004_SC003",
+    "chapter_id": "CH004",
+    "shot_order": 11,
+    "previous_shot_id": "SH010",
+    "next_shot_id": "SH012",
+    "primary_subject": "farmer",
+    "secondary_subjects": [
+      "munchkin"
+    ],
+    "shot_moment_summary": "Flashback to creation by farmer and munchkin",
+    "start_state": "Dream-like fade in",
+    "end_state": "Scarecrow is fully formed on pole",
+    "action_during_shot": "Flashback to creation by farmer and munchkin",
+    "action_continues_from": "Scarecrow is fully formed on pole",
+    "action_hands_off_to": "BT003",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "farmer",
+    "visible_secondary_subject_ids": [
+      "munchkin"
+    ],
+    "primary_subject_frame_position": "foreground right within A cornfield (memory/flashback)",
+    "primary_subject_scale_relation": "preserve readable body-to-environment scale in frame",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "Dream-like fade in",
+    "subject_relation_summary": "farmer plays against munchkin in the same frame",
+    "required_environment_anchor_1": "A cornfield (memory/flashback)",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "preserve readable body-to-environment scale in frame",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "Figures working near a central pole",
+      "A cornfield (memory/flashback)",
+      "farmer remains readable within the active playing space.",
+      "munchkin remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the A cornfield (memory/flashback).",
+      "Background depth should keep brookside_meadow legible as the location anchor.",
+      "Subject 1: farmer remains visually readable against the environment scale.",
+      "Subject 2: munchkin remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "farmer focuses toward the active scene action."
+    ],
+    "environment_subzone": "A cornfield (memory/flashback)",
+    "key_visible_environment_features": [
+      "A cornfield (memory/flashback)",
+      "Chapter-local environment alias match for 'The brookside (present)' (key_overlap=1, label_overlap=1, context_overlap=3)."
+    ],
+    "continuity_from_previous_shot": "Scarecrow is fully formed on pole",
+    "continuity_to_next_shot": "BT003",
+    "pose_anchor_frame": "Dream-like fade in",
+    "pose_end_frame": "Scarecrow is fully formed on pole",
+    "shot_title": "Symbol Insert 11: Flashback to creation by farmer and munchkin",
+    "shot_type": "symbol_insert",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in brookside_meadow featuring farmer, munchkin, Scarecrow (as narrator).",
+    "target_seconds": 5.0,
+    "characters_in_frame": [
+      {
+        "label": "Farmer (flashback/implied)",
+        "canonical_id": "farmer",
+        "display_name": "farmer",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH004/farmer.md",
+        "notes": "Direct registry match for 'farmer'."
+      },
+      {
+        "label": "Munchkin (flashback/implied)",
+        "canonical_id": "munchkin",
+        "display_name": "munchkin",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH004/munchkin.md",
+        "notes": "Direct registry match for 'munchkin'."
+      },
+      {
+        "label": "Scarecrow (as narrator)",
+        "canonical_id": null,
+        "display_name": "Scarecrow (as narrator)",
+        "status": "review",
+        "entity_kind": "individual",
+        "resolution_score": 6,
+        "source_path": "",
+        "notes": "Low-confidence character match requires review."
+      }
+    ],
+    "environment": {
+      "label": "The brookside (present)",
+      "canonical_id": "brookside_meadow",
+      "display_name": "brookside_meadow",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 52,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH004/brookside_meadow.md",
+      "notes": "Chapter-local environment alias match for 'The brookside (present)' (key_overlap=1, label_overlap=1, context_overlap=3)."
+    },
+    "beat_ids": [
+      "BT002"
+    ],
+    "continuity_constraints": [
+      "Lighting/color grade shift between brookside_meadow and A cornfield (memory/flashback)",
+      "Flashback to creation by farmer and munchkin",
+      "Resolve Scarecrow (as narrator) -> Scarecrow (as narrator)",
+      "Resolve Crow (flashback/implied) -> Crow (flashback/implied)",
+      "Resolve A cornfield (memory/flashback) -> A cornfield (memory/flashback)"
+    ],
+    "prompt_seed": "Symbol Insert 11: Flashback to creation by farmer and munchkin. symbol_insert. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. R...",
+    "shot_notes": "Flashback to creation by farmer and munchkin",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH004_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH004",
+        "scene_id": "CH004_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH004",
+        "scene_id": "CH004_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH004",
+        "scene_id": "CH004_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH004",
+        "scene_id": "CH004_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH004",
+        "scene_id": "CH004_SC003"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH004",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH004_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH003",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH003_chapter_iii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH004",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH004_chapter_iv.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH005",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH005_chapter_v.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH004",
+        "canonical_id": "farmer"
+      }
+    ],
+    "evidence_summary": [
+      "Establish the Scarecrow's origin through a narrative bridge between present-day reflection and stylized memory. The sequence must transition from the grounded, calm atmosphere of the brookside to a dream-like cornfield flashback that emphasizes his lack of...",
+      "The Scarecrow recounts his creation by a farmer and a Munchkin. He describes his first moments of consciousness on a pole and the pivotal moment when a crow informed him that he lacked brains.",
+      "Calm $\\rightarrow$ Existential longing/Inadequacy.",
+      "Scarecrow sitting calmly by the brookside.",
+      "Scarecrow expressing existential longing/inadequacy.",
+      "The narration of creation and the subsequent realization of missing brains.",
+      "farmer | A rustic individual inhabiting the great Kansas prairies. The character is associated with a small, humble household and engages in manual agricultural tasks, such as the construction of scarecrows. Visual presentation should be grounded in rural,...",
+      "munchkin | A small-scale humanoid fantasy creature of bipedal morphology. While specific clothing or movement patterns are not detailed, the character is defined by its diminutive scale relative to other entities. | unknown | unknown",
+      "brookside_meadow | Insufficient descriptive data available to establish a visual profile. The location functions as a secondary setting used for rest stops. | Unknown | Unknown | Unknown"
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "economical_storybook",
+    "coverage_role": "symbol_insert",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "normal",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT002",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "normal",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = normal"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH004_SC003_SH011_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "6979e472ff07b1d33f0cb650d8e372c51469c8b5",
+      "created_at_utc": "2026-04-27T20:53:31.464925+00:00",
+      "updated_at_utc": "2026-04-27T20:54:28.534465+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH004_SC003",
+          "version": "06df1307104c9cacfcab004f0f9f8d3078ef2b24"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH004_SC003",
+          "version": "e0430f10f99a4566dce1bade949c532e9788e555"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH004_SC003",
+          "version": "48f7a1b36578e468e38895a720c1f064b082071b"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:53:31.465425+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "6979e472ff07b1d33f0cb650d8e372c51469c8b5"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:28.535466+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "6979e472ff07b1d33f0cb650d8e372c51469c8b5"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH012",
+    "scene_id": "CH004_SC003",
+    "chapter_id": "CH004",
+    "shot_order": 12,
+    "previous_shot_id": "SH011",
+    "next_shot_id": "SH013",
     "primary_subject": "Crow (flashback/implied)",
     "secondary_subjects": [],
     "shot_moment_summary": "A crow informs the Scarecrow he lacks brains",
     "start_state": "consciousness on pole",
     "end_state": "existential realization",
     "action_during_shot": "crow landing or flying near head",
-    "action_continues_from": "assembly complete",
+    "action_continues_from": "Scarecrow is fully formed on pole",
     "action_hands_off_to": "End of scene",
     "shot_size": "medium_close",
     "camera_angle": "eye_level",
     "lens_family": "telephoto",
-    "camera_motion": "push_in",
+    "camera_motion": "locked_off",
     "zoom_behavior": "none",
     "focus_strategy": "rack_focus",
     "lighting_style": "hard_directional",
@@ -447,32 +2624,37 @@
     "required_subject_anchor_1": "Crow interacting with the Scarecrow's head area",
     "required_celestial_anchor_1": "",
     "required_scale_proof_detail": "bird vs straw head scale",
-    "camera_package_description": "medium-close, eye level, telephoto lens, push in, rack focus, hard directional",
+    "camera_package_description": "medium-close, eye level, telephoto lens, locked off, rack focus, hard directional",
     "subject_blocking": [
       "perched on pole",
       "Crow interacting with the Scarecrow's head area",
+      "A cornfield (memory/flashback)",
       "Crow (flashback/implied) remains readable within the active playing space.",
       "Scarecrow (as narrator) remains readable within the active playing space."
     ],
     "camera_relative_positions": [
-      "Camera anchors the action inside the A cornfield (memory/flashback)."
+      "Camera anchors the action inside the A cornfield (memory/flashback).",
+      "Background depth should keep brookside_meadow legible as the location anchor.",
+      "Subject 1: Crow (flashback/implied) remains visually readable against the environment scale.",
+      "Subject 2: Scarecrow (as narrator) remains visually readable against the environment scale."
     ],
     "gaze_directions": [
       "Crow (flashback/implied) focuses toward the active scene action."
     ],
     "environment_subzone": "A cornfield (memory/flashback)",
     "key_visible_environment_features": [
-      "A cornfield (memory/flashback)"
+      "A cornfield (memory/flashback)",
+      "Chapter-local environment alias match for 'The brookside (present)' (key_overlap=1, label_overlap=1, context_overlap=3)."
     ],
-    "continuity_from_previous_shot": "assembly complete",
+    "continuity_from_previous_shot": "Scarecrow is fully formed on pole",
     "continuity_to_next_shot": "End of scene",
     "pose_anchor_frame": "consciousness on pole",
     "pose_end_frame": "existential realization",
-    "shot_title": "Reaction Closeup 3: The pivotal moment of realization via the Crow",
-    "shot_type": "reaction_closeup",
-    "camera_description": "Close framing that isolates reaction and emotional emphasis.",
-    "composition": "Intimate composition that isolates Crow (flashback/implied), Scarecrow (as narrator) against A cornfield (memory/flashback) to capture the beat's emotional turn.",
-    "target_seconds": 5.1,
+    "shot_title": "Ceremonial Master 12: The pivotal moment of realization via the Crow",
+    "shot_type": "ceremonial_master",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in brookside_meadow featuring Crow (flashback/implied), Scarecrow (as narrator).",
+    "target_seconds": 10.8,
     "characters_in_frame": [
       {
         "label": "Crow (flashback/implied)",
@@ -509,9 +2691,13 @@
       "BT003"
     ],
     "continuity_constraints": [
-      "Lighting/color grade shift between brookside_meadow and A cornfield (memory/flashback)"
+      "Lighting/color grade shift between brookside_meadow and A cornfield (memory/flashback)",
+      "The pivotal moment of realization via the Crow",
+      "Resolve Scarecrow (as narrator) -> Scarecrow (as narrator)",
+      "Resolve Crow (flashback/implied) -> Crow (flashback/implied)",
+      "Resolve A cornfield (memory/flashback) -> A cornfield (memory/flashback)"
     ],
-    "prompt_seed": "Reaction Closeup 3: The pivotal moment of realization via the Crow. reaction_closeup. size=medium_close. angle=eye_level. lens=telephoto. motion=push_in. zoom=none. focus=rack_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front. Close framing that isolates reaction and emotional emphasis...",
+    "prompt_seed": "Ceremonial Master 12: The pivotal moment of realization via the Crow. ceremonial_master. size=medium_close. angle=eye_level. lens=telephoto. motion=locked_off. zoom=none. focus=rack_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front. Stable readable framing built from the beat requirement. R...",
     "shot_notes": "The pivotal moment of realization via the Crow",
     "evidence_refs": [
       {
@@ -576,17 +2762,34 @@
       "Scarecrow sitting calmly by the brookside.",
       "Scarecrow expressing existential longing/inadequacy.",
       "The narration of creation and the subsequent realization of missing brains.",
-      "farmer | A rustic individual inhabiting the great Kansas prairies. The character is associated with a small, humble household and engages in agricultural tasks, such as tending to corn (ears). Visual identity is defined by practical, rustic clothing suitabl...",
-      "munchkin | A small-scale, bipedal humanoid fantasy creature. While specific clothing or facial details are not provided in the evidence, the character is defined by a diminutive physical scale relative to standard humanoids. | unknown | unknown",
+      "farmer | A rustic individual inhabiting the great Kansas prairies. The character is associated with a small, humble household and engages in manual agricultural tasks, such as the construction of scarecrows. Visual presentation should be grounded in rural,...",
+      "munchkin | A small-scale humanoid fantasy creature of bipedal morphology. While specific clothing or movement patterns are not detailed, the character is defined by its diminutive scale relative to other entities. | unknown | unknown",
       "brookside_meadow | Insufficient descriptive data available to establish a visual profile. The location functions as a secondary setting used for rest stops. | Unknown | Unknown | Unknown"
     ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "economical_storybook",
+    "coverage_role": "ceremonial_master",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT003",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "major",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = major"
+      ]
+    },
     "metadata": {
-      "artifact_id": "CH004_SC003_SH003_SHOT_PACKAGE",
+      "artifact_id": "CH004_SC003_SH012_SHOT_PACKAGE",
       "artifact_type": "shot_package",
       "status": "generated",
-      "source_fingerprint": "27bdbbbdba017d5d46999482882a4ae3f7c76208",
-      "created_at_utc": "2026-04-27T15:17:48.915621+00:00",
-      "updated_at_utc": "2026-04-27T15:17:48.915621+00:00",
+      "source_fingerprint": "6979e472ff07b1d33f0cb650d8e372c51469c8b5",
+      "created_at_utc": "2026-04-27T20:53:31.466427+00:00",
+      "updated_at_utc": "2026-04-27T20:54:28.540977+00:00",
       "upstream_dependencies": [
         {
           "dependency_type": "scene_contract",
@@ -601,16 +2804,1191 @@
         {
           "dependency_type": "shot_blueprints",
           "dependency_id": "CH004_SC003",
-          "version": "17d7be46a07cddf0afb0217e162e961573da02c6"
+          "version": "48f7a1b36578e468e38895a720c1f064b082071b"
         }
       ],
       "locked_fields": {},
       "manual_overrides": {},
       "revision_history": [
         {
-          "timestamp_utc": "2026-04-27T15:18:57.080204+00:00",
+          "timestamp_utc": "2026-04-27T20:53:31.466926+00:00",
           "action": "synthesized",
-          "source_fingerprint": "27bdbbbdba017d5d46999482882a4ae3f7c76208"
+          "source_fingerprint": "6979e472ff07b1d33f0cb650d8e372c51469c8b5"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:28.541977+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "6979e472ff07b1d33f0cb650d8e372c51469c8b5"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH013",
+    "scene_id": "CH004_SC003",
+    "chapter_id": "CH004",
+    "shot_order": 13,
+    "previous_shot_id": "SH012",
+    "next_shot_id": "SH014",
+    "primary_subject": "Crow (flashback/implied)",
+    "secondary_subjects": [],
+    "shot_moment_summary": "The pivotal moment of realization via the Crow",
+    "start_state": "Consciousness on pole",
+    "end_state": "Realization of lacking brains",
+    "action_during_shot": "The pivotal moment of realization via the Crow",
+    "action_continues_from": "existential realization",
+    "action_hands_off_to": "End of scene",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "",
+    "visible_secondary_subject_ids": [],
+    "primary_subject_frame_position": "foreground right within A cornfield (memory/flashback)",
+    "primary_subject_scale_relation": "preserve readable body-to-environment scale in frame",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "Consciousness on pole",
+    "subject_relation_summary": "Crow (flashback/implied) carries the frame alone",
+    "required_environment_anchor_1": "A cornfield (memory/flashback)",
+    "required_subject_anchor_1": "Crow interacting with the Scarecrow's head area",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "preserve readable body-to-environment scale in frame",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "Crow interacting with the Scarecrow's head area",
+      "A cornfield (memory/flashback)",
+      "Crow (flashback/implied) remains readable within the active playing space.",
+      "Scarecrow (as narrator) remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the A cornfield (memory/flashback).",
+      "Background depth should keep brookside_meadow legible as the location anchor.",
+      "Subject 1: Crow (flashback/implied) remains visually readable against the environment scale.",
+      "Subject 2: Scarecrow (as narrator) remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "Crow (flashback/implied) focuses toward the active scene action."
+    ],
+    "environment_subzone": "A cornfield (memory/flashback)",
+    "key_visible_environment_features": [
+      "A cornfield (memory/flashback)",
+      "Chapter-local environment alias match for 'The brookside (present)' (key_overlap=1, label_overlap=1, context_overlap=3)."
+    ],
+    "continuity_from_previous_shot": "existential realization",
+    "continuity_to_next_shot": "End of scene",
+    "pose_anchor_frame": "Consciousness on pole",
+    "pose_end_frame": "Realization of lacking brains",
+    "shot_title": "Authority Single 13: The pivotal moment of realization via the Crow",
+    "shot_type": "authority_single",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in brookside_meadow featuring Crow (flashback/implied), Scarecrow (as narrator).",
+    "target_seconds": 7.0,
+    "characters_in_frame": [
+      {
+        "label": "Crow (flashback/implied)",
+        "canonical_id": null,
+        "display_name": "Crow (flashback/implied)",
+        "status": "review",
+        "entity_kind": "individual",
+        "resolution_score": 16,
+        "source_path": "",
+        "notes": "Low-confidence character match requires review."
+      },
+      {
+        "label": "Scarecrow (as narrator)",
+        "canonical_id": null,
+        "display_name": "Scarecrow (as narrator)",
+        "status": "review",
+        "entity_kind": "individual",
+        "resolution_score": 6,
+        "source_path": "",
+        "notes": "Low-confidence character match requires review."
+      }
+    ],
+    "environment": {
+      "label": "The brookside (present)",
+      "canonical_id": "brookside_meadow",
+      "display_name": "brookside_meadow",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 52,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH004/brookside_meadow.md",
+      "notes": "Chapter-local environment alias match for 'The brookside (present)' (key_overlap=1, label_overlap=1, context_overlap=3)."
+    },
+    "beat_ids": [
+      "BT003"
+    ],
+    "continuity_constraints": [
+      "Lighting/color grade shift between brookside_meadow and A cornfield (memory/flashback)",
+      "The pivotal moment of realization via the Crow",
+      "Resolve Scarecrow (as narrator) -> Scarecrow (as narrator)",
+      "Resolve Crow (flashback/implied) -> Crow (flashback/implied)",
+      "Resolve A cornfield (memory/flashback) -> A cornfield (memory/flashback)"
+    ],
+    "prompt_seed": "Authority Single 13: The pivotal moment of realization via the Crow. authority_single. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requir...",
+    "shot_notes": "The pivotal moment of realization via the Crow",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH004_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH004",
+        "scene_id": "CH004_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH004",
+        "scene_id": "CH004_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH004",
+        "scene_id": "CH004_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH004",
+        "scene_id": "CH004_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH004",
+        "scene_id": "CH004_SC003"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH004",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH004_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH003",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH003_chapter_iii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH004",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH004_chapter_iv.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH005",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH005_chapter_v.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH004",
+        "canonical_id": "farmer"
+      }
+    ],
+    "evidence_summary": [
+      "Establish the Scarecrow's origin through a narrative bridge between present-day reflection and stylized memory. The sequence must transition from the grounded, calm atmosphere of the brookside to a dream-like cornfield flashback that emphasizes his lack of...",
+      "The Scarecrow recounts his creation by a farmer and a Munchkin. He describes his first moments of consciousness on a pole and the pivotal moment when a crow informed him that he lacked brains.",
+      "Calm $\\rightarrow$ Existential longing/Inadequacy.",
+      "Scarecrow sitting calmly by the brookside.",
+      "Scarecrow expressing existential longing/inadequacy.",
+      "The narration of creation and the subsequent realization of missing brains.",
+      "farmer | A rustic individual inhabiting the great Kansas prairies. The character is associated with a small, humble household and engages in manual agricultural tasks, such as the construction of scarecrows. Visual presentation should be grounded in rural,...",
+      "munchkin | A small-scale humanoid fantasy creature of bipedal morphology. While specific clothing or movement patterns are not detailed, the character is defined by its diminutive scale relative to other entities. | unknown | unknown",
+      "brookside_meadow | Insufficient descriptive data available to establish a visual profile. The location functions as a secondary setting used for rest stops. | Unknown | Unknown | Unknown"
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "economical_storybook",
+    "coverage_role": "authority_single",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT003",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "major",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = major"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH004_SC003_SH013_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "6979e472ff07b1d33f0cb650d8e372c51469c8b5",
+      "created_at_utc": "2026-04-27T20:53:31.467927+00:00",
+      "updated_at_utc": "2026-04-27T20:54:28.547482+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH004_SC003",
+          "version": "06df1307104c9cacfcab004f0f9f8d3078ef2b24"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH004_SC003",
+          "version": "e0430f10f99a4566dce1bade949c532e9788e555"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH004_SC003",
+          "version": "48f7a1b36578e468e38895a720c1f064b082071b"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:53:31.468428+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "6979e472ff07b1d33f0cb650d8e372c51469c8b5"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:28.548477+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "6979e472ff07b1d33f0cb650d8e372c51469c8b5"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH014",
+    "scene_id": "CH004_SC003",
+    "chapter_id": "CH004",
+    "shot_order": 14,
+    "previous_shot_id": "SH013",
+    "next_shot_id": "SH015",
+    "primary_subject": "Crow (flashback/implied)",
+    "secondary_subjects": [],
+    "shot_moment_summary": "The pivotal moment of realization via the Crow",
+    "start_state": "Consciousness on pole",
+    "end_state": "Realization of lacking brains",
+    "action_during_shot": "The pivotal moment of realization via the Crow",
+    "action_continues_from": "Realization of lacking brains",
+    "action_hands_off_to": "End of scene",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "",
+    "visible_secondary_subject_ids": [],
+    "primary_subject_frame_position": "foreground right within A cornfield (memory/flashback)",
+    "primary_subject_scale_relation": "preserve readable body-to-environment scale in frame",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "Consciousness on pole",
+    "subject_relation_summary": "Crow (flashback/implied) carries the frame alone",
+    "required_environment_anchor_1": "A cornfield (memory/flashback)",
+    "required_subject_anchor_1": "Crow interacting with the Scarecrow's head area",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "preserve readable body-to-environment scale in frame",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "Crow interacting with the Scarecrow's head area",
+      "A cornfield (memory/flashback)",
+      "Crow (flashback/implied) remains readable within the active playing space.",
+      "Scarecrow (as narrator) remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the A cornfield (memory/flashback).",
+      "Background depth should keep brookside_meadow legible as the location anchor.",
+      "Subject 1: Crow (flashback/implied) remains visually readable against the environment scale.",
+      "Subject 2: Scarecrow (as narrator) remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "Crow (flashback/implied) focuses toward the active scene action."
+    ],
+    "environment_subzone": "A cornfield (memory/flashback)",
+    "key_visible_environment_features": [
+      "A cornfield (memory/flashback)",
+      "Chapter-local environment alias match for 'The brookside (present)' (key_overlap=1, label_overlap=1, context_overlap=3)."
+    ],
+    "continuity_from_previous_shot": "Realization of lacking brains",
+    "continuity_to_next_shot": "End of scene",
+    "pose_anchor_frame": "Consciousness on pole",
+    "pose_end_frame": "Realization of lacking brains",
+    "shot_title": "Petitioner Group 14: The pivotal moment of realization via the Crow",
+    "shot_type": "petitioner_group",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in brookside_meadow featuring Crow (flashback/implied), Scarecrow (as narrator).",
+    "target_seconds": 7.0,
+    "characters_in_frame": [
+      {
+        "label": "Crow (flashback/implied)",
+        "canonical_id": null,
+        "display_name": "Crow (flashback/implied)",
+        "status": "review",
+        "entity_kind": "individual",
+        "resolution_score": 16,
+        "source_path": "",
+        "notes": "Low-confidence character match requires review."
+      },
+      {
+        "label": "Scarecrow (as narrator)",
+        "canonical_id": null,
+        "display_name": "Scarecrow (as narrator)",
+        "status": "review",
+        "entity_kind": "individual",
+        "resolution_score": 6,
+        "source_path": "",
+        "notes": "Low-confidence character match requires review."
+      }
+    ],
+    "environment": {
+      "label": "The brookside (present)",
+      "canonical_id": "brookside_meadow",
+      "display_name": "brookside_meadow",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 52,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH004/brookside_meadow.md",
+      "notes": "Chapter-local environment alias match for 'The brookside (present)' (key_overlap=1, label_overlap=1, context_overlap=3)."
+    },
+    "beat_ids": [
+      "BT003"
+    ],
+    "continuity_constraints": [
+      "Lighting/color grade shift between brookside_meadow and A cornfield (memory/flashback)",
+      "The pivotal moment of realization via the Crow",
+      "Resolve Scarecrow (as narrator) -> Scarecrow (as narrator)",
+      "Resolve Crow (flashback/implied) -> Crow (flashback/implied)",
+      "Resolve A cornfield (memory/flashback) -> A cornfield (memory/flashback)"
+    ],
+    "prompt_seed": "Petitioner Group 14: The pivotal moment of realization via the Crow. petitioner_group. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requir...",
+    "shot_notes": "The pivotal moment of realization via the Crow",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH004_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH004",
+        "scene_id": "CH004_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH004",
+        "scene_id": "CH004_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH004",
+        "scene_id": "CH004_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH004",
+        "scene_id": "CH004_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH004",
+        "scene_id": "CH004_SC003"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH004",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH004_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH003",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH003_chapter_iii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH004",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH004_chapter_iv.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH005",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH005_chapter_v.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH004",
+        "canonical_id": "farmer"
+      }
+    ],
+    "evidence_summary": [
+      "Establish the Scarecrow's origin through a narrative bridge between present-day reflection and stylized memory. The sequence must transition from the grounded, calm atmosphere of the brookside to a dream-like cornfield flashback that emphasizes his lack of...",
+      "The Scarecrow recounts his creation by a farmer and a Munchkin. He describes his first moments of consciousness on a pole and the pivotal moment when a crow informed him that he lacked brains.",
+      "Calm $\\rightarrow$ Existential longing/Inadequacy.",
+      "Scarecrow sitting calmly by the brookside.",
+      "Scarecrow expressing existential longing/inadequacy.",
+      "The narration of creation and the subsequent realization of missing brains.",
+      "farmer | A rustic individual inhabiting the great Kansas prairies. The character is associated with a small, humble household and engages in manual agricultural tasks, such as the construction of scarecrows. Visual presentation should be grounded in rural,...",
+      "munchkin | A small-scale humanoid fantasy creature of bipedal morphology. While specific clothing or movement patterns are not detailed, the character is defined by its diminutive scale relative to other entities. | unknown | unknown",
+      "brookside_meadow | Insufficient descriptive data available to establish a visual profile. The location functions as a secondary setting used for rest stops. | Unknown | Unknown | Unknown"
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "economical_storybook",
+    "coverage_role": "petitioner_group",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT003",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "major",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = major"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH004_SC003_SH014_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "6979e472ff07b1d33f0cb650d8e372c51469c8b5",
+      "created_at_utc": "2026-04-27T20:53:31.469426+00:00",
+      "updated_at_utc": "2026-04-27T20:54:28.554487+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH004_SC003",
+          "version": "06df1307104c9cacfcab004f0f9f8d3078ef2b24"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH004_SC003",
+          "version": "e0430f10f99a4566dce1bade949c532e9788e555"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH004_SC003",
+          "version": "48f7a1b36578e468e38895a720c1f064b082071b"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:53:31.470430+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "6979e472ff07b1d33f0cb650d8e372c51469c8b5"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:28.554987+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "6979e472ff07b1d33f0cb650d8e372c51469c8b5"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH015",
+    "scene_id": "CH004_SC003",
+    "chapter_id": "CH004",
+    "shot_order": 15,
+    "previous_shot_id": "SH014",
+    "next_shot_id": "SH016",
+    "primary_subject": "Crow (flashback/implied)",
+    "secondary_subjects": [],
+    "shot_moment_summary": "The pivotal moment of realization via the Crow",
+    "start_state": "Consciousness on pole",
+    "end_state": "Realization of lacking brains",
+    "action_during_shot": "The pivotal moment of realization via the Crow",
+    "action_continues_from": "Realization of lacking brains",
+    "action_hands_off_to": "End of scene",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "",
+    "visible_secondary_subject_ids": [],
+    "primary_subject_frame_position": "foreground right within A cornfield (memory/flashback)",
+    "primary_subject_scale_relation": "preserve readable body-to-environment scale in frame",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "Consciousness on pole",
+    "subject_relation_summary": "Crow (flashback/implied) carries the frame alone",
+    "required_environment_anchor_1": "A cornfield (memory/flashback)",
+    "required_subject_anchor_1": "Crow interacting with the Scarecrow's head area",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "preserve readable body-to-environment scale in frame",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "Crow interacting with the Scarecrow's head area",
+      "A cornfield (memory/flashback)",
+      "Crow (flashback/implied) remains readable within the active playing space.",
+      "Scarecrow (as narrator) remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the A cornfield (memory/flashback).",
+      "Background depth should keep brookside_meadow legible as the location anchor.",
+      "Subject 1: Crow (flashback/implied) remains visually readable against the environment scale.",
+      "Subject 2: Scarecrow (as narrator) remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "Crow (flashback/implied) focuses toward the active scene action."
+    ],
+    "environment_subzone": "A cornfield (memory/flashback)",
+    "key_visible_environment_features": [
+      "A cornfield (memory/flashback)",
+      "Chapter-local environment alias match for 'The brookside (present)' (key_overlap=1, label_overlap=1, context_overlap=3)."
+    ],
+    "continuity_from_previous_shot": "Realization of lacking brains",
+    "continuity_to_next_shot": "End of scene",
+    "pose_anchor_frame": "Consciousness on pole",
+    "pose_end_frame": "Realization of lacking brains",
+    "shot_title": "Crowd Response 15: The pivotal moment of realization via the Crow",
+    "shot_type": "crowd_response",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in brookside_meadow featuring Crow (flashback/implied), Scarecrow (as narrator).",
+    "target_seconds": 7.0,
+    "characters_in_frame": [
+      {
+        "label": "Crow (flashback/implied)",
+        "canonical_id": null,
+        "display_name": "Crow (flashback/implied)",
+        "status": "review",
+        "entity_kind": "individual",
+        "resolution_score": 16,
+        "source_path": "",
+        "notes": "Low-confidence character match requires review."
+      },
+      {
+        "label": "Scarecrow (as narrator)",
+        "canonical_id": null,
+        "display_name": "Scarecrow (as narrator)",
+        "status": "review",
+        "entity_kind": "individual",
+        "resolution_score": 6,
+        "source_path": "",
+        "notes": "Low-confidence character match requires review."
+      }
+    ],
+    "environment": {
+      "label": "The brookside (present)",
+      "canonical_id": "brookside_meadow",
+      "display_name": "brookside_meadow",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 52,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH004/brookside_meadow.md",
+      "notes": "Chapter-local environment alias match for 'The brookside (present)' (key_overlap=1, label_overlap=1, context_overlap=3)."
+    },
+    "beat_ids": [
+      "BT003"
+    ],
+    "continuity_constraints": [
+      "Lighting/color grade shift between brookside_meadow and A cornfield (memory/flashback)",
+      "The pivotal moment of realization via the Crow",
+      "Resolve Scarecrow (as narrator) -> Scarecrow (as narrator)",
+      "Resolve Crow (flashback/implied) -> Crow (flashback/implied)",
+      "Resolve A cornfield (memory/flashback) -> A cornfield (memory/flashback)"
+    ],
+    "prompt_seed": "Crowd Response 15: The pivotal moment of realization via the Crow. crowd_response. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requiremen...",
+    "shot_notes": "The pivotal moment of realization via the Crow",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH004_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH004",
+        "scene_id": "CH004_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH004",
+        "scene_id": "CH004_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH004",
+        "scene_id": "CH004_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH004",
+        "scene_id": "CH004_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH004",
+        "scene_id": "CH004_SC003"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH004",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH004_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH003",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH003_chapter_iii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH004",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH004_chapter_iv.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH005",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH005_chapter_v.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH004",
+        "canonical_id": "farmer"
+      }
+    ],
+    "evidence_summary": [
+      "Establish the Scarecrow's origin through a narrative bridge between present-day reflection and stylized memory. The sequence must transition from the grounded, calm atmosphere of the brookside to a dream-like cornfield flashback that emphasizes his lack of...",
+      "The Scarecrow recounts his creation by a farmer and a Munchkin. He describes his first moments of consciousness on a pole and the pivotal moment when a crow informed him that he lacked brains.",
+      "Calm $\\rightarrow$ Existential longing/Inadequacy.",
+      "Scarecrow sitting calmly by the brookside.",
+      "Scarecrow expressing existential longing/inadequacy.",
+      "The narration of creation and the subsequent realization of missing brains.",
+      "farmer | A rustic individual inhabiting the great Kansas prairies. The character is associated with a small, humble household and engages in manual agricultural tasks, such as the construction of scarecrows. Visual presentation should be grounded in rural,...",
+      "munchkin | A small-scale humanoid fantasy creature of bipedal morphology. While specific clothing or movement patterns are not detailed, the character is defined by its diminutive scale relative to other entities. | unknown | unknown",
+      "brookside_meadow | Insufficient descriptive data available to establish a visual profile. The location functions as a secondary setting used for rest stops. | Unknown | Unknown | Unknown"
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "economical_storybook",
+    "coverage_role": "crowd_response",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT003",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "major",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = major"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH004_SC003_SH015_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "6979e472ff07b1d33f0cb650d8e372c51469c8b5",
+      "created_at_utc": "2026-04-27T20:53:31.471435+00:00",
+      "updated_at_utc": "2026-04-27T20:54:28.560488+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH004_SC003",
+          "version": "06df1307104c9cacfcab004f0f9f8d3078ef2b24"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH004_SC003",
+          "version": "e0430f10f99a4566dce1bade949c532e9788e555"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH004_SC003",
+          "version": "48f7a1b36578e468e38895a720c1f064b082071b"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:53:31.471936+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "6979e472ff07b1d33f0cb650d8e372c51469c8b5"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:28.561487+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "6979e472ff07b1d33f0cb650d8e372c51469c8b5"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH016",
+    "scene_id": "CH004_SC003",
+    "chapter_id": "CH004",
+    "shot_order": 16,
+    "previous_shot_id": "SH015",
+    "next_shot_id": "SH017",
+    "primary_subject": "Crow (flashback/implied)",
+    "secondary_subjects": [],
+    "shot_moment_summary": "The pivotal moment of realization via the Crow",
+    "start_state": "Consciousness on pole",
+    "end_state": "Realization of lacking brains",
+    "action_during_shot": "The pivotal moment of realization via the Crow",
+    "action_continues_from": "Realization of lacking brains",
+    "action_hands_off_to": "End of scene",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "",
+    "visible_secondary_subject_ids": [],
+    "primary_subject_frame_position": "foreground right within A cornfield (memory/flashback)",
+    "primary_subject_scale_relation": "preserve readable body-to-environment scale in frame",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "Consciousness on pole",
+    "subject_relation_summary": "Crow (flashback/implied) carries the frame alone",
+    "required_environment_anchor_1": "A cornfield (memory/flashback)",
+    "required_subject_anchor_1": "Crow interacting with the Scarecrow's head area",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "preserve readable body-to-environment scale in frame",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "Crow interacting with the Scarecrow's head area",
+      "A cornfield (memory/flashback)",
+      "Crow (flashback/implied) remains readable within the active playing space.",
+      "Scarecrow (as narrator) remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the A cornfield (memory/flashback).",
+      "Background depth should keep brookside_meadow legible as the location anchor.",
+      "Subject 1: Crow (flashback/implied) remains visually readable against the environment scale.",
+      "Subject 2: Scarecrow (as narrator) remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "Crow (flashback/implied) focuses toward the active scene action."
+    ],
+    "environment_subzone": "A cornfield (memory/flashback)",
+    "key_visible_environment_features": [
+      "A cornfield (memory/flashback)",
+      "Chapter-local environment alias match for 'The brookside (present)' (key_overlap=1, label_overlap=1, context_overlap=3)."
+    ],
+    "continuity_from_previous_shot": "Realization of lacking brains",
+    "continuity_to_next_shot": "End of scene",
+    "pose_anchor_frame": "Consciousness on pole",
+    "pose_end_frame": "Realization of lacking brains",
+    "shot_title": "Symbol Insert 16: The pivotal moment of realization via the Crow",
+    "shot_type": "symbol_insert",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in brookside_meadow featuring Crow (flashback/implied), Scarecrow (as narrator).",
+    "target_seconds": 5.4,
+    "characters_in_frame": [
+      {
+        "label": "Crow (flashback/implied)",
+        "canonical_id": null,
+        "display_name": "Crow (flashback/implied)",
+        "status": "review",
+        "entity_kind": "individual",
+        "resolution_score": 16,
+        "source_path": "",
+        "notes": "Low-confidence character match requires review."
+      },
+      {
+        "label": "Scarecrow (as narrator)",
+        "canonical_id": null,
+        "display_name": "Scarecrow (as narrator)",
+        "status": "review",
+        "entity_kind": "individual",
+        "resolution_score": 6,
+        "source_path": "",
+        "notes": "Low-confidence character match requires review."
+      }
+    ],
+    "environment": {
+      "label": "The brookside (present)",
+      "canonical_id": "brookside_meadow",
+      "display_name": "brookside_meadow",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 52,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH004/brookside_meadow.md",
+      "notes": "Chapter-local environment alias match for 'The brookside (present)' (key_overlap=1, label_overlap=1, context_overlap=3)."
+    },
+    "beat_ids": [
+      "BT003"
+    ],
+    "continuity_constraints": [
+      "Lighting/color grade shift between brookside_meadow and A cornfield (memory/flashback)",
+      "The pivotal moment of realization via the Crow",
+      "Resolve Scarecrow (as narrator) -> Scarecrow (as narrator)",
+      "Resolve Crow (flashback/implied) -> Crow (flashback/implied)",
+      "Resolve A cornfield (memory/flashback) -> A cornfield (memory/flashback)"
+    ],
+    "prompt_seed": "Symbol Insert 16: The pivotal moment of realization via the Crow. symbol_insert. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement....",
+    "shot_notes": "The pivotal moment of realization via the Crow",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH004_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH004",
+        "scene_id": "CH004_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH004",
+        "scene_id": "CH004_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH004",
+        "scene_id": "CH004_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH004",
+        "scene_id": "CH004_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH004",
+        "scene_id": "CH004_SC003"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH004",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH004_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH003",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH003_chapter_iii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH004",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH004_chapter_iv.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH005",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH005_chapter_v.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH004",
+        "canonical_id": "farmer"
+      }
+    ],
+    "evidence_summary": [
+      "Establish the Scarecrow's origin through a narrative bridge between present-day reflection and stylized memory. The sequence must transition from the grounded, calm atmosphere of the brookside to a dream-like cornfield flashback that emphasizes his lack of...",
+      "The Scarecrow recounts his creation by a farmer and a Munchkin. He describes his first moments of consciousness on a pole and the pivotal moment when a crow informed him that he lacked brains.",
+      "Calm $\\rightarrow$ Existential longing/Inadequacy.",
+      "Scarecrow sitting calmly by the brookside.",
+      "Scarecrow expressing existential longing/inadequacy.",
+      "The narration of creation and the subsequent realization of missing brains.",
+      "farmer | A rustic individual inhabiting the great Kansas prairies. The character is associated with a small, humble household and engages in manual agricultural tasks, such as the construction of scarecrows. Visual presentation should be grounded in rural,...",
+      "munchkin | A small-scale humanoid fantasy creature of bipedal morphology. While specific clothing or movement patterns are not detailed, the character is defined by its diminutive scale relative to other entities. | unknown | unknown",
+      "brookside_meadow | Insufficient descriptive data available to establish a visual profile. The location functions as a secondary setting used for rest stops. | Unknown | Unknown | Unknown"
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "economical_storybook",
+    "coverage_role": "symbol_insert",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT003",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "major",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = major"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH004_SC003_SH016_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "6979e472ff07b1d33f0cb650d8e372c51469c8b5",
+      "created_at_utc": "2026-04-27T20:53:31.472935+00:00",
+      "updated_at_utc": "2026-04-27T20:54:28.566487+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH004_SC003",
+          "version": "06df1307104c9cacfcab004f0f9f8d3078ef2b24"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH004_SC003",
+          "version": "e0430f10f99a4566dce1bade949c532e9788e555"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH004_SC003",
+          "version": "48f7a1b36578e468e38895a720c1f064b082071b"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:53:31.473438+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "6979e472ff07b1d33f0cb650d8e372c51469c8b5"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:28.567487+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "6979e472ff07b1d33f0cb650d8e372c51469c8b5"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH017",
+    "scene_id": "CH004_SC003",
+    "chapter_id": "CH004",
+    "shot_order": 17,
+    "previous_shot_id": "SH016",
+    "next_shot_id": "",
+    "primary_subject": "Crow (flashback/implied)",
+    "secondary_subjects": [],
+    "shot_moment_summary": "The pivotal moment of realization via the Crow",
+    "start_state": "Consciousness on pole",
+    "end_state": "Realization of lacking brains",
+    "action_during_shot": "The pivotal moment of realization via the Crow",
+    "action_continues_from": "Realization of lacking brains",
+    "action_hands_off_to": "End of scene",
+    "shot_size": "close_up",
+    "camera_angle": "eye_level",
+    "lens_family": "portrait",
+    "camera_motion": "push_in",
+    "zoom_behavior": "subtle_in",
+    "focus_strategy": "shallow_subject",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "",
+    "visible_secondary_subject_ids": [],
+    "primary_subject_frame_position": "foreground inside A cornfield (memory/flashback)",
+    "primary_subject_scale_relation": "preserve readable body-to-environment scale in frame",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "Consciousness on pole",
+    "subject_relation_summary": "Crow (flashback/implied) carries the frame alone",
+    "required_environment_anchor_1": "A cornfield (memory/flashback)",
+    "required_subject_anchor_1": "Crow interacting with the Scarecrow's head area",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "preserve readable body-to-environment scale in frame",
+    "camera_package_description": "close-up, eye level, portrait lens, push in, zoom subtle in, shallow subject, hard directional",
+    "subject_blocking": [
+      "Crow interacting with the Scarecrow's head area",
+      "A cornfield (memory/flashback)",
+      "Crow (flashback/implied) remains readable within the active playing space.",
+      "Scarecrow (as narrator) remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the A cornfield (memory/flashback).",
+      "Background depth should keep brookside_meadow legible as the location anchor.",
+      "Subject 1: Crow (flashback/implied) remains visually readable against the environment scale.",
+      "Subject 2: Scarecrow (as narrator) remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "Crow (flashback/implied) focuses toward the active scene action."
+    ],
+    "environment_subzone": "A cornfield (memory/flashback)",
+    "key_visible_environment_features": [
+      "A cornfield (memory/flashback)",
+      "Chapter-local environment alias match for 'The brookside (present)' (key_overlap=1, label_overlap=1, context_overlap=3)."
+    ],
+    "continuity_from_previous_shot": "Realization of lacking brains",
+    "continuity_to_next_shot": "End of scene",
+    "pose_anchor_frame": "Consciousness on pole",
+    "pose_end_frame": "Realization of lacking brains",
+    "shot_title": "Reaction Closeup 17: The pivotal moment of realization via the Crow",
+    "shot_type": "reaction_closeup",
+    "camera_description": "Close framing that isolates reaction and emotional emphasis.",
+    "composition": "Intimate composition that isolates Crow (flashback/implied), Scarecrow (as narrator) against brookside_meadow to capture the beat's emotional turn.",
+    "target_seconds": 7.0,
+    "characters_in_frame": [
+      {
+        "label": "Crow (flashback/implied)",
+        "canonical_id": null,
+        "display_name": "Crow (flashback/implied)",
+        "status": "review",
+        "entity_kind": "individual",
+        "resolution_score": 16,
+        "source_path": "",
+        "notes": "Low-confidence character match requires review."
+      },
+      {
+        "label": "Scarecrow (as narrator)",
+        "canonical_id": null,
+        "display_name": "Scarecrow (as narrator)",
+        "status": "review",
+        "entity_kind": "individual",
+        "resolution_score": 6,
+        "source_path": "",
+        "notes": "Low-confidence character match requires review."
+      }
+    ],
+    "environment": {
+      "label": "The brookside (present)",
+      "canonical_id": "brookside_meadow",
+      "display_name": "brookside_meadow",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 52,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH004/brookside_meadow.md",
+      "notes": "Chapter-local environment alias match for 'The brookside (present)' (key_overlap=1, label_overlap=1, context_overlap=3)."
+    },
+    "beat_ids": [
+      "BT003"
+    ],
+    "continuity_constraints": [
+      "Lighting/color grade shift between brookside_meadow and A cornfield (memory/flashback)",
+      "The pivotal moment of realization via the Crow",
+      "Resolve Scarecrow (as narrator) -> Scarecrow (as narrator)",
+      "Resolve Crow (flashback/implied) -> Crow (flashback/implied)",
+      "Resolve A cornfield (memory/flashback) -> A cornfield (memory/flashback)"
+    ],
+    "prompt_seed": "Reaction Closeup 17: The pivotal moment of realization via the Crow. reaction_closeup. size=close_up. angle=eye_level. lens=portrait. motion=push_in. zoom=subtle_in. focus=shallow_subject. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Close framing that isolates reaction an...",
+    "shot_notes": "The pivotal moment of realization via the Crow",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH004_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH004",
+        "scene_id": "CH004_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH004",
+        "scene_id": "CH004_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH004",
+        "scene_id": "CH004_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH004",
+        "scene_id": "CH004_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH004",
+        "scene_id": "CH004_SC003"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH004",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH004_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH003",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH003_chapter_iii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH004",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH004_chapter_iv.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH005",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH005_chapter_v.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH004",
+        "canonical_id": "farmer"
+      }
+    ],
+    "evidence_summary": [
+      "Establish the Scarecrow's origin through a narrative bridge between present-day reflection and stylized memory. The sequence must transition from the grounded, calm atmosphere of the brookside to a dream-like cornfield flashback that emphasizes his lack of...",
+      "The Scarecrow recounts his creation by a farmer and a Munchkin. He describes his first moments of consciousness on a pole and the pivotal moment when a crow informed him that he lacked brains.",
+      "Calm $\\rightarrow$ Existential longing/Inadequacy.",
+      "Scarecrow sitting calmly by the brookside.",
+      "Scarecrow expressing existential longing/inadequacy.",
+      "The narration of creation and the subsequent realization of missing brains.",
+      "farmer | A rustic individual inhabiting the great Kansas prairies. The character is associated with a small, humble household and engages in manual agricultural tasks, such as the construction of scarecrows. Visual presentation should be grounded in rural,...",
+      "munchkin | A small-scale humanoid fantasy creature of bipedal morphology. While specific clothing or movement patterns are not detailed, the character is defined by its diminutive scale relative to other entities. | unknown | unknown",
+      "brookside_meadow | Insufficient descriptive data available to establish a visual profile. The location functions as a secondary setting used for rest stops. | Unknown | Unknown | Unknown"
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "economical_storybook",
+    "coverage_role": "decision_closeup",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT003",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "major",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = major"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH004_SC003_SH017_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "6979e472ff07b1d33f0cb650d8e372c51469c8b5",
+      "created_at_utc": "2026-04-27T20:53:31.474434+00:00",
+      "updated_at_utc": "2026-04-27T20:54:28.573005+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH004_SC003",
+          "version": "06df1307104c9cacfcab004f0f9f8d3078ef2b24"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH004_SC003",
+          "version": "e0430f10f99a4566dce1bade949c532e9788e555"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH004_SC003",
+          "version": "48f7a1b36578e468e38895a720c1f064b082071b"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:53:31.474936+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "6979e472ff07b1d33f0cb650d8e372c51469c8b5"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:28.573506+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "6979e472ff07b1d33f0cb650d8e372c51469c8b5"
         }
       ]
     }

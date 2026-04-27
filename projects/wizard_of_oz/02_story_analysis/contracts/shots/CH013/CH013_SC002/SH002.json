@@ -5,79 +5,70 @@
   "shot_order": 2,
   "previous_shot_id": "",
   "next_shot_id": "",
-  "primary_subject": "tin_woodman",
+  "primary_subject": "dorothy",
   "secondary_subjects": [
-    "dorothy"
+    "cowardly_lion"
   ],
-  "shot_moment_summary": "finding the rusted woodman",
-  "start_state": "searching movement",
-  "end_state": "static discovery",
-  "action_during_shot": "stopping abruptly",
+  "shot_moment_summary": "Search party traverses the rocky plain",
+  "start_state": "walking through terrain",
+  "end_state": "stopping at a discovery",
+  "action_during_shot": "Search party traverses the rocky plain",
   "action_continues_from": "tracking the group",
-  "action_hands_off_to": "BT003",
-  "shot_size": "close_up",
-  "camera_angle": "low_angle",
-  "lens_family": "portrait",
+  "action_hands_off_to": "BT002",
+  "shot_size": "medium",
+  "camera_angle": "eye_level",
+  "lens_family": "normal",
   "camera_motion": "locked_off",
-  "zoom_behavior": "subtle_in",
-  "focus_strategy": "shallow_subject",
+  "zoom_behavior": "none",
+  "focus_strategy": "deep_focus",
   "lighting_style": "hard_directional",
   "subject_visibility": "on_screen",
   "narration_mode": "none",
-  "primary_subject_angle": "front",
-  "visible_primary_subject_id": "tin_woodman",
+  "primary_subject_angle": "front_three_quarter_left",
+  "visible_primary_subject_id": "dorothy",
   "visible_secondary_subject_ids": [
-    "dorothy"
+    "cowardly_lion"
   ],
-  "primary_subject_frame_position": "foreground inside rocky_plain",
-  "primary_subject_scale_relation": "close proximity to character height",
-  "primary_subject_facing_direction": "facing directly toward camera",
-  "primary_subject_pose_description": "searching movement",
-  "subject_relation_summary": "tin_woodman plays against dorothy in the same frame",
+  "primary_subject_frame_position": "foreground right within rocky_plain",
+  "primary_subject_scale_relation": "preserve readable body-to-environment scale in frame",
+  "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+  "primary_subject_pose_description": "walking through terrain",
+  "subject_relation_summary": "dorothy plays against cowardly_lion in the same frame",
   "required_environment_anchor_1": "rocky_plain",
   "required_subject_anchor_1": "",
   "required_celestial_anchor_1": "",
-  "required_scale_proof_detail": "close proximity to character height",
-  "camera_package_description": "close-up, low angle, portrait lens, locked off, zoom subtle in, shallow subject, hard directional",
+  "required_scale_proof_detail": "preserve readable body-to-environment scale in frame",
+  "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
   "subject_blocking": [
-    "group clusters around the body",
-    "group gathers around a central point",
-    "tin_woodman remains readable within the active playing space.",
-    "dorothy remains readable within the active playing space."
+    "linear search line",
+    "rocky_plain",
+    "dorothy remains readable within the active playing space.",
+    "cowardly_lion remains readable within the active playing space."
   ],
   "camera_relative_positions": [
     "Camera anchors the action inside the rocky_plain.",
     "Background depth should keep rocky_plain legible as the location anchor.",
-    "Subject 1: tin_woodman remains visually readable against the environment scale.",
-    "Subject 2: dorothy remains visually readable against the environment scale."
+    "Subject 1: dorothy remains visually readable against the environment scale.",
+    "Subject 2: cowardly_lion remains visually readable against the environment scale."
   ],
   "gaze_directions": [
-    "tin_woodman focuses toward the active scene action."
+    "dorothy focuses toward the active scene action."
   ],
   "environment_subzone": "rocky_plain",
   "key_visible_environment_features": [
-    "rocky_plain"
+    "rocky_plain",
+    "Direct registry match for 'rocky_plain'."
   ],
   "continuity_from_previous_shot": "tracking the group",
-  "continuity_to_next_shot": "BT003",
-  "pose_anchor_frame": "searching movement",
-  "pose_end_frame": "static discovery",
-  "shot_title": "Reaction Closeup 2: Discovery of the rusted Tin Woodman",
-  "shot_type": "reaction_closeup",
-  "camera_description": "Close framing that isolates reaction and emotional emphasis.",
-  "composition": "Intimate composition that isolates tin_woodman, dorothy against rocky_plain to capture the beat's emotional turn.",
-  "target_seconds": 5.3,
+  "continuity_to_next_shot": "BT002",
+  "pose_anchor_frame": "walking through terrain",
+  "pose_end_frame": "stopping at a discovery",
+  "shot_title": "Authority Single 2: Search party traverses the rocky plain",
+  "shot_type": "authority_single",
+  "camera_description": "Stable readable framing built from the beat requirement.",
+  "composition": "Readable medium composition in rocky_plain featuring dorothy, cowardly_lion.",
+  "target_seconds": 7.0,
   "characters_in_frame": [
-    {
-      "label": "Tin Woodman",
-      "canonical_id": "tin_woodman",
-      "display_name": "tin_woodman",
-      "status": "canonical",
-      "entity_kind": "individual",
-      "resolution_score": 138,
-      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH013/tin_woodman.md",
-      "notes": "Direct registry match for 'tin_woodman'."
-    },
     {
       "label": "Dorothy",
       "canonical_id": "dorothy",
@@ -87,6 +78,16 @@
       "resolution_score": 138,
       "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH013/dorothy.md",
       "notes": "Direct registry match for 'dorothy'."
+    },
+    {
+      "label": "Cowardly Lion",
+      "canonical_id": "cowardly_lion",
+      "display_name": "cowardly_lion",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH013/cowardly_lion.md",
+      "notes": "Direct registry match for 'cowardly_lion'."
     }
   ],
   "environment": {
@@ -100,15 +101,15 @@
     "notes": "Direct registry match for 'rocky_plain'."
   },
   "beat_ids": [
-    "BT002"
+    "BT001"
   ],
   "continuity_constraints": [
     "Progression of rust levels on tin_woodman",
     "Specific placement and appearance of metal patches post-repair",
-    "Discovery of the rusted Tin Woodman"
+    "Search party traverses the rocky plain"
   ],
-  "prompt_seed": "Reaction Closeup 2: Discovery of the rusted Tin Woodman. reaction_closeup. size=close_up. angle=low_angle. lens=portrait. motion=locked_off. zoom=subtle_in. focus=shallow_subject. lighting=hard_directional. visibility=on_screen. subject_angle=front. Close framing that isolates reaction and emotional emphasis. Intima...",
-  "shot_notes": "Discovery of the rusted Tin Woodman",
+  "prompt_seed": "Authority Single 2: Search party traverses the rocky plain. authority_single. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Re...",
+  "shot_notes": "Search party traverses the rocky plain",
   "evidence_refs": [
     {
       "source": "scene_contract",
@@ -178,13 +179,30 @@
     "rocky_plain | No specific visual descriptors are provided in the current evidence. The environment functions as a location for transit and discovery. | Unknown. | Unknown. | Unknown.",
     "yellow_castle | The yellow_castle serves as the central seat of power within the Land of the West. Specific visual characteristics are currently undocumented in the provided evidence. | Unknown. | Unknown. | Unknown."
   ],
+  "coverage_density": "medium",
+  "coverage_profile": "classic_adventure",
+  "coverage_intent": "suspense_investigation",
+  "coverage_role": "authority_single",
+  "beat_type": "dialogue_council_or_court",
+  "coverage_importance": "major",
+  "coverage_blueprint_source": "deterministic_v1",
+  "coverage_classification": {
+    "beat_id": "BT001",
+    "beat_type": "dialogue_council_or_court",
+    "importance": "major",
+    "confidence": 0.82,
+    "reasons": [
+      "court/council authority language",
+      "importance = major"
+    ]
+  },
   "metadata": {
     "artifact_id": "CH013_SC002_SH002_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "58da5f16106f41fd492552a446ce0aa47bb7bbbd",
+    "source_fingerprint": "9f7fcf7b86b2167d554144dcf084a356e6205438",
     "created_at_utc": "2026-04-27T17:47:23.169881+00:00",
-    "updated_at_utc": "2026-04-27T17:47:23.169881+00:00",
+    "updated_at_utc": "2026-04-27T20:54:52.635725+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
@@ -199,7 +217,7 @@
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH013_SC002",
-        "version": "01124a61682ceabe5a7bc74a904079b53e9c09d6"
+        "version": "b1a36006b14e346e310c74adbbaa3cf5310b56dc"
       }
     ],
     "locked_fields": {},
@@ -209,6 +227,16 @@
         "timestamp_utc": "2026-04-27T17:48:30.088993+00:00",
         "action": "synthesized",
         "source_fingerprint": "58da5f16106f41fd492552a446ce0aa47bb7bbbd"
+      },
+      {
+        "timestamp_utc": "2026-04-27T20:53:54.342115+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "9f7fcf7b86b2167d554144dcf084a356e6205438"
+      },
+      {
+        "timestamp_utc": "2026-04-27T20:54:52.635725+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "9f7fcf7b86b2167d554144dcf084a356e6205438"
       }
     ]
   }

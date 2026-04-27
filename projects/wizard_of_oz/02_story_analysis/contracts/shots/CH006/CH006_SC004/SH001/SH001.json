@@ -42,6 +42,7 @@
   "subject_blocking": [
     "scarecrow leans over woodman",
     "Scarecrow hunched over Woodman's head",
+    "thick_dark_forest_path",
     "the_scarecrow remains readable within the active playing space.",
     "tin_woodman remains readable within the active playing space."
   ],
@@ -56,17 +57,18 @@
   ],
   "environment_subzone": "thick_dark_forest_path",
   "key_visible_environment_features": [
-    "thick_dark_forest_path"
+    "thick_dark_forest_path",
+    "Chapter-local beat subzone match for 'thick_dark_forest_path'."
   ],
   "continuity_from_previous_shot": "High tension; Tin Woodman is unable to speak, causing frustration among the group.",
   "continuity_to_next_shot": "BT002",
   "pose_anchor_frame": "stuck jaw",
   "pose_end_frame": "oil application begins",
-  "shot_title": "Reaction Closeup 1: The Scarecrow attempts to lubricate the jaw",
-  "shot_type": "reaction_closeup",
-  "camera_description": "Close framing that isolates reaction and emotional emphasis.",
-  "composition": "Intimate composition that isolates the_scarecrow, tin_woodman against thick_dark_forest to capture the beat's emotional turn.",
-  "target_seconds": 5.5,
+  "shot_title": "Handoff Medium 1: The Scarecrow attempts to lubricate the jaw",
+  "shot_type": "handoff_medium",
+  "camera_description": "Stable readable framing built from the beat requirement.",
+  "composition": "Readable medium composition in thick_dark_forest featuring the_scarecrow, tin_woodman.",
+  "target_seconds": 7.0,
   "characters_in_frame": [
     {
       "label": "Scarecrow",
@@ -107,7 +109,7 @@
     "State of Tin Woodman's jaw (stuck vs. moving).",
     "The Scarecrow attempts to lubricate the jaw"
   ],
-  "prompt_seed": "Reaction Closeup 1: The Scarecrow attempts to lubricate the jaw. reaction_closeup. size=close_up. angle=eye_level. lens=portrait. motion=locked_off. zoom=none. focus=shallow_subject. lighting=diffuse_ambient. visibility=on_screen. subject_angle=front_three_quarter_right. Close framing that isolates reaction and emot...",
+  "prompt_seed": "Handoff Medium 1: The Scarecrow attempts to lubricate the jaw. handoff_medium. size=close_up. angle=eye_level. lens=portrait. motion=locked_off. zoom=none. focus=shallow_subject. lighting=diffuse_ambient. visibility=on_screen. subject_angle=front_three_quarter_right. Stable readable framing built from the beat requi...",
   "shot_notes": "The Scarecrow attempts to lubricate the jaw",
   "evidence_refs": [
     {
@@ -177,13 +179,29 @@
     "dorothy | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md] Costume/Silhouette: Unknown. No specific clothing details are provided in this chapter. [source:C:/FilmCreator/projects/wizard_of_oz/02_...",
     "thick_dark_forest | No specific visual descriptors are provided in the current evidence. The environment is identified as a \"thick dark forest.\" | Unknown. | Dark (per name). | Unknown."
   ],
+  "coverage_density": "medium",
+  "coverage_profile": "classic_adventure",
+  "coverage_intent": "montage_travel",
+  "coverage_role": "handoff_medium",
+  "beat_type": "transition_handoff",
+  "coverage_importance": "major",
+  "coverage_blueprint_source": "deterministic_v1",
+  "coverage_classification": {
+    "beat_id": "BT001",
+    "beat_type": "transition_handoff",
+    "importance": "major",
+    "confidence": 0.55,
+    "reasons": [
+      "importance = major"
+    ]
+  },
   "metadata": {
     "artifact_id": "CH006_SC004_SH001_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "d6b2730b2258dccd116537a891388dfcbe409d59",
+    "source_fingerprint": "663011e18dcdaf653cf1ca4be16231dc46921f6e",
     "created_at_utc": "2026-04-27T15:51:23.529501+00:00",
-    "updated_at_utc": "2026-04-27T15:51:23.529501+00:00",
+    "updated_at_utc": "2026-04-27T20:54:34.090927+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
@@ -198,7 +216,7 @@
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH006_SC004",
-        "version": "25501e044e55fe4062a088e82123adaffeaf3283"
+        "version": "151b0571f273d41b89b170235df8721203a80f07"
       }
     ],
     "locked_fields": {},
@@ -208,6 +226,16 @@
         "timestamp_utc": "2026-04-27T15:52:45.080928+00:00",
         "action": "synthesized",
         "source_fingerprint": "d6b2730b2258dccd116537a891388dfcbe409d59"
+      },
+      {
+        "timestamp_utc": "2026-04-27T20:53:37.062574+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "663011e18dcdaf653cf1ca4be16231dc46921f6e"
+      },
+      {
+        "timestamp_utc": "2026-04-27T20:54:34.374097+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "663011e18dcdaf653cf1ca4be16231dc46921f6e"
       }
     ]
   }

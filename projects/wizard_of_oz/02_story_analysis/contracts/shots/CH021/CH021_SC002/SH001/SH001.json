@@ -39,34 +39,38 @@
   "required_environment_anchor_1": "open_clearing_center",
   "required_subject_anchor_1": "",
   "required_celestial_anchor_1": "",
-  "required_scale_proof_detail": "comparison of travelers to massive elephants/tigers",
+  "required_scale_proof_detail": "preserve readable body-to-environment scale in frame",
   "camera_package_description": "extreme-wide, eye level, ultra-wide lens, pan, deep focus, diffuse ambient",
   "subject_blocking": [
     "travelers halt at clearing edge",
     "travelers move from dense trees to open light",
+    "edge of ancient_forest_interior",
     "dorothy remains readable within the active playing space.",
     "toto remains readable within the active playing space."
   ],
   "camera_relative_positions": [
     "Camera anchors the action inside the thick_mossy_perimeter.",
-    "Background depth should keep ancient_forest_interior legible as the location anchor."
+    "Background depth should keep ancient_forest_interior legible as the location anchor.",
+    "Subject 1: dorothy remains visually readable against the environment scale.",
+    "Subject 2: toto remains visually readable against the environment scale."
   ],
   "gaze_directions": [
     "various forest beasts (tigers, elephants, bears, wolves, foxes) focuses toward the active scene action."
   ],
   "environment_subzone": "open_clearing_center",
   "key_visible_environment_features": [
-    "thick_mossy_perimeter"
+    "thick_mossy_perimeter",
+    "Chapter-local beat subzone match for 'open_clearing_center'."
   ],
   "continuity_from_previous_shot": "Travelers emerge from thick forest into a bright, open clearing.",
   "continuity_to_next_shot": "BT002",
   "pose_anchor_frame": "travelers entering frame",
   "pose_end_frame": "wide view of assembly",
-  "shot_title": "Establishing Wide 1: Discovery of the clearing",
-  "shot_type": "establishing_wide",
-  "camera_description": "Wide establishing frame with a steady or lightly drifting camera.",
-  "composition": "Wide composition across ancient_forest_interior with dorothy, toto, the_scarecrow placed for immediate spatial orientation.",
-  "target_seconds": 5.5,
+  "shot_title": "Ceremonial Master 1: Discovery of the clearing",
+  "shot_type": "ceremonial_master",
+  "camera_description": "Stable readable framing built from the beat requirement.",
+  "composition": "Readable medium composition in ancient_forest_interior featuring dorothy, toto, the_scarecrow.",
+  "target_seconds": 10.8,
   "characters_in_frame": [
     {
       "label": "Dorothy",
@@ -114,9 +118,12 @@
   ],
   "continuity_constraints": [
     "Animal placement within the clearing must remain consistent across coverage",
-    "Lighting consistency in the forest opening relative to the thick mossy interior"
+    "Lighting consistency in the forest opening relative to the thick mossy interior",
+    "Discovery of the clearing",
+    "Resolve Lion -> Lion",
+    "Resolve various forest beasts (tigers, elephants, bears, wolves, foxes) -> various forest beasts (tigers, elephants, bears, wolves, foxes)"
   ],
-  "prompt_seed": "Establishing Wide 1: Discovery of the clearing. establishing_wide. size=extreme_wide. angle=eye_level. lens=ultra_wide. motion=pan. zoom=none. focus=deep_focus. lighting=diffuse_ambient. visibility=on_screen. subject_angle=front_three_quarter_left. Wide establishing frame with a steady or lightly drifting camera.",
+  "prompt_seed": "Ceremonial Master 1: Discovery of the clearing. ceremonial_master. size=extreme_wide. angle=eye_level. lens=ultra_wide. motion=pan. zoom=none. focus=deep_focus. lighting=diffuse_ambient. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Readable me...",
   "shot_notes": "Discovery of the clearing",
   "evidence_refs": [
     {
@@ -186,13 +193,30 @@
     "the_scarecrow | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH003/the_scarecrow.md] Physical Description: A living figure stuffed with straw. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/cha...",
     "ancient_forest_interior | No specific visual descriptors are provided in the current evidence. The location is identified as an ancient forest interior serving as a primary setting. | Unknown | Unknown | Unknown"
   ],
+  "coverage_density": "medium",
+  "coverage_profile": "classic_adventure",
+  "coverage_intent": "ceremonial_tableau",
+  "coverage_role": "ceremonial_master",
+  "beat_type": "dialogue_council_or_court",
+  "coverage_importance": "major",
+  "coverage_blueprint_source": "deterministic_v1",
+  "coverage_classification": {
+    "beat_id": "BT001",
+    "beat_type": "dialogue_council_or_court",
+    "importance": "major",
+    "confidence": 0.82,
+    "reasons": [
+      "court/council authority language",
+      "importance = major"
+    ]
+  },
   "metadata": {
     "artifact_id": "CH021_SC002_SH001_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "5a751d0b48df756b31079be3a0b30427ef18ac24",
+    "source_fingerprint": "87e6da787d2ceae596b46f150d82b2c2fc182c16",
     "created_at_utc": "2026-04-27T19:58:21.927674+00:00",
-    "updated_at_utc": "2026-04-27T19:58:21.927674+00:00",
+    "updated_at_utc": "2026-04-27T20:55:11.555748+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
@@ -207,7 +231,7 @@
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH021_SC002",
-        "version": "f5cb85acc6b04b8c866a06fdd9d4b7dcd47b4323"
+        "version": "220f8d62f9442428ca6b07b3f16985c5eafa05db"
       }
     ],
     "locked_fields": {},
@@ -217,6 +241,16 @@
         "timestamp_utc": "2026-04-27T19:59:39.525450+00:00",
         "action": "synthesized",
         "source_fingerprint": "5a751d0b48df756b31079be3a0b30427ef18ac24"
+      },
+      {
+        "timestamp_utc": "2026-04-27T20:54:12.316350+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "87e6da787d2ceae596b46f150d82b2c2fc182c16"
+      },
+      {
+        "timestamp_utc": "2026-04-27T20:55:12.020219+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "87e6da787d2ceae596b46f150d82b2c2fc182c16"
       }
     ]
   }

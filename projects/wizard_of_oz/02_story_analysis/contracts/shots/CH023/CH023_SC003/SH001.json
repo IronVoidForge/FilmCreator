@@ -38,6 +38,7 @@
   "subject_blocking": [
     "Dorothy looking down",
     "Glinda stands over Dorothy; focus on feet",
+    "glinda_castle_throne_room_central",
     "dorothy remains readable within the active playing space."
   ],
   "camera_relative_positions": [
@@ -50,17 +51,18 @@
   ],
   "environment_subzone": "glinda_castle_throne_room_central",
   "key_visible_environment_features": [
-    "glinda_castle_throne_room_central"
+    "glinda_castle_throne_room_central",
+    "Chapter-local beat subzone match for 'glinda_castle_throne_room_central'."
   ],
   "continuity_from_previous_shot": "Glinda stands before Dorothy, preparing to reveal the shoes' power.",
   "continuity_to_next_shot": "BT002",
   "pose_anchor_frame": "Glinda speaking",
   "pose_end_frame": "shoes highlighted",
-  "shot_title": "Insert Detail 1: Glinda reveals the secret power of the Silver Shoes",
-  "shot_type": "insert_detail",
-  "camera_description": "Tight detail framing focused on a single visual object or gesture.",
-  "composition": "Detail composition centered on the key physical action or prop inside glinda_castle_throne_room.",
-  "target_seconds": 5.5,
+  "shot_title": "Approach Medium 1: Glinda reveals the secret power of the Silver Shoes",
+  "shot_type": "approach_medium",
+  "camera_description": "Stable readable framing built from the beat requirement.",
+  "composition": "Readable medium composition in glinda_castle_throne_room featuring dorothy.",
+  "target_seconds": 7.0,
   "characters_in_frame": [
     {
       "label": "Dorothy",
@@ -89,9 +91,10 @@
   "continuity_constraints": [
     "Visual state/reflectivity of the Silver Shoes",
     "Dorothy's physical stance and foot positioning for heel clicking",
-    "Glinda reveals the secret power of the Silver Shoes"
+    "Glinda reveals the secret power of the Silver Shoes",
+    "Resolve Glinda the Good Witch (and departing companions in farewell) -> Glinda the Good Witch (and departing companions in farewell)"
   ],
-  "prompt_seed": "Insert Detail 1: Glinda reveals the secret power of the Silver Shoes. insert_detail. size=insert_detail. angle=low_angle. lens=telephoto. motion=locked_off. zoom=none. focus=shallow_subject. lighting=soft_even. visibility=on_screen. subject_angle=front_three_quarter_left. Tight detail framing focused on a single vis...",
+  "prompt_seed": "Approach Medium 1: Glinda reveals the secret power of the Silver Shoes. approach_medium. size=insert_detail. angle=low_angle. lens=telephoto. motion=locked_off. zoom=none. focus=shallow_subject. lighting=soft_even. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the b...",
   "shot_notes": "Glinda reveals the secret power of the Silver Shoes",
   "evidence_refs": [
     {
@@ -159,13 +162,30 @@
     "dorothy | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md] Costume/Silhouette: Unknown. No specific clothing details are provided in this chapter. [source:C:/FilmCreator/projects/wizard_of_oz/02_...",
     "glinda_castle_throne_room | A grand-scale chamber defined by an ethereal and shimmering aesthetic. The space is characterized by a heavy presence of enchantment and powerful sorcery, centered around a ruby throne that serves as the primary environmental anc..."
   ],
+  "coverage_density": "medium",
+  "coverage_profile": "classic_adventure",
+  "coverage_intent": "ceremonial_tableau",
+  "coverage_role": "approach_medium",
+  "beat_type": "reveal_wonder",
+  "coverage_importance": "major",
+  "coverage_blueprint_source": "deterministic_v1",
+  "coverage_classification": {
+    "beat_id": "BT001",
+    "beat_type": "reveal_wonder",
+    "importance": "major",
+    "confidence": 0.78,
+    "reasons": [
+      "reveal/wonder verb",
+      "importance = major"
+    ]
+  },
   "metadata": {
     "artifact_id": "CH023_SC003_SH001_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "143c8e2366117f2359dc31742455a70c75747165",
+    "source_fingerprint": "05b4c0141dc44a2d39190c86b735713e752f310f",
     "created_at_utc": "2026-04-27T20:42:16.802576+00:00",
-    "updated_at_utc": "2026-04-27T20:42:16.802576+00:00",
+    "updated_at_utc": "2026-04-27T20:55:19.185147+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
@@ -180,7 +200,7 @@
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH023_SC003",
-        "version": "add9a681028e0676d77a98fc1fc6662512e7401c"
+        "version": "5a35cc03e3bd444ea437f0ad30b3d94829c40d80"
       }
     ],
     "locked_fields": {},
@@ -190,6 +210,16 @@
         "timestamp_utc": "2026-04-27T20:43:40.311992+00:00",
         "action": "synthesized",
         "source_fingerprint": "143c8e2366117f2359dc31742455a70c75747165"
+      },
+      {
+        "timestamp_utc": "2026-04-27T20:54:18.933451+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "05b4c0141dc44a2d39190c86b735713e752f310f"
+      },
+      {
+        "timestamp_utc": "2026-04-27T20:55:19.652700+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "05b4c0141dc44a2d39190c86b735713e752f310f"
       }
     ]
   }

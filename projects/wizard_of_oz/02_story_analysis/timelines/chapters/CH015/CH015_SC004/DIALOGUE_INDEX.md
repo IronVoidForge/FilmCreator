@@ -1,0 +1,25 @@
+# Scene Dialogue Index: CH015_SC004
+
+- `CH015_DLG063` -> `SH001` speaker=unresolved
+- `CH015_DLG064` -> `SH001` speaker=unresolved
+- `CH015_DLG065` -> `SH002` speaker=unresolved
+- `CH015_DLG066` -> `SH003` speaker=unresolved
+- `CH015_DLG067` -> `SH004` speaker=unresolved
+- `CH015_DLG068` -> `SH005` speaker=unresolved
+- `CH015_DLG069` -> `SH005` speaker=unresolved
+- `CH015_DLG070` -> `SH006` speaker=unresolved
+- `CH015_DLG071` -> `SH007` speaker=dorothy
+- `CH015_DLG072` -> `SH008` speaker=unresolved
+- `CH015_DLG073` -> `SH009` speaker=unresolved
+- `CH015_DLG074` -> `SH010` speaker=unresolved
+- `CH015_DLG075` -> `SH010` speaker=unresolved
+- `CH015_DLG076` -> `SH011` speaker=dorothy
+- `CH015_DLG077` -> `SH012` speaker=unresolved
+- `CH015_DLG078` -> `SH013` speaker=unresolved
+- `CH015_DLG079` -> `SH014` speaker=unresolved
+- `CH015_DLG080` -> `SH015` speaker=unresolved
+- `CH015_DLG081` -> `SH015` speaker=dorothy
+- `CH015_DLG082` -> `SH016` speaker=oz
+- `CH015_DLG083` -> `SH017` speaker=unresolved
+- `CH015_DLG084` -> `SH018` speaker=dorothy
+- `CH015_DLG085` -> `SH019` speaker=unresolved

@@ -43,28 +43,34 @@
   "camera_package_description": "wide, high angle, wide lens, crane, deep focus, diffuse ambient",
   "subject_blocking": [
     "chaotic movement in all directions",
-    "monkeys descending from above to pull subjects apart"
+    "monkeys descending from above to pull subjects apart",
+    "rugged west landscape",
+    "winged_monkeys remains readable within the active playing space.",
+    "dorothy remains readable within the active playing space."
   ],
   "camera_relative_positions": [
     "Camera anchors the action inside the rugged west landscape.",
-    "Background depth should keep wicked_witch_castle_courtyard legible as the location anchor."
+    "Background depth should keep wicked_witch_castle_courtyard legible as the location anchor.",
+    "Subject 1: winged_monkeys remains visually readable against the environment scale.",
+    "Subject 2: dorothy remains visually readable against the environment scale."
   ],
   "gaze_directions": [
     "winged_monkeys focuses toward the active scene action."
   ],
   "environment_subzone": "rugged west landscape",
   "key_visible_environment_features": [
-    "rugged west landscape"
+    "rugged west landscape",
+    "Chapter-local environment alias match for 'The West landscape $\\rightarrow$ Witch's Castle (Kitchen/Courtyard)' (key_..."
   ],
   "continuity_from_previous_shot": "The group is traveling together in the West landscape before being intercepted.",
   "continuity_to_next_shot": "BT002",
   "pose_anchor_frame": "traveling group",
   "pose_end_frame": "scattered group",
-  "shot_title": "Establishing Wide 1: The capture and dispersal of the group",
-  "shot_type": "establishing_wide",
-  "camera_description": "Wide establishing frame with a steady or lightly drifting camera.",
-  "composition": "Wide composition across rugged west landscape with winged_monkeys, dorothy, the_scarecrow placed for immediate spatial orientation.",
-  "target_seconds": 5.5,
+  "shot_title": "Handoff Medium 1: The capture and dispersal of the group",
+  "shot_type": "handoff_medium",
+  "camera_description": "Stable readable framing built from the beat requirement.",
+  "composition": "Readable medium composition in wicked_witch_castle_courtyard featuring winged_monkeys, dorothy, the_scarecrow.",
+  "target_seconds": 7.0,
   "characters_in_frame": [
     {
       "label": "Winged Monkeys",
@@ -111,9 +117,13 @@
     "BT001"
   ],
   "continuity_constraints": [
+    "Scarecrow must be stripped of straw",
+    "Dorothy's white clothing transition from green",
+    "Visual presence of the mark on Dorothy's forehead",
+    "Tin Woodman impact with rocks",
     "The capture and dispersal of the group"
   ],
-  "prompt_seed": "Establishing Wide 1: The capture and dispersal of the group. establishing_wide. size=wide. angle=high_angle. lens=wide. motion=crane. zoom=none. focus=deep_focus. lighting=diffuse_ambient. visibility=on_screen. subject_angle=front_three_quarter_left. Wide establishing frame with a steady or lightly drifting camera.",
+  "prompt_seed": "Handoff Medium 1: The capture and dispersal of the group. handoff_medium. size=wide. angle=high_angle. lens=wide. motion=crane. zoom=none. focus=deep_focus. lighting=diffuse_ambient. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Readable medium...",
   "shot_notes": "The capture and dispersal of the group",
   "evidence_refs": [
     {
@@ -183,13 +193,29 @@
     "the_scarecrow | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH003/the_scarecrow.md] Physical Description: A living figure stuffed with straw. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/cha...",
     "wicked_witch_castle_courtyard | No specific visual descriptors are provided in the current evidence. The location serves as a secondary setting utilized for imprisonment. | Unknown. | Unknown. | Unknown."
   ],
+  "coverage_density": "medium",
+  "coverage_profile": "classic_adventure",
+  "coverage_intent": "ceremonial_tableau",
+  "coverage_role": "handoff_medium",
+  "beat_type": "transition_handoff",
+  "coverage_importance": "major",
+  "coverage_blueprint_source": "deterministic_v1",
+  "coverage_classification": {
+    "beat_id": "BT001",
+    "beat_type": "transition_handoff",
+    "importance": "major",
+    "confidence": 0.55,
+    "reasons": [
+      "importance = major"
+    ]
+  },
   "metadata": {
     "artifact_id": "CH012_SC003_SH001_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "c8d94cd88ef281bb7a28e842ae6578f1db5ae445",
+    "source_fingerprint": "c178f7c7ec0648069acd1bfa5aa5ca9f62af1d08",
     "created_at_utc": "2026-04-27T17:28:56.087661+00:00",
-    "updated_at_utc": "2026-04-27T17:28:56.087661+00:00",
+    "updated_at_utc": "2026-04-27T20:54:49.958982+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
@@ -204,7 +230,7 @@
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH012_SC003",
-        "version": "6d08fe1ea77c105116594eaf3978b78ab9d5006d"
+        "version": "48fab1266b206c6f834fea1bae087c2e49fef22b"
       }
     ],
     "locked_fields": {},
@@ -214,6 +240,16 @@
         "timestamp_utc": "2026-04-27T17:30:09.144513+00:00",
         "action": "synthesized",
         "source_fingerprint": "c8d94cd88ef281bb7a28e842ae6578f1db5ae445"
+      },
+      {
+        "timestamp_utc": "2026-04-27T20:53:52.166222+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "c178f7c7ec0648069acd1bfa5aa5ca9f62af1d08"
+      },
+      {
+        "timestamp_utc": "2026-04-27T20:54:50.421305+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "c178f7c7ec0648069acd1bfa5aa5ca9f62af1d08"
       }
     ]
   }

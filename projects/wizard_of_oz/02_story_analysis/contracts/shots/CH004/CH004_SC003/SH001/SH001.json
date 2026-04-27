@@ -33,33 +33,36 @@
   "required_environment_anchor_1": "brookside_meadow",
   "required_subject_anchor_1": "Scarecrow's face",
   "required_celestial_anchor_1": "",
-  "required_scale_proof_detail": "close-up detail of straw texture",
+  "required_scale_proof_detail": "preserve readable body-to-environment scale in frame",
   "camera_package_description": "close-up, eye level, portrait lens, locked off, shallow subject, diffuse ambient",
   "subject_blocking": [
     "seated",
     "Seated near water",
+    "brookside_meadow",
     "Scarecrow (as narrator) remains readable within the active playing space."
   ],
   "camera_relative_positions": [
     "Camera anchors the action inside the brookside_meadow.",
-    "Background depth should keep brookside_meadow legible as the location anchor."
+    "Background depth should keep brookside_meadow legible as the location anchor.",
+    "Subject 1: Scarecrow (as narrator) remains visually readable against the environment scale."
   ],
   "gaze_directions": [
     "Scarecrow (as narrator) focuses toward the active scene action."
   ],
   "environment_subzone": "brookside_meadow",
   "key_visible_environment_features": [
-    "brookside_meadow"
+    "brookside_meadow",
+    "Chapter-local beat subzone match for 'brookside_meadow'."
   ],
   "continuity_from_previous_shot": "Scarecrow sitting calmly by the brookside.",
   "continuity_to_next_shot": "BT002",
   "pose_anchor_frame": "calm expression",
   "pose_end_frame": "reflective gaze",
-  "shot_title": "Reaction Closeup 1: Present day narration of calm reflection",
-  "shot_type": "reaction_closeup",
-  "camera_description": "Close framing that isolates reaction and emotional emphasis.",
-  "composition": "Intimate composition that isolates Scarecrow (as narrator) against brookside_meadow to capture the beat's emotional turn.",
-  "target_seconds": 5.5,
+  "shot_title": "Ceremonial Master 1: Present day narration of calm reflection",
+  "shot_type": "ceremonial_master",
+  "camera_description": "Stable readable framing built from the beat requirement.",
+  "composition": "Readable medium composition in brookside_meadow featuring Scarecrow (as narrator).",
+  "target_seconds": 10.8,
   "characters_in_frame": [
     {
       "label": "Scarecrow (as narrator)",
@@ -87,9 +90,12 @@
   ],
   "continuity_constraints": [
     "Lighting/color grade shift between brookside_meadow and A cornfield (memory/flashback)",
-    "Present day narration of calm reflection"
+    "Present day narration of calm reflection",
+    "Resolve Scarecrow (as narrator) -> Scarecrow (as narrator)",
+    "Resolve Crow (flashback/implied) -> Crow (flashback/implied)",
+    "Resolve A cornfield (memory/flashback) -> A cornfield (memory/flashback)"
   ],
-  "prompt_seed": "Reaction Closeup 1: Present day narration of calm reflection. reaction_closeup. size=close_up. angle=eye_level. lens=portrait. motion=locked_off. zoom=none. focus=shallow_subject. lighting=diffuse_ambient. visibility=on_screen. subject_angle=front_three_quarter_right. Close framing that isolates reaction and emotion...",
+  "prompt_seed": "Ceremonial Master 1: Present day narration of calm reflection. ceremonial_master. size=close_up. angle=eye_level. lens=portrait. motion=locked_off. zoom=none. focus=shallow_subject. lighting=diffuse_ambient. visibility=on_screen. subject_angle=front_three_quarter_right. Stable readable framing built from the beat re...",
   "shot_notes": "Present day narration of calm reflection",
   "evidence_refs": [
     {
@@ -154,17 +160,34 @@
     "Scarecrow sitting calmly by the brookside.",
     "Scarecrow expressing existential longing/inadequacy.",
     "The narration of creation and the subsequent realization of missing brains.",
-    "farmer | A rustic individual inhabiting the great Kansas prairies. The character is associated with a small, humble household and engages in agricultural tasks, such as tending to corn (ears). Visual identity is defined by practical, rustic clothing suitabl...",
-    "munchkin | A small-scale, bipedal humanoid fantasy creature. While specific clothing or facial details are not provided in the evidence, the character is defined by a diminutive physical scale relative to standard humanoids. | unknown | unknown",
+    "farmer | A rustic individual inhabiting the great Kansas prairies. The character is associated with a small, humble household and engages in manual agricultural tasks, such as the construction of scarecrows. Visual presentation should be grounded in rural,...",
+    "munchkin | A small-scale humanoid fantasy creature of bipedal morphology. While specific clothing or movement patterns are not detailed, the character is defined by its diminutive scale relative to other entities. | unknown | unknown",
     "brookside_meadow | Insufficient descriptive data available to establish a visual profile. The location functions as a secondary setting used for rest stops. | Unknown | Unknown | Unknown"
   ],
+  "coverage_density": "medium",
+  "coverage_profile": "classic_adventure",
+  "coverage_intent": "economical_storybook",
+  "coverage_role": "ceremonial_master",
+  "beat_type": "dialogue_council_or_court",
+  "coverage_importance": "major",
+  "coverage_blueprint_source": "deterministic_v1",
+  "coverage_classification": {
+    "beat_id": "BT001",
+    "beat_type": "dialogue_council_or_court",
+    "importance": "major",
+    "confidence": 0.82,
+    "reasons": [
+      "court/council authority language",
+      "importance = major"
+    ]
+  },
   "metadata": {
     "artifact_id": "CH004_SC003_SH001_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "27bdbbbdba017d5d46999482882a4ae3f7c76208",
+    "source_fingerprint": "6979e472ff07b1d33f0cb650d8e372c51469c8b5",
     "created_at_utc": "2026-04-27T15:15:21.739959+00:00",
-    "updated_at_utc": "2026-04-27T15:15:21.739959+00:00",
+    "updated_at_utc": "2026-04-27T20:54:28.018342+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
@@ -179,7 +202,7 @@
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH004_SC003",
-        "version": "17d7be46a07cddf0afb0217e162e961573da02c6"
+        "version": "48f7a1b36578e468e38895a720c1f064b082071b"
       }
     ],
     "locked_fields": {},
@@ -189,6 +212,16 @@
         "timestamp_utc": "2026-04-27T15:16:39.418574+00:00",
         "action": "synthesized",
         "source_fingerprint": "27bdbbbdba017d5d46999482882a4ae3f7c76208"
+      },
+      {
+        "timestamp_utc": "2026-04-27T20:53:31.435886+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "6979e472ff07b1d33f0cb650d8e372c51469c8b5"
+      },
+      {
+        "timestamp_utc": "2026-04-27T20:54:28.469919+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "6979e472ff07b1d33f0cb650d8e372c51469c8b5"
       }
     ]
   }

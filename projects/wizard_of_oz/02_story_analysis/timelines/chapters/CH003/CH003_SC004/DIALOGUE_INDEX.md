@@ -1,0 +1,27 @@
+# Scene Dialogue Index: CH003_SC004
+
+- `CH003_DLG031` -> `SH001` speaker=unresolved
+- `CH003_DLG032` -> `SH001` speaker=unresolved
+- `CH003_DLG033` -> `SH002` speaker=unresolved
+- `CH003_DLG034` -> `SH002` speaker=unresolved
+- `CH003_DLG035` -> `SH003` speaker=dorothy
+- `CH003_DLG036` -> `SH004` speaker=dorothy
+- `CH003_DLG037` -> `SH004` speaker=unresolved
+- `CH003_DLG038` -> `SH005` speaker=unresolved
+- `CH003_DLG039` -> `SH005` speaker=unresolved
+- `CH003_DLG040` -> `SH006` speaker=unresolved
+- `CH003_DLG041` -> `SH007` speaker=the_scarecrow
+- `CH003_DLG042` -> `SH007` speaker=the_scarecrow
+- `CH003_DLG043` -> `SH008` speaker=the_scarecrow
+- `CH003_DLG044` -> `SH008` speaker=unresolved
+- `CH003_DLG045` -> `SH009` speaker=unresolved
+- `CH003_DLG046` -> `SH010` speaker=unresolved
+- `CH003_DLG047` -> `SH010` speaker=dorothy
+- `CH003_DLG048` -> `SH011` speaker=dorothy
+- `CH003_DLG049` -> `SH011` speaker=the_scarecrow
+- `CH003_DLG050` -> `SH012` speaker=the_scarecrow
+- `CH003_DLG051` -> `SH013` speaker=unresolved
+- `CH003_DLG052` -> `SH013` speaker=dorothy
+- `CH003_DLG053` -> `SH014` speaker=dorothy
+- `CH003_DLG054` -> `SH014` speaker=the_scarecrow
+- `CH003_DLG055` -> `SH015` speaker=the_scarecrow

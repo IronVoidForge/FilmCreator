@@ -5,39 +5,39 @@
   "shot_order": 3,
   "previous_shot_id": "",
   "next_shot_id": "",
-  "primary_subject": "Dorothy",
+  "primary_subject": "Lion",
   "secondary_subjects": [],
-  "shot_moment_summary": "Dorothy watches the new King",
-  "start_state": "Dorothy watching",
-  "end_state": "Dorothy nodding/reacting",
-  "action_during_shot": "observing the coronation",
-  "action_continues_from": "animals bowing low",
-  "action_hands_off_to": "end_of_scene",
-  "shot_size": "medium_close",
+  "shot_moment_summary": "Lion's triumphant return",
+  "start_state": "Lion emerges from forest edge",
+  "end_state": "Lion reaches center of clearing",
+  "action_during_shot": "Lion's triumphant return",
+  "action_continues_from": "Lion reaches center of clearing",
+  "action_hands_off_to": "BT002",
+  "shot_size": "medium",
   "camera_angle": "eye_level",
-  "lens_family": "portrait",
+  "lens_family": "normal",
   "camera_motion": "locked_off",
   "zoom_behavior": "none",
-  "focus_strategy": "shallow_subject",
-  "lighting_style": "soft_even",
+  "focus_strategy": "deep_focus",
+  "lighting_style": "hard_directional",
   "subject_visibility": "on_screen",
   "narration_mode": "none",
   "primary_subject_angle": "front_three_quarter_left",
   "visible_primary_subject_id": "",
   "visible_secondary_subject_ids": [],
-  "primary_subject_frame_position": "foreground inside central_clearing",
-  "primary_subject_scale_relation": "Dorothy's facial expression vs Lion's scale",
+  "primary_subject_frame_position": "foreground right within central_clearing",
+  "primary_subject_scale_relation": "preserve readable body-to-environment scale in frame",
   "primary_subject_facing_direction": "front three-quarter left toward the scene action",
-  "primary_subject_pose_description": "Dorothy watching",
-  "subject_relation_summary": "Dorothy carries the frame alone",
+  "primary_subject_pose_description": "Lion emerges from forest edge",
+  "subject_relation_summary": "Lion carries the frame alone",
   "required_environment_anchor_1": "central_clearing",
-  "required_subject_anchor_1": "Lion faces Dorothy/companions",
+  "required_subject_anchor_1": "",
   "required_celestial_anchor_1": "",
-  "required_scale_proof_detail": "Dorothy's facial expression vs Lion's scale",
-  "camera_package_description": "medium-close, eye level, portrait lens, locked off, shallow subject, soft even",
+  "required_scale_proof_detail": "preserve readable body-to-environment scale in frame",
+  "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
   "subject_blocking": [
-    "mid-ground cluster",
-    "Lion faces Dorothy/companions",
+    "Lion moves toward the massive tree trunk",
+    "central_clearing",
     "Lion remains readable within the active playing space.",
     "Dorothy and companions remains readable within the active playing space."
   ],
@@ -48,21 +48,22 @@
     "Subject 2: Dorothy and companions remains visually readable against the environment scale."
   ],
   "gaze_directions": [
-    "Dorothy focuses toward the active scene action."
+    "Lion focuses toward the active scene action."
   ],
   "environment_subzone": "central_clearing",
   "key_visible_environment_features": [
-    "central_clearing"
+    "central_clearing",
+    "Chapter-local environment alias match for 'Forest Clearing' (key_overlap=1, label_overlap=2, context_overlap=4)."
   ],
-  "continuity_from_previous_shot": "animals bowing low",
-  "continuity_to_next_shot": "end_of_scene",
-  "pose_anchor_frame": "Dorothy watching",
-  "pose_end_frame": "Dorothy nodding/reacting",
-  "shot_title": "Reaction Closeup 3: The King's promise",
-  "shot_type": "reaction_closeup",
-  "camera_description": "Close framing that isolates reaction and emotional emphasis.",
-  "composition": "Intimate composition that isolates Lion, Dorothy and companions against ancient_forest_interior to capture the beat's emotional turn.",
-  "target_seconds": 5.1,
+  "continuity_from_previous_shot": "Lion reaches center of clearing",
+  "continuity_to_next_shot": "BT002",
+  "pose_anchor_frame": "Lion emerges from forest edge",
+  "pose_end_frame": "Lion reaches center of clearing",
+  "shot_title": "Subject Pov 3: Lion's triumphant return",
+  "shot_type": "subject_pov",
+  "camera_description": "Stable readable framing built from the beat requirement.",
+  "composition": "Readable medium composition in ancient_forest_interior featuring Lion, Dorothy and companions.",
+  "target_seconds": 7.5,
   "characters_in_frame": [
     {
       "label": "Lion",
@@ -96,16 +97,18 @@
     "notes": "Chapter-local environment alias match for 'Forest Clearing' (key_overlap=1, label_overlap=2, context_overlap=4)."
   },
   "beat_ids": [
-    "BT003"
+    "BT001"
   ],
   "continuity_constraints": [
     "Lion physical state: visible scratches and battle dirt",
     "Animal positioning: organized hierarchy within the clearing",
-    "The King's promise",
+    "Lion's triumphant return",
+    "Resolve Lion -> Lion",
+    "Resolve various forest beasts -> various forest beasts",
     "Resolve Dorothy and companions -> Dorothy and companions"
   ],
-  "prompt_seed": "Reaction Closeup 3: The King's promise. reaction_closeup. size=medium_close. angle=eye_level. lens=portrait. motion=locked_off. zoom=none. focus=shallow_subject. lighting=soft_even. visibility=on_screen. subject_angle=front_three_quarter_left. Close framing that isolates reaction and emotional emphasis. Intimate com...",
-  "shot_notes": "The King's promise",
+  "prompt_seed": "Subject Pov 3: Lion's triumphant return. subject_pov. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Readable medium compositio...",
+  "shot_notes": "Lion's triumphant return",
   "evidence_refs": [
     {
       "source": "scene_contract",
@@ -171,13 +174,30 @@
     "The Lion accepts his coronation and pledges future leadership.",
     "ancient_forest_interior | No specific visual descriptors are provided in the current evidence. The location is identified as an ancient forest interior serving as a primary setting. | Unknown | Unknown | Unknown"
   ],
+  "coverage_density": "medium",
+  "coverage_profile": "classic_adventure",
+  "coverage_intent": "ceremonial_tableau",
+  "coverage_role": "subject_pov_or_reaction",
+  "beat_type": "establishing_arrival",
+  "coverage_importance": "set_piece",
+  "coverage_blueprint_source": "deterministic_v1",
+  "coverage_classification": {
+    "beat_id": "BT001",
+    "beat_type": "establishing_arrival",
+    "importance": "set_piece",
+    "confidence": 0.72,
+    "reasons": [
+      "arrival/entry verb",
+      "importance = set_piece"
+    ]
+  },
   "metadata": {
     "artifact_id": "CH021_SC006_SH003_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "0e715aa6897c6cc38984cb12f931d19cd9b3df7a",
+    "source_fingerprint": "84d278d9bdd3595c9dbb843d4f835697e0610e53",
     "created_at_utc": "2026-04-27T20:14:56.287725+00:00",
-    "updated_at_utc": "2026-04-27T20:14:56.287725+00:00",
+    "updated_at_utc": "2026-04-27T20:55:14.483455+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
@@ -192,7 +212,7 @@
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH021_SC006",
-        "version": "94cbaf6f17f8495adf0f7efaeade9e363b267ede"
+        "version": "0fda8a410303f7d377a9f674d455368766beb177"
       }
     ],
     "locked_fields": {},
@@ -202,6 +222,16 @@
         "timestamp_utc": "2026-04-27T20:16:04.292722+00:00",
         "action": "synthesized",
         "source_fingerprint": "0e715aa6897c6cc38984cb12f931d19cd9b3df7a"
+      },
+      {
+        "timestamp_utc": "2026-04-27T20:54:14.482974+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "84d278d9bdd3595c9dbb843d4f835697e0610e53"
+      },
+      {
+        "timestamp_utc": "2026-04-27T20:55:14.484455+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "84d278d9bdd3595c9dbb843d4f835697e0610e53"
       }
     ]
   }

@@ -4,86 +4,90 @@
   "chapter_id": "CH009",
   "shot_order": 3,
   "previous_shot_id": "SH002",
-  "next_shot_id": "",
-  "primary_subject": "Thousands of Field Mice",
-  "secondary_subjects": [],
-  "shot_moment_summary": "Massive wave of mice arriving with string",
-  "start_state": "distant movement",
-  "end_state": "crowd filling frame",
-  "action_during_shot": "marching",
-  "action_continues_from": "Limb secured",
-  "action_hands_off_to": "none",
-  "shot_size": "wide",
-  "camera_angle": "high_angle",
-  "lens_family": "ultra_wide",
-  "camera_motion": "pan",
+  "next_shot_id": "SH004",
+  "primary_subject": "the_scarecrow",
+  "secondary_subjects": [
+    "queen_of_the_field_mice"
+  ],
+  "shot_moment_summary": "The Scarecrow's plea to the Queen",
+  "start_state": "Scarecrow approaches Queen",
+  "end_state": "Queen accepts mission",
+  "action_during_shot": "The Scarecrow's plea to the Queen",
+  "action_continues_from": "Queen accepts mission",
+  "action_hands_off_to": "BT002",
+  "shot_size": "medium",
+  "camera_angle": "eye_level",
+  "lens_family": "normal",
+  "camera_motion": "locked_off",
   "zoom_behavior": "none",
   "focus_strategy": "deep_focus",
-  "lighting_style": "diffuse_ambient",
+  "lighting_style": "hard_directional",
   "subject_visibility": "on_screen",
   "narration_mode": "none",
-  "primary_subject_angle": "front",
-  "visible_primary_subject_id": "tin_woodman",
-  "visible_secondary_subject_ids": [],
-  "primary_subject_frame_position": "midground inside mouse_approach_path",
+  "primary_subject_angle": "front_three_quarter_left",
+  "visible_primary_subject_id": "the_scarecrow",
+  "visible_secondary_subject_ids": [
+    "queen_of_the_field_mice"
+  ],
+  "primary_subject_frame_position": "foreground right within construction_zone",
   "primary_subject_scale_relation": "The scale shift from individual characters to thousands of mice.",
-  "primary_subject_facing_direction": "facing directly toward camera",
-  "primary_subject_pose_description": "distant movement",
-  "subject_relation_summary": "Thousands of Field Mice carries the frame alone",
-  "required_environment_anchor_1": "mouse_approach_path",
-  "required_subject_anchor_1": "",
+  "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+  "primary_subject_pose_description": "Scarecrow approaches Queen",
+  "subject_relation_summary": "the_scarecrow plays against queen_of_the_field_mice in the same frame",
+  "required_environment_anchor_1": "construction_zone",
+  "required_subject_anchor_1": "Scarecrow approaches Queen",
   "required_celestial_anchor_1": "",
   "required_scale_proof_detail": "The scale shift from individual characters to thousands of mice.",
-  "camera_package_description": "wide, high angle, ultra-wide lens, pan, deep focus, diffuse ambient",
+  "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
   "subject_blocking": [
-    "mice flowing toward center",
-    "Mice move in organized lines/swarms",
-    "approaching from poppy field towards truck",
-    "Thousands of Field Mice remains readable within the active playing space.",
-    "tin_woodman remains readable within the active playing space."
+    "Scarecrow stands over the Queen's position",
+    "near poppy_field_bed",
+    "the_scarecrow remains readable within the active playing space.",
+    "queen_of_the_field_mice remains readable within the active playing space."
   ],
   "camera_relative_positions": [
-    "Camera anchors the action inside the mouse_approach_path.",
+    "Camera anchors the action inside the construction_zone.",
     "Background depth should keep poppy_field_bed legible as the location anchor.",
-    "Subject 1: Thousands of Field Mice remains visually readable against the environment scale.",
-    "Subject 2: tin_woodman remains visually readable against the environment scale."
+    "Subject 1: the_scarecrow remains visually readable against the environment scale.",
+    "Subject 2: queen_of_the_field_mice remains visually readable against the environment scale."
   ],
   "gaze_directions": [
-    "Thousands of Field Mice focuses toward the active scene action."
+    "the_scarecrow focuses toward the active scene action."
   ],
-  "environment_subzone": "mouse_approach_path",
+  "environment_subzone": "construction_zone",
   "key_visible_environment_features": [
-    "mouse_approach_path"
+    "construction_zone",
+    "Chapter-local beat subzone match for 'construction_zone'."
   ],
-  "continuity_from_previous_shot": "Limb secured",
-  "continuity_to_next_shot": "none",
-  "pose_anchor_frame": "distant movement",
-  "pose_end_frame": "crowd filling frame",
-  "shot_title": "Establishing Wide 3: The Mouse Army arrives",
-  "shot_type": "establishing_wide",
-  "camera_description": "Wide establishing frame with a steady or lightly drifting camera.",
-  "composition": "Wide composition across poppy_field_bed with Thousands of Field Mice, tin_woodman placed for immediate spatial orientation.",
-  "target_seconds": 5.1,
+  "continuity_from_previous_shot": "Queen accepts mission",
+  "continuity_to_next_shot": "BT002",
+  "pose_anchor_frame": "Scarecrow approaches Queen",
+  "pose_end_frame": "Queen accepts mission",
+  "shot_title": "Petitioner Group 3: The Scarecrow's plea to the Queen",
+  "shot_type": "petitioner_group",
+  "camera_description": "Stable readable framing built from the beat requirement.",
+  "composition": "Readable medium composition in poppy_field_bed featuring the_scarecrow, queen_of_the_field_mice.",
+  "target_seconds": 7.0,
   "characters_in_frame": [
     {
-      "label": "Thousands of Field Mice",
-      "canonical_id": null,
-      "display_name": "Thousands of Field Mice",
-      "status": "review",
+      "label": "Scarecrow",
+      "canonical_id": "the_scarecrow",
+      "display_name": "the_scarecrow",
+      "status": "canonical",
       "entity_kind": "individual",
-      "resolution_score": 16,
-      "source_path": "",
-      "notes": "Low-confidence character match requires review."
+      "resolution_score": 186,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH009/the_scarecrow.md",
+      "notes": "asset id exactly matches canonical id | query matches alias 'scarecrow'"
     },
     {
-      "label": "Tin Woodman",
-      "canonical_id": "tin_woodman",
-      "display_name": "tin_woodman",
+      "label": "Queen of the Field Mice",
+      "canonical_id": "queen_of_the_field_mice",
+      "display_name": "queen_of_the_field_mice",
       "status": "canonical",
       "entity_kind": "individual",
       "resolution_score": 138,
-      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH009/tin_woodman.md",
-      "notes": "Direct registry match for 'tin_woodman'."
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH009/queen_of_the_field_mice.md",
+      "notes": "Direct registry match for 'queen_of_the_field_mice'."
     }
   ],
   "environment": {
@@ -94,18 +98,19 @@
     "entity_kind": "environment",
     "resolution_score": null,
     "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH009/poppy_field_bed.md",
-    "notes": "Chapter-local beat subzone match for 'mouse_approach_path'."
+    "notes": "Chapter-local beat subzone match for 'construction_zone'."
   },
   "beat_ids": [
-    "BT003"
+    "BT001"
   ],
   "continuity_constraints": [
     "Assembly state of the wooden truck (limbs and pegs)",
     "Increasing density of the mouse crowd",
-    "The Mouse Army arrives"
+    "The Scarecrow's plea to the Queen",
+    "Resolve Thousands of Field Mice -> Thousands of Field Mice"
   ],
-  "prompt_seed": "Establishing Wide 3: The Mouse Army arrives. establishing_wide. size=wide. angle=high_angle. lens=ultra_wide. motion=pan. zoom=none. focus=deep_focus. lighting=diffuse_ambient. visibility=on_screen. subject_angle=front. Wide establishing frame with a steady or lightly drifting camera. Wide composition across poppy_f...",
-  "shot_notes": "The Mouse Army arrives",
+  "prompt_seed": "Petitioner Group 3: The Scarecrow's plea to the Queen. petitioner_group. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Readabl...",
+  "shot_notes": "The Scarecrow's plea to the Queen",
   "evidence_refs": [
     {
       "source": "scene_contract",
@@ -174,13 +179,30 @@
     "tin_woodman | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH005/tin_woodman.md] Costume/Silhouette: Entirely metallic (tin) body; carries an axe. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis...",
     "poppy_field_bed | No specific visual details are provided in the current evidence. The environment is identified as a hazard setting associated with poppy fields. | Unknown. | Unknown. | Unknown."
   ],
+  "coverage_density": "medium",
+  "coverage_profile": "classic_adventure",
+  "coverage_intent": "adventure_action",
+  "coverage_role": "petitioner_group",
+  "beat_type": "dialogue_council_or_court",
+  "coverage_importance": "major",
+  "coverage_blueprint_source": "deterministic_v1",
+  "coverage_classification": {
+    "beat_id": "BT001",
+    "beat_type": "dialogue_council_or_court",
+    "importance": "major",
+    "confidence": 0.82,
+    "reasons": [
+      "court/council authority language",
+      "importance = major"
+    ]
+  },
   "metadata": {
     "artifact_id": "CH009_SC002_SH003_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "a0614caded236ae39bca57c1310c7cd82c5c2599",
+    "source_fingerprint": "d0a6fe54da881229588cdfcd47169eebc860cc2c",
     "created_at_utc": "2026-04-27T16:32:18.465395+00:00",
-    "updated_at_utc": "2026-04-27T16:32:18.465395+00:00",
+    "updated_at_utc": "2026-04-27T20:54:40.788079+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
@@ -195,7 +217,7 @@
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH009_SC002",
-        "version": "42908824a5783279d22364f6c17c66ebe8df22d2"
+        "version": "9aa984b301a9211a2307123279931ee1b148f2e7"
       }
     ],
     "locked_fields": {},
@@ -205,6 +227,16 @@
         "timestamp_utc": "2026-04-27T16:33:28.086051+00:00",
         "action": "synthesized",
         "source_fingerprint": "a0614caded236ae39bca57c1310c7cd82c5c2599"
+      },
+      {
+        "timestamp_utc": "2026-04-27T20:53:43.354368+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "d0a6fe54da881229588cdfcd47169eebc860cc2c"
+      },
+      {
+        "timestamp_utc": "2026-04-27T20:54:40.788578+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "d0a6fe54da881229588cdfcd47169eebc860cc2c"
       }
     ]
   }

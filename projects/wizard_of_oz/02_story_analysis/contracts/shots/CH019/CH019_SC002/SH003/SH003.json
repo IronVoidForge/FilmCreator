@@ -4,44 +4,45 @@
   "chapter_id": "CH019",
   "shot_order": 3,
   "previous_shot_id": "SH002",
-  "next_shot_id": "",
+  "next_shot_id": "SH004",
   "primary_subject": "dorothy",
   "secondary_subjects": [
-    "the_scarecrow"
+    "the_scarecrow",
+    "tin_woodman"
   ],
-  "shot_moment_summary": "group accepts their nature and moves forward",
-  "start_state": "medium shot of group",
-  "end_state": "wide shot as they march south",
-  "action_during_shot": "walking with purpose",
-  "action_continues_from": "close-up on tin_woodman",
-  "action_hands_off_to": "end_of_scene",
-  "shot_size": "medium_full",
-  "camera_angle": "low_angle",
-  "lens_family": "wide",
-  "camera_motion": "track",
+  "shot_moment_summary": "Group travels through the outskirts in silence or low murmurs",
+  "start_state": "walking rhythmically",
+  "end_state": "discussion begins",
+  "action_during_shot": "Group travels through the outskirts in silence or low murmurs",
+  "action_continues_from": "discussion begins",
+  "action_hands_off_to": "BT002",
+  "shot_size": "medium",
+  "camera_angle": "eye_level",
+  "lens_family": "normal",
+  "camera_motion": "locked_off",
   "zoom_behavior": "none",
   "focus_strategy": "deep_focus",
-  "lighting_style": "diffuse_ambient",
+  "lighting_style": "hard_directional",
   "subject_visibility": "on_screen",
-  "narration_mode": "in_scene_speaker",
-  "primary_subject_angle": "front",
+  "narration_mode": "none",
+  "primary_subject_angle": "front_three_quarter_left",
   "visible_primary_subject_id": "dorothy",
   "visible_secondary_subject_ids": [
-    "the_scarecrow"
+    "the_scarecrow",
+    "tin_woodman"
   ],
   "primary_subject_frame_position": "foreground right within emerald_city_outskirts_open_field",
   "primary_subject_scale_relation": "preserve readable body-to-environment scale in frame",
-  "primary_subject_facing_direction": "facing directly toward camera",
-  "primary_subject_pose_description": "medium shot of group",
-  "subject_relation_summary": "dorothy plays against the_scarecrow in the same frame",
+  "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+  "primary_subject_pose_description": "walking rhythmically",
+  "subject_relation_summary": "dorothy plays against the_scarecrow, tin_woodman in the same frame",
   "required_environment_anchor_1": "emerald_city_outskirts_open_field",
-  "required_subject_anchor_1": "posture straightens, pace increases",
+  "required_subject_anchor_1": "",
   "required_celestial_anchor_1": "",
   "required_scale_proof_detail": "preserve readable body-to-environment scale in frame",
-  "camera_package_description": "medium-full, low angle, wide lens, track, deep focus, diffuse ambient",
+  "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
   "subject_blocking": [
-    "tightened line",
-    "posture straightens, pace increases",
+    "linear walking line",
     "emerald_city_outskirts_open_field",
     "dorothy remains readable within the active playing space.",
     "the_scarecrow remains readable within the active playing space."
@@ -60,15 +61,15 @@
     "emerald_city_outskirts_open_field",
     "Chapter-local beat subzone match for 'emerald_city_outskirts_open_field'."
   ],
-  "continuity_from_previous_shot": "close-up on tin_woodman",
-  "continuity_to_next_shot": "end_of_scene",
-  "pose_anchor_frame": "medium shot of group",
-  "pose_end_frame": "wide shot as they march south",
-  "shot_title": "Closing Reaction 3: Transition from doubt to determination",
-  "shot_type": "closing_reaction",
-  "camera_description": "Controlled closing frame that lands the consequence of the beat.",
-  "composition": "Closing composition in emerald_city_outskirts that emphasizes the consequence of transition from doubt to determination.",
-  "target_seconds": 4.6,
+  "continuity_from_previous_shot": "discussion begins",
+  "continuity_to_next_shot": "BT002",
+  "pose_anchor_frame": "walking rhythmically",
+  "pose_end_frame": "discussion begins",
+  "shot_title": "Petitioner Group 3: Group travels through the outskirts in silence or l...",
+  "shot_type": "petitioner_group",
+  "camera_description": "Stable readable framing built from the beat requirement.",
+  "composition": "Readable medium composition in emerald_city_outskirts featuring dorothy, the_scarecrow, tin_woodman.",
+  "target_seconds": 6.5,
   "characters_in_frame": [
     {
       "label": "Dorothy",
@@ -89,6 +90,16 @@
       "resolution_score": 186,
       "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH019/the_scarecrow.md",
       "notes": "asset id exactly matches canonical id | query matches alias 'scarecrow'"
+    },
+    {
+      "label": "Tin Woodman",
+      "canonical_id": "tin_woodman",
+      "display_name": "tin_woodman",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH019/tin_woodman.md",
+      "notes": "Direct registry match for 'tin_woodman'."
     }
   ],
   "environment": {
@@ -102,15 +113,15 @@
     "notes": "Chapter-local beat subzone match for 'emerald_city_outskirts_open_field'."
   },
   "beat_ids": [
-    "BT003"
+    "BT001"
   ],
   "continuity_constraints": [
     "Consistent walking direction toward the South",
     "Fixed character spacing within the walking line",
-    "Transition from doubt to determination"
+    "Group travels through the outskirts in silence or low murmurs"
   ],
-  "prompt_seed": "Closing Reaction 3: Transition from doubt to determination. closing_reaction. size=medium_full. angle=low_angle. lens=wide. motion=track. zoom=none. focus=deep_focus. lighting=diffuse_ambient. visibility=on_screen. subject_angle=front. Controlled closing frame that lands the consequence of the beat. Closing composit...",
-  "shot_notes": "Transition from doubt to determination",
+  "prompt_seed": "Petitioner Group 3: Group travels through the outskirts in silence or l.... petitioner_group. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat...",
+  "shot_notes": "Group travels through the outskirts in silence or low murmurs",
   "evidence_refs": [
     {
       "source": "scene_contract",
@@ -179,13 +190,30 @@
     "tin_woodman | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH005/tin_woodman.md] Costume/Silhouette: Entirely metallic (tin) body; carries an axe. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis...",
     "emerald_city_outskirts | No specific visual descriptors are provided in the current evidence. The location functions primarily as a transitional zone or departure point within the narrative structure. | Unknown. | Unknown. | Unknown."
   ],
+  "coverage_density": "medium",
+  "coverage_profile": "classic_adventure",
+  "coverage_intent": "montage_travel",
+  "coverage_role": "petitioner_group",
+  "beat_type": "dialogue_council_or_court",
+  "coverage_importance": "normal",
+  "coverage_blueprint_source": "deterministic_v1",
+  "coverage_classification": {
+    "beat_id": "BT001",
+    "beat_type": "dialogue_council_or_court",
+    "importance": "normal",
+    "confidence": 0.82,
+    "reasons": [
+      "court/council authority language",
+      "importance = normal"
+    ]
+  },
   "metadata": {
     "artifact_id": "CH019_SC002_SH003_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "c86ca361d26a6b7744985d8da58fce178965b62e",
+    "source_fingerprint": "60179bc10feb6d748b39f6f69a9fbc1b8f31af87",
     "created_at_utc": "2026-04-27T19:24:21.446528+00:00",
-    "updated_at_utc": "2026-04-27T19:24:21.446528+00:00",
+    "updated_at_utc": "2026-04-27T20:55:06.542590+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
@@ -200,7 +228,7 @@
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH019_SC002",
-        "version": "b7712f5e31675d62422058171031b2e230c1a8ef"
+        "version": "8e67b090817ca34a7c54c07b1ea67a5fb34af781"
       }
     ],
     "locked_fields": {},
@@ -210,6 +238,16 @@
         "timestamp_utc": "2026-04-27T19:25:37.803306+00:00",
         "action": "synthesized",
         "source_fingerprint": "c86ca361d26a6b7744985d8da58fce178965b62e"
+      },
+      {
+        "timestamp_utc": "2026-04-27T20:54:07.314685+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "60179bc10feb6d748b39f6f69a9fbc1b8f31af87"
+      },
+      {
+        "timestamp_utc": "2026-04-27T20:55:06.543592+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "60179bc10feb6d748b39f6f69a9fbc1b8f31af87"
       }
     ]
   }

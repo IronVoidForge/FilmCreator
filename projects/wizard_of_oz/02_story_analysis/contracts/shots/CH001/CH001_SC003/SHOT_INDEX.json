@@ -38,7 +38,9 @@
     "camera_package_description": "medium-full, dutch, wide lens, handheld, deep focus, diffuse ambient",
     "subject_blocking": [
       "dorothy moves toward center room",
-      "dorothy bracing against furniture/walls"
+      "dorothy bracing against furniture/walls",
+      "farmhouse_interior_and_cellar",
+      "dorothy remains readable within the active playing space."
     ],
     "camera_relative_positions": [
       "Camera anchors the action inside the farmhouse_interior_and_cellar.",
@@ -50,17 +52,18 @@
     ],
     "environment_subzone": "farmhouse_interior_and_cellar",
     "key_visible_environment_features": [
-      "farmhouse_interior_and_cellar"
+      "farmhouse_interior_and_cellar",
+      "Chapter-local beat subzone match for 'farmhouse_interior_and_cellar'."
     ],
     "continuity_from_previous_shot": "Interior of farmhouse_interior_and_cellar tilting violently; dorothy struggling for footing.",
     "continuity_to_next_shot": "BT002",
     "pose_anchor_frame": "dorothy off-balance",
     "pose_end_frame": "dorothy bracing against wall",
-    "shot_title": "Medium 1: House lurches violently causing chaos",
-    "shot_type": "medium",
-    "camera_description": "Stable medium framing that keeps action and character readable.",
+    "shot_title": "Handoff Medium 1: House lurches violently causing chaos",
+    "shot_type": "handoff_medium",
+    "camera_description": "Stable readable framing built from the beat requirement.",
     "composition": "Readable medium composition in farmhouse_interior_and_cellar featuring dorothy.",
-    "target_seconds": 5.5,
+    "target_seconds": 7.0,
     "characters_in_frame": [
       {
         "label": "Dorothy",
@@ -91,7 +94,7 @@
       "Loose objects must slide in a consistent direction relative to house lurching",
       "House lurches violently causing chaos"
     ],
-    "prompt_seed": "Medium 1: House lurches violently causing chaos. medium. size=medium_full. angle=dutch. lens=wide. motion=handheld. zoom=none. focus=deep_focus. lighting=diffuse_ambient. visibility=on_screen. subject_angle=front_three_quarter_left. Stable medium framing that keeps action and character readable. Readable medium comp...",
+    "prompt_seed": "Handoff Medium 1: House lurches violently causing chaos. handoff_medium. size=medium_full. angle=dutch. lens=wide. motion=handheld. zoom=none. focus=deep_focus. lighting=diffuse_ambient. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Readable me...",
     "shot_notes": "House lurches violently causing chaos",
     "evidence_refs": [
       {
@@ -156,17 +159,33 @@
       "Interior of farmhouse_interior_and_cellar tilting violently; dorothy struggling for footing.",
       "dorothy secures toto after a near-fall through the cellar opening.",
       "dorothy navigates shifting floor angles to rescue toto from the trap door.",
-      "dorothy | Dorothy is a young human girl characterized by an expressive face and the appearance of a weary traveler. Her visual identity evolves during her journey, transitioning from previously green clothing to a white dress or clothing. She is most notabl...",
-      "toto | Toto is a small quadruped dog characterized by a compact build and consistent black fur. The character possesses an alert physical presence with keen, observant eyes suitable for a companion animal. | black fur. | companion animal; alert.",
+      "dorothy | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md] Costume/Silhouette: Unknown. No specific clothing details are provided in this chapter. [source:C:/FilmCreator/projects/wizard_of_oz/02_...",
+      "toto | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/toto.md] Costume/Silhouette: Small quadruped with black fur. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapte...",
       "farmhouse_interior_and_cellar | No specific visual details are provided in the current evidence. The location is identified as a farmhouse interior and its associated cellar. | Includes an interior living space and a cellar. | unknown | unknown"
     ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "adventure_action",
+    "coverage_role": "handoff_medium",
+    "beat_type": "transition_handoff",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT001",
+      "beat_type": "transition_handoff",
+      "importance": "major",
+      "confidence": 0.55,
+      "reasons": [
+        "importance = major"
+      ]
+    },
     "metadata": {
       "artifact_id": "CH001_SC003_SH001_SHOT_PACKAGE",
       "artifact_type": "shot_package",
       "status": "generated",
-      "source_fingerprint": "29c0e97fda78a26c6349a9fa16e9545fc803444c",
+      "source_fingerprint": "df646acbf57ca6f84e3f045600bc80dcd7cccf72",
       "created_at_utc": "2026-04-27T09:23:10.859107+00:00",
-      "updated_at_utc": "2026-04-27T14:27:12.332335+00:00",
+      "updated_at_utc": "2026-04-27T20:54:21.302512+00:00",
       "upstream_dependencies": [
         {
           "dependency_type": "scene_contract",
@@ -181,7 +200,7 @@
         {
           "dependency_type": "shot_blueprints",
           "dependency_id": "CH001_SC003",
-          "version": "e3545ba28f63be034c0fed19a0d30a41ad26a65f"
+          "version": "1a71c05dd5190e614097bc7655b5d4741587ec38"
         }
       ],
       "locked_fields": {},
@@ -196,6 +215,16 @@
           "timestamp_utc": "2026-04-27T14:28:28.688529+00:00",
           "action": "synthesized",
           "source_fingerprint": "29c0e97fda78a26c6349a9fa16e9545fc803444c"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:53:24.706723+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "df646acbf57ca6f84e3f045600bc80dcd7cccf72"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:21.727082+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "df646acbf57ca6f84e3f045600bc80dcd7cccf72"
         }
       ]
     }
@@ -207,6 +236,235 @@
     "shot_order": 2,
     "previous_shot_id": "SH001",
     "next_shot_id": "SH003",
+    "primary_subject": "dorothy",
+    "secondary_subjects": [],
+    "shot_moment_summary": "House lurches violently causing chaos",
+    "start_state": "stable tilt",
+    "end_state": "extreme tilt",
+    "action_during_shot": "House lurches violently causing chaos",
+    "action_continues_from": "dorothy bracing against wall",
+    "action_hands_off_to": "BT002",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "dorothy",
+    "visible_secondary_subject_ids": [],
+    "primary_subject_frame_position": "foreground right within farmhouse_interior_and_cellar",
+    "primary_subject_scale_relation": "Small-scale interior confinement vs. large-scale aerial turbulence.",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "stable tilt",
+    "subject_relation_summary": "dorothy carries the frame alone",
+    "required_environment_anchor_1": "farmhouse_interior_and_cellar",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "Small-scale interior confinement vs. large-scale aerial turbulence.",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "dorothy bracing against furniture/walls",
+      "farmhouse_interior_and_cellar",
+      "dorothy remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the farmhouse_interior_and_cellar.",
+      "Background depth should keep farmhouse_interior_and_cellar legible as the location anchor.",
+      "Subject 1: dorothy remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "dorothy focuses toward the active scene action."
+    ],
+    "environment_subzone": "farmhouse_interior_and_cellar",
+    "key_visible_environment_features": [
+      "farmhouse_interior_and_cellar",
+      "Chapter-local beat subzone match for 'farmhouse_interior_and_cellar'."
+    ],
+    "continuity_from_previous_shot": "dorothy bracing against wall",
+    "continuity_to_next_shot": "BT002",
+    "pose_anchor_frame": "stable tilt",
+    "pose_end_frame": "extreme tilt",
+    "shot_title": "Transition Wide 2: House lurches violently causing chaos",
+    "shot_type": "transition_wide",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in farmhouse_interior_and_cellar featuring dorothy.",
+    "target_seconds": 10.8,
+    "characters_in_frame": [
+      {
+        "label": "Dorothy",
+        "canonical_id": "dorothy",
+        "display_name": "dorothy",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md",
+        "notes": "Direct registry match for 'dorothy'."
+      }
+    ],
+    "environment": {
+      "label": "farmhouse_interior_and_cellar",
+      "canonical_id": "farmhouse_interior_and_cellar",
+      "display_name": "farmhouse_interior_and_cellar",
+      "status": "canonical",
+      "entity_kind": "sub_location",
+      "resolution_score": null,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH001/farmhouse_interior_and_cellar.md",
+      "notes": "Chapter-local beat subzone match for 'farmhouse_interior_and_cellar'."
+    },
+    "beat_ids": [
+      "BT001"
+    ],
+    "continuity_constraints": [
+      "Floor and wall angles must tilt in synchronization with house motion",
+      "Loose objects must slide in a consistent direction relative to house lurching",
+      "House lurches violently causing chaos"
+    ],
+    "prompt_seed": "Transition Wide 2: House lurches violently causing chaos. transition_wide. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Reada...",
+    "shot_notes": "House lurches violently causing chaos",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH001_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC003"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH001",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH001_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH011",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH011_chapter_xi.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH001",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH001_chapter_i.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH010",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH010_chapter_x.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH001",
+        "canonical_id": "dorothy"
+      }
+    ],
+    "evidence_summary": [
+      "Execute a high-stakes action sequence within the confined, tilting interior of an airborne farmhouse. The sequence must emphasize physical instability and the immediate threat to toto via the open trap door during violent house movements.",
+      "Inside the airborne house, chaos ensues. Dorothy struggles to maintain her footing and must act quickly to rescue Toto when he nearly falls through the open trap door during a violent lurch.",
+      "Terror $\\rightarrow$ Desperate protective instinct.",
+      "Interior of farmhouse_interior_and_cellar tilting violently; dorothy struggling for footing.",
+      "dorothy secures toto after a near-fall through the cellar opening.",
+      "dorothy navigates shifting floor angles to rescue toto from the trap door.",
+      "dorothy | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md] Costume/Silhouette: Unknown. No specific clothing details are provided in this chapter. [source:C:/FilmCreator/projects/wizard_of_oz/02_...",
+      "toto | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/toto.md] Costume/Silhouette: Small quadruped with black fur. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapte...",
+      "farmhouse_interior_and_cellar | No specific visual details are provided in the current evidence. The location is identified as a farmhouse interior and its associated cellar. | Includes an interior living space and a cellar. | unknown | unknown"
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "adventure_action",
+    "coverage_role": "transition_wide",
+    "beat_type": "transition_handoff",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT001",
+      "beat_type": "transition_handoff",
+      "importance": "major",
+      "confidence": 0.55,
+      "reasons": [
+        "importance = major"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH001_SC003_SH002_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "df646acbf57ca6f84e3f045600bc80dcd7cccf72",
+      "created_at_utc": "2026-04-27T09:24:24.984144+00:00",
+      "updated_at_utc": "2026-04-27T20:54:21.733580+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH001_SC003",
+          "version": "78479296cba38cd9f3e3c57329263c9a18c9f5e3"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH001_SC003",
+          "version": "eab3eb403d0741ac97410275ff93f2d4ba910ea0"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH001_SC003",
+          "version": "1a71c05dd5190e614097bc7655b5d4741587ec38"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T09:25:32.596941+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "a49d84e75c8c460748f2b0256fd1b64ff36ab9b9"
+        },
+        {
+          "timestamp_utc": "2026-04-27T14:29:36.553511+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "29c0e97fda78a26c6349a9fa16e9545fc803444c"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:53:24.713220+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "df646acbf57ca6f84e3f045600bc80dcd7cccf72"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:21.734084+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "df646acbf57ca6f84e3f045600bc80dcd7cccf72"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH003",
+    "scene_id": "CH001_SC003",
+    "chapter_id": "CH001",
+    "shot_order": 3,
+    "previous_shot_id": "SH002",
+    "next_shot_id": "SH004",
     "primary_subject": "toto",
     "secondary_subjects": [
       "dorothy"
@@ -215,7 +473,7 @@
     "start_state": "toto near floor",
     "end_state": "toto sliding toward opening",
     "action_during_shot": "toto nearly falls through the open trap door",
-    "action_continues_from": "dorothy bracing against wall",
+    "action_continues_from": "extreme tilt",
     "action_hands_off_to": "BT003",
     "shot_size": "close_up",
     "camera_angle": "low_angle",
@@ -243,7 +501,10 @@
     "camera_package_description": "close-up, low angle, normal lens, track, zoom subtle in, shallow subject, diffuse ambient",
     "subject_blocking": [
       "toto moves toward cellar edge",
-      "toto at the threshold of cellar"
+      "toto at the threshold of cellar",
+      "near open trap door",
+      "toto remains readable within the active playing space.",
+      "dorothy remains readable within the active playing space."
     ],
     "camera_relative_positions": [
       "Camera anchors the action inside the farmhouse_interior_and_cellar.",
@@ -256,17 +517,18 @@
     ],
     "environment_subzone": "farmhouse_interior_and_cellar",
     "key_visible_environment_features": [
-      "farmhouse_interior_and_cellar"
+      "farmhouse_interior_and_cellar",
+      "Chapter-local beat subzone match for 'farmhouse_interior_and_cellar'."
     ],
-    "continuity_from_previous_shot": "dorothy bracing against wall",
+    "continuity_from_previous_shot": "extreme tilt",
     "continuity_to_next_shot": "BT003",
     "pose_anchor_frame": "toto near floor",
     "pose_end_frame": "toto sliding toward opening",
-    "shot_title": "Reaction Closeup 2: Toto nears the trap door",
-    "shot_type": "reaction_closeup",
-    "camera_description": "Close framing that isolates reaction and emotional emphasis.",
-    "composition": "Intimate composition that isolates toto, dorothy against farmhouse_interior_and_cellar to capture the beat's emotional turn.",
-    "target_seconds": 5.3,
+    "shot_title": "Ceremonial Master 3: Toto nears the trap door",
+    "shot_type": "ceremonial_master",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in farmhouse_interior_and_cellar featuring toto, dorothy.",
+    "target_seconds": 10.8,
     "characters_in_frame": [
       {
         "label": "Toto",
@@ -307,7 +569,7 @@
       "Loose objects must slide in a consistent direction relative to house lurching",
       "Toto nears the trap door"
     ],
-    "prompt_seed": "Reaction Closeup 2: Toto nears the trap door. reaction_closeup. size=close_up. angle=low_angle. lens=normal. motion=track. zoom=subtle_in. focus=shallow_subject. lighting=diffuse_ambient. visibility=on_screen. subject_angle=profile_right. Close framing that isolates reaction and emotional emphasis. Intimate composit...",
+    "prompt_seed": "Ceremonial Master 3: Toto nears the trap door. ceremonial_master. size=close_up. angle=low_angle. lens=normal. motion=track. zoom=subtle_in. focus=shallow_subject. lighting=diffuse_ambient. visibility=on_screen. subject_angle=profile_right. Stable readable framing built from the beat requirement. Readable medium com...",
     "shot_notes": "Toto nears the trap door",
     "evidence_refs": [
       {
@@ -372,17 +634,34 @@
       "Interior of farmhouse_interior_and_cellar tilting violently; dorothy struggling for footing.",
       "dorothy secures toto after a near-fall through the cellar opening.",
       "dorothy navigates shifting floor angles to rescue toto from the trap door.",
-      "dorothy | Dorothy is a young human girl characterized by an expressive face and the appearance of a weary traveler. Her visual identity evolves during her journey, transitioning from previously green clothing to a white dress or clothing. She is most notabl...",
-      "toto | Toto is a small quadruped dog characterized by a compact build and consistent black fur. The character possesses an alert physical presence with keen, observant eyes suitable for a companion animal. | black fur. | companion animal; alert.",
+      "dorothy | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md] Costume/Silhouette: Unknown. No specific clothing details are provided in this chapter. [source:C:/FilmCreator/projects/wizard_of_oz/02_...",
+      "toto | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/toto.md] Costume/Silhouette: Small quadruped with black fur. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapte...",
       "farmhouse_interior_and_cellar | No specific visual details are provided in the current evidence. The location is identified as a farmhouse interior and its associated cellar. | Includes an interior living space and a cellar. | unknown | unknown"
     ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "adventure_action",
+    "coverage_role": "ceremonial_master",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT002",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "major",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = major"
+      ]
+    },
     "metadata": {
-      "artifact_id": "CH001_SC003_SH002_SHOT_PACKAGE",
+      "artifact_id": "CH001_SC003_SH003_SHOT_PACKAGE",
       "artifact_type": "shot_package",
       "status": "generated",
-      "source_fingerprint": "29c0e97fda78a26c6349a9fa16e9545fc803444c",
-      "created_at_utc": "2026-04-27T09:24:24.984144+00:00",
-      "updated_at_utc": "2026-04-27T14:28:28.690028+00:00",
+      "source_fingerprint": "df646acbf57ca6f84e3f045600bc80dcd7cccf72",
+      "created_at_utc": "2026-04-27T09:25:32.597940+00:00",
+      "updated_at_utc": "2026-04-27T20:54:21.739094+00:00",
       "upstream_dependencies": [
         {
           "dependency_type": "scene_contract",
@@ -397,32 +676,1458 @@
         {
           "dependency_type": "shot_blueprints",
           "dependency_id": "CH001_SC003",
-          "version": "e3545ba28f63be034c0fed19a0d30a41ad26a65f"
+          "version": "1a71c05dd5190e614097bc7655b5d4741587ec38"
         }
       ],
       "locked_fields": {},
       "manual_overrides": {},
       "revision_history": [
         {
-          "timestamp_utc": "2026-04-27T09:25:32.596941+00:00",
+          "timestamp_utc": "2026-04-27T09:26:40.202383+00:00",
           "action": "synthesized",
           "source_fingerprint": "a49d84e75c8c460748f2b0256fd1b64ff36ab9b9"
         },
         {
-          "timestamp_utc": "2026-04-27T14:29:36.553511+00:00",
+          "timestamp_utc": "2026-04-27T14:30:45.097880+00:00",
           "action": "synthesized",
           "source_fingerprint": "29c0e97fda78a26c6349a9fa16e9545fc803444c"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:53:24.719223+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "df646acbf57ca6f84e3f045600bc80dcd7cccf72"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:21.739593+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "df646acbf57ca6f84e3f045600bc80dcd7cccf72"
         }
       ]
     }
   },
   {
-    "shot_id": "SH003",
+    "shot_id": "SH004",
     "scene_id": "CH001_SC003",
     "chapter_id": "CH001",
-    "shot_order": 3,
-    "previous_shot_id": "SH002",
-    "next_shot_id": "",
+    "shot_order": 4,
+    "previous_shot_id": "SH003",
+    "next_shot_id": "SH005",
+    "primary_subject": "toto",
+    "secondary_subjects": [
+      "dorothy"
+    ],
+    "shot_moment_summary": "Toto nears the trap door",
+    "start_state": "toto walking",
+    "end_state": "toto sliding toward edge",
+    "action_during_shot": "Toto nears the trap door",
+    "action_continues_from": "toto sliding toward opening",
+    "action_hands_off_to": "BT003",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "toto",
+    "visible_secondary_subject_ids": [
+      "dorothy"
+    ],
+    "primary_subject_frame_position": "foreground right within farmhouse_interior_and_cellar",
+    "primary_subject_scale_relation": "Small-scale interior confinement vs. large-scale aerial turbulence.",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "toto walking",
+    "subject_relation_summary": "toto plays against dorothy in the same frame",
+    "required_environment_anchor_1": "farmhouse_interior_and_cellar",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "Small-scale interior confinement vs. large-scale aerial turbulence.",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "toto at the threshold of cellar",
+      "near open trap door",
+      "toto remains readable within the active playing space.",
+      "dorothy remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the farmhouse_interior_and_cellar.",
+      "Background depth should keep farmhouse_interior_and_cellar legible as the location anchor.",
+      "Subject 1: toto remains visually readable against the environment scale.",
+      "Subject 2: dorothy remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "toto focuses toward the active scene action."
+    ],
+    "environment_subzone": "farmhouse_interior_and_cellar",
+    "key_visible_environment_features": [
+      "farmhouse_interior_and_cellar",
+      "Chapter-local beat subzone match for 'farmhouse_interior_and_cellar'."
+    ],
+    "continuity_from_previous_shot": "toto sliding toward opening",
+    "continuity_to_next_shot": "BT003",
+    "pose_anchor_frame": "toto walking",
+    "pose_end_frame": "toto sliding toward edge",
+    "shot_title": "Authority Single 4: Toto nears the trap door",
+    "shot_type": "authority_single",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in farmhouse_interior_and_cellar featuring toto, dorothy.",
+    "target_seconds": 7.0,
+    "characters_in_frame": [
+      {
+        "label": "Toto",
+        "canonical_id": "toto",
+        "display_name": "toto",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/toto.md",
+        "notes": "Direct registry match for 'toto'."
+      },
+      {
+        "label": "Dorothy",
+        "canonical_id": "dorothy",
+        "display_name": "dorothy",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md",
+        "notes": "Direct registry match for 'dorothy'."
+      }
+    ],
+    "environment": {
+      "label": "farmhouse_interior_and_cellar",
+      "canonical_id": "farmhouse_interior_and_cellar",
+      "display_name": "farmhouse_interior_and_cellar",
+      "status": "canonical",
+      "entity_kind": "sub_location",
+      "resolution_score": null,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH001/farmhouse_interior_and_cellar.md",
+      "notes": "Chapter-local beat subzone match for 'farmhouse_interior_and_cellar'."
+    },
+    "beat_ids": [
+      "BT002"
+    ],
+    "continuity_constraints": [
+      "Floor and wall angles must tilt in synchronization with house motion",
+      "Loose objects must slide in a consistent direction relative to house lurching",
+      "Toto nears the trap door"
+    ],
+    "prompt_seed": "Authority Single 4: Toto nears the trap door. authority_single. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Readable medium...",
+    "shot_notes": "Toto nears the trap door",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH001_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC003"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH001",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH001_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH011",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH011_chapter_xi.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH001",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH001_chapter_i.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH010",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH010_chapter_x.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH001",
+        "canonical_id": "dorothy"
+      }
+    ],
+    "evidence_summary": [
+      "Execute a high-stakes action sequence within the confined, tilting interior of an airborne farmhouse. The sequence must emphasize physical instability and the immediate threat to toto via the open trap door during violent house movements.",
+      "Inside the airborne house, chaos ensues. Dorothy struggles to maintain her footing and must act quickly to rescue Toto when he nearly falls through the open trap door during a violent lurch.",
+      "Terror $\\rightarrow$ Desperate protective instinct.",
+      "Interior of farmhouse_interior_and_cellar tilting violently; dorothy struggling for footing.",
+      "dorothy secures toto after a near-fall through the cellar opening.",
+      "dorothy navigates shifting floor angles to rescue toto from the trap door.",
+      "dorothy | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md] Costume/Silhouette: Unknown. No specific clothing details are provided in this chapter. [source:C:/FilmCreator/projects/wizard_of_oz/02_...",
+      "toto | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/toto.md] Costume/Silhouette: Small quadruped with black fur. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapte...",
+      "farmhouse_interior_and_cellar | No specific visual details are provided in the current evidence. The location is identified as a farmhouse interior and its associated cellar. | Includes an interior living space and a cellar. | unknown | unknown"
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "adventure_action",
+    "coverage_role": "authority_single",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT002",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "major",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = major"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH001_SC003_SH004_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "df646acbf57ca6f84e3f045600bc80dcd7cccf72",
+      "created_at_utc": "2026-04-27T20:53:24.720735+00:00",
+      "updated_at_utc": "2026-04-27T20:54:21.745094+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH001_SC003",
+          "version": "78479296cba38cd9f3e3c57329263c9a18c9f5e3"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH001_SC003",
+          "version": "eab3eb403d0741ac97410275ff93f2d4ba910ea0"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH001_SC003",
+          "version": "1a71c05dd5190e614097bc7655b5d4741587ec38"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:53:24.721238+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "df646acbf57ca6f84e3f045600bc80dcd7cccf72"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:21.746093+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "df646acbf57ca6f84e3f045600bc80dcd7cccf72"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH005",
+    "scene_id": "CH001_SC003",
+    "chapter_id": "CH001",
+    "shot_order": 5,
+    "previous_shot_id": "SH004",
+    "next_shot_id": "SH006",
+    "primary_subject": "toto",
+    "secondary_subjects": [
+      "dorothy"
+    ],
+    "shot_moment_summary": "Toto nears the trap door",
+    "start_state": "toto walking",
+    "end_state": "toto sliding toward edge",
+    "action_during_shot": "Toto nears the trap door",
+    "action_continues_from": "toto sliding toward edge",
+    "action_hands_off_to": "BT003",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "toto",
+    "visible_secondary_subject_ids": [
+      "dorothy"
+    ],
+    "primary_subject_frame_position": "foreground right within farmhouse_interior_and_cellar",
+    "primary_subject_scale_relation": "Small-scale interior confinement vs. large-scale aerial turbulence.",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "toto walking",
+    "subject_relation_summary": "toto plays against dorothy in the same frame",
+    "required_environment_anchor_1": "farmhouse_interior_and_cellar",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "Small-scale interior confinement vs. large-scale aerial turbulence.",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "toto at the threshold of cellar",
+      "near open trap door",
+      "toto remains readable within the active playing space.",
+      "dorothy remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the farmhouse_interior_and_cellar.",
+      "Background depth should keep farmhouse_interior_and_cellar legible as the location anchor.",
+      "Subject 1: toto remains visually readable against the environment scale.",
+      "Subject 2: dorothy remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "toto focuses toward the active scene action."
+    ],
+    "environment_subzone": "farmhouse_interior_and_cellar",
+    "key_visible_environment_features": [
+      "farmhouse_interior_and_cellar",
+      "Chapter-local beat subzone match for 'farmhouse_interior_and_cellar'."
+    ],
+    "continuity_from_previous_shot": "toto sliding toward edge",
+    "continuity_to_next_shot": "BT003",
+    "pose_anchor_frame": "toto walking",
+    "pose_end_frame": "toto sliding toward edge",
+    "shot_title": "Petitioner Group 5: Toto nears the trap door",
+    "shot_type": "petitioner_group",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in farmhouse_interior_and_cellar featuring toto, dorothy.",
+    "target_seconds": 7.0,
+    "characters_in_frame": [
+      {
+        "label": "Toto",
+        "canonical_id": "toto",
+        "display_name": "toto",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/toto.md",
+        "notes": "Direct registry match for 'toto'."
+      },
+      {
+        "label": "Dorothy",
+        "canonical_id": "dorothy",
+        "display_name": "dorothy",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md",
+        "notes": "Direct registry match for 'dorothy'."
+      }
+    ],
+    "environment": {
+      "label": "farmhouse_interior_and_cellar",
+      "canonical_id": "farmhouse_interior_and_cellar",
+      "display_name": "farmhouse_interior_and_cellar",
+      "status": "canonical",
+      "entity_kind": "sub_location",
+      "resolution_score": null,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH001/farmhouse_interior_and_cellar.md",
+      "notes": "Chapter-local beat subzone match for 'farmhouse_interior_and_cellar'."
+    },
+    "beat_ids": [
+      "BT002"
+    ],
+    "continuity_constraints": [
+      "Floor and wall angles must tilt in synchronization with house motion",
+      "Loose objects must slide in a consistent direction relative to house lurching",
+      "Toto nears the trap door"
+    ],
+    "prompt_seed": "Petitioner Group 5: Toto nears the trap door. petitioner_group. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Readable medium...",
+    "shot_notes": "Toto nears the trap door",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH001_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC003"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH001",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH001_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH011",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH011_chapter_xi.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH001",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH001_chapter_i.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH010",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH010_chapter_x.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH001",
+        "canonical_id": "dorothy"
+      }
+    ],
+    "evidence_summary": [
+      "Execute a high-stakes action sequence within the confined, tilting interior of an airborne farmhouse. The sequence must emphasize physical instability and the immediate threat to toto via the open trap door during violent house movements.",
+      "Inside the airborne house, chaos ensues. Dorothy struggles to maintain her footing and must act quickly to rescue Toto when he nearly falls through the open trap door during a violent lurch.",
+      "Terror $\\rightarrow$ Desperate protective instinct.",
+      "Interior of farmhouse_interior_and_cellar tilting violently; dorothy struggling for footing.",
+      "dorothy secures toto after a near-fall through the cellar opening.",
+      "dorothy navigates shifting floor angles to rescue toto from the trap door.",
+      "dorothy | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md] Costume/Silhouette: Unknown. No specific clothing details are provided in this chapter. [source:C:/FilmCreator/projects/wizard_of_oz/02_...",
+      "toto | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/toto.md] Costume/Silhouette: Small quadruped with black fur. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapte...",
+      "farmhouse_interior_and_cellar | No specific visual details are provided in the current evidence. The location is identified as a farmhouse interior and its associated cellar. | Includes an interior living space and a cellar. | unknown | unknown"
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "adventure_action",
+    "coverage_role": "petitioner_group",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT002",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "major",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = major"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH001_SC003_SH005_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "df646acbf57ca6f84e3f045600bc80dcd7cccf72",
+      "created_at_utc": "2026-04-27T20:53:24.722237+00:00",
+      "updated_at_utc": "2026-04-27T20:54:21.751094+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH001_SC003",
+          "version": "78479296cba38cd9f3e3c57329263c9a18c9f5e3"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH001_SC003",
+          "version": "eab3eb403d0741ac97410275ff93f2d4ba910ea0"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH001_SC003",
+          "version": "1a71c05dd5190e614097bc7655b5d4741587ec38"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:53:24.722737+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "df646acbf57ca6f84e3f045600bc80dcd7cccf72"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:21.751593+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "df646acbf57ca6f84e3f045600bc80dcd7cccf72"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH006",
+    "scene_id": "CH001_SC003",
+    "chapter_id": "CH001",
+    "shot_order": 6,
+    "previous_shot_id": "SH005",
+    "next_shot_id": "SH007",
+    "primary_subject": "toto",
+    "secondary_subjects": [
+      "dorothy"
+    ],
+    "shot_moment_summary": "Toto nears the trap door",
+    "start_state": "toto walking",
+    "end_state": "toto sliding toward edge",
+    "action_during_shot": "Toto nears the trap door",
+    "action_continues_from": "toto sliding toward edge",
+    "action_hands_off_to": "BT003",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "toto",
+    "visible_secondary_subject_ids": [
+      "dorothy"
+    ],
+    "primary_subject_frame_position": "foreground right within farmhouse_interior_and_cellar",
+    "primary_subject_scale_relation": "Small-scale interior confinement vs. large-scale aerial turbulence.",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "toto walking",
+    "subject_relation_summary": "toto plays against dorothy in the same frame",
+    "required_environment_anchor_1": "farmhouse_interior_and_cellar",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "Small-scale interior confinement vs. large-scale aerial turbulence.",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "toto at the threshold of cellar",
+      "near open trap door",
+      "toto remains readable within the active playing space.",
+      "dorothy remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the farmhouse_interior_and_cellar.",
+      "Background depth should keep farmhouse_interior_and_cellar legible as the location anchor.",
+      "Subject 1: toto remains visually readable against the environment scale.",
+      "Subject 2: dorothy remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "toto focuses toward the active scene action."
+    ],
+    "environment_subzone": "farmhouse_interior_and_cellar",
+    "key_visible_environment_features": [
+      "farmhouse_interior_and_cellar",
+      "Chapter-local beat subzone match for 'farmhouse_interior_and_cellar'."
+    ],
+    "continuity_from_previous_shot": "toto sliding toward edge",
+    "continuity_to_next_shot": "BT003",
+    "pose_anchor_frame": "toto walking",
+    "pose_end_frame": "toto sliding toward edge",
+    "shot_title": "Crowd Response 6: Toto nears the trap door",
+    "shot_type": "crowd_response",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in farmhouse_interior_and_cellar featuring toto, dorothy.",
+    "target_seconds": 7.0,
+    "characters_in_frame": [
+      {
+        "label": "Toto",
+        "canonical_id": "toto",
+        "display_name": "toto",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/toto.md",
+        "notes": "Direct registry match for 'toto'."
+      },
+      {
+        "label": "Dorothy",
+        "canonical_id": "dorothy",
+        "display_name": "dorothy",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md",
+        "notes": "Direct registry match for 'dorothy'."
+      }
+    ],
+    "environment": {
+      "label": "farmhouse_interior_and_cellar",
+      "canonical_id": "farmhouse_interior_and_cellar",
+      "display_name": "farmhouse_interior_and_cellar",
+      "status": "canonical",
+      "entity_kind": "sub_location",
+      "resolution_score": null,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH001/farmhouse_interior_and_cellar.md",
+      "notes": "Chapter-local beat subzone match for 'farmhouse_interior_and_cellar'."
+    },
+    "beat_ids": [
+      "BT002"
+    ],
+    "continuity_constraints": [
+      "Floor and wall angles must tilt in synchronization with house motion",
+      "Loose objects must slide in a consistent direction relative to house lurching",
+      "Toto nears the trap door"
+    ],
+    "prompt_seed": "Crowd Response 6: Toto nears the trap door. crowd_response. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Readable medium comp...",
+    "shot_notes": "Toto nears the trap door",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH001_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC003"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH001",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH001_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH011",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH011_chapter_xi.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH001",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH001_chapter_i.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH010",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH010_chapter_x.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH001",
+        "canonical_id": "dorothy"
+      }
+    ],
+    "evidence_summary": [
+      "Execute a high-stakes action sequence within the confined, tilting interior of an airborne farmhouse. The sequence must emphasize physical instability and the immediate threat to toto via the open trap door during violent house movements.",
+      "Inside the airborne house, chaos ensues. Dorothy struggles to maintain her footing and must act quickly to rescue Toto when he nearly falls through the open trap door during a violent lurch.",
+      "Terror $\\rightarrow$ Desperate protective instinct.",
+      "Interior of farmhouse_interior_and_cellar tilting violently; dorothy struggling for footing.",
+      "dorothy secures toto after a near-fall through the cellar opening.",
+      "dorothy navigates shifting floor angles to rescue toto from the trap door.",
+      "dorothy | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md] Costume/Silhouette: Unknown. No specific clothing details are provided in this chapter. [source:C:/FilmCreator/projects/wizard_of_oz/02_...",
+      "toto | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/toto.md] Costume/Silhouette: Small quadruped with black fur. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapte...",
+      "farmhouse_interior_and_cellar | No specific visual details are provided in the current evidence. The location is identified as a farmhouse interior and its associated cellar. | Includes an interior living space and a cellar. | unknown | unknown"
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "adventure_action",
+    "coverage_role": "crowd_response",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT002",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "major",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = major"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH001_SC003_SH006_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "df646acbf57ca6f84e3f045600bc80dcd7cccf72",
+      "created_at_utc": "2026-04-27T20:53:24.723737+00:00",
+      "updated_at_utc": "2026-04-27T20:54:21.757109+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH001_SC003",
+          "version": "78479296cba38cd9f3e3c57329263c9a18c9f5e3"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH001_SC003",
+          "version": "eab3eb403d0741ac97410275ff93f2d4ba910ea0"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH001_SC003",
+          "version": "1a71c05dd5190e614097bc7655b5d4741587ec38"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:53:24.724237+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "df646acbf57ca6f84e3f045600bc80dcd7cccf72"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:21.758110+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "df646acbf57ca6f84e3f045600bc80dcd7cccf72"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH007",
+    "scene_id": "CH001_SC003",
+    "chapter_id": "CH001",
+    "shot_order": 7,
+    "previous_shot_id": "SH006",
+    "next_shot_id": "SH008",
+    "primary_subject": "toto",
+    "secondary_subjects": [
+      "dorothy"
+    ],
+    "shot_moment_summary": "Toto nears the trap door",
+    "start_state": "toto walking",
+    "end_state": "toto sliding toward edge",
+    "action_during_shot": "Toto nears the trap door",
+    "action_continues_from": "toto sliding toward edge",
+    "action_hands_off_to": "BT003",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "toto",
+    "visible_secondary_subject_ids": [
+      "dorothy"
+    ],
+    "primary_subject_frame_position": "foreground right within farmhouse_interior_and_cellar",
+    "primary_subject_scale_relation": "Small-scale interior confinement vs. large-scale aerial turbulence.",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "toto walking",
+    "subject_relation_summary": "toto plays against dorothy in the same frame",
+    "required_environment_anchor_1": "farmhouse_interior_and_cellar",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "Small-scale interior confinement vs. large-scale aerial turbulence.",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "toto at the threshold of cellar",
+      "near open trap door",
+      "toto remains readable within the active playing space.",
+      "dorothy remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the farmhouse_interior_and_cellar.",
+      "Background depth should keep farmhouse_interior_and_cellar legible as the location anchor.",
+      "Subject 1: toto remains visually readable against the environment scale.",
+      "Subject 2: dorothy remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "toto focuses toward the active scene action."
+    ],
+    "environment_subzone": "farmhouse_interior_and_cellar",
+    "key_visible_environment_features": [
+      "farmhouse_interior_and_cellar",
+      "Chapter-local beat subzone match for 'farmhouse_interior_and_cellar'."
+    ],
+    "continuity_from_previous_shot": "toto sliding toward edge",
+    "continuity_to_next_shot": "BT003",
+    "pose_anchor_frame": "toto walking",
+    "pose_end_frame": "toto sliding toward edge",
+    "shot_title": "Symbol Insert 7: Toto nears the trap door",
+    "shot_type": "symbol_insert",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in farmhouse_interior_and_cellar featuring toto, dorothy.",
+    "target_seconds": 5.4,
+    "characters_in_frame": [
+      {
+        "label": "Toto",
+        "canonical_id": "toto",
+        "display_name": "toto",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/toto.md",
+        "notes": "Direct registry match for 'toto'."
+      },
+      {
+        "label": "Dorothy",
+        "canonical_id": "dorothy",
+        "display_name": "dorothy",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md",
+        "notes": "Direct registry match for 'dorothy'."
+      }
+    ],
+    "environment": {
+      "label": "farmhouse_interior_and_cellar",
+      "canonical_id": "farmhouse_interior_and_cellar",
+      "display_name": "farmhouse_interior_and_cellar",
+      "status": "canonical",
+      "entity_kind": "sub_location",
+      "resolution_score": null,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH001/farmhouse_interior_and_cellar.md",
+      "notes": "Chapter-local beat subzone match for 'farmhouse_interior_and_cellar'."
+    },
+    "beat_ids": [
+      "BT002"
+    ],
+    "continuity_constraints": [
+      "Floor and wall angles must tilt in synchronization with house motion",
+      "Loose objects must slide in a consistent direction relative to house lurching",
+      "Toto nears the trap door"
+    ],
+    "prompt_seed": "Symbol Insert 7: Toto nears the trap door. symbol_insert. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Readable medium compos...",
+    "shot_notes": "Toto nears the trap door",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH001_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC003"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH001",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH001_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH011",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH011_chapter_xi.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH001",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH001_chapter_i.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH010",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH010_chapter_x.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH001",
+        "canonical_id": "dorothy"
+      }
+    ],
+    "evidence_summary": [
+      "Execute a high-stakes action sequence within the confined, tilting interior of an airborne farmhouse. The sequence must emphasize physical instability and the immediate threat to toto via the open trap door during violent house movements.",
+      "Inside the airborne house, chaos ensues. Dorothy struggles to maintain her footing and must act quickly to rescue Toto when he nearly falls through the open trap door during a violent lurch.",
+      "Terror $\\rightarrow$ Desperate protective instinct.",
+      "Interior of farmhouse_interior_and_cellar tilting violently; dorothy struggling for footing.",
+      "dorothy secures toto after a near-fall through the cellar opening.",
+      "dorothy navigates shifting floor angles to rescue toto from the trap door.",
+      "dorothy | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md] Costume/Silhouette: Unknown. No specific clothing details are provided in this chapter. [source:C:/FilmCreator/projects/wizard_of_oz/02_...",
+      "toto | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/toto.md] Costume/Silhouette: Small quadruped with black fur. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapte...",
+      "farmhouse_interior_and_cellar | No specific visual details are provided in the current evidence. The location is identified as a farmhouse interior and its associated cellar. | Includes an interior living space and a cellar. | unknown | unknown"
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "adventure_action",
+    "coverage_role": "symbol_insert",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT002",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "major",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = major"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH001_SC003_SH007_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "df646acbf57ca6f84e3f045600bc80dcd7cccf72",
+      "created_at_utc": "2026-04-27T20:53:24.725237+00:00",
+      "updated_at_utc": "2026-04-27T20:54:21.763110+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH001_SC003",
+          "version": "78479296cba38cd9f3e3c57329263c9a18c9f5e3"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH001_SC003",
+          "version": "eab3eb403d0741ac97410275ff93f2d4ba910ea0"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH001_SC003",
+          "version": "1a71c05dd5190e614097bc7655b5d4741587ec38"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:53:24.726237+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "df646acbf57ca6f84e3f045600bc80dcd7cccf72"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:21.763609+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "df646acbf57ca6f84e3f045600bc80dcd7cccf72"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH008",
+    "scene_id": "CH001_SC003",
+    "chapter_id": "CH001",
+    "shot_order": 8,
+    "previous_shot_id": "SH007",
+    "next_shot_id": "SH009",
+    "primary_subject": "toto",
+    "secondary_subjects": [
+      "dorothy"
+    ],
+    "shot_moment_summary": "Toto nears the trap door",
+    "start_state": "toto walking",
+    "end_state": "toto sliding toward edge",
+    "action_during_shot": "Toto nears the trap door",
+    "action_continues_from": "toto sliding toward edge",
+    "action_hands_off_to": "BT003",
+    "shot_size": "close_up",
+    "camera_angle": "eye_level",
+    "lens_family": "portrait",
+    "camera_motion": "push_in",
+    "zoom_behavior": "subtle_in",
+    "focus_strategy": "shallow_subject",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "toto",
+    "visible_secondary_subject_ids": [
+      "dorothy"
+    ],
+    "primary_subject_frame_position": "foreground inside farmhouse_interior_and_cellar",
+    "primary_subject_scale_relation": "Small-scale interior confinement vs. large-scale aerial turbulence.",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "toto walking",
+    "subject_relation_summary": "toto plays against dorothy in the same frame",
+    "required_environment_anchor_1": "farmhouse_interior_and_cellar",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "Small-scale interior confinement vs. large-scale aerial turbulence.",
+    "camera_package_description": "close-up, eye level, portrait lens, push in, zoom subtle in, shallow subject, hard directional",
+    "subject_blocking": [
+      "toto at the threshold of cellar",
+      "near open trap door",
+      "toto remains readable within the active playing space.",
+      "dorothy remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the farmhouse_interior_and_cellar.",
+      "Background depth should keep farmhouse_interior_and_cellar legible as the location anchor.",
+      "Subject 1: toto remains visually readable against the environment scale.",
+      "Subject 2: dorothy remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "toto focuses toward the active scene action."
+    ],
+    "environment_subzone": "farmhouse_interior_and_cellar",
+    "key_visible_environment_features": [
+      "farmhouse_interior_and_cellar",
+      "Chapter-local beat subzone match for 'farmhouse_interior_and_cellar'."
+    ],
+    "continuity_from_previous_shot": "toto sliding toward edge",
+    "continuity_to_next_shot": "BT003",
+    "pose_anchor_frame": "toto walking",
+    "pose_end_frame": "toto sliding toward edge",
+    "shot_title": "Reaction Closeup 8: Toto nears the trap door",
+    "shot_type": "reaction_closeup",
+    "camera_description": "Close framing that isolates reaction and emotional emphasis.",
+    "composition": "Intimate composition that isolates toto, dorothy against farmhouse_interior_and_cellar to capture the beat's emotional turn.",
+    "target_seconds": 7.0,
+    "characters_in_frame": [
+      {
+        "label": "Toto",
+        "canonical_id": "toto",
+        "display_name": "toto",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/toto.md",
+        "notes": "Direct registry match for 'toto'."
+      },
+      {
+        "label": "Dorothy",
+        "canonical_id": "dorothy",
+        "display_name": "dorothy",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md",
+        "notes": "Direct registry match for 'dorothy'."
+      }
+    ],
+    "environment": {
+      "label": "farmhouse_interior_and_cellar",
+      "canonical_id": "farmhouse_interior_and_cellar",
+      "display_name": "farmhouse_interior_and_cellar",
+      "status": "canonical",
+      "entity_kind": "sub_location",
+      "resolution_score": null,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH001/farmhouse_interior_and_cellar.md",
+      "notes": "Chapter-local beat subzone match for 'farmhouse_interior_and_cellar'."
+    },
+    "beat_ids": [
+      "BT002"
+    ],
+    "continuity_constraints": [
+      "Floor and wall angles must tilt in synchronization with house motion",
+      "Loose objects must slide in a consistent direction relative to house lurching",
+      "Toto nears the trap door"
+    ],
+    "prompt_seed": "Reaction Closeup 8: Toto nears the trap door. reaction_closeup. size=close_up. angle=eye_level. lens=portrait. motion=push_in. zoom=subtle_in. focus=shallow_subject. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Close framing that isolates reaction and emotional emphasis. I...",
+    "shot_notes": "Toto nears the trap door",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH001_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC003"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH001",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH001_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH011",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH011_chapter_xi.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH001",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH001_chapter_i.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH010",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH010_chapter_x.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH001",
+        "canonical_id": "dorothy"
+      }
+    ],
+    "evidence_summary": [
+      "Execute a high-stakes action sequence within the confined, tilting interior of an airborne farmhouse. The sequence must emphasize physical instability and the immediate threat to toto via the open trap door during violent house movements.",
+      "Inside the airborne house, chaos ensues. Dorothy struggles to maintain her footing and must act quickly to rescue Toto when he nearly falls through the open trap door during a violent lurch.",
+      "Terror $\\rightarrow$ Desperate protective instinct.",
+      "Interior of farmhouse_interior_and_cellar tilting violently; dorothy struggling for footing.",
+      "dorothy secures toto after a near-fall through the cellar opening.",
+      "dorothy navigates shifting floor angles to rescue toto from the trap door.",
+      "dorothy | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md] Costume/Silhouette: Unknown. No specific clothing details are provided in this chapter. [source:C:/FilmCreator/projects/wizard_of_oz/02_...",
+      "toto | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/toto.md] Costume/Silhouette: Small quadruped with black fur. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapte...",
+      "farmhouse_interior_and_cellar | No specific visual details are provided in the current evidence. The location is identified as a farmhouse interior and its associated cellar. | Includes an interior living space and a cellar. | unknown | unknown"
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "adventure_action",
+    "coverage_role": "decision_closeup",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT002",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "major",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = major"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH001_SC003_SH008_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "df646acbf57ca6f84e3f045600bc80dcd7cccf72",
+      "created_at_utc": "2026-04-27T20:53:24.727237+00:00",
+      "updated_at_utc": "2026-04-27T20:54:21.768610+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH001_SC003",
+          "version": "78479296cba38cd9f3e3c57329263c9a18c9f5e3"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH001_SC003",
+          "version": "eab3eb403d0741ac97410275ff93f2d4ba910ea0"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH001_SC003",
+          "version": "1a71c05dd5190e614097bc7655b5d4741587ec38"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:53:24.727737+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "df646acbf57ca6f84e3f045600bc80dcd7cccf72"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:21.769119+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "df646acbf57ca6f84e3f045600bc80dcd7cccf72"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH009",
+    "scene_id": "CH001_SC003",
+    "chapter_id": "CH001",
+    "shot_order": 9,
+    "previous_shot_id": "SH008",
+    "next_shot_id": "SH010",
+    "primary_subject": "toto",
+    "secondary_subjects": [
+      "dorothy"
+    ],
+    "shot_moment_summary": "Toto nears the trap door",
+    "start_state": "toto walking",
+    "end_state": "toto sliding toward edge",
+    "action_during_shot": "Toto nears the trap door",
+    "action_continues_from": "toto sliding toward edge",
+    "action_hands_off_to": "BT003",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "toto",
+    "visible_secondary_subject_ids": [
+      "dorothy"
+    ],
+    "primary_subject_frame_position": "foreground right within farmhouse_interior_and_cellar",
+    "primary_subject_scale_relation": "Small-scale interior confinement vs. large-scale aerial turbulence.",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "toto walking",
+    "subject_relation_summary": "toto plays against dorothy in the same frame",
+    "required_environment_anchor_1": "farmhouse_interior_and_cellar",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "Small-scale interior confinement vs. large-scale aerial turbulence.",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "toto at the threshold of cellar",
+      "near open trap door",
+      "toto remains readable within the active playing space.",
+      "dorothy remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the farmhouse_interior_and_cellar.",
+      "Background depth should keep farmhouse_interior_and_cellar legible as the location anchor.",
+      "Subject 1: toto remains visually readable against the environment scale.",
+      "Subject 2: dorothy remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "toto focuses toward the active scene action."
+    ],
+    "environment_subzone": "farmhouse_interior_and_cellar",
+    "key_visible_environment_features": [
+      "farmhouse_interior_and_cellar",
+      "Chapter-local beat subzone match for 'farmhouse_interior_and_cellar'."
+    ],
+    "continuity_from_previous_shot": "toto sliding toward edge",
+    "continuity_to_next_shot": "BT003",
+    "pose_anchor_frame": "toto walking",
+    "pose_end_frame": "toto sliding toward edge",
+    "shot_title": "Scale Proof Wide 9: Toto nears the trap door",
+    "shot_type": "scale_proof_wide",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in farmhouse_interior_and_cellar featuring toto, dorothy.",
+    "target_seconds": 10.8,
+    "characters_in_frame": [
+      {
+        "label": "Toto",
+        "canonical_id": "toto",
+        "display_name": "toto",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/toto.md",
+        "notes": "Direct registry match for 'toto'."
+      },
+      {
+        "label": "Dorothy",
+        "canonical_id": "dorothy",
+        "display_name": "dorothy",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md",
+        "notes": "Direct registry match for 'dorothy'."
+      }
+    ],
+    "environment": {
+      "label": "farmhouse_interior_and_cellar",
+      "canonical_id": "farmhouse_interior_and_cellar",
+      "display_name": "farmhouse_interior_and_cellar",
+      "status": "canonical",
+      "entity_kind": "sub_location",
+      "resolution_score": null,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH001/farmhouse_interior_and_cellar.md",
+      "notes": "Chapter-local beat subzone match for 'farmhouse_interior_and_cellar'."
+    },
+    "beat_ids": [
+      "BT002"
+    ],
+    "continuity_constraints": [
+      "Floor and wall angles must tilt in synchronization with house motion",
+      "Loose objects must slide in a consistent direction relative to house lurching",
+      "Toto nears the trap door"
+    ],
+    "prompt_seed": "Scale Proof Wide 9: Toto nears the trap door. scale_proof_wide. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Readable medium...",
+    "shot_notes": "Toto nears the trap door",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH001_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC003"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH001",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH001_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH011",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH011_chapter_xi.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH001",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH001_chapter_i.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH010",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH010_chapter_x.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH001",
+        "canonical_id": "dorothy"
+      }
+    ],
+    "evidence_summary": [
+      "Execute a high-stakes action sequence within the confined, tilting interior of an airborne farmhouse. The sequence must emphasize physical instability and the immediate threat to toto via the open trap door during violent house movements.",
+      "Inside the airborne house, chaos ensues. Dorothy struggles to maintain her footing and must act quickly to rescue Toto when he nearly falls through the open trap door during a violent lurch.",
+      "Terror $\\rightarrow$ Desperate protective instinct.",
+      "Interior of farmhouse_interior_and_cellar tilting violently; dorothy struggling for footing.",
+      "dorothy secures toto after a near-fall through the cellar opening.",
+      "dorothy navigates shifting floor angles to rescue toto from the trap door.",
+      "dorothy | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md] Costume/Silhouette: Unknown. No specific clothing details are provided in this chapter. [source:C:/FilmCreator/projects/wizard_of_oz/02_...",
+      "toto | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/toto.md] Costume/Silhouette: Small quadruped with black fur. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapte...",
+      "farmhouse_interior_and_cellar | No specific visual details are provided in the current evidence. The location is identified as a farmhouse interior and its associated cellar. | Includes an interior living space and a cellar. | unknown | unknown"
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "adventure_action",
+    "coverage_role": "scale_proof_wide",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT002",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "major",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = major"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH001_SC003_SH009_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "df646acbf57ca6f84e3f045600bc80dcd7cccf72",
+      "created_at_utc": "2026-04-27T20:53:24.728740+00:00",
+      "updated_at_utc": "2026-04-27T20:54:21.774626+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH001_SC003",
+          "version": "78479296cba38cd9f3e3c57329263c9a18c9f5e3"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH001_SC003",
+          "version": "eab3eb403d0741ac97410275ff93f2d4ba910ea0"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH001_SC003",
+          "version": "1a71c05dd5190e614097bc7655b5d4741587ec38"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:53:24.729238+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "df646acbf57ca6f84e3f045600bc80dcd7cccf72"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:21.775126+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "df646acbf57ca6f84e3f045600bc80dcd7cccf72"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH010",
+    "scene_id": "CH001_SC003",
+    "chapter_id": "CH001",
+    "shot_order": 10,
+    "previous_shot_id": "SH009",
+    "next_shot_id": "SH011",
     "primary_subject": "dorothy",
     "secondary_subjects": [
       "toto"
@@ -431,7 +2136,7 @@
     "start_state": "dorothy lunging",
     "end_state": "dorothy clutching toto",
     "action_during_shot": "dorothy rescues toto from the brink",
-    "action_continues_from": "toto sliding toward opening",
+    "action_continues_from": "toto sliding toward edge",
     "action_hands_off_to": "end_of_scene",
     "shot_size": "medium_close",
     "camera_angle": "eye_level",
@@ -459,7 +2164,10 @@
     "camera_package_description": "medium-close, eye level, portrait lens, push in, shallow subject, diffuse ambient",
     "subject_blocking": [
       "dorothy dives toward trap door",
-      "dorothy diving toward the opening"
+      "dorothy diving toward the opening",
+      "trap door edge",
+      "dorothy remains readable within the active playing space.",
+      "toto remains readable within the active playing space."
     ],
     "camera_relative_positions": [
       "Camera anchors the action inside the farmhouse_interior_and_cellar.",
@@ -472,17 +2180,18 @@
     ],
     "environment_subzone": "farmhouse_interior_and_cellar",
     "key_visible_environment_features": [
-      "farmhouse_interior_and_cellar"
+      "farmhouse_interior_and_cellar",
+      "Chapter-local beat subzone match for 'farmhouse_interior_and_cellar'."
     ],
-    "continuity_from_previous_shot": "toto sliding toward opening",
+    "continuity_from_previous_shot": "toto sliding toward edge",
     "continuity_to_next_shot": "end_of_scene",
     "pose_anchor_frame": "dorothy lunging",
     "pose_end_frame": "dorothy clutching toto",
-    "shot_title": "Reaction Closeup 3: Dorothy rescues Toto",
-    "shot_type": "reaction_closeup",
-    "camera_description": "Close framing that isolates reaction and emotional emphasis.",
-    "composition": "Intimate composition that isolates dorothy, toto against farmhouse_interior_and_cellar to capture the beat's emotional turn.",
-    "target_seconds": 5.1,
+    "shot_title": "Geography Wide 10: Dorothy rescues Toto",
+    "shot_type": "geography_wide",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in farmhouse_interior_and_cellar featuring dorothy, toto.",
+    "target_seconds": 10.8,
     "characters_in_frame": [
       {
         "label": "Dorothy",
@@ -523,7 +2232,7 @@
       "Loose objects must slide in a consistent direction relative to house lurching",
       "Dorothy rescues Toto"
     ],
-    "prompt_seed": "Reaction Closeup 3: Dorothy rescues Toto. reaction_closeup. size=medium_close. angle=eye_level. lens=portrait. motion=push_in. zoom=none. focus=shallow_subject. lighting=diffuse_ambient. visibility=on_screen. subject_angle=front. Close framing that isolates reaction and emotional emphasis. Intimate composition that...",
+    "prompt_seed": "Geography Wide 10: Dorothy rescues Toto. geography_wide. size=medium_close. angle=eye_level. lens=portrait. motion=push_in. zoom=none. focus=shallow_subject. lighting=diffuse_ambient. visibility=on_screen. subject_angle=front. Stable readable framing built from the beat requirement. Readable medium composition in fa...",
     "shot_notes": "Dorothy rescues Toto",
     "evidence_refs": [
       {
@@ -588,17 +2297,34 @@
       "Interior of farmhouse_interior_and_cellar tilting violently; dorothy struggling for footing.",
       "dorothy secures toto after a near-fall through the cellar opening.",
       "dorothy navigates shifting floor angles to rescue toto from the trap door.",
-      "dorothy | Dorothy is a young human girl characterized by an expressive face and the appearance of a weary traveler. Her visual identity evolves during her journey, transitioning from previously green clothing to a white dress or clothing. She is most notabl...",
-      "toto | Toto is a small quadruped dog characterized by a compact build and consistent black fur. The character possesses an alert physical presence with keen, observant eyes suitable for a companion animal. | black fur. | companion animal; alert.",
+      "dorothy | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md] Costume/Silhouette: Unknown. No specific clothing details are provided in this chapter. [source:C:/FilmCreator/projects/wizard_of_oz/02_...",
+      "toto | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/toto.md] Costume/Silhouette: Small quadruped with black fur. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapte...",
       "farmhouse_interior_and_cellar | No specific visual details are provided in the current evidence. The location is identified as a farmhouse interior and its associated cellar. | Includes an interior living space and a cellar. | unknown | unknown"
     ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "adventure_action",
+    "coverage_role": "geography_wide",
+    "beat_type": "action_conflict",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT003",
+      "beat_type": "action_conflict",
+      "importance": "major",
+      "confidence": 0.78,
+      "reasons": [
+        "conflict/action verb",
+        "importance = major"
+      ]
+    },
     "metadata": {
-      "artifact_id": "CH001_SC003_SH003_SHOT_PACKAGE",
+      "artifact_id": "CH001_SC003_SH010_SHOT_PACKAGE",
       "artifact_type": "shot_package",
       "status": "generated",
-      "source_fingerprint": "29c0e97fda78a26c6349a9fa16e9545fc803444c",
-      "created_at_utc": "2026-04-27T09:25:32.597940+00:00",
-      "updated_at_utc": "2026-04-27T14:29:36.555515+00:00",
+      "source_fingerprint": "df646acbf57ca6f84e3f045600bc80dcd7cccf72",
+      "created_at_utc": "2026-04-27T20:53:24.730246+00:00",
+      "updated_at_utc": "2026-04-27T20:54:21.780126+00:00",
       "upstream_dependencies": [
         {
           "dependency_type": "scene_contract",
@@ -613,21 +2339,1437 @@
         {
           "dependency_type": "shot_blueprints",
           "dependency_id": "CH001_SC003",
-          "version": "e3545ba28f63be034c0fed19a0d30a41ad26a65f"
+          "version": "1a71c05dd5190e614097bc7655b5d4741587ec38"
         }
       ],
       "locked_fields": {},
       "manual_overrides": {},
       "revision_history": [
         {
-          "timestamp_utc": "2026-04-27T09:26:40.202383+00:00",
+          "timestamp_utc": "2026-04-27T20:53:24.730746+00:00",
           "action": "synthesized",
-          "source_fingerprint": "a49d84e75c8c460748f2b0256fd1b64ff36ab9b9"
+          "source_fingerprint": "df646acbf57ca6f84e3f045600bc80dcd7cccf72"
         },
         {
-          "timestamp_utc": "2026-04-27T14:30:45.097880+00:00",
+          "timestamp_utc": "2026-04-27T20:54:21.780631+00:00",
           "action": "synthesized",
-          "source_fingerprint": "29c0e97fda78a26c6349a9fa16e9545fc803444c"
+          "source_fingerprint": "df646acbf57ca6f84e3f045600bc80dcd7cccf72"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH011",
+    "scene_id": "CH001_SC003",
+    "chapter_id": "CH001",
+    "shot_order": 11,
+    "previous_shot_id": "SH010",
+    "next_shot_id": "SH012",
+    "primary_subject": "dorothy",
+    "secondary_subjects": [
+      "toto"
+    ],
+    "shot_moment_summary": "Dorothy rescues Toto",
+    "start_state": "dorothy lunging",
+    "end_state": "dorothy holding toto [[action_end=dorothy holding toto]",
+    "action_during_shot": "Dorothy rescues Toto",
+    "action_continues_from": "dorothy clutching toto",
+    "action_hands_off_to": "end_of_scene",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "dorothy",
+    "visible_secondary_subject_ids": [
+      "toto"
+    ],
+    "primary_subject_frame_position": "foreground right within farmhouse_interior_and_cellar",
+    "primary_subject_scale_relation": "Small-scale interior confinement vs. large-scale aerial turbulence.",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "dorothy lunging",
+    "subject_relation_summary": "dorothy plays against toto in the same frame",
+    "required_environment_anchor_1": "farmhouse_interior_and_cellar",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "Small-scale interior confinement vs. large-scale aerial turbulence.",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "dorothy diving toward the opening",
+      "trap door edge",
+      "dorothy remains readable within the active playing space.",
+      "toto remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the farmhouse_interior_and_cellar.",
+      "Background depth should keep farmhouse_interior_and_cellar legible as the location anchor.",
+      "Subject 1: dorothy remains visually readable against the environment scale.",
+      "Subject 2: toto remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "dorothy focuses toward the active scene action."
+    ],
+    "environment_subzone": "farmhouse_interior_and_cellar",
+    "key_visible_environment_features": [
+      "farmhouse_interior_and_cellar",
+      "Chapter-local beat subzone match for 'farmhouse_interior_and_cellar'."
+    ],
+    "continuity_from_previous_shot": "dorothy clutching toto",
+    "continuity_to_next_shot": "end_of_scene",
+    "pose_anchor_frame": "dorothy lunging",
+    "pose_end_frame": "dorothy holding toto [[action_end=dorothy holding toto]",
+    "shot_title": "Threat Reveal 11: Dorothy rescues Toto",
+    "shot_type": "threat_reveal",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in farmhouse_interior_and_cellar featuring dorothy, toto.",
+    "target_seconds": 7.0,
+    "characters_in_frame": [
+      {
+        "label": "Dorothy",
+        "canonical_id": "dorothy",
+        "display_name": "dorothy",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md",
+        "notes": "Direct registry match for 'dorothy'."
+      },
+      {
+        "label": "Toto",
+        "canonical_id": "toto",
+        "display_name": "toto",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/toto.md",
+        "notes": "Direct registry match for 'toto'."
+      }
+    ],
+    "environment": {
+      "label": "farmhouse_interior_and_cellar",
+      "canonical_id": "farmhouse_interior_and_cellar",
+      "display_name": "farmhouse_interior_and_cellar",
+      "status": "canonical",
+      "entity_kind": "sub_location",
+      "resolution_score": null,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH001/farmhouse_interior_and_cellar.md",
+      "notes": "Chapter-local beat subzone match for 'farmhouse_interior_and_cellar'."
+    },
+    "beat_ids": [
+      "BT003"
+    ],
+    "continuity_constraints": [
+      "Floor and wall angles must tilt in synchronization with house motion",
+      "Loose objects must slide in a consistent direction relative to house lurching",
+      "Dorothy rescues Toto"
+    ],
+    "prompt_seed": "Threat Reveal 11: Dorothy rescues Toto. threat_reveal. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Readable medium compositi...",
+    "shot_notes": "Dorothy rescues Toto",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH001_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC003"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH001",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH001_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH011",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH011_chapter_xi.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH001",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH001_chapter_i.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH010",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH010_chapter_x.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH001",
+        "canonical_id": "dorothy"
+      }
+    ],
+    "evidence_summary": [
+      "Execute a high-stakes action sequence within the confined, tilting interior of an airborne farmhouse. The sequence must emphasize physical instability and the immediate threat to toto via the open trap door during violent house movements.",
+      "Inside the airborne house, chaos ensues. Dorothy struggles to maintain her footing and must act quickly to rescue Toto when he nearly falls through the open trap door during a violent lurch.",
+      "Terror $\\rightarrow$ Desperate protective instinct.",
+      "Interior of farmhouse_interior_and_cellar tilting violently; dorothy struggling for footing.",
+      "dorothy secures toto after a near-fall through the cellar opening.",
+      "dorothy navigates shifting floor angles to rescue toto from the trap door.",
+      "dorothy | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md] Costume/Silhouette: Unknown. No specific clothing details are provided in this chapter. [source:C:/FilmCreator/projects/wizard_of_oz/02_...",
+      "toto | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/toto.md] Costume/Silhouette: Small quadruped with black fur. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapte...",
+      "farmhouse_interior_and_cellar | No specific visual details are provided in the current evidence. The location is identified as a farmhouse interior and its associated cellar. | Includes an interior living space and a cellar. | unknown | unknown"
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "adventure_action",
+    "coverage_role": "threat_reveal",
+    "beat_type": "action_conflict",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT003",
+      "beat_type": "action_conflict",
+      "importance": "major",
+      "confidence": 0.78,
+      "reasons": [
+        "conflict/action verb",
+        "importance = major"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH001_SC003_SH011_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "df646acbf57ca6f84e3f045600bc80dcd7cccf72",
+      "created_at_utc": "2026-04-27T20:53:24.731746+00:00",
+      "updated_at_utc": "2026-04-27T20:54:21.786633+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH001_SC003",
+          "version": "78479296cba38cd9f3e3c57329263c9a18c9f5e3"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH001_SC003",
+          "version": "eab3eb403d0741ac97410275ff93f2d4ba910ea0"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH001_SC003",
+          "version": "1a71c05dd5190e614097bc7655b5d4741587ec38"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:53:24.732745+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "df646acbf57ca6f84e3f045600bc80dcd7cccf72"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:21.787137+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "df646acbf57ca6f84e3f045600bc80dcd7cccf72"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH012",
+    "scene_id": "CH001_SC003",
+    "chapter_id": "CH001",
+    "shot_order": 12,
+    "previous_shot_id": "SH011",
+    "next_shot_id": "SH013",
+    "primary_subject": "dorothy",
+    "secondary_subjects": [
+      "toto"
+    ],
+    "shot_moment_summary": "Dorothy rescues Toto",
+    "start_state": "dorothy lunging",
+    "end_state": "dorothy holding toto [[action_end=dorothy holding toto]",
+    "action_during_shot": "Dorothy rescues Toto",
+    "action_continues_from": "dorothy holding toto [[action_end=dorothy holding toto]",
+    "action_hands_off_to": "end_of_scene",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "dorothy",
+    "visible_secondary_subject_ids": [
+      "toto"
+    ],
+    "primary_subject_frame_position": "foreground right within farmhouse_interior_and_cellar",
+    "primary_subject_scale_relation": "Small-scale interior confinement vs. large-scale aerial turbulence.",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "dorothy lunging",
+    "subject_relation_summary": "dorothy plays against toto in the same frame",
+    "required_environment_anchor_1": "farmhouse_interior_and_cellar",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "Small-scale interior confinement vs. large-scale aerial turbulence.",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "dorothy diving toward the opening",
+      "trap door edge",
+      "dorothy remains readable within the active playing space.",
+      "toto remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the farmhouse_interior_and_cellar.",
+      "Background depth should keep farmhouse_interior_and_cellar legible as the location anchor.",
+      "Subject 1: dorothy remains visually readable against the environment scale.",
+      "Subject 2: toto remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "dorothy focuses toward the active scene action."
+    ],
+    "environment_subzone": "farmhouse_interior_and_cellar",
+    "key_visible_environment_features": [
+      "farmhouse_interior_and_cellar",
+      "Chapter-local beat subzone match for 'farmhouse_interior_and_cellar'."
+    ],
+    "continuity_from_previous_shot": "dorothy holding toto [[action_end=dorothy holding toto]",
+    "continuity_to_next_shot": "end_of_scene",
+    "pose_anchor_frame": "dorothy lunging",
+    "pose_end_frame": "dorothy holding toto [[action_end=dorothy holding toto]",
+    "shot_title": "Action Medium 12: Dorothy rescues Toto",
+    "shot_type": "action_medium",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in farmhouse_interior_and_cellar featuring dorothy, toto.",
+    "target_seconds": 7.0,
+    "characters_in_frame": [
+      {
+        "label": "Dorothy",
+        "canonical_id": "dorothy",
+        "display_name": "dorothy",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md",
+        "notes": "Direct registry match for 'dorothy'."
+      },
+      {
+        "label": "Toto",
+        "canonical_id": "toto",
+        "display_name": "toto",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/toto.md",
+        "notes": "Direct registry match for 'toto'."
+      }
+    ],
+    "environment": {
+      "label": "farmhouse_interior_and_cellar",
+      "canonical_id": "farmhouse_interior_and_cellar",
+      "display_name": "farmhouse_interior_and_cellar",
+      "status": "canonical",
+      "entity_kind": "sub_location",
+      "resolution_score": null,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH001/farmhouse_interior_and_cellar.md",
+      "notes": "Chapter-local beat subzone match for 'farmhouse_interior_and_cellar'."
+    },
+    "beat_ids": [
+      "BT003"
+    ],
+    "continuity_constraints": [
+      "Floor and wall angles must tilt in synchronization with house motion",
+      "Loose objects must slide in a consistent direction relative to house lurching",
+      "Dorothy rescues Toto"
+    ],
+    "prompt_seed": "Action Medium 12: Dorothy rescues Toto. action_medium. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Readable medium compositi...",
+    "shot_notes": "Dorothy rescues Toto",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH001_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC003"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH001",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH001_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH011",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH011_chapter_xi.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH001",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH001_chapter_i.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH010",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH010_chapter_x.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH001",
+        "canonical_id": "dorothy"
+      }
+    ],
+    "evidence_summary": [
+      "Execute a high-stakes action sequence within the confined, tilting interior of an airborne farmhouse. The sequence must emphasize physical instability and the immediate threat to toto via the open trap door during violent house movements.",
+      "Inside the airborne house, chaos ensues. Dorothy struggles to maintain her footing and must act quickly to rescue Toto when he nearly falls through the open trap door during a violent lurch.",
+      "Terror $\\rightarrow$ Desperate protective instinct.",
+      "Interior of farmhouse_interior_and_cellar tilting violently; dorothy struggling for footing.",
+      "dorothy secures toto after a near-fall through the cellar opening.",
+      "dorothy navigates shifting floor angles to rescue toto from the trap door.",
+      "dorothy | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md] Costume/Silhouette: Unknown. No specific clothing details are provided in this chapter. [source:C:/FilmCreator/projects/wizard_of_oz/02_...",
+      "toto | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/toto.md] Costume/Silhouette: Small quadruped with black fur. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapte...",
+      "farmhouse_interior_and_cellar | No specific visual details are provided in the current evidence. The location is identified as a farmhouse interior and its associated cellar. | Includes an interior living space and a cellar. | unknown | unknown"
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "adventure_action",
+    "coverage_role": "defender_action",
+    "beat_type": "action_conflict",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT003",
+      "beat_type": "action_conflict",
+      "importance": "major",
+      "confidence": 0.78,
+      "reasons": [
+        "conflict/action verb",
+        "importance = major"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH001_SC003_SH012_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "df646acbf57ca6f84e3f045600bc80dcd7cccf72",
+      "created_at_utc": "2026-04-27T20:53:24.733746+00:00",
+      "updated_at_utc": "2026-04-27T20:54:21.792642+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH001_SC003",
+          "version": "78479296cba38cd9f3e3c57329263c9a18c9f5e3"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH001_SC003",
+          "version": "eab3eb403d0741ac97410275ff93f2d4ba910ea0"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH001_SC003",
+          "version": "1a71c05dd5190e614097bc7655b5d4741587ec38"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:53:24.734745+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "df646acbf57ca6f84e3f045600bc80dcd7cccf72"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:21.793142+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "df646acbf57ca6f84e3f045600bc80dcd7cccf72"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH013",
+    "scene_id": "CH001_SC003",
+    "chapter_id": "CH001",
+    "shot_order": 13,
+    "previous_shot_id": "SH012",
+    "next_shot_id": "SH014",
+    "primary_subject": "dorothy",
+    "secondary_subjects": [
+      "toto"
+    ],
+    "shot_moment_summary": "Dorothy rescues Toto",
+    "start_state": "dorothy lunging",
+    "end_state": "dorothy holding toto [[action_end=dorothy holding toto]",
+    "action_during_shot": "Dorothy rescues Toto",
+    "action_continues_from": "dorothy holding toto [[action_end=dorothy holding toto]",
+    "action_hands_off_to": "end_of_scene",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "dorothy",
+    "visible_secondary_subject_ids": [
+      "toto"
+    ],
+    "primary_subject_frame_position": "foreground right within farmhouse_interior_and_cellar",
+    "primary_subject_scale_relation": "Small-scale interior confinement vs. large-scale aerial turbulence.",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "dorothy lunging",
+    "subject_relation_summary": "dorothy plays against toto in the same frame",
+    "required_environment_anchor_1": "farmhouse_interior_and_cellar",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "Small-scale interior confinement vs. large-scale aerial turbulence.",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "dorothy diving toward the opening",
+      "trap door edge",
+      "dorothy remains readable within the active playing space.",
+      "toto remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the farmhouse_interior_and_cellar.",
+      "Background depth should keep farmhouse_interior_and_cellar legible as the location anchor.",
+      "Subject 1: dorothy remains visually readable against the environment scale.",
+      "Subject 2: toto remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "dorothy focuses toward the active scene action."
+    ],
+    "environment_subzone": "farmhouse_interior_and_cellar",
+    "key_visible_environment_features": [
+      "farmhouse_interior_and_cellar",
+      "Chapter-local beat subzone match for 'farmhouse_interior_and_cellar'."
+    ],
+    "continuity_from_previous_shot": "dorothy holding toto [[action_end=dorothy holding toto]",
+    "continuity_to_next_shot": "end_of_scene",
+    "pose_anchor_frame": "dorothy lunging",
+    "pose_end_frame": "dorothy holding toto [[action_end=dorothy holding toto]",
+    "shot_title": "Impact Insert 13: Dorothy rescues Toto",
+    "shot_type": "impact_insert",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in farmhouse_interior_and_cellar featuring dorothy, toto.",
+    "target_seconds": 5.4,
+    "characters_in_frame": [
+      {
+        "label": "Dorothy",
+        "canonical_id": "dorothy",
+        "display_name": "dorothy",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md",
+        "notes": "Direct registry match for 'dorothy'."
+      },
+      {
+        "label": "Toto",
+        "canonical_id": "toto",
+        "display_name": "toto",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/toto.md",
+        "notes": "Direct registry match for 'toto'."
+      }
+    ],
+    "environment": {
+      "label": "farmhouse_interior_and_cellar",
+      "canonical_id": "farmhouse_interior_and_cellar",
+      "display_name": "farmhouse_interior_and_cellar",
+      "status": "canonical",
+      "entity_kind": "sub_location",
+      "resolution_score": null,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH001/farmhouse_interior_and_cellar.md",
+      "notes": "Chapter-local beat subzone match for 'farmhouse_interior_and_cellar'."
+    },
+    "beat_ids": [
+      "BT003"
+    ],
+    "continuity_constraints": [
+      "Floor and wall angles must tilt in synchronization with house motion",
+      "Loose objects must slide in a consistent direction relative to house lurching",
+      "Dorothy rescues Toto"
+    ],
+    "prompt_seed": "Impact Insert 13: Dorothy rescues Toto. impact_insert. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Readable medium compositi...",
+    "shot_notes": "Dorothy rescues Toto",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH001_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC003"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH001",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH001_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH011",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH011_chapter_xi.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH001",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH001_chapter_i.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH010",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH010_chapter_x.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH001",
+        "canonical_id": "dorothy"
+      }
+    ],
+    "evidence_summary": [
+      "Execute a high-stakes action sequence within the confined, tilting interior of an airborne farmhouse. The sequence must emphasize physical instability and the immediate threat to toto via the open trap door during violent house movements.",
+      "Inside the airborne house, chaos ensues. Dorothy struggles to maintain her footing and must act quickly to rescue Toto when he nearly falls through the open trap door during a violent lurch.",
+      "Terror $\\rightarrow$ Desperate protective instinct.",
+      "Interior of farmhouse_interior_and_cellar tilting violently; dorothy struggling for footing.",
+      "dorothy secures toto after a near-fall through the cellar opening.",
+      "dorothy navigates shifting floor angles to rescue toto from the trap door.",
+      "dorothy | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md] Costume/Silhouette: Unknown. No specific clothing details are provided in this chapter. [source:C:/FilmCreator/projects/wizard_of_oz/02_...",
+      "toto | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/toto.md] Costume/Silhouette: Small quadruped with black fur. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapte...",
+      "farmhouse_interior_and_cellar | No specific visual details are provided in the current evidence. The location is identified as a farmhouse interior and its associated cellar. | Includes an interior living space and a cellar. | unknown | unknown"
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "adventure_action",
+    "coverage_role": "impact_insert",
+    "beat_type": "action_conflict",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT003",
+      "beat_type": "action_conflict",
+      "importance": "major",
+      "confidence": 0.78,
+      "reasons": [
+        "conflict/action verb",
+        "importance = major"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH001_SC003_SH013_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "df646acbf57ca6f84e3f045600bc80dcd7cccf72",
+      "created_at_utc": "2026-04-27T20:53:24.735746+00:00",
+      "updated_at_utc": "2026-04-27T20:54:21.798642+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH001_SC003",
+          "version": "78479296cba38cd9f3e3c57329263c9a18c9f5e3"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH001_SC003",
+          "version": "eab3eb403d0741ac97410275ff93f2d4ba910ea0"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH001_SC003",
+          "version": "1a71c05dd5190e614097bc7655b5d4741587ec38"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:53:24.735746+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "df646acbf57ca6f84e3f045600bc80dcd7cccf72"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:21.799141+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "df646acbf57ca6f84e3f045600bc80dcd7cccf72"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH014",
+    "scene_id": "CH001_SC003",
+    "chapter_id": "CH001",
+    "shot_order": 14,
+    "previous_shot_id": "SH013",
+    "next_shot_id": "SH015",
+    "primary_subject": "dorothy",
+    "secondary_subjects": [
+      "toto"
+    ],
+    "shot_moment_summary": "Dorothy rescues Toto",
+    "start_state": "dorothy lunging",
+    "end_state": "dorothy holding toto [[action_end=dorothy holding toto]",
+    "action_during_shot": "Dorothy rescues Toto",
+    "action_continues_from": "dorothy holding toto [[action_end=dorothy holding toto]",
+    "action_hands_off_to": "end_of_scene",
+    "shot_size": "close_up",
+    "camera_angle": "eye_level",
+    "lens_family": "portrait",
+    "camera_motion": "push_in",
+    "zoom_behavior": "subtle_in",
+    "focus_strategy": "shallow_subject",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "dorothy",
+    "visible_secondary_subject_ids": [
+      "toto"
+    ],
+    "primary_subject_frame_position": "foreground inside farmhouse_interior_and_cellar",
+    "primary_subject_scale_relation": "Small-scale interior confinement vs. large-scale aerial turbulence.",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "dorothy lunging",
+    "subject_relation_summary": "dorothy plays against toto in the same frame",
+    "required_environment_anchor_1": "farmhouse_interior_and_cellar",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "Small-scale interior confinement vs. large-scale aerial turbulence.",
+    "camera_package_description": "close-up, eye level, portrait lens, push in, zoom subtle in, shallow subject, hard directional",
+    "subject_blocking": [
+      "dorothy diving toward the opening",
+      "trap door edge",
+      "dorothy remains readable within the active playing space.",
+      "toto remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the farmhouse_interior_and_cellar.",
+      "Background depth should keep farmhouse_interior_and_cellar legible as the location anchor.",
+      "Subject 1: dorothy remains visually readable against the environment scale.",
+      "Subject 2: toto remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "dorothy focuses toward the active scene action."
+    ],
+    "environment_subzone": "farmhouse_interior_and_cellar",
+    "key_visible_environment_features": [
+      "farmhouse_interior_and_cellar",
+      "Chapter-local beat subzone match for 'farmhouse_interior_and_cellar'."
+    ],
+    "continuity_from_previous_shot": "dorothy holding toto [[action_end=dorothy holding toto]",
+    "continuity_to_next_shot": "end_of_scene",
+    "pose_anchor_frame": "dorothy lunging",
+    "pose_end_frame": "dorothy holding toto [[action_end=dorothy holding toto]",
+    "shot_title": "Reaction Closeup 14: Dorothy rescues Toto",
+    "shot_type": "reaction_closeup",
+    "camera_description": "Close framing that isolates reaction and emotional emphasis.",
+    "composition": "Intimate composition that isolates dorothy, toto against farmhouse_interior_and_cellar to capture the beat's emotional turn.",
+    "target_seconds": 7.0,
+    "characters_in_frame": [
+      {
+        "label": "Dorothy",
+        "canonical_id": "dorothy",
+        "display_name": "dorothy",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md",
+        "notes": "Direct registry match for 'dorothy'."
+      },
+      {
+        "label": "Toto",
+        "canonical_id": "toto",
+        "display_name": "toto",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/toto.md",
+        "notes": "Direct registry match for 'toto'."
+      }
+    ],
+    "environment": {
+      "label": "farmhouse_interior_and_cellar",
+      "canonical_id": "farmhouse_interior_and_cellar",
+      "display_name": "farmhouse_interior_and_cellar",
+      "status": "canonical",
+      "entity_kind": "sub_location",
+      "resolution_score": null,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH001/farmhouse_interior_and_cellar.md",
+      "notes": "Chapter-local beat subzone match for 'farmhouse_interior_and_cellar'."
+    },
+    "beat_ids": [
+      "BT003"
+    ],
+    "continuity_constraints": [
+      "Floor and wall angles must tilt in synchronization with house motion",
+      "Loose objects must slide in a consistent direction relative to house lurching",
+      "Dorothy rescues Toto"
+    ],
+    "prompt_seed": "Reaction Closeup 14: Dorothy rescues Toto. reaction_closeup. size=close_up. angle=eye_level. lens=portrait. motion=push_in. zoom=subtle_in. focus=shallow_subject. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Close framing that isolates reaction and emotional emphasis. Inti...",
+    "shot_notes": "Dorothy rescues Toto",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH001_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC003"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH001",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH001_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH011",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH011_chapter_xi.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH001",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH001_chapter_i.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH010",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH010_chapter_x.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH001",
+        "canonical_id": "dorothy"
+      }
+    ],
+    "evidence_summary": [
+      "Execute a high-stakes action sequence within the confined, tilting interior of an airborne farmhouse. The sequence must emphasize physical instability and the immediate threat to toto via the open trap door during violent house movements.",
+      "Inside the airborne house, chaos ensues. Dorothy struggles to maintain her footing and must act quickly to rescue Toto when he nearly falls through the open trap door during a violent lurch.",
+      "Terror $\\rightarrow$ Desperate protective instinct.",
+      "Interior of farmhouse_interior_and_cellar tilting violently; dorothy struggling for footing.",
+      "dorothy secures toto after a near-fall through the cellar opening.",
+      "dorothy navigates shifting floor angles to rescue toto from the trap door.",
+      "dorothy | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md] Costume/Silhouette: Unknown. No specific clothing details are provided in this chapter. [source:C:/FilmCreator/projects/wizard_of_oz/02_...",
+      "toto | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/toto.md] Costume/Silhouette: Small quadruped with black fur. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapte...",
+      "farmhouse_interior_and_cellar | No specific visual details are provided in the current evidence. The location is identified as a farmhouse interior and its associated cellar. | Includes an interior living space and a cellar. | unknown | unknown"
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "adventure_action",
+    "coverage_role": "reaction_closeup",
+    "beat_type": "action_conflict",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT003",
+      "beat_type": "action_conflict",
+      "importance": "major",
+      "confidence": 0.78,
+      "reasons": [
+        "conflict/action verb",
+        "importance = major"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH001_SC003_SH014_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "df646acbf57ca6f84e3f045600bc80dcd7cccf72",
+      "created_at_utc": "2026-04-27T20:53:24.737256+00:00",
+      "updated_at_utc": "2026-04-27T20:54:21.804151+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH001_SC003",
+          "version": "78479296cba38cd9f3e3c57329263c9a18c9f5e3"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH001_SC003",
+          "version": "eab3eb403d0741ac97410275ff93f2d4ba910ea0"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH001_SC003",
+          "version": "1a71c05dd5190e614097bc7655b5d4741587ec38"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:53:24.737759+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "df646acbf57ca6f84e3f045600bc80dcd7cccf72"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:21.804650+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "df646acbf57ca6f84e3f045600bc80dcd7cccf72"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH015",
+    "scene_id": "CH001_SC003",
+    "chapter_id": "CH001",
+    "shot_order": 15,
+    "previous_shot_id": "SH014",
+    "next_shot_id": "SH016",
+    "primary_subject": "dorothy",
+    "secondary_subjects": [
+      "toto"
+    ],
+    "shot_moment_summary": "Dorothy rescues Toto",
+    "start_state": "dorothy lunging",
+    "end_state": "dorothy holding toto [[action_end=dorothy holding toto]",
+    "action_during_shot": "Dorothy rescues Toto",
+    "action_continues_from": "dorothy holding toto [[action_end=dorothy holding toto]",
+    "action_hands_off_to": "end_of_scene",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "dorothy",
+    "visible_secondary_subject_ids": [
+      "toto"
+    ],
+    "primary_subject_frame_position": "foreground right within farmhouse_interior_and_cellar",
+    "primary_subject_scale_relation": "Small-scale interior confinement vs. large-scale aerial turbulence.",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "dorothy lunging",
+    "subject_relation_summary": "dorothy plays against toto in the same frame",
+    "required_environment_anchor_1": "farmhouse_interior_and_cellar",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "Small-scale interior confinement vs. large-scale aerial turbulence.",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "dorothy diving toward the opening",
+      "trap door edge",
+      "dorothy remains readable within the active playing space.",
+      "toto remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the farmhouse_interior_and_cellar.",
+      "Background depth should keep farmhouse_interior_and_cellar legible as the location anchor.",
+      "Subject 1: dorothy remains visually readable against the environment scale.",
+      "Subject 2: toto remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "dorothy focuses toward the active scene action."
+    ],
+    "environment_subzone": "farmhouse_interior_and_cellar",
+    "key_visible_environment_features": [
+      "farmhouse_interior_and_cellar",
+      "Chapter-local beat subzone match for 'farmhouse_interior_and_cellar'."
+    ],
+    "continuity_from_previous_shot": "dorothy holding toto [[action_end=dorothy holding toto]",
+    "continuity_to_next_shot": "end_of_scene",
+    "pose_anchor_frame": "dorothy lunging",
+    "pose_end_frame": "dorothy holding toto [[action_end=dorothy holding toto]",
+    "shot_title": "Handoff Action 15: Dorothy rescues Toto",
+    "shot_type": "handoff_action",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in farmhouse_interior_and_cellar featuring dorothy, toto.",
+    "target_seconds": 7.0,
+    "characters_in_frame": [
+      {
+        "label": "Dorothy",
+        "canonical_id": "dorothy",
+        "display_name": "dorothy",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md",
+        "notes": "Direct registry match for 'dorothy'."
+      },
+      {
+        "label": "Toto",
+        "canonical_id": "toto",
+        "display_name": "toto",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/toto.md",
+        "notes": "Direct registry match for 'toto'."
+      }
+    ],
+    "environment": {
+      "label": "farmhouse_interior_and_cellar",
+      "canonical_id": "farmhouse_interior_and_cellar",
+      "display_name": "farmhouse_interior_and_cellar",
+      "status": "canonical",
+      "entity_kind": "sub_location",
+      "resolution_score": null,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH001/farmhouse_interior_and_cellar.md",
+      "notes": "Chapter-local beat subzone match for 'farmhouse_interior_and_cellar'."
+    },
+    "beat_ids": [
+      "BT003"
+    ],
+    "continuity_constraints": [
+      "Floor and wall angles must tilt in synchronization with house motion",
+      "Loose objects must slide in a consistent direction relative to house lurching",
+      "Dorothy rescues Toto"
+    ],
+    "prompt_seed": "Handoff Action 15: Dorothy rescues Toto. handoff_action. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Readable medium composi...",
+    "shot_notes": "Dorothy rescues Toto",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH001_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC003"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH001",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH001_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH011",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH011_chapter_xi.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH001",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH001_chapter_i.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH010",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH010_chapter_x.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH001",
+        "canonical_id": "dorothy"
+      }
+    ],
+    "evidence_summary": [
+      "Execute a high-stakes action sequence within the confined, tilting interior of an airborne farmhouse. The sequence must emphasize physical instability and the immediate threat to toto via the open trap door during violent house movements.",
+      "Inside the airborne house, chaos ensues. Dorothy struggles to maintain her footing and must act quickly to rescue Toto when he nearly falls through the open trap door during a violent lurch.",
+      "Terror $\\rightarrow$ Desperate protective instinct.",
+      "Interior of farmhouse_interior_and_cellar tilting violently; dorothy struggling for footing.",
+      "dorothy secures toto after a near-fall through the cellar opening.",
+      "dorothy navigates shifting floor angles to rescue toto from the trap door.",
+      "dorothy | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md] Costume/Silhouette: Unknown. No specific clothing details are provided in this chapter. [source:C:/FilmCreator/projects/wizard_of_oz/02_...",
+      "toto | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/toto.md] Costume/Silhouette: Small quadruped with black fur. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapte...",
+      "farmhouse_interior_and_cellar | No specific visual details are provided in the current evidence. The location is identified as a farmhouse interior and its associated cellar. | Includes an interior living space and a cellar. | unknown | unknown"
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "adventure_action",
+    "coverage_role": "handoff_action",
+    "beat_type": "action_conflict",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT003",
+      "beat_type": "action_conflict",
+      "importance": "major",
+      "confidence": 0.78,
+      "reasons": [
+        "conflict/action verb",
+        "importance = major"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH001_SC003_SH015_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "df646acbf57ca6f84e3f045600bc80dcd7cccf72",
+      "created_at_utc": "2026-04-27T20:53:24.738760+00:00",
+      "updated_at_utc": "2026-04-27T20:54:21.809649+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH001_SC003",
+          "version": "78479296cba38cd9f3e3c57329263c9a18c9f5e3"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH001_SC003",
+          "version": "eab3eb403d0741ac97410275ff93f2d4ba910ea0"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH001_SC003",
+          "version": "1a71c05dd5190e614097bc7655b5d4741587ec38"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:53:24.739260+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "df646acbf57ca6f84e3f045600bc80dcd7cccf72"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:21.810149+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "df646acbf57ca6f84e3f045600bc80dcd7cccf72"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH016",
+    "scene_id": "CH001_SC003",
+    "chapter_id": "CH001",
+    "shot_order": 16,
+    "previous_shot_id": "SH015",
+    "next_shot_id": "",
+    "primary_subject": "dorothy",
+    "secondary_subjects": [
+      "toto"
+    ],
+    "shot_moment_summary": "Dorothy rescues Toto",
+    "start_state": "dorothy lunging",
+    "end_state": "dorothy holding toto [[action_end=dorothy holding toto]",
+    "action_during_shot": "Dorothy rescues Toto",
+    "action_continues_from": "dorothy holding toto [[action_end=dorothy holding toto]",
+    "action_hands_off_to": "end_of_scene",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "dorothy",
+    "visible_secondary_subject_ids": [
+      "toto"
+    ],
+    "primary_subject_frame_position": "foreground right within farmhouse_interior_and_cellar",
+    "primary_subject_scale_relation": "Small-scale interior confinement vs. large-scale aerial turbulence.",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "dorothy lunging",
+    "subject_relation_summary": "dorothy plays against toto in the same frame",
+    "required_environment_anchor_1": "farmhouse_interior_and_cellar",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "Small-scale interior confinement vs. large-scale aerial turbulence.",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "dorothy diving toward the opening",
+      "trap door edge",
+      "dorothy remains readable within the active playing space.",
+      "toto remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the farmhouse_interior_and_cellar.",
+      "Background depth should keep farmhouse_interior_and_cellar legible as the location anchor.",
+      "Subject 1: dorothy remains visually readable against the environment scale.",
+      "Subject 2: toto remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "dorothy focuses toward the active scene action."
+    ],
+    "environment_subzone": "farmhouse_interior_and_cellar",
+    "key_visible_environment_features": [
+      "farmhouse_interior_and_cellar",
+      "Chapter-local beat subzone match for 'farmhouse_interior_and_cellar'."
+    ],
+    "continuity_from_previous_shot": "dorothy holding toto [[action_end=dorothy holding toto]",
+    "continuity_to_next_shot": "end_of_scene",
+    "pose_anchor_frame": "dorothy lunging",
+    "pose_end_frame": "dorothy holding toto [[action_end=dorothy holding toto]",
+    "shot_title": "Reverse Action 16: Dorothy rescues Toto",
+    "shot_type": "reverse_action",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in farmhouse_interior_and_cellar featuring dorothy, toto.",
+    "target_seconds": 7.0,
+    "characters_in_frame": [
+      {
+        "label": "Dorothy",
+        "canonical_id": "dorothy",
+        "display_name": "dorothy",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md",
+        "notes": "Direct registry match for 'dorothy'."
+      },
+      {
+        "label": "Toto",
+        "canonical_id": "toto",
+        "display_name": "toto",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/toto.md",
+        "notes": "Direct registry match for 'toto'."
+      }
+    ],
+    "environment": {
+      "label": "farmhouse_interior_and_cellar",
+      "canonical_id": "farmhouse_interior_and_cellar",
+      "display_name": "farmhouse_interior_and_cellar",
+      "status": "canonical",
+      "entity_kind": "sub_location",
+      "resolution_score": null,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH001/farmhouse_interior_and_cellar.md",
+      "notes": "Chapter-local beat subzone match for 'farmhouse_interior_and_cellar'."
+    },
+    "beat_ids": [
+      "BT003"
+    ],
+    "continuity_constraints": [
+      "Floor and wall angles must tilt in synchronization with house motion",
+      "Loose objects must slide in a consistent direction relative to house lurching",
+      "Dorothy rescues Toto"
+    ],
+    "prompt_seed": "Reverse Action 16: Dorothy rescues Toto. reverse_action. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Readable medium composi...",
+    "shot_notes": "Dorothy rescues Toto",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH001_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC003"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH001",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH001_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH011",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH011_chapter_xi.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH001",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH001_chapter_i.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH010",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH010_chapter_x.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH001",
+        "canonical_id": "dorothy"
+      }
+    ],
+    "evidence_summary": [
+      "Execute a high-stakes action sequence within the confined, tilting interior of an airborne farmhouse. The sequence must emphasize physical instability and the immediate threat to toto via the open trap door during violent house movements.",
+      "Inside the airborne house, chaos ensues. Dorothy struggles to maintain her footing and must act quickly to rescue Toto when he nearly falls through the open trap door during a violent lurch.",
+      "Terror $\\rightarrow$ Desperate protective instinct.",
+      "Interior of farmhouse_interior_and_cellar tilting violently; dorothy struggling for footing.",
+      "dorothy secures toto after a near-fall through the cellar opening.",
+      "dorothy navigates shifting floor angles to rescue toto from the trap door.",
+      "dorothy | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md] Costume/Silhouette: Unknown. No specific clothing details are provided in this chapter. [source:C:/FilmCreator/projects/wizard_of_oz/02_...",
+      "toto | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/toto.md] Costume/Silhouette: Small quadruped with black fur. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapte...",
+      "farmhouse_interior_and_cellar | No specific visual details are provided in the current evidence. The location is identified as a farmhouse interior and its associated cellar. | Includes an interior living space and a cellar. | unknown | unknown"
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "adventure_action",
+    "coverage_role": "reverse_action",
+    "beat_type": "action_conflict",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT003",
+      "beat_type": "action_conflict",
+      "importance": "major",
+      "confidence": 0.78,
+      "reasons": [
+        "conflict/action verb",
+        "importance = major"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH001_SC003_SH016_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "df646acbf57ca6f84e3f045600bc80dcd7cccf72",
+      "created_at_utc": "2026-04-27T20:53:24.740760+00:00",
+      "updated_at_utc": "2026-04-27T20:54:21.815603+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH001_SC003",
+          "version": "78479296cba38cd9f3e3c57329263c9a18c9f5e3"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH001_SC003",
+          "version": "eab3eb403d0741ac97410275ff93f2d4ba910ea0"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH001_SC003",
+          "version": "1a71c05dd5190e614097bc7655b5d4741587ec38"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:53:24.741259+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "df646acbf57ca6f84e3f045600bc80dcd7cccf72"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:21.816602+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "df646acbf57ca6f84e3f045600bc80dcd7cccf72"
         }
       ]
     }

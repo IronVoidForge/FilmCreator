@@ -44,6 +44,7 @@
   "subject_blocking": [
     "seated/standing cluster",
     "clustered around food/lodging items",
+    "guest_seating_area",
     "dorothy remains readable within the active playing space.",
     "the_scarecrow remains readable within the active playing space."
   ],
@@ -58,17 +59,18 @@
   ],
   "environment_subzone": "guest_seating_area",
   "key_visible_environment_features": [
-    "guest_seating_area"
+    "guest_seating_area",
+    "Direct registry match for 'palace_guest_quarters'."
   ],
   "continuity_from_previous_shot": "The group is settled in the guest quarters, experiencing a moment of rest or anticipation.",
   "continuity_to_next_shot": "BT002",
   "pose_anchor_frame": "group in relaxed state",
   "pose_end_frame": "group noticing movement",
-  "shot_title": "Medium 1: Group resting in palace quarters",
-  "shot_type": "medium",
-  "camera_description": "Stable medium framing that keeps action and character readable.",
+  "shot_title": "Handoff Medium 1: Group resting in palace quarters",
+  "shot_type": "handoff_medium",
+  "camera_description": "Stable readable framing built from the beat requirement.",
   "composition": "Readable medium composition in palace_guest_quarters featuring dorothy, the_scarecrow, tin_woodman.",
-  "target_seconds": 5.5,
+  "target_seconds": 7.0,
   "characters_in_frame": [
     {
       "label": "Dorothy",
@@ -119,7 +121,7 @@
     "Character positioning within palace_guest_quarters",
     "Group resting in palace quarters"
   ],
-  "prompt_seed": "Medium 1: Group resting in palace quarters. medium. size=medium_full. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=diffuse_ambient. visibility=on_screen. subject_angle=front_three_quarter_left. Stable medium framing that keeps action and character readable. Readable medium c...",
+  "prompt_seed": "Handoff Medium 1: Group resting in palace quarters. handoff_medium. size=medium_full. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=diffuse_ambient. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Readable...",
   "shot_notes": "Group resting in palace quarters",
   "evidence_refs": [
     {
@@ -189,13 +191,29 @@
     "tin_woodman | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH005/tin_woodman.md] Costume/Silhouette: Entirely metallic (tin) body; carries an axe. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis...",
     "palace_guest_quarters | Opulent guest chambers located within the emerald palace interiors. The space features formal palace decor and ornate furniture, maintaining a domestic scale despite being situated within a grander structure. | Interior rooms defined..."
   ],
+  "coverage_density": "medium",
+  "coverage_profile": "classic_adventure",
+  "coverage_intent": "economical_storybook",
+  "coverage_role": "handoff_medium",
+  "beat_type": "transition_handoff",
+  "coverage_importance": "major",
+  "coverage_blueprint_source": "deterministic_v1",
+  "coverage_classification": {
+    "beat_id": "BT001",
+    "beat_type": "transition_handoff",
+    "importance": "major",
+    "confidence": 0.55,
+    "reasons": [
+      "importance = major"
+    ]
+  },
   "metadata": {
     "artifact_id": "CH011_SC002_SH001_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "7342a231cc75f85ea90179b9576417d19f532945",
+    "source_fingerprint": "dba7293b71975b6f5b98fb77d23af6efcf43d51b",
     "created_at_utc": "2026-04-27T16:59:52.650401+00:00",
-    "updated_at_utc": "2026-04-27T16:59:52.650401+00:00",
+    "updated_at_utc": "2026-04-27T20:54:45.109539+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
@@ -210,7 +228,7 @@
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH011_SC002",
-        "version": "3d8408d1048bb4884026d57a2b1f44835bd95f51"
+        "version": "662d0852c002f5539a36da07c85e8d2ddd140364"
       }
     ],
     "locked_fields": {},
@@ -220,6 +238,16 @@
         "timestamp_utc": "2026-04-27T17:01:12.423397+00:00",
         "action": "synthesized",
         "source_fingerprint": "7342a231cc75f85ea90179b9576417d19f532945"
+      },
+      {
+        "timestamp_utc": "2026-04-27T20:53:47.682440+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "dba7293b71975b6f5b98fb77d23af6efcf43d51b"
+      },
+      {
+        "timestamp_utc": "2026-04-27T20:54:45.452321+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "dba7293b71975b6f5b98fb77d23af6efcf43d51b"
       }
     ]
   }

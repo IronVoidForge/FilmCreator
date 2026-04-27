@@ -45,29 +45,33 @@
     "subject_blocking": [
       "linear file",
       "walking in a line",
+      "thick_dark_forest path",
       "the_scarecrow remains readable within the active playing space.",
       "dorothy remains readable within the active playing space."
     ],
     "camera_relative_positions": [
       "Camera anchors the action inside the thick_dark_forest path.",
-      "Background depth should keep thick_dark_forest legible as the location anchor."
+      "Background depth should keep thick_dark_forest legible as the location anchor.",
+      "Subject 1: the_scarecrow remains visually readable against the environment scale.",
+      "Subject 2: dorothy remains visually readable against the environment scale."
     ],
     "gaze_directions": [
       "the_scarecrow focuses toward the active scene action."
     ],
     "environment_subzone": "thick_dark_forest path",
     "key_visible_environment_features": [
-      "thick_dark_forest path"
+      "thick_dark_forest path",
+      "Chapter-local beat subzone match for 'thick_dark_forest path'."
     ],
     "continuity_from_previous_shot": "The group moves rhythmically through the thick forest path.",
     "continuity_to_next_shot": "BT002",
     "pose_anchor_frame": "walking rhythm",
     "pose_end_frame": "sudden step change",
-    "shot_title": "Establishing Wide 1: Routine travel through the forest",
-    "shot_type": "establishing_wide",
-    "camera_description": "Wide establishing frame with a steady or lightly drifting camera.",
-    "composition": "Wide composition across thick_dark_forest with the_scarecrow, dorothy, cowardly_lion placed for immediate spatial orientation.",
-    "target_seconds": 5.5,
+    "shot_title": "Ceremonial Master 1: Routine travel through the forest",
+    "shot_type": "ceremonial_master",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in thick_dark_forest featuring the_scarecrow, dorothy, cowardly_lion.",
+    "target_seconds": 10.0,
     "characters_in_frame": [
       {
         "label": "Scarecrow",
@@ -118,7 +122,7 @@
       "Visual progression and texture of rust spread on metal jaw",
       "Routine travel through the forest"
     ],
-    "prompt_seed": "Establishing Wide 1: Routine travel through the forest. establishing_wide. size=wide. angle=eye_level. lens=wide. motion=track. zoom=none. focus=deep_focus. lighting=diffuse_ambient. visibility=on_screen. subject_angle=front_three_quarter_left. Wide establishing frame with a steady or lightly drifting camera.",
+    "prompt_seed": "Ceremonial Master 1: Routine travel through the forest. ceremonial_master. size=wide. angle=eye_level. lens=wide. motion=track. zoom=none. focus=deep_focus. lighting=diffuse_ambient. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Readable medium...",
     "shot_notes": "Routine travel through the forest",
     "evidence_refs": [
       {
@@ -188,13 +192,30 @@
       "cowardly_lion | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH008/cowardly_lion.md] Physical Description: Large animal; too heavy to be carried by the others. [source:C:/FilmCreator/projects/wizard_of_oz/02_s...",
       "thick_dark_forest | No specific visual descriptors are provided in the current evidence. The environment is identified as a \"thick dark forest.\" | Unknown. | Dark (per name). | Unknown."
     ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "montage_travel",
+    "coverage_role": "ceremonial_master",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "normal",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT001",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "normal",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = normal"
+      ]
+    },
     "metadata": {
       "artifact_id": "CH006_SC003_SH001_SHOT_PACKAGE",
       "artifact_type": "shot_package",
       "status": "generated",
-      "source_fingerprint": "63a4e6f935314aa499fa73fa4afc0a73cd6cecbe",
+      "source_fingerprint": "9e30dab2916695fb064c2e582a01399585922da7",
       "created_at_utc": "2026-04-27T15:47:55.285975+00:00",
-      "updated_at_utc": "2026-04-27T15:47:55.285975+00:00",
+      "updated_at_utc": "2026-04-27T20:54:33.637027+00:00",
       "upstream_dependencies": [
         {
           "dependency_type": "scene_contract",
@@ -209,7 +230,7 @@
         {
           "dependency_type": "shot_blueprints",
           "dependency_id": "CH006_SC003",
-          "version": "ba132840d924f6cc368eff8ba7a0a2b258f190b2"
+          "version": "c66654924715e4dc78770cb490f739294a3daec3"
         }
       ],
       "locked_fields": {},
@@ -219,6 +240,16 @@
           "timestamp_utc": "2026-04-27T15:49:08.705279+00:00",
           "action": "synthesized",
           "source_fingerprint": "63a4e6f935314aa499fa73fa4afc0a73cd6cecbe"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:53:36.721786+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "9e30dab2916695fb064c2e582a01399585922da7"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:34.000356+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "9e30dab2916695fb064c2e582a01399585922da7"
         }
       ]
     }
@@ -230,13 +261,1256 @@
     "shot_order": 2,
     "previous_shot_id": "SH001",
     "next_shot_id": "SH003",
+    "primary_subject": "dorothy",
+    "secondary_subjects": [
+      "the_scarecrow",
+      "tin_woodman"
+    ],
+    "shot_moment_summary": "Routine travel through the forest",
+    "start_state": "group walking",
+    "end_state": "sudden stop",
+    "action_during_shot": "Routine travel through the forest",
+    "action_continues_from": "sudden step change",
+    "action_hands_off_to": "BT002",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "dorothy",
+    "visible_secondary_subject_ids": [
+      "the_scarecrow",
+      "tin_woodman"
+    ],
+    "primary_subject_frame_position": "foreground right within thick_dark_forest path",
+    "primary_subject_scale_relation": "preserve readable body-to-environment scale in frame",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "group walking",
+    "subject_relation_summary": "dorothy plays against the_scarecrow, tin_woodman in the same frame",
+    "required_environment_anchor_1": "thick_dark_forest path",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "preserve readable body-to-environment scale in frame",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "walking in a line",
+      "thick_dark_forest path",
+      "dorothy remains readable within the active playing space.",
+      "the_scarecrow remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the thick_dark_forest path.",
+      "Background depth should keep thick_dark_forest legible as the location anchor.",
+      "Subject 1: dorothy remains visually readable against the environment scale.",
+      "Subject 2: the_scarecrow remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "dorothy focuses toward the active scene action."
+    ],
+    "environment_subzone": "thick_dark_forest path",
+    "key_visible_environment_features": [
+      "thick_dark_forest path",
+      "Chapter-local beat subzone match for 'thick_dark_forest path'."
+    ],
+    "continuity_from_previous_shot": "sudden step change",
+    "continuity_to_next_shot": "BT002",
+    "pose_anchor_frame": "group walking",
+    "pose_end_frame": "sudden stop",
+    "shot_title": "Authority Single 2: Routine travel through the forest",
+    "shot_type": "authority_single",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in thick_dark_forest featuring dorothy, the_scarecrow, tin_woodman.",
+    "target_seconds": 6.5,
+    "characters_in_frame": [
+      {
+        "label": "Dorothy",
+        "canonical_id": "dorothy",
+        "display_name": "dorothy",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH006/dorothy.md",
+        "notes": "Direct registry match for 'dorothy'."
+      },
+      {
+        "label": "Scarecrow",
+        "canonical_id": "the_scarecrow",
+        "display_name": "the_scarecrow",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 186,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH006/the_scarecrow.md",
+        "notes": "asset id exactly matches canonical id | query matches alias 'scarecrow'"
+      },
+      {
+        "label": "Tin Woodman",
+        "canonical_id": "tin_woodman",
+        "display_name": "tin_woodman",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH006/tin_woodman.md",
+        "notes": "Direct registry match for 'tin_woodman'."
+      }
+    ],
+    "environment": {
+      "label": "thick_dark_forest",
+      "canonical_id": "thick_dark_forest",
+      "display_name": "thick_dark_forest",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": null,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH006/thick_dark_forest.md",
+      "notes": "Chapter-local beat subzone match for 'thick_dark_forest path'."
+    },
+    "beat_ids": [
+      "BT001"
+    ],
+    "continuity_constraints": [
+      "Exact spatial coordinate of the beetle relative to path debris",
+      "Visual progression and texture of rust spread on metal jaw",
+      "Routine travel through the forest"
+    ],
+    "prompt_seed": "Authority Single 2: Routine travel through the forest. authority_single. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Readabl...",
+    "shot_notes": "Routine travel through the forest",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH006_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH006",
+        "scene_id": "CH006_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH006",
+        "scene_id": "CH006_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH006",
+        "scene_id": "CH006_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH006",
+        "scene_id": "CH006_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH006",
+        "scene_id": "CH006_SC003"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH006",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH006_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH006",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH006_chapter_vi.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH005",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH005_chapter_v.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH011",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH011_chapter_xi.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH006",
+        "canonical_id": "dorothy"
+      }
+    ],
+    "evidence_summary": [
+      "Establish the Tin Woodman's empathetic nature through a tragic accident involving a small creature, resulting in a mechanical failure.",
+      "As the group continues their journey, the Tin Woodman accidentally steps on a beetle. Overcome with grief for the tiny creature, he begins to cry, which causes his jaw to rust shut.",
+      "Routine Travel $\\rightarrow$ Guilt/Distress.",
+      "The group moves rhythmically through the thick forest path.",
+      "Tin Woodman is physically incapacitated with a locked jaw.",
+      "Accidental crushing of beetle leads to weeping and subsequent rusting of the jaw.",
+      "the_scarecrow | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH003/the_scarecrow.md] Physical Description: A living figure stuffed with straw. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/cha...",
+      "dorothy | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md] Costume/Silhouette: Unknown. No specific clothing details are provided in this chapter. [source:C:/FilmCreator/projects/wizard_of_oz/02_...",
+      "cowardly_lion | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH008/cowardly_lion.md] Physical Description: Large animal; too heavy to be carried by the others. [source:C:/FilmCreator/projects/wizard_of_oz/02_s...",
+      "thick_dark_forest | No specific visual descriptors are provided in the current evidence. The environment is identified as a \"thick dark forest.\" | Unknown. | Dark (per name). | Unknown."
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "montage_travel",
+    "coverage_role": "authority_single",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "normal",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT001",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "normal",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = normal"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH006_SC003_SH002_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "9e30dab2916695fb064c2e582a01399585922da7",
+      "created_at_utc": "2026-04-27T15:49:08.706778+00:00",
+      "updated_at_utc": "2026-04-27T20:54:34.006373+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH006_SC003",
+          "version": "e069b5f6d96ee3b8630ad4ea57604b2a76604dfe"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH006_SC003",
+          "version": "6e9786ba4427c761e35650c741b11003e0805609"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH006_SC003",
+          "version": "c66654924715e4dc78770cb490f739294a3daec3"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T15:50:15.788606+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "63a4e6f935314aa499fa73fa4afc0a73cd6cecbe"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:53:36.728785+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "9e30dab2916695fb064c2e582a01399585922da7"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:34.006874+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "9e30dab2916695fb064c2e582a01399585922da7"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH003",
+    "scene_id": "CH006_SC003",
+    "chapter_id": "CH006",
+    "shot_order": 3,
+    "previous_shot_id": "SH002",
+    "next_shot_id": "SH004",
+    "primary_subject": "dorothy",
+    "secondary_subjects": [
+      "the_scarecrow",
+      "tin_woodman"
+    ],
+    "shot_moment_summary": "Routine travel through the forest",
+    "start_state": "group walking",
+    "end_state": "sudden stop",
+    "action_during_shot": "Routine travel through the forest",
+    "action_continues_from": "sudden stop",
+    "action_hands_off_to": "BT002",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "dorothy",
+    "visible_secondary_subject_ids": [
+      "the_scarecrow",
+      "tin_woodman"
+    ],
+    "primary_subject_frame_position": "foreground right within thick_dark_forest path",
+    "primary_subject_scale_relation": "preserve readable body-to-environment scale in frame",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "group walking",
+    "subject_relation_summary": "dorothy plays against the_scarecrow, tin_woodman in the same frame",
+    "required_environment_anchor_1": "thick_dark_forest path",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "preserve readable body-to-environment scale in frame",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "walking in a line",
+      "thick_dark_forest path",
+      "dorothy remains readable within the active playing space.",
+      "the_scarecrow remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the thick_dark_forest path.",
+      "Background depth should keep thick_dark_forest legible as the location anchor.",
+      "Subject 1: dorothy remains visually readable against the environment scale.",
+      "Subject 2: the_scarecrow remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "dorothy focuses toward the active scene action."
+    ],
+    "environment_subzone": "thick_dark_forest path",
+    "key_visible_environment_features": [
+      "thick_dark_forest path",
+      "Chapter-local beat subzone match for 'thick_dark_forest path'."
+    ],
+    "continuity_from_previous_shot": "sudden stop",
+    "continuity_to_next_shot": "BT002",
+    "pose_anchor_frame": "group walking",
+    "pose_end_frame": "sudden stop",
+    "shot_title": "Petitioner Group 3: Routine travel through the forest",
+    "shot_type": "petitioner_group",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in thick_dark_forest featuring dorothy, the_scarecrow, tin_woodman.",
+    "target_seconds": 6.5,
+    "characters_in_frame": [
+      {
+        "label": "Dorothy",
+        "canonical_id": "dorothy",
+        "display_name": "dorothy",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH006/dorothy.md",
+        "notes": "Direct registry match for 'dorothy'."
+      },
+      {
+        "label": "Scarecrow",
+        "canonical_id": "the_scarecrow",
+        "display_name": "the_scarecrow",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 186,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH006/the_scarecrow.md",
+        "notes": "asset id exactly matches canonical id | query matches alias 'scarecrow'"
+      },
+      {
+        "label": "Tin Woodman",
+        "canonical_id": "tin_woodman",
+        "display_name": "tin_woodman",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH006/tin_woodman.md",
+        "notes": "Direct registry match for 'tin_woodman'."
+      }
+    ],
+    "environment": {
+      "label": "thick_dark_forest",
+      "canonical_id": "thick_dark_forest",
+      "display_name": "thick_dark_forest",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": null,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH006/thick_dark_forest.md",
+      "notes": "Chapter-local beat subzone match for 'thick_dark_forest path'."
+    },
+    "beat_ids": [
+      "BT001"
+    ],
+    "continuity_constraints": [
+      "Exact spatial coordinate of the beetle relative to path debris",
+      "Visual progression and texture of rust spread on metal jaw",
+      "Routine travel through the forest"
+    ],
+    "prompt_seed": "Petitioner Group 3: Routine travel through the forest. petitioner_group. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Readabl...",
+    "shot_notes": "Routine travel through the forest",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH006_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH006",
+        "scene_id": "CH006_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH006",
+        "scene_id": "CH006_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH006",
+        "scene_id": "CH006_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH006",
+        "scene_id": "CH006_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH006",
+        "scene_id": "CH006_SC003"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH006",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH006_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH006",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH006_chapter_vi.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH005",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH005_chapter_v.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH011",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH011_chapter_xi.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH006",
+        "canonical_id": "dorothy"
+      }
+    ],
+    "evidence_summary": [
+      "Establish the Tin Woodman's empathetic nature through a tragic accident involving a small creature, resulting in a mechanical failure.",
+      "As the group continues their journey, the Tin Woodman accidentally steps on a beetle. Overcome with grief for the tiny creature, he begins to cry, which causes his jaw to rust shut.",
+      "Routine Travel $\\rightarrow$ Guilt/Distress.",
+      "The group moves rhythmically through the thick forest path.",
+      "Tin Woodman is physically incapacitated with a locked jaw.",
+      "Accidental crushing of beetle leads to weeping and subsequent rusting of the jaw.",
+      "the_scarecrow | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH003/the_scarecrow.md] Physical Description: A living figure stuffed with straw. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/cha...",
+      "dorothy | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md] Costume/Silhouette: Unknown. No specific clothing details are provided in this chapter. [source:C:/FilmCreator/projects/wizard_of_oz/02_...",
+      "cowardly_lion | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH008/cowardly_lion.md] Physical Description: Large animal; too heavy to be carried by the others. [source:C:/FilmCreator/projects/wizard_of_oz/02_s...",
+      "thick_dark_forest | No specific visual descriptors are provided in the current evidence. The environment is identified as a \"thick dark forest.\" | Unknown. | Dark (per name). | Unknown."
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "montage_travel",
+    "coverage_role": "petitioner_group",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "normal",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT001",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "normal",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = normal"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH006_SC003_SH003_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "9e30dab2916695fb064c2e582a01399585922da7",
+      "created_at_utc": "2026-04-27T15:50:15.789606+00:00",
+      "updated_at_utc": "2026-04-27T20:54:34.012375+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH006_SC003",
+          "version": "e069b5f6d96ee3b8630ad4ea57604b2a76604dfe"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH006_SC003",
+          "version": "6e9786ba4427c761e35650c741b11003e0805609"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH006_SC003",
+          "version": "c66654924715e4dc78770cb490f739294a3daec3"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T15:51:23.502480+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "63a4e6f935314aa499fa73fa4afc0a73cd6cecbe"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:53:36.734784+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "9e30dab2916695fb064c2e582a01399585922da7"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:34.013374+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "9e30dab2916695fb064c2e582a01399585922da7"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH004",
+    "scene_id": "CH006_SC003",
+    "chapter_id": "CH006",
+    "shot_order": 4,
+    "previous_shot_id": "SH003",
+    "next_shot_id": "SH005",
+    "primary_subject": "dorothy",
+    "secondary_subjects": [
+      "the_scarecrow",
+      "tin_woodman"
+    ],
+    "shot_moment_summary": "Routine travel through the forest",
+    "start_state": "group walking",
+    "end_state": "sudden stop",
+    "action_during_shot": "Routine travel through the forest",
+    "action_continues_from": "sudden stop",
+    "action_hands_off_to": "BT002",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "dorothy",
+    "visible_secondary_subject_ids": [
+      "the_scarecrow",
+      "tin_woodman"
+    ],
+    "primary_subject_frame_position": "foreground right within thick_dark_forest path",
+    "primary_subject_scale_relation": "preserve readable body-to-environment scale in frame",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "group walking",
+    "subject_relation_summary": "dorothy plays against the_scarecrow, tin_woodman in the same frame",
+    "required_environment_anchor_1": "thick_dark_forest path",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "preserve readable body-to-environment scale in frame",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "walking in a line",
+      "thick_dark_forest path",
+      "dorothy remains readable within the active playing space.",
+      "the_scarecrow remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the thick_dark_forest path.",
+      "Background depth should keep thick_dark_forest legible as the location anchor.",
+      "Subject 1: dorothy remains visually readable against the environment scale.",
+      "Subject 2: the_scarecrow remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "dorothy focuses toward the active scene action."
+    ],
+    "environment_subzone": "thick_dark_forest path",
+    "key_visible_environment_features": [
+      "thick_dark_forest path",
+      "Chapter-local beat subzone match for 'thick_dark_forest path'."
+    ],
+    "continuity_from_previous_shot": "sudden stop",
+    "continuity_to_next_shot": "BT002",
+    "pose_anchor_frame": "group walking",
+    "pose_end_frame": "sudden stop",
+    "shot_title": "Crowd Response 4: Routine travel through the forest",
+    "shot_type": "crowd_response",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in thick_dark_forest featuring dorothy, the_scarecrow, tin_woodman.",
+    "target_seconds": 6.5,
+    "characters_in_frame": [
+      {
+        "label": "Dorothy",
+        "canonical_id": "dorothy",
+        "display_name": "dorothy",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH006/dorothy.md",
+        "notes": "Direct registry match for 'dorothy'."
+      },
+      {
+        "label": "Scarecrow",
+        "canonical_id": "the_scarecrow",
+        "display_name": "the_scarecrow",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 186,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH006/the_scarecrow.md",
+        "notes": "asset id exactly matches canonical id | query matches alias 'scarecrow'"
+      },
+      {
+        "label": "Tin Woodman",
+        "canonical_id": "tin_woodman",
+        "display_name": "tin_woodman",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH006/tin_woodman.md",
+        "notes": "Direct registry match for 'tin_woodman'."
+      }
+    ],
+    "environment": {
+      "label": "thick_dark_forest",
+      "canonical_id": "thick_dark_forest",
+      "display_name": "thick_dark_forest",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": null,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH006/thick_dark_forest.md",
+      "notes": "Chapter-local beat subzone match for 'thick_dark_forest path'."
+    },
+    "beat_ids": [
+      "BT001"
+    ],
+    "continuity_constraints": [
+      "Exact spatial coordinate of the beetle relative to path debris",
+      "Visual progression and texture of rust spread on metal jaw",
+      "Routine travel through the forest"
+    ],
+    "prompt_seed": "Crowd Response 4: Routine travel through the forest. crowd_response. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Readable me...",
+    "shot_notes": "Routine travel through the forest",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH006_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH006",
+        "scene_id": "CH006_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH006",
+        "scene_id": "CH006_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH006",
+        "scene_id": "CH006_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH006",
+        "scene_id": "CH006_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH006",
+        "scene_id": "CH006_SC003"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH006",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH006_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH006",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH006_chapter_vi.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH005",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH005_chapter_v.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH011",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH011_chapter_xi.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH006",
+        "canonical_id": "dorothy"
+      }
+    ],
+    "evidence_summary": [
+      "Establish the Tin Woodman's empathetic nature through a tragic accident involving a small creature, resulting in a mechanical failure.",
+      "As the group continues their journey, the Tin Woodman accidentally steps on a beetle. Overcome with grief for the tiny creature, he begins to cry, which causes his jaw to rust shut.",
+      "Routine Travel $\\rightarrow$ Guilt/Distress.",
+      "The group moves rhythmically through the thick forest path.",
+      "Tin Woodman is physically incapacitated with a locked jaw.",
+      "Accidental crushing of beetle leads to weeping and subsequent rusting of the jaw.",
+      "the_scarecrow | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH003/the_scarecrow.md] Physical Description: A living figure stuffed with straw. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/cha...",
+      "dorothy | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md] Costume/Silhouette: Unknown. No specific clothing details are provided in this chapter. [source:C:/FilmCreator/projects/wizard_of_oz/02_...",
+      "cowardly_lion | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH008/cowardly_lion.md] Physical Description: Large animal; too heavy to be carried by the others. [source:C:/FilmCreator/projects/wizard_of_oz/02_s...",
+      "thick_dark_forest | No specific visual descriptors are provided in the current evidence. The environment is identified as a \"thick dark forest.\" | Unknown. | Dark (per name). | Unknown."
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "montage_travel",
+    "coverage_role": "crowd_response",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "normal",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT001",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "normal",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = normal"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH006_SC003_SH004_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "9e30dab2916695fb064c2e582a01399585922da7",
+      "created_at_utc": "2026-04-27T20:53:36.735786+00:00",
+      "updated_at_utc": "2026-04-27T20:54:34.018373+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH006_SC003",
+          "version": "e069b5f6d96ee3b8630ad4ea57604b2a76604dfe"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH006_SC003",
+          "version": "6e9786ba4427c761e35650c741b11003e0805609"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH006_SC003",
+          "version": "c66654924715e4dc78770cb490f739294a3daec3"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:53:36.735786+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "9e30dab2916695fb064c2e582a01399585922da7"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:34.018875+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "9e30dab2916695fb064c2e582a01399585922da7"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH005",
+    "scene_id": "CH006_SC003",
+    "chapter_id": "CH006",
+    "shot_order": 5,
+    "previous_shot_id": "SH004",
+    "next_shot_id": "SH006",
+    "primary_subject": "dorothy",
+    "secondary_subjects": [
+      "the_scarecrow",
+      "tin_woodman"
+    ],
+    "shot_moment_summary": "Routine travel through the forest",
+    "start_state": "group walking",
+    "end_state": "sudden stop",
+    "action_during_shot": "Routine travel through the forest",
+    "action_continues_from": "sudden stop",
+    "action_hands_off_to": "BT002",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "dorothy",
+    "visible_secondary_subject_ids": [
+      "the_scarecrow",
+      "tin_woodman"
+    ],
+    "primary_subject_frame_position": "foreground right within thick_dark_forest path",
+    "primary_subject_scale_relation": "preserve readable body-to-environment scale in frame",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "group walking",
+    "subject_relation_summary": "dorothy plays against the_scarecrow, tin_woodman in the same frame",
+    "required_environment_anchor_1": "thick_dark_forest path",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "preserve readable body-to-environment scale in frame",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "walking in a line",
+      "thick_dark_forest path",
+      "dorothy remains readable within the active playing space.",
+      "the_scarecrow remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the thick_dark_forest path.",
+      "Background depth should keep thick_dark_forest legible as the location anchor.",
+      "Subject 1: dorothy remains visually readable against the environment scale.",
+      "Subject 2: the_scarecrow remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "dorothy focuses toward the active scene action."
+    ],
+    "environment_subzone": "thick_dark_forest path",
+    "key_visible_environment_features": [
+      "thick_dark_forest path",
+      "Chapter-local beat subzone match for 'thick_dark_forest path'."
+    ],
+    "continuity_from_previous_shot": "sudden stop",
+    "continuity_to_next_shot": "BT002",
+    "pose_anchor_frame": "group walking",
+    "pose_end_frame": "sudden stop",
+    "shot_title": "Symbol Insert 5: Routine travel through the forest",
+    "shot_type": "symbol_insert",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in thick_dark_forest featuring dorothy, the_scarecrow, tin_woodman.",
+    "target_seconds": 5.0,
+    "characters_in_frame": [
+      {
+        "label": "Dorothy",
+        "canonical_id": "dorothy",
+        "display_name": "dorothy",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH006/dorothy.md",
+        "notes": "Direct registry match for 'dorothy'."
+      },
+      {
+        "label": "Scarecrow",
+        "canonical_id": "the_scarecrow",
+        "display_name": "the_scarecrow",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 186,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH006/the_scarecrow.md",
+        "notes": "asset id exactly matches canonical id | query matches alias 'scarecrow'"
+      },
+      {
+        "label": "Tin Woodman",
+        "canonical_id": "tin_woodman",
+        "display_name": "tin_woodman",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH006/tin_woodman.md",
+        "notes": "Direct registry match for 'tin_woodman'."
+      }
+    ],
+    "environment": {
+      "label": "thick_dark_forest",
+      "canonical_id": "thick_dark_forest",
+      "display_name": "thick_dark_forest",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": null,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH006/thick_dark_forest.md",
+      "notes": "Chapter-local beat subzone match for 'thick_dark_forest path'."
+    },
+    "beat_ids": [
+      "BT001"
+    ],
+    "continuity_constraints": [
+      "Exact spatial coordinate of the beetle relative to path debris",
+      "Visual progression and texture of rust spread on metal jaw",
+      "Routine travel through the forest"
+    ],
+    "prompt_seed": "Symbol Insert 5: Routine travel through the forest. symbol_insert. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Readable medi...",
+    "shot_notes": "Routine travel through the forest",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH006_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH006",
+        "scene_id": "CH006_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH006",
+        "scene_id": "CH006_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH006",
+        "scene_id": "CH006_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH006",
+        "scene_id": "CH006_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH006",
+        "scene_id": "CH006_SC003"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH006",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH006_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH006",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH006_chapter_vi.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH005",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH005_chapter_v.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH011",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH011_chapter_xi.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH006",
+        "canonical_id": "dorothy"
+      }
+    ],
+    "evidence_summary": [
+      "Establish the Tin Woodman's empathetic nature through a tragic accident involving a small creature, resulting in a mechanical failure.",
+      "As the group continues their journey, the Tin Woodman accidentally steps on a beetle. Overcome with grief for the tiny creature, he begins to cry, which causes his jaw to rust shut.",
+      "Routine Travel $\\rightarrow$ Guilt/Distress.",
+      "The group moves rhythmically through the thick forest path.",
+      "Tin Woodman is physically incapacitated with a locked jaw.",
+      "Accidental crushing of beetle leads to weeping and subsequent rusting of the jaw.",
+      "the_scarecrow | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH003/the_scarecrow.md] Physical Description: A living figure stuffed with straw. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/cha...",
+      "dorothy | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md] Costume/Silhouette: Unknown. No specific clothing details are provided in this chapter. [source:C:/FilmCreator/projects/wizard_of_oz/02_...",
+      "cowardly_lion | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH008/cowardly_lion.md] Physical Description: Large animal; too heavy to be carried by the others. [source:C:/FilmCreator/projects/wizard_of_oz/02_s...",
+      "thick_dark_forest | No specific visual descriptors are provided in the current evidence. The environment is identified as a \"thick dark forest.\" | Unknown. | Dark (per name). | Unknown."
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "montage_travel",
+    "coverage_role": "symbol_insert",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "normal",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT001",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "normal",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = normal"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH006_SC003_SH005_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "9e30dab2916695fb064c2e582a01399585922da7",
+      "created_at_utc": "2026-04-27T20:53:36.737794+00:00",
+      "updated_at_utc": "2026-04-27T20:54:34.023881+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH006_SC003",
+          "version": "e069b5f6d96ee3b8630ad4ea57604b2a76604dfe"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH006_SC003",
+          "version": "6e9786ba4427c761e35650c741b11003e0805609"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH006_SC003",
+          "version": "c66654924715e4dc78770cb490f739294a3daec3"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:53:36.737794+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "9e30dab2916695fb064c2e582a01399585922da7"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:34.024879+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "9e30dab2916695fb064c2e582a01399585922da7"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH006",
+    "scene_id": "CH006_SC003",
+    "chapter_id": "CH006",
+    "shot_order": 6,
+    "previous_shot_id": "SH005",
+    "next_shot_id": "SH007",
+    "primary_subject": "dorothy",
+    "secondary_subjects": [
+      "the_scarecrow"
+    ],
+    "shot_moment_summary": "Routine travel through the forest",
+    "start_state": "group walking",
+    "end_state": "sudden stop",
+    "action_during_shot": "Routine travel through the forest",
+    "action_continues_from": "sudden stop",
+    "action_hands_off_to": "BT002",
+    "shot_size": "close_up",
+    "camera_angle": "eye_level",
+    "lens_family": "portrait",
+    "camera_motion": "push_in",
+    "zoom_behavior": "subtle_in",
+    "focus_strategy": "shallow_subject",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "dorothy",
+    "visible_secondary_subject_ids": [
+      "the_scarecrow"
+    ],
+    "primary_subject_frame_position": "foreground inside thick_dark_forest path",
+    "primary_subject_scale_relation": "preserve readable body-to-environment scale in frame",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "group walking",
+    "subject_relation_summary": "dorothy plays against the_scarecrow in the same frame",
+    "required_environment_anchor_1": "thick_dark_forest path",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "preserve readable body-to-environment scale in frame",
+    "camera_package_description": "close-up, eye level, portrait lens, push in, zoom subtle in, shallow subject, hard directional",
+    "subject_blocking": [
+      "walking in a line",
+      "thick_dark_forest path",
+      "dorothy remains readable within the active playing space.",
+      "the_scarecrow remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the thick_dark_forest path.",
+      "Background depth should keep thick_dark_forest legible as the location anchor.",
+      "Subject 1: dorothy remains visually readable against the environment scale.",
+      "Subject 2: the_scarecrow remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "dorothy focuses toward the active scene action."
+    ],
+    "environment_subzone": "thick_dark_forest path",
+    "key_visible_environment_features": [
+      "thick_dark_forest path",
+      "Chapter-local beat subzone match for 'thick_dark_forest path'."
+    ],
+    "continuity_from_previous_shot": "sudden stop",
+    "continuity_to_next_shot": "BT002",
+    "pose_anchor_frame": "group walking",
+    "pose_end_frame": "sudden stop",
+    "shot_title": "Reaction Closeup 6: Routine travel through the forest",
+    "shot_type": "reaction_closeup",
+    "camera_description": "Close framing that isolates reaction and emotional emphasis.",
+    "composition": "Intimate composition that isolates dorothy, the_scarecrow against thick_dark_forest to capture the beat's emotional turn.",
+    "target_seconds": 6.5,
+    "characters_in_frame": [
+      {
+        "label": "Dorothy",
+        "canonical_id": "dorothy",
+        "display_name": "dorothy",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH006/dorothy.md",
+        "notes": "Direct registry match for 'dorothy'."
+      },
+      {
+        "label": "Scarecrow",
+        "canonical_id": "the_scarecrow",
+        "display_name": "the_scarecrow",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 186,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH006/the_scarecrow.md",
+        "notes": "asset id exactly matches canonical id | query matches alias 'scarecrow'"
+      }
+    ],
+    "environment": {
+      "label": "thick_dark_forest",
+      "canonical_id": "thick_dark_forest",
+      "display_name": "thick_dark_forest",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": null,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH006/thick_dark_forest.md",
+      "notes": "Chapter-local beat subzone match for 'thick_dark_forest path'."
+    },
+    "beat_ids": [
+      "BT001"
+    ],
+    "continuity_constraints": [
+      "Exact spatial coordinate of the beetle relative to path debris",
+      "Visual progression and texture of rust spread on metal jaw",
+      "Routine travel through the forest"
+    ],
+    "prompt_seed": "Reaction Closeup 6: Routine travel through the forest. reaction_closeup. size=close_up. angle=eye_level. lens=portrait. motion=push_in. zoom=subtle_in. focus=shallow_subject. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Close framing that isolates reaction and emotional em...",
+    "shot_notes": "Routine travel through the forest",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH006_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH006",
+        "scene_id": "CH006_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH006",
+        "scene_id": "CH006_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH006",
+        "scene_id": "CH006_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH006",
+        "scene_id": "CH006_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH006",
+        "scene_id": "CH006_SC003"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH006",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH006_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH006",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH006_chapter_vi.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH005",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH005_chapter_v.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH011",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH011_chapter_xi.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH006",
+        "canonical_id": "dorothy"
+      }
+    ],
+    "evidence_summary": [
+      "Establish the Tin Woodman's empathetic nature through a tragic accident involving a small creature, resulting in a mechanical failure.",
+      "As the group continues their journey, the Tin Woodman accidentally steps on a beetle. Overcome with grief for the tiny creature, he begins to cry, which causes his jaw to rust shut.",
+      "Routine Travel $\\rightarrow$ Guilt/Distress.",
+      "The group moves rhythmically through the thick forest path.",
+      "Tin Woodman is physically incapacitated with a locked jaw.",
+      "Accidental crushing of beetle leads to weeping and subsequent rusting of the jaw.",
+      "the_scarecrow | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH003/the_scarecrow.md] Physical Description: A living figure stuffed with straw. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/cha...",
+      "dorothy | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md] Costume/Silhouette: Unknown. No specific clothing details are provided in this chapter. [source:C:/FilmCreator/projects/wizard_of_oz/02_...",
+      "cowardly_lion | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH008/cowardly_lion.md] Physical Description: Large animal; too heavy to be carried by the others. [source:C:/FilmCreator/projects/wizard_of_oz/02_s...",
+      "thick_dark_forest | No specific visual descriptors are provided in the current evidence. The environment is identified as a \"thick dark forest.\" | Unknown. | Dark (per name). | Unknown."
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "montage_travel",
+    "coverage_role": "decision_closeup",
+    "beat_type": "dialogue_council_or_court",
+    "coverage_importance": "normal",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT001",
+      "beat_type": "dialogue_council_or_court",
+      "importance": "normal",
+      "confidence": 0.82,
+      "reasons": [
+        "court/council authority language",
+        "importance = normal"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH006_SC003_SH006_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "9e30dab2916695fb064c2e582a01399585922da7",
+      "created_at_utc": "2026-04-27T20:53:36.738798+00:00",
+      "updated_at_utc": "2026-04-27T20:54:34.030389+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH006_SC003",
+          "version": "e069b5f6d96ee3b8630ad4ea57604b2a76604dfe"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH006_SC003",
+          "version": "6e9786ba4427c761e35650c741b11003e0805609"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH006_SC003",
+          "version": "c66654924715e4dc78770cb490f739294a3daec3"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:53:36.739298+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "9e30dab2916695fb064c2e582a01399585922da7"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:34.030887+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "9e30dab2916695fb064c2e582a01399585922da7"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH007",
+    "scene_id": "CH006_SC003",
+    "chapter_id": "CH006",
+    "shot_order": 7,
+    "previous_shot_id": "SH006",
+    "next_shot_id": "SH008",
     "primary_subject": "tin_woodman",
     "secondary_subjects": [],
     "shot_moment_summary": "foot crushing beetle",
     "start_state": "stepping down",
     "end_state": "crushing contact",
     "action_during_shot": "foot lands on beetle",
-    "action_continues_from": "sudden step change",
+    "action_continues_from": "sudden stop",
     "action_hands_off_to": "BT003",
     "shot_size": "extreme_close_up",
     "camera_angle": "low_angle",
@@ -263,28 +1537,31 @@
     "subject_blocking": [
       "static ground level",
       "foot landing on specific spot",
-      "leaf litter layer"
+      "leaf litter layer",
+      "tin_woodman remains readable within the active playing space."
     ],
     "camera_relative_positions": [
       "Camera anchors the action inside the leaf litter layer.",
-      "Background depth should keep thick_dark_forest legible as the location anchor."
+      "Background depth should keep thick_dark_forest legible as the location anchor.",
+      "Subject 1: tin_woodman remains visually readable against the environment scale."
     ],
     "gaze_directions": [
       "tin_woodman focuses toward the active scene action."
     ],
     "environment_subzone": "leaf litter layer",
     "key_visible_environment_features": [
-      "leaf litter layer"
+      "leaf litter layer",
+      "Chapter-local environment alias match for 'The forest path' (key_overlap=1, label_overlap=2, context_overlap=2)."
     ],
-    "continuity_from_previous_shot": "sudden step change",
+    "continuity_from_previous_shot": "sudden stop",
     "continuity_to_next_shot": "BT003",
     "pose_anchor_frame": "stepping down",
     "pose_end_frame": "crushing contact",
-    "shot_title": "Reaction Closeup 2: The accident occurs",
-    "shot_type": "reaction_closeup",
-    "camera_description": "Close framing that isolates reaction and emotional emphasis.",
-    "composition": "Intimate composition that isolates tin_woodman against thick_dark_forest to capture the beat's emotional turn.",
-    "target_seconds": 5.3,
+    "shot_title": "Handoff Medium 7: The accident occurs",
+    "shot_type": "handoff_medium",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in thick_dark_forest featuring tin_woodman.",
+    "target_seconds": 7.0,
     "characters_in_frame": [
       {
         "label": "Tin Woodman",
@@ -312,9 +1589,10 @@
     ],
     "continuity_constraints": [
       "Exact spatial coordinate of the beetle relative to path debris",
-      "Visual progression and texture of rust spread on metal jaw"
+      "Visual progression and texture of rust spread on metal jaw",
+      "The accident occurs"
     ],
-    "prompt_seed": "Reaction Closeup 2: The accident occurs. reaction_closeup. size=extreme_close_up. angle=low_angle. lens=telephoto. motion=locked_off. zoom=none. focus=shallow_subject. lighting=diffuse_ambient. visibility=on_screen. subject_angle=profile_right.",
+    "prompt_seed": "Handoff Medium 7: The accident occurs. handoff_medium. size=extreme_close_up. angle=low_angle. lens=telephoto. motion=locked_off. zoom=none. focus=shallow_subject. lighting=diffuse_ambient. visibility=on_screen. subject_angle=profile_right. Stable readable framing built from the beat requirement. Readable medium com...",
     "shot_notes": "The accident occurs",
     "evidence_refs": [
       {
@@ -384,13 +1662,29 @@
       "cowardly_lion | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH008/cowardly_lion.md] Physical Description: Large animal; too heavy to be carried by the others. [source:C:/FilmCreator/projects/wizard_of_oz/02_s...",
       "thick_dark_forest | No specific visual descriptors are provided in the current evidence. The environment is identified as a \"thick dark forest.\" | Unknown. | Dark (per name). | Unknown."
     ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "montage_travel",
+    "coverage_role": "handoff_medium",
+    "beat_type": "transition_handoff",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT002",
+      "beat_type": "transition_handoff",
+      "importance": "major",
+      "confidence": 0.55,
+      "reasons": [
+        "importance = major"
+      ]
+    },
     "metadata": {
-      "artifact_id": "CH006_SC003_SH002_SHOT_PACKAGE",
+      "artifact_id": "CH006_SC003_SH007_SHOT_PACKAGE",
       "artifact_type": "shot_package",
       "status": "generated",
-      "source_fingerprint": "63a4e6f935314aa499fa73fa4afc0a73cd6cecbe",
-      "created_at_utc": "2026-04-27T15:49:08.706778+00:00",
-      "updated_at_utc": "2026-04-27T15:49:08.706778+00:00",
+      "source_fingerprint": "9e30dab2916695fb064c2e582a01399585922da7",
+      "created_at_utc": "2026-04-27T20:53:36.740298+00:00",
+      "updated_at_utc": "2026-04-27T20:54:34.035887+00:00",
       "upstream_dependencies": [
         {
           "dependency_type": "scene_contract",
@@ -405,27 +1699,252 @@
         {
           "dependency_type": "shot_blueprints",
           "dependency_id": "CH006_SC003",
-          "version": "ba132840d924f6cc368eff8ba7a0a2b258f190b2"
+          "version": "c66654924715e4dc78770cb490f739294a3daec3"
         }
       ],
       "locked_fields": {},
       "manual_overrides": {},
       "revision_history": [
         {
-          "timestamp_utc": "2026-04-27T15:50:15.788606+00:00",
+          "timestamp_utc": "2026-04-27T20:53:36.740800+00:00",
           "action": "synthesized",
-          "source_fingerprint": "63a4e6f935314aa499fa73fa4afc0a73cd6cecbe"
+          "source_fingerprint": "9e30dab2916695fb064c2e582a01399585922da7"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:34.036890+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "9e30dab2916695fb064c2e582a01399585922da7"
         }
       ]
     }
   },
   {
-    "shot_id": "SH003",
+    "shot_id": "SH008",
     "scene_id": "CH006_SC003",
     "chapter_id": "CH006",
-    "shot_order": 3,
-    "previous_shot_id": "SH002",
-    "next_shot_id": "",
+    "shot_order": 8,
+    "previous_shot_id": "SH007",
+    "next_shot_id": "SH009",
+    "primary_subject": "tin_woodman",
+    "secondary_subjects": [],
+    "shot_moment_summary": "The accident occurs",
+    "start_state": "tin_woodman steps down",
+    "end_state": "beetle is crushed",
+    "action_during_shot": "The accident occurs",
+    "action_continues_from": "crushing contact",
+    "action_hands_off_to": "BT003",
+    "shot_size": "medium",
+    "camera_angle": "eye_level",
+    "lens_family": "normal",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "deep_focus",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "front_three_quarter_left",
+    "visible_primary_subject_id": "tin_woodman",
+    "visible_secondary_subject_ids": [],
+    "primary_subject_frame_position": "foreground right within leaf litter layer",
+    "primary_subject_scale_relation": "preserve readable body-to-environment scale in frame",
+    "primary_subject_facing_direction": "front three-quarter left toward the scene action",
+    "primary_subject_pose_description": "tin_woodman steps down",
+    "subject_relation_summary": "tin_woodman carries the frame alone",
+    "required_environment_anchor_1": "leaf litter layer",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "preserve readable body-to-environment scale in frame",
+    "camera_package_description": "medium, eye level, normal lens, locked off, deep focus, hard directional",
+    "subject_blocking": [
+      "foot landing on specific spot",
+      "leaf litter layer",
+      "tin_woodman remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the leaf litter layer.",
+      "Background depth should keep thick_dark_forest legible as the location anchor.",
+      "Subject 1: tin_woodman remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "tin_woodman focuses toward the active scene action."
+    ],
+    "environment_subzone": "leaf litter layer",
+    "key_visible_environment_features": [
+      "leaf litter layer",
+      "Chapter-local environment alias match for 'The forest path' (key_overlap=1, label_overlap=2, context_overlap=2)."
+    ],
+    "continuity_from_previous_shot": "crushing contact",
+    "continuity_to_next_shot": "BT003",
+    "pose_anchor_frame": "tin_woodman steps down",
+    "pose_end_frame": "beetle is crushed",
+    "shot_title": "Transition Wide 8: The accident occurs",
+    "shot_type": "transition_wide",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in thick_dark_forest featuring tin_woodman.",
+    "target_seconds": 10.8,
+    "characters_in_frame": [
+      {
+        "label": "Tin Woodman",
+        "canonical_id": "tin_woodman",
+        "display_name": "tin_woodman",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH006/tin_woodman.md",
+        "notes": "Direct registry match for 'tin_woodman'."
+      }
+    ],
+    "environment": {
+      "label": "The forest path",
+      "canonical_id": "thick_dark_forest",
+      "display_name": "thick_dark_forest",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 56,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH006/thick_dark_forest.md",
+      "notes": "Chapter-local environment alias match for 'The forest path' (key_overlap=1, label_overlap=2, context_overlap=2)."
+    },
+    "beat_ids": [
+      "BT002"
+    ],
+    "continuity_constraints": [
+      "Exact spatial coordinate of the beetle relative to path debris",
+      "Visual progression and texture of rust spread on metal jaw",
+      "The accident occurs"
+    ],
+    "prompt_seed": "Transition Wide 8: The accident occurs. transition_wide. size=medium. angle=eye_level. lens=normal. motion=locked_off. zoom=none. focus=deep_focus. lighting=hard_directional. visibility=on_screen. subject_angle=front_three_quarter_left. Stable readable framing built from the beat requirement. Readable medium composi...",
+    "shot_notes": "The accident occurs",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH006_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH006",
+        "scene_id": "CH006_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH006",
+        "scene_id": "CH006_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH006",
+        "scene_id": "CH006_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH006",
+        "scene_id": "CH006_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH006",
+        "scene_id": "CH006_SC003"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH006",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH006_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH006",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH006_chapter_vi.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH005",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH005_chapter_v.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH011",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH011_chapter_xi.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH006",
+        "canonical_id": "dorothy"
+      }
+    ],
+    "evidence_summary": [
+      "Establish the Tin Woodman's empathetic nature through a tragic accident involving a small creature, resulting in a mechanical failure.",
+      "As the group continues their journey, the Tin Woodman accidentally steps on a beetle. Overcome with grief for the tiny creature, he begins to cry, which causes his jaw to rust shut.",
+      "Routine Travel $\\rightarrow$ Guilt/Distress.",
+      "The group moves rhythmically through the thick forest path.",
+      "Tin Woodman is physically incapacitated with a locked jaw.",
+      "Accidental crushing of beetle leads to weeping and subsequent rusting of the jaw.",
+      "the_scarecrow | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH003/the_scarecrow.md] Physical Description: A living figure stuffed with straw. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/cha...",
+      "dorothy | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md] Costume/Silhouette: Unknown. No specific clothing details are provided in this chapter. [source:C:/FilmCreator/projects/wizard_of_oz/02_...",
+      "cowardly_lion | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH008/cowardly_lion.md] Physical Description: Large animal; too heavy to be carried by the others. [source:C:/FilmCreator/projects/wizard_of_oz/02_s...",
+      "thick_dark_forest | No specific visual descriptors are provided in the current evidence. The environment is identified as a \"thick dark forest.\" | Unknown. | Dark (per name). | Unknown."
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "montage_travel",
+    "coverage_role": "transition_wide",
+    "beat_type": "transition_handoff",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT002",
+      "beat_type": "transition_handoff",
+      "importance": "major",
+      "confidence": 0.55,
+      "reasons": [
+        "importance = major"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH006_SC003_SH008_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "9e30dab2916695fb064c2e582a01399585922da7",
+      "created_at_utc": "2026-04-27T20:53:36.741798+00:00",
+      "updated_at_utc": "2026-04-27T20:54:34.041899+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH006_SC003",
+          "version": "e069b5f6d96ee3b8630ad4ea57604b2a76604dfe"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH006_SC003",
+          "version": "6e9786ba4427c761e35650c741b11003e0805609"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH006_SC003",
+          "version": "c66654924715e4dc78770cb490f739294a3daec3"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:53:36.742297+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "9e30dab2916695fb064c2e582a01399585922da7"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:34.042400+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "9e30dab2916695fb064c2e582a01399585922da7"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH009",
+    "scene_id": "CH006_SC003",
+    "chapter_id": "CH006",
+    "shot_order": 9,
+    "previous_shot_id": "SH008",
+    "next_shot_id": "SH010",
     "primary_subject": "tin_woodman",
     "secondary_subjects": [
       "dorothy"
@@ -434,7 +1953,7 @@
     "start_state": "realization",
     "end_state": "tears falling",
     "action_during_shot": "weeping",
-    "action_continues_from": "crushing contact",
+    "action_continues_from": "beetle is crushed",
     "action_hands_off_to": "end_of_scene",
     "shot_size": "close_up",
     "camera_angle": "eye_level",
@@ -463,28 +1982,33 @@
     "subject_blocking": [
       "standing still",
       "tin_woodman frozen in place",
-      "thick_dark_forest path"
+      "thick_dark_forest path",
+      "tin_woodman remains readable within the active playing space.",
+      "dorothy remains readable within the active playing space."
     ],
     "camera_relative_positions": [
       "Camera anchors the action inside the thick_dark_forest path.",
-      "Background depth should keep thick_dark_forest legible as the location anchor."
+      "Background depth should keep thick_dark_forest legible as the location anchor.",
+      "Subject 1: tin_woodman remains visually readable against the environment scale.",
+      "Subject 2: dorothy remains visually readable against the environment scale."
     ],
     "gaze_directions": [
       "tin_woodman focuses toward the active scene action."
     ],
     "environment_subzone": "thick_dark_forest path",
     "key_visible_environment_features": [
-      "thick_dark_forest path"
+      "thick_dark_forest path",
+      "Chapter-local beat subzone match for 'thick_dark_forest path'."
     ],
-    "continuity_from_previous_shot": "crushing contact",
+    "continuity_from_previous_shot": "beetle is crushed",
     "continuity_to_next_shot": "end_of_scene",
     "pose_anchor_frame": "realization",
     "pose_end_frame": "tears falling",
-    "shot_title": "Reaction Closeup 3: Grief and mechanical failure",
-    "shot_type": "reaction_closeup",
-    "camera_description": "Close framing that isolates reaction and emotional emphasis.",
-    "composition": "Intimate composition that isolates tin_woodman, dorothy against thick_dark_forest to capture the beat's emotional turn.",
-    "target_seconds": 5.1,
+    "shot_title": "Handoff Medium 9: Grief and mechanical failure",
+    "shot_type": "handoff_medium",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in thick_dark_forest featuring tin_woodman, dorothy.",
+    "target_seconds": 7.0,
     "characters_in_frame": [
       {
         "label": "Tin Woodman",
@@ -525,7 +2049,7 @@
       "Visual progression and texture of rust spread on metal jaw",
       "Grief and mechanical failure"
     ],
-    "prompt_seed": "Reaction Closeup 3: Grief and mechanical failure. reaction_closeup. size=close_up. angle=eye_level. lens=portrait. motion=push_in. zoom=subtle_in. focus=shallow_subject. lighting=diffuse_ambient. visibility=on_screen. subject_angle=front. Close framing that isolates reaction and emotional emphasis.",
+    "prompt_seed": "Handoff Medium 9: Grief and mechanical failure. handoff_medium. size=close_up. angle=eye_level. lens=portrait. motion=push_in. zoom=subtle_in. focus=shallow_subject. lighting=diffuse_ambient. visibility=on_screen. subject_angle=front. Stable readable framing built from the beat requirement. Readable medium compositi...",
     "shot_notes": "Grief and mechanical failure",
     "evidence_refs": [
       {
@@ -595,13 +2119,29 @@
       "cowardly_lion | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH008/cowardly_lion.md] Physical Description: Large animal; too heavy to be carried by the others. [source:C:/FilmCreator/projects/wizard_of_oz/02_s...",
       "thick_dark_forest | No specific visual descriptors are provided in the current evidence. The environment is identified as a \"thick dark forest.\" | Unknown. | Dark (per name). | Unknown."
     ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "montage_travel",
+    "coverage_role": "handoff_medium",
+    "beat_type": "transition_handoff",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT003",
+      "beat_type": "transition_handoff",
+      "importance": "major",
+      "confidence": 0.55,
+      "reasons": [
+        "importance = major"
+      ]
+    },
     "metadata": {
-      "artifact_id": "CH006_SC003_SH003_SHOT_PACKAGE",
+      "artifact_id": "CH006_SC003_SH009_SHOT_PACKAGE",
       "artifact_type": "shot_package",
       "status": "generated",
-      "source_fingerprint": "63a4e6f935314aa499fa73fa4afc0a73cd6cecbe",
-      "created_at_utc": "2026-04-27T15:50:15.789606+00:00",
-      "updated_at_utc": "2026-04-27T15:50:15.789606+00:00",
+      "source_fingerprint": "9e30dab2916695fb064c2e582a01399585922da7",
+      "created_at_utc": "2026-04-27T20:53:36.743300+00:00",
+      "updated_at_utc": "2026-04-27T20:54:34.048401+00:00",
       "upstream_dependencies": [
         {
           "dependency_type": "scene_contract",
@@ -616,16 +2156,478 @@
         {
           "dependency_type": "shot_blueprints",
           "dependency_id": "CH006_SC003",
-          "version": "ba132840d924f6cc368eff8ba7a0a2b258f190b2"
+          "version": "c66654924715e4dc78770cb490f739294a3daec3"
         }
       ],
       "locked_fields": {},
       "manual_overrides": {},
       "revision_history": [
         {
-          "timestamp_utc": "2026-04-27T15:51:23.502480+00:00",
+          "timestamp_utc": "2026-04-27T20:53:36.743799+00:00",
           "action": "synthesized",
-          "source_fingerprint": "63a4e6f935314aa499fa73fa4afc0a73cd6cecbe"
+          "source_fingerprint": "9e30dab2916695fb064c2e582a01399585922da7"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:34.048900+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "9e30dab2916695fb064c2e582a01399585922da7"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH010",
+    "scene_id": "CH006_SC003",
+    "chapter_id": "CH006",
+    "shot_order": 10,
+    "previous_shot_id": "SH009",
+    "next_shot_id": "SH011",
+    "primary_subject": "tin_woodman",
+    "secondary_subjects": [
+      "dorothy"
+    ],
+    "shot_moment_summary": "rust spreading on jaw",
+    "start_state": "tears hitting metal",
+    "end_state": "jaw locked shut",
+    "action_during_shot": "rust spreading",
+    "action_continues_from": "tears falling",
+    "action_hands_off_to": "end_of_scene",
+    "shot_size": "extreme_close_up",
+    "camera_angle": "eye_level",
+    "lens_family": "telephoto",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "shallow_subject",
+    "lighting_style": "diffuse_ambient",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "profile_left",
+    "visible_primary_subject_id": "tin_woodman",
+    "visible_secondary_subject_ids": [
+      "dorothy"
+    ],
+    "primary_subject_frame_position": "foreground inside thick_dark_forest path",
+    "primary_subject_scale_relation": "preserve readable body-to-environment scale in frame",
+    "primary_subject_facing_direction": "profile left toward the scene action",
+    "primary_subject_pose_description": "tears hitting metal",
+    "subject_relation_summary": "tin_woodman plays against dorothy in the same frame",
+    "required_environment_anchor_1": "thick_dark_forest path",
+    "required_subject_anchor_1": "tin_woodman's metal jaw",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "preserve readable body-to-environment scale in frame",
+    "camera_package_description": "extreme-close-up, eye level, telephoto lens, locked off, shallow subject, diffuse ambient",
+    "subject_blocking": [
+      "static face",
+      "tin_woodman frozen in place",
+      "thick_dark_forest path",
+      "tin_woodman remains readable within the active playing space.",
+      "dorothy remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the thick_dark_forest path.",
+      "Background depth should keep thick_dark_forest legible as the location anchor.",
+      "Subject 1: tin_woodman remains visually readable against the environment scale.",
+      "Subject 2: dorothy remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "tin_woodman focuses toward the active scene action."
+    ],
+    "environment_subzone": "thick_dark_forest path",
+    "key_visible_environment_features": [
+      "thick_dark_forest path",
+      "Chapter-local beat subzone match for 'thick_dark_forest path'."
+    ],
+    "continuity_from_previous_shot": "tears falling",
+    "continuity_to_next_shot": "end_of_scene",
+    "pose_anchor_frame": "tears hitting metal",
+    "pose_end_frame": "jaw locked shut",
+    "shot_title": "Transition Wide 10: Grief and mechanical failure",
+    "shot_type": "transition_wide",
+    "camera_description": "Stable readable framing built from the beat requirement.",
+    "composition": "Readable medium composition in thick_dark_forest featuring tin_woodman, dorothy.",
+    "target_seconds": 10.8,
+    "characters_in_frame": [
+      {
+        "label": "Tin Woodman",
+        "canonical_id": "tin_woodman",
+        "display_name": "tin_woodman",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH006/tin_woodman.md",
+        "notes": "Direct registry match for 'tin_woodman'."
+      },
+      {
+        "label": "Dorothy",
+        "canonical_id": "dorothy",
+        "display_name": "dorothy",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH006/dorothy.md",
+        "notes": "Direct registry match for 'dorothy'."
+      }
+    ],
+    "environment": {
+      "label": "thick_dark_forest",
+      "canonical_id": "thick_dark_forest",
+      "display_name": "thick_dark_forest",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": null,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH006/thick_dark_forest.md",
+      "notes": "Chapter-local beat subzone match for 'thick_dark_forest path'."
+    },
+    "beat_ids": [
+      "BT003"
+    ],
+    "continuity_constraints": [
+      "Exact spatial coordinate of the beetle relative to path debris",
+      "Visual progression and texture of rust spread on metal jaw",
+      "Grief and mechanical failure"
+    ],
+    "prompt_seed": "Transition Wide 10: Grief and mechanical failure. transition_wide. size=extreme_close_up. angle=eye_level. lens=telephoto. motion=locked_off. zoom=none. focus=shallow_subject. lighting=diffuse_ambient. visibility=on_screen. subject_angle=profile_left. Stable readable framing built from the beat requirement. Readable...",
+    "shot_notes": "Grief and mechanical failure",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH006_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH006",
+        "scene_id": "CH006_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH006",
+        "scene_id": "CH006_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH006",
+        "scene_id": "CH006_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH006",
+        "scene_id": "CH006_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH006",
+        "scene_id": "CH006_SC003"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH006",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH006_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH006",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH006_chapter_vi.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH005",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH005_chapter_v.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH011",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH011_chapter_xi.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH006",
+        "canonical_id": "dorothy"
+      }
+    ],
+    "evidence_summary": [
+      "Establish the Tin Woodman's empathetic nature through a tragic accident involving a small creature, resulting in a mechanical failure.",
+      "As the group continues their journey, the Tin Woodman accidentally steps on a beetle. Overcome with grief for the tiny creature, he begins to cry, which causes his jaw to rust shut.",
+      "Routine Travel $\\rightarrow$ Guilt/Distress.",
+      "The group moves rhythmically through the thick forest path.",
+      "Tin Woodman is physically incapacitated with a locked jaw.",
+      "Accidental crushing of beetle leads to weeping and subsequent rusting of the jaw.",
+      "the_scarecrow | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH003/the_scarecrow.md] Physical Description: A living figure stuffed with straw. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/cha...",
+      "dorothy | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md] Costume/Silhouette: Unknown. No specific clothing details are provided in this chapter. [source:C:/FilmCreator/projects/wizard_of_oz/02_...",
+      "cowardly_lion | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH008/cowardly_lion.md] Physical Description: Large animal; too heavy to be carried by the others. [source:C:/FilmCreator/projects/wizard_of_oz/02_s...",
+      "thick_dark_forest | No specific visual descriptors are provided in the current evidence. The environment is identified as a \"thick dark forest.\" | Unknown. | Dark (per name). | Unknown."
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "montage_travel",
+    "coverage_role": "transition_wide",
+    "beat_type": "transition_handoff",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT003",
+      "beat_type": "transition_handoff",
+      "importance": "major",
+      "confidence": 0.55,
+      "reasons": [
+        "importance = major"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH006_SC003_SH010_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "9e30dab2916695fb064c2e582a01399585922da7",
+      "created_at_utc": "2026-04-27T20:53:36.744798+00:00",
+      "updated_at_utc": "2026-04-27T20:54:34.053904+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH006_SC003",
+          "version": "e069b5f6d96ee3b8630ad4ea57604b2a76604dfe"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH006_SC003",
+          "version": "6e9786ba4427c761e35650c741b11003e0805609"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH006_SC003",
+          "version": "c66654924715e4dc78770cb490f739294a3daec3"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:53:36.745298+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "9e30dab2916695fb064c2e582a01399585922da7"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:34.054404+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "9e30dab2916695fb064c2e582a01399585922da7"
+        }
+      ]
+    }
+  },
+  {
+    "shot_id": "SH011",
+    "scene_id": "CH006_SC003",
+    "chapter_id": "CH006",
+    "shot_order": 11,
+    "previous_shot_id": "SH010",
+    "next_shot_id": "",
+    "primary_subject": "tin_woodman",
+    "secondary_subjects": [],
+    "shot_moment_summary": "Grief and mechanical failure",
+    "start_state": "tin_woodman begins to cry",
+    "end_state": "jaw rusts shut",
+    "action_during_shot": "Grief and mechanical failure",
+    "action_continues_from": "jaw locked shut",
+    "action_hands_off_to": "end_of_scene",
+    "shot_size": "insert_detail",
+    "camera_angle": "eye_level",
+    "lens_family": "portrait",
+    "camera_motion": "locked_off",
+    "zoom_behavior": "none",
+    "focus_strategy": "shallow_subject",
+    "lighting_style": "hard_directional",
+    "subject_visibility": "on_screen",
+    "narration_mode": "none",
+    "primary_subject_angle": "",
+    "visible_primary_subject_id": "tin_woodman",
+    "visible_secondary_subject_ids": [],
+    "primary_subject_frame_position": "foreground right within thick_dark_forest path",
+    "primary_subject_scale_relation": "preserve readable body-to-environment scale in frame",
+    "primary_subject_facing_direction": "angled toward the scene action",
+    "primary_subject_pose_description": "tin_woodman begins to cry",
+    "subject_relation_summary": "tin_woodman carries the frame alone",
+    "required_environment_anchor_1": "thick_dark_forest path",
+    "required_subject_anchor_1": "",
+    "required_celestial_anchor_1": "",
+    "required_scale_proof_detail": "preserve readable body-to-environment scale in frame",
+    "camera_package_description": "insert-detail, eye level, portrait lens, locked off, shallow subject, hard directional",
+    "subject_blocking": [
+      "tin_woodman frozen in place",
+      "thick_dark_forest path",
+      "tin_woodman remains readable within the active playing space."
+    ],
+    "camera_relative_positions": [
+      "Camera anchors the action inside the thick_dark_forest path.",
+      "Background depth should keep thick_dark_forest legible as the location anchor.",
+      "Subject 1: tin_woodman remains visually readable against the environment scale."
+    ],
+    "gaze_directions": [
+      "tin_woodman focuses toward the active scene action."
+    ],
+    "environment_subzone": "thick_dark_forest path",
+    "key_visible_environment_features": [
+      "thick_dark_forest path",
+      "Chapter-local beat subzone match for 'thick_dark_forest path'."
+    ],
+    "continuity_from_previous_shot": "jaw locked shut",
+    "continuity_to_next_shot": "end_of_scene",
+    "pose_anchor_frame": "tin_woodman begins to cry",
+    "pose_end_frame": "jaw rusts shut",
+    "shot_title": "Insert Detail 11: Grief and mechanical failure",
+    "shot_type": "insert_detail",
+    "camera_description": "Tight detail framing focused on a single visual object or gesture.",
+    "composition": "Detail composition centered on the key physical action or prop inside thick_dark_forest.",
+    "target_seconds": 5.4,
+    "characters_in_frame": [
+      {
+        "label": "Tin Woodman",
+        "canonical_id": "tin_woodman",
+        "display_name": "tin_woodman",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH006/tin_woodman.md",
+        "notes": "Direct registry match for 'tin_woodman'."
+      }
+    ],
+    "environment": {
+      "label": "thick_dark_forest",
+      "canonical_id": "thick_dark_forest",
+      "display_name": "thick_dark_forest",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": null,
+      "source_path": "projects/wizard_of_oz/02_story_analysis/environment_breakdowns/chapters/CH006/thick_dark_forest.md",
+      "notes": "Chapter-local beat subzone match for 'thick_dark_forest path'."
+    },
+    "beat_ids": [
+      "BT003"
+    ],
+    "continuity_constraints": [
+      "Exact spatial coordinate of the beetle relative to path debris",
+      "Visual progression and texture of rust spread on metal jaw",
+      "Grief and mechanical failure"
+    ],
+    "prompt_seed": "Insert Detail 11: Grief and mechanical failure. insert_detail. size=insert_detail. angle=eye_level. lens=portrait. motion=locked_off. zoom=none. focus=shallow_subject. lighting=hard_directional. visibility=on_screen. subject_angle=unspecified. Tight detail framing focused on a single visual object or gesture. Detail...",
+    "shot_notes": "Grief and mechanical failure",
+    "evidence_refs": [
+      {
+        "source": "scene_contract",
+        "scene_id": "CH006_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH006",
+        "scene_id": "CH006_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH006",
+        "scene_id": "CH006_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH006",
+        "scene_id": "CH006_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH006",
+        "scene_id": "CH006_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH006",
+        "scene_id": "CH006_SC003"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH006",
+        "source_path": "C:\\FilmCreator\\projects\\wizard_of_oz\\02_story_analysis\\chapter_analysis\\CH006_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH006",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH006_chapter_vi.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH005",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH005_chapter_v.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH011",
+        "source_path": "projects/wizard_of_oz/01_source/chapters/CH011_chapter_xi.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH006",
+        "canonical_id": "dorothy"
+      }
+    ],
+    "evidence_summary": [
+      "Establish the Tin Woodman's empathetic nature through a tragic accident involving a small creature, resulting in a mechanical failure.",
+      "As the group continues their journey, the Tin Woodman accidentally steps on a beetle. Overcome with grief for the tiny creature, he begins to cry, which causes his jaw to rust shut.",
+      "Routine Travel $\\rightarrow$ Guilt/Distress.",
+      "The group moves rhythmically through the thick forest path.",
+      "Tin Woodman is physically incapacitated with a locked jaw.",
+      "Accidental crushing of beetle leads to weeping and subsequent rusting of the jaw.",
+      "the_scarecrow | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH003/the_scarecrow.md] Physical Description: A living figure stuffed with straw. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/cha...",
+      "dorothy | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md] Costume/Silhouette: Unknown. No specific clothing details are provided in this chapter. [source:C:/FilmCreator/projects/wizard_of_oz/02_...",
+      "cowardly_lion | [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH008/cowardly_lion.md] Physical Description: Large animal; too heavy to be carried by the others. [source:C:/FilmCreator/projects/wizard_of_oz/02_s...",
+      "thick_dark_forest | No specific visual descriptors are provided in the current evidence. The environment is identified as a \"thick dark forest.\" | Unknown. | Dark (per name). | Unknown."
+    ],
+    "coverage_density": "medium",
+    "coverage_profile": "classic_adventure",
+    "coverage_intent": "montage_travel",
+    "coverage_role": "insert_detail",
+    "beat_type": "transition_handoff",
+    "coverage_importance": "major",
+    "coverage_blueprint_source": "deterministic_v1",
+    "coverage_classification": {
+      "beat_id": "BT003",
+      "beat_type": "transition_handoff",
+      "importance": "major",
+      "confidence": 0.55,
+      "reasons": [
+        "importance = major"
+      ]
+    },
+    "metadata": {
+      "artifact_id": "CH006_SC003_SH011_SHOT_PACKAGE",
+      "artifact_type": "shot_package",
+      "status": "generated",
+      "source_fingerprint": "9e30dab2916695fb064c2e582a01399585922da7",
+      "created_at_utc": "2026-04-27T20:53:36.746797+00:00",
+      "updated_at_utc": "2026-04-27T20:54:34.059407+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH006_SC003",
+          "version": "e069b5f6d96ee3b8630ad4ea57604b2a76604dfe"
+        },
+        {
+          "dependency_type": "scene_binding",
+          "dependency_id": "CH006_SC003",
+          "version": "6e9786ba4427c761e35650c741b11003e0805609"
+        },
+        {
+          "dependency_type": "shot_blueprints",
+          "dependency_id": "CH006_SC003",
+          "version": "c66654924715e4dc78770cb490f739294a3daec3"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-27T20:53:36.747297+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "9e30dab2916695fb064c2e582a01399585922da7"
+        },
+        {
+          "timestamp_utc": "2026-04-27T20:54:34.060407+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "9e30dab2916695fb064c2e582a01399585922da7"
         }
       ]
     }
