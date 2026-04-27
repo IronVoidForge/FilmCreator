@@ -9,7 +9,7 @@ if "%LIMIT%"=="" set "LIMIT=2"
 call "%~dp0..\_shared\resolve_filmcreator_root.bat" "%~dp0"
 if errorlevel 1 exit /b 1
 cd /d "%FILMCREATOR_ROOT%"
-call "%~dp0..\quick_pipeline_test\_shared\start_clean_comfyui_8190.bat"
+call "%~dp0..\_shared\start_clean_comfyui_8190.bat"
 if errorlevel 1 exit /b 1
 set "FILMCREATOR_COMFY_BASE_URL=http://127.0.0.1:8190"
 set "FILMCREATOR_COMFY_INPUT_DIR=%FILMCREATOR_ROOT%\.comfy_clean\input"

@@ -23,11 +23,11 @@ Do not replace the existing downstream quicktest files for dialogue/descriptor p
 
 ## Existing old implementation to salvage
 
-The old quick pipeline files are:
+The old quick pipeline files were:
 
 ```text
-launchers/quick_pipeline_test/10_run_character_reference_generation.bat
-launchers/quick_pipeline_test/11_run_environment_reference_generation.bat
+launchers/_archive_candidate/quick_pipeline_test/10_run_character_reference_generation.bat
+launchers/_archive_candidate/quick_pipeline_test/11_run_environment_reference_generation.bat
 ```
 
 They already run the practical Phase 12/13 generation flow:
@@ -154,10 +154,10 @@ Then:
 cd /d "%FILMCREATOR_ROOT%"
 ```
 
-Start clean ComfyUI exactly like the old quick pipeline:
+Start clean ComfyUI using the shared helper now kept in the active launcher tree:
 
 ```bat
-call "%~dp0..\quick_pipeline_test\_shared\start_clean_comfyui_8190.bat"
+call "%~dp0..\_shared\start_clean_comfyui_8190.bat"
 ```
 
 Then set:
@@ -168,7 +168,7 @@ set "FILMCREATOR_COMFY_INPUT_DIR=%FILMCREATOR_ROOT%\.comfy_clean\input"
 set "FILMCREATOR_COMFY_OUTPUT_DIR=%FILMCREATOR_ROOT%\.comfy_clean\output"
 ```
 
-If the relative path to `start_clean_comfyui_8190.bat` is wrong in the local tree, fix it during implementation, but do not duplicate the helper.
+Do not duplicate the helper inside `quicktest_phase/`; keep the shared copy under `launchers/_shared/`.
 
 ## Phase 12 BAT
 

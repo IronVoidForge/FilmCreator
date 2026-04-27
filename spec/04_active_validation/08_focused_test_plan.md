@@ -1,21 +1,22 @@
-﻿Status: 65%
+Status: 90%
 
 # Focused Test Plan (No Full Pipeline Required)
 
 ## Fast compile check
 
 ```bat
-cd /d C:\FilmCreator_MC
+cd /d C:\FilmCreator
 python -m compileall orchestrator
 ```
 
 ## Targeted pytest runs
 
 ```bat
-pytest tests/test_character_bible_production_fallbacks.py -q
-pytest tests/test_descriptor_prompt_normalization.py -q
-pytest tests/test_prompt_preparation_visual_fallbacks.py -q
-pytest tests/test_quality_grading.py -q
+pytest tests/unit/test_prompt_package.py -q -p no:cacheprovider
+pytest tests/unit/test_overnight_pipeline_resume_check.py -q -p no:cacheprovider
+pytest tests/test_reference_assets.py tests/test_character_references.py tests/test_environment_references.py -q -p no:cacheprovider
+pytest tests/test_prompt_package_lifecycle.py tests/test_artifact_lifecycle.py -q -p no:cacheprovider
+pytest tests/test_cli_menu_commands.py -q -p no:cacheprovider
 ```
 
 ## If no tests exist yet
@@ -24,10 +25,12 @@ Implement them before running pipeline validation.
 
 ## Artifact spot checks after tests pass
 
-Use smart resume runner only after unit tests pass.
+Use the CLI-native smart resume runner only after unit tests pass.
 
 ```bat
-C:\FilmCreator_MC\launchers\quick_pipeline_test\00_run_quick_pipeline_test_resume_from_045.bat
+python -m orchestrator resume-check princess_of_mars_test --chapters 2-3
+python -m orchestrator project-status princess_of_mars_test --chapters 2-3
+python -m orchestrator run-production princess_of_mars_test --mode resume --plan-only --chapters 2-3
 ```
 
 Then inspect:
@@ -35,7 +38,9 @@ Then inspect:
 - protagonist prompt package
 - arizona mountain cave environment prompt
 - one CH002 shot prompt
-- QUALITY_GRADE_INDEX.json
+- `QUALITY_GRADE_INDEX.json`
+- approved reference manifest if Phase 12/13 was exercised
+- prompt-package markdown for `Repair Notes`
 
 ## Expected visible wins
 
@@ -44,4 +49,6 @@ Then inspect:
 - cave prompts mention cave geometry
 - prompts with known issues no longer score A
 - silent dialogue timelines stop polluting rerun queue
-
+- `resume-check` stops at the first actually incomplete stage instead of trusting file existence
+- prompt packages missing `Repair Notes` fail parsing instead of passing silently
+- approved or locked reference assets survive ordinary reruns

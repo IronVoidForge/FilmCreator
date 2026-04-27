@@ -62,7 +62,7 @@
 | 03_active_current_blockers/06_runner_cli_and_job_dispatch.md | spec/4_orchestration/4.1_runner_cli_and_job_dispatch.md | Orchestration | active_blocker | Runner CLI and job dispatch |
 | 03_active_current_blockers/07_output_routing_logging_and_manifests.md | spec/4_orchestration/4.3_output_routing_logging_and_manifests.md | Orchestration | active_blocker | Output routing, logging, and manifests |
 | **04_active_validation/** | | | | **Implemented but needs nonzero artifact validation** |
-| 04_active_validation/01_prompt_package_schema.md | spec/1_foundation/1.4_prompt_package_schema.md | Foundation | active_validation | **VERIFY**: Spec requires `Repair Notes`; check if orchestrator/prompt_package.py parses it as optional |
+| 04_active_validation/01_prompt_package_schema.md | spec/1_foundation/1.4_prompt_package_schema.md | Foundation | active_validation | Prompt package schema alignment is implemented; `Repair Notes` is now required and validated |
 | 04_active_validation/02_phase_09_scene_contracts.md | spec/phases/PHASE_09_SCENE_CONTRACTS.md | Phase | active_validation | Scene contracts need validation |
 | 04_active_validation/03_phase_10_shot_planning.md | spec/phases/PHASE_10_SHOT_PLANNING.md | Phase | active_validation | **VERIFY**: Nonzero CH002-CH003 run proves shot packages generated and inherit scene bindings |
 | 04_active_validation/04_phase_11_dialogue_timeline.md | spec/phases/PHASE_11_DIALOGUE_TIMELINE.md | Phase | active_validation | Dialogue timeline needs validation |

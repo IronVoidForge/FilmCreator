@@ -1,10 +1,19 @@
-﻿Status: 75%
+Status: 100%
 
 # 1.4 Prompt Package Schema
 
 ## Goal
 
 Define one Markdown contract that both manual authoring and later LLM authoring can produce.
+
+## Current Implementation Note
+
+The active parser and writer now enforce this schema in `orchestrator/prompt_package.py`.
+
+- `Repair Notes` is part of the required heading set.
+- The parser raises a clear error when a required heading is missing.
+- `Repair Notes` may be present but empty.
+- Tracked templates and sample prompt packages have been backfilled to the current schema.
 
 ## Required Headings
 
@@ -40,7 +49,7 @@ Define one Markdown contract that both manual authoring and later LLM authoring 
 
 - A human can open the file and edit it comfortably.
 - The parser can detect missing sections with a clear error.
+- Old prompt packages missing `Repair Notes` no longer silently pass as current schema.
 - The same contract works for characters, environments, shot openers, reframed coverage, inserts, cutaways, anchors, interval continuations, and later video.
 - The same contract can also describe optional identity-consistency and anatomy-repair assists without introducing a second prompt format.
 - The same contract can also carry owner/subject lineage without introducing a second prompt format.
-
