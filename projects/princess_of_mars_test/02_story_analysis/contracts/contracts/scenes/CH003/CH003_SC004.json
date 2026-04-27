@@ -1,0 +1,342 @@
+{
+  "scene_id": "CH003_SC004",
+  "chapter_id": "CH003",
+  "scene_title": "SC004",
+  "purpose": "Demonstrate the protagonist's unique advantage (agility) and resolve the immediate conflict through action.",
+  "summary": "Facing certain death, the protagonist utilizes the low gravity to perform a massive thirty-foot leap over the incubator, escaping the spear's reach. The Martians observe this with curiosity rather than hostility.",
+  "emotional_arc": "Panic $\\rightarrow$ Adrenaline/Exhilaration $\\rightarrow$ Bewilderment.",
+  "production_intent": "Utilize low-gravity physics to execute a high-stakes athletic escape. The sequence must emphasize the protagonist's superhuman agility through slow-motion flight paths and wide spatial arcs that contrast his movement against the static Martian presence.",
+  "scene_short_description": "A naked, agile fighter leaps thirty feet over a glass enclosure to escape a spear.",
+  "scene_primary_scale_story_point": "Protagonist leap distance is 30 feet relative to the martian_incubator_enclosure height.",
+  "scene_required_anchor_catalog": [
+    "martian_incubator_enclosure",
+    "arizona_quartz_vein_basin"
+  ],
+  "scene_start_state": "protagonist cornered by spear tip near the incubator edge in panic.",
+  "scene_end_state": "protagonist landed safely on the far side of the basin, observed by curious martians.",
+  "dominant_action_line": "A massive low-gravity leap over a walled enclosure to evade a weapon.",
+  "scene_spatial_layout": [
+    "Circular mossy basin containing a central glass enclosure",
+    "Quartz outcroppings providing uneven terrain"
+  ],
+  "character_spatial_map": [
+    "protagonist: moving from incubator perimeter to far side of basin",
+    "martian_warriors: stationed around the martian_incubator_enclosure"
+  ],
+  "environment_subzones": [
+    "martian_incubator_enclosure",
+    "arizona_quartz_vein_basin mossy floor"
+  ],
+  "entry_vectors": [
+    "protagonist: leap from incubator edge across the basin"
+  ],
+  "exit_vectors": [
+    "protagonist: landing on quartz/moss far side"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: sudden explosive movement",
+    "BT002 -> BT003: descent and impact"
+  ],
+  "characters_required": [
+    {
+      "label": "The Protagonist",
+      "canonical_id": "protagonist",
+      "display_name": "protagonist",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH003/protagonist.md",
+      "notes": "Direct registry match for 'protagonist'."
+    },
+    {
+      "label": "Martian Warriors (The Leader)",
+      "canonical_id": "martian_warriors",
+      "display_name": "martian_warriors",
+      "status": "canonical",
+      "entity_kind": "group",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH003/martian_warriors.md",
+      "notes": "Direct registry match for 'martian_warriors'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "The Incubator",
+      "canonical_id": "martian_incubator_enclosure",
+      "display_name": "martian_incubator_enclosure",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 58,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH003/martian_incubator_enclosure.md",
+      "notes": "Chapter-local environment alias match for 'The Incubator' (key_overlap=1, label_overlap=1, context_overlap=4)."
+    },
+    {
+      "label": "the mossy basin",
+      "canonical_id": "arizona_quartz_vein_basin",
+      "display_name": "arizona_quartz_vein_basin",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 68,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH003/arizona_quartz_vein_basin.md",
+      "notes": "Chapter-local environment alias match for 'the mossy basin' (key_overlap=1, label_overlap=2, context_overlap=4)."
+    }
+  ],
+  "continuity_constraints": [
+    "Precise landing point relative to the jump origin",
+    "Proximity of spear tip to protagonist during flight",
+    "Trajectory arc height over martian_incubator_enclosure"
+  ],
+  "visual_coverage_families": [
+    "Slow-motion or high-frame-rate leap sequences",
+    "Extreme wide shots of jump trajectory over structure",
+    "Reaction shots from martian_warriors"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "Protagonist faces spear threat",
+      "purpose": "",
+      "action_start": "protagonist backed against enclosure",
+      "action_end": "protagonist coils for leap",
+      "active_subjects": [
+        "protagonist",
+        "martian_warriors"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "edge of incubator",
+      "blocking_hint": "protagonist trapped between spear and glass",
+      "environment_subzone": "martian_incubator_enclosure",
+      "continuity_focus": "spear tip proximity",
+      "coverage_hint": "close-up/medium",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "The massive leap",
+      "purpose": "",
+      "action_start": "explosive takeoff",
+      "action_end": "apex of flight over enclosure",
+      "active_subjects": [
+        "protagonist"
+      ],
+      "passive_subjects": [
+        "martian_warriors"
+      ],
+      "spatial_context": "over the incubator [[martian_incubator_enclosure]]",
+      "blocking_hint": "arc trajectory through air",
+      "environment_subzone": "martian_incubator_enclosure",
+      "continuity_focus": "30ft jump height/trajectory",
+      "coverage_hint": "extreme wide/slow-motion",
+      "coverage_priority": "critical",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "Landing and observation",
+      "purpose": "",
+      "action_start": "descent from leap",
+      "action_end": "protagonist stabilizes on ground",
+      "active_subjects": [
+        "protagonist",
+        "martian_warriors"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "far side of basin",
+      "blocking_hint": "protagonist lands in moss; Martians watch [[martian_warriors]]",
+      "environment_subzone": "arizona_quartz_vein_basin",
+      "continuity_focus": "landing point relative to jump start",
+      "coverage_hint": "wide/reaction shots",
+      "coverage_priority": "medium",
+      "handoff_to_next": "none"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish threat",
+      "planned_shot_moment_summary": "spear tip nears protagonist",
+      "primary_subject_seed": "protagonist",
+      "secondary_subjects_seed": [
+        "martian_warriors"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "martian_incubator_enclosure",
+      "planned_shot_required_anchor_1": "martian_incubator_enclosure",
+      "planned_shot_scale_proof_detail": "spear length vs body",
+      "start_state_seed": "protagonist cornered",
+      "end_state_seed": "protagonist coils for jump",
+      "action_seed": "evasion prep",
+      "blocking_seed": [
+        "protagonist backed against enclosure"
+      ],
+      "shot_size": "medium_close",
+      "camera_angle": "low_angle",
+      "lens_family": "normal",
+      "camera_motion": "handheld",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "profile_left"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "show agility feat",
+      "planned_shot_moment_summary": "protagonist mid-air over enclosure",
+      "primary_subject_seed": "protagonist",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "martian_incubator_enclosure",
+      "planned_shot_required_anchor_1": "martian_incubator_enclosure",
+      "planned_shot_scale_proof_detail": "30ft arc height",
+      "start_state_seed": "takeoff",
+      "end_state_seed": "apex of jump",
+      "action_seed": "soaring through low gravity",
+      "blocking_seed": [
+        "protagonist flying over glass walls"
+      ],
+      "shot_size": "extreme_wide",
+      "camera_angle": "eye_level",
+      "lens_family": "ultra_wide",
+      "camera_motion": "crane",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "rear_three_quarter_left"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "resolve conflict/reaction",
+      "planned_shot_moment_summary": "martians watching landing",
+      "primary_subject_seed": "martian_warriors",
+      "secondary_subjects_seed": [
+        "protagonist"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "arizona_quartz_vein_basin",
+      "planned_shot_required_anchor_1": "arizona_quartz_vein_basin",
+      "planned_shot_scale_proof_detail": "distance from spear",
+      "start_state_seed": "protagonist landing",
+      "end_state_seed": "martians staring",
+      "action_seed": "landing and observing",
+      "blocking_seed": [
+        "martians stationary",
+        "protagonist crouched on moss"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "eye_level",
+      "lens_family": "wide",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front_three_quarter_right"
+    }
+  ],
+  "unresolved_questions": [],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH003",
+      "scene_id": "CH003_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH003",
+      "scene_id": "CH003_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH003",
+      "scene_id": "CH003_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH003",
+      "scene_id": "CH003_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH003",
+      "scene_id": "CH003_SC004"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH003",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\02_story_analysis\\chapter_analysis\\CH003_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH003",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH003_chapter_iii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH007",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH007_chapter_vii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH014",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH014_chapter_xiv.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH003",
+      "canonical_id": "protagonist"
+    }
+  ],
+  "evidence_summary": [
+    "[CH003_SC004] Purpose: Demonstrate the protagonist's unique advantage (agility) and resolve the immediate conflict through action.",
+    "[CH003_SC004] Summary: Facing certain death, the protagonist utilizes the low gravity to perform a massive thirty-foot leap over the incubator, escaping the spear's reach. The Martians observe this with curiosity rather than hostility.",
+    "[CH003_SC004] Emotional arc: Panic $\\rightarrow$ Adrenaline/Exhilaration $\\rightarrow$ Bewilderment.",
+    "[CH003_SC004] Coverage: Slow-motion or high-frame-rate shots of the leap. Extreme wide shots to capture the arc of the jump over the structure. Reaction shots from the Martians watching the feat.",
+    "[CH003_SC004] Continuity: The trajectory and landing point of the protagonist's leap; the proximity of the spear tip.",
+    "[CH003] Chapter summary: **Setting:** A circular basin on Mars covered in yellowish, moss-like vegetation, featuring quartz-bearing rock outcroppings and a low, walled glass enclosure (an incubator). **Events:** - The protagonist wakes up on...",
+    "[CH003] CHAPTER III (book index hit)",
+    "[CH007] CHAPTER VII (book index hit)",
+    "[CH014] CHAPTER XIV (book index hit)",
+    "Character protagonist: An experienced Earthman fighter characterized by extreme physical fitness and superhuman agility. His visual identity is defined by a significant metamorphosis; he transitions from an armed, clothed combatant to a naked state followin..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH003_SC004\n\n## Production Intent\nUtilize low-gravity physics to execute a high-stakes athletic escape. The sequence must emphasize the protagonist's superhuman agility through slow-motion flight paths and wide spatial arcs that contrast his movement against the static Martian presence.\n\n## Required Cast\n- protagonist (naked, experienced Earthman fighter)\n- martian_warriors (The Leader)\n\n## Required Environments\n- martian_incubator_enclosure (low, walled glass enclosure)\n- arizona_quartz_vein_basin (circular basin, yellowish mossy vegetation, quartz outcroppings)\n\n## Continuity Constraints\n- Precise landing point relative to the jump origin\n- Proximity of spear tip to protagonist during flight\n- Trajectory arc height over martian_incubator_enclosure (30ft leap)\n\n## Beat List\n- BT001: Protagonist faces spear threat\n- BT002: The massive leap\n- BT003: Landing and observation",
+  "metadata": {
+    "artifact_id": "CH003_SC004_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "9ae293f7d4d0233f28ee55f8ab0ab6bbf1a5078b",
+    "created_at_utc": "2026-04-26T22:17:11.023703+00:00",
+    "updated_at_utc": "2026-04-26T22:17:11.023703+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH003_SC004",
+        "version": "a32ca2440113567270e3aed8948220a03fe5c9ab"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH003_SC004",
+        "version": "15b331a439d444d5dc3f4a1f8511a04034752955"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH003_SC004",
+        "version": "f80446c462e8589262ae277696ed876faea91cc8"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-26T22:17:42.628327+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "9ae293f7d4d0233f28ee55f8ab0ab6bbf1a5078b"
+      }
+    ]
+  }
+}

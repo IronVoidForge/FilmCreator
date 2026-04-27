@@ -1,0 +1,339 @@
+{
+  "scene_id": "CH028_SC005",
+  "chapter_id": "CH028",
+  "scene_title": "SC005",
+  "purpose": "Provide the emotional climax and the supernatural/visionary connection to Mars.",
+  "summary": "In his study overlooking the Hudson River, Carter gazes at Mars through his window. He experiences a profound vision or sensation of Dejah Thoris and a child, sensing their presence across the void.",
+  "emotional_arc": "Loneliness $\\rightarrow$ Spiritual Connection/Yearning.",
+  "production_intent": "Establish the protagonist's profound isolation on Earth through a visual and spiritual bridge to Mars. The scene must balance the grounded, quiet atmosphere of a Hudson River study with ethereal, supernatural overlays representing Dejah Thoris and the Child.",
+  "scene_short_description": "A man gazes through a window at a distant red planet while experiencing ethereal visions.",
+  "scene_primary_scale_story_point": "The vastness of the void separating Earth from Mars.",
+  "scene_required_anchor_catalog": [
+    "Window frame overlooking Hudson River",
+    "Mars in night sky"
+  ],
+  "scene_start_state": "Carter sitting alone in a dimly lit study, looking out at the river.",
+  "scene_end_state": "Carter experiencing a spiritual connection through a vision of Dejah Thoris and the Child.",
+  "dominant_action_line": "Gazing at Mars leads to a sensory/visionary experience of lost loved ones.",
+  "scene_spatial_layout": [
+    "Interior study positioned against a large window.",
+    "Exterior view of Hudson River and night sky."
+  ],
+  "character_spatial_map": [
+    "john_carter: Seated near the window in hudson_river_study.",
+    "dejah_thoris: Ethereal presence within the vision field.",
+    "The Child (Vision/Sensation): Ethereal presence within the vision field."
+  ],
+  "environment_subzones": [
+    "study interior",
+    "window ledge",
+    "exterior night sky"
+  ],
+  "entry_vectors": [
+    "Subjects inherit entry logic from the prior scene or chapter transition."
+  ],
+  "exit_vectors": [
+    "Subjects exit or hand off toward the next story beat."
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: Visual focus shifts from river to Mars.",
+    "BT002 -> BT003: Sensory shift from observation to spiritual vision."
+  ],
+  "characters_required": [
+    {
+      "label": "John Carter",
+      "canonical_id": "john_carter",
+      "display_name": "john_carter",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH028/john_carter.md",
+      "notes": "Direct registry match for 'john_carter'."
+    },
+    {
+      "label": "Dejah Thoris (Vision/Sensation)",
+      "canonical_id": "dejah_thoris",
+      "display_name": "dejah_thoris",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH028/dejah_thoris.md",
+      "notes": "Direct registry match for 'dejah_thoris'."
+    },
+    {
+      "label": "The Child (Vision/Sensation)",
+      "canonical_id": null,
+      "display_name": "The Child (Vision/Sensation)",
+      "status": "review",
+      "entity_kind": "individual",
+      "resolution_score": 10,
+      "source_path": "",
+      "notes": "Low-confidence character match requires review."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "Study overlooking the Hudson River (Interior)",
+      "canonical_id": "hudson_river_study",
+      "display_name": "hudson_river_study",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 118,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH028/hudson_river_study.md",
+      "notes": "Chapter-local environment alias match for 'Study overlooking the Hudson River (Interior)' (key_overlap=3, label_overlap=5, context_overlap=4)."
+    }
+  ],
+  "continuity_constraints": [
+    "Visual appearance of Mars in the night sky.",
+    "Lighting balance between interior lamp light and exterior moonlight."
+  ],
+  "visual_coverage_families": [
+    "Slow zooms on Carter's eyes.",
+    "Soft-focus or ethereal overlays for the vision.",
+    "Wide shots of the river and the night sky/Mars."
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "Carter observes the Hudson River in solitude",
+      "purpose": "",
+      "action_start": "Carter sitting still",
+      "action_end": "Carter turns gaze upward",
+      "active_subjects": [
+        "john_carter"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "hudson_river_study",
+      "blocking_hint": "seated near window",
+      "environment_subzone": "study interior",
+      "continuity_focus": "lamp vs moonlight balance",
+      "coverage_hint": "medium shot",
+      "coverage_priority": "low",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "The sight of Mars triggers memory/longing",
+      "purpose": "",
+      "action_start": "Eyes lock on red dot",
+      "action_end": "Gaze becomes fixed and intense",
+      "active_subjects": [
+        "john_carter"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "window ledge/sky",
+      "blocking_hint": "looking up through glass",
+      "environment_subzone": "exterior night sky",
+      "continuity_focus": "Mars visual appearance",
+      "coverage_hint": "wide shot of sky",
+      "coverage_priority": "medium",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "Spiritual connection to Dejah Thoris and the Child",
+      "purpose": "",
+      "action_start": "Vision begins as soft overlay",
+      "action_end": "Carter feels their presence across the void",
+      "active_subjects": [
+        "dej_thoris",
+        "The Child (Vision/Sensation)"
+      ],
+      "passive_subjects": [
+        "john_carter"
+      ],
+      "spatial_context": "vision field over study",
+      "blocking_hint": "ethereal figures appearing in focus",
+      "environment_subzone": "study interior",
+      "continuity_focus": "soft-focus overlays",
+      "coverage_hint": "close up on eyes/vision",
+      "coverage_priority": "high",
+      "handoff_to_next": "end"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish loneliness",
+      "planned_shot_moment_summary": "Carter looking out at the river",
+      "primary_subject_seed": "john_carter",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "study interior",
+      "planned_shot_required_anchor_1": "window frame",
+      "planned_shot_scale_proof_detail": "river/sky relationship",
+      "start_state_seed": "Carter staring blankly",
+      "end_state_seed": "Carter spotting Mars",
+      "action_seed": "staring",
+      "blocking_seed": [
+        "seated by window"
+      ],
+      "shot_size": "medium_full",
+      "camera_angle": "eye_level",
+      "lens_family": "normal",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "low_key_night",
+      "primary_subject_angle": "profile_left"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "connect to Mars",
+      "planned_shot_moment_summary": "Mars appearing in the sky",
+      "primary_subject_seed": "Mars",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "exterior night sky",
+      "planned_shot_required_anchor_1": "Mars",
+      "planned_shot_scale_proof_detail": "celestial size vs window frame",
+      "start_state_seed": "sky view",
+      "end_state_seed": "Mars centered",
+      "action_seed": "gazing",
+      "blocking_seed": [],
+      "shot_size": "wide",
+      "camera_angle": "eye_level",
+      "lens_family": "telephoto",
+      "camera_motion": "push_in",
+      "zoom_behavior": "subtle_in",
+      "focus_strategy": "environment_priority",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "climax/vision",
+      "planned_shot_moment_summary": "Vision of Dejah Thoris and Child",
+      "primary_subject_seed": "dej_thoris",
+      "secondary_subjects_seed": [
+        "The Child (Vision/Sensation)"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "study interior",
+      "planned_shot_required_anchor_1": "Carter's eyes",
+      "planned_shot_scale_proof_detail": "ethereal overlay vs physical room",
+      "start_state_seed": "Carter's gaze intensifies",
+      "end_state_seed": "vision fades into yearning",
+      "action_seed": "experiencing vision",
+      "blocking_seed": [
+        "overlaying Carter's field of view"
+      ],
+      "shot_size": "close_up",
+      "camera_angle": "eye_level",
+      "lens_family": "portrait",
+      "camera_motion": "push_in",
+      "zoom_behavior": "strong_in",
+      "focus_strategy": "rack_focus",
+      "lighting_style": "soft_even",
+      "primary_subject_angle": "front_three_quarter_left"
+    }
+  ],
+  "unresolved_questions": [
+    "Resolve The Child (Vision/Sensation) -> The Child (Vision/Sensation)"
+  ],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH028",
+      "scene_id": "CH028_SC005"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH028",
+      "scene_id": "CH028_SC005"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH028",
+      "scene_id": "CH028_SC005"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH028",
+      "scene_id": "CH028_SC005"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH028",
+      "scene_id": "CH028_SC005"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH028",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\02_story_analysis\\chapter_analysis\\CH028_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH028",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH028_chapter_xxviii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH011",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH011_chapter_xi.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH012",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH012_chapter_xii.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH028",
+      "canonical_id": "john_carter"
+    }
+  ],
+  "evidence_summary": [
+    "[CH028_SC005] Purpose: Provide the emotional climax and the supernatural/visionary connection to Mars.",
+    "[CH028_SC005] Summary: In his study overlooking the Hudson River, Carter gazes at Mars through his window. He experiences a profound vision or sensation of Dejah Thoris and a child, sensing their presence across the void.",
+    "[CH028_SC005] Emotional arc: Loneliness $\\rightarrow$ Spiritual Connection/Yearning.",
+    "[CH028_SC005] Coverage: Slow zooms on Carter's eyes. Soft-focus or ethereal overlays for the vision. Wide shots of the river and the night sky/Mars.",
+    "[CH028_SC005] Continuity: The visual appearance of Mars in the sky. Lighting within the study (moonlight vs. lamp light).",
+    "[CH028] Chapter summary: **Setting:** An Arizona cave (Earth) and a study overlooking the Hudson River (Earth). **Characters:** - **John Carter:** The protagonist, now living on Earth. - **The Mummified Woman:** A deceased figure found in the...",
+    "[CH028] CHAPTER XXVIII (book index hit)",
+    "[CH011] CHAPTER XI (book index hit)",
+    "[CH012] CHAPTER XII (book index hit)",
+    "Character john_carter: [source:C:/FilmCreator_MC/projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH011/john_carter.md] Physical Description: A human male from Earth (Virginia). He possesses the strength and physical capabiliti..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH028_SC005\n\n## Production Intent\nEstablish the protagonist's profound isolation on Earth through a visual and spiritual bridge to Mars. The scene must balance the grounded, quiet atmosphere of a Hudson River study with ethereal, supernatural overlays representing Dejah Thoris and the Child.\n\n## Required Cast\n- john_carter\n- dejah_thoris (Vision/Sensation)\n- The Child (Vision/Sensation)\n\n## Required Environments\n- hudson_river_study\n\n## Continuity Constraints\n- Visual appearance of Mars in the night sky.\n- Lighting balance between interior lamp light and exterior moonlight.\n\n## Beat List\n- BT001: Carter observes the Hudson River in solitude.\n- BT002: The sight of Mars triggers memory/longing.\n- BT003: Spiritual connection to Dejah Thoris and the Child.",
+  "metadata": {
+    "artifact_id": "CH028_SC005_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "2d1411e9979938593ebfac0a23f2bd21913177f1",
+    "created_at_utc": "2026-04-26T23:14:44.474471+00:00",
+    "updated_at_utc": "2026-04-26T23:14:44.474471+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH028_SC005",
+        "version": "6f38c7781359f68f2ee91885f7566b1334a09883"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH028_SC005",
+        "version": "afc64d0e050cb58c13916d5a6e198ab69fdc5381"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH028_SC005",
+        "version": "81f9298ca12917441cd07511e527621563d26a78"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-26T23:15:13.708472+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "2d1411e9979938593ebfac0a23f2bd21913177f1"
+      }
+    ]
+  }
+}

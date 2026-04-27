@@ -1,0 +1,350 @@
+{
+  "scene_id": "CH021_SC005",
+  "chapter_id": "CH021",
+  "scene_title": "SC005",
+  "purpose": "Action climax and demonstration of Carter's superhuman abilities.",
+  "summary": "While on a solo flight, Carter witnesses three Green Warriors attacking a Zodangan air scout (a relative of the Jeddak). Carter intervenes in the aerial combat, killing the warriors and saving the scout.",
+  "emotional_arc": "Observation $\\rightarrow$ High-stakes Action $\\rightarrow$ Triumph.",
+  "production_intent": "Demonstrate the superhuman physical capabilities of john_carter through high-velocity aerial combat. The sequence must emphasize the scale of the Martian atmosphere and the kinetic energy of mid-air interception to establish Carter as a dominant force in Zodangan airspace.",
+  "scene_short_description": "Aerial combat between warriors and a scout in the high Martian atmosphere.",
+  "scene_primary_scale_story_point": "Individual human strength vs. multiple aerial combatants.",
+  "scene_required_anchor_catalog": [
+    "zodangan_scout vessel",
+    "green_warriors vessels"
+  ],
+  "scene_start_state": "john_carter flying solo, observing the distant skirmish.",
+  "scene_end_state": "john_carter hovering near a rescued, damaged scout.",
+  "dominant_action_line": "Carter intercepts and eliminates three attackers to save a relative of the Jeddak.",
+  "scene_spatial_layout": [
+    "Open vertical airspace above Zodanga",
+    "High-altitude trajectory paths"
+  ],
+  "character_spatial_map": [
+    "john_carter: Interceptor/Mobile",
+    "green_warriors: Aggressors/Swarming",
+    "zodangan_scout: Target/Vulnerable"
+  ],
+  "environment_subzones": [
+    "upper_atmosphere",
+    "combat_skirmish_zone"
+  ],
+  "entry_vectors": [
+    "john_carter: High-speed intercept trajectory"
+  ],
+  "exit_vectors": [
+    "green_warriors: Defeated/Falling trajectories"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: Rapid acceleration into combat",
+    "BT002 -> BT003: Kinetic resolution of the fight"
+  ],
+  "characters_required": [
+    {
+      "label": "John Carter",
+      "canonical_id": "john_carter",
+      "display_name": "john_carter",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH021/john_carter.md",
+      "notes": "Direct registry match for 'john_carter'."
+    },
+    {
+      "label": "Green Warriors",
+      "canonical_id": "green_warriors",
+      "display_name": "green_warriors",
+      "status": "canonical",
+      "entity_kind": "group",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH021/green_warriors.md",
+      "notes": "Direct registry match for 'green_warriors'."
+    },
+    {
+      "label": "Zodangan Scout (Cousin)",
+      "canonical_id": "zodangan_scout",
+      "display_name": "zodangan_scout",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH021/zodangan_scout.md",
+      "notes": "Direct registry match for 'zodangan_scout'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "The Martian sky/atmosphere above Zodanga",
+      "canonical_id": "zodanga_central_plaza",
+      "display_name": "zodanga_central_plaza",
+      "status": "canonical",
+      "entity_kind": "plaza",
+      "resolution_score": 78,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH021/zodanga_central_plaza.md",
+      "notes": "Chapter-local environment alias match for 'The Martian sky/atmosphere above Zodanga' (key_overlap=1, label_overlap=3, context_overlap=4)."
+    }
+  ],
+  "continuity_constraints": [
+    "Flight trajectories of all four vessels",
+    "Damage states to the zodangan_scout vessel",
+    "Relative positioning of green_warriors to the scout"
+  ],
+  "visual_coverage_families": [
+    "Dynamic aerial combat shots",
+    "Fast-paced cutting",
+    "Close-ups of struggle and kill"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "Observation of the attack",
+      "purpose": "",
+      "action_start": "Carter flying solo",
+      "action_end": "Carter banking toward the fight",
+      "active_subjects": [
+        "john_carter"
+      ],
+      "passive_subjects": [
+        "green_warriors",
+        "zodangan_scout"
+      ],
+      "spatial_context": "upper_atmosphere above Zodanga",
+      "blocking_hint": "Carter moves from distance to mid-range",
+      "environment_subzone": "upper_atmosphere",
+      "continuity_focus": "Carter's flight speed and direction",
+      "coverage_hint": "wide aerial shot",
+      "coverage_priority": "medium",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "High-stakes combat intervention",
+      "purpose": "",
+      "action_start": "Carter enters the skirmish zone",
+      "action_end": "All three warriors are killed",
+      "active_subjects": [
+        "john_carter",
+        "green_warriors"
+      ],
+      "passive_subjects": [
+        "zodangan_scout"
+      ],
+      "spatial_context": "combat_skirmish_zone",
+      "blocking_hint": "Fast-paced interception and melee/impact maneuvers",
+      "environment_subzone": "combat_skirmish_zone",
+      "continuity_focus": "Warrior positions and vessel damage",
+      "coverage_hint": "fast-paced cutting, close-ups of struggle",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "Triumph and rescue",
+      "purpose": "",
+      "action_start": "Warriors fall away",
+      "action_end": "Carter stabilizes the scout",
+      "active_subjects": [
+        "john_carter",
+        "zodangan_scout"
+      ],
+      "passive_subjects": [
+        "green_warriors"
+      ],
+      "spatial_context": "combat_skirmish_zone",
+      "blocking_hint": "Carter pulls alongside the damaged vessel",
+      "environment_subzone": "combat_skirmish_zone",
+      "continuity_focus": "Damage to the scout's vessel",
+      "coverage_hint": "close-ups of relief/triumph",
+      "coverage_priority": "medium",
+      "handoff_to_next": "end_scene"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish observation",
+      "planned_shot_moment_summary": "Carter spots the attack from a distance",
+      "primary_subject_seed": "john_carter",
+      "secondary_subjects_seed": [
+        "green_warriors",
+        "zodangan_scout"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "upper_atmosphere",
+      "planned_shot_required_anchor_1": "zodangan_scout",
+      "planned_shot_scale_proof_detail": "distance between Carter and the skirmish",
+      "start_state_seed": "Carter flying steady",
+      "end_state_seed": "Carter banking toward combat",
+      "action_seed": "observing the fight",
+      "blocking_seed": [
+        "solo flight path"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "eye_level",
+      "lens_family": "wide",
+      "camera_motion": "track",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "profile_right"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "action climax",
+      "planned_shot_moment_summary": "Carter strikes the first warrior",
+      "primary_subject_seed": "john_carter",
+      "secondary_subjects_seed": [
+        "green_warriors"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "combat_skirmish_zone",
+      "planned_shot_required_anchor_1": "green_warriors vessels",
+      "planned_shot_scale_proof_detail": "impact force against vessel hulls",
+      "start_state_seed": "high-speed approach",
+      "end_state_seed": "warrior neutralized",
+      "action_seed": "intervening in combat",
+      "blocking_seed": [
+        "rapid interception"
+      ],
+      "shot_size": "medium_full",
+      "camera_angle": "low_angle",
+      "lens_family": "normal",
+      "camera_motion": "handheld",
+      "zoom_behavior": "subtle_in",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "high_contrast_ceremonial",
+      "primary_subject_angle": "front_three_quarter_left"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "resolution",
+      "planned_shot_moment_summary": "Carter secures the scout after the kill",
+      "primary_subject_seed": "zodangan_scout",
+      "secondary_subjects_seed": [
+        "john_carter"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "combat_skirmish_zone",
+      "planned_shot_required_anchor_1": "zodangan_scout vessel",
+      "planned_shot_scale_proof_detail": "damage to the scout's hull",
+      "start_state_seed": "warriors defeated",
+      "end_state_seed": "Carter stabilizes near scout",
+      "action_seed": "saving the scout",
+      "blocking_seed": [
+        "hovering proximity"
+      ],
+      "shot_size": "medium_close",
+      "camera_angle": "eye_level",
+      "lens_family": "portrait",
+      "camera_motion": "push_in",
+      "zoom_behavior": "none",
+      "focus_strategy": "rack_focus",
+      "lighting_style": "backlit",
+      "primary_subject_angle": "front"
+    }
+  ],
+  "unresolved_questions": [],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH021",
+      "scene_id": "CH021_SC005"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH021",
+      "scene_id": "CH021_SC005"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH021",
+      "scene_id": "CH021_SC005"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH021",
+      "scene_id": "CH021_SC005"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH021",
+      "scene_id": "CH021_SC005"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH021",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\02_story_analysis\\chapter_analysis\\CH021_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH021",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH021_chapter_xxi.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH022",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH022_chapter_xxii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH024",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH024_chapter_xxiv.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH021",
+      "canonical_id": "john_carter"
+    }
+  ],
+  "evidence_summary": [
+    "[CH021_SC005] Purpose: Action climax and demonstration of Carter's superhuman abilities.",
+    "[CH021_SC005] Summary: While on a solo flight, Carter witnesses three Green Warriors attacking a Zodangan air scout (a relative of the Jeddak). Carter intervenes in the aerial combat, killing the warriors and saving the scout.",
+    "[CH021_SC005] Emotional arc: Observation $\\rightarrow$ High-stakes Action $\\rightarrow$ Triumph.",
+    "[CH021_SC005] Coverage: Dynamic aerial combat shots; Fast-paced cutting; Close-ups of the struggle and the kill.",
+    "[CH021_SC005] Continuity: Flight trajectories; Damage to air vessels; Position of the Green Warriors relative to the scout.",
+    "[CH021] Chapter summary: **Setting:** The journey begins on the cultivated agricultural tracts between the polar ice caps and populated centers, moving toward the vast, walled city of Zodanga. The setting features advanced Martian infrastruct...",
+    "[CH021] CHAPTER XXI (book index hit)",
+    "[CH022] CHAPTER XXII (book index hit)",
+    "[CH024] CHAPTER XXIV (book index hit)",
+    "Character john_carter: [source:C:/FilmCreator_MC/projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH011/john_carter.md] Physical Description: A human male from Earth (Virginia). He possesses the strength and physical capabiliti..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH021_SC005\n\n## Production Intent\nDemonstrate the superhuman physical capabilities of john_carter through high-velocity aerial combat. The sequence must emphasize the scale of the Martian atmosphere and the kinetic energy of mid-air interception to establish Carter as a dominant force in Zodangan airspace.\n\n## Required Cast\n- john_carter\n- green_warriors\n- zodangan_scout\n\n## Required Environments\n- zodanga_central_plaza (upper_atmosphere)\n\n## Continuity Constraints\n- Flight trajectories of all four vessels\n- Damage states to the zodangan_scout vessel\n- Relative positioning of green_warriors to the scout\n\n## Beat List\n- BT001: Observation of the attack\n- BT002: High-stakes combat intervention\n- BT003: Triumph and rescue",
+  "metadata": {
+    "artifact_id": "CH021_SC005_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "c67de6c6da35b13b9f963d209642b19e9c07771b",
+    "created_at_utc": "2026-04-26T22:57:15.381355+00:00",
+    "updated_at_utc": "2026-04-26T22:57:15.381355+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH021_SC005",
+        "version": "f874e799e907b24c24bb18ab6a829ef9faeb6724"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH021_SC005",
+        "version": "98c10bb146169438b06dda9dbcff6cd0fcc38315"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH021_SC005",
+        "version": "548fa57d7dba0390b18677ecdff01f3b799a0e72"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-26T22:57:45.353226+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "c67de6c6da35b13b9f963d209642b19e9c07771b"
+      }
+    ]
+  }
+}

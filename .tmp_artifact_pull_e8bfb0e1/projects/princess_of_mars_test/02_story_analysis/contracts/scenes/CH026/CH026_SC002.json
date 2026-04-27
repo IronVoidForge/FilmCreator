@@ -1,0 +1,361 @@
+{
+  "scene_id": "CH026_SC002",
+  "chapter_id": "CH026",
+  "scene_title": "SC002",
+  "purpose": "To provide emotional payoff for the rescue and transition from sea to land combat.",
+  "summary": "Following the naval victory, John Carter transfers Princess Dejah Thoris to the Heliumite flagship. She is celebrated as a hero by her people. Amidst the celebration, Carter remains focused on the mission, deciding to stay with the Tharks to complete the land campaign rather than resting.",
+  "emotional_arc": "Relief/Joy $\\rightarrow$ Determination.",
+  "production_intent": "Establish the emotional resolution of the naval victory by reuniting Dejah Thoris with her people on the Heliumite flagship. The scene must transition from the high-energy relief of a successful rescue to the grounded, tactical determination of John Carter as he commits to the land campaign alongside the Tharks.",
+  "scene_short_description": "A celebratory reunion on a flagship deck overlooking a victorious naval fleet.",
+  "scene_primary_scale_story_point": "The scale shifts from the individual emotional reunion to the macro-scale of the impending land campaign.",
+  "scene_required_anchor_catalog": [
+    "Flagship railing",
+    "Thark vessel horizon"
+  ],
+  "scene_start_state": "Dejah Thoris is being transferred/received onto the deck amidst Heliumite celebration.",
+  "scene_end_state": "John Carter stands resolute, looking toward the land campaign objectives.",
+  "dominant_action_line": "The transfer of Princess Dejah Thoris and her subsequent reception by the Heliumite people.",
+  "scene_spatial_layout": [
+    "Open deck area for crowd/sailors",
+    "Railing edge overlooking the sea/fleet"
+  ],
+  "character_spatial_map": [
+    "dejah_thoris centered in the celebration zone",
+    "john_carter positioned near the transition to the Thark contingent",
+    "tars_tarkas standing as a looming presence near Carter"
+  ],
+  "environment_subzones": [
+    "Flagship Deck (Center)",
+    "Railing/Edge (Background)"
+  ],
+  "entry_vectors": [
+    "Dejah Thoris via transfer from sea vessel"
+  ],
+  "exit_vectors": [
+    "John Carter toward land campaign staging"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: Transition from physical transfer to emotional reception.",
+    "BT002 -> BT003: Shift from communal celebration to individual tactical focus."
+  ],
+  "characters_required": [
+    {
+      "label": "John Carter",
+      "canonical_id": "john_carter",
+      "display_name": "john_carter",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH026/john_carter.md",
+      "notes": "Direct registry match for 'john_carter'."
+    },
+    {
+      "label": "Dejah Thoris",
+      "canonical_id": "dejah_thoris",
+      "display_name": "dejah_thoris",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH026/dejah_thoris.md",
+      "notes": "Direct registry match for 'dejah_thoris'."
+    },
+    {
+      "label": "Tars Tarkas",
+      "canonical_id": "tars_tarkas",
+      "display_name": "tars_tarkas",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH026/tars_tarkas.md",
+      "notes": "Direct registry match for 'tars_tarkas'."
+    },
+    {
+      "label": "Heliumite Sailors",
+      "canonical_id": null,
+      "display_name": "Heliumite Sailors",
+      "status": "review",
+      "entity_kind": "individual",
+      "resolution_score": 10,
+      "source_path": "",
+      "notes": "Low-confidence character match requires review."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "The Heliumite Flagship (Deck)",
+      "canonical_id": null,
+      "display_name": "The Heliumite Flagship (Deck)",
+      "status": "review",
+      "entity_kind": "environment",
+      "resolution_score": 8,
+      "source_path": "",
+      "notes": "Low-confidence environment match requires review."
+    }
+  ],
+  "continuity_constraints": [
+    "Dejah Thoris physical state (transition from exhaustion to relief)",
+    "Visual presence of Thark fleet in background horizon"
+  ],
+  "visual_coverage_families": [
+    "Medium shots of the reunion",
+    "Close-ups of Dejah's emotional reaction",
+    "Low angle hero shots of Carter and Tars Tarkas"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "Transfer of Dejah Thoris to the flagship",
+      "purpose": "",
+      "action_start": "Dejah arrives on deck",
+      "action_end": "Dejah is surrounded by sailors",
+      "active_subjects": [
+        "dejah_thoris",
+        "Heliumite Sailors"
+      ],
+      "passive_subjects": [
+        "john_carter"
+      ],
+      "spatial_context": "Flagship Deck (Center)",
+      "blocking_hint": "Sailors create a receiving line",
+      "environment_subzone": "Flagship Deck (Center)",
+      "continuity_focus": "Dejah's exhaustion level",
+      "coverage_hint": "Medium shots of reunion",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "Celebration of the Princess",
+      "purpose": "",
+      "action_start": "Sailors cheer",
+      "action_end": "Dejah reacts to her people",
+      "active_subjects": [
+        "dejah_thoris",
+        "Heliumite Sailors"
+      ],
+      "passive_subjects": [
+        "john_carter",
+        "tars_tarkas"
+      ],
+      "spatial_context": "Flagship Deck (Center)",
+      "blocking_hint": "Crowd closes in around Dejah",
+      "environment_subzone": "Flagship Deck (Center)",
+      "continuity_focus": "Presence of Thark fleet in background",
+      "coverage_hint": "Close-ups of reaction",
+      "coverage_priority": "medium",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "Carter's tactical decision",
+      "purpose": "",
+      "action_start": "Carter observes the celebration",
+      "action_end": "Carter commits to the land campaign",
+      "active_subjects": [
+        "john_carter",
+        "tars_tarkas"
+      ],
+      "passive_subjects": [
+        "dejah_thoris",
+        "Heliumite Sailors"
+      ],
+      "spatial_context": "Flagship Deck (Center)",
+      "blocking_hint": "Carter and Tars Tarkas stand as observers/leaders",
+      "environment_subzone": "Flagship Deck (Center)",
+      "continuity_focus": "Visual link to Thark fleet",
+      "coverage_hint": "Low angle hero shots",
+      "coverage_priority": "high",
+      "handoff_to_next": "End of scene"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish reunion",
+      "planned_shot_moment_summary": "Dejah is brought onto the deck",
+      "primary_subject_seed": "dejah_thoris",
+      "secondary_subjects_seed": [
+        "Heliumite Sailors"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "Flagship Deck (Center)",
+      "planned_shot_required_anchor_1": "Flagship railing",
+      "planned_shot_scale_proof_detail": "Scale of ship vs person",
+      "start_state_seed": "Dejah stepping onto deck",
+      "end_state_seed": "Dejah standing amidst sailors",
+      "action_seed": "Transfer and greeting",
+      "blocking_seed": [
+        "Sailors forming a corridor"
+      ],
+      "shot_size": "medium_full",
+      "camera_angle": "eye_level",
+      "lens_family": "wide",
+      "camera_motion": "track",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "high_contrast_ceremonial",
+      "primary_subject_angle": "front_three_quarter_right"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "emotional payoff",
+      "planned_shot_moment_summary": "Close up of Dejah's relief",
+      "primary_subject_seed": "dejah_thoris",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "Flagship Deck (Center)",
+      "planned_shot_required_anchor_1": "None",
+      "planned_shot_scale_proof_detail": "Facial expression detail",
+      "start_state_seed": "Dejah looking around",
+      "end_state_seed": "Dejah smiling/crying",
+      "action_seed": "Emotional reaction to her people",
+      "blocking_seed": [
+        "Stationary in crowd"
+      ],
+      "shot_size": "close_up",
+      "camera_angle": "eye_level",
+      "lens_family": "portrait",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "subtle_in",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "soft_even",
+      "primary_subject_angle": "front"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "transition to mission",
+      "planned_shot_moment_summary": "Carter and Tars Tarkas deciding to stay",
+      "primary_subject_seed": "john_carter",
+      "secondary_subjects_seed": [
+        "tars_tarkas"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "Flagship Deck (Center)",
+      "planned_shot_required_anchor_1": "Thark vessel horizon",
+      "planned_shot_scale_proof_detail": "Low angle hero scale",
+      "start_state_seed": "Carter watching celebration",
+      "end_state_seed": "Carter turning toward the Tharks",
+      "action_seed": "Decision making/resolute stance",
+      "blocking_seed": [
+        "Carter and Tars Tarkas standing apart from crowd"
+      ],
+      "shot_size": "medium_full",
+      "camera_angle": "low_angle",
+      "lens_family": "wide",
+      "camera_motion": "push_in",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "backlit",
+      "primary_subject_angle": "front_three_quarter_left"
+    }
+  ],
+  "unresolved_questions": [
+    "Resolve Heliumite Sailors -> Heliumite Sailors",
+    "Resolve The Heliumite Flagship (Deck) -> The Heliumite Flagship (Deck)"
+  ],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH026",
+      "scene_id": "CH026_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH026",
+      "scene_id": "CH026_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH026",
+      "scene_id": "CH026_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH026",
+      "scene_id": "CH026_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH026",
+      "scene_id": "CH026_SC002"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH026",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\02_story_analysis\\chapter_analysis\\CH026_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH026",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH026_chapter_xxvi.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH024",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH024_chapter_xxiv.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH022",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH022_chapter_xxii.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH026",
+      "canonical_id": "john_carter"
+    }
+  ],
+  "evidence_summary": [
+    "[CH026_SC002] Purpose: To provide emotional payoff for the rescue and transition from sea to land combat.",
+    "[CH026_SC002] Summary: Following the naval victory, John Carter transfers Princess Dejah Thoris to the Heliumite flagship. She is celebrated as a hero by her people. Amidst the celebration, Carter remains focused on the mission, deciding to stay with the Th...",
+    "[CH026_SC002] Emotional arc: Relief/Joy $\\rightarrow$ Determination.",
+    "[CH026_SC002] Coverage: Medium shots of the reunion; Close-ups of Dejah's emotional reaction; Low angle hero shots of Carter and Tars Tarkas.",
+    "[CH026_SC002] Continuity: Dejah Thoris's physical condition (exhaustion vs. relief); The presence of the Thark fleet in the background.",
+    "[CH026] Chapter summary: **Events:** Following the total reduction of Zodanga, Tars Tarkas and Kantos Kan lead a fleet of Thark vessels and prisoners toward Helium. En route, they encounter a Zodangan fleet attempting to besiege Helium; a mas...",
+    "[CH026] CHAPTER XXVI (book index hit)",
+    "[CH024] CHAPTER XXIV (book index hit)",
+    "[CH022] CHAPTER XXII (book index hit)",
+    "Character john_carter: [source:C:/FilmCreator_MC/projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH011/john_carter.md] Physical Description: A human male from Earth (Virginia). He possesses the strength and physical capabiliti..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH026_SC002\n\n## Production Intent\nEstablish the emotional resolution of the naval victory by reuniting Dejah Thoris with her people on the Heliumite flagship. The scene must transition from the high-energy relief of a successful rescue to the grounded, tactical determination of John Carter as he commits to the land campaign alongside the Tharks.\n\n## Required Cast\n- john_carter\n- dejah_thoris\n- tars_tarkas\n- Heliumite Sailors\n\n## Required Environments\n- The Heliumite Flagship (Deck)\n\n## Continuity Constraints\n- Dejah Thoris physical condition (exhaustion vs. relief)\n- Presence of the Thark fleet in the background horizon\n\n## Beat List\n- BT001: Transfer of Dejah Thoris to the flagship\n- BT002: Celebration of the Princess\n- BT003: Carter's tactical decision",
+  "metadata": {
+    "artifact_id": "CH026_SC002_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "c0b0ef936e58fd7a2631a758bd036f77623c8155",
+    "created_at_utc": "2026-04-26T23:08:45.446615+00:00",
+    "updated_at_utc": "2026-04-26T23:08:45.446615+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH026_SC002",
+        "version": "4690e4b729f80c120dccb466da28147c49bb1de0"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH026_SC002",
+        "version": "e2238eb2fd880bdf090594e78d1088d63c24835a"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH026_SC002",
+        "version": "1ba5db9f5e62aedebbf72ff463d879a7081e5faa"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-26T23:09:16.819425+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "c0b0ef936e58fd7a2631a758bd036f77623c8155"
+      }
+    ]
+  }
+}

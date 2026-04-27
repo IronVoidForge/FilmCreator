@@ -1,0 +1,333 @@
+{
+  "scene_id": "CH027_SC004",
+  "chapter_id": "CH027",
+  "scene_title": "SC004",
+  "purpose": "Create a high-stakes race against time.",
+  "summary": "John Carter commandeers an air-scout machine. He strips it of all unnecessary weight to maximize speed and flies through the increasingly thin, turbulent atmosphere toward the plant.",
+  "emotional_arc": "Desperation $\\rightarrow$ Adrenaline/Focus.",
+  "production_intent": "Establish a high-velocity race against time through the physical degradation of an air-scout machine and the physiological struggle of the pilot. The sequence must convey increasing atmospheric thinning and turbulence via camera instability and rapid movement.",
+  "scene_short_description": "A stripped air-scout machine flies through turbulent, thinning atmosphere toward a distant plant.",
+  "scene_primary_scale_story_point": "Machine vs. vast, thinning atmospheric expanse.",
+  "scene_required_anchor_catalog": [
+    "Air-scout Machine cockpit",
+    "Thinning horizon line",
+    "Atmosphere Plant (distant target)"
+  ],
+  "scene_start_state": "John Carter frantically stripping weight from the air-scout machine.",
+  "scene_end_state": "High-speed flight through heavy turbulence toward the plant.",
+  "dominant_action_line": "Stripping the machine for speed and navigating turbulent, low-oxygen skies.",
+  "scene_spatial_layout": [
+    "Vertical ascent/descent within the sky over Barsoom",
+    "Cockpit interior vs. external atmospheric expanse"
+  ],
+  "character_spatial_map": [
+    "john_carter seated in Air-scout Machine cockpit"
+  ],
+  "environment_subzones": [
+    "primary scene playing area"
+  ],
+  "entry_vectors": [
+    "High-speed approach through the atmosphere"
+  ],
+  "exit_vectors": [
+    "Flight path toward the Atmosphere Plant"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: Rapid transition from mechanical prep to flight launch",
+    "BT002 -> BT003: Transition from ascent to high-speed atmospheric turbulence"
+  ],
+  "characters_required": [
+    {
+      "label": "John Carter",
+      "canonical_id": "john_carter",
+      "display_name": "john_carter",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH027/john_carter.md",
+      "notes": "Direct registry match for 'john_carter'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "The sky over Barsoom",
+      "canonical_id": null,
+      "display_name": "The sky over Barsoom",
+      "status": "review",
+      "entity_kind": "environment",
+      "resolution_score": 8,
+      "source_path": "",
+      "notes": "Low-confidence environment match requires review."
+    },
+    {
+      "label": "Air-scout Machine",
+      "canonical_id": null,
+      "display_name": "Air-scout Machine",
+      "status": "review",
+      "entity_kind": "environment",
+      "resolution_score": 8,
+      "source_path": "",
+      "notes": "Low-confidence environment match requires review."
+    }
+  ],
+  "continuity_constraints": [
+    "Machine must show progressively removed components/stripped weight",
+    "John Carter exhibits increasing respiratory struggle/difficulty breathing"
+  ],
+  "visual_coverage_families": [
+    "High-speed tracking shots of the machine",
+    "POV cockpit views of the thinning horizon",
+    "Shaky cam turbulence emphasis"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "Stripping the machine of weight",
+      "purpose": "",
+      "action_start": "John grabbing unnecessary parts",
+      "action_end": "Machine is visibly lighter/stripped",
+      "active_subjects": [
+        "john_carter"
+      ],
+      "passive_subjects": [
+        "Air-scout Machine"
+      ],
+      "spatial_context": "Cockpit area",
+      "blocking_hint": "John leaning over the machine frame",
+      "environment_subzone": "Air-scout Machine cockpit",
+      "continuity_focus": "Visible removal of parts",
+      "coverage_hint": "Medium close shots of hands/parts",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "Launch and acceleration",
+      "purpose": "",
+      "action_start": "Machine engages engines",
+      "action_end": "Machine reaches high velocity",
+      "active_subjects": [
+        "john_carter"
+      ],
+      "passive_subjects": [
+        "Air-scout Machine"
+      ],
+      "spatial_context": "The sky over Barsoom",
+      "blocking_hint": "Machine cutting through air",
+      "environment_subzone": "The sky over Barsoom",
+      "continuity_focus": "Speed increase",
+      "coverage_hint": "Wide tracking shots",
+      "coverage_priority": "medium",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "Navigating turbulence and thin air",
+      "purpose": "",
+      "action_start": "Atmosphere thins/turbulence begins",
+      "action_end": "John fighting for breath while flying",
+      "active_subjects": [
+        "john_carter"
+      ],
+      "passive_subjects": [
+        "Air-scout Machine"
+      ],
+      "spatial_context": "High altitude sky",
+      "blocking_hint": "John gripped to controls, body jolting",
+      "environment_subzone": "The sky over Barsoom",
+      "continuity_focus": "Increasing respiratory struggle",
+      "coverage_hint": "POV and shaky cam close-ups",
+      "coverage_priority": "high",
+      "handoff_to_next": "End of scene"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish urgency",
+      "planned_shot_moment_summary": "John Carter stripping parts from the machine",
+      "primary_subject_seed": "john_carter",
+      "secondary_subjects_seed": [
+        "Air-scout Machine components"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "Air-scout Machine cockpit",
+      "planned_shot_required_anchor_1": "Air-scout Machine cockpit",
+      "planned_shot_scale_proof_detail": "visible missing panels/parts",
+      "start_state_seed": "John grabbing a component",
+      "end_state_seed": "Component discarded",
+      "action_seed": "stripping weight",
+      "blocking_seed": [
+        "seated/leaning over machine"
+      ],
+      "shot_size": "medium_close",
+      "camera_angle": "eye_level",
+      "lens_family": "normal",
+      "camera_motion": "handheld",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "hard_directional",
+      "primary_subject_angle": "front_three_quarter_left"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "establish speed/scale",
+      "planned_shot_moment_summary": "Machine accelerating through the sky",
+      "primary_subject_seed": "Air-scout Machine",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "The sky over Barsoom",
+      "planned_shot_required_anchor_1": "Thinning horizon line",
+      "planned_shot_scale_proof_detail": "machine size relative to vast sky",
+      "start_state_seed": "Machine lifting off",
+      "end_state_seed": "Machine streaking away",
+      "action_seed": "rapid ascent",
+      "blocking_seed": [
+        "machine moving through frame"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "low_angle",
+      "lens_family": "ultra_wide",
+      "camera_motion": "track",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "profile_right"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "convey physiological struggle",
+      "planned_shot_moment_summary": "John Carter struggling to breathe in turbulence",
+      "primary_subject_seed": "john_carter",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "Air-scout Machine cockpit",
+      "planned_shot_required_anchor_1": "Air-scout Machine cockpit",
+      "planned_shot_scale_proof_detail": "John's labored breathing/chest movement",
+      "start_state_seed": "Turbulence hits",
+      "end_state_seed": "John gasping for air",
+      "action_seed": "fighting controls while gasping",
+      "blocking_seed": [
+        "seated",
+        "gripped to controls"
+      ],
+      "shot_size": "close_up",
+      "camera_angle": "dutch",
+      "lens_family": "portrait",
+      "camera_motion": "handheld",
+      "zoom_behavior": "subtle_in",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "high_contrast_ceremonial",
+      "primary_subject_angle": "front"
+    }
+  ],
+  "unresolved_questions": [
+    "Resolve The sky over Barsoom -> The sky over Barsoom",
+    "Resolve Air-scout Machine -> Air-scout Machine"
+  ],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH027",
+      "scene_id": "CH027_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH027",
+      "scene_id": "CH027_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH027",
+      "scene_id": "CH027_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH027",
+      "scene_id": "CH027_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH027",
+      "scene_id": "CH027_SC004"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH027",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\02_story_analysis\\chapter_analysis\\CH027_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH021",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH021_chapter_xxi.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH023",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH023_chapter_xxiii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH027",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH027_chapter_xxvii.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH027",
+      "canonical_id": "john_carter"
+    }
+  ],
+  "evidence_summary": [
+    "[CH027_SC004] Purpose: Create a high-stakes race against time.",
+    "[CH027_SC004] Summary: John Carter commandeers an air-scout machine. He strips it of all unnecessary weight to maximize speed and flies through the increasingly thin, turbulent atmosphere toward the plant.",
+    "[CH027_SC004] Emotional arc: Desperation $\\rightarrow$ Adrenaline/Focus.",
+    "[CH027_SC004] Coverage: High-speed tracking shots of the machine. POV shots from the cockpit looking at the thinning horizon. Shaky cam to emphasize the turbulence and speed.",
+    "[CH027_SC004] Continuity: The physical state of the machine (stripped parts) and John's increasing struggle to breathe while flying.",
+    "[CH027] Chapter summary: **Setting:** The city of Helium (Palace gardens and council chambers) and the Atmosphere Plant. **Characters:** * **John Carter:** Prince of Helium, driven by love for Dejah Thoris to save the planet. * **Dejah Thoris...",
+    "[CH021] CHAPTER XXI (book index hit)",
+    "[CH023] CHAPTER XXIII (book index hit)",
+    "[CH027] CHAPTER XXVII (book index hit)",
+    "Character john_carter: [source:C:/FilmCreator_MC/projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH011/john_carter.md] Physical Description: A human male from Earth (Virginia). He possesses the strength and physical capabiliti..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH027_SC004\n\n## Production Intent\nEstablish a high-velocity race against time through the physical degradation of an air-scout machine and the physiological struggle of the pilot. The sequence must convey increasing atmospheric thinning and turbulence via camera instability and rapid movement.\n\n## Required Cast\n- john_carter\n\n## Required Environments\n- Air-scout Machine cockpit\n- The sky over Barsoom (turbulent layer)\n\n## Continuity Constraints\n- Machine must show progressively removed components/stripped weight\n- John Carter exhibits increasing respiratory struggle/difficulty breathing\n\n## Beat List\n- BT001: Stripping the machine of weight\n- BT002: Launch and acceleration\n- BT003: Navigating turbulence and thin air",
+  "metadata": {
+    "artifact_id": "CH027_SC004_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "cf9ebac316ae48c9cb853af211fb4698de0af46d",
+    "created_at_utc": "2026-04-26T23:11:52.851460+00:00",
+    "updated_at_utc": "2026-04-26T23:11:52.851460+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH027_SC004",
+        "version": "87597be5aa45c85394e60ef4d3f5f76d94764712"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH027_SC004",
+        "version": "c9cabaf9170080c1bca9ef6151a04185c9fcc7ad"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH027_SC004",
+        "version": "ea666626759ce2b080c13a981682603d9f38b143"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-26T23:12:21.466581+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "cf9ebac316ae48c9cb853af211fb4698de0af46d"
+      }
+    ]
+  }
+}

@@ -1,0 +1,334 @@
+{
+  "scene_id": "CH022_SC003",
+  "chapter_id": "CH022",
+  "scene_title": "SC003",
+  "purpose": "To provide the emotional climax and establish the tragic social barriers preventing the protagonists' union.",
+  "summary": "Carter finds Dejah Thoris. Though she recognizes him and loves him, she explains that Barsoomian custom makes her vow to Sab Than binding. She informs him that he cannot marry her while Sab lives, nor can he wed a man who kills her husband.",
+  "emotional_arc": "Aggression/Urgency $\\rightarrow$ Despair/Tragic Resignation.",
+  "production_intent": "Establish the insurmountable social and legal barriers between the protagonists through a high-stakes emotional confrontation in a private palace setting. The scene must transition from the physical intensity of recent combat to the heavy, static weight of tragic realization.",
+  "scene_short_description": "A wounded man finds a woman in a private palace corridor, only to be met with tragic news.",
+  "scene_primary_scale_story_point": "The individual desire of the protagonists is crushed by the weight of Barsoomian custom and law.",
+  "scene_required_anchor_catalog": [
+    "zodanga_palace_interior antechamber threshold",
+    "private corridor wall"
+  ],
+  "scene_start_state": "john_carter enters with high urgency, physically marked by combat.",
+  "scene_end_state": "A heavy, static silence of resignation between the two characters.",
+  "dominant_action_line": "The confrontation shifts from a desperate reunion to a realization of legal impossibility.",
+  "scene_spatial_layout": [
+    "Narrow corridor proximity forcing close physical interaction",
+    "Private antechamber boundary defining the isolation"
+  ],
+  "character_spatial_map": [
+    "john_carter positioned as the intruder/seeker",
+    "dejah_thoris positioned as the stationary emotional center"
+  ],
+  "environment_subzones": [
+    "zodanga_palace_interior private corridors",
+    "zodanga_palace_interior antechamber area"
+  ],
+  "entry_vectors": [
+    "corridor entrance (john_carter)"
+  ],
+  "exit_vectors": [
+    "corridor exit (implied)"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: Physical urgency collapses into emotional shock",
+    "BT002 -> BT003: Recognition turns into the delivery of tragic law"
+  ],
+  "characters_required": [
+    {
+      "label": "John Carter",
+      "canonical_id": "john_carter",
+      "display_name": "john_carter",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH022/john_carter.md",
+      "notes": "Direct registry match for 'john_carter'."
+    },
+    {
+      "label": "Dejah Thoris",
+      "canonical_id": "dejah_thoris",
+      "display_name": "dejah_thoris",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH022/dejah_thoris.md",
+      "notes": "Direct registry match for 'dejah_thoris'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "Palace corridors/private area near the antechamber",
+      "canonical_id": "zodanga_palace_interior",
+      "display_name": "zodanga_palace_interior",
+      "status": "canonical",
+      "entity_kind": "sub_location",
+      "resolution_score": 84,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH022/zodanga_palace_interior.md",
+      "notes": "Chapter-local environment alias match for 'Palace corridors/private area near the antechamber' (key_overlap=1, label_overlap=3, context_overlap=3)."
+    }
+  ],
+  "continuity_constraints": [
+    "john_carter physical condition: sweat and blood from recent fight",
+    "dejah_thoris emotional state: tearful makeup and facial distress"
+  ],
+  "visual_coverage_families": [
+    "Two-shots (emotional connection)",
+    "Tight Close-ups (facial expressions of grief and longing)",
+    "Medium shots (body language/distance between them)"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "Carter finds Dejah Thoris through urgency and aggression",
+      "purpose": "",
+      "action_start": "Carter enters corridor",
+      "action_end": "Carter stops before Dejah",
+      "active_subjects": [
+        "john_carter"
+      ],
+      "passive_subjects": [
+        "dejah_thoris"
+      ],
+      "spatial_context": "zodanga_palace_interior private corridors",
+      "blocking_hint": "Carter moves aggressively toward the center of the frame",
+      "environment_subzone": "private corridors",
+      "continuity_focus": "blood/sweat on Carter",
+      "coverage_hint": "medium_full",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "Recognition and emotional connection",
+      "purpose": "",
+      "action_start": "Eye contact established",
+      "action_end": "Tears begin to fall",
+      "active_subjects": [
+        "john_carter",
+        "dejah_thoris"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "antechamber area",
+      "blocking_hint": "Characters close together in a two-shot",
+      "environment_subzone": "antechamber area",
+      "continuity_focus": "tearful makeup on Dejah",
+      "coverage_hint": "two_shot",
+      "coverage_priority": "medium",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "The tragic revelation of Barsoomian custom",
+      "purpose": "",
+      "action_start": "Dejah begins speaking",
+      "action_end": "The realization of the barrier sinks in",
+      "active_subjects": [
+        "dejah_thoris"
+      ],
+      "passive_subjects": [
+        "john_carter"
+      ],
+      "spatial_context": "antechamber area",
+      "blocking_hint": "Tight close-ups on Dejah's face as she speaks",
+      "environment_subzone": "antechamber area",
+      "continuity_focus": "Dejah's emotional distress",
+      "coverage_hint": "close_up",
+      "coverage_priority": "high",
+      "handoff_to_next": "end_scene"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish arrival",
+      "planned_shot_moment_summary": "Carter bursts into view, breathless and bloodied",
+      "primary_subject_seed": "john_carter",
+      "secondary_subjects_seed": [
+        "dejah_thoris"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "zodanga_palace_interior private corridors",
+      "planned_shot_required_anchor_1": "corridor entrance",
+      "planned_shot_scale_proof_detail": "height of doorway vs character",
+      "start_state_seed": "motion/entry",
+      "end_state_seed": "sudden halt",
+      "action_seed": "Carter rushes toward Dejah",
+      "blocking_seed": [
+        "Carter moves from corridor into frame"
+      ],
+      "shot_size": "medium_full",
+      "camera_angle": "eye_level",
+      "lens_family": "wide",
+      "camera_motion": "track",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "low_key_night",
+      "primary_subject_angle": "front_three_quarter_right"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "emotional connection",
+      "planned_shot_moment_summary": "The look of recognition and shared love",
+      "primary_subject_seed": "dejah_thoris",
+      "secondary_subjects_seed": [
+        "john_carter"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "zodanga_palace_interior antechamber area",
+      "planned_shot_required_anchor_1": "antechamber threshold",
+      "planned_shot_scale_proof_detail": "distance between faces",
+      "start_state_seed": "eye contact",
+      "end_state_seed": "tears forming",
+      "action_seed": "Dejah recognizes Carter and reacts with love/fear",
+      "blocking_seed": [
+        "Two-shot",
+        "characters close together"
+      ],
+      "shot_size": "two_shot",
+      "camera_angle": "eye_level",
+      "lens_family": "normal",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "subtle_in",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "soft_even",
+      "primary_subject_angle": "front"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "climax/revelation",
+      "planned_shot_moment_summary": "Dejah explains the binding vow to Sab Than",
+      "primary_subject_seed": "dejah_thoris",
+      "secondary_subjects_seed": [
+        "john_carter"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "zodanga_palace_interior antechamber area",
+      "planned_shot_required_anchor_1": "private corridor wall",
+      "planned_shot_scale_proof_detail": "tightness of frame vs character isolation",
+      "start_state_seed": "speaking",
+      "end_state_seed": "silence/despair",
+      "action_seed": "Dejah delivers the news of the custom",
+      "blocking_seed": [
+        "Tight close-ups on faces"
+      ],
+      "shot_size": "close_up",
+      "camera_angle": "eye_level",
+      "lens_family": "portrait",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "high_contrast_ceremonial",
+      "primary_subject_angle": "profile_left"
+    }
+  ],
+  "unresolved_questions": [],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH022",
+      "scene_id": "CH022_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH022",
+      "scene_id": "CH022_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH022",
+      "scene_id": "CH022_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH022",
+      "scene_id": "CH022_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH022",
+      "scene_id": "CH022_SC003"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH022",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\02_story_analysis\\chapter_analysis\\CH022_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH022",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH022_chapter_xxii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH011",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH011_chapter_xi.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH023",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH023_chapter_xxiii.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH022",
+      "canonical_id": "john_carter"
+    }
+  ],
+  "evidence_summary": [
+    "[CH022_SC003] Purpose: To provide the emotional climax and establish the tragic social barriers preventing the protagonists' union.",
+    "[CH022_SC003] Summary: Carter finds Dejah Thoris. Though she recognizes him and loves him, she explains that Barsoomian custom makes her vow to Sab Than binding. She informs him that he cannot marry her while Sab lives, nor can he wed a man who kills her hu...",
+    "[CH022_SC003] Emotional arc: Aggression/Urgency $\\rightarrow$ Despair/Tragic Resignation.",
+    "[CH022_SC003] Coverage: Two-shots (emotional connection) Tight Close-ups (facial expressions of grief and longing) Medium shots (body language/distance between them)",
+    "[CH022_SC003] Continuity: Dejah Thoris's emotional state (tears/makeup); Carter's physical condition (sweat/blood from the fight).",
+    "[CH022] Chapter summary: **Setting:** The palace of Zodanga, specifically the private apartments of Jeddak Than Kosis, winding corridors, antechambers, and a great hall with a balcony overlooking a Zodangan avenue. **Characters:** * **John Ca...",
+    "[CH022] CHAPTER XXII (book index hit)",
+    "[CH011] CHAPTER XI (book index hit)",
+    "[CH023] CHAPTER XXIII (book index hit)",
+    "Character john_carter: [source:C:/FilmCreator_MC/projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH011/john_carter.md] Physical Description: A human male from Earth (Virginia). He possesses the strength and physical capabiliti..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH022_SC003\n\n## Production Intent\nEstablish the insurmountable social and legal barriers between the protagonists through a high-stakes emotional confrontation in a private palace setting. The scene must transition from the physical intensity of recent combat to the heavy, static weight of tragic realization.\n\n## Required Cast\n- john_carter (Physical: sweat/blood)\n- dejah_thoris (Emotional: tears/makeup)\n\n## Required Environments\n- zodanga_palace_interior (Private corridors and antechamber area)\n\n## Continuity Constraints\n- Carter must maintain physical signs of combat (sweat/blood).\n- Dejah Thoris must maintain tearful makeup state.\n\n## Beat List\n- BT001: Carter finds Dejah Thoris through urgency and aggression.\n- BT002: Recognition and emotional connection between the two.\n- BT003: The tragic revelation of Barsoomian custom preventing their union.",
+  "metadata": {
+    "artifact_id": "CH022_SC003_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "a49e48bda863a28318c487f3fadfdd5dc1f0ef1c",
+    "created_at_utc": "2026-04-26T22:59:17.676215+00:00",
+    "updated_at_utc": "2026-04-26T22:59:17.676215+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH022_SC003",
+        "version": "200ab73b3b0738537086abc3ff6873558c488f94"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH022_SC003",
+        "version": "5d04a90588c9164b50f69e50bd8331b575db184b"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH022_SC003",
+        "version": "d368473f58e207b029d08abe2d734ba67893dd35"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-26T22:59:49.022475+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "a49e48bda863a28318c487f3fadfdd5dc1f0ef1c"
+      }
+    ]
+  }
+}

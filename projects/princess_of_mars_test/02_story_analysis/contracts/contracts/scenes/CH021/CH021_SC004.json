@@ -1,0 +1,357 @@
+{
+  "scene_id": "CH021_SC004",
+  "chapter_id": "CH021",
+  "scene_title": "SC004",
+  "purpose": "Montage/Training sequence to establish Carter's new identity and skill set.",
+  "summary": "Under the alias \"John Carter,\" facilitated by Kantos Kan, Carter undergoes training as a Zodangan air scout. He spends several days mastering Martian aviation and the mechanics of the eighth-ray propulsion systems.",
+  "emotional_arc": "Focus $\\rightarrow$ Competence/Mastery.",
+  "production_intent": "A multi-day training montage documenting the transition of john_carter from an outsider to a proficient Zodangan air scout. The sequence must visually communicate technical mastery of eighth-ray propulsion and Martian aviation through repetitive, escalating skill demonstrations.",
+  "scene_short_description": "A montage of technical training involving Martian aviation mechanics and air vessel operation.",
+  "scene_primary_scale_story_point": "Human scale interaction with large-scale eighth-ray propulsion machinery.",
+  "scene_required_anchor_catalog": [
+    "eighth-ray propulsion system",
+    "Air vessel control console"
+  ],
+  "scene_start_state": "john_carter observing the mechanics of an air vessel with intense focus.",
+  "scene_end_state": "john_carter executing a complex aerial maneuver with practiced ease.",
+  "dominant_action_line": "Mastering the mechanical and pilotage requirements of Zodangan flight.",
+  "scene_spatial_layout": [
+    "Grounded training zones for mechanical study",
+    "Elevated cockpit environments for flight execution"
+  ],
+  "character_spatial_map": [
+    "john_carter positioned at control interfaces or near propulsion hardware",
+    "kantos_kan positioned as an observer/instructor overlooking the trainee"
+  ],
+  "environment_subzones": [
+    "zodangan_aviation_training_grounds (ground level)",
+    "Air vessels (cockpit/flight deck)"
+  ],
+  "entry_vectors": [
+    "ground access to training grounds",
+    "boarding air vessels"
+  ],
+  "exit_vectors": [
+    "descent from air vessels"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: Time jump via weather shift",
+    "BT002 -> BT003: Progression of physical exertion",
+    "BT003 -> BT004: Transition from ground study to flight mastery"
+  ],
+  "characters_required": [
+    {
+      "label": "John Carter",
+      "canonical_id": "john_carter",
+      "display_name": "john_carter",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH021/john_carter.md",
+      "notes": "Direct registry match for 'john_carter'."
+    },
+    {
+      "label": "Kantos Kan (mentor/facilitator)",
+      "canonical_id": "kantos_kan",
+      "display_name": "kantos_kan",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH021/kantos_kan.md",
+      "notes": "Direct registry match for 'kantos_kan'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "Zodangan naval training grounds",
+      "canonical_id": "zodangan_aviation_training_grounds",
+      "display_name": "zodangan_aviation_training_grounds",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 126,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH021/zodangan_aviation_training_grounds.md",
+      "notes": "Chapter-local environment alias match for 'Zodangan naval training grounds' (key_overlap=3, label_overlap=3, context_overlap=4)."
+    },
+    {
+      "label": "Air vessels",
+      "canonical_id": null,
+      "display_name": "Air vessels",
+      "status": "review",
+      "entity_kind": "environment",
+      "resolution_score": 8,
+      "source_path": "",
+      "notes": "Low-confidence environment match requires review."
+    }
+  ],
+  "continuity_constraints": [
+    "Progression of john_carter physical fatigue (sweat, grime, posture)",
+    "Shifting weather and sky conditions across training days"
+  ],
+  "visual_coverage_families": [
+    "Action montage shots",
+    "Close-ups of machinery and controls",
+    "POV shots from the air vessels"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "Mechanical study of eighth-ray systems",
+      "purpose": "",
+      "action_start": "Carter observing the propulsion unit",
+      "action_end": "Carter grasping a tool",
+      "active_subjects": [
+        "john_carter",
+        "kantos_kan"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "zodangan_aviation_training_grounds",
+      "blocking_hint": "Carter hunched over the machine; Kantos standing nearby",
+      "environment_subzone": "zodangan_aviation_training_grounds",
+      "continuity_focus": "Clean clothes, fresh appearance",
+      "coverage_hint": "Close-ups of machinery",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "Repetitive mechanical adjustment montage",
+      "purpose": "",
+      "action_start": "Hands turning dials",
+      "action_end": "Carter wiping sweat from brow",
+      "active_subjects": [
+        "john_carter"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "Air vessels",
+      "blocking_hint": "Carter seated in cockpit",
+      "environment_subzone": "Air vessels",
+      "continuity_focus": "Increasing grime/sweat; changing sky light",
+      "coverage_hint": "Close-ups of controls",
+      "coverage_priority": "medium",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "Physical exhaustion during training",
+      "purpose": "",
+      "action_start": "Carter struggling with a heavy component",
+      "action_end": "Carter breathing heavily",
+      "active_subjects": [
+        "john_carter"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "zodangan_aviation_training_grounds",
+      "blocking_hint": "Carter on the ground near vessels",
+      "environment_subzone": "zodangan_aviation_training_grounds",
+      "continuity_focus": "High fatigue; weathered skin/clothing",
+      "coverage_hint": "Medium shots of Carter",
+      "coverage_priority": "medium",
+      "handoff_to_next": "BT004"
+    },
+    {
+      "beat_id": "BT004",
+      "summary": "Successful flight execution",
+      "purpose": "",
+      "action_start": "Carter gripping controls firmly",
+      "action_end": "Vessel leveling out in flight",
+      "active_subjects": [
+        "john_carter"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "Air vessels",
+      "blocking_hint": "Carter centered in cockpit",
+      "environment_subzone": "Air vessels",
+      "continuity_focus": "Mastery expressed through calm posture; clear skies",
+      "coverage_hint": "POV and action montage",
+      "coverage_priority": "high",
+      "handoff_to_next": "END"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish technical focus",
+      "planned_shot_moment_summary": "Carter studying the eighth-ray mechanics",
+      "primary_subject_seed": "john_carter",
+      "secondary_subjects_seed": [
+        "kantos_kan"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "zodangan_aviation_training_grounds",
+      "planned_shot_required_anchor_1": "eighth-ray propulsion system",
+      "planned_shot_scale_proof_detail": "hand size vs ray component",
+      "start_state_seed": "Carter staring at hardware",
+      "end_state_seed": "Carter touching a lever",
+      "action_seed": "studying mechanics",
+      "blocking_seed": [
+        "Carter leaning over machinery"
+      ],
+      "shot_size": "medium_close",
+      "camera_angle": "eye_level",
+      "lens_family": "normal",
+      "camera_motion": "push_in",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front_three_quarter_right"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "show mechanical complexity",
+      "planned_shot_moment_summary": "Close up of hands adjusting controls",
+      "primary_subject_seed": "hands",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "Air vessels",
+      "planned_shot_required_anchor_1": "Air vessel control console",
+      "planned_shot_scale_proof_detail": "fingers on dials",
+      "start_state_seed": "hand reaching for dial",
+      "end_state_seed": "dial clicking into place",
+      "action_seed": "adjusting propulsion settings",
+      "blocking_seed": [
+        "Carter's hands in frame"
+      ],
+      "shot_size": "insert_detail",
+      "camera_angle": "eye_level",
+      "lens_family": "macro",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "hard_directional",
+      "primary_subject_angle": "front"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT004",
+      "narrative_function": "demonstrate mastery",
+      "planned_shot_moment_summary": "POV of flight through clouds",
+      "primary_subject_seed": "sky",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "Air vessels",
+      "planned_shot_required_anchor_1": "Air vessel control console",
+      "planned_shot_scale_proof_detail": "horizon line vs cockpit edge",
+      "start_state_seed": "view of ground",
+      "end_state_seed": "view of sky/clouds",
+      "action_seed": "banking the vessel",
+      "blocking_seed": [
+        "POV from pilot seat"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "eye_level",
+      "lens_family": "ultra_wide",
+      "camera_motion": "track",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "backlit",
+      "primary_subject_angle": "front"
+    }
+  ],
+  "unresolved_questions": [
+    "Resolve Air vessels -> Air vessels"
+  ],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH021",
+      "scene_id": "CH021_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH021",
+      "scene_id": "CH021_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH021",
+      "scene_id": "CH021_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH021",
+      "scene_id": "CH021_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH021",
+      "scene_id": "CH021_SC004"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH021",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\02_story_analysis\\chapter_analysis\\CH021_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH021",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH021_chapter_xxi.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH022",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH022_chapter_xxii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH013",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH013_chapter_xiii.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH021",
+      "canonical_id": "john_carter"
+    }
+  ],
+  "evidence_summary": [
+    "[CH021_SC004] Purpose: Montage/Training sequence to establish Carter's new identity and skill set.",
+    "[CH021_SC004] Summary: Under the alias \"John Carter,\" facilitated by Kantos Kan, Carter undergoes training as a Zodangan air scout. He spends several days mastering Martian aviation and the mechanics of the eighth-ray propulsion systems.",
+    "[CH021_SC004] Emotional arc: Focus $\\rightarrow$ Competence/Mastery.",
+    "[CH021_SC004] Coverage: Action montage shots; Close-ups of machinery and controls; POV shots from the air vessels.",
+    "[CH021_SC004] Continuity: Progression of Carter's physical fatigue; Weather/sky conditions across the training days.",
+    "[CH021] Chapter summary: **Setting:** The journey begins on the cultivated agricultural tracts between the polar ice caps and populated centers, moving toward the vast, walled city of Zodanga. The setting features advanced Martian infrastruct...",
+    "[CH021] CHAPTER XXI (book index hit)",
+    "[CH022] CHAPTER XXII (book index hit)",
+    "[CH013] CHAPTER XIII (book index hit)",
+    "Character john_carter: [source:C:/FilmCreator_MC/projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH011/john_carter.md] Physical Description: A human male from Earth (Virginia). He possesses the strength and physical capabiliti..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH021_SC004\n\n## Production Intent\nA multi-day training montage documenting the transition of john_carter from an outsider to a proficient Zodangan air scout. The sequence must visually communicate technical mastery of eighth-ray propulsion and Martian aviation through repetitive, escalating skill demonstrations.\n\n## Required Cast\n- john_carter\n- kantos_kan\n\n## Required Environments\n- zodangan_aviation_training_grounds\n- Air vessels\n\n## Continuity Constraints\n- Progression of john_carter physical fatigue (sweat, grime, posture)\n- Shifting weather and sky conditions across training days\n\n## Beat List\n- BT001: Mechanical study of eighth-ray systems\n- BT002: Repetitive mechanical adjustment montage\n- BT003: Physical exhaustion during training\n- BT004: Successful flight execution",
+  "metadata": {
+    "artifact_id": "CH021_SC004_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "0334d2d3db2429a9e71954caae16e900e02bfb86",
+    "created_at_utc": "2026-04-26T22:56:44.387552+00:00",
+    "updated_at_utc": "2026-04-26T22:56:44.387552+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH021_SC004",
+        "version": "c116cc409b62d8d7e8ef78c6d0c82abc2f22e8b7"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH021_SC004",
+        "version": "d5409ce745fafc60d925c5d8128c8cee04967b0c"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH021_SC004",
+        "version": "a63848636c1bfc604f4d432e5a30808bf9c48f06"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-26T22:57:15.320699+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "0334d2d3db2429a9e71954caae16e900e02bfb86"
+      }
+    ]
+  }
+}

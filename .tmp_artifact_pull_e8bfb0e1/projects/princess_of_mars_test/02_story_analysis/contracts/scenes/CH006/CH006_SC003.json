@@ -1,0 +1,334 @@
+{
+  "scene_id": "CH006_SC003",
+  "chapter_id": "CH006",
+  "scene_title": "SC003",
+  "purpose": "To demonstrate the protagonist's tactical intelligence over brute strength.",
+  "summary": "Enraged by its mate's death, the second bull ape charges. The protagonist uses Earthly combat tactics\u2014combining projectile use of the cudgel with precise hand-to-hand strikes\u2014to overcome and kill the massive creature.",
+  "emotional_arc": "High Tension $\\rightarrow$ Exhausted Victory.",
+  "production_intent": "A high-stakes combat sequence demonstrating tactical superiority through movement and projectile use. The protagonist must leverage agility and Earthly fighting techniques to neutralize a much larger, enraged adversary within the confines of a Martian interior chamber.",
+  "scene_short_description": "A small agile fighter uses a cudgel and hand-to-hand combat to kill a massive charging ape.",
+  "scene_primary_scale_story_point": "Massive Bull Ape 2 vs. agile, smaller protagonist.",
+  "scene_required_anchor_catalog": [
+    "martian_interior_chamber floor",
+    "cudgel"
+  ],
+  "scene_start_state": "Bull Ape 2 charges in an enraged state toward the protagonist.",
+  "scene_end_state": "Protagonist stands over the dead Bull Ape 2, physically exhausted.",
+  "dominant_action_line": "Tactical combat involving projectile weapon use and precise hand-to-hand strikes.",
+  "scene_spatial_layout": [
+    "Open floor area within martian_interior_chamber",
+    "Verticality provided by chamber architecture"
+  ],
+  "character_spatial_map": [
+    "protagonist: mobile, utilizing agility to evade",
+    "Bull Ape 2: charging, occupying large central volume"
+  ],
+  "environment_subzones": [
+    "combat_floor",
+    "chamber_perimeter"
+  ],
+  "entry_vectors": [
+    "Bull Ape 2: direct charge from perimeter"
+  ],
+  "exit_vectors": [
+    "None (combat concludes in situ)"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: The projectile impact triggers the close-quarters engagement.",
+    "BT002 -> BT003: The final strike leads to the collapse of the creature."
+  ],
+  "characters_required": [
+    {
+      "label": "The Protagonist",
+      "canonical_id": "protagonist",
+      "display_name": "protagonist",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH006/protagonist.md",
+      "notes": "Direct registry match for 'protagonist'."
+    },
+    {
+      "label": "Bull Ape 2",
+      "canonical_id": null,
+      "display_name": "Bull Ape 2",
+      "status": "review",
+      "entity_kind": "individual",
+      "resolution_score": 10,
+      "source_path": "",
+      "notes": "Low-confidence character match requires review."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "Interior chamber",
+      "canonical_id": "martian_interior_chamber",
+      "display_name": "martian_interior_chamber",
+      "status": "canonical",
+      "entity_kind": "sub_location",
+      "resolution_score": 104,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH006/martian_interior_chamber.md",
+      "notes": "Chapter-local environment alias match for 'Interior chamber' (key_overlap=2, label_overlap=2, context_overlap=4)."
+    }
+  ],
+  "continuity_constraints": [
+    "Cudgel trajectory and reuse",
+    "Protagonist physical exhaustion/injury levels"
+  ],
+  "visual_coverage_families": [
+    "Medium shots tracking movement",
+    "Wide shots for scale comparison",
+    "Close-ups of tactical strikes"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "The Charge",
+      "purpose": "",
+      "action_start": "Bull Ape 2 rages",
+      "action_end": "Bull Ape 2 enters striking distance",
+      "active_subjects": [
+        "Bull Ape 2"
+      ],
+      "passive_subjects": [
+        "protagonist"
+      ],
+      "spatial_context": "combat_floor",
+      "blocking_hint": "Ape moves from chamber perimeter toward center",
+      "environment_subzone": "combat_floor",
+      "continuity_focus": "ape size relative to room",
+      "coverage_hint": "wide shot",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "Tactical Engagement",
+      "purpose": "",
+      "action_start": "Protagonist throws cudgel",
+      "action_end": "Protagonist engages in hand-to-hand strikes",
+      "active_subjects": [
+        "protagonist",
+        "Bull Ape 2"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "combat_floor",
+      "blocking_hint": "Protagonist uses agility to dodge and strike",
+      "environment_subzone": "combat_floor",
+      "continuity_focus": "cudgel trajectory/location",
+      "coverage_hint": "medium tracking shots",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "The Kill",
+      "purpose": "",
+      "action_start": "Final precise strike",
+      "action_end": "Bull Ape 2 collapses, protagonist is exhausted",
+      "active_subjects": [
+        "protagonist",
+        "Bull Ape 2"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "combat_floor",
+      "blocking_hint": "Protagonist stands over the fallen creature",
+      "environment_subzone": "combat_floor",
+      "continuity_focus": "protagonist injury/exhaustion level",
+      "coverage_hint": "close-ups of strikes and reaction",
+      "coverage_priority": "medium",
+      "handoff_to_next": "End Scene"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish scale and threat",
+      "planned_shot_moment_summary": "Bull Ape 2 begins charge",
+      "primary_subject_seed": "Bull Ape 2",
+      "secondary_subjects_seed": [
+        "protagonist"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "combat_floor",
+      "planned_shot_required_anchor_1": "martian_interior_chamber floor",
+      "planned_shot_scale_proof_detail": "wide shot showing ape size vs protagonist",
+      "start_state_seed": "ape at perimeter",
+      "end_state_seed": "ape mid-charge",
+      "action_seed": "charging",
+      "blocking_seed": [
+        "ape moves from edge to center"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "low_angle",
+      "lens_family": "wide",
+      "camera_motion": "pan",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "high_contrast_ceremonial",
+      "primary_subject_angle": "front_three_quarter_right"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "demonstrate tactic",
+      "planned_shot_moment_summary": "protagonist throws cudgel and engages hand-to-hand",
+      "primary_subject_seed": "protagonist",
+      "secondary_subjects_seed": [
+        "Bull Ape 2"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "combat_floor",
+      "planned_shot_required_anchor_1": "cudgel",
+      "planned_shot_scale_proof_detail": "medium shot tracking movement",
+      "start_state_seed": "protagonist holding cudgel",
+      "end_state_seed": "protagonist striking ape",
+      "action_seed": "throwing weapon and punching",
+      "blocking_seed": [
+        "protagonist circles ape"
+      ],
+      "shot_size": "medium",
+      "camera_angle": "eye_level",
+      "lens_family": "normal",
+      "camera_motion": "track",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "high_contrast_ceremonial",
+      "primary_subject_angle": "profile_left"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "conclude combat",
+      "planned_shot_moment_summary": "final strike and death of ape",
+      "primary_subject_seed": "Bull Ape 2",
+      "secondary_subjects_seed": [
+        "protagonist"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "combat_floor",
+      "planned_shot_required_anchor_1": "martian_interior_chamber floor",
+      "planned_shot_scale_proof_detail": "close-up on impact",
+      "start_state_seed": "ape reeling",
+      "end_state_seed": "ape dead/protagonist exhausted",
+      "action_seed": "dying/collapsing",
+      "blocking_seed": [
+        "protagonist stands over corpse"
+      ],
+      "shot_size": "close_up",
+      "camera_angle": "low_angle",
+      "lens_family": "portrait",
+      "camera_motion": "handheld",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "high_contrast_ceremonial",
+      "primary_subject_angle": "front"
+    }
+  ],
+  "unresolved_questions": [
+    "Resolve Bull Ape 2 -> Bull Ape 2"
+  ],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH006",
+      "scene_id": "CH006_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH006",
+      "scene_id": "CH006_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH006",
+      "scene_id": "CH006_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH006",
+      "scene_id": "CH006_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH006",
+      "scene_id": "CH006_SC003"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH006",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\02_story_analysis\\chapter_analysis\\CH006_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH014",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH014_chapter_xiv.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH020",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH020_chapter_xx.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH006",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH006_chapter_vi.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH006",
+      "canonical_id": "protagonist"
+    }
+  ],
+  "evidence_summary": [
+    "[CH006_SC003] Purpose: To demonstrate the protagonist's tactical intelligence over brute strength.",
+    "[CH006_SC003] Summary: Enraged by its mate's death, the second bull ape charges. The protagonist uses Earthly combat tactics\u2014combining projectile use of the cudgel with precise hand-to-hand strikes\u2014to overcome and kill the massive creature.",
+    "[CH006_SC003] Emotional arc: High Tension $\\rightarrow$ Exhausted Victory.",
+    "[CH006_SC003] Coverage: Medium shots tracking the protagonist's movement; wide shots to show the scale difference; close-ups of tactical strikes.",
+    "[CH006_SC003] Continuity: The trajectory and reuse of the cudgel; the physical exhaustion/injury level of the protagonist.",
+    "[CH006] Chapter summary: **Setting:** An interior chamber within a Martian building, overlooking a plaza. **Characters:** * **The Protagonist (Earthman):** A survivor who uses Earthly combat tactics to defend himself. * **The Watch-thing:** A...",
+    "[CH014] CHAPTER XIV (book index hit)",
+    "[CH020] CHAPTER XX (book index hit)",
+    "[CH006] CHAPTER VI (book index hit)",
+    "Character protagonist: An experienced Earthman fighter characterized by extreme physical fitness and superhuman agility. His visual identity is defined by a significant metamorphosis; he transitions from an armed, clothed combatant to a naked state followin..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH006_SC003\n\n## Production Intent\nA high-stakes combat sequence demonstrating tactical superiority through movement and projectile use. The protagonist must leverage agility and Earthly fighting techniques to neutralize a much larger, enraged adversary within the confines of a Martian interior chamber.\n\n## Required Cast\n- protagonist (experienced Earthman fighter)\n- Bull Ape 2 (massive, enraged creature)\n\n## Required Environments\n- martian_interior_chamber (combat floor)\n\n## Continuity Constraints\n- Cudgel trajectory and reuse must be physically consistent.\n- Protagonist's physical exhaustion/injury level must escalate through the fight.\n\n## Beat List\n- BT001: The Charge (Bull Ape 2 rushes protagonist)\n- BT002: Tactical Engagement (Cudgel throw followed by hand-to-hand combat)\n- BT003: The Kill (Final strike and exhaustion)",
+  "metadata": {
+    "artifact_id": "CH006_SC003_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "0a229bb7f9e905d73874d6f12798af1d39926ffe",
+    "created_at_utc": "2026-04-26T22:23:49.549245+00:00",
+    "updated_at_utc": "2026-04-26T22:23:49.549245+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH006_SC003",
+        "version": "d01cd2b6e591796b4487dd71ac2552f952809393"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH006_SC003",
+        "version": "793385d9b11ba47cc787556ae334a60fd6afa55a"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH006_SC003",
+        "version": "0b31b9b9b132e5acbc0e9a6b29d03058483e49cd"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-26T22:24:18.405398+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "0a229bb7f9e905d73874d6f12798af1d39926ffe"
+      }
+    ]
+  }
+}

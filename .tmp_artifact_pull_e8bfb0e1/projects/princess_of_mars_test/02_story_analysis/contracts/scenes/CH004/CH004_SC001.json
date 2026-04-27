@@ -1,0 +1,335 @@
+{
+  "scene_id": "CH004_SC001",
+  "chapter_id": "CH004",
+  "scene_title": "SC001",
+  "purpose": "Establish the scale of the setting and the alien, brutal nature of Martian culture.",
+  "summary": "The narrator and Tars Tarkas arrive at a grand, ancient city built by an extinct race. As they move through the streets, the narrator observes the biological differences of the Martians and their callous attitude toward death and violence.",
+  "emotional_arc": "Awe $\\rightarrow$ Disquiet/Dread",
+  "production_intent": "Establish the overwhelming scale of an ancient, extinct civilization through white marble and gold architecture. Contrast this grandeur with the brutal, callous biological reality of the current Martian inhabitants to shift the tone from awe to dread.",
+  "scene_short_description": "A duo traverses a massive white marble city inlaid with gold while observing callous Martian crowds.",
+  "scene_primary_scale_story_point": "Architecture and Martians are oversized relative to the narrator.",
+  "scene_required_anchor_catalog": [
+    "White marble building facade",
+    "Gold inlay detail",
+    "Dried-up Martian sea horizon"
+  ],
+  "scene_start_state": "Wide view of grand, ancient white marble structures near a dried sea.",
+  "scene_end_state": "Close proximity to Martians exhibiting callous behavior toward violence.",
+  "dominant_action_line": "Walking through the streets and observing the biological/cultural differences of Martians.",
+  "scene_spatial_layout": [
+    "Grand scale city on low table land",
+    "Open central plaza with high-traffic streets"
+  ],
+  "character_spatial_map": [
+    "The Narrator moves through crowds as a small figure",
+    "tars_tarkas maintains a commanding, large physical presence beside the narrator"
+  ],
+  "environment_subzones": [
+    "Central Plaza",
+    "Grand Streets"
+  ],
+  "entry_vectors": [
+    "Low table land approach"
+  ],
+  "exit_vectors": [
+    "Street transit toward city interior"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: Transition from wide scale to character movement",
+    "BT002 -> BT003: Transition from walking to close observation of Martians"
+  ],
+  "characters_required": [
+    {
+      "label": "* The Narrator",
+      "canonical_id": null,
+      "display_name": "* The Narrator",
+      "status": "unresolved",
+      "entity_kind": "",
+      "resolution_score": null,
+      "source_path": "",
+      "notes": "No character candidate found."
+    },
+    {
+      "label": "* Tars Tarkas",
+      "canonical_id": "tars_tarkas",
+      "display_name": "tars_tarkas",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH004/tars_tarkas.md",
+      "notes": "Direct registry match for 'tars_tarkas'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "* Ancient Martian City (White marble, gold inlay, grand scale)",
+      "canonical_id": "ancient_martian_city_ruins",
+      "display_name": "ancient_martian_city_ruins",
+      "status": "canonical",
+      "entity_kind": "city",
+      "resolution_score": 176,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH004/ancient_martian_city_ruins.md",
+      "notes": "Chapter-local environment alias match for '* Ancient Martian City (White marble, gold inlay, grand scale)' (key_overlap=3, label_overlap=8, context_overlap=4)."
+    }
+  ],
+  "continuity_constraints": [
+    "Scale comparison between narrator and oversized architecture/Martians",
+    "Lighting consistency in the open plaza"
+  ],
+  "visual_coverage_families": [
+    "Wide establishing shots of massive architecture",
+    "Medium tracking shots of duo walking through crowds",
+    "Close-ups on Martian biological details (tusks, skin texture)"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "Arrival at the grand city",
+      "purpose": "",
+      "action_start": "view of dried sea and marble ruins",
+      "action_end": "city gates in view",
+      "active_subjects": [
+        "The Narrator",
+        "tars_tarkas"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "edge of low table land",
+      "blocking_hint": "duo approaching from distance",
+      "environment_subzone": "Central Plaza",
+      "continuity_focus": "scale of buildings vs sea",
+      "coverage_hint": "extreme wide",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "Walking through the streets",
+      "purpose": "",
+      "action_start": "entering street flow",
+      "action_end": "passing through crowd",
+      "active_subjects": [
+        "The Narrator",
+        "tars_tarkas"
+      ],
+      "passive_subjects": [
+        "Martian_crowd"
+      ],
+      "spatial_context": "Grand Streets",
+      "blocking_hint": "duo navigating between larger Martians",
+      "environment_subzone": "Grand Streets",
+      "continuity_focus": "scale of characters vs architecture",
+      "coverage_hint": "medium tracking",
+      "coverage_priority": "medium",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "Observing Martian culture/biology",
+      "purpose": "",
+      "action_start": "noticing biological details",
+      "action_end": "feeling disquiet at violence",
+      "active_subjects": [
+        "The Narrator"
+      ],
+      "passive_subjects": [
+        "Martian_crowd"
+      ],
+      "spatial_context": "Grand Streets",
+      "blocking_hint": "static observation amidst moving crowd",
+      "environment_subzone": "Grand Streets",
+      "continuity_focus": "skin texture and tusk detail",
+      "coverage_hint": "close-ups",
+      "coverage_priority": "high",
+      "handoff_to_next": "end_scene"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish_setting",
+      "planned_shot_moment_summary": "Arrival at the grand city edge",
+      "primary_subject_seed": "ancient_martian_city_ruins",
+      "secondary_subjects_seed": [
+        "dried_up_martian_sea"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "voiceover_off_screen",
+      "environment_subzone": "Central Plaza",
+      "planned_shot_required_anchor_1": "white_marble_building_facade",
+      "planned_shot_scale_proof_detail": "architecture_vs_horizon",
+      "start_state_seed": "wide vista",
+      "end_state_seed": "pan toward city gates",
+      "action_seed": "camera sweeps across the marble structures",
+      "blocking_seed": [],
+      "shot_size": "extreme_wide",
+      "camera_angle": "low_angle",
+      "lens_family": "ultra_wide",
+      "camera_motion": "pan",
+      "zoom_behavior": "none",
+      "focus_strategy": "environment_priority",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "character_introduction",
+      "planned_shot_moment_summary": "Duo walking through the street",
+      "primary_subject_seed": "tars_tarkas",
+      "secondary_subjects_seed": [
+        "The Narrator"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "Grand Streets",
+      "planned_shot_required_anchor_1": "gold_inlay_detail",
+      "planned_shot_scale_proof_detail": "tars_tarkas_vs_architecture",
+      "start_state_seed": "medium shot of duo",
+      "end_state_seed": "tracking movement",
+      "action_seed": "walking through crowd",
+      "blocking_seed": [
+        "duo walking side-by-side"
+      ],
+      "shot_size": "medium_full",
+      "camera_angle": "eye_level",
+      "lens_family": "wide",
+      "camera_motion": "track",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front_three_quarter_right"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "establish_tone",
+      "planned_shot_moment_summary": "Close observation of Martian biology",
+      "primary_subject_seed": "Martian_crowd",
+      "secondary_subjects_seed": [
+        "The Narrator"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "internal_monologue",
+      "environment_subzone": "Grand Streets",
+      "planned_shot_required_anchor_1": "tusks",
+      "planned_shot_scale_proof_detail": "skin_texture_detail",
+      "start_state_seed": "close up on tusk",
+      "end_state_seed": "tight shot on skin",
+      "action_seed": "observing callousness",
+      "blocking_seed": [
+        "crowd moving past narrator"
+      ],
+      "shot_size": "close_up",
+      "camera_angle": "eye_level",
+      "lens_family": "portrait",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "high_contrast_ceremonial",
+      "primary_subject_angle": "profile_left"
+    }
+  ],
+  "unresolved_questions": [
+    "Resolve * The Narrator -> * The Narrator"
+  ],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH004",
+      "scene_id": "CH004_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH004",
+      "scene_id": "CH004_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH004",
+      "scene_id": "CH004_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH004",
+      "scene_id": "CH004_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH004",
+      "scene_id": "CH004_SC001"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH004",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\02_story_analysis\\chapter_analysis\\CH004_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH012",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH012_chapter_xii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH015",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH015_chapter_xv.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH010",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH010_chapter_x.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH004",
+      "canonical_id": "tars_tarkas"
+    }
+  ],
+  "evidence_summary": [
+    "[CH004_SC001] Purpose: Establish the scale of the setting and the alien, brutal nature of Martian culture.",
+    "[CH004_SC001] Summary: The narrator and Tars Tarkas arrive at a grand, ancient city built by an extinct race. As they move through the streets, the narrator observes the biological differences of the Martians and their callous attitude toward death and viol...",
+    "[CH004_SC001] Emotional arc: Awe $\\rightarrow$ Disquiet/Dread",
+    "[CH004_SC001] Coverage: * Wide establishing shots of the massive architecture. * Medium tracking shots of the duo walking through crowds. * Close-ups on Martian biological details (tusks, skin texture).",
+    "[CH004_SC001] Continuity: * Scale comparison between the narrator and the oversized architecture/Martians. * Lighting consistency in the open plaza.",
+    "[CH004] Chapter summary: **Setting:** An enormous, ancient city situated on a low table land near the edge of a dried-up Martian sea. The city features grand, white marble buildings inlaid with gold and jewels, though they appear built for a...",
+    "[CH012] CHAPTER XII (book index hit)",
+    "[CH015] CHAPTER XV (book index hit)",
+    "[CH010] CHAPTER X (book index hit)",
+    "Character tars_tarkas: Tars Tarkas is a large, powerful green Martian humanoid of human scale. As a high-ranking Thark chieftain and martial leader, he possesses a commanding physical presence characterized by a large, powerful build. His appearance is defi..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH004_SC001\n\n## Production Intent\nEstablish the overwhelming scale of an ancient, extinct civilization through white marble and gold architecture. Contrast this grandeur with the brutal, callous biological reality of the current Martian inhabitants to shift the tone from awe to dread.\n\n## Required Cast\n- The Narrator\n- tars_tarkas (Large, powerful green Martian humanoid)\n\n## Required Environments\n- ancient_martian_city_ruins (White marble, gold inlay, grand scale, low table land near dried sea)\n\n## Continuity Constraints\n- Scale comparison between the narrator and the oversized architecture/Martians.\n- Lighting consistency in the open plaza.\n\n## Beat List\n- BT001: Arrival at the grand city.\n- BT002: Walking through the streets.\n- BT003: Observing Martian culture/biology.",
+  "metadata": {
+    "artifact_id": "CH004_SC001_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "97c1cd8994d6a4efc5bd6ae5de9f2de762a7e00a",
+    "created_at_utc": "2026-04-26T22:18:14.878294+00:00",
+    "updated_at_utc": "2026-04-26T22:18:14.878294+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH004_SC001",
+        "version": "e5b0e5ad4488b6861b724a7736451ba76af4ec40"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH004_SC001",
+        "version": "79427dd5dd319309b7fbce4062d4ca91665852b5"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH004_SC001",
+        "version": "8c06acd0bc6c77799557177caa5c9b88cb5708be"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-26T22:18:44.172808+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "97c1cd8994d6a4efc5bd6ae5de9f2de762a7e00a"
+      }
+    ]
+  }
+}

@@ -1,0 +1,401 @@
+{
+  "scene_id": "CH007_SC001",
+  "chapter_id": "CH007",
+  "scene_title": "SC001",
+  "purpose": "To establish the scale of Martian society and introduce the protagonist's integration into their customs through a grand procession.",
+  "summary": "The protagonist joins Sola and a massive cavalcade of two hundred and fifty decorated chariots drawn by enormous beasts. They travel across the Dead Sea Bottom toward a remote incubator site. Upon arrival, the protagonist performs an impressive physical feat by leaping over parked chariots to impress Chieftain Lorquas Ptomel.",
+  "emotional_arc": "Awe/Grandeur $\\rightarrow$ Tension/Performance (the leap).",
+  "production_intent": "Establish the massive scale of Martian society through a grand procession of two hundred and fifty decorated chariots. The sequence transitions from wide-scale awe to a high-tension physical performance by the protagonist to secure social standing with local leadership.",
+  "scene_short_description": "A massive procession of decorated chariots travels across a desert floor toward an incubator site.",
+  "scene_primary_scale_story_point": "Two hundred and fifty chariots drawn by enormous beasts relative to the protagonist's size.",
+  "scene_required_anchor_catalog": [
+    "parked_chariot_line",
+    "lorquas_ptomel_jed_position"
+  ],
+  "scene_start_state": "A wide view of a massive cavalcade moving across the dead_sea_bottom.",
+  "scene_end_state": "The protagonist stands successfully after leaping over the chariot line, facing lorquas_ptomel_jed.",
+  "dominant_action_line": "Traveling in procession to the incubator and performing an agility feat.",
+  "scene_spatial_layout": [
+    "Linear progression of chariots across the valley floor",
+    "Circular or semi-circle gathering at the incubator enclosure"
+  ],
+  "character_spatial_map": [
+    "protagonist riding alongside sola within the cavalcade",
+    "lorquas_ptomel_jed observing from a fixed position near the incubator"
+  ],
+  "environment_subzones": [
+    "dead_sea_bottom",
+    "the_incubator_enclosure"
+  ],
+  "entry_vectors": [
+    "procession_path_dead_sea_bottom"
+  ],
+  "exit_vectors": [
+    "procession_path_the_incubator_enclosure"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: Arrival at destination",
+    "BT002 -> BT003: Transition from arrival to performance"
+  ],
+  "characters_required": [
+    {
+      "label": "The Protagonist",
+      "canonical_id": "protagonist",
+      "display_name": "protagonist",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH007/protagonist.md",
+      "notes": "Direct registry match for 'protagonist'."
+    },
+    {
+      "label": "Sola",
+      "canonical_id": "sola",
+      "display_name": "sola",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH007/sola.md",
+      "notes": "Direct registry match for 'sola'."
+    },
+    {
+      "label": "Lorquas Ptomel (Jed)",
+      "canonical_id": "lorquas_ptomel_jed",
+      "display_name": "lorquas_ptomel_jed",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH007/lorquas_ptomel_jed.md",
+      "notes": "Direct registry match for 'lorquas_ptomel_jed'."
+    },
+    {
+      "label": "various Martian warriors/drivers",
+      "canonical_id": null,
+      "display_name": "various Martian warriors/drivers",
+      "status": "review",
+      "entity_kind": "individual",
+      "resolution_score": 6,
+      "source_path": "",
+      "notes": "Low-confidence character match requires review."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "The Dead Sea Bottom/Valley",
+      "canonical_id": "dead_sea_bottom",
+      "display_name": "dead_sea_bottom",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH007/dead_sea_bottom.md",
+      "notes": "Direct registry match for 'dead_sea_bottom_valley'."
+    },
+    {
+      "label": "The Plaza near the Incubator",
+      "canonical_id": "the_incubator_enclosure",
+      "display_name": "the_incubator_enclosure",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 68,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH007/the_incubator_enclosure.md",
+      "notes": "Chapter-local environment alias match for 'The Plaza near the Incubator' (key_overlap=1, label_overlap=2, context_overlap=4)."
+    }
+  ],
+  "continuity_constraints": [
+    "Chariot decoration patterns must remain consistent across wide and medium shots",
+    "Physical height ratio between enormous beasts and protagonist",
+    "Sequential order of chariot jump obstacles"
+  ],
+  "visual_coverage_families": [
+    "Wide establishing shots of the massive chariot procession",
+    "Medium tracking shots of the protagonist riding with sola",
+    "Low-angle hero shot of the protagonist's leap over chariots",
+    "Reaction shots from lorquas_ptomel_jed and the crowd"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "The grand procession travels across the valley",
+      "purpose": "",
+      "action_start": "wide vista of desert",
+      "action_end": "approaching incubator site",
+      "active_subjects": [
+        "various Martian warriors/drivers",
+        "sola",
+        "protagonist"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "dead_sea_bottom",
+      "blocking_hint": "linear line of 250 chariots",
+      "environment_subzone": "dead_sea_bottom",
+      "continuity_focus": "chariot decoration patterns and beast scale",
+      "coverage_hint": "wide establishing shots",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "Arrival at the incubator site",
+      "purpose": "",
+      "action_start": "procession slows",
+      "action_end": "chariots come to a halt in formation",
+      "active_subjects": [
+        "various Martian warriors/drivers",
+        "sola",
+        "protagonist"
+      ],
+      "passive_subjects": [
+        "lorquas_ptomel_jed"
+      ],
+      "spatial_context": "the_incubator_enclosure",
+      "blocking_hint": "chariots parking in rows",
+      "environment_subzone": "the_incubator_enclosure",
+      "continuity_focus": "parked chariot alignment",
+      "coverage_hint": "medium tracking shots",
+      "coverage_priority": "medium",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "The protagonist performs the leap",
+      "purpose": "",
+      "action_start": "protagonist moves toward parked chariots",
+      "action_end": "protagonist lands and faces the crowd",
+      "active_subjects": [
+        "protagonist"
+      ],
+      "passive_subjects": [
+        "lorquas_ptomel_jed",
+        "various Martian warriors/drivers"
+      ],
+      "spatial_context": "the_incubator_enclosure",
+      "blocking_hint": "protagonist jumping over chariot line",
+      "environment_subzone": "the_incubator_enclosure",
+      "continuity_focus": "sequence of the jump and height clearance",
+      "coverage_hint": "low-angle hero shot and reaction shots",
+      "coverage_priority": "high",
+      "handoff_to_next": "none"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish scale",
+      "planned_shot_moment_summary": "massive cavalcade moving across the valley",
+      "primary_subject_seed": "various Martian warriors/drivers",
+      "secondary_subjects_seed": [
+        "sola",
+        "protagonist"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "dead_sea_bottom",
+      "planned_shot_required_anchor_1": "horizon_line",
+      "planned_shot_scale_proof_detail": "250 chariots visible",
+      "start_state_seed": "wide vista",
+      "end_state_seed": "moving procession",
+      "action_seed": "traveling",
+      "blocking_seed": [
+        "linear formation"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "eye_level",
+      "lens_family": "ultra_wide",
+      "camera_motion": "pan",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "profile_left"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "character integration",
+      "planned_shot_moment_summary": "protagonist riding with sola",
+      "primary_subject_seed": "protagonist",
+      "secondary_subjects_seed": [
+        "sola"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "dead_sea_bottom",
+      "planned_shot_required_anchor_1": "chariot_seat",
+      "planned_shot_scale_proof_detail": "beast size vs protagonist",
+      "start_state_seed": "riding",
+      "end_state_seed": "approaching incubator",
+      "action_seed": "riding",
+      "blocking_seed": [
+        "side-by-side in chariot"
+      ],
+      "shot_size": "medium",
+      "camera_angle": "eye_level",
+      "lens_family": "normal",
+      "camera_motion": "track",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front_three_quarter_right"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "hero moment",
+      "planned_shot_moment_summary": "protagonist leaps over parked chariots",
+      "primary_subject_seed": "protagonist",
+      "secondary_subjects_seed": [
+        "various Martian warriors/drivers"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "the_incubator_enclosure",
+      "planned_shot_required_anchor_1": "parked_chariot_line",
+      "planned_shot_scale_proof_detail": "leap height vs chariot width",
+      "start_state_seed": "running toward line",
+      "end_state_seed": "landing on far side",
+      "action_seed": "leaping",
+      "blocking_seed": [
+        "jumping over obstacles"
+      ],
+      "shot_size": "full",
+      "camera_angle": "low_angle",
+      "lens_family": "wide",
+      "camera_motion": "track",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "high_contrast_ceremonial",
+      "primary_subject_angle": "profile_left"
+    },
+    {
+      "planned_shot_id": "SH004",
+      "beat_id": "BT003",
+      "narrative_function": "reaction/resolution",
+      "planned_shot_moment_summary": "lorquas_ptomel_jed reacts to the feat",
+      "primary_subject_seed": "lorquas_ptomel_jed",
+      "secondary_subjects_seed": [
+        "crowd"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "the_incubator_enclosure",
+      "planned_shot_required_anchor_1": "lorquas_ptomel_jed_position",
+      "planned_shot_scale_proof_detail": "none",
+      "start_state_seed": "watching [[SH003]]",
+      "end_state_seed": "observing protagonist",
+      "action_seed": "reacting",
+      "blocking_seed": [
+        "stationary observation"
+      ],
+      "shot_size": "medium_close",
+      "camera_angle": "eye_level",
+      "lens_family": "portrait",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "subtle_in",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "high_contrast_ceremonial",
+      "primary_subject_angle": "front"
+    }
+  ],
+  "unresolved_questions": [
+    "Resolve various Martian warriors/drivers -> various Martian warriors/drivers"
+  ],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH007",
+      "scene_id": "CH007_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH007",
+      "scene_id": "CH007_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH007",
+      "scene_id": "CH007_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH007",
+      "scene_id": "CH007_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH007",
+      "scene_id": "CH007_SC001"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH007",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\02_story_analysis\\chapter_analysis\\CH007_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH007",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH007_chapter_vii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH015",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH015_chapter_xv.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH024",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH024_chapter_xxiv.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH007",
+      "canonical_id": "protagonist"
+    }
+  ],
+  "evidence_summary": [
+    "[CH007_SC001] Purpose: To establish the scale of Martian society and introduce the protagonist's integration into their customs through a grand procession.",
+    "[CH007_SC001] Summary: The protagonist joins Sola and a massive cavalcade of two hundred and fifty decorated chariots drawn by enormous beasts. They travel across the Dead Sea Bottom toward a remote incubator site. Upon arrival, the protagonist performs an...",
+    "[CH007_SC001] Emotional arc: Awe/Grandeur $\\rightarrow$ Tension/Performance (the leap).",
+    "[CH007_SC001] Coverage: * Wide establishing shots of the massive chariot procession. * Medium tracking shots of the protagonist riding with Sola. * Low-angle hero shot of the protagonist's leap over the chariots. * Reaction shots from Lorquas Ptomel and the...",
+    "[CH007_SC001] Continuity: Chariot decoration patterns; The physical height/scale of the beasts compared to the protagonist; The specific sequence of the chariot jump.",
+    "[CH007] Chapter summary: **Events:** The protagonist joins Sola and a massive cavalcade of two hundred and fifty decorated chariots drawn by enormous animals to witness the hatching at a remote incubator. Upon arrival, the protagonist perform...",
+    "[CH007] CHAPTER VII (book index hit)",
+    "[CH015] CHAPTER XV (book index hit)",
+    "[CH024] CHAPTER XXIV (book index hit)",
+    "Character protagonist: An experienced Earthman fighter characterized by extreme physical fitness and superhuman agility. His visual identity is defined by a significant metamorphosis; he transitions from an armed, clothed combatant to a naked state followin..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH007_SC001\n\n## Production Intent\nEstablish the massive scale of Martian society through a grand procession of two hundred and fifty decorated chariots. The sequence transitions from wide-scale awe to a high-tension physical performance by the protagonist to secure social standing with local leadership.\n\n## Required Cast\n- protagonist (experienced Earthman fighter, superhuman agility)\n- sola\n- lorquas_ptomel_jed\n- various Martian warriors/drivers\n\n## Required Environments\n- dead_sea_bottom\n- the_incubator_enclosure\n\n## Continuity Constraints\n- Chariot decoration patterns must remain consistent across wide and medium shots\n- Physical height ratio between enormous beasts and protagonist\n- Sequential order of chariot jump obstacles\n\n## Beat List\n- BT001: The grand procession travels across the valley\n- BT002: Arrival at the incubator site\n- BT003: The protagonist performs the leap",
+  "metadata": {
+    "artifact_id": "CH007_SC001_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "eb18617a95971331a257bef8ce767bc7c618a322",
+    "created_at_utc": "2026-04-26T22:25:17.115715+00:00",
+    "updated_at_utc": "2026-04-26T22:25:17.115715+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH007_SC001",
+        "version": "bca59fa8575256f8755c50ba87c6b05d4fa66e31"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH007_SC001",
+        "version": "e67a13aaeb214f5db39f14d95b34ca6ba1317184"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH007_SC001",
+        "version": "1f67b76afa89b3efb17e6575d0712214d6ea1d38"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-26T22:25:51.370415+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "eb18617a95971331a257bef8ce767bc7c618a322"
+      }
+    ]
+  }
+}

@@ -1,0 +1,310 @@
+{
+  "scene_id": "CH012_SC002",
+  "chapter_id": "CH012",
+  "scene_title": "SC002",
+  "purpose": "To reveal the internal threat (Sarkoja) and solidify Carter's primary motivation for escape.",
+  "summary": "Following the audience, Carter realizes that Sarkoja has been spying on him and reporting his words to Ptomel. The realization of her betrayal, combined with the fear of what Tal Hajus will do to Dejah Thoris, hardens Carter's resolve to escape at any cost.",
+  "emotional_arc": "From suspicion to clarity and intense determination.",
+  "production_intent": "Establish the realization of Sarkoja's betrayal and the subsequent hardening of Carter's resolve to escape. The scene must visually communicate the shift from internal suspicion to a concrete, driven determination through tight facial work and isolating wide shots of the Tharkian environment.",
+  "scene_short_description": "A man moves through a vast alien cityscape while processing a sudden realization of betrayal.",
+  "scene_primary_scale_story_point": "Individual human scale vs massive, surveillance-heavy Tharkian architecture.",
+  "scene_required_anchor_catalog": [
+    "Thark City street structures",
+    "Audience Chamber exits"
+  ],
+  "scene_start_state": "Carter exiting the audience chamber following his confrontation with Ptomel.",
+  "scene_end_state": "Carter walking with a fixed, determined pace through the city streets.",
+  "dominant_action_line": "Carter processes Sarkoja's spying and the threat to Dejah Thoris, hardening his resolve.",
+  "scene_spatial_layout": [
+    "Transition from enclosed ceremonial chamber to open urban streetscape",
+    "High verticality of Tharkian structures emphasizing surveillance"
+  ],
+  "character_spatial_map": [
+    "john_carter moving through center frame or mid-ground"
+  ],
+  "environment_subzones": [
+    "primary scene playing area"
+  ],
+  "entry_vectors": [
+    "Audience Chamber exit"
+  ],
+  "exit_vectors": [
+    "Thark City street paths"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: Transition from chamber exit to city movement",
+    "BT002 -> BT003: Internal realization to externalized determination"
+  ],
+  "characters_required": [
+    {
+      "label": "John Carter (Internal Monologue/Reaction)",
+      "canonical_id": "john_carter",
+      "display_name": "john_carter",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH012/john_carter.md",
+      "notes": "Direct registry match for 'john_carter'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "Transitioning from the Audience Chamber / Thark City streets",
+      "canonical_id": "thark_audience_chamber",
+      "display_name": "thark_audience_chamber",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 126,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH012/thark_audience_chamber.md",
+      "notes": "Chapter-local environment alias match for 'Transitioning from the Audience Chamber / Thark City streets' (key_overlap=3, label_overlap=3, context_overlap=4)."
+    }
+  ],
+  "continuity_constraints": [
+    "Carter's movement through the city streets",
+    "Time of day consistency during transition from chamber to street"
+  ],
+  "visual_coverage_families": [
+    "Tight close-ups on eyes/face for internal realization",
+    "Wide shots of Tharkian environment for isolation/surveillance"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "Carter exits the audience chamber after Ptomel's confrontation",
+      "purpose": "",
+      "action_start": "walking out of chamber",
+      "action_end": "entering city streets",
+      "active_subjects": [
+        "john_carter"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "transition from chamber to street",
+      "blocking_hint": "moving away from the chamber doors",
+      "environment_subzone": "thark_audience_chamber",
+      "continuity_focus": "time of day/lighting transition",
+      "coverage_hint": "wide shot",
+      "coverage_priority": "medium",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "The realization of Sarkoja's spying and betrayal",
+      "purpose": "",
+      "action_start": "walking through streets",
+      "action_end": "sudden halt/stiffening",
+      "active_subjects": [
+        "john_carter"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "thark city streets",
+      "blocking_hint": "stops in a populated or semi-populated area",
+      "environment_subzone": "thark_city_streets",
+      "continuity_focus": "movement through city",
+      "coverage_hint": "tight close-up on eyes/face",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "Hardening of resolve to escape and save Dejah Thoris",
+      "purpose": "",
+      "action_start": "stiffened posture",
+      "action_end": "purposeful walking",
+      "active_subjects": [
+        "john_carter"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "thark city streets",
+      "blocking_hint": "resumes movement with intense focus",
+      "environment_subzone": "thark_city_streets",
+      "continuity_focus": "movement through city",
+      "coverage_hint": "medium shot/low angle",
+      "coverage_priority": "high",
+      "handoff_to_next": "end of scene"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish isolation",
+      "planned_shot_moment_summary": "Carter leaves the chamber into the city",
+      "primary_subject_seed": "john_carter",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "thark_audience_chamber",
+      "planned_shot_required_anchor_1": "chamber exit",
+      "planned_shot_scale_proof_detail": "large architecture vs single man",
+      "start_state_seed": "walking out of shadow",
+      "end_state_seed": "entering street light",
+      "action_seed": "exiting chamber",
+      "blocking_seed": [
+        "walking away from camera"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "eye_level",
+      "lens_family": "wide",
+      "camera_motion": "track",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "high_contrast_ceremonial",
+      "primary_subject_angle": "rear_three_quarter_left"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "convey realization",
+      "planned_shot_moment_summary": "Carter realizes Sarkoja's betrayal",
+      "primary_subject_seed": "john_carter",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "internal_monologue",
+      "environment_subzone": "thark_city_streets",
+      "planned_shot_required_anchor_1": "street structure",
+      "planned_shot_scale_proof_detail": "tight face vs vast background",
+      "start_state_seed": "walking neutral",
+      "end_state_seed": "stopping/stiffening",
+      "action_seed": "realizing betrayal",
+      "blocking_seed": [
+        "stops walking mid-street"
+      ],
+      "shot_size": "close_up",
+      "camera_angle": "eye_level",
+      "lens_family": "portrait",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "subtle_in",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front_three_quarter_right"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "solidify motivation",
+      "planned_shot_moment_summary": "Carter hardens resolve to escape",
+      "primary_subject_seed": "john_carter",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "thark_city_streets",
+      "planned_shot_required_anchor_1": "street structure",
+      "planned_shot_scale_proof_detail": "man moving with purpose through environment",
+      "start_state_seed": "stiffening posture",
+      "end_state_seed": "walking with intent",
+      "action_seed": "hardening resolve",
+      "blocking_seed": [
+        "resumes walking with heavy",
+        "purposeful steps"
+      ],
+      "shot_size": "medium_close",
+      "camera_angle": "low_angle",
+      "lens_family": "normal",
+      "camera_motion": "track",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "hard_directional",
+      "primary_subject_angle": "profile_left"
+    }
+  ],
+  "unresolved_questions": [],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH012",
+      "scene_id": "CH012_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH012",
+      "scene_id": "CH012_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH012",
+      "scene_id": "CH012_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH012",
+      "scene_id": "CH012_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH012",
+      "scene_id": "CH012_SC002"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH012",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\02_story_analysis\\chapter_analysis\\CH012_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH011",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH011_chapter_xi.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH010",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH010_chapter_x.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH014",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH014_chapter_xiv.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH012",
+      "canonical_id": "john_carter"
+    }
+  ],
+  "evidence_summary": [
+    "[CH012_SC002] Purpose: To reveal the internal threat (Sarkoja) and solidify Carter's primary motivation for escape.",
+    "[CH012_SC002] Summary: Following the audience, Carter realizes that Sarkoja has been spying on him and reporting his words to Ptomel. The realization of her betrayal, combined with the fear of what Tal Hajus will do to Dejah Thoris, hardens Carter's resolve...",
+    "[CH012_SC002] Emotional arc: From suspicion to clarity and intense determination.",
+    "[CH012_SC002] Coverage: * Tight close-ups on Carter's eyes/face to convey internal realization. * Wide shots of the Tharkian environment to emphasize his isolation/surveillance.",
+    "[CH012_SC002] Continuity: Carter's movement through the city; time of day.",
+    "[CH012] Chapter summary: **Events:** John Carter is summoned to an audience with Lorquas Ptomel, the Tharkian leader. Ptomel confronts Carter regarding his ambiguous status as a prisoner who commands respect, and accuses him of plotting an es...",
+    "[CH011] CHAPTER XI (book index hit)",
+    "[CH010] CHAPTER X (book index hit)",
+    "[CH014] CHAPTER XIV (book index hit)",
+    "Character john_carter: [source:C:/FilmCreator_MC/projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH011/john_carter.md] Physical Description: A human male from Earth (Virginia). He possesses the strength and physical capabiliti..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH012_SC002\n\n## Production Intent\nEstablish the realization of Sarkoja's betrayal and the subsequent hardening of Carter's resolve to escape. The scene must visually communicate the shift from internal suspicion to a concrete, driven determination through tight facial work and isolating wide shots of the Tharkian environment.\n\n## Required Cast\n- john_carter (Internal Monologue/Reaction)\n\n## Required Environments\n- thark_audience_chamber\n- thark_city_streets\n\n## Continuity Constraints\n- Carter's movement through the city streets\n- Time of day consistency during transition from chamber to street\n\n## Beat List\n- BT001: Carter exits the audience chamber after Ptomel's confrontation.\n- BT002: The realization of Sarkoja's spying and betrayal.\n- BT003: Hardening of resolve to escape and save Dejah Thoris.",
+  "metadata": {
+    "artifact_id": "CH012_SC002_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "0d66a24945b75ce10af3997e315fdc193a7d99c3",
+    "created_at_utc": "2026-04-26T22:36:29.631038+00:00",
+    "updated_at_utc": "2026-04-26T22:36:29.631038+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH012_SC002",
+        "version": "9557d86eb251d7fa8b784a2b0ead05b9c082f73e"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH012_SC002",
+        "version": "86e181420160200509873a59dcddd79c4c8ddc77"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH012_SC002",
+        "version": "631a311106888755f327fae5938de7644c7ab019"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-26T22:36:59.004146+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "0d66a24945b75ce10af3997e315fdc193a7d99c3"
+      }
+    ]
+  }
+}

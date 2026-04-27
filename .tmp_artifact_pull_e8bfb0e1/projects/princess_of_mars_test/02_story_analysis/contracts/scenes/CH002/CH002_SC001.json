@@ -1,0 +1,314 @@
+{
+  "scene_id": "CH002_SC001",
+  "chapter_id": "CH002",
+  "scene_title": "SC001",
+  "purpose": "Establish the protagonist's vulnerability and the supernatural threat.",
+  "summary": "Inside a cave in the Arizona mountains, the protagonist is incapacitated by a mysterious, pungent vapor. He remains mentally conscious but is physically paralyzed, unable to move or defend himself.",
+  "emotional_arc": "From alertness/combat readiness to helpless terror and sensory isolation.",
+  "production_intent": "Establish the protagonist's physical helplessness and the presence of a supernatural, airborne threat within a claustrophobic cave setting. The visual language must emphasize sensory isolation through macro details of gas and physiological responses.",
+  "scene_short_description": "An experienced fighter becomes paralyzed by a mysterious, pungent gas inside a dark cave.",
+  "scene_primary_scale_story_point": "Subject is dwarfed by the claustrophobic rock walls and encroaching vapor.",
+  "scene_required_anchor_catalog": [
+    "rocky floor",
+    "cave wall"
+  ],
+  "scene_start_state": "Protagonist in high-alert combat stance within the cave.",
+  "scene_end_state": "Protagonist lying paralyzed, eyes wide with terror, surrounded by swirling gas.",
+  "dominant_action_line": "Inhalation of vapor leading to rapid physical incapacitation and mental entrapment.",
+  "scene_spatial_layout": [
+    "Tight, enclosed rocky chamber",
+    "Low ceiling height creating vertical compression"
+  ],
+  "character_spatial_map": [
+    "protagonist centered in the cave floor subzone",
+    "limbs spreading outward as paralysis sets in"
+  ],
+  "environment_subzones": [
+    "central floor area",
+    "vapor-heavy air pockets"
+  ],
+  "entry_vectors": [
+    "unseen gas ingress from cave crevices"
+  ],
+  "exit_vectors": [
+    "none (subject is trapped)"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: Sudden onset of respiratory distress",
+    "BT002 -> BT003: Total loss of motor control"
+  ],
+  "characters_required": [
+    {
+      "label": "The Protagonist (Paralyzed)",
+      "canonical_id": "protagonist",
+      "display_name": "protagonist",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH002/protagonist.md",
+      "notes": "Direct registry match for 'protagonist'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "Interior Cave (Dark, claustrophobic, filled with tenuous vapor)",
+      "canonical_id": "arizona_mountain_cave",
+      "display_name": "arizona_mountain_cave",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 70,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH002/arizona_mountain_cave.md",
+      "notes": "Chapter-local environment alias match for 'Interior Cave (Dark, claustrophobic, filled with tenuous vapor)' (key_overlap=1, label_overlap=5, context_overlap=4)."
+    }
+  ],
+  "continuity_constraints": [
+    "Exact limb positioning of protagonist during paralysis",
+    "Visual density and flow patterns of the pungent vapor"
+  ],
+  "visual_coverage_families": [
+    "Extreme Close-ups (Eyes, sweating skin, gas swirling)",
+    "POV shots (Blurred, limited movement)",
+    "Macro shots of the vapor"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "Inhalation of mysterious vapor",
+      "purpose": "",
+      "action_start": "combat readiness",
+      "action_end": "first gasp",
+      "active_subjects": [
+        "protagonist"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "cave center",
+      "blocking_hint": "standing upright",
+      "environment_subzone": "central floor area",
+      "continuity_focus": "gas density/movement",
+      "coverage_hint": "macro shots of vapor",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "Physical collapse",
+      "purpose": "",
+      "action_start": "stumbling",
+      "action_end": "hitting the ground",
+      "active_subjects": [
+        "protagonist"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "cave floor",
+      "blocking_hint": "descending to floor",
+      "environment_subzone": "central floor area",
+      "continuity_focus": "limb position on impact",
+      "coverage_hint": "full shot/medium shot",
+      "coverage_priority": "medium",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "Paralyzed terror",
+      "purpose": "",
+      "action_start": "lying still",
+      "action_end": "eyes fixed in terror",
+      "active_subjects": [
+        "protagonist"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "cave floor",
+      "blocking_hint": "prone/supine on rocky ground",
+      "environment_subzone": "central floor area",
+      "continuity_focus": "eye movement/sweat",
+      "coverage_hint": "extreme close-up",
+      "coverage_priority": "high",
+      "handoff_to_next": "end_scene"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish_threat",
+      "planned_shot_moment_summary": "gas enters frame",
+      "primary_subject_seed": "protagonist",
+      "secondary_subjects_seed": [
+        "vapor"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "central floor area",
+      "planned_shot_required_anchor_1": "rocky floor",
+      "planned_shot_scale_proof_detail": "subject vs gas density",
+      "start_state_seed": "combat stance",
+      "end_state_seed": "inhalation reflex",
+      "action_seed": "inhaling pungent vapor",
+      "blocking_seed": [
+        "standing center"
+      ],
+      "shot_size": "medium_close",
+      "camera_angle": "eye_level",
+      "lens_family": "normal",
+      "camera_motion": "push_in",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "low_key_night",
+      "primary_subject_angle": "front_three_quarter_right"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "show_incapacitation",
+      "planned_shot_moment_summary": "limbs failing",
+      "primary_subject_seed": "protagonist",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "central floor area",
+      "planned_shot_required_anchor_1": "rocky floor",
+      "planned_shot_scale_proof_detail": "limb position vs ground",
+      "start_state_seed": "stumbling",
+      "end_state_seed": "collapsing",
+      "action_seed": "falling to the ground",
+      "blocking_seed": [
+        "dropping to knees then floor"
+      ],
+      "shot_size": "full",
+      "camera_angle": "low_angle",
+      "lens_family": "wide",
+      "camera_motion": "track",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "low_key_night",
+      "primary_subject_angle": "profile_left"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "sensory_isolation",
+      "planned_shot_moment_summary": "eyes wide in terror",
+      "primary_subject_seed": "protagonist",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "central floor area",
+      "planned_shot_required_anchor_1": "rocky floor",
+      "planned_shot_scale_proof_detail": "eye dilation vs skin texture",
+      "start_state_seed": "collapsed",
+      "end_state_seed": "frozen",
+      "action_seed": "staring into void",
+      "blocking_seed": [
+        "lying flat"
+      ],
+      "shot_size": "extreme_close_up",
+      "camera_angle": "eye_level",
+      "lens_family": "telephoto",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "subtle_in",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "high_contrast_ceremonial",
+      "primary_subject_angle": "front"
+    }
+  ],
+  "unresolved_questions": [],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH002",
+      "scene_id": "CH002_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH002",
+      "scene_id": "CH002_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH002",
+      "scene_id": "CH002_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH002",
+      "scene_id": "CH002_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH002",
+      "scene_id": "CH002_SC001"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH002",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\02_story_analysis\\chapter_analysis\\CH002_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH001",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH001_chapter_i.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH002",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH002_chapter_ii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH028",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH028_chapter_xxviii.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH002",
+      "canonical_id": "protagonist"
+    }
+  ],
+  "evidence_summary": [
+    "[CH002_SC001] Purpose: Establish the protagonist's vulnerability and the supernatural threat.",
+    "[CH002_SC001] Summary: Inside a cave in the Arizona mountains, the protagonist is incapacitated by a mysterious, pungent vapor. He remains mentally conscious but is physically paralyzed, unable to move or defend himself.",
+    "[CH002_SC001] Emotional arc: From alertness/combat readiness to helpless terror and sensory isolation.",
+    "[CH002_SC001] Coverage: Extreme Close-ups (Eyes, sweating skin, gas swirling) POV shots (Blurred, limited movement) Macro shots of the vapor",
+    "[CH002_SC001] Continuity: The exact position of the protagonist's limbs; the visual density/movement of the gas.",
+    "[CH002] Chapter summary: **Setting:** A cave in the Arizona mountains; a rocky gorge under a clear starlight night. **Characters:** - **The Protagonist:** An experienced fighter who becomes paralyzed by a mysterious gas in a cave, undergoes a...",
+    "[CH001] CHAPTER I (book index hit)",
+    "[CH002] CHAPTER II (book index hit)",
+    "[CH028] CHAPTER XXVIII (book index hit)",
+    "Character protagonist: An experienced Earthman fighter characterized by extreme physical fitness and superhuman agility. His visual identity is defined by a significant metamorphosis; he transitions from an armed, clothed combatant to a naked state followin..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH002_SC001\n\n## Production Intent\nEstablish the protagonist's physical helplessness and the presence of a supernatural, airborne threat within a claustrophobic cave setting. The visual language must emphasize sensory isolation through macro details of gas and physiological responses.\n\n## Required Cast\n- protagonist (experienced fighter, physically fit)\n\n## Required Environments\n- arizona_mountain_cave (dark, claustrophobic, tenuous vapor)\n\n## Continuity Constraints\n- Exact limb positioning of protagonist during paralysis\n- Visual density and flow patterns of the pungent vapor\n\n## Beat List\n- BT001: Inhalation of mysterious vapor\n- BT002: Physical collapse\n- BT003: Paralyzed terror",
+  "metadata": {
+    "artifact_id": "CH002_SC001_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "d3c15a207ef3878f623cad97c6d0b2a17634f274",
+    "created_at_utc": "2026-04-26T22:13:22.226275+00:00",
+    "updated_at_utc": "2026-04-26T22:13:22.226275+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH002_SC001",
+        "version": "7bedba2b32a078e028f59512840ed6112ac6f8fb"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH002_SC001",
+        "version": "beb7fd58509ab0dfcdf3c654d7878ac4518402cf"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH002_SC001",
+        "version": "adb031d1b159ce45b59db4d99479851f20a0489c"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-26T22:13:49.071081+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "d3c15a207ef3878f623cad97c6d0b2a17634f274"
+      }
+    ]
+  }
+}

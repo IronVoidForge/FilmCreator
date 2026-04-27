@@ -1,0 +1,312 @@
+{
+  "scene_id": "CH001_SC005",
+  "chapter_id": "CH001",
+  "scene_title": "SC005",
+  "purpose": "Resolve the immediate conflict and transition into the \"disappearance\" status quo.",
+  "summary": "Carter's horse leads him away from the pursuit toward a cliff, where he finds an ancient cave. After confirming Powell is dead, Carter enters the cave, but exhaustion and a strange drowsiness overcome him, causing him to collapse.",
+  "emotional_arc": "From frantic survival to profound exhaustion and mysterious lethargy.",
+  "production_intent": "Establish the transition from active pursuit to isolation by moving the protagonist from a high-stakes landscape into a dark, enclosed sanctuary where physical collapse occurs.",
+  "scene_short_description": "A man leads a horse along a narrow cliffside trail toward an ancient cave entrance.",
+  "scene_primary_scale_story_point": "Vast desolate landscape vs. cramped dark cave interior.",
+  "scene_required_anchor_catalog": [
+    "ancient_cliffside_cave entrance",
+    "narrow trail ledge"
+  ],
+  "scene_start_state": "john_carter riding a horse along a high, precarious cliff path.",
+  "scene_end_state": "john_carter collapsed on the cave floor in darkness.",
+  "dominant_action_line": "Escaping pursuit via a cliffside trail into a cave followed by physical collapse.",
+  "scene_spatial_layout": [
+    "Linear movement along a narrow ledge between cliff and ravine",
+    "Transition from open sky to enclosed rock chamber"
+  ],
+  "character_spatial_map": [
+    "john_carter mounted on horse on the trail",
+    "john_carter walking/crawling inside cave"
+  ],
+  "environment_subzones": [
+    "A narrow trail between a cliff and a ravine",
+    "ancient_cliffside_cave interior"
+  ],
+  "entry_vectors": [
+    "Trail leading from ravine toward cave mouth"
+  ],
+  "exit_vectors": [
+    "None (scene ends in collapse)"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: Movement from trail to cave entrance",
+    "BT002 -> BT003: Transition from movement to lethargic collapse"
+  ],
+  "characters_required": [
+    {
+      "label": "John Carter",
+      "canonical_id": "john_carter",
+      "display_name": "john_carter",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH001/john_carter.md",
+      "notes": "Direct registry match for 'john_carter'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "A narrow trail between a cliff and a ravine",
+      "canonical_id": null,
+      "display_name": "A narrow trail between a cliff and a ravine",
+      "status": "review",
+      "entity_kind": "environment",
+      "resolution_score": 8,
+      "source_path": "",
+      "notes": "Low-confidence environment match requires review."
+    },
+    {
+      "label": "a large",
+      "canonical_id": null,
+      "display_name": "a large",
+      "status": "review",
+      "entity_kind": "environment",
+      "resolution_score": 8,
+      "source_path": "",
+      "notes": "Low-confidence environment match requires review."
+    },
+    {
+      "label": "ancient cave",
+      "canonical_id": "ancient_cliffside_cave",
+      "display_name": "ancient_cliffside_cave",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 28,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH001/ancient_cliffside_cave.md",
+      "notes": "Chapter-local environment alias match for 'ancient cave' (key_overlap=2, label_overlap=2, context_overlap=4)."
+    }
+  ],
+  "continuity_constraints": [
+    "Dimming light levels inside the cave",
+    "Physical state of john_carter (dirt, blood, exhaustion)"
+  ],
+  "visual_coverage_families": [
+    "Wide shots of desolate landscape and cliff edges",
+    "Tight close-ups on eyes during sleep onset",
+    "Slow fade to black"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "Escape via trail",
+      "purpose": "",
+      "action_start": "riding horse along cliff ledge",
+      "action_end": "reaching cave mouth",
+      "active_subjects": [
+        "john_carter"
+      ],
+      "passive_subjects": [
+        "horse"
+      ],
+      "spatial_context": "A narrow trail between a cliff and a ravine",
+      "blocking_hint": "moving along the edge of the ravine",
+      "environment_subzone": "A narrow trail between a cliff and a ravine",
+      "continuity_focus": "dirt/blood on clothing",
+      "coverage_hint": "wide landscape shots",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "Entering sanctuary",
+      "purpose": "",
+      "action_start": "dismounting or walking into cave",
+      "action_end": "confirming Powell is dead",
+      "active_subjects": [
+        "john_carter"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "ancient_cliffside_cave entrance",
+      "blocking_hint": "moving from light to shadow",
+      "environment_subzone": "ancient_cliffside_cave",
+      "continuity_focus": "dimming light levels",
+      "coverage_hint": "medium shots",
+      "coverage_priority": "medium",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "Mysterious collapse",
+      "purpose": "",
+      "action_start": "feeling drowsiness",
+      "action_end": "collapsing into unconsciousness",
+      "active_subjects": [
+        "john_carter"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "ancient_cliffside_cave interior",
+      "blocking_hint": "slumping to the floor",
+      "environment_subzone": "ancient_cliffside_cave",
+      "continuity_focus": "extreme exhaustion/dimming light",
+      "coverage_hint": "tight close-ups on eyes",
+      "coverage_priority": "high",
+      "handoff_to_next": "end_of_scene"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish scale and isolation",
+      "planned_shot_moment_summary": "horse and rider moving along the cliff edge",
+      "primary_subject_seed": "john_carter",
+      "secondary_subjects_seed": [
+        "horse"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "A narrow trail between a cliff and a ravine",
+      "planned_shot_required_anchor_1": "A narrow trail between a cliff and a ravine",
+      "planned_shot_scale_proof_detail": "cliff vs ravine depth",
+      "start_state_seed": "wide view of landscape",
+      "end_state_seed": "rider approaching cave",
+      "action_seed": "riding along ledge",
+      "blocking_seed": [
+        "linear movement along trail"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "eye_level",
+      "lens_family": "wide",
+      "camera_motion": "track",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "hard_directional",
+      "primary_subject_angle": "profile_right"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT003",
+      "narrative_function": "convey lethargy",
+      "planned_shot_moment_summary": "eyes closing as consciousness fades",
+      "primary_subject_seed": "john_carter",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "ancient_cliffside_cave interior",
+      "planned_shot_required_anchor_1": "ancient_cliffside_cave",
+      "planned_shot_scale_proof_detail": "tight frame on face",
+      "start_state_seed": "eyes open/staring",
+      "end_state_seed": "eyes closed/darkness",
+      "action_seed": "blinking and eyes closing",
+      "blocking_seed": [
+        "lying on cave floor"
+      ],
+      "shot_size": "extreme_close_up",
+      "camera_angle": "eye_level",
+      "lens_family": "portrait",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "subtle_in",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "low_key_night",
+      "primary_subject_angle": "front"
+    }
+  ],
+  "unresolved_questions": [
+    "Resolve A narrow trail between a cliff and a ravine -> A narrow trail between a cliff and a ravine",
+    "Resolve a large -> a large"
+  ],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH001",
+      "scene_id": "CH001_SC005"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH001",
+      "scene_id": "CH001_SC005"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH001",
+      "scene_id": "CH001_SC005"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH001",
+      "scene_id": "CH001_SC005"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH001",
+      "scene_id": "CH001_SC005"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH001",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\02_story_analysis\\chapter_analysis\\CH001_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH001",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH001_chapter_i.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH002",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH002_chapter_ii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH021",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH021_chapter_xxi.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH001",
+      "canonical_id": "john_carter"
+    }
+  ],
+  "evidence_summary": [
+    "[CH001_SC005] Purpose: Resolve the immediate conflict and transition into the \"disappearance\" status quo.",
+    "[CH001_SC005] Summary: Carter's horse leads him away from the pursuit toward a cliff, where he finds an ancient cave. After confirming Powell is dead, Carter enters the cave, but exhaustion and a strange drowsiness overcome him, causing him to collapse.",
+    "[CH001_SC005] Emotional arc: From frantic survival to profound exhaustion and mysterious lethargy.",
+    "[CH001_SC005] Coverage: Wide shots of the desolate landscape/cliff; tight close-ups on Carter's eyes as he succumbs to sleep; slow fade to black.",
+    "[CH001_SC005] Continuity: The lighting inside the cave (dimming); Carter's physical state (dirt, blood, exhaustion).",
+    "[CH001] Chapter summary: **Setting:** The Arizona hills and mountains; specifically a remote gold-bearing quartz vein, a high plateau filled with Apache tepees, and a large, ancient cave located on a narrow trail between a cliff and a ravine....",
+    "[CH001] CHAPTER I (book index hit)",
+    "[CH002] CHAPTER II (book index hit)",
+    "[CH021] CHAPTER XXI (book index hit)",
+    "Character john_carter: [source:C:/FilmCreator_MC/projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH011/john_carter.md] Physical Description: A human male from Earth (Virginia). He possesses the strength and physical capabiliti..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH001_SC005\n\n## Production Intent\nEstablish the transition from active pursuit to isolation by moving the protagonist from a high-stakes landscape into a dark, enclosed sanctuary where physical collapse occurs.\n\n## Required Cast\n- john_carter\n\n## Required Environments\n- A narrow trail between a cliff and a ravine\n- ancient_cliffside_cave\n\n## Continuity Constraints\n- Dimming light levels inside the cave\n- Physical state of john_carter (dirt, blood, exhaustion)\n\n## Beat List\n- BT001: Escape via trail\n- BT002: Entering sanctuary\n- BT003: Mysterious collapse",
+  "metadata": {
+    "artifact_id": "CH001_SC005_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "f66470068bc4d2944cb122e841574aadfb75abcb",
+    "created_at_utc": "2026-04-26T22:12:56.404591+00:00",
+    "updated_at_utc": "2026-04-26T22:12:56.404591+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH001_SC005",
+        "version": "306649227173b85963679cdfcc191d8b1d38f772"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH001_SC005",
+        "version": "103920a332a6117f0c8a0c453eb95cf70e566f39"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH001_SC005",
+        "version": "5cd730f244443256a08fb55a9ec423f896cb3117"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-26T22:13:22.166717+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "f66470068bc4d2944cb122e841574aadfb75abcb"
+      }
+    ]
+  }
+}

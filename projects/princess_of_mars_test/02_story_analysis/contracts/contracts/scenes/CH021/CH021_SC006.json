@@ -1,0 +1,371 @@
+{
+  "scene_id": "CH021_SC006",
+  "chapter_id": "CH021",
+  "scene_title": "SC006",
+  "purpose": "Resolution and elevation of Carter's social status.",
+  "summary": "Carter returns to Zodanga with the rescued scout. During a massive military ceremony in the plaza, Jeddak Than Kosis publicly honors Carter for his bravery, appointing him a *padwar* of the Guards and granting him quarters in the royal palace.",
+  "emotional_arc": "Tension $\\rightarrow$ Grandeur/Social Elevation.",
+  "production_intent": "Establish the formal elevation of john_carter from outsider to padwar through a high-scale military ceremony. The visual language must transition from the tension of his return to the grandeur of royal recognition within the zodanga_central_plaza.",
+  "scene_short_description": "A massive military ceremony in a walled plaza where a hero is publicly honored by royalty.",
+  "scene_primary_scale_story_point": "Individual hero vs. massive military assembly and royal hierarchy.",
+  "scene_required_anchor_catalog": [
+    "ceremonial dais",
+    "zodanga city walls"
+  ],
+  "scene_start_state": "john_carter enters the crowded plaza with a rescued scout.",
+  "scene_end_state": "john_carter stands honored as a padwar within the palace grounds.",
+  "dominant_action_line": "Public recognition and appointment of Carter by than_kosis.",
+  "scene_spatial_layout": [
+    "Large open expanse of zodanga_central_plaza",
+    "Elevated ceremonial platform for royalty"
+  ],
+  "character_spatial_map": [
+    "john_carter positioned in center plaza facing the dais",
+    "than_kosis elevated on the ceremonial dais",
+    "Zodangan Military/Crowd forming concentric rings around the center"
+  ],
+  "environment_subzones": [
+    "zodanga_central_plaza_center",
+    "zodanga_central_plaza_dais",
+    "royal_palace_quarters"
+  ],
+  "entry_vectors": [
+    "plaza gates (john_carter and scout)"
+  ],
+  "exit_vectors": [
+    "palace entrance (john_carter)"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: Formal arrival into the ceremony space",
+    "BT002 -> BT003: Transition from crowd tension to royal decree"
+  ],
+  "characters_required": [
+    {
+      "label": "John Carter",
+      "canonical_id": "john_carter",
+      "display_name": "john_carter",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH021/john_carter.md",
+      "notes": "Direct registry match for 'john_carter'."
+    },
+    {
+      "label": "Than Kosis (Jeddak)",
+      "canonical_id": "than_kosis",
+      "display_name": "than_kosis",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH021/than_kosis.md",
+      "notes": "Direct registry match for 'than_kosis'."
+    },
+    {
+      "label": "Sab Than",
+      "canonical_id": "sab_than",
+      "display_name": "sab_than",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH021/sab_than.md",
+      "notes": "Direct registry match for 'sab_than'."
+    },
+    {
+      "label": "Zodangan Military/Crowd",
+      "canonical_id": null,
+      "display_name": "Zodangan Military/Crowd",
+      "status": "review",
+      "entity_kind": "individual",
+      "resolution_score": 10,
+      "source_path": "",
+      "notes": "Low-confidence character match requires review."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "The Great Plaza of Zodanga",
+      "canonical_id": "zodanga_central_plaza",
+      "display_name": "zodanga_central_plaza",
+      "status": "canonical",
+      "entity_kind": "plaza",
+      "resolution_score": 92,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH021/zodanga_central_plaza.md",
+      "notes": "Chapter-local environment alias match for 'The Great Plaza of Zodanga' (key_overlap=2, label_overlap=2, context_overlap=4)."
+    },
+    {
+      "label": "Royal Palace grounds",
+      "canonical_id": "royal_palace_quarters",
+      "display_name": "royal_palace_quarters",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 92,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH021/royal_palace_quarters.md",
+      "notes": "Chapter-local environment alias match for 'Royal Palace grounds' (key_overlap=2, label_overlap=2, context_overlap=4)."
+    }
+  ],
+  "continuity_constraints": [
+    "Armor/Uniform state for john_carter",
+    "Crowd density and military formation placement"
+  ],
+  "visual_coverage_families": [
+    "Wide sweeping shots of ceremony scale",
+    "Low-angle hero shots of john_carter",
+    "Reaction shots from crowd and royalty"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "Arrival at the ceremony",
+      "purpose": "",
+      "action_start": "Carter enters plaza gates",
+      "action_end": "Carter reaches center of crowd",
+      "active_subjects": [
+        "john_carter"
+      ],
+      "passive_subjects": [
+        "Zodangan Military/Crowd"
+      ],
+      "spatial_context": "zodanga_central_plaza",
+      "blocking_hint": "Carter moving through military ranks",
+      "environment_subzone": "zodanga_central_plaza_center",
+      "continuity_focus": "armor condition",
+      "coverage_hint": "wide sweeping shots",
+      "coverage_priority": "medium",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "The Royal Proclamation",
+      "purpose": "",
+      "action_start": "Than Kosis stands on dais",
+      "action_end": "The crowd reacts to the announcement",
+      "active_subjects": [
+        "than_kosis",
+        "john_carter"
+      ],
+      "passive_subjects": [
+        "Zodangan Military/Crowd",
+        "sab_than"
+      ],
+      "spatial_context": "zodanga_central_plaza_dais",
+      "blocking_hint": "Than Kosis overlooking the plaza",
+      "environment_subzone": "zodanga_central_plaza_dais",
+      "continuity_focus": "crowd density",
+      "coverage_hint": "reaction shots",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "Appointment of Padwar",
+      "purpose": "",
+      "action_start": "Carter is named padwar",
+      "action_end": "Carter is granted palace quarters",
+      "active_subjects": [
+        "john_carter",
+        "than_kosis"
+      ],
+      "passive_subjects": [
+        "Zodangan Military/Crowd"
+      ],
+      "spatial_context": "zodanga_central_plaza",
+      "blocking_hint": "Carter standing in center of plaza facing dais",
+      "environment_subzone": "zodanga_central_plaza_center",
+      "continuity_focus": "armor/uniform changes",
+      "coverage_hint": "low-angle hero shots",
+      "coverage_priority": "high",
+      "handoff_to_next": "none"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish scale",
+      "planned_shot_moment_summary": "Carter enters the massive plaza through the gates",
+      "primary_subject_seed": "john_carter",
+      "secondary_subjects_seed": [
+        "Zodangan Military/Crowd"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "zodanga_central_plaza_center",
+      "planned_shot_required_anchor_1": "zodanga city walls",
+      "planned_shot_scale_proof_detail": "massive crowd vs single man",
+      "start_state_seed": "gate entry",
+      "end_state_seed": "walking into plaza center",
+      "action_seed": "marching through crowd",
+      "blocking_seed": [
+        "linear path through military ranks"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "eye_level",
+      "lens_family": "ultra_wide",
+      "camera_motion": "track",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "high_contrast_ceremonial",
+      "primary_subject_angle": "front_three_quarter_right"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "hero elevation",
+      "planned_shot_moment_summary": "Than Kosis announces the honor",
+      "primary_subject_seed": "than_kosis",
+      "secondary_subjects_seed": [
+        "john_carter"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "zodanga_central_plaza_dais",
+      "planned_shot_required_anchor_1": "ceremonial dais",
+      "planned_shot_scale_proof_detail": "royalty looking down at hero",
+      "start_state_seed": "Than Kosis standing",
+      "end_state_seed": "Than Kosis gesturing to Carter",
+      "action_seed": "speaking/declaring",
+      "blocking_seed": [
+        "standing on elevated platform"
+      ],
+      "shot_size": "medium_full",
+      "camera_angle": "low_angle",
+      "lens_family": "normal",
+      "camera_motion": "push_in",
+      "zoom_behavior": "subtle_in",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "high_contrast_ceremonial",
+      "primary_subject_angle": "front"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "resolution",
+      "planned_shot_moment_summary": "Carter accepts the title of padwar",
+      "primary_subject_seed": "john_carter",
+      "secondary_subjects_seed": [
+        "than_kosis"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "zodanga_central_plaza_center",
+      "planned_shot_required_anchor_1": "ceremonial dais",
+      "planned_shot_scale_proof_detail": "hero standing tall in center",
+      "start_state_seed": "Carter looking up at dais",
+      "end_state_seed": "Carter standing as padwar",
+      "action_seed": "accepting honor",
+      "blocking_seed": [
+        "standing centered in plaza"
+      ],
+      "shot_size": "low_angle_full",
+      "camera_angle": "low_angle",
+      "lens_family": "wide",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "high_contrast_ceremonial",
+      "primary_subject_angle": "front_three_quarter_left"
+    }
+  ],
+  "unresolved_questions": [
+    "Resolve Zodangan Military/Crowd -> Zodangan Military/Crowd"
+  ],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH021",
+      "scene_id": "CH021_SC006"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH021",
+      "scene_id": "CH021_SC006"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH021",
+      "scene_id": "CH021_SC006"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH021",
+      "scene_id": "CH021_SC006"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH021",
+      "scene_id": "CH021_SC006"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH021",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\02_story_analysis\\chapter_analysis\\CH021_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH021",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH021_chapter_xxi.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH022",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH022_chapter_xxii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH025",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH025_chapter_xxv.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH021",
+      "canonical_id": "john_carter"
+    }
+  ],
+  "evidence_summary": [
+    "[CH021_SC006] Purpose: Resolution and elevation of Carter's social status.",
+    "[CH021_SC006] Summary: Carter returns to Zodanga with the rescued scout. During a massive military ceremony in the plaza, Jeddak Than Kosis publicly honors Carter for his bravery, appointing him a *padwar* of the Guards and granting him quarters in the roya...",
+    "[CH021_SC006] Emotional arc: Tension $\\rightarrow$ Grandeur/Social Elevation.",
+    "[CH021_SC006] Coverage: Wide sweeping shots of the ceremony; Low-angle \"hero\" shots of Carter; Reaction shots from the crowd and royalty.",
+    "[CH021_SC006] Continuity: Uniform/Armor changes (if any); Crowd density and placement.",
+    "[CH021] Chapter summary: **Setting:** The journey begins on the cultivated agricultural tracts between the polar ice caps and populated centers, moving toward the vast, walled city of Zodanga. The setting features advanced Martian infrastruct...",
+    "[CH021] CHAPTER XXI (book index hit)",
+    "[CH022] CHAPTER XXII (book index hit)",
+    "[CH025] CHAPTER XXV (book index hit)",
+    "Character john_carter: [source:C:/FilmCreator_MC/projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH011/john_carter.md] Physical Description: A human male from Earth (Virginia). He possesses the strength and physical capabiliti..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH021_SC006\n\n## Production Intent\nEstablish the formal elevation of john_carter from outsider to padwar through a high-scale military ceremony. The visual language must transition from the tension of his return to the grandeur of royal recognition within the zodanga_central_plaza.\n\n## Required Cast\n- john_carter\n- than_kosis\n- sab_than\n- Zodangan Military/Crowd\n\n## Required Environments\n- zodanga_central_plaza\n- royal_palace_quarters\n\n## Continuity Constraints\n- Armor/Uniform state for john_carter\n- Crowd density and military formation placement\n\n## Beat List\n- BT001: Arrival at the ceremony\n- BT002: The Royal Proclamation\n- BT003: Appointment of Padwar",
+  "metadata": {
+    "artifact_id": "CH021_SC006_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "818f7bc26bcd19f9f263730d452f8503446485bd",
+    "created_at_utc": "2026-04-26T22:57:46.052480+00:00",
+    "updated_at_utc": "2026-04-26T22:57:46.052480+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH021_SC006",
+        "version": "4b414ca13949b60412087446ef53faa7312f7dcd"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH021_SC006",
+        "version": "66737100915852ea5a303a1a75fa939b2d5db5e4"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH021_SC006",
+        "version": "df78320d9d922c2fa70751478a76bd73aac0da9c"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-26T22:58:16.941757+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "818f7bc26bcd19f9f263730d452f8503446485bd"
+      }
+    ]
+  }
+}

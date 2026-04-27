@@ -1,0 +1,373 @@
+{
+  "scene_id": "CH024_SC003",
+  "chapter_id": "CH024",
+  "scene_title": "SC003",
+  "purpose": "Execute the political coup and establish the new power structure.",
+  "summary": "In the Thark council, John Carter publicly challenges Tal Hajus's fitness to rule by highlighting his cowardice. A duel is decreed between Tars Tarkas and Tal Hajus. Tars Tarkas wins the duel, becoming the new Jeddak and elevating John Carter to chieftain status.",
+  "emotional_arc": "Defiance $\\rightarrow$ High Tension $\\rightarrow$ Victory/Authority.",
+  "production_intent": "Establish the political transition of power within the Thark hierarchy through a public challenge and ritualized combat. The scene must visually communicate the shift from Tal Hajus's authority to Tars Tarkas's new leadership via the physical outcome of the duel and subsequent rank proclamations.",
+  "scene_short_description": "A political challenge leads to a ritual duel within a massive assembly chamber.",
+  "scene_primary_scale_story_point": "The hierarchy shifts from one Jeddak to another amidst a large gathered audience.",
+  "scene_required_anchor_catalog": [
+    "Council seating arrangement",
+    "Duel combat zone"
+  ],
+  "scene_start_state": "John Carter stands in defiance before the seated council and Tal Hajus.",
+  "scene_end_state": "Tars Tarkas stands as the new Jeddak with John Carter elevated to chieftain status.",
+  "dominant_action_line": "Public challenge -> Ritual duel -> Proclamation of new ranks.",
+  "scene_spatial_layout": [
+    "Large assembly chamber with tiered or organized seating for council members",
+    "Central open area designated for the duel"
+  ],
+  "character_spatial_map": [
+    "Tal Hajus positioned at the seat of power",
+    "John Carter positioned in the center/floor facing the council",
+    "Tars Tarkas positioned near the combat zone"
+  ],
+  "environment_subzones": [
+    "Council Seating Zone",
+    "Duel Arena"
+  ],
+  "entry_vectors": [
+    "Central floor access"
+  ],
+  "exit_vectors": [
+    "Side exits from the assembly chamber"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: Transition from verbal challenge to decree of combat",
+    "BT002 -> BT003: Transition from combat resolution to political proclamation"
+  ],
+  "characters_required": [
+    {
+      "label": "John Carter",
+      "canonical_id": "john_carter",
+      "display_name": "john_carter",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH024/john_carter.md",
+      "notes": "Direct registry match for 'john_carter'."
+    },
+    {
+      "label": "Tars Tarkas",
+      "canonical_id": "tars_tarkas",
+      "display_name": "tars_tarkas",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH024/tars_tarkas.md",
+      "notes": "Direct registry match for 'tars_tarkas'."
+    },
+    {
+      "label": "Tal Hajus",
+      "canonical_id": "tal_hajus",
+      "display_name": "tal_hajus",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH024/tal_hajus.md",
+      "notes": "Direct registry match for 'tal_hajus'."
+    },
+    {
+      "label": "Lorquas Ptomel",
+      "canonical_id": "lorquas_ptomel",
+      "display_name": "lorquas_ptomel",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH024/lorquas_ptomel.md",
+      "notes": "Direct registry match for 'lorquas_ptomel'."
+    },
+    {
+      "label": "Thark Council Members",
+      "canonical_id": null,
+      "display_name": "Thark Council Members",
+      "status": "review",
+      "entity_kind": "individual",
+      "resolution_score": 10,
+      "source_path": "",
+      "notes": "Low-confidence character match requires review."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "Thark (Council Chamber)",
+      "canonical_id": "thark_city_complex",
+      "display_name": "thark_city_complex",
+      "status": "canonical",
+      "entity_kind": "city",
+      "resolution_score": 68,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH024/thark_city_complex.md",
+      "notes": "Chapter-local environment alias match for 'Thark (Council Chamber)' (key_overlap=1, label_overlap=2, context_overlap=4)."
+    }
+  ],
+  "continuity_constraints": [
+    "Weaponry used in the duel",
+    "Wounds sustained by Tal Hajus",
+    "Seating arrangements of the council"
+  ],
+  "visual_coverage_families": [
+    "Wide shots of council assembly for scale and audience reaction",
+    "Medium shots of the duel between Tars Tarkas and Tal Hajus",
+    "Close-ups on Carter's speech and rank proclamations"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "John Carter challenges Tal Hajus's fitness to rule",
+      "purpose": "",
+      "action_start": "Carter stands before the council",
+      "action_end": "The challenge is issued and cowardice highlighted",
+      "active_subjects": [
+        "john_carter"
+      ],
+      "passive_subjects": [
+        "tal_hajus",
+        "Thark Council Members"
+      ],
+      "spatial_context": "Council Seating Zone",
+      "blocking_hint": "Carter facing the seated assembly",
+      "environment_subzone": "Council Seating Zone",
+      "continuity_focus": "Seating arrangement of council members",
+      "coverage_hint": "Close-ups on Carter's speech",
+      "coverage_priority": "high",
+      "handoff_to_next": "The decree of a duel"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "The ritual duel between Tars Tarkas and Tal Hajus",
+      "purpose": "",
+      "action_start": "Combatants enter the arena",
+      "action_end": "Tars Tarkas wins the duel",
+      "active_subjects": [
+        "tars_tarkas",
+        "tal_hajus"
+      ],
+      "passive_subjects": [
+        "Thark Council Members"
+      ],
+      "spatial_context": "Duel Arena",
+      "blocking_hint": "Central combat zone engagement",
+      "environment_subzone": "Duel Arena",
+      "continuity_focus": "Weaponry used and wounds on Tal Hajus",
+      "coverage_hint": "Medium shots of the duel",
+      "coverage_priority": "high",
+      "handoff_to_next": "The aftermath of the victory"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "Tars Tarkas is named Jeddak and John Carter is elevated to chieftain",
+      "purpose": "",
+      "action_start": "Tars Tarkas stands over defeated Tal Hajus",
+      "action_end": "New power structure is visually confirmed by council reaction",
+      "active_subjects": [
+        "tars_tarkas",
+        "john_carter"
+      ],
+      "passive_subjects": [
+        "Thark Council Members"
+      ],
+      "spatial_context": "Council Seating Zone/Duel Arena boundary",
+      "blocking_hint": "Tars Tarkas and Carter positioned as new leaders",
+      "environment_subzone": "Council Seating Zone",
+      "continuity_focus": "New ranks established",
+      "coverage_hint": "Wide shots of assembly and close-ups on proclamation",
+      "coverage_priority": "medium",
+      "handoff_to_next": "End of scene"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish defiance",
+      "planned_shot_moment_summary": "John Carter challenges Tal Hajus's fitness to rule",
+      "primary_subject_seed": "john_carter",
+      "secondary_subjects_seed": [
+        "tal_hajus",
+        "Thark Council Members"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "Council Seating Zone",
+      "planned_shot_required_anchor_1": "Council seating arrangement",
+      "planned_shot_scale_proof_detail": "Scale of council vs single human",
+      "start_state_seed": "Carter standing alone",
+      "end_state_seed": "Carter finishing speech",
+      "action_seed": "Speaking/challenging",
+      "blocking_seed": [
+        "Carter center floor facing seated council"
+      ],
+      "shot_size": "medium_close",
+      "camera_angle": "eye_level",
+      "lens_family": "portrait",
+      "camera_motion": "push_in",
+      "zoom_behavior": "subtle_in",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "high_contrast_ceremonial",
+      "primary_subject_angle": "front_three_quarter_right"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "establish tension",
+      "planned_shot_moment_summary": "The duel begins between Tars Tarkas and Tal Hajus",
+      "primary_subject_seed": "tars_tarkas",
+      "secondary_subjects_seed": [
+        "tal_hajus"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "Duel Arena",
+      "planned_shot_required_anchor_1": "Duel combat zone",
+      "planned_shot_scale_proof_detail": "Physicality of the combatants",
+      "start_state_seed": "Combatants facing off",
+      "end_state_seed": "Tal Hajus defeated",
+      "action_seed": "Fighting/dueling",
+      "blocking_seed": [
+        "Tars Tarkas and Tal Hajus in central arena"
+      ],
+      "shot_size": "medium",
+      "camera_angle": "low_angle",
+      "lens_family": "wide",
+      "camera_motion": "track",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "high_contrast_ceremonial",
+      "primary_subject_angle": "profile_left"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "establish authority",
+      "planned_shot_moment_summary": "Tars Tarkas is proclaimed Jeddak and Carter is elevated",
+      "primary_subject_seed": "tars_tarkas",
+      "secondary_subjects_seed": [
+        "john_carter",
+        "Thark Council Members"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "Council Seating Zone",
+      "planned_shot_required_anchor_1": "Council seating arrangement",
+      "planned_shot_scale_proof_detail": "New hierarchy established",
+      "start_state_seed": "Tars Tarkas standing victorious",
+      "end_state_seed": "Carter and Tars Tarkas acknowledged by council",
+      "action_seed": "Proclamation/ranking",
+      "blocking_seed": [
+        "Tars Tarkas and Carter near the center of authority"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "low_angle",
+      "lens_family": "wide",
+      "camera_motion": "pan",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "high_contrast_ceremonial",
+      "primary_subject_angle": "front"
+    }
+  ],
+  "unresolved_questions": [
+    "Resolve Thark Council Members -> Thark Council Members"
+  ],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH024",
+      "scene_id": "CH024_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH024",
+      "scene_id": "CH024_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH024",
+      "scene_id": "CH024_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH024",
+      "scene_id": "CH024_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH024",
+      "scene_id": "CH024_SC003"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH024",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\02_story_analysis\\chapter_analysis\\CH024_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH014",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH014_chapter_xiv.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH012",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH012_chapter_xii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH010",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH010_chapter_x.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH024",
+      "canonical_id": "john_carter"
+    }
+  ],
+  "evidence_summary": [
+    "[CH024_SC003] Purpose: Execute the political coup and establish the new power structure.",
+    "[CH024_SC003] Summary: In the Thark council, John Carter publicly challenges Tal Hajus's fitness to rule by highlighting his cowardice. A duel is decreed between Tars Tarkas and Tal Hajus. Tars Tarkas wins the duel, becoming the new Jeddak and elevating Joh...",
+    "[CH024_SC003] Emotional arc: Defiance $\\rightarrow$ High Tension $\\rightarrow$ Victory/Authority.",
+    "[CH024_SC003] Coverage: Wide shots of the council assembly to show scale and audience reaction. Medium shots of the duel between Tars Tarkas and Tal Hajus. Close-ups on Carter's speech and the proclamation of new ranks.",
+    "[CH024_SC003] Continuity: Weaponry used in the duel, wounds sustained by Tal Hajus, seating arrangements of the council.",
+    "[CH024] Chapter summary: **Events:** John Carter's aircraft is shot down during a massive battle between Tharks and Warhoons. He intervenes to save Tars Tarkas from being killed by three Warhoon warriors, cementing a new friendship between th...",
+    "[CH014] CHAPTER XIV (book index hit)",
+    "[CH012] CHAPTER XII (book index hit)",
+    "[CH010] CHAPTER X (book index hit)",
+    "Character john_carter: [source:C:/FilmCreator_MC/projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH011/john_carter.md] Physical Description: A human male from Earth (Virginia). He possesses the strength and physical capabiliti..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH024_SC003\n\n## Production Intent\nEstablish the political transition of power within the Thark hierarchy through a public challenge and ritualized combat. The scene must visually communicate the shift from Tal Hajus's authority to Tars Tarkas's new leadership via the physical outcome of the duel and subsequent rank proclamations.\n\n## Required Cast\n- john_carter\n- tars_tarkas\n- tal_hajus\n- lorquas_ptomel\n- Thark Council Members\n\n## Required Environments\n- thark_city_complex (Council Chamber)\n\n## Continuity Constraints\n- Weaponry used in the duel\n- Wounds sustained by Tal Hajus\n- Seating arrangements of the council\n\n## Beat List\n- BT001: John Carter challenges Tal Hajus's fitness to rule.\n- BT002: The ritual duel between Tars Tarkas and Tal Hajus.\n- BT003: Tars Tarkas is named Jeddak and John Carter is elevated to chieftain.",
+  "metadata": {
+    "artifact_id": "CH024_SC003_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "5927fde710c3f6c5d1dae85538083eeafa7295c8",
+    "created_at_utc": "2026-04-26T23:03:59.020632+00:00",
+    "updated_at_utc": "2026-04-26T23:03:59.020632+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH024_SC003",
+        "version": "eb99305f4d95d4ee66d2e1a702c8ce339a81985e"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH024_SC003",
+        "version": "2f8ab083111d4a6db95dcb54658fdf75876f3db7"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH024_SC003",
+        "version": "5ca600e22c43b8c26b742cb3066f16c34d97f761"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-26T23:04:31.781313+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "5927fde710c3f6c5d1dae85538083eeafa7295c8"
+      }
+    ]
+  }
+}

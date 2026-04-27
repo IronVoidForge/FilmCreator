@@ -1,0 +1,358 @@
+{
+  "scene_id": "CH025_SC001",
+  "chapter_id": "CH025",
+  "scene_title": "SC001",
+  "purpose": "Establish the scale of the assault and the tension of the infiltration.",
+  "summary": "John Carter leads fifty Tharks, under the command of Tars Tarkas, through the gates of Zodanga and into the palace gardens to disrupt the wedding ceremony.",
+  "emotional_arc": "Tension $\\rightarrow$ Aggression/Momentum.",
+  "production_intent": "Execute a high-scale transition from the tension of an infiltration to the aggressive momentum of a military assault. The sequence must visually communicate the sheer number of Thark warriors and the shift in lighting as they move from city streets into garden shadows.",
+  "scene_short_description": "Fifty Thark warriors lead a charge through palace gates into lush gardens.",
+  "scene_primary_scale_story_point": "Fifty Thark warriors moving as a single unit under command.",
+  "scene_required_anchor_catalog": [
+    "zodanga_palace_dungeons (Gates)",
+    "zodanga_palace_throne_room (Gardens/Wedding site)"
+  ],
+  "scene_start_state": "Tense infiltration through the gates of Zodanga.",
+  "scene_end_state": "Aggressive momentum as they enter the palace gardens.",
+  "dominant_action_line": "Infiltrating the city gates and charging into the garden wedding ceremony.",
+  "scene_spatial_layout": [
+    "Linear progression from gate entrance to garden interior",
+    "Transition from open street scale to enclosed garden shadows"
+  ],
+  "character_spatial_map": [
+    "john_carter leads the vanguard",
+    "tars_tarkas maintains command position within the Thark group",
+    "Thark Warriors form a massed force behind leaders"
+  ],
+  "environment_subzones": [
+    "zodanga_palace_dungeons (Gates)",
+    "zodanga_palace_throne_room (Gardens)"
+  ],
+  "entry_vectors": [
+    "zodanga_palace_dungeons gates"
+  ],
+  "exit_vectors": [
+    "toward wedding ceremony in gardens"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: Transition from gate entry to garden movement",
+    "BT002 -> BT003: Transition from infiltration tension to aggressive charge"
+  ],
+  "characters_required": [
+    {
+      "label": "John Carter",
+      "canonical_id": "john_carter",
+      "display_name": "john_carter",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH025/john_carter.md",
+      "notes": "Direct registry match for 'john_carter'."
+    },
+    {
+      "label": "Tars Tarkas",
+      "canonical_id": "tars_tarkas",
+      "display_name": "tars_tarkas",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH025/tars_tarkas.md",
+      "notes": "Direct registry match for 'tars_tarkas'."
+    },
+    {
+      "label": "Thark Warriors",
+      "canonical_id": null,
+      "display_name": "Thark Warriors",
+      "status": "review",
+      "entity_kind": "individual",
+      "resolution_score": 10,
+      "source_path": "",
+      "notes": "Low-confidence character match requires review."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "Gates of Zodanga",
+      "canonical_id": "zodanga_palace_dungeons",
+      "display_name": "zodanga_palace_dungeons",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 68,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH025/zodanga_palace_dungeons.md",
+      "notes": "Chapter-local environment alias match for 'Gates of Zodanga' (key_overlap=1, label_overlap=2, context_overlap=4)."
+    },
+    {
+      "label": "Palace Gardens",
+      "canonical_id": "zodanga_palace_throne_room",
+      "display_name": "zodanga_palace_throne_room",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 68,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH025/zodanga_palace_throne_room.md",
+      "notes": "Chapter-local environment alias match for 'Palace Gardens' (key_overlap=1, label_overlap=2, context_overlap=4)."
+    }
+  ],
+  "continuity_constraints": [
+    "Weapon positions during movement",
+    "Thark armor and gear consistency",
+    "Lighting transitions from city streets to garden shadows"
+  ],
+  "visual_coverage_families": [
+    "Wide shots of cavalry charge",
+    "Medium tracking shots of Carter and Tars Tarkas",
+    "Close-ups of determined faces"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "Infiltration through the gates",
+      "purpose": "",
+      "action_start": "Tharks appearing at gate threshold",
+      "action_end": "Tharks passing through gates",
+      "active_subjects": [
+        "tars_tarkas",
+        "Thark Warriors"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "zodanga_palace_dungeons | Gates",
+      "blocking_hint": "Massed formation moving through narrow entry",
+      "environment_subzone": "zodanga_palace_dungeons",
+      "continuity_focus": "Weapon positions and armor consistency",
+      "coverage_hint": "Wide shots of cavalry charge",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "Movement into gardens",
+      "purpose": "",
+      "action_start": "Transition from street to garden edge",
+      "action_end": "Moving through garden shadows",
+      "active_subjects": [
+        "john_carter",
+        "tars_tarkas"
+      ],
+      "passive_subjects": [
+        "Thark Warriors"
+      ],
+      "spatial_context": "zodanga_palace_throne_room | Gardens",
+      "blocking_hint": "Leaders moving ahead of the massed group",
+      "environment_subzone": "zodanga_palace_throne_room",
+      "continuity_focus": "Lighting transition from street to garden shadows",
+      "coverage_hint": "Medium tracking shots",
+      "coverage_priority": "medium",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "Aggressive charge toward ceremony",
+      "purpose": "",
+      "action_start": "Tension breaks into momentum",
+      "action_end": "Approaching the wedding disruption",
+      "active_subjects": [
+        "john_carter",
+        "tars_tarkas",
+        "Thark Warriors"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "zodanga_palace_throne_room | Gardens",
+      "blocking_hint": "Rapid forward movement toward camera/target",
+      "environment_subzone": "zodanga_palace_throne_room",
+      "continuity_focus": "Weapon positions during high-speed movement",
+      "coverage_hint": "Close-ups of determined faces",
+      "coverage_priority": "high",
+      "handoff_to_next": "end_of_scene"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish scale",
+      "planned_shot_moment_summary": "Massed Tharks entering the gates",
+      "primary_subject_seed": "Thark Warriors",
+      "secondary_subjects_seed": [
+        "tars_tarkas"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "zodanga_palace_dungeons",
+      "planned_shot_required_anchor_1": "gates",
+      "planned_shot_scale_proof_detail": "fifty warriors visible in frame",
+      "start_state_seed": "gate threshold",
+      "end_state_seed": "moving past gate",
+      "action_seed": "marching through gates",
+      "blocking_seed": [
+        "massed formation"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "low_angle",
+      "lens_family": "ultra_wide",
+      "camera_motion": "pan",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "hard_directional",
+      "primary_subject_angle": "front_three_quarter_left"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "character focus",
+      "planned_shot_moment_summary": "Carter and Tars Tarkas moving through gardens",
+      "primary_subject_seed": "john_carter",
+      "secondary_subjects_seed": [
+        "tars_tarkas"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "zodanga_palace_throne_room",
+      "planned_shot_required_anchor_1": "garden shadows",
+      "planned_shot_scale_proof_detail": "medium tracking shot of two leads",
+      "start_state_seed": "entering garden edge",
+      "end_state_seed": "moving deeper into greenery",
+      "action_seed": "advancing through foliage",
+      "blocking_seed": [
+        "side-by-side movement"
+      ],
+      "shot_size": "medium",
+      "camera_angle": "eye_level",
+      "lens_family": "normal",
+      "camera_motion": "track",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "profile_left"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "emotional impact",
+      "planned_shot_moment_summary": "Close up of determined faces during charge",
+      "primary_subject_seed": "john_carter",
+      "secondary_subjects_seed": [
+        "tars_tarkas"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "zodanga_palace_throne_room",
+      "planned_shot_required_anchor_1": "garden shadows",
+      "planned_shot_scale_proof_detail": "tight facial detail",
+      "start_state_seed": "steady movement",
+      "end_state_seed": "aggressive charge",
+      "action_seed": "charging toward wedding",
+      "blocking_seed": [
+        "rapid forward motion"
+      ],
+      "shot_size": "close_up",
+      "camera_angle": "low_angle",
+      "lens_family": "portrait",
+      "camera_motion": "handheld",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "high_contrast_ceremonial",
+      "primary_subject_angle": "front_three_quarter_right"
+    }
+  ],
+  "unresolved_questions": [
+    "Resolve Thark Warriors -> Thark Warriors"
+  ],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH025",
+      "scene_id": "CH025_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH025",
+      "scene_id": "CH025_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH025",
+      "scene_id": "CH025_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH025",
+      "scene_id": "CH025_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH025",
+      "scene_id": "CH025_SC001"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH025",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\02_story_analysis\\chapter_analysis\\CH025_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH026",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH026_chapter_xxvi.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH024",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH024_chapter_xxiv.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH025",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH025_chapter_xxv.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH025",
+      "canonical_id": "john_carter"
+    }
+  ],
+  "evidence_summary": [
+    "[CH025_SC001] Purpose: Establish the scale of the assault and the tension of the infiltration.",
+    "[CH025_SC001] Summary: John Carter leads fifty Tharks, under the command of Tars Tarkas, through the gates of Zodanga and into the palace gardens to disrupt the wedding ceremony.",
+    "[CH025_SC001] Emotional arc: Tension $\\rightarrow$ Aggression/Momentum.",
+    "[CH025_SC001] Coverage: Wide shots of the cavalry charge; medium tracking shots of Carter and Tars Tarkas moving through gardens; close-ups of determined faces.",
+    "[CH025_SC001] Continuity: Weapon positions, Thark armor/gear consistency during movement, lighting transitions from city streets to garden shadows.",
+    "[CH025] Chapter summary: **Setting:** The palace and throne room of Zodanga; the subterranean dungeons of the palace. **Characters:** - **John Carter:** The protagonist, who infiltrates the palace to prevent a forced marriage. - **Dejah Thori...",
+    "[CH026] CHAPTER XXVI (book index hit)",
+    "[CH024] CHAPTER XXIV (book index hit)",
+    "[CH025] CHAPTER XXV (book index hit)",
+    "Character john_carter: [source:C:/FilmCreator_MC/projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH011/john_carter.md] Physical Description: A human male from Earth (Virginia). He possesses the strength and physical capabiliti..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH025_SC001\n\n## Production Intent\nExecute a high-scale transition from the tension of an infiltration to the aggressive momentum of a military assault. The sequence must visually communicate the sheer number of Thark warriors and the shift in lighting as they move from city streets into garden shadows.\n\n## Required Cast\n- john_carter\n- tars_tarkas\n- Thark Warriors\n\n## Required Environments\n- zodanga_palace_dungeons (Gates)\n- zodanga_palace_throne_room (Gardens)\n\n## Continuity Constraints\n- Weapon positions during movement\n- Thark armor and gear consistency\n- Lighting transitions from city streets to garden shadows\n\n## Beat List\n- BT001: Infiltration through the gates\n- BT002: Movement into gardens\n- BT003: Aggressive charge toward ceremony",
+  "metadata": {
+    "artifact_id": "CH025_SC001_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "fd01a2118b3aea8864d9642cb53a858ca64e1cd0",
+    "created_at_utc": "2026-04-26T23:05:36.859589+00:00",
+    "updated_at_utc": "2026-04-26T23:05:36.859589+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH025_SC001",
+        "version": "4720d3967750fabd48a34dd077e58d0c5ba86608"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH025_SC001",
+        "version": "0d3f4cf49dd26cc4e7a625b2a8a658a7617d909e"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH025_SC001",
+        "version": "29aaa07616289e240654f965a35ddd30bc2b4380"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-26T23:06:08.140553+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "fd01a2118b3aea8864d9642cb53a858ca64e1cd0"
+      }
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+# Environment Bible: helium_city_interior
+
+- environment_id: `helium_city_interior`
+- status: `canonical`
+- entity_kind: `city`
+- first_seen_chapter: `CH026`
+- last_seen_chapter: `CH026`
+
+## Identity
+
+- display_name: helium_city_interior
+- environment_type: Primary (Social/Ceremonial)
+- chapter_mentions: CH026
+
+## Visual Bible
+
+The grand capital of Helium is defined by majestic Martian palace architecture and massive red stone structures. The cityscape is characterized by prominent red towers and wide ceremonial thoroughfares designed for triumphant processions.
+
+- layout_notes: Features wide ceremonial streets, royal halls, and majestic palaces.
+- lighting: unknown
+- mood: Majestic/Triumphant
+- recurring_elements: Red towers, Majestic red stone structures, Wide ceremonial thoroughfares, Martian palace architecture
+
+## Continuity
+
+- constraints: Must maintain the scale of a grand capital
+- unresolved_ambiguities: Specific interior layouts of the royal halls are not detailed., Precise lighting conditions for the red stone structures are unstated.
+
+## Evidence Summary
+
+- Environment currently kept under extracted canonical id.
+- Role: Primary (Social/Ceremonial)
+- Geography: The grand capital of Helium; characterized by red towers, majestic palaces, and wide ceremonial thoroughfares.
+- Prompt Phrases: Helium capital, red towers, Martian palace architecture, grand ceremonial streets, triumphant procession, majestic red stone structures, royal halls.
+- [CH016] CHAPTER XVI (book index hit)
+- [CH010] CHAPTER X (book index hit)
+- [CH019] CHAPTER XIX (book index hit)
+
+## Metadata
+
+- artifact_id: `ENV_helium_city_interior`
+- status: `generated`
+- source_fingerprint: `ba3fbc380e0b614a6fef6e640a20a94a36f5fb37`
+- created_at_utc: `2026-04-26T22:10:31.580401+00:00`
+- updated_at_utc: `2026-04-26T22:10:31.580401+00:00`

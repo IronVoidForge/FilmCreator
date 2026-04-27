@@ -1,0 +1,322 @@
+{
+  "scene_id": "CH022_SC005",
+  "chapter_id": "CH022",
+  "scene_title": "SC005",
+  "purpose": "To resolve the chapter with a display of Carter's unique abilities and transition him into the next phase of his journey.",
+  "summary": "Realizing he is a wanted man, Carter waits for nightfall. He utilizes his superhuman strength and agility to leap from a palace balcony, escaping into the city of Zodanga.",
+  "emotional_arc": "Tension $\\rightarrow$ Decisive Action $\\rightarrow$ Freedom/Escape.",
+  "production_intent": "Establish the character's transition from a hunted fugitive to an active agent of escape by utilizing superhuman physical capabilities. The sequence must emphasize the verticality and scale of the palace architecture against the sprawling Zodangan cityscape at night.",
+  "scene_short_description": "A man waits for nightfall before leaping from a high balcony into a dark cityscape.",
+  "scene_primary_scale_story_point": "High altitude vertical drop from palace to city street level.",
+  "scene_required_anchor_catalog": [
+    "zodanga_palace_interior balcony railing",
+    "overlooking Zodangan avenue/cityscape at night horizon"
+  ],
+  "scene_start_state": "john_carter standing in shadow on the balcony, watching the sky darken.",
+  "scene_end_state": "john_carter lost within the lights and shadows of the city below.",
+  "dominant_action_line": "A superhuman leap from a high-altitude palace structure into the urban sprawl.",
+  "scene_spatial_layout": [
+    "Vertical hierarchy from elevated balcony to street level.",
+    "Open expanse of Zodangan avenue visible below."
+  ],
+  "character_spatial_map": [
+    "john_carter positioned at the edge of zodanga_palace_interior balcony."
+  ],
+  "environment_subzones": [
+    "primary scene playing area"
+  ],
+  "entry_vectors": [
+    "john_carter enters via palace corridors to balcony."
+  ],
+  "exit_vectors": [
+    "john_carter exits via vertical descent into the city."
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: Transition from stillness to explosive movement.",
+    "BT002 -> BT003: Transition from controlled leap to disappearing into distance."
+  ],
+  "characters_required": [
+    {
+      "label": "John Carter",
+      "canonical_id": "john_carter",
+      "display_name": "john_carter",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH022/john_carter.md",
+      "notes": "Direct registry match for 'john_carter'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "Palace balcony",
+      "canonical_id": "zodanga_palace_interior",
+      "display_name": "zodanga_palace_interior",
+      "status": "canonical",
+      "entity_kind": "sub_location",
+      "resolution_score": 68,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH022/zodanga_palace_interior.md",
+      "notes": "Chapter-local environment alias match for 'Palace balcony' (key_overlap=1, label_overlap=2, context_overlap=4)."
+    },
+    {
+      "label": "overlooking Zodangan avenue/cityscape at night",
+      "canonical_id": null,
+      "display_name": "overlooking Zodangan avenue/cityscape at night",
+      "status": "review",
+      "entity_kind": "environment",
+      "resolution_score": 8,
+      "source_path": "",
+      "notes": "Low-confidence environment match requires review."
+    }
+  ],
+  "continuity_constraints": [
+    "Nightfall lighting transition",
+    "Contrast between palace interior light and Zodangan avenue glow"
+  ],
+  "visual_coverage_families": [
+    "Wide shots (scale of leap)",
+    "Tracking shots (descent movement)",
+    "Extreme Long Shots (disappearing into city)"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "Waiting for nightfall",
+      "purpose": "",
+      "action_start": "Carter standing still in shadow",
+      "action_end": "Carter prepares to move",
+      "active_subjects": [
+        "john_carter"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "balcony edge",
+      "blocking_hint": "stationary at railing",
+      "environment_subzone": "zodanga_palace_interior balcony",
+      "continuity_focus": "nightfall lighting",
+      "coverage_hint": "medium close up",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "The Leap",
+      "purpose": "",
+      "action_start": "Explosive push from balcony",
+      "action_end": "Carter in mid-air descent",
+      "active_subjects": [
+        "john_carter"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "vertical drop",
+      "blocking_hint": "leaping outward and down",
+      "environment_subzone": "zodanga_palace_interior balcony",
+      "continuity_focus": "motion blur/speed",
+      "coverage_hint": "wide tracking",
+      "coverage_priority": "critical",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "Escape into Zodanga",
+      "purpose": "",
+      "action_start": "Carter entering city space",
+      "action_end": "Carter disappears from view",
+      "active_subjects": [
+        "john_carter"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "cityscape below [[overlooking Zodangan avenue/cityscape at night]]",
+      "blocking_hint": "moving into the urban depth",
+      "environment_subzone": "overlooking Zodangan avenue/cityscape at night",
+      "continuity_focus": "city lights vs darkness",
+      "coverage_hint": "extreme long shot",
+      "coverage_priority": "medium",
+      "handoff_to_next": "end_of_scene"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish tension",
+      "planned_shot_moment_summary": "Carter watching the sky darken",
+      "primary_subject_seed": "john_carter",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "silhouette",
+      "narration_mode": "none",
+      "environment_subzone": "zodanga_palace_interior balcony",
+      "planned_shot_required_anchor_1": "balcony railing",
+      "planned_shot_scale_proof_detail": "height of railing vs horizon",
+      "start_state_seed": "stillness in shadow",
+      "end_state_seed": "eyes fixing on the city",
+      "action_seed": "waiting",
+      "blocking_seed": [
+        "standing at edge"
+      ],
+      "shot_size": "medium_close",
+      "camera_angle": "eye_level",
+      "lens_family": "portrait",
+      "camera_motion": "push_in",
+      "zoom_behavior": "subtle_in",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "low_key_night",
+      "primary_subject_angle": "profile_right"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "display ability",
+      "planned_shot_moment_summary": "The superhuman leap",
+      "primary_subject_seed": "john_carter",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "full",
+      "narration_mode": "none",
+      "environment_subzone": "zodanga_palace_interior balcony",
+      "planned_shot_required_anchor_1": "balcony railing",
+      "planned_shot_scale_proof_detail": "distance from balcony to ground",
+      "start_state_seed": "coiled tension",
+      "end_state_seed": "mid-air descent",
+      "action_seed": "leaping",
+      "blocking_seed": [
+        "springing from edge"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "low_angle",
+      "lens_family": "ultra_wide",
+      "camera_motion": "track",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "backlit",
+      "primary_subject_angle": "rear_three_quarter_left"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "resolve escape",
+      "planned_shot_moment_summary": "Carter landing/disappearing",
+      "primary_subject_seed": "john_carter",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "partial",
+      "narration_mode": "none",
+      "environment_subzone": "overlooking Zodangan avenue/cityscape at night",
+      "planned_shot_required_anchor_1": "Zodangan avenue",
+      "planned_shot_scale_proof_detail": "size of city vs character",
+      "start_state_seed": "falling through frame",
+      "end_state_seed": "vanishing into darkness",
+      "action_seed": "descending",
+      "blocking_seed": [
+        "moving away from camera into depth"
+      ],
+      "shot_size": "extreme_wide",
+      "camera_angle": "high_angle",
+      "lens_family": "wide",
+      "camera_motion": "pull_back",
+      "zoom_behavior": "none",
+      "focus_strategy": "environment_priority",
+      "lighting_style": "low_key_night",
+      "primary_subject_angle": "back"
+    }
+  ],
+  "unresolved_questions": [
+    "Resolve overlooking Zodangan avenue/cityscape at night -> overlooking Zodangan avenue/cityscape at night"
+  ],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH022",
+      "scene_id": "CH022_SC005"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH022",
+      "scene_id": "CH022_SC005"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH022",
+      "scene_id": "CH022_SC005"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH022",
+      "scene_id": "CH022_SC005"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH022",
+      "scene_id": "CH022_SC005"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH022",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\02_story_analysis\\chapter_analysis\\CH022_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH021",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH021_chapter_xxi.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH014",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH014_chapter_xiv.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH019",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH019_chapter_xix.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH022",
+      "canonical_id": "john_carter"
+    }
+  ],
+  "evidence_summary": [
+    "[CH022_SC005] Purpose: To resolve the chapter with a display of Carter's unique abilities and transition him into the next phase of his journey.",
+    "[CH022_SC005] Summary: Realizing he is a wanted man, Carter waits for nightfall. He utilizes his superhuman strength and agility to leap from a palace balcony, escaping into the city of Zodanga.",
+    "[CH022_SC005] Emotional arc: Tension $\\rightarrow$ Decisive Action $\\rightarrow$ Freedom/Escape.",
+    "[CH022_SC005] Coverage: Wide shots (the scale of the leap) Tracking shots (following his descent/movement) Extreme Long Shots (Carter disappearing into the city)",
+    "[CH022_SC005] Continuity: Time of day (nightfall); lighting from the city below vs. palace lights.",
+    "[CH022] Chapter summary: **Setting:** The palace of Zodanga, specifically the private apartments of Jeddak Than Kosis, winding corridors, antechambers, and a great hall with a balcony overlooking a Zodangan avenue. **Characters:** * **John Ca...",
+    "[CH021] CHAPTER XXI (book index hit)",
+    "[CH014] CHAPTER XIV (book index hit)",
+    "[CH019] CHAPTER XIX (book index hit)",
+    "Character john_carter: [source:C:/FilmCreator_MC/projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH011/john_carter.md] Physical Description: A human male from Earth (Virginia). He possesses the strength and physical capabiliti..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH022_SC005\n\n## Production Intent\nEstablish the character's transition from a hunted fugitive to an active agent of escape by utilizing superhuman physical capabilities. The sequence must emphasize the verticality and scale of the palace architecture against the sprawling Zodangan cityscape at night.\n\n## Required Cast\n- john_carter\n\n## Required Environments\n- zodanga_palace_interior balcony\n- overlooking Zodangan avenue/cityscape at night\n\n## Continuity Constraints\n- Nightfall lighting transition\n- Contrast between palace interior light and Zodangan avenue glow\n\n## Beat List\n- BT001: Waiting for nightfall\n- BT002: The Leap\n- BT003: Escape into Zodanga",
+  "metadata": {
+    "artifact_id": "CH022_SC005_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "a9e7cc45b7debd118fa91d9d85cccd49ff288f82",
+    "created_at_utc": "2026-04-26T23:00:19.647907+00:00",
+    "updated_at_utc": "2026-04-26T23:00:19.647907+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH022_SC005",
+        "version": "a6614df95ef2e9a525ca32aa363996535e670aac"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH022_SC005",
+        "version": "7478b82cd0b4121c170afb15c5be22a6ad9bf84f"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH022_SC005",
+        "version": "ce4d9678f88a49c5ec7f4efeaff48a9411c1d71a"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-26T23:00:48.282577+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "a9e7cc45b7debd118fa91d9d85cccd49ff288f82"
+      }
+    ]
+  }
+}

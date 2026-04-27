@@ -1,0 +1,360 @@
+{
+  "scene_id": "CH008_SC003",
+  "chapter_id": "CH008",
+  "scene_title": "SC003",
+  "purpose": "To introduce a new character type and create a moment of missed connection/dramatic irony.",
+  "summary": "Upon returning to the plaza, the protagonist sees a prisoner taken from the drifting craft: a beautiful, reddish-copper skinned woman who looks remarkably human. She makes a silent gesture toward him, pleading for help, but due to his lack of understanding of Martian customs, he fails to react. She is dragged away in dejection and contempt.",
+  "emotional_arc": "Curiosity $\\rightarrow$ Intense Connection $\\rightarrow$ Guilt/Regret (due to inaction).",
+  "production_intent": "Establish the existence of a human-like Martian species through a high-stakes visual encounter. The scene relies on the contrast between the reddish-copper skin of the captive and the green skin of the guards to communicate biological distinction without dialogue.",
+  "scene_short_description": "A protagonist observes a reddish-skinned woman being forcibly removed from a drifting craft by green guards.",
+  "scene_primary_scale_story_point": "Individual human connection vs. alien military force.",
+  "scene_required_anchor_catalog": [
+    "drifting_craft",
+    "deserted_martian_city_plaza_center"
+  ],
+  "scene_start_state": "protagonist and sola return to the plaza observing a drifting craft.",
+  "scene_end_state": "captive_woman is dragged away leaving protagonist in regret.",
+  "dominant_action_line": "The sight of a unique prisoner leads to a failed silent communication attempt.",
+  "scene_spatial_layout": [
+    "Open plaza area with central drifting craft",
+    "Movement path from craft toward the city outskirts"
+  ],
+  "character_spatial_map": [
+    "protagonist and sola positioned at plaza perimeter",
+    "captive_woman emerging from drifting_craft",
+    "green_martian_warriors surrounding captive_woman"
+  ],
+  "environment_subzones": [
+    "drifting_craft_apron",
+    "plaza_open_space"
+  ],
+  "entry_vectors": [
+    "protagonist/sola entering via plaza perimeter"
+  ],
+  "exit_vectors": [
+    "green_martian_warriors exiting toward city outskirts"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: visual discovery of the prisoner",
+    "BT002 -> BT003: failed communication to physical removal"
+  ],
+  "characters_required": [
+    {
+      "label": "The Protagonist",
+      "canonical_id": "protagonist",
+      "display_name": "protagonist",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH008/protagonist.md",
+      "notes": "Direct registry match for 'protagonist'."
+    },
+    {
+      "label": "The Captive Woman (Reddish-copper skinned)",
+      "canonical_id": "captive_woman",
+      "display_name": "captive_woman",
+      "status": "provisional",
+      "entity_kind": "provisional_role",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH008/captive_woman.md",
+      "notes": "Direct registry match for 'captive_woman'."
+    },
+    {
+      "label": "Green Martian Warriors (Guards/Captors)",
+      "canonical_id": "green_martian_warriors",
+      "display_name": "green_martian_warriors",
+      "status": "canonical",
+      "entity_kind": "group",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH008/green_martian_warriors.md",
+      "notes": "Direct registry match for 'green_martian_warriors'."
+    },
+    {
+      "label": "Sola",
+      "canonical_id": "sola",
+      "display_name": "sola",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH008/sola.md",
+      "notes": "Direct registry match for 'sola'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "The City Plaza",
+      "canonical_id": "deserted_martian_city_plaza",
+      "display_name": "deserted_martian_city_plaza",
+      "status": "canonical",
+      "entity_kind": "plaza",
+      "resolution_score": 92,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH008/deserted_martian_city_plaza.md",
+      "notes": "Chapter-local environment alias match for 'The City Plaza' (key_overlap=2, label_overlap=2, context_overlap=4)."
+    }
+  ],
+  "continuity_constraints": [
+    "Visual skin tone distinction: reddish-copper (captive_woman) vs. green (green_martian_warriors)",
+    "Specificity of the silent pleading gesture motion"
+  ],
+  "visual_coverage_families": [
+    "Extreme close-ups of captive_woman eyes and silent gesture",
+    "Eye-line matches between protagonist and captive_woman",
+    "Medium shots of green_martian_warriors dragging prisoner"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "Discovery of the prisoner",
+      "purpose": "",
+      "action_start": "protagonist enters plaza view",
+      "action_end": "protagonist locks eyes on captive_woman",
+      "active_subjects": [
+        "protagonist",
+        "sola"
+      ],
+      "passive_subjects": [
+        "captive_woman"
+      ],
+      "spatial_context": "plaza_open_space near drifting_craft",
+      "blocking_hint": "protagonist stops mid-stride",
+      "environment_subzone": "plaza_open_space",
+      "continuity_focus": "skin tone contrast visibility",
+      "coverage_hint": "medium shot of protagonist reaction",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "The Silent Plea",
+      "purpose": "",
+      "action_start": "captive_woman makes eye contact",
+      "action_end": "gesture is completed and ignored",
+      "active_subjects": [
+        "captive_woman",
+        "protagonist"
+      ],
+      "passive_subjects": [
+        "green_martian_warriors"
+      ],
+      "spatial_context": "drifting_craft_apron",
+      "blocking_hint": "captive_woman held by guards",
+      "environment_subzone": "drifting_craft_apron",
+      "continuity_focus": "exact gesture motion",
+      "coverage_hint": "extreme close-up of eyes/hands",
+      "coverage_priority": "critical",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "The Missed Connection",
+      "purpose": "",
+      "action_start": "guards pull captive_woman away",
+      "action_end": "protagonist left alone in silence",
+      "active_subjects": [
+        "green_martian_warriors",
+        "captive_woman"
+      ],
+      "passive_subjects": [
+        "protagonist"
+      ],
+      "spatial_context": "plaza_open_space",
+      "blocking_hint": "guards moving toward outskirts",
+      "environment_subzone": "plaza_open_space",
+      "continuity_focus": "movement of guards vs prisoner",
+      "coverage_hint": "medium shot of removal",
+      "coverage_priority": "medium",
+      "handoff_to_next": "end_scene"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish discovery",
+      "planned_shot_moment_summary": "protagonist spots the reddish skin of the prisoner",
+      "primary_subject_seed": "protagonist",
+      "secondary_subjects_seed": [
+        "captive_woman"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "plaza_open_space",
+      "planned_shot_required_anchor_1": "drifting_craft",
+      "planned_shot_scale_proof_detail": "skin color contrast",
+      "start_state_seed": "protagonist looking toward craft",
+      "end_state_seed": "protagonist frozen in curiosity",
+      "action_seed": "looking/noticing",
+      "blocking_seed": [
+        "standing at plaza edge"
+      ],
+      "shot_size": "medium_close",
+      "camera_angle": "eye_level",
+      "lens_family": "normal",
+      "camera_motion": "push_in",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front_three_quarter_right"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "establish connection",
+      "planned_shot_moment_summary": "captive_woman makes silent plea",
+      "primary_subject_seed": "captive_woman",
+      "secondary_subjects_seed": [
+        "protagonist"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "drifting_craft_apron",
+      "planned_shot_required_anchor_1": "drifting_craft",
+      "planned_shot_scale_proof_detail": "gesture motion",
+      "start_state_seed": "captive_woman making eye contact",
+      "end_state_seed": "gesture completed",
+      "action_seed": "silent pleading gesture",
+      "blocking_seed": [
+        "held by green_martian_warriors"
+      ],
+      "shot_size": "extreme_close_up",
+      "camera_angle": "eye_level",
+      "lens_family": "portrait",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "subtle_in",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "hard_directional",
+      "primary_subject_angle": "front"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "establish consequence",
+      "planned_shot_moment_summary": "guards drag woman away",
+      "primary_subject_seed": "green_martian_warriors",
+      "secondary_subjects_seed": [
+        "captive_woman"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "plaza_open_space",
+      "planned_shot_required_anchor_1": "deserted_martian_city_plaza_center",
+      "planned_shot_scale_proof_detail": "group movement",
+      "start_state_seed": "guards pulling captive_woman",
+      "end_state_seed": "captive_woman out of frame",
+      "action_seed": "dragging/walking away",
+      "blocking_seed": [
+        "moving across plaza"
+      ],
+      "shot_size": "medium",
+      "camera_angle": "eye_level",
+      "lens_family": "wide",
+      "camera_motion": "track",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "profile_left"
+    }
+  ],
+  "unresolved_questions": [
+    "Resolve The Captive Woman (Reddish-copper skinned) -> captive_woman"
+  ],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH008",
+      "scene_id": "CH008_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH008",
+      "scene_id": "CH008_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH008",
+      "scene_id": "CH008_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH008",
+      "scene_id": "CH008_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH008",
+      "scene_id": "CH008_SC003"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH008",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\02_story_analysis\\chapter_analysis\\CH008_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH010",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH010_chapter_x.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH012",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH012_chapter_xii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH014",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH014_chapter_xiv.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH008",
+      "canonical_id": "protagonist"
+    }
+  ],
+  "evidence_summary": [
+    "[CH008_SC003] Purpose: To introduce a new character type and create a moment of missed connection/dramatic irony.",
+    "[CH008_SC003] Summary: Upon returning to the plaza, the protagonist sees a prisoner taken from the drifting craft: a beautiful, reddish-copper skinned woman who looks remarkably human. She makes a silent gesture toward him, pleading for help, but due to his...",
+    "[CH008_SC003] Emotional arc: Curiosity $\\rightarrow$ Intense Connection $\\rightarrow$ Guilt/Regret (due to inaction).",
+    "[CH008_SC003] Coverage: Extreme close-ups of the woman's eyes and her silent gesture. Eye-line matches between the Protagonist and the Woman. Medium shots of the guards dragging her away.",
+    "[CH008_SC003] Continuity: The specific visual distinction of the woman's skin tone compared to the Green Martians. The exact nature/motion of her silent gesture.",
+    "[CH008] Chapter summary: **Setting:** A deserted Martian city and the surrounding valleys/hills. **Events:** - As the protagonist and Sola attempt to return home after an incubator ceremony, a sudden retreat by the green Martians reveals the...",
+    "[CH010] CHAPTER X (book index hit)",
+    "[CH012] CHAPTER XII (book index hit)",
+    "[CH014] CHAPTER XIV (book index hit)",
+    "Character protagonist: An experienced Earthman fighter characterized by extreme physical fitness and superhuman agility. His visual identity is defined by a significant metamorphosis; he transitions from an armed, clothed combatant to a naked state followin..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH008_SC003\n\n## Production Intent\nEstablish the existence of a human-like Martian species through a high-stakes visual encounter. The scene relies on the contrast between the reddish-copper skin of the captive and the green skin of the guards to communicate biological distinction without dialogue.\n\n## Required Cast\n- protagonist\n- captive_woman (Reddish-copper skinned)\n- green_martian_warriors\n- sola\n\n## Required Environments\n- deserted_martian_city_plaza\n\n## Continuity Constraints\n- Skin tone: Reddish-copper for captive_woman vs Green for green_martian_warriors.\n- Gesture: Specific, repeatable silent pleading motion.\n\n## Beat List\n- BT001: Discovery of the prisoner (Curiosity)\n- BT002: The Silent Plea (Intense Connection)\n- BT003: The Missed Connection (Guilt/Regret)",
+  "metadata": {
+    "artifact_id": "CH008_SC003_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "0500b9f279bdce197038c276c012f5cf8c85e6f5",
+    "created_at_utc": "2026-04-26T22:28:28.913752+00:00",
+    "updated_at_utc": "2026-04-26T22:28:28.913752+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH008_SC003",
+        "version": "49f07c35a3d4102097714518b72900d88a9dc8b0"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH008_SC003",
+        "version": "3768a5a5dbda032907cd7e5351f73fbb838c47d6"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH008_SC003",
+        "version": "1e3be6336a769cc28c6096896e36df490c1612f5"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-26T22:28:59.537051+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "0500b9f279bdce197038c276c012f5cf8c85e6f5"
+      }
+    ]
+  }
+}

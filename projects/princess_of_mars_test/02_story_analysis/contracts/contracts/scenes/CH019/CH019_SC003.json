@@ -1,0 +1,381 @@
+{
+  "scene_id": "CH019_SC003",
+  "chapter_id": "CH019",
+  "scene_title": "SC003",
+  "purpose": "Escalation and spectacle; demonstrate the brutality of the Warhoons.",
+  "summary": "The prisoners are thrust into a massive underground amphitheater for a ten-day gladiatorial tournament. Carter fights various men and beasts, winning over the crowd through sheer combat prowess.",
+  "emotional_arc": "Dread $\\rightarrow$ Adrenaline/Triumph",
+  "production_intent": "Establish the scale of the Warhoon gladiatorial culture through a high-spectacle tournament sequence. The scene must transition from the claustrophobic dread of imprisonment to the kinetic adrenaline of combat, emphasizing John Carter's physical dominance and the massive subterranean architecture.",
+  "scene_short_description": "Prisoners enter a massive subterranean amphitheater for a ten-day gladiatorial tournament.",
+  "scene_primary_scale_story_point": "Massive scale difference between the lone fighter and the vast crowd/arena walls.",
+  "scene_required_anchor_catalog": [
+    "arena_floor_center",
+    "spectator_tiers"
+  ],
+  "scene_start_state": "Prisoners are thrust into the dark, cavernous amphitheater under heavy dread.",
+  "scene_end_state": "Carter stands victorious amidst combat debris as the crowd reacts to his prowess.",
+  "dominant_action_line": "A series of escalating gladiatorial bouts involving men and beasts.",
+  "scene_spatial_layout": [
+    "Circular arena floor surrounded by rising spectator tiers",
+    "Verticality defined by high, ruined ancient city walls"
+  ],
+  "character_spatial_map": [
+    "john_carter centered in the arena floor",
+    "warhoon_horde occupying the elevated spectator tiers",
+    "various_beasts and combatants entering from perimeter gates"
+  ],
+  "environment_subzones": [
+    "arena_floor",
+    "spectator_tiers",
+    "entry_gates"
+  ],
+  "entry_vectors": [
+    "prisoner_corridors"
+  ],
+  "exit_vectors": [
+    "gate_exits"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: Transition from arrival to first combat engagement",
+    "BT002 -> BT003: Escalation from human opponents to beast combat",
+    "BT003 -> BT004: Climax of tournament dominance and crowd reaction"
+  ],
+  "characters_required": [
+    {
+      "label": "* John Carter",
+      "canonical_id": "john_carter",
+      "display_name": "john_carter",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH019/john_carter.md",
+      "notes": "Direct registry match for 'john_carter'."
+    },
+    {
+      "label": "* Kantos Kan",
+      "canonical_id": "kantos_kan",
+      "display_name": "kantos_kan",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH019/kantos_kan.md",
+      "notes": "Direct registry match for 'kantos_kan'."
+    },
+    {
+      "label": "* Warhoon Horde (Crowd/Combatants)",
+      "canonical_id": "warhoon_horde",
+      "display_name": "warhoon_horde",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH019/warhoon_horde.md",
+      "notes": "Direct registry match for 'warhoon_horde'."
+    },
+    {
+      "label": "* Various Beasts",
+      "canonical_id": null,
+      "display_name": "* Various Beasts",
+      "status": "review",
+      "entity_kind": "individual",
+      "resolution_score": 10,
+      "source_path": "",
+      "notes": "Low-confidence character match requires review."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "* Subterranean amphitheater (Arena)",
+      "canonical_id": "subterranean_amphitheater_arena",
+      "display_name": "subterranean_amphitheater_arena",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH019/subterranean_amphitheater_arena.md",
+      "notes": "Direct registry match for 'subterranean_amphitheater_arena'."
+    }
+  ],
+  "continuity_constraints": [
+    "Blood and wound placement on john_carter",
+    "Weapon handling consistency across multiple fights",
+    "Crowd noise levels scaling with combat intensity"
+  ],
+  "visual_coverage_families": [
+    "Wide shots of the massive arena and crowd",
+    "Medium action shots of combat",
+    "Low-angle hero shots of Carter",
+    "Fast-paced handheld or tracking shots for fight sequences"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "Arrival and Dread",
+      "purpose": "",
+      "action_start": "Prisoners being thrust into the arena",
+      "action_end": "Standing in the center of the floor",
+      "active_subjects": [
+        "john_carter",
+        "warhoon_horde"
+      ],
+      "passive_subjects": [
+        "prisoners"
+      ],
+      "spatial_context": "subterranean_amphitheater_arena",
+      "blocking_hint": "Centralized group movement",
+      "environment_subzone": "arena_floor",
+      "continuity_focus": "Initial cleanliness of john_carter",
+      "coverage_hint": "Wide shots of arena and crowd",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "Human Combat Escalation",
+      "purpose": "",
+      "action_start": "First combatant enters",
+      "action_end": "Carter wins first bout",
+      "active_subjects": [
+        "john_carter",
+        "warhoon_horde"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "arena_floor",
+      "blocking_hint": "Duel in center floor",
+      "environment_subzone": "arena_floor",
+      "continuity_focus": "First blood/wound placement on john_carter",
+      "coverage_hint": "Medium action shots",
+      "coverage_priority": "medium",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "Beast Combat Spectacle",
+      "purpose": "",
+      "action_start": "Beast released from gates",
+      "action_end": "Beast slain",
+      "active_subjects": [
+        "john_carter",
+        "various_beasts"
+      ],
+      "passive_subjects": [
+        "warhoon_horde"
+      ],
+      "spatial_context": "arena_floor",
+      "blocking_hint": "Large scale movement across floor",
+      "environment_subzone": "arena_floor",
+      "continuity_focus": "Wound progression on john_carter; weapon condition",
+      "coverage_hint": "Fast-paced handheld/tracking",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT004"
+    },
+    {
+      "beat_id": "BT004",
+      "summary": "Triumph and Crowd Reaction",
+      "purpose": "",
+      "action_start": "Carter stands over defeated foe",
+      "action_end": "Crowd roars in response",
+      "active_subjects": [
+        "john_carter",
+        "warhoon_horde"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "arena_floor/spectator_tiers",
+      "blocking_hint": "Hero pose center floor",
+      "environment_subzone": "arena_floor",
+      "continuity_focus": "Blood/wound placement; crowd noise levels",
+      "coverage_hint": "Low-angle hero shots",
+      "coverage_priority": "medium",
+      "handoff_to_next": "end_scene"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish_scale",
+      "planned_shot_moment_summary": "Prisoners enter the arena floor looking up at the massive scale",
+      "primary_subject_seed": "john_carter",
+      "secondary_subjects_seed": [
+        "warhoon_horde"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "arena_floor",
+      "planned_shot_required_anchor_1": "arena_floor_center",
+      "planned_shot_scale_proof_detail": "height of spectator tiers relative to prisoners",
+      "start_state_seed": "darkness/shadows",
+      "end_state_seed": "wide view of arena",
+      "action_seed": "walking into light",
+      "blocking_seed": [
+        "group movement toward center"
+      ],
+      "shot_size": "extreme_wide",
+      "camera_angle": "high_angle",
+      "lens_family": "ultra_wide",
+      "camera_motion": "crane",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "low_key_night",
+      "primary_subject_angle": "back"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "action_sequence",
+      "planned_shot_moment_summary": "Carter engages first combatant",
+      "primary_subject_seed": "john_carter",
+      "secondary_subjects_seed": [
+        "combatants"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "arena_floor",
+      "planned_shot_required_anchor_1": "arena_floor_center",
+      "planned_shot_scale_proof_detail": "proximity of crowd to floor",
+      "start_state_seed": "combat stance",
+      "end_state_seed": "strike landed",
+      "action_seed": "fighting",
+      "blocking_seed": [
+        "circular movement"
+      ],
+      "shot_size": "medium",
+      "camera_angle": "low_angle",
+      "lens_family": "normal",
+      "camera_motion": "handheld",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "torch_firelight",
+      "primary_subject_angle": "front_three_quarter_right"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "spectacle_escalation",
+      "planned_shot_moment_summary": "Carter fights a beast",
+      "primary_subject_seed": "various_beasts",
+      "secondary_subjects_seed": [
+        "john_carter"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "arena_floor",
+      "planned_shot_required_anchor_1": "arena_floor_center",
+      "planned_shot_scale_proof_detail": "size of beast vs Carter",
+      "start_state_seed": "beast charge",
+      "end_state_seed": "beast defeated",
+      "action_seed": "combat",
+      "blocking_seed": [
+        "chaotic movement"
+      ],
+      "shot_size": "full",
+      "camera_angle": "eye_level",
+      "lens_family": "wide",
+      "camera_motion": "track",
+      "zoom_behavior": "none",
+      "focus_strategy": "rack_focus",
+      "lighting_style": "high_contrast_ceremonial",
+      "primary_subject_angle": "profile_left"
+    }
+  ],
+  "unresolved_questions": [
+    "Resolve * Various Beasts -> * Various Beasts"
+  ],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH019",
+      "scene_id": "CH019_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH019",
+      "scene_id": "CH019_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH019",
+      "scene_id": "CH019_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH019",
+      "scene_id": "CH019_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH019",
+      "scene_id": "CH019_SC003"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH019",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\02_story_analysis\\chapter_analysis\\CH019_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH019",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH019_chapter_xix.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH021",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH021_chapter_xxi.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH012",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH012_chapter_xii.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH019",
+      "canonical_id": "john_carter"
+    }
+  ],
+  "evidence_summary": [
+    "[CH019_SC003] Purpose: Escalation and spectacle; demonstrate the brutality of the Warhoons.",
+    "[CH019_SC003] Summary: The prisoners are thrust into a massive underground amphitheater for a ten-day gladiatorial tournament. Carter fights various men and beasts, winning over the crowd through sheer combat prowess.",
+    "[CH019_SC003] Emotional arc: Dread $\\rightarrow$ Adrenaline/Triumph",
+    "[CH019_SC003] Coverage: * Wide shots of the massive arena and crowd * Medium action shots of combat * Low-angle hero shots of Carter * Fast-paced handheld or tracking shots for fight sequences",
+    "[CH019_SC003] Continuity: Blood/wound placement on Carter; weapon handling; crowd noise levels.",
+    "[CH019] Chapter summary: **Setting:** A subterranean amphitheater within a ruined, ancient green Martian city; later, the hills east of the Warhoon city. **Characters:** * **John Carter:** An Earthman and prisoner of the Warhoons. * **Kantos...",
+    "[CH019] CHAPTER XIX (book index hit)",
+    "[CH021] CHAPTER XXI (book index hit)",
+    "[CH012] CHAPTER XII (book index hit)",
+    "Character john_carter: [source:C:/FilmCreator_MC/projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH011/john_carter.md] Physical Description: A human male from Earth (Virginia). He possesses the strength and physical capabiliti..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH019_SC003\n\n## Production Intent\nEstablish the scale of the Warhoon gladiatorial culture through a high-spectacle tournament sequence. The scene must transition from the claustrophobic dread of imprisonment to the kinetic adrenaline of combat, emphasizing John Carter's physical dominance and the massive subterranean architecture.\n\n## Required Cast\n- john_carter\n- kantos_kan\n- warhoon_horde\n- various_beasts\n\n## Required Environments\n- subterranean_amphitheater_arena\n\n## Continuity Constraints\n- Blood/wound placement on john_carter\n- Weapon handling consistency\n- Crowd noise levels scaling with combat intensity\n\n## Beat List\n- BT001: Arrival and Dread (Prisoners enter arena)\n- BT002: Human Combat Escalation (Carter vs Men)\n- BT003: Beast Combat Spectacle (Carter vs Beasts)\n- BT004: Triumph and Crowd Reaction (Victory/Adrenaline)",
+  "metadata": {
+    "artifact_id": "CH019_SC003_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "a9fe9bd12f920614f3d0b8cd1da0f37544034d4a",
+    "created_at_utc": "2026-04-26T22:51:48.816746+00:00",
+    "updated_at_utc": "2026-04-26T22:51:48.816746+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH019_SC003",
+        "version": "073467ada0f9e1e79c5a8cb986e8bb9efee8e07c"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH019_SC003",
+        "version": "bf532876de6ae34ff4971fbf996051b3607593dc"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH019_SC003",
+        "version": "f30b31ecfb73df170cb8c37bf6d3b0357acbb048"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-26T22:52:21.169268+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "a9fe9bd12f920614f3d0b8cd1da0f37544034d4a"
+      }
+    ]
+  }
+}

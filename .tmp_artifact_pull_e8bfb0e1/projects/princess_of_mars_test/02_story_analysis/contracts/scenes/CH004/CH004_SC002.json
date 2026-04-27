@@ -1,0 +1,362 @@
+{
+  "scene_id": "CH004_SC002",
+  "chapter_id": "CH004",
+  "scene_title": "SC002",
+  "purpose": "Introduce the political hierarchy and the physical discomfort of the narrator's captivity.",
+  "summary": "The party enters a magnificent marble audience chamber to meet the Chieftain. The narrator struggles with the scale of the room and the furniture, which feels mismatched to the current Martian occupants.",
+  "emotional_arc": "Tension $\\rightarrow$ Intimidation",
+  "production_intent": "Establish the overwhelming scale of the Martian political center through the physical discomfort and visual intimidation experienced by the narrator. The environment must feel ancient, grand, and mismatched to the current occupants via oversized marble architecture and furniture.",
+  "scene_short_description": "A small party enters a vast marble hall filled with oversized ancient furniture and gold inlays.",
+  "scene_primary_scale_story_point": "Architecture is built for much larger beings, making current occupants appear dwarfed.",
+  "scene_required_anchor_catalog": [
+    "chieftain_throne",
+    "marble_floor_inlay"
+  ],
+  "scene_start_state": "The party enters the threshold of the grand hall.",
+  "scene_end_state": "The narrator stands intimidated before the seated chieftain.",
+  "dominant_action_line": "Navigating a massive, mismatched environment to face the ruling authority.",
+  "scene_spatial_layout": [
+    "Grand marble hall with gold and jewel inlays",
+    "Central axis leading from entrance to throne"
+  ],
+  "character_spatial_map": [
+    "The Narrator: Small/vulnerable position near tars_tarkas",
+    "tars_tarkas: Commanding presence, walking ahead of narrator",
+    "chieftain: Elevated on throne at the far end of the hall",
+    "Martian Warriors/Crowd: Lining the perimeter or standing in groups"
+  ],
+  "environment_subzones": [
+    "entrance_threshold",
+    "central_aisle",
+    "throne_platform"
+  ],
+  "entry_vectors": [
+    "main_hall_entrance"
+  ],
+  "exit_vectors": [
+    "main_hall_entrance"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: Movement from threshold into the hall volume",
+    "BT002 -> BT003: Approach to the throne area"
+  ],
+  "characters_required": [
+    {
+      "label": "* The Narrator",
+      "canonical_id": null,
+      "display_name": "* The Narrator",
+      "status": "review",
+      "entity_kind": "individual",
+      "resolution_score": 6,
+      "source_path": "",
+      "notes": "Low-confidence character match requires review."
+    },
+    {
+      "label": "* Tars Tarkas",
+      "canonical_id": "tars_tarkas",
+      "display_name": "tars_tarkas",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH004/tars_tarkas.md",
+      "notes": "Direct registry match for 'tars_tarkas'."
+    },
+    {
+      "label": "* The Chieftain",
+      "canonical_id": "chieftain",
+      "display_name": "chieftain",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH004/chieftain.md",
+      "notes": "Direct registry match for 'the_chieftain'."
+    },
+    {
+      "label": "* Martian Warriors/Crowd",
+      "canonical_id": null,
+      "display_name": "* Martian Warriors/Crowd",
+      "status": "review",
+      "entity_kind": "individual",
+      "resolution_score": 6,
+      "source_path": "",
+      "notes": "Low-confidence character match requires review."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "* The Audience Chamber (Grand marble hall)",
+      "canonical_id": "chieftain_audience_chamber",
+      "display_name": "chieftain_audience_chamber",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 122,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH004/chieftain_audience_chamber.md",
+      "notes": "Chapter-local environment alias match for '* The Audience Chamber (Grand marble hall)' (key_overlap=2, label_overlap=5, context_overlap=4)."
+    }
+  ],
+  "continuity_constraints": [
+    "Furniture height/scale relative to character height",
+    "Chieftain position on throne"
+  ],
+  "visual_coverage_families": [
+    "Low-angle shots of chieftain to emphasize power",
+    "POV shots from narrator looking up at massive scale",
+    "Medium shots of tars_tarkas maintaining decorum"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "Entry into the chamber",
+      "purpose": "",
+      "action_start": "party crosses threshold",
+      "action_end": "party enters central aisle",
+      "active_subjects": [
+        "tars_tarkas",
+        "The Narrator"
+      ],
+      "passive_subjects": [
+        "Martian Warriors/Crowd"
+      ],
+      "spatial_context": "entrance_threshold",
+      "blocking_hint": "tars_tarkas leads the way with decorum",
+      "environment_subzone": "entrance_threshold",
+      "continuity_focus": "scale of doorway vs characters",
+      "coverage_hint": "wide shot to show hall size",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "Navigating the scale",
+      "purpose": "",
+      "action_start": "walking through aisle",
+      "action_end": "narrator stops, overwhelmed",
+      "active_subjects": [
+        "The Narrator"
+      ],
+      "passive_subjects": [
+        "tars_tarkas"
+      ],
+      "spatial_context": "central_aisle",
+      "blocking_hint": "narrator struggles with pace/scale",
+      "environment_subzone": "central_aisle",
+      "continuity_focus": "furniture height relative to narrator",
+      "coverage_hint": "POV or low-angle looking up",
+      "coverage_priority": "medium",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "Confronting the hierarchy",
+      "purpose": "",
+      "action_start": "approaching throne",
+      "action_end": "standing before chieftain",
+      "active_subjects": [
+        "chieftain",
+        "tars_tarkas",
+        "The Narrator"
+      ],
+      "passive_subjects": [
+        "Martian Warriors/Crowd"
+      ],
+      "spatial_context": "throne_platform",
+      "blocking_hint": "party stops at base of throne platform",
+      "environment_subzone": "throne_platform",
+      "continuity_focus": "chieftain position on throne",
+      "coverage_hint": "low-angle shots of chieftain",
+      "coverage_priority": "high",
+      "handoff_to_next": "end_scene"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish scale",
+      "planned_shot_moment_summary": "party enters the massive hall",
+      "primary_subject_seed": "The Narrator",
+      "secondary_subjects_seed": [
+        "tars_tarkas"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "entrance_threshold",
+      "planned_shot_required_anchor_1": "marble_floor_inlay",
+      "planned_shot_scale_proof_detail": "ceiling height vs character height",
+      "start_state_seed": "characters at doorway",
+      "end_state_seed": "characters walking into hall",
+      "action_seed": "walking forward",
+      "blocking_seed": [
+        "tars_tarkas leads",
+        "narrator follows closely"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "eye_level",
+      "lens_family": "ultra_wide",
+      "camera_motion": "push_in",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "high_contrast_ceremonial",
+      "primary_subject_angle": "rear_three_quarter_left"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "show discomfort",
+      "planned_shot_moment_summary": "narrator looks up at the architecture",
+      "primary_subject_seed": "The Narrator",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "internal_monologue",
+      "environment_subzone": "central_aisle",
+      "planned_shot_required_anchor_1": "marble_floor_inlay",
+      "planned_shot_scale_proof_detail": "verticality of walls",
+      "start_state_seed": "walking",
+      "end_state_seed": "stopping to look up",
+      "action_seed": "looking upward",
+      "blocking_seed": [
+        "narrator halts mid-stride"
+      ],
+      "shot_size": "medium_full",
+      "camera_angle": "low_angle",
+      "lens_family": "wide",
+      "camera_motion": "tilt",
+      "zoom_behavior": "none",
+      "focus_strategy": "environment_priority",
+      "lighting_style": "high_contrast_ceremonial",
+      "primary_subject_angle": "front_three_quarter_right"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "establish power",
+      "planned_shot_moment_summary": "chieftain revealed on throne",
+      "primary_subject_seed": "chieftain",
+      "secondary_subjects_seed": [
+        "tars_tarkas"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "throne_platform",
+      "planned_shot_required_anchor_1": "chieftain_throne",
+      "planned_shot_scale_proof_detail": "throne size vs character size",
+      "start_state_seed": "camera pans to throne",
+      "end_state_seed": "chieftain stares down",
+      "action_seed": "sitting/staring",
+      "blocking_seed": [
+        "chieftain stationary on throne"
+      ],
+      "shot_size": "medium_close",
+      "camera_angle": "low_angle",
+      "lens_family": "portrait",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "subtle_in",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "high_contrast_ceremonial",
+      "primary_subject_angle": "front"
+    }
+  ],
+  "unresolved_questions": [
+    "Resolve * The Narrator -> * The Narrator",
+    "Resolve * Martian Warriors/Crowd -> * Martian Warriors/Crowd"
+  ],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH004",
+      "scene_id": "CH004_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH004",
+      "scene_id": "CH004_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH004",
+      "scene_id": "CH004_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH004",
+      "scene_id": "CH004_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH004",
+      "scene_id": "CH004_SC002"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH004",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\02_story_analysis\\chapter_analysis\\CH004_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH011",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH011_chapter_xi.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH017",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH017_chapter_xvii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH004",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH004_chapter_iv.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH004",
+      "canonical_id": "tars_tarkas"
+    }
+  ],
+  "evidence_summary": [
+    "[CH004_SC002] Purpose: Introduce the political hierarchy and the physical discomfort of the narrator's captivity.",
+    "[CH004_SC002] Summary: The party enters a magnificent marble audience chamber to meet the Chieftain. The narrator struggles with the scale of the room and the furniture, which feels mismatched to the current Martian occupants.",
+    "[CH004_SC002] Emotional arc: Tension $\\rightarrow$ Intimidation",
+    "[CH004_SC002] Coverage: * Low-angle shots of the Chieftain to emphasize power. * POV shots from the narrator looking up at the massive scale of the hall. * Medium shots of Tars Tarkas maintaining decorum.",
+    "[CH004_SC002] Continuity: * The height/scale of the furniture relative to the characters. * Position of the Chieftain on his throne.",
+    "[CH004] Chapter summary: **Setting:** An enormous, ancient city situated on a low table land near the edge of a dried-up Martian sea. The city features grand, white marble buildings inlaid with gold and jewels, though they appear built for a...",
+    "[CH011] CHAPTER XI (book index hit)",
+    "[CH017] CHAPTER XVII (book index hit)",
+    "[CH004] CHAPTER IV (book index hit)",
+    "Character tars_tarkas: Tars Tarkas is a large, powerful green Martian humanoid of human scale. As a high-ranking Thark chieftain and martial leader, he possesses a commanding physical presence characterized by a large, powerful build. His appearance is defi..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH004_SC002\n\n## Production Intent\nEstablish the overwhelming scale of the Martian political center through the physical discomfort and visual intimidation experienced by the narrator. The environment must feel ancient, grand, and mismatched to the current occupants via oversized marble architecture and furniture.\n\n## Required Cast\n- The Narrator\n- tars_tarkas\n- chieftain\n- Martian Warriors/Crowd\n\n## Required Environments\n- chieftain_audience_chamber (Grand marble hall with gold/jewel inlays)\n\n## Continuity Constraints\n- Furniture height/scale relative to character height\n- Chieftain position on throne\n\n## Beat List\n- BT001: Entry into the chamber\n- BT002: Navigating the scale\n- BT003: Confronting the hierarchy",
+  "metadata": {
+    "artifact_id": "CH004_SC002_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "0bf1a83401a701b1e993497bf175e068a64c9d99",
+    "created_at_utc": "2026-04-26T22:18:44.325404+00:00",
+    "updated_at_utc": "2026-04-26T22:18:44.325404+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH004_SC002",
+        "version": "3b197bf990476ed4a3913f63ff9df453c5525ca9"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH004_SC002",
+        "version": "fa9bd337898556bcbf76f235a7d32eb1a246ac69"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH004_SC002",
+        "version": "b4d891a52b50ab6b05e52097fe600ae12e50a14c"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-26T22:19:14.581979+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "0bf1a83401a701b1e993497bf175e068a64c9d99"
+      }
+    ]
+  }
+}

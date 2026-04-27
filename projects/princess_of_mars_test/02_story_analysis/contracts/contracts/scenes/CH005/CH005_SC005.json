@@ -1,0 +1,329 @@
+{
+  "scene_id": "CH005_SC005",
+  "chapter_id": "CH005",
+  "scene_title": "SC005",
+  "purpose": "A sudden reversal and cliffhanger reveal.",
+  "summary": "Just as the protagonist manages to pull himself onto the windowsill, he is seized from behind by a massive, ape-like creature and dragged into a new room.",
+  "emotional_arc": "Relief $\\rightarrow$ Sudden Terror/Shock.",
+  "production_intent": "Execute a high-tension reversal where the protagonist's moment of safety is violently interrupted by a massive predator. The sequence must transition from a controlled, intimate character study to chaotic, handheld movement as the scale shifts from human to colossal.",
+  "scene_short_description": "A man pulls himself onto a ledge before being snatched by a massive ape-like creature.",
+  "scene_primary_scale_story_point": "Human scale vs Colossal predator scale.",
+  "scene_required_anchor_catalog": [
+    "windowsill",
+    "interior floor"
+  ],
+  "scene_start_state": "protagonist is pulling his body weight onto the windowsill from the exterior.",
+  "scene_end_state": "protagonist is being dragged into the darkness of the colossal_creature_lair.",
+  "dominant_action_line": "The protagonist achieves safety on the ledge, only to be seized and hauled backward by a massive creature.",
+  "scene_spatial_layout": [
+    "Vertical transition from building exterior to interior windowsill",
+    "Horizontal drag from window threshold into deep room"
+  ],
+  "character_spatial_map": [
+    "protagonist: positioned on the windowsill/ledge",
+    "the_colossal_creature: positioned behind the protagonist, looming over him"
+  ],
+  "environment_subzones": [
+    "windowsill",
+    "colossal_creature_lair"
+  ],
+  "entry_vectors": [
+    "exterior to windowsill (protagonist)"
+  ],
+  "exit_vectors": [
+    "windowsill to interior room (protagonist and creature)"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: Sudden physical impact/grab",
+    "BT002 -> BT003: Rapid movement into the room"
+  ],
+  "characters_required": [
+    {
+      "label": "The Protagonist",
+      "canonical_id": "protagonist",
+      "display_name": "protagonist",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH005/protagonist.md",
+      "notes": "Direct registry match for 'protagonist'."
+    },
+    {
+      "label": "The Colossal Creature",
+      "canonical_id": "the_colossal_creature",
+      "display_name": "the_colossal_creature",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH005/the_colossal_creature.md",
+      "notes": "Direct registry match for 'the_colossal_creature'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "Windowsill/Building interior",
+      "canonical_id": "colossal_creature_lair",
+      "display_name": "colossal_creature_lair",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 56,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH005/colossal_creature_lair.md",
+      "notes": "Chapter-local environment alias match for 'Windowsill/Building interior' (key_overlap=0, label_overlap=2, context_overlap=4)."
+    }
+  ],
+  "continuity_constraints": [
+    "Physical contact point between the_colossal_creature and protagonist",
+    "Hand placement during the grip",
+    "Transition from windowsill to interior room floor"
+  ],
+  "visual_coverage_families": [
+    "Close-up of protagonist face (relief)",
+    "Shaky cam/jarring movement (the grab)",
+    "Wide shot (creature dragging subject away)"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "protagonist reaches safety on the ledge",
+      "purpose": "",
+      "action_start": "protagonist grasping windowsill",
+      "action_end": "protagonist resting on ledge",
+      "active_subjects": [
+        "protagonist"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "windowsill/building exterior",
+      "blocking_hint": "protagonist centered on ledge",
+      "environment_subzone": "windowsill",
+      "continuity_focus": "grip strength on stone",
+      "coverage_hint": "close-up face",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "the creature seizes the protagonist",
+      "purpose": "",
+      "action_start": "protagonist in relief",
+      "action_end": "protagonist being lifted/pulled",
+      "active_subjects": [
+        "the_colossal_creature",
+        "protagonist"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "windowsill",
+      "blocking_hint": "creature looms from behind",
+      "environment_subzone": "windowsill",
+      "continuity_focus": "moment of contact/grip",
+      "coverage_hint": "shaky cam/jarring movement",
+      "coverage_priority": "critical",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "the creature drags protagonist into the lair",
+      "purpose": "",
+      "action_start": "protagonist pulled off ledge",
+      "action_end": "protagonist dragged out of frame",
+      "active_subjects": [
+        "the_colossal_creature",
+        "protagonist"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "transition from window to room",
+      "blocking_hint": "rapid movement away from camera/window",
+      "environment_subzone": "colossal_creature_lair",
+      "continuity_focus": "transition from ledge to floor",
+      "coverage_hint": "wide shot",
+      "coverage_priority": "medium",
+      "handoff_to_next": "end_of_scene"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish relief",
+      "planned_shot_moment_summary": "protagonist reaches the ledge and exhales",
+      "primary_subject_seed": "protagonist",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "windowsill",
+      "planned_shot_required_anchor_1": "windowsill",
+      "planned_shot_scale_proof_detail": "human hands gripping stone",
+      "start_state_seed": "hands grasping edge",
+      "end_state_seed": "face visible in frame",
+      "action_seed": "pulling torso up",
+      "blocking_seed": [
+        "leaning onto ledge"
+      ],
+      "shot_size": "close_up",
+      "camera_angle": "eye_level",
+      "lens_family": "portrait",
+      "camera_motion": "push_in",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front_three_quarter_right"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "execute reversal",
+      "planned_shot_moment_summary": "creature hands seize protagonist from behind",
+      "primary_subject_seed": "the_colossal_creature",
+      "secondary_subjects_seed": [
+        "protagonist"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "windowsill",
+      "planned_shot_required_anchor_1": "windowsill",
+      "planned_shot_scale_proof_detail": "massive fingers vs human torso",
+      "start_state_seed": "protagonist breathing relief",
+      "end_state_seed": "protagonist jerked backward",
+      "action_seed": "seizing and pulling",
+      "blocking_seed": [
+        "sudden grab from behind"
+      ],
+      "shot_size": "medium_close",
+      "camera_angle": "eye_level",
+      "lens_family": "wide",
+      "camera_motion": "handheld",
+      "zoom_behavior": "none",
+      "focus_strategy": "rack_focus",
+      "lighting_style": "high_contrast_ceremonial",
+      "primary_subject_angle": "rear_three_quarter_left"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "cliffhanger reveal",
+      "planned_shot_moment_summary": "creature drags protagonist into the room",
+      "primary_subject_seed": "the_colossal_creature",
+      "secondary_subjects_seed": [
+        "protagonist"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "colossal_creature_lair",
+      "planned_shot_required_anchor_1": "interior floor",
+      "planned_shot_scale_proof_detail": "creature size relative to room/window",
+      "start_state_seed": "protagonist being pulled off ledge",
+      "end_state_seed": "protagonist disappears into darkness",
+      "action_seed": "dragging away",
+      "blocking_seed": [
+        "rapid movement across floor"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "low_angle",
+      "lens_family": "ultra_wide",
+      "camera_motion": "track",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "low_key_night",
+      "primary_subject_angle": "profile_left"
+    }
+  ],
+  "unresolved_questions": [],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH005",
+      "scene_id": "CH005_SC005"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH005",
+      "scene_id": "CH005_SC005"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH005",
+      "scene_id": "CH005_SC005"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH005",
+      "scene_id": "CH005_SC005"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH005",
+      "scene_id": "CH005_SC005"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH005",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\02_story_analysis\\chapter_analysis\\CH005_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH020",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH020_chapter_xx.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH011",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH011_chapter_xi.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH014",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH014_chapter_xiv.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH005",
+      "canonical_id": "protagonist"
+    }
+  ],
+  "evidence_summary": [
+    "[CH005_SC005] Purpose: A sudden reversal and cliffhanger reveal.",
+    "[CH005_SC005] Summary: Just as the protagonist manages to pull himself onto the windowsill, he is seized from behind by a massive, ape-like creature and dragged into a new room.",
+    "[CH005_SC005] Emotional arc: Relief $\\rightarrow$ Sudden Terror/Shock.",
+    "[CH005_SC005] Coverage: Close-up of the protagonist's face showing relief. Sudden, jarring movement (shaky cam) as he is grabbed. Wide shot of the creature dragging him away.",
+    "[CH005_SC005] Continuity: The moment of contact, the physical grip of the Colossal Creature, the transition from the window to the interior room.",
+    "[CH005] Chapter summary: **Setting:** A captive's chamber decorated with beautiful murals of Martian landscapes; a deserted city street; and the interior of a building overlooking a valley. **Characters:** * **The Protagonist:** An adventurou...",
+    "[CH020] CHAPTER XX (book index hit)",
+    "[CH011] CHAPTER XI (book index hit)",
+    "[CH014] CHAPTER XIV (book index hit)",
+    "Character protagonist: An experienced Earthman fighter characterized by extreme physical fitness and superhuman agility. His visual identity is defined by a significant metamorphosis; he transitions from an armed, clothed combatant to a naked state followin..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH005_SC005\n\n## Production Intent\nExecute a high-tension reversal where the protagonist's moment of safety is violently interrupted by a massive predator. The sequence must transition from a controlled, intimate character study to chaotic, handheld movement as the scale shifts from human to colossal.\n\n## Required Cast\n- protagonist (experienced Earthman fighter, physically fit)\n- the_colossal_creature (massive, ape-like)\n\n## Required Environments\n- windowsill\n- colossal_creature_lair (interior room with murals/darkness)\n\n## Continuity Constraints\n- Physical contact point between the_colossal_creature and protagonist\n- Hand placement during the grip\n- Transition from windowsill to interior room floor\n\n## Beat List\n- BT001: protagonist reaches safety on the ledge\n- BT002: the creature seizes the protagonist\n- BT003: the creature drags protagonist into the lair",
+  "metadata": {
+    "artifact_id": "CH005_SC005_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "8a77fa7727f7fb5040284a00a823193829c5bff9",
+    "created_at_utc": "2026-04-26T22:22:18.311143+00:00",
+    "updated_at_utc": "2026-04-26T22:22:18.311143+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH005_SC005",
+        "version": "7890237efe4b518596bdfe9ba533a4e30f3047eb"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH005_SC005",
+        "version": "4ec677daac60f1bf48f3961d508a4c10b630534d"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH005_SC005",
+        "version": "9dc246858690f6bca8e0728b2944c98df43fafe4"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-26T22:22:48.195926+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "8a77fa7727f7fb5040284a00a823193829c5bff9"
+      }
+    ]
+  }
+}

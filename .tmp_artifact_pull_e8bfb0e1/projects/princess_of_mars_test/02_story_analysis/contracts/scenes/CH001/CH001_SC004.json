@@ -1,0 +1,344 @@
+{
+  "scene_id": "CH001_SC004",
+  "chapter_id": "CH001",
+  "scene_title": "SC004",
+  "purpose": "Introduce the tragic emotional beat and escalate the stakes of the escape.",
+  "summary": "Amidst the skirmish, Carter finds Powell's body, killed by arrows. He retrieves the body to protect it from mutilation and begins a desperate flight under heavy fire.",
+  "emotional_arc": "From combat adrenaline to grief and desperation.",
+  "production_intent": "Establish the high-stakes emotional pivot by transitioning from active combat to a desperate rescue and flight. The sequence must emphasize the physical burden of carrying a deceased comrade while under continuous projectile threat.",
+  "scene_short_description": "A soldier discovers a fallen comrade amidst arrows and flees under heavy projectile fire.",
+  "scene_primary_scale_story_point": "Individual survival vs. group skirmish scale.",
+  "scene_required_anchor_catalog": [
+    "james_k_powell body",
+    "incoming arrow impact points"
+  ],
+  "scene_start_state": "Carter moving through the skirmish zone amidst combat noise.",
+  "scene_end_state": "Carter fleeing across the plateau while carrying a body under fire.",
+  "dominant_action_line": "Discovery of death followed by a desperate, burdened retreat.",
+  "scene_spatial_layout": [
+    "Open high plateau terrain",
+    "Dispersed skirmish zones with incoming projectile paths"
+  ],
+  "character_spatial_map": [
+    "john_carter moving toward james_k_powell",
+    "apache_warriors positioned at distance/periphery"
+  ],
+  "environment_subzones": [
+    "apache_plateau_camp skirmish zone"
+  ],
+  "entry_vectors": [
+    "Skirmish path through plateau"
+  ],
+  "exit_vectors": [
+    "Flight path away from arrow fire"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: Discovery to physical contact",
+    "BT002 -> BT003: Contact to desperate flight"
+  ],
+  "characters_required": [
+    {
+      "label": "John Carter",
+      "canonical_id": "john_carter",
+      "display_name": "john_carter",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH001/john_carter.md",
+      "notes": "Direct registry match for 'john_carter'."
+    },
+    {
+      "label": "Captain James K. Powell (deceased)",
+      "canonical_id": "james_k_powell",
+      "display_name": "james_k_powell",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH001/james_k_powell.md",
+      "notes": "Direct registry match for 'james_k_powell'."
+    },
+    {
+      "label": "Apache Warriors",
+      "canonical_id": "apache_warriors",
+      "display_name": "apache_warriors",
+      "status": "canonical",
+      "entity_kind": "group",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH001/apache_warriors.md",
+      "notes": "Direct registry match for 'apache_warriors'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "The plateau/skirmish zone",
+      "canonical_id": "apache_plateau_camp",
+      "display_name": "apache_plateau_camp",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 68,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH001/apache_plateau_camp.md",
+      "notes": "Chapter-local environment alias match for 'The plateau/skirmish zone' (key_overlap=1, label_overlap=2, context_overlap=4)."
+    }
+  ],
+  "continuity_constraints": [
+    "Exact position and arrow placement on james_k_powell",
+    "Directional trajectory of incoming apache_warriors arrow fire"
+  ],
+  "visual_coverage_families": [
+    "Close-ups of Carter's reaction to finding Powell",
+    "Medium shots of the struggle to move the body under fire",
+    "Wide shots of the pursuit"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "Discovery of Powell's body",
+      "purpose": "",
+      "action_start": "Carter scanning the skirmish zone",
+      "action_end": "Carter staring at the fallen captain",
+      "active_subjects": [
+        "john_carter"
+      ],
+      "passive_subjects": [
+        "james_k_powell",
+        "apache_warriors"
+      ],
+      "spatial_context": "Apache plateau skirmish area",
+      "blocking_hint": "Carter stops in a clearing near the body",
+      "environment_subzone": "apache_plateau_camp skirmish zone",
+      "continuity_focus": "Arrow count/placement on Powell",
+      "coverage_hint": "Close-up reaction",
+      "coverage_priority": "high",
+      "handoff_to_next": "Physical contact with body"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "Retrieval of the body",
+      "purpose": "",
+      "action_start": "Carter reaching for Powell",
+      "action_end": "Carter hoisting the body to his shoulder/arms",
+      "active_subjects": [
+        "john_carter"
+      ],
+      "passive_subjects": [
+        "james_k_powell"
+      ],
+      "spatial_context": "Immediate vicinity of the corpse",
+      "blocking_hint": "Carter kneeling, then struggling to stand with weight",
+      "environment_subzone": "apache_plateau_camp skirmish zone",
+      "continuity_focus": "Body position/weight handling",
+      "coverage_hint": "Medium shot struggle",
+      "coverage_priority": "medium",
+      "handoff_to_next": "Flight under fire"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "Desperate flight",
+      "purpose": "",
+      "action_start": "Carter breaking into a run",
+      "action_end": "Carter fleeing the immediate combat zone",
+      "active_subjects": [
+        "john_carter"
+      ],
+      "passive_subjects": [
+        "apache_warriors"
+      ],
+      "spatial_context": "Open plateau terrain",
+      "blocking_hint": "Carter running with heavy, awkward gait while dodging arrows",
+      "environment_subzone": "apache_plateau_camp skirmish zone",
+      "continuity_focus": "Direction of incoming arrow fire",
+      "coverage_hint": "Wide pursuit shot",
+      "coverage_priority": "high",
+      "handoff_to_next": "End of scene"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "reveal tragedy",
+      "planned_shot_moment_summary": "Carter spots the body among arrows",
+      "primary_subject_seed": "john_carter",
+      "secondary_subjects_seed": [
+        "james_k_powell"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "apache_plateau_camp skirmish zone",
+      "planned_shot_required_anchor_1": "james_k_powell body",
+      "planned_shot_scale_proof_detail": "arrow density on body",
+      "start_state_seed": "Carter scanning terrain",
+      "end_state_seed": "Carter freezing at sight of body",
+      "action_seed": "Stopping mid-combat to stare",
+      "blocking_seed": [
+        "Carter halts in open space"
+      ],
+      "shot_size": "close_up",
+      "camera_angle": "eye_level",
+      "lens_family": "portrait",
+      "camera_motion": "push_in",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "hard_directional",
+      "primary_subject_angle": "front_three_quarter_left"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "establish burden",
+      "planned_shot_moment_summary": "Carter lifting the body to protect it",
+      "primary_subject_seed": "john_carter",
+      "secondary_subjects_seed": [
+        "james_k_powell"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "apache_plateau_camp skirmish zone",
+      "planned_shot_required_anchor_1": "james_k_powell body",
+      "planned_shot_scale_proof_detail": "weight of dead man vs Carter strength",
+      "start_state_seed": "Carter kneeling by body",
+      "end_state_seed": "Carter standing with body draped",
+      "action_seed": "Retrieving the corpse",
+      "blocking_seed": [
+        "Carter struggling with weight while looking for cover"
+      ],
+      "shot_size": "medium_full",
+      "camera_angle": "low_angle",
+      "lens_family": "wide",
+      "camera_motion": "handheld",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "hard_directional",
+      "primary_subject_angle": "profile_right"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "escalate stakes",
+      "planned_shot_moment_summary": "Carter running with body under arrow fire",
+      "primary_subject_seed": "john_carter",
+      "secondary_subjects_seed": [
+        "apache_warriors"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "apache_plateau_camp skirmish zone",
+      "planned_shot_required_anchor_1": "incoming arrow impact points",
+      "planned_shot_scale_proof_detail": "distance of warriors to Carter",
+      "start_state_seed": "Carter breaking into a run",
+      "end_state_seed": "Carter disappearing toward edge of plateau",
+      "action_seed": "Desperate flight while carrying body",
+      "blocking_seed": [
+        "Carter running erratically to avoid arrows"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "eye_level",
+      "lens_family": "ultra_wide",
+      "camera_motion": "track",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "hard_directional",
+      "primary_subject_angle": "rear_three_quarter_left"
+    }
+  ],
+  "unresolved_questions": [],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH001",
+      "scene_id": "CH001_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH001",
+      "scene_id": "CH001_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH001",
+      "scene_id": "CH001_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH001",
+      "scene_id": "CH001_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH001",
+      "scene_id": "CH001_SC004"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH001",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\02_story_analysis\\chapter_analysis\\CH001_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH016",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH016_chapter_xvi.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH001",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH001_chapter_i.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH010",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH010_chapter_x.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH001",
+      "canonical_id": "john_carter"
+    }
+  ],
+  "evidence_summary": [
+    "[CH001_SC004] Purpose: Introduce the tragic emotional beat and escalate the stakes of the escape.",
+    "[CH001_SC004] Summary: Amidst the skirmish, Carter finds Powell's body, killed by arrows. He retrieves the body to protect it from mutilation and begins a desperate flight under heavy fire.",
+    "[CH001_SC004] Emotional arc: From combat adrenaline to grief and desperation.",
+    "[CH001_SC004] Coverage: Close-ups of Carter's reaction to finding Powell; medium shots of the struggle to move the body while under fire; wide shots of the pursuit.",
+    "[CH001_SC004] Continuity: The condition/position of Powell's body; the direction of incoming arrow fire.",
+    "[CH001] Chapter summary: **Setting:** The Arizona hills and mountains; specifically a remote gold-bearing quartz vein, a high plateau filled with Apache tepees, and a large, ancient cave located on a narrow trail between a cliff and a ravine....",
+    "[CH016] CHAPTER XVI (book index hit)",
+    "[CH001] CHAPTER I (book index hit)",
+    "[CH010] CHAPTER X (book index hit)",
+    "Character john_carter: [source:C:/FilmCreator_MC/projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH011/john_carter.md] Physical Description: A human male from Earth (Virginia). He possesses the strength and physical capabiliti..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH001_SC004\n\n## Production Intent\nEstablish the high-stakes emotional pivot by transitioning from active combat to a desperate rescue and flight. The sequence must emphasize the physical burden of carrying a deceased comrade while under continuous projectile threat.\n\n## Required Cast\n- john_carter\n- james_k_powell (deceased)\n- apache_warriors\n\n## Required Environments\n- apache_plateau_camp\n\n## Continuity Constraints\n- Exact position and arrow placement on james_k_powell\n- Directional trajectory of incoming apache_warriors arrow fire\n\n## Beat List\n- BT001: Discovery of Powell's body\n- BT002: Retrieval of the body\n- BT003: Desperate flight",
+  "metadata": {
+    "artifact_id": "CH001_SC004_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "4cf781a0cc1060e39226d5116b76f1bd627f905a",
+    "created_at_utc": "2026-04-26T22:12:24.771324+00:00",
+    "updated_at_utc": "2026-04-26T22:12:24.771324+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH001_SC004",
+        "version": "8445e9196691384d3e12e9873cbe34ce12b49aa7"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH001_SC004",
+        "version": "5ba2e6430a47a44c22e79f959b4662e0afa92bd2"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH001_SC004",
+        "version": "0c79ef5cdbe254933fcbe2192149d7e930ff7066"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-26T22:12:54.408395+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "4cf781a0cc1060e39226d5116b76f1bd627f905a"
+      }
+    ]
+  }
+}

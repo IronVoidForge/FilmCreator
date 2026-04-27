@@ -1,0 +1,6 @@
+- [SC001](#sc001) The Bond with Woola
+- [SC002](#sc002) The Trial of Dejah Thoris
+- [SC003](#sc003) The Outburst and Combat
+- [SC004](#sc004) The Spoils of Victory
+- [SC005](#sc005) Confrontation with Tars Tarkas
+- [SC006](#sc006) Departure from the Chamber

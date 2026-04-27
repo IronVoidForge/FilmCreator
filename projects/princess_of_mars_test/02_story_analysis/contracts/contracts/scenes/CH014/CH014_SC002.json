@@ -1,0 +1,357 @@
+{
+  "scene_id": "CH014_SC002",
+  "chapter_id": "CH014",
+  "scene_title": "SC002",
+  "purpose": "Introduce a moment of tactical conflict and environmental tension.",
+  "summary": "The party discovers a Warhoon incubator containing green Martian eggs. In an act of sabotage or defense, the incubator is destroyed, highlighting the high stakes of the Martian biological cycle.",
+  "emotional_arc": "Alertness $\\rightarrow$ Destruction/Shock.",
+  "production_intent": "Establish the biological stakes of the Martian environment through the discovery and subsequent destruction of a Warhoon incubator. The sequence must transition from quiet tactical observation to sudden, violent chaos.",
+  "scene_short_description": "A party discovers a Warhoon incubator containing green eggs before it is violently destroyed.",
+  "scene_primary_scale_story_point": "Small biological objects (eggs) vs large scale environmental destruction.",
+  "scene_required_anchor_catalog": [
+    "Warhoon incubator",
+    "Green Martian eggs"
+  ],
+  "scene_start_state": "The party approaches the intact incubator site in a state of high alertness.",
+  "scene_end_state": "The group stands amidst the debris and shattered remains of the incubator.",
+  "dominant_action_line": "Discovery of the eggs followed by the sudden destruction of the incubator.",
+  "scene_spatial_layout": [
+    "Open Martian plains surrounding the incubator site",
+    "Centralized cluster of Warhoon eggs"
+  ],
+  "character_spatial_map": [
+    "john_carter, tars_tarkas, sarkoja, dejah_thoris positioned around the incubator perimeter"
+  ],
+  "environment_subzones": [
+    "incubator_site",
+    "martian_plains"
+  ],
+  "entry_vectors": [
+    "march_route_approach"
+  ],
+  "exit_vectors": [
+    "plains_exfiltration"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: Discovery to Sabotage/Conflict",
+    "BT002 -> BT003: Destruction to Aftermath/Shock"
+  ],
+  "characters_required": [
+    {
+      "label": "John Carter",
+      "canonical_id": "john_carter",
+      "display_name": "john_carter",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH014/john_carter.md",
+      "notes": "Direct registry match for 'john_carter'."
+    },
+    {
+      "label": "Tars Tarkas",
+      "canonical_id": "tars_tarkas",
+      "display_name": "tars_tarkas",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH014/tars_tarkas.md",
+      "notes": "Direct registry match for 'tars_tarkas'."
+    },
+    {
+      "label": "Sarkoja",
+      "canonical_id": "sarkoja",
+      "display_name": "sarkoja",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH014/sarkoja.md",
+      "notes": "Direct registry match for 'sarkoja'."
+    },
+    {
+      "label": "Dejah Thoris",
+      "canonical_id": "dejah_thoris",
+      "display_name": "dejah_thoris",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH014/dejah_thoris.md",
+      "notes": "Direct registry match for 'dejah_thoris'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "An incubator site on the Martian plains",
+      "canonical_id": "martian_plains_and_march_route",
+      "display_name": "martian_plains_and_march_route",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 86,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH014/martian_plains_and_march_route.md",
+      "notes": "Chapter-local environment alias match for 'An incubator site on the Martian plains' (key_overlap=2, label_overlap=2, context_overlap=3)."
+    }
+  ],
+  "continuity_constraints": [
+    "Incubator state transition (intact to destroyed)",
+    "Debris pattern consistency post-destruction"
+  ],
+  "visual_coverage_families": [
+    "Macro shots of green Martian eggs",
+    "Wide shots of the destruction event",
+    "Reaction shots of the group"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "Discovery of the Warhoon incubator and green eggs",
+      "purpose": "",
+      "action_start": "party approaches site",
+      "action_end": "eggs are identified",
+      "active_subjects": [
+        "john_carter",
+        "tars_tarkas",
+        "sarkoja",
+        "dejah_thoris"
+      ],
+      "passive_subjects": [
+        "green_martian_eggs"
+      ],
+      "spatial_context": "incubator_site",
+      "blocking_hint": "characters encircling the incubator",
+      "environment_subzone": "incubator_site",
+      "continuity_focus": "incubator must be intact",
+      "coverage_hint": "macro shots of eggs",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "The destruction of the incubator via sabotage or defense",
+      "purpose": "",
+      "action_start": "sudden impact/explosion",
+      "action_end": "incubator is shattered",
+      "active_subjects": [],
+      "passive_subjects": [
+        "Warhoon incubator",
+        "green_martian_eggs"
+      ],
+      "spatial_context": "incubator_site",
+      "blocking_hint": "characters recoil from center",
+      "environment_subzone": "incubator_site",
+      "continuity_focus": "transition to debris pattern",
+      "coverage_hint": "wide shots of destruction",
+      "coverage_priority": "critical",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "The group reacts to the loss/destruction",
+      "purpose": "",
+      "action_start": "dust settles",
+      "action_end": "group processes shock",
+      "active_subjects": [
+        "john_carter",
+        "tars_tarkas",
+        "sarkoja",
+        "dejah_thoris"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "incubator_site",
+      "blocking_hint": "characters standing amidst debris",
+      "environment_subzone": "incubator_site",
+      "continuity_focus": "debris must match BT002",
+      "coverage_hint": "reaction shots",
+      "coverage_priority": "medium",
+      "handoff_to_next": "end_scene"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish_stakes",
+      "planned_shot_moment_summary": "close up of green eggs inside the incubator",
+      "primary_subject_seed": "green_martian_eggs",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "incubator_site",
+      "planned_shot_required_anchor_1": "Warhoon incubator",
+      "planned_shot_scale_proof_detail": "egg size relative to incubator walls",
+      "start_state_seed": "eggs resting still",
+      "end_state_seed": "eggs visible in detail",
+      "action_seed": "static observation",
+      "blocking_seed": [],
+      "shot_size": "extreme_close_up",
+      "camera_angle": "eye_level",
+      "lens_family": "macro",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "action_climax",
+      "planned_shot_moment_summary": "the incubator is destroyed",
+      "primary_subject_seed": "Warhoon incubator",
+      "secondary_subjects_seed": [
+        "john_carter",
+        "tars_tarkas",
+        "sarkoja",
+        "dejah_thoris"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "incubator_site",
+      "planned_shot_required_anchor_1": "Warhoon incubator",
+      "planned_shot_scale_proof_detail": "debris spray radius",
+      "start_state_seed": "intact incubator",
+      "end_state_seed": "shattered debris",
+      "action_seed": "sudden destruction/sabotage",
+      "blocking_seed": [
+        "characters reacting to blast/impact"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "low_angle",
+      "lens_family": "wide",
+      "camera_motion": "handheld",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "high_contrast_ceremonial",
+      "primary_subject_angle": "front_three_quarter_left"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "emotional_reaction",
+      "planned_shot_moment_summary": "group reacts to the destruction",
+      "primary_subject_seed": "john_carter",
+      "secondary_subjects_seed": [
+        "tars_tarkas",
+        "sarkoja",
+        "dejah_thoris"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "incubator_site",
+      "planned_shot_required_anchor_1": "debris field",
+      "planned_shot_scale_proof_detail": "character height vs debris pile",
+      "start_state_seed": "shocked expression",
+      "end_state_seed": "staring at destruction",
+      "action_seed": "reaction",
+      "blocking_seed": [
+        "characters frozen in place"
+      ],
+      "shot_size": "medium_close",
+      "camera_angle": "eye_level",
+      "lens_family": "portrait",
+      "camera_motion": "subtle_in",
+      "zoom_behavior": "subtle_in",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front_three_quarter_right"
+    }
+  ],
+  "unresolved_questions": [],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH014",
+      "scene_id": "CH014_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH014",
+      "scene_id": "CH014_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH014",
+      "scene_id": "CH014_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH014",
+      "scene_id": "CH014_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH014",
+      "scene_id": "CH014_SC002"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH014",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\02_story_analysis\\chapter_analysis\\CH014_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH014",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH014_chapter_xiv.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH022",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH022_chapter_xxii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH008",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH008_chapter_viii.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH014",
+      "canonical_id": "john_carter"
+    }
+  ],
+  "evidence_summary": [
+    "[CH014_SC002] Purpose: Introduce a moment of tactical conflict and environmental tension.",
+    "[CH014_SC002] Summary: The party discovers a Warhoon incubator containing green Martian eggs. In an act of sabotage or defense, the incubator is destroyed, highlighting the high stakes of the Martian biological cycle.",
+    "[CH014_SC002] Emotional arc: Alertness $\\rightarrow$ Destruction/Shock.",
+    "[CH014_SC002] Coverage: Macro shots of the eggs; wide shots of the destruction; reaction shots from the group.",
+    "[CH014_SC002] Continuity: State of the incubator (intact vs. destroyed); debris patterns.",
+    "[CH014] Chapter summary: **Setting:** The Martian landscape during a march toward Thark; includes an incubator site for green Martian eggs and the open plains where a duel takes place. **Characters:** - **John Carter:** A human warrior strugg...",
+    "[CH014] CHAPTER XIV (book index hit)",
+    "[CH022] CHAPTER XXII (book index hit)",
+    "[CH008] CHAPTER VIII (book index hit)",
+    "Character john_carter: [source:C:/FilmCreator_MC/projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH011/john_carter.md] Physical Description: A human male from Earth (Virginia). He possesses the strength and physical capabiliti..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH014_SC002\n\n## Production Intent\nEstablish the biological stakes of the Martian environment through the discovery and subsequent destruction of a Warhoon incubator. The sequence must transition from quiet tactical observation to sudden, violent chaos.\n\n## Required Cast\n- john_carter\n- tars_tarkas\n- sarkoja\n- dejah_thoris\n\n## Required Environments\n- martian_plains_and_march_route (specifically the incubator site)\n\n## Continuity Constraints\n- Incubator state transition (intact to destroyed)\n- Debris pattern consistency post-destruction\n\n## Beat List\n- BT001: Discovery of the Warhoon incubator and green eggs.\n- BT002: The destruction of the incubator via sabotage or defense.\n- BT003: The group reacts to the loss/destruction.",
+  "metadata": {
+    "artifact_id": "CH014_SC002_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "a530938aa560a31676b06c35fde768b4374e6074",
+    "created_at_utc": "2026-04-26T22:40:40.938582+00:00",
+    "updated_at_utc": "2026-04-26T22:40:40.938582+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH014_SC002",
+        "version": "61909038071b5e9826266ce9db14850bc7ad76ef"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH014_SC002",
+        "version": "eb79079392954e601de7ea87281ad1ff3d4c906e"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH014_SC002",
+        "version": "f705a219007df3069f293daa2e7b200991d2d848"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-26T22:41:10.452705+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "a530938aa560a31676b06c35fde768b4374e6074"
+      }
+    ]
+  }
+}

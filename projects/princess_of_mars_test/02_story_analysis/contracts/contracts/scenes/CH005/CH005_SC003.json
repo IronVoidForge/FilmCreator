@@ -1,0 +1,342 @@
+{
+  "scene_id": "CH005_SC003",
+  "chapter_id": "CH005",
+  "scene_title": "SC003",
+  "purpose": "Initiate the escalation and test the protagonist's resolve to escape.",
+  "summary": "The protagonist decides to test the limits of his guard by attempting to leave the room, observing how the Watch Dog reacts to his movement.",
+  "emotional_arc": "Restlessness $\\rightarrow$ Calculated Risk.",
+  "production_intent": "The protagonist tests the physical and psychological boundaries of his confinement by moving toward an exit, monitoring the reaction of the watch dog to gauge escape feasibility.",
+  "scene_short_description": "A restless prisoner tests his guard by moving toward a threshold under watchful eyes.",
+  "scene_primary_scale_story_point": "Proximity-based tension between the protagonist and the_watch_dog.",
+  "scene_required_anchor_catalog": [
+    "Martian landscape murals",
+    "Chamber exit/threshold"
+  ],
+  "scene_start_state": "protagonist pacing within captive_chamber_murals under observation.",
+  "scene_end_state": "protagonist at the threshold of the deserted_martian_cityscape.",
+  "dominant_action_line": "Testing the limits of the guard through movement.",
+  "scene_spatial_layout": [
+    "Interior chamber with mural-covered walls",
+    "Transition point to exterior street"
+  ],
+  "character_spatial_map": [
+    "protagonist positioned between murals and exit",
+    "the_watch_dog positioned as a stationary observer/threat"
+  ],
+  "environment_subzones": [
+    "captive_chamber_murals",
+    "chamber_threshold",
+    "deserted_martian_cityscape"
+  ],
+  "entry_vectors": [
+    "chamber_threshold"
+  ],
+  "exit_vectors": [
+    "chamber_threshold to deserted_martian_cityscape"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: movement toward threshold",
+    "BT002 -> BT003: crossing the light boundary"
+  ],
+  "characters_required": [
+    {
+      "label": "The Protagonist",
+      "canonical_id": "protagonist",
+      "display_name": "protagonist",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH005/protagonist.md",
+      "notes": "Direct registry match for 'protagonist'."
+    },
+    {
+      "label": "The Watch Dog",
+      "canonical_id": "the_watch_dog",
+      "display_name": "watch_dog",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH005/the_watch_dog.md",
+      "notes": "Direct registry match for 'the_watch_dog'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "Captive's chamber",
+      "canonical_id": "captive_chamber_murals",
+      "display_name": "captive_chamber_murals",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 92,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH005/captive_chamber_murals.md",
+      "notes": "Chapter-local environment alias match for 'Captive's chamber' (key_overlap=2, label_overlap=2, context_overlap=4)."
+    },
+    {
+      "label": "transition to deserted city street",
+      "canonical_id": "deserted_martian_cityscape",
+      "display_name": "deserted_martian_cityscape",
+      "status": "canonical",
+      "entity_kind": "city",
+      "resolution_score": 78,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH005/deserted_martian_cityscape.md",
+      "notes": "Chapter-local environment alias match for 'transition to deserted city street' (key_overlap=1, label_overlap=3, context_overlap=4)."
+    }
+  ],
+  "continuity_constraints": [
+    "Physical distance between protagonist and the_watch_dog",
+    "Lighting transition from captive_chamber_murals to deserted_martian_cityscape"
+  ],
+  "visual_coverage_families": [
+    "Tracking shots following the protagonist",
+    "POV shots of the_watch_dog watching him",
+    "Handheld/unsteady shots for tension"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "protagonist paces restlessly",
+      "purpose": "",
+      "action_start": "protagonist standing still",
+      "action_end": "protagonist walking rhythmically",
+      "active_subjects": [
+        "protagonist"
+      ],
+      "passive_subjects": [
+        "the_watch_dog"
+      ],
+      "spatial_context": "captive_chamber_murals",
+      "blocking_hint": "pacing along the mural wall",
+      "environment_subzone": "captive_chamber_murals",
+      "continuity_focus": "distance to the_watch_dog",
+      "coverage_hint": "tracking shot",
+      "coverage_priority": "medium",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "testing the guard's reaction",
+      "purpose": "",
+      "action_start": "protagonist changes pace",
+      "action_end": "the_watch_dog reacts/watches",
+      "active_subjects": [
+        "protagonist",
+        "the_watch_dog"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "captive_chamber_murals",
+      "blocking_hint": "protagonist moves closer to threshold while being watched",
+      "environment_subzone": "captive_chamber_murals",
+      "continuity_focus": "the_watch_dog's gaze direction",
+      "coverage_hint": "POV/Handheld",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "crossing the threshold",
+      "purpose": "",
+      "action_start": "protagonist reaches exit",
+      "action_end": "protagonist enters deserted_martian_cityscape",
+      "active_subjects": [
+        "protagonist"
+      ],
+      "passive_subjects": [
+        "the_watch_dog"
+      ],
+      "spatial_context": "chamber_threshold to deserted_martian_cityscape",
+      "blocking_hint": "moving from shadow into light",
+      "environment_subzone": "chamber_threshold",
+      "continuity_focus": "lighting transition indoors to outdoors",
+      "coverage_hint": "handheld/unsteady",
+      "coverage_priority": "high",
+      "handoff_to_next": "end_of_scene"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish restlessness",
+      "planned_shot_moment_summary": "protagonist paces near murals",
+      "primary_subject_seed": "protagonist",
+      "secondary_subjects_seed": [
+        "the_watch_dog"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "captive_chamber_murals",
+      "planned_shot_required_anchor_1": "Martian landscape murals",
+      "planned_shot_scale_proof_detail": "distance to the_watch_dog",
+      "start_state_seed": "protagonist standing still",
+      "end_state_seed": "protagonist walking",
+      "action_seed": "pacing",
+      "blocking_seed": [
+        "moving along mural wall"
+      ],
+      "shot_size": "medium_full",
+      "camera_angle": "eye_level",
+      "lens_family": "normal",
+      "camera_motion": "track",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "profile_left"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "establish threat",
+      "planned_shot_moment_summary": "the_watch_dog watches the movement",
+      "primary_subject_seed": "the_watch_dog",
+      "secondary_subjects_seed": [
+        "protagonist"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "captive_chamber_murals",
+      "planned_shot_required_anchor_1": "the_watch_dog position",
+      "planned_shot_scale_proof_detail": "eye-line to protagonist",
+      "start_state_seed": "the_watch_dog stationary",
+      "end_state_seed": "the_watch_dog tracking movement",
+      "action_seed": "watching",
+      "blocking_seed": [
+        "stationary gaze"
+      ],
+      "shot_size": "close_up",
+      "camera_angle": "low_angle",
+      "lens_family": "portrait",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "subtle_in",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "high_contrast_ceremonial",
+      "primary_subject_angle": "front_three_quarter_right"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "escalate tension",
+      "planned_shot_moment_summary": "protagonist approaches the exit",
+      "primary_subject_seed": "protagonist",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "chamber_threshold",
+      "planned_shot_required_anchor_1": "chamber exit",
+      "planned_shot_scale_proof_detail": "transition from indoor to outdoor light",
+      "start_state_seed": "walking toward door",
+      "end_state_seed": "stepping into street",
+      "action_seed": "approaching threshold",
+      "blocking_seed": [
+        "moving toward camera/exit"
+      ],
+      "shot_size": "medium",
+      "camera_angle": "eye_level",
+      "lens_family": "wide",
+      "camera_motion": "handheld",
+      "zoom_behavior": "none",
+      "focus_strategy": "rack_focus",
+      "lighting_style": "hard_directional",
+      "primary_subject_angle": "rear_three_quarter_left"
+    }
+  ],
+  "unresolved_questions": [],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH005",
+      "scene_id": "CH005_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH005",
+      "scene_id": "CH005_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH005",
+      "scene_id": "CH005_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH005",
+      "scene_id": "CH005_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH005",
+      "scene_id": "CH005_SC003"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH005",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\02_story_analysis\\chapter_analysis\\CH005_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH010",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH010_chapter_x.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH011",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH011_chapter_xi.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH005",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH005_chapter_v.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH005",
+      "canonical_id": "protagonist"
+    }
+  ],
+  "evidence_summary": [
+    "[CH005_SC003] Purpose: Initiate the escalation and test the protagonist's resolve to escape.",
+    "[CH005_SC003] Summary: The protagonist decides to test the limits of his guard by attempting to leave the room, observing how the Watch Dog reacts to his movement.",
+    "[CH005_SC003] Emotional arc: Restlessness $\\rightarrow$ Calculated Risk.",
+    "[CH005_SC003] Coverage: Tracking shots following the protagonist. Point-of-view (POV) shots of the Watch Dog watching him. Handheld/unsteady shots to increase tension.",
+    "[CH005_SC003] Continuity: Distance between the protagonist and the beast, lighting transition from indoors to outdoors.",
+    "[CH005] Chapter summary: **Setting:** A captive's chamber decorated with beautiful murals of Martian landscapes; a deserted city street; and the interior of a building overlooking a valley. **Characters:** * **The Protagonist:** An adventurou...",
+    "[CH010] CHAPTER X (book index hit)",
+    "[CH011] CHAPTER XI (book index hit)",
+    "[CH005] CHAPTER V (book index hit)",
+    "Character protagonist: An experienced Earthman fighter characterized by extreme physical fitness and superhuman agility. His visual identity is defined by a significant metamorphosis; he transitions from an armed, clothed combatant to a naked state followin..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH005_SC003\n\n## Production Intent\nThe protagonist tests the physical and psychological boundaries of his confinement by moving toward an exit, monitoring the reaction of the watch dog to gauge escape feasibility.\n\n## Required Cast\n- protagonist (experienced Earthman fighter, physically fit)\n- the_watch_dog\n\n## Required Environments\n- captive_chamber_murals (decorated with Martian landscape murals)\n- deserted_martian_cityscape (exterior street)\n\n## Continuity Constraints\n- Maintain specific distance between protagonist and the_watch_dog during movement.\n- Execute lighting transition from diffuse indoor chamber to hard outdoor cityscape light at threshold.\n\n## Beat List\n- BT001: protagonist paces restlessly\n- BT002: testing the guard's reaction\n- BT003: crossing the threshold",
+  "metadata": {
+    "artifact_id": "CH005_SC003_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "a0afbb2405fbc9dd608e51cab0a0422933fcf67d",
+    "created_at_utc": "2026-04-26T22:21:16.288998+00:00",
+    "updated_at_utc": "2026-04-26T22:21:16.288998+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH005_SC003",
+        "version": "e25b063f82f412886e9611c69699640630491388"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH005_SC003",
+        "version": "287baec8b7f6bd37923c5c8d4900079fe8bd78d1"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH005_SC003",
+        "version": "84002f6ff32a2467fe4613ffb4dfe0ea127b3c94"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-26T22:21:45.574357+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "a0afbb2405fbc9dd608e51cab0a0422933fcf67d"
+      }
+    ]
+  }
+}

@@ -1,0 +1,323 @@
+{
+  "scene_id": "CH019_SC005",
+  "chapter_id": "CH019",
+  "scene_title": "SC005",
+  "purpose": "Resolution and transition to the next narrative phase.",
+  "summary": "Under the cover of darkness, Kantos Kan claims his freedom while Carter uses the chaos/darkness to slip away from the arena toward the eastern hills.",
+  "emotional_arc": "Chaos $\\rightarrow$ Stealthy Determination",
+  "production_intent": "Establish the transition from the chaotic arena environment to a stealth-driven escape sequence. The visual language must shift from the high-energy chaos of the subterranean amphitheater to the quiet, low-light tension of the dark outskirts and eastern hills.",
+  "scene_short_description": "A man slips through dark shadows toward distant hills while a figure claims freedom in the background.",
+  "scene_primary_scale_story_point": "Large scale transition from localized arena perimeter to expansive eastern hill landscape.",
+  "scene_required_anchor_catalog": [
+    "Arena perimeter ruins",
+    "Eastern hill horizon"
+  ],
+  "scene_start_state": "High chaos/low light at the arena edge with kantos_kan visible in distance.",
+  "scene_end_state": "john_carter moving into the vast, dark expanse of the eastern hills.",
+  "dominant_action_line": "john_carter uses darkness to evade detection while moving toward the hills.",
+  "scene_spatial_layout": [
+    "Arena perimeter serves as the immediate foreground/midground.",
+    "Eastern hills provide the distant background horizon."
+  ],
+  "character_spatial_map": [
+    "john_carter: Moving through midground shadows, low profile.",
+    "kantos_kan: Positioned in distance/background near arena exit."
+  ],
+  "environment_subzones": [
+    "Arena perimeter",
+    "Dark outskirts",
+    "warhoon_eastern_hills"
+  ],
+  "entry_vectors": [
+    "Arena interior (implied)"
+  ],
+  "exit_vectors": [
+    "Eastern hills path"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: Shift from background chaos to foreground stealth.",
+    "BT002 -> BT003: Transition from perimeter shadows to wide landscape movement."
+  ],
+  "characters_required": [
+    {
+      "label": "* John Carter",
+      "canonical_id": "john_carter",
+      "display_name": "john_carter",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH019/john_carter.md",
+      "notes": "Direct registry match for 'john_carter'."
+    },
+    {
+      "label": "* Kantos Kan (in distance/background)",
+      "canonical_id": "kantos_kan",
+      "display_name": "kantos_kan",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH019/kantos_kan.md",
+      "notes": "Direct registry match for 'kantos_kan'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "* Arena perimeter / Dark outskirts / Eastern hills",
+      "canonical_id": "warhoon_eastern_hills",
+      "display_name": "warhoon_eastern_hills",
+      "status": "canonical",
+      "entity_kind": "landform",
+      "resolution_score": 114,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH019/warhoon_eastern_hills.md",
+      "notes": "Chapter-local environment alias match for '* Arena perimeter / Dark outskirts / Eastern hills' (key_overlap=2, label_overlap=3, context_overlap=4)."
+    }
+  ],
+  "continuity_constraints": [
+    "Lighting consistency between moonlight and torchlight sources",
+    "Physical condition of john_carter (injuries from previous scenes)"
+  ],
+  "visual_coverage_families": [
+    "Low-light/Night cinematography",
+    "Tracking shots of Carter moving through shadows",
+    "Wide establishing shot of the eastern hills"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "Kantos Kan claims freedom in the distance",
+      "purpose": "",
+      "action_start": "chaos at arena edge",
+      "action_end": "kan moving into background",
+      "active_subjects": [
+        "kantos_kan"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "Arena perimeter",
+      "blocking_hint": "distant figure near torchlight",
+      "environment_subzone": "Arena perimeter",
+      "continuity_focus": "torchlight flicker/intensity",
+      "coverage_hint": "wide shot",
+      "coverage_priority": "high",
+      "handoff_to_next": "focus shifts to carter in shadows"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "Carter moves through the dark outskirts",
+      "purpose": "",
+      "action_start": "crouched in shadow",
+      "action_end": "moving toward hills",
+      "active_subjects": [
+        "john_carter"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "Dark outskirts",
+      "blocking_hint": "low profile, hugging terrain/ruins",
+      "environment_subzone": "Dark outskirts",
+      "continuity_focus": "injury visibility/blood on clothes",
+      "coverage_hint": "tracking shot",
+      "coverage_priority": "medium",
+      "handoff_to_next": "transition to wide landscape"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "Carter enters the eastern hills [[BT003]]",
+      "purpose": "",
+      "action_start": "leaving perimeter shadows",
+      "action_end": "disappearing into hill landscape",
+      "active_subjects": [
+        "john_carter"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "warhoon_eastern_hills",
+      "blocking_hint": "walking toward horizon line",
+      "environment_subzone": "warhoon_eastern_hills",
+      "continuity_focus": "moonlight levels",
+      "coverage_hint": "wide establishing shot",
+      "coverage_priority": "low",
+      "handoff_to_next": "end scene"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish context",
+      "planned_shot_moment_summary": "kantos_kan claims freedom amidst arena chaos",
+      "primary_subject_seed": "kantos_kan",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "silhouette",
+      "narration_mode": "none",
+      "environment_subzone": "Arena perimeter",
+      "planned_shot_required_anchor_1": "Arena perimeter ruins",
+      "planned_shot_scale_proof_detail": "distance between kan and carter",
+      "start_state_seed": "distant silhouette in torchlight",
+      "end_state_seed": "kan moving away from camera",
+      "action_seed": "claiming freedom",
+      "blocking_seed": [
+        "standing/moving in distance"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "low_angle",
+      "lens_family": "wide",
+      "camera_motion": "pan",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "torch_firelight",
+      "primary_subject_angle": "back"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "character movement",
+      "planned_shot_moment_summary": "carter slips through shadows",
+      "primary_subject_seed": "john_carter",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "partial",
+      "narration_mode": "none",
+      "environment_subzone": "Dark outskirts",
+      "planned_shot_required_anchor_1": "Arena perimeter ruins",
+      "planned_shot_scale_proof_detail": "proximity to shadow edges",
+      "start_state_seed": "low crouch in dark",
+      "end_state_seed": "moving forward through brush",
+      "action_seed": "stealthy movement",
+      "blocking_seed": [
+        "crawling/walking low"
+      ],
+      "shot_size": "medium_full",
+      "camera_angle": "eye_level",
+      "lens_family": "normal",
+      "camera_motion": "track",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "low_key_night",
+      "primary_subject_angle": "profile_left"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "narrative transition",
+      "planned_shot_moment_summary": "carter approaches the hills",
+      "primary_subject_seed": "john_carter",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "silhouette",
+      "narration_mode": "none",
+      "environment_subzone": "warhoon_eastern_hills",
+      "planned_shot_required_anchor_1": "Eastern hill horizon",
+      "planned_shot_scale_proof_detail": "scale of man against hills",
+      "start_state_seed": "midground silhouette",
+      "end_state_seed": "moving toward horizon",
+      "action_seed": "walking toward hills",
+      "blocking_seed": [
+        "walking away from camera"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "eye_level",
+      "lens_family": "ultra_wide",
+      "camera_motion": "pull_back",
+      "zoom_behavior": "none",
+      "focus_strategy": "environment_priority",
+      "lighting_style": "low_key_night",
+      "primary_subject_angle": "back"
+    }
+  ],
+  "unresolved_questions": [],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH019",
+      "scene_id": "CH019_SC005"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH019",
+      "scene_id": "CH019_SC005"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH019",
+      "scene_id": "CH019_SC005"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH019",
+      "scene_id": "CH019_SC005"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH019",
+      "scene_id": "CH019_SC005"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH019",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\02_story_analysis\\chapter_analysis\\CH019_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH019",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH019_chapter_xix.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH021",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH021_chapter_xxi.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH015",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH015_chapter_xv.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH019",
+      "canonical_id": "john_carter"
+    }
+  ],
+  "evidence_summary": [
+    "[CH019_SC005] Purpose: Resolution and transition to the next narrative phase.",
+    "[CH019_SC005] Summary: Under the cover of darkness, Kantos Kan claims his freedom while Carter uses the chaos/darkness to slip away from the arena toward the eastern hills.",
+    "[CH019_SC005] Emotional arc: Chaos $\\rightarrow$ Stealthy Determination",
+    "[CH019_SC005] Coverage: * Low-light/Night cinematography * Tracking shots of Carter moving through shadows * Wide establishing shot of the eastern hills",
+    "[CH019_SC005] Continuity: Lighting (moonlight/torchlight); Carter's physical condition (injuries from previous scenes).",
+    "[CH019] Chapter summary: **Setting:** A subterranean amphitheater within a ruined, ancient green Martian city; later, the hills east of the Warhoon city. **Characters:** * **John Carter:** An Earthman and prisoner of the Warhoons. * **Kantos...",
+    "[CH019] CHAPTER XIX (book index hit)",
+    "[CH021] CHAPTER XXI (book index hit)",
+    "[CH015] CHAPTER XV (book index hit)",
+    "Character john_carter: [source:C:/FilmCreator_MC/projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH011/john_carter.md] Physical Description: A human male from Earth (Virginia). He possesses the strength and physical capabiliti..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH019_SC005\n\n## Production Intent\nEstablish the transition from the chaotic arena environment to a stealth-driven escape sequence. The visual language must shift from the high-energy chaos of the subterranean amphitheater to the quiet, low-light tension of the dark outskirts and eastern hills.\n\n## Required Cast\n- john_carter\n- kantos_kan (in distance/background)\n\n## Required Environments\n- Arena perimeter / Dark outskirts\n- warhoon_eastern_hills\n\n## Continuity Constraints\n- Lighting: Moonlight vs Torchlight balance.\n- Physicality: john_carter injury status from previous scenes.\n\n## Beat List\n- BT001: Kantos Kan claims freedom in the distance.\n- BT002: Carter moves through the dark outskirts.\n- BT003: Carter enters the eastern hills.",
+  "metadata": {
+    "artifact_id": "CH019_SC005_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "d7f7b2bc62514dbf263c74d39f066c3963331fc4",
+    "created_at_utc": "2026-04-26T22:52:52.363606+00:00",
+    "updated_at_utc": "2026-04-26T22:52:52.363606+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH019_SC005",
+        "version": "053f7e4e7a962f8f2f1d4efe9c2ca05eaeec704c"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH019_SC005",
+        "version": "bbe8fdefeaf982695863c171bd826a5fbe1971ad"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH019_SC005",
+        "version": "297bae4039e03d3dc53c14f30de29fd1ace781a8"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-26T22:53:20.555179+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "d7f7b2bc62514dbf263c74d39f066c3963331fc4"
+      }
+    ]
+  }
+}

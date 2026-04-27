@@ -1,0 +1,342 @@
+{
+  "scene_id": "CH012_SC003",
+  "chapter_id": "CH012",
+  "scene_title": "SC003",
+  "purpose": "To transition Carter from a prisoner to a chieftain with physical territory.",
+  "summary": "Tars Tarkas approaches Carter and assists him in selecting quarters within a large building near Sola and the other prisoners. Carter makes a strategic choice, selecting a room on the third floor to maintain proximity to Dejah Thoris.",
+  "emotional_arc": "From tension/paranoia to pragmatic planning and tactical positioning.",
+  "production_intent": "Establish the physical transition of john_carter from a prisoner to a chieftain by securing permanent quarters. The scene must visually demonstrate his tactical decision-making through spatial selection within carters_quarters_building, prioritizing proximity to Dejah Thoris via floor height.",
+  "scene_short_description": "Two figures navigate a multi-story structure to select a strategic living quarter.",
+  "scene_primary_scale_story_point": "Transition from prisoner status to chieftain with physical territory.",
+  "scene_required_anchor_catalog": [
+    "third_floor_window",
+    "carters_quarters_building_stairwell"
+  ],
+  "scene_start_state": "john_carter and tars_tarkas walking through thark_city_plaza toward the building.",
+  "scene_end_state": "john_carter standing at a third floor window overlooking the city.",
+  "dominant_action_line": "Selecting and claiming a specific room on the third floor.",
+  "scene_spatial_layout": [
+    "Vertical progression from plaza level to upper floors",
+    "Interior corridors of carters_quarters_building leading to rooms"
+  ],
+  "character_spatial_map": [
+    "john_carter moving through building interior",
+    "tars_tarkas guiding john_carter through levels"
+  ],
+  "environment_subzones": [
+    "thark_city_plaza",
+    "carters_quarters_building_interior",
+    "third_floor_room"
+  ],
+  "entry_vectors": [
+    "thark_city_plaza entrance to building"
+  ],
+  "exit_vectors": [
+    "third_floor_window view"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: Movement from plaza into the building interior",
+    "BT002 -> BT003: Ascent to the third floor and final selection"
+  ],
+  "characters_required": [
+    {
+      "label": "John Carter",
+      "canonical_id": "john_carter",
+      "display_name": "john_carter",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH012/john_carter.md",
+      "notes": "Direct registry match for 'john_carter'."
+    },
+    {
+      "label": "Tars Tarkas",
+      "canonical_id": "tars_tarkas",
+      "display_name": "tars_tarkas",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH012/tars_tarkas.md",
+      "notes": "Direct registry match for 'tars_tarkas'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "The Plaza/Thark City",
+      "canonical_id": "thark_city_plaza",
+      "display_name": "thark_city_plaza",
+      "status": "canonical",
+      "entity_kind": "plaza",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH012/thark_city_plaza.md",
+      "notes": "Chapter-local environment alias match for 'The Plaza/Thark City' (key_overlap=3, label_overlap=3, context_overlap=4)."
+    },
+    {
+      "label": "various multi-story buildings",
+      "canonical_id": "carters_quarters_building",
+      "display_name": "carters_quarters_building",
+      "status": "canonical",
+      "entity_kind": "building",
+      "resolution_score": 44,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH012/carters_quarters_building.md",
+      "notes": "Chapter-local environment alias match for 'various multi-story buildings' (key_overlap=0, label_overlap=2, context_overlap=4)."
+    }
+  ],
+  "continuity_constraints": [
+    "Precise height/floor level selection (Third Floor)",
+    "Visual relationship between building elevation and prisoner locations"
+  ],
+  "visual_coverage_families": [
+    "Two-shots of john_carter and tars_tarkas walking and discussing",
+    "Establishing shots of carters_quarters_building and floor views",
+    "POV shots from the third floor looking toward target locations"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "Approach the building in the plaza",
+      "purpose": "",
+      "action_start": "walking through thark_city_plaza",
+      "action_end": "reaching building entrance",
+      "active_subjects": [
+        "john_carter",
+        "tars_tarkas"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "thark_city_plaza",
+      "blocking_hint": "walking side-by-side",
+      "environment_subzone": "thark_city_plaza",
+      "continuity_focus": "character scale relative to architecture",
+      "coverage_hint": "two-shot walking",
+      "coverage_priority": "medium",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "Ascend through the building levels",
+      "purpose": "",
+      "action_start": "entering building interior",
+      "action_end": "arriving at third floor",
+      "active_subjects": [
+        "john_carter",
+        "tars_tarkas"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "carters_quarters_building_interior",
+      "blocking_hint": "moving up stairs/corridors",
+      "environment_subzone": "carters_quarters_building_interior",
+      "continuity_focus": "floor level count",
+      "coverage_hint": "establishing shots of floors",
+      "coverage_priority": "low",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "Select the third floor room",
+      "purpose": "",
+      "action_start": "entering the third floor room",
+      "action_end": "surveying the view from the window",
+      "active_subjects": [
+        "john_carter",
+        "tars_tarkas"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "third_floor_room",
+      "blocking_hint": "standing at the window ledge",
+      "environment_subzone": "third_floor_room",
+      "continuity_focus": "height/view relationship to Dejah Thoris",
+      "coverage_hint": "POV shots from window",
+      "coverage_priority": "high",
+      "handoff_to_next": "end_scene"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish scale",
+      "planned_shot_moment_summary": "walking through plaza toward building",
+      "primary_subject_seed": "john_carter",
+      "secondary_subjects_seed": [
+        "tars_tarkas"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "thark_city_plaza",
+      "planned_shot_required_anchor_1": "carters_quarters_building",
+      "planned_shot_scale_proof_detail": "building height vs characters",
+      "start_state_seed": "walking in plaza",
+      "end_state_seed": "approaching building entrance",
+      "action_seed": "walking and discussing",
+      "blocking_seed": [
+        "side-by-side walking"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "eye_level",
+      "lens_family": "wide",
+      "camera_motion": "track",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "profile_left"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "show progression",
+      "planned_shot_moment_summary": "ascending the building levels",
+      "primary_subject_seed": "tars_tarkas",
+      "secondary_subjects_seed": [
+        "john_carter"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "carters_quarters_building_interior",
+      "planned_shot_required_anchor_1": "stairwell",
+      "planned_shot_scale_proof_detail": "floor level increments",
+      "start_state_seed": "entering stairs",
+      "end_state_seed": "reaching upper levels",
+      "action_seed": "climbing/walking",
+      "blocking_seed": [
+        "ascending stairs"
+      ],
+      "shot_size": "medium_full",
+      "camera_angle": "low_angle",
+      "lens_family": "normal",
+      "camera_motion": "track",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front_three_quarter_right"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "resolve intent",
+      "planned_shot_moment_summary": "looking out from the third floor window",
+      "primary_subject_seed": "john_carter",
+      "secondary_subjects_seed": [
+        "tars_tarkas"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "third_floor_room",
+      "planned_shot_required_anchor_1": "third_floor_window",
+      "planned_shot_scale_proof_detail": "view of Dejah Thoris proximity",
+      "start_state_seed": "entering room",
+      "end_state_seed": "looking out window",
+      "action_seed": "surveying view",
+      "blocking_seed": [
+        "standing at window"
+      ],
+      "shot_size": "medium_close",
+      "camera_angle": "eye_level",
+      "lens_family": "portrait",
+      "camera_motion": "push_in",
+      "zoom_behavior": "subtle_in",
+      "focus_strategy": "rack_focus",
+      "lighting_style": "backlit",
+      "primary_subject_angle": "profile_right"
+    }
+  ],
+  "unresolved_questions": [],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH012",
+      "scene_id": "CH012_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH012",
+      "scene_id": "CH012_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH012",
+      "scene_id": "CH012_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH012",
+      "scene_id": "CH012_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH012",
+      "scene_id": "CH012_SC003"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH012",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\02_story_analysis\\chapter_analysis\\CH012_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH011",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH011_chapter_xi.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH012",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH012_chapter_xii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH016",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH016_chapter_xvi.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH012",
+      "canonical_id": "john_carter"
+    }
+  ],
+  "evidence_summary": [
+    "[CH012_SC003] Purpose: To transition Carter from a prisoner to a chieftain with physical territory.",
+    "[CH012_SC003] Summary: Tars Tarkas approaches Carter and assists him in selecting quarters within a large building near Sola and the other prisoners. Carter makes a strategic choice, selecting a room on the third floor to maintain proximity to Dejah Thoris.",
+    "[CH012_SC003] Emotional arc: From tension/paranoia to pragmatic planning and tactical positioning.",
+    "[CH012_SC003] Coverage: * Two-shots of Carter and Tars Tarkas walking/discussing. * Establishing shots of the building and the view from different floors. * Point-of-view (POV) shots of Carter looking out from the third floor toward his goal.",
+    "[CH012_SC003] Continuity: The height/floor level selected; the layout of the buildings relative to the prisoners' locations.",
+    "[CH012] Chapter summary: **Events:** John Carter is summoned to an audience with Lorquas Ptomel, the Tharkian leader. Ptomel confronts Carter regarding his ambiguous status as a prisoner who commands respect, and accuses him of plotting an es...",
+    "[CH011] CHAPTER XI (book index hit)",
+    "[CH012] CHAPTER XII (book index hit)",
+    "[CH016] CHAPTER XVI (book index hit)",
+    "Character john_carter: [source:C:/FilmCreator_MC/projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH011/john_carter.md] Physical Description: A human male from Earth (Virginia). He possesses the strength and physical capabiliti..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH012_SC003\n\n## Production Intent\nEstablish the physical transition of john_carter from a prisoner to a chieftain by securing permanent quarters. The scene must visually demonstrate his tactical decision-making through spatial selection within carters_quarters_building, prioritizing proximity to Dejah Thoris via floor height.\n\n## Required Cast\n- john_carter\n- tars_tarkas\n\n## Required Environments\n- thark_city_plaza\n- carters_quarters_building (Interior/Stairs/Third Floor)\n\n## Continuity Constraints\n- Precise selection of the third floor level.\n- Visual alignment between the window view and prisoner locations.\n\n## Beat List\n- BT001: Approach the building in the plaza.\n- BT002: Ascend through the building levels.\n- BT003: Select the third floor room and survey the tactical view.",
+  "metadata": {
+    "artifact_id": "CH012_SC003_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "d3e351fbcf9b4151318eb0829cf51def8ac4343a",
+    "created_at_utc": "2026-04-26T22:36:59.067460+00:00",
+    "updated_at_utc": "2026-04-26T22:36:59.067460+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH012_SC003",
+        "version": "432dcd93980893375fecb8bd7bd52df9ab3e2b6c"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH012_SC003",
+        "version": "f5fdd27bc1f1ac74b3ab6a7d24944759d2d10257"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH012_SC003",
+        "version": "d1f7e3511554a5c815da8554ad277fbd0c61a684"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-26T22:37:29.819324+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "d3e351fbcf9b4151318eb0829cf51def8ac4343a"
+      }
+    ]
+  }
+}

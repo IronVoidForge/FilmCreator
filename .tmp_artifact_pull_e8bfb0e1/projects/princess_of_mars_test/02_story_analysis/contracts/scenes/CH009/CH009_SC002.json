@@ -1,0 +1,333 @@
+{
+  "scene_id": "CH009_SC002",
+  "chapter_id": "CH009",
+  "scene_title": "SC002",
+  "purpose": "Demonstrate the protagonist's physical progression and martial skill development.",
+  "summary": "The protagonist engages in intensive combat training in the plaza against a Martian youth, utilizing his knowledge of Earthly fighting techniques to bridge the gap in raw strength.",
+  "emotional_arc": "Physical exertion and growing confidence/competence.",
+  "production_intent": "The protagonist utilizes Earthly martial techniques to overcome the raw physical strength advantage of a Martian youth during intensive combat training.",
+  "scene_short_description": "Intensive combat training in a plaza involving martial exchanges against a stronger opponent.",
+  "scene_primary_scale_story_point": "Protagonist uses technical agility to bridge the gap against Martian raw strength.",
+  "scene_required_anchor_catalog": [
+    "warrior's arms/ornaments",
+    "plaza floor surface"
+  ],
+  "scene_start_state": "protagonist and martian_youth facing off in the center of the training area.",
+  "scene_end_state": "protagonist demonstrating increased competence through successful technical maneuvers.",
+  "dominant_action_line": "Technical martial combat exchange.",
+  "scene_spatial_layout": [
+    "open circular fighting area within plaza_training_grounds",
+    "perimeter defined by plaza boundaries"
+  ],
+  "character_spatial_map": [
+    "protagonist positioned centrally, utilizing agility",
+    "martian_youth positioned as a heavy physical presence"
+  ],
+  "environment_subzones": [
+    "central combat zone",
+    "plaza periphery"
+  ],
+  "entry_vectors": [
+    "martial engagement from center-out"
+  ],
+  "exit_vectors": [
+    "movement toward periphery after exchange"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: transition from stance to initial contact",
+    "BT002 -> BT003: transition from strength-based struggle to technical mastery"
+  ],
+  "characters_required": [
+    {
+      "label": "The Protagonist",
+      "canonical_id": "protagonist",
+      "display_name": "protagonist",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH009/protagonist.md",
+      "notes": "Direct registry match for 'protagonist'."
+    },
+    {
+      "label": "Martian Youth",
+      "canonical_id": "martian_youth",
+      "display_name": "martian_youth",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH009/martian_youth.md",
+      "notes": "Direct registry match for 'martian_youth'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "The Plaza",
+      "canonical_id": "plaza_training_grounds",
+      "display_name": "plaza_training_grounds",
+      "status": "canonical",
+      "entity_kind": "plaza",
+      "resolution_score": 58,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH009/plaza_training_grounds.md",
+      "notes": "Chapter-local environment alias match for 'The Plaza' (key_overlap=1, label_overlap=1, context_overlap=4)."
+    }
+  ],
+  "continuity_constraints": [
+    "Weapon positions must remain consistent between beats",
+    "Sweat and dirt accumulation on protagonist",
+    "Lighting consistency for time of day"
+  ],
+  "visual_coverage_families": [
+    "Wide shots of plaza training",
+    "Dynamic medium shots of combat exchanges",
+    "Close-ups of footwork and weapon contact"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "Initial engagement and circling",
+      "purpose": "",
+      "action_start": "fighters facing off",
+      "action_end": "closing distance for contact",
+      "active_subjects": [
+        "protagonist",
+        "martian_youth"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "center of plaza_training_grounds",
+      "blocking_hint": "circling movement",
+      "environment_subzone": "central combat zone",
+      "continuity_focus": "initial weapon positions",
+      "coverage_hint": "wide shot",
+      "coverage_priority": "medium",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "Strength vs. Technique struggle",
+      "purpose": "",
+      "action_start": "first weapon contact",
+      "action_end": "protagonist absorbing/deflecting heavy blows",
+      "active_subjects": [
+        "protagonist",
+        "martian_youth"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "central combat zone",
+      "blocking_hint": "tightly packed exchange",
+      "environment_subzone": "central combat zone",
+      "continuity_focus": "sweat/dirt accumulation on protagonist",
+      "coverage_hint": "medium shots of exchanges",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "Technical mastery demonstration",
+      "purpose": "",
+      "action_start": "protagonist finding opening",
+      "action_end": "successful technical maneuver",
+      "active_subjects": [
+        "protagonist"
+      ],
+      "passive_subjects": [
+        "martian_youth"
+      ],
+      "spatial_context": "central combat zone",
+      "blocking_hint": "rapid pivoting and footwork",
+      "environment_subzone": "central combat zone",
+      "continuity_focus": "weapon positions post-strike",
+      "coverage_hint": "close-ups of footwork/contact",
+      "coverage_priority": "high",
+      "handoff_to_next": "end_scene"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish scale and setting",
+      "planned_shot_moment_summary": "protagonist and martian_youth square off in the plaza",
+      "primary_subject_seed": "protagonist",
+      "secondary_subjects_seed": [
+        "martian_youth"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "central combat zone",
+      "planned_shot_required_anchor_1": "plaza floor surface",
+      "planned_shot_scale_proof_detail": "wide view of both fighters relative to plaza size",
+      "start_state_seed": "fighters at distance",
+      "end_state_seed": "fighters closing distance",
+      "action_seed": "approaching for engagement",
+      "blocking_seed": [
+        "circling each other"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "eye_level",
+      "lens_family": "wide",
+      "camera_motion": "track",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front_three_quarter_left"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "show physical struggle",
+      "planned_shot_moment_summary": "martian_youth uses strength against protagonist's defense",
+      "primary_subject_seed": "martian_youth",
+      "secondary_subjects_seed": [
+        "protagonist"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "central combat zone",
+      "planned_shot_required_anchor_1": "warrior's arms/ornaments",
+      "planned_shot_scale_proof_detail": "close contact between fighters",
+      "start_state_seed": "clash of weapons",
+      "end_state_seed": "protagonist pushed back",
+      "action_seed": "heavy strikes and parries",
+      "blocking_seed": [
+        "tightly engaged center"
+      ],
+      "shot_size": "medium",
+      "camera_angle": "low_angle",
+      "lens_family": "normal",
+      "camera_motion": "handheld",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "hard_directional",
+      "primary_subject_angle": "profile_left"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "demonstrate skill/agility",
+      "planned_shot_moment_summary": "protagonist uses footwork to bypass strength",
+      "primary_subject_seed": "protagonist",
+      "secondary_subjects_seed": [
+        "martian_youth"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "central combat zone",
+      "planned_shot_required_anchor_1": "plaza floor surface",
+      "planned_shot_scale_proof_detail": "focus on feet and movement speed",
+      "start_state_seed": "protagonist in defensive stance",
+      "end_state_seed": "protagonist executing technical strike",
+      "action_seed": "rapid footwork and precision contact",
+      "blocking_seed": [
+        "shifting weight/pivoting"
+      ],
+      "shot_size": "close_up",
+      "camera_angle": "low_angle",
+      "lens_family": "portrait",
+      "camera_motion": "pan",
+      "zoom_behavior": "none",
+      "focus_strategy": "rack_focus",
+      "lighting_style": "hard_directional",
+      "primary_subject_angle": "front_three_quarter_right"
+    }
+  ],
+  "unresolved_questions": [],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH009",
+      "scene_id": "CH009_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH009",
+      "scene_id": "CH009_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH009",
+      "scene_id": "CH009_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH009",
+      "scene_id": "CH009_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH009",
+      "scene_id": "CH009_SC002"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH009",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\02_story_analysis\\chapter_analysis\\CH009_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH027",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH027_chapter_xxvii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH006",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH006_chapter_vi.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH009",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH009_chapter_ix.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH009",
+      "canonical_id": "protagonist"
+    }
+  ],
+  "evidence_summary": [
+    "[CH009_SC002] Purpose: Demonstrate the protagonist's physical progression and martial skill development.",
+    "[CH009_SC002] Summary: The protagonist engages in intensive combat training in the plaza against a Martian youth, utilizing his knowledge of Earthly fighting techniques to bridge the gap in raw strength.",
+    "[CH009_SC002] Emotional arc: Physical exertion and growing confidence/competence.",
+    "[CH009_SC002] Coverage: Wide shots of the plaza training. Dynamic medium shots of combat exchanges. Close-ups of footwork and weapon contact.",
+    "[CH009_SC002] Continuity: Weapon positions; sweat/dirt levels on the protagonist; time of day (lighting).",
+    "[CH009] Chapter summary: **Events:** The protagonist receives a set of warrior's arms and ornaments from a respectful yet menacing Martian, which Sola and other women remodel to fit his smaller size. He begins intensive combat training with t...",
+    "[CH027] CHAPTER XXVII (book index hit)",
+    "[CH006] CHAPTER VI (book index hit)",
+    "[CH009] CHAPTER IX (book index hit)",
+    "Character protagonist: An experienced Earthman fighter characterized by extreme physical fitness and superhuman agility. His visual identity is defined by a significant metamorphosis; he transitions from an armed, clothed combatant to a naked state followin..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH009_SC002\n\n## Production Intent\nThe protagonist utilizes Earthly martial techniques to overcome the raw physical strength advantage of a Martian youth during intensive combat training.\n\n## Required Cast\n- protagonist\n- martian_youth\n\n## Required Environments\n- plaza_training_grounds\n\n## Continuity Constraints\n- Weapon positions must remain consistent between beats\n- Sweat and dirt accumulation on protagonist\n- Lighting consistency for time of day\n\n## Beat List\n- BT001: Initial engagement and circling\n- BT002: Strength vs. Technique struggle\n- BT003: Technical mastery demonstration",
+  "metadata": {
+    "artifact_id": "CH009_SC002_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "aa9066f238b9efbbdc5b976942b90a877d12925f",
+    "created_at_utc": "2026-04-26T22:29:30.337520+00:00",
+    "updated_at_utc": "2026-04-26T22:29:30.337520+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH009_SC002",
+        "version": "f9f8f9722df3c6f77ccb0dcbf113ea9ea6116d4b"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH009_SC002",
+        "version": "24fa001941986c5a89feb1d8f161cbe524d67b48"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH009_SC002",
+        "version": "4d71e0c23a6f53435ab6c43076c69ba3c8c5a9b5"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-26T22:29:57.378592+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "aa9066f238b9efbbdc5b976942b90a877d12925f"
+      }
+    ]
+  }
+}

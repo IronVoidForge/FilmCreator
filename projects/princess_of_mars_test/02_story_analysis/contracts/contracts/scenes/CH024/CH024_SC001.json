@@ -1,0 +1,363 @@
+{
+  "scene_id": "CH024_SC001",
+  "chapter_id": "CH024",
+  "scene_title": "SC001",
+  "purpose": "Establish John Carter's combat prowess and forge a critical alliance through heroic intervention.",
+  "summary": "During a massive battle between Tharks and Warhoons, John Carter's aircraft is shot down. He enters the fray and saves Tars Tarkas from being overwhelmed by three Warhoon warriors. After the skirmish, he reunites with Woola.",
+  "emotional_arc": "Chaos/Peril $\\rightarrow$ Heroic Triumph $\\rightarrow$ Relief/Bonding.",
+  "production_intent": "Establish john_carter's combat prowess through a high-stakes intervention during a large-scale conflict. The sequence must transition from the chaotic destruction of an aircraft to a focused, visceral skirmish that results in a critical alliance with tars_tarkas and a reunion with woola.",
+  "scene_short_description": "A downed aircraft crashes into a massive battlefield, leading to a rescue mission amidst heavy combat.",
+  "scene_primary_scale_story_point": "Massive scale of Thark vs Warhoon battle contrasted with intimate combat skirmish.",
+  "scene_required_anchor_catalog": [
+    "Aircraft debris field",
+    "Ancient dead city ruins"
+  ],
+  "scene_start_state": "john_carter's aircraft falling through the sky amidst a massive battlefield.",
+  "scene_end_state": "john_carter and woola reuniting in the aftermath of the skirmish.",
+  "dominant_action_line": "Crash -> Combat Intervention -> Reunion.",
+  "scene_spatial_layout": [
+    "Open plains near ancient dead city ruins",
+    "High density of combatants across the battlefield"
+  ],
+  "character_spatial_map": [
+    "john_carter moves from aircraft debris to tars_tarkas",
+    "Warhoon Warriors surround tars_tarkas",
+    "woola approaches john_carter post-skirmish"
+  ],
+  "environment_subzones": [
+    "crash_site",
+    "combat_zone_alpha",
+    "reunion_clearing"
+  ],
+  "entry_vectors": [
+    "Aircraft descent into battlefield"
+  ],
+  "exit_vectors": [
+    "Movement toward reunion clearing"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: Crash impact to immediate combat chaos",
+    "BT002 -> BT003: Skirmish resolution to post-battle relief"
+  ],
+  "characters_required": [
+    {
+      "label": "John Carter",
+      "canonical_id": "john_carter",
+      "display_name": "john_carter",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH024/john_carter.md",
+      "notes": "Direct registry match for 'john_carter'."
+    },
+    {
+      "label": "Tars Tarkas",
+      "canonical_id": "tars_tarkas",
+      "display_name": "tars_tarkas",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH024/tars_tarkas.md",
+      "notes": "Direct registry match for 'tars_tarkas'."
+    },
+    {
+      "label": "Warhoon Warriors",
+      "canonical_id": null,
+      "display_name": "Warhoon Warriors",
+      "status": "review",
+      "entity_kind": "individual",
+      "resolution_score": 16,
+      "source_path": "",
+      "notes": "Low-confidence character match requires review."
+    },
+    {
+      "label": "Woola",
+      "canonical_id": "woola",
+      "display_name": "woola",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH024/woola.md",
+      "notes": "Direct registry match for 'woola'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "The Battlefield (Plains near an ancient dead city)",
+      "canonical_id": "battlefield_plains",
+      "display_name": "battlefield_plains",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 122,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH024/battlefield_plains.md",
+      "notes": "Chapter-local environment alias match for 'The Battlefield (Plains near an ancient dead city)' (key_overlap=2, label_overlap=5, context_overlap=4)."
+    }
+  ],
+  "continuity_constraints": [
+    "Aircraft debris location relative to crash site",
+    "Blood and dirt accumulation levels on characters post-combat",
+    "Woola's proximity/positioning relative to john_carter"
+  ],
+  "visual_coverage_families": [
+    "Wide shots of massive Thark/Warhoon battle scale",
+    "Handheld/Shaky cam for aircraft crash and combat",
+    "Close-ups on Carter's intervention and Tars Tarkas reaction",
+    "Medium shots of the reunion with Woola"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "Aircraft crash into the battlefield",
+      "purpose": "",
+      "action_start": "aircraft in flight",
+      "action_end": "impact and smoke settling",
+      "active_subjects": [
+        "john_carter"
+      ],
+      "passive_subjects": [
+        "Warhoon Warriors"
+      ],
+      "spatial_context": "plains near dead city",
+      "blocking_hint": "vertical descent to ground level",
+      "environment_subzone": "crash_site",
+      "continuity_focus": "debris field layout",
+      "coverage_hint": "wide/handheld",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "Intervention and skirmish",
+      "purpose": "",
+      "action_start": "john_carter exiting debris",
+      "action_end": "three Warhoon Warriors neutralized",
+      "active_subjects": [
+        "john_carter",
+        "Warhoon Warriors"
+      ],
+      "passive_subjects": [
+        "tars_tarkas"
+      ],
+      "spatial_context": "combat zone near tars_tarkas",
+      "blocking_hint": "john_carter intercepts warriors surrounding tars_tarkas",
+      "environment_subzone": "combat_zone_alpha",
+      "continuity_focus": "blood/dirt levels on john_carter",
+      "coverage_hint": "close-ups/handheld",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "Reunion with Woola",
+      "purpose": "",
+      "action_start": "skirmish ends, breathing heavy",
+      "action_end": "reunion complete",
+      "active_subjects": [
+        "woola",
+        "john_carter"
+      ],
+      "passive_subjects": [
+        "tars_tarkas"
+      ],
+      "spatial_context": "clearing near combat site",
+      "blocking_hint": "woola approaches from distance to john_carter",
+      "environment_subzone": "reunion_clearing",
+      "continuity_focus": "woola position relative to carter",
+      "coverage_hint": "medium shots",
+      "coverage_priority": "medium",
+      "handoff_to_next": "none"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish scale and peril",
+      "planned_shot_moment_summary": "aircraft plummeting toward the battlefield",
+      "primary_subject_seed": "john_carter",
+      "secondary_subjects_seed": [
+        "Warhoon Warriors"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "crash_site",
+      "planned_shot_required_anchor_1": "ancient dead city ruins",
+      "planned_shot_scale_proof_detail": "massive battle lines visible below",
+      "start_state_seed": "sky view of aircraft",
+      "end_state_seed": "impact with ground",
+      "action_seed": "aircraft crash",
+      "blocking_seed": [
+        "descending vertical path"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "high_angle",
+      "lens_family": "ultra_wide",
+      "camera_motion": "crane",
+      "zoom_behavior": "none",
+      "focus_strategy": "environment_priority",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "show combat prowess",
+      "planned_shot_moment_summary": "john_carter fighting three Warhoon Warriors to save tars_tarkas",
+      "primary_subject_seed": "john_carter",
+      "secondary_subjects_seed": [
+        "Warhoon Warriors",
+        "tars_tarkas"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "combat_zone_alpha",
+      "planned_shot_required_anchor_1": "aircraft debris field",
+      "planned_shot_scale_proof_detail": "warriors surrounding the central combatants",
+      "start_state_seed": "john_carter emerging from smoke",
+      "end_state_seed": "warriors defeated",
+      "action_seed": "melee combat",
+      "blocking_seed": [
+        "circular skirmish around tars_tarkas"
+      ],
+      "shot_size": "medium_full",
+      "camera_angle": "eye_level",
+      "lens_family": "normal",
+      "camera_motion": "handheld",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "high_contrast_ceremonial",
+      "primary_subject_angle": "front_three_quarter_right"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "emotional resolution",
+      "planned_shot_moment_summary": "reunion with woola",
+      "primary_subject_seed": "woola",
+      "secondary_subjects_seed": [
+        "john_carter"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "reunion_clearing",
+      "planned_shot_required_anchor_1": "aircraft debris field",
+      "planned_shot_scale_proof_detail": "distance between characters closing",
+      "start_state_seed": "john_carter standing exhausted",
+      "end_state_seed": "contact with woola",
+      "action_seed": "reunion",
+      "blocking_seed": [
+        "woola running to john_carter"
+      ],
+      "shot_size": "medium",
+      "camera_angle": "eye_level",
+      "lens_family": "portrait",
+      "camera_motion": "push_in",
+      "zoom_behavior": "subtle_in",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "soft_even",
+      "primary_subject_angle": "front"
+    }
+  ],
+  "unresolved_questions": [
+    "Resolve Warhoon Warriors -> Warhoon Warriors"
+  ],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH024",
+      "scene_id": "CH024_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH024",
+      "scene_id": "CH024_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH024",
+      "scene_id": "CH024_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH024",
+      "scene_id": "CH024_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH024",
+      "scene_id": "CH024_SC001"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH024",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\02_story_analysis\\chapter_analysis\\CH024_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH024",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH024_chapter_xxiv.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH013",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH013_chapter_xiii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH014",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH014_chapter_xiv.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH024",
+      "canonical_id": "john_carter"
+    }
+  ],
+  "evidence_summary": [
+    "[CH024_SC001] Purpose: Establish John Carter's combat prowess and forge a critical alliance through heroic intervention.",
+    "[CH024_SC001] Summary: During a massive battle between Tharks and Warhoons, John Carter's aircraft is shot down. He enters the fray and saves Tars Tarkas from being overwhelmed by three Warhoon warriors. After the skirmish, he reunites with Woola.",
+    "[CH024_SC001] Emotional arc: Chaos/Peril $\\rightarrow$ Heroic Triumph $\\rightarrow$ Relief/Bonding.",
+    "[CH024_SC001] Coverage: Wide shots of the massive scale of the Thark/Warhoon battle. Handheld/Shaky cam for the aircraft crash and combat. Close-ups on Carter's intervention and Tars Tarkas's reaction. Medium shots of the reunion with Woola.",
+    "[CH024_SC001] Continuity: Aircraft debris location, blood/dirt levels on characters after battle, Woola's position relative to Carter.",
+    "[CH024] Chapter summary: **Events:** John Carter's aircraft is shot down during a massive battle between Tharks and Warhoons. He intervenes to save Tars Tarkas from being killed by three Warhoon warriors, cementing a new friendship between th...",
+    "[CH024] CHAPTER XXIV (book index hit)",
+    "[CH013] CHAPTER XIII (book index hit)",
+    "[CH014] CHAPTER XIV (book index hit)",
+    "Character john_carter: [source:C:/FilmCreator_MC/projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH011/john_carter.md] Physical Description: A human male from Earth (Virginia). He possesses the strength and physical capabiliti..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH024_SC001\n\n## Production Intent\nEstablish john_carter's combat prowess through a high-stakes intervention during a large-scale conflict. The sequence must transition from the chaotic destruction of an aircraft to a focused, visceral skirmish that results in a critical alliance with tars_tarkas and a reunion with woola.\n\n## Required Cast\n- john_carter\n- tars_tarkas\n- Warhoon Warriors\n- woola\n\n## Required Environments\n- battlefield_plains (near ancient dead city)\n\n## Continuity Constraints\n- Aircraft debris location relative to crash site\n- Blood and dirt accumulation levels on characters post-combat\n- Woola's proximity/positioning relative to john_carter\n\n## Beat List\n- BT001: Aircraft crash into the battlefield\n- BT002: Intervention and skirmish (saving tars_tarkas)\n- BT003: Reunion with woola",
+  "metadata": {
+    "artifact_id": "CH024_SC001_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "f0fe3db37b538fe683988ce99fd024e88641dccd",
+    "created_at_utc": "2026-04-26T23:02:56.335626+00:00",
+    "updated_at_utc": "2026-04-26T23:02:56.335626+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH024_SC001",
+        "version": "f9bd7b08c43bea382d4ab17f283468c323e1abc4"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH024_SC001",
+        "version": "adfb6930c08f6fccac4c7b68d6ce0e5da91ab1c7"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH024_SC001",
+        "version": "b13f48b0229e7a4fa0b9c4c47fc3030c17a3928c"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-26T23:03:27.923150+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "f0fe3db37b538fe683988ce99fd024e88641dccd"
+      }
+    ]
+  }
+}

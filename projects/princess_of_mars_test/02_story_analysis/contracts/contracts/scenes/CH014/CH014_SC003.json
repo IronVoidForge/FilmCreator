@@ -1,0 +1,362 @@
+{
+  "scene_id": "CH014_SC003",
+  "chapter_id": "CH014",
+  "scene_title": "SC003",
+  "purpose": "Escalate the physical stakes through a formal challenge.",
+  "summary": "Zad, a powerful *o mad* warrior, challenges John Carter to a formal duel using long-swords, setting the stage for the central action sequence.",
+  "emotional_arc": "Tension $\\rightarrow$ Formal aggression.",
+  "production_intent": "Establish a formal challenge between Zad and John Carter to escalate physical stakes. The scene must emphasize the power disparity through low-angle framing of Zad and maintain strict continuity regarding long-sword usage and the defined duel circle within the open plains.",
+  "scene_short_description": "Two warriors face off in a formal duel within an open Martian plain.",
+  "scene_primary_scale_story_point": "Zad's physical dominance over John Carter via low-angle perspective.",
+  "scene_required_anchor_catalog": [
+    "duel_circle_perimeter",
+    "long_swords"
+  ],
+  "scene_start_state": "Tension builds as characters face each other in the open plains.",
+  "scene_end_state": "Formal aggression is established as weapons are drawn for combat.",
+  "dominant_action_line": "Zad issues a formal challenge to John Carter using long-swords.",
+  "scene_spatial_layout": [
+    "Open expanse of duel_arena_open_plains",
+    "Defined duel circle area"
+  ],
+  "character_spatial_map": [
+    "zad positioned as dominant presence in the duel circle",
+    "john_carter positioned opposite zad within the circle",
+    "tars_tarkas and sarkoja observing from the perimeter"
+  ],
+  "environment_subzones": [
+    "duel_circle",
+    "plain_perimeter"
+  ],
+  "entry_vectors": [
+    "march_path_from_thark"
+  ],
+  "exit_vectors": [
+    "combat_engagement_zone"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: Challenge issued via eye contact and stance",
+    "BT002 -> BT003: Transition to physical weapon draw"
+  ],
+  "characters_required": [
+    {
+      "label": "John Carter",
+      "canonical_id": "john_carter",
+      "display_name": "john_carter",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH014/john_carter.md",
+      "notes": "Direct registry match for 'john_carter'."
+    },
+    {
+      "label": "Zad",
+      "canonical_id": "zad",
+      "display_name": "Zad",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH014/zad.md",
+      "notes": "Direct registry match for 'zad'."
+    },
+    {
+      "label": "Tars Tarkas",
+      "canonical_id": "tars_tarkas",
+      "display_name": "tars_tarkas",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH014/tars_tarkas.md",
+      "notes": "Direct registry match for 'tars_tarkas'."
+    },
+    {
+      "label": "Sarkoja",
+      "canonical_id": "sarkoja",
+      "display_name": "sarkoja",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH014/sarkoja.md",
+      "notes": "Direct registry match for 'sarkoja'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "Open Martian plains",
+      "canonical_id": "duel_arena_open_plains",
+      "display_name": "duel_arena_open_plains",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 102,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH014/duel_arena_open_plains.md",
+      "notes": "Chapter-local environment alias match for 'Open Martian plains' (key_overlap=2, label_overlap=3, context_overlap=4)."
+    }
+  ],
+  "continuity_constraints": [
+    "Weapon types must be long-swords",
+    "Precise positioning of the duel circle/area"
+  ],
+  "visual_coverage_families": [
+    "Low-angle shots of zad to emphasize power",
+    "Medium shots of weapon draw",
+    "Eye contact between combatants"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "Tension builds through eye contact",
+      "purpose": "",
+      "action_start": "characters facing each other",
+      "action_end": "eye contact lock",
+      "active_subjects": [
+        "zad",
+        "john_carter"
+      ],
+      "passive_subjects": [
+        "tars_tarkas",
+        "sarkoja"
+      ],
+      "spatial_context": "duel_circle",
+      "blocking_hint": "combatants centered in circle",
+      "environment_subzone": "duel_circle",
+      "continuity_focus": "positioning of duel circle",
+      "coverage_hint": "eye contact shots",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "Zad issues formal challenge via weapon draw",
+      "purpose": "",
+      "action_start": "eye contact lock",
+      "action_end": "long-sword drawn",
+      "active_subjects": [
+        "zad"
+      ],
+      "passive_subjects": [
+        "john_carter",
+        "tars_tarkas",
+        "sarkoja"
+      ],
+      "spatial_context": "duel_circle",
+      "blocking_hint": "zad draws sword from hip/scabbard",
+      "environment_subzone": "duel_circle",
+      "continuity_focus": "weapon type: long-sword",
+      "coverage_hint": "medium shots of weapon draw",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "Formal aggression established",
+      "purpose": "",
+      "action_start": "long-sword drawn",
+      "action_end": "combat stance ready",
+      "active_subjects": [
+        "john_carter",
+        "zad"
+      ],
+      "passive_subjects": [
+        "tars_tarkas",
+        "sarkoja"
+      ],
+      "spatial_context": "duel_circle",
+      "blocking_hint": "both combatants in fighting stances",
+      "environment_subzone": "duel_circle",
+      "continuity_focus": "long-sword usage",
+      "coverage_hint": "low angle of combatants",
+      "coverage_priority": "medium",
+      "handoff_to_next": "end_scene"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish tension",
+      "planned_shot_moment_summary": "zad stares down john_carter",
+      "primary_subject_seed": "zad",
+      "secondary_subjects_seed": [
+        "john_carter"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "duel_circle",
+      "planned_shot_required_anchor_1": "duel_circle_perimeter",
+      "planned_shot_scale_proof_detail": "zad height vs horizon",
+      "start_state_seed": "static tension",
+      "end_state_seed": "eye contact lock",
+      "action_seed": "staring contest",
+      "blocking_seed": [
+        "zad center",
+        "john_carter opposite"
+      ],
+      "shot_size": "medium_close",
+      "camera_angle": "low_angle",
+      "lens_family": "portrait",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front_three_quarter_right"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "formalize challenge",
+      "planned_shot_moment_summary": "zad draws long-sword",
+      "primary_subject_seed": "zad",
+      "secondary_subjects_seed": [
+        "john_carter"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "duel_circle",
+      "planned_shot_required_anchor_1": "long_swords",
+      "planned_shot_scale_proof_detail": "blade length vs character height",
+      "start_state_seed": "eye contact lock",
+      "end_state_seed": "weapon drawn",
+      "action_seed": "drawing sword",
+      "blocking_seed": [
+        "zad draws weapon"
+      ],
+      "shot_size": "medium",
+      "camera_angle": "eye_level",
+      "lens_family": "normal",
+      "camera_motion": "push_in",
+      "zoom_behavior": "subtle_in",
+      "focus_strategy": "rack_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "profile_left"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "escalate aggression",
+      "planned_shot_moment_summary": "john_carter responds to challenge",
+      "primary_subject_seed": "john_carter",
+      "secondary_subjects_seed": [
+        "zad"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "duel_circle",
+      "planned_shot_required_anchor_1": "long_swords",
+      "planned_shot_scale_proof_detail": "sword grip vs hand size",
+      "start_state_seed": "weapon drawn",
+      "end_state_seed": "combat stance",
+      "action_seed": "preparing for duel",
+      "blocking_seed": [
+        "john_carter shifts to combat stance"
+      ],
+      "shot_size": "medium_full",
+      "camera_angle": "eye_level",
+      "lens_family": "wide",
+      "camera_motion": "track",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front"
+    }
+  ],
+  "unresolved_questions": [],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH014",
+      "scene_id": "CH014_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH014",
+      "scene_id": "CH014_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH014",
+      "scene_id": "CH014_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH014",
+      "scene_id": "CH014_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH014",
+      "scene_id": "CH014_SC003"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH014",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\02_story_analysis\\chapter_analysis\\CH014_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH014",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH014_chapter_xiv.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH021",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH021_chapter_xxi.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH022",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH022_chapter_xxii.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH014",
+      "canonical_id": "john_carter"
+    }
+  ],
+  "evidence_summary": [
+    "[CH014_SC003] Purpose: Escalate the physical stakes through a formal challenge.",
+    "[CH014_SC003] Summary: Zad, a powerful *o mad* warrior, challenges John Carter to a formal duel using long-swords, setting the stage for the central action sequence.",
+    "[CH014_SC003] Emotional arc: Tension $\\rightarrow$ Formal aggression.",
+    "[CH014_SC003] Coverage: Low-angle shots of Zad to emphasize power; medium shots of the weapon draw; eye contact between combatants.",
+    "[CH014_SC003] Continuity: Weapon types (long-swords); positioning of the duel circle/area.",
+    "[CH014] Chapter summary: **Setting:** The Martian landscape during a march toward Thark; includes an incubator site for green Martian eggs and the open plains where a duel takes place. **Characters:** - **John Carter:** A human warrior strugg...",
+    "[CH014] CHAPTER XIV (book index hit)",
+    "[CH021] CHAPTER XXI (book index hit)",
+    "[CH022] CHAPTER XXII (book index hit)",
+    "Character john_carter: [source:C:/FilmCreator_MC/projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH011/john_carter.md] Physical Description: A human male from Earth (Virginia). He possesses the strength and physical capabiliti..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH014_SC003\n\n## Production Intent\nEstablish a formal challenge between Zad and John Carter to escalate physical stakes. The scene must emphasize the power disparity through low-angle framing of Zad and maintain strict continuity regarding long-sword usage and the defined duel circle within the open plains.\n\n## Required Cast\n- john_carter\n- zad\n- tars_tarkas\n- sarkoja\n\n## Required Environments\n- duel_arena_open_plains\n\n## Continuity Constraints\n- Weapon types must be long-swords\n- Precise positioning of the duel circle/area\n\n## Beat List\n- BT001: Tension builds through eye contact\n- BT002: Zad issues formal challenge via weapon draw\n- BT003: Formal aggression established",
+  "metadata": {
+    "artifact_id": "CH014_SC003_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "57e65f9dc1a6c232e40fe2c5aa9cbe9f3f9a0c60",
+    "created_at_utc": "2026-04-26T22:41:10.549794+00:00",
+    "updated_at_utc": "2026-04-26T22:41:10.549794+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH014_SC003",
+        "version": "df6a79b5d2a222805e4466818baf1b1d8e725f4f"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH014_SC003",
+        "version": "7aef3fd25edc81821be94ec54e54b76450e66932"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH014_SC003",
+        "version": "dca195d17cf0d47d8c233faf244a33f5c11af200"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-26T22:41:38.917045+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "57e65f9dc1a6c232e40fe2c5aa9cbe9f3f9a0c60"
+      }
+    ]
+  }
+}

@@ -1,0 +1,349 @@
+{
+  "scene_id": "CH013_SC001",
+  "chapter_id": "CH013",
+  "scene_title": "SC001",
+  "purpose": "To demonstrate John Carter's unique ability to master Martian beasts through empathy rather than force, establishing his specialized skill set.",
+  "summary": "Following the airship battle, Carter spends several days training with the \"thoats.\" While Tharks use brute strength, Carter uses a mix of authority and kindness. His success is so profound that he teaches Tars Tarkas and other warriors his methods, transforming the beasts into docile mounts.",
+  "emotional_arc": "From struggle/aggression to mastery/harmony.",
+  "production_intent": "Demonstrate John Carter's specialized skill of mastering Martian beasts through empathy and authority rather than the brute force used by Tharks. The sequence must visually transition from aggressive, wild animal behavior to calm, docile cooperation to validate his unique methodology.",
+  "scene_short_description": "A human man uses gentle authority to tame large, aggressive Martian beasts within a city complex.",
+  "scene_primary_scale_story_point": "Human scale vs massive beast scale; individual empathy vs collective brute force.",
+  "scene_required_anchor_catalog": [
+    "thoat harness/tack",
+    "training ground enclosure"
+  ],
+  "scene_start_state": "Chaotic movement of wild, aggressive thoats and struggling riders.",
+  "scene_end_state": "Calm, rhythmic movement of docile beasts under controlled command.",
+  "dominant_action_line": "Carter uses specific physical gestures and empathy to transform beast behavior.",
+  "scene_spatial_layout": [
+    "Open training arena within the city complex",
+    "Perimeter observation zones for warriors"
+  ],
+  "character_spatial_map": [
+    "john_carter centered with beasts",
+    "tars_tarkas positioned at mid-range observing",
+    "green_martian_warriors grouped at periphery"
+  ],
+  "environment_subzones": [
+    "training_arena",
+    "warrior_observation_deck"
+  ],
+  "entry_vectors": [
+    "arena_gate"
+  ],
+  "exit_vectors": [
+    "arena_gate"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: Transition from chaos to focused contact",
+    "BT002 -> BT003: Transition from individual mastery to group instruction"
+  ],
+  "characters_required": [
+    {
+      "label": "John Carter",
+      "canonical_id": "john_carter",
+      "display_name": "john_carter",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH013/john_carter.md",
+      "notes": "Direct registry match for 'john_carter'."
+    },
+    {
+      "label": "Tars Tarkas",
+      "canonical_id": "tars_tarkas",
+      "display_name": "tars_tarkas",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH013/tars_tarkas.md",
+      "notes": "Direct registry match for 'tars_tarkas'."
+    },
+    {
+      "label": "Green Martian Warriors",
+      "canonical_id": "green_martian_warriors",
+      "display_name": "green_martian_warriors",
+      "status": "canonical",
+      "entity_kind": "group",
+      "resolution_score": 110,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH008/green_martian_warriors.md",
+      "notes": "Direct registry match for 'green_martian_warriors'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "The training grounds/stables within the Green Martian city",
+      "canonical_id": "green_martian_city_complex",
+      "display_name": "green_martian_city_complex",
+      "status": "resolved_into",
+      "entity_kind": "city",
+      "resolution_score": 146,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH013/green_martian_city_complex.md",
+      "notes": "Chapter-local environment alias match for 'The training grounds/stables within the Green Martian city' (key_overlap=3, label_overlap=5, context_overlap=4)."
+    }
+  ],
+  "continuity_constraints": [
+    "Physical behavior shift of thoats from wild to docile",
+    "Carter's training attire consistency",
+    "Specific hand/body movements used in taming process"
+  ],
+  "visual_coverage_families": [
+    "Wide shots of beasts and riders",
+    "Close-ups of hands and facial expressions",
+    "Medium shots of Tars Tarkas observing",
+    "Low-angle shots of thoats"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "Chaos of the wild thoats",
+      "purpose": "",
+      "action_start": "beasts thrashing and resisting [[CH013_SC001]]",
+      "action_end": "Carter enters the fray",
+      "active_subjects": [
+        "thoat",
+        "green_martian_warriors"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "training_arena",
+      "blocking_hint": "Warriors struggling at perimeter; beasts central",
+      "environment_subzone": "training_arena",
+      "continuity_focus": "Beast aggression levels",
+      "coverage_hint": "Wide shots of beasts and riders",
+      "coverage_priority": "high",
+      "handoff_to_next": "Carter approaches a beast"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "The taming process",
+      "purpose": "",
+      "action_start": "Carter uses empathy/authority [[CH013_SC001]]",
+      "action_end": "Beast becomes docile",
+      "active_subjects": [
+        "john_carter",
+        "thoat"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "training_arena",
+      "blocking_hint": "Carter close to beast head/neck",
+      "environment_subzone": "training_arena",
+      "continuity_focus": "Specific hand movements and Carter's attire [[CH013_SC001]]",
+      "coverage_hint": "Close-ups of hands and facial expressions",
+      "coverage_priority": "high",
+      "handoff_to_next": "Carter demonstrates to others"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "Teaching the warriors",
+      "purpose": "",
+      "action_start": "Tars Tarkas observes [[CH013_SC001]]",
+      "action_end": "Warriors adopt the method",
+      "active_subjects": [
+        "john_carter",
+        "tars_tarkas",
+        "green_martian_warriors"
+      ],
+      "passive_subjects": [
+        "thoat"
+      ],
+      "spatial_context": "training_arena and observation deck",
+      "blocking_hint": "Carter in center; Tars Tarkas and warriors watching from edge",
+      "environment_subzone": "training_arena",
+      "continuity_focus": "Transition of beasts to docile mounts [[CH013_SC001]]",
+      "coverage_hint": "Medium shots of Tars Tarkas observing",
+      "coverage_priority": "medium",
+      "handoff_to_next": "none"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish conflict",
+      "planned_shot_moment_summary": "wild thoats thrashing in the arena",
+      "primary_subject_seed": "thoat",
+      "secondary_subjects_seed": [
+        "green_martian_warriors"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "training_arena",
+      "planned_shot_required_anchor_1": "training_ground_enclosure",
+      "planned_shot_scale_proof_detail": "thoat height vs warrior height",
+      "start_state_seed": "beast lunging",
+      "end_state_seed": "beast rearing",
+      "action_seed": "thrashing",
+      "blocking_seed": [
+        "scattered in arena"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "low_angle",
+      "lens_family": "wide",
+      "camera_motion": "handheld",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front_three_quarter_left"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "demonstrate method",
+      "planned_shot_moment_summary": "Carter's hands and face during taming",
+      "primary_subject_seed": "john_carter",
+      "secondary_subjects_seed": [
+        "thoat"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "training_arena",
+      "planned_shot_required_anchor_1": "thoat harness/tack",
+      "planned_shot_scale_proof_detail": "hand size vs beast hide",
+      "start_state_seed": "reaching out",
+      "end_state_seed": "beast calming",
+      "action_seed": "gentle touch and authoritative gaze",
+      "blocking_seed": [
+        "close to beast head"
+      ],
+      "shot_size": "close_up",
+      "camera_angle": "eye_level",
+      "lens_family": "portrait",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "subtle_in",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "soft_even",
+      "primary_subject_angle": "profile_right"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "establish impact",
+      "planned_shot_moment_summary": "Tars Tarkas watching the success",
+      "primary_subject_seed": "tars_tarkas",
+      "secondary_subjects_seed": [
+        "john_carter"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "warrior_observation_deck",
+      "planned_shot_required_anchor_1": "warrior_observation_deck",
+      "planned_shot_scale_proof_detail": "observer distance to arena",
+      "start_state_seed": "observing intently",
+      "end_state_seed": "nodding in approval",
+      "action_seed": "watching and learning",
+      "blocking_seed": [
+        "standing at edge of deck"
+      ],
+      "shot_size": "medium",
+      "camera_angle": "eye_level",
+      "lens_family": "normal",
+      "camera_motion": "pan",
+      "zoom_behavior": "none",
+      "focus_strategy": "rack_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front_three_quarter_left"
+    }
+  ],
+  "unresolved_questions": [
+    "Resolve The training grounds/stables within the Green Martian city -> green_martian_city_complex"
+  ],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH013",
+      "scene_id": "CH013_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH013",
+      "scene_id": "CH013_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH013",
+      "scene_id": "CH013_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH013",
+      "scene_id": "CH013_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH013",
+      "scene_id": "CH013_SC001"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH013",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\02_story_analysis\\chapter_analysis\\CH013_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH013",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH013_chapter_xiii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH021",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH021_chapter_xxi.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH010",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH010_chapter_x.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH013",
+      "canonical_id": "john_carter"
+    }
+  ],
+  "evidence_summary": [
+    "[CH013_SC001] Purpose: To demonstrate John Carter's unique ability to master Martian beasts through empathy rather than force, establishing his specialized skill set.",
+    "[CH013_SC001] Summary: Following the airship battle, Carter spends several days training with the \"thoats.\" While Tharks use brute strength, Carter uses a mix of authority and kindness. His success is so profound that he teaches Tars Tarkas and other warrio...",
+    "[CH013_SC001] Emotional arc: From struggle/aggression to mastery/harmony.",
+    "[CH013_SC001] Coverage: Wide shots of the beasts and riders. Close-ups of Carter's hands and facial expressions (the \"kindness\" aspect). Medium shots of Tars Tarkas observing and learning. Low-angle shots of the thoats to emphasize their size/viciousness.",
+    "[CH013_SC001] Continuity: The physical behavior of the thoats (from wild to docile); Carter's attire during training; the specific movements used in the taming process.",
+    "[CH013] Chapter summary: **Setting:** The city of the green Martian horde (under Lorquas Ptomel) and its surrounding plazas; the Martian night under two moons. **Characters:** * **John Carter:** An Earthman who has integrated into Thark cultu...",
+    "[CH013] CHAPTER XIII (book index hit)",
+    "[CH021] CHAPTER XXI (book index hit)",
+    "[CH010] CHAPTER X (book index hit)",
+    "Character john_carter: [source:C:/FilmCreator_MC/projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH011/john_carter.md] Physical Description: A human male from Earth (Virginia). He possesses the strength and physical capabiliti..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH013_SC001\n\n## Production Intent\nDemonstrate John Carter's specialized skill of mastering Martian beasts through empathy and authority rather than brute force. The sequence must visually transition from aggressive, wild animal behavior to calm, docile cooperation to validate his unique methodology.\n\n## Required Cast\n- john_carter\n- tars_tarkas\n- green_martian_warriors\n\n## Required Environments\n- green_martian_city_complex (training_arena, warrior_observation_deck)\n\n## Continuity Constraints\n- Physical behavior shift of thoats from wild to docile\n- Carter's training attire consistency\n- Specific hand/body movements used in taming process\n\n## Beat List\n- BT001: Chaos of the wild thoats\n- BT002: The taming process (empathy vs force)\n- BT003: Teaching the warriors and Tars Tarkas",
+  "metadata": {
+    "artifact_id": "CH013_SC001_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "fcae0a50b9fb9e555c51cc6bf729f686a5159da2",
+    "created_at_utc": "2026-04-26T22:38:02.277018+00:00",
+    "updated_at_utc": "2026-04-26T22:38:02.277018+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH013_SC001",
+        "version": "3878185b404bc5ee70d3345a8af67dadcfe7c482"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH013_SC001",
+        "version": "5b6c3167c251d46ef205eec0d6398ef8495ad904"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH013_SC001",
+        "version": "826ec7a5c070489dfefed2c6edde40836d0d27f1"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-26T22:38:33.975216+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "fcae0a50b9fb9e555c51cc6bf729f686a5159da2"
+      }
+    ]
+  }
+}

@@ -1,0 +1,349 @@
+{
+  "scene_id": "CH010_SC006",
+  "chapter_id": "CH010",
+  "scene_title": "SC006",
+  "purpose": "Conclude the chapter with a movement toward a new objective.",
+  "summary": "Now recognized as a conqueror and chieftain, Carter escorts Dejah Thoris out of the audience chamber, accompanied by Woola.",
+  "emotional_arc": "From tension to a sense of protective purpose/movement.",
+  "production_intent": "Establish the new status of john_carter as a chieftain and protector through a decisive exit from the audience chamber. The movement must feel purposeful, transitioning the characters from the political tension of the Thark court into an active mission phase.",
+  "scene_short_description": "A group consisting of a man, a woman, and a creature exits a massive ceremonial hall.",
+  "scene_primary_scale_story_point": "Massive scale of the Thark audience chamber relative to the departing trio.",
+  "scene_required_anchor_catalog": [
+    "thark_audience_chamber exit threshold",
+    "hallway corridor walls"
+  ],
+  "scene_start_state": "john_carter, dejah_thoris, and woola positioned within the thark_audience_chamber.",
+  "scene_end_state": "The group moving away from the camera into the hallways.",
+  "dominant_action_line": "Escorting and departing the audience chamber toward a new objective.",
+  "scene_spatial_layout": [
+    "Large open floor of the audience chamber leading to narrow hallway transitions",
+    "Linear movement path through architectural thresholds"
+  ],
+  "character_spatial_map": [
+    "john_carter positioned between dejah_thoris and woola",
+    "dejah_thoris walking in close proximity to john_carter",
+    "woola following closely behind or flanking the pair"
+  ],
+  "environment_subzones": [
+    "thark_audience_chamber main floor",
+    "thark_audience_chamber exit threshold",
+    "thark_audience_chamber hallways"
+  ],
+  "entry_vectors": [
+    "internal chamber movement"
+  ],
+  "exit_vectors": [
+    "hallway corridor path"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: Exit from chamber to threshold",
+    "BT002 -> BT003: Transition into hallway movement"
+  ],
+  "characters_required": [
+    {
+      "label": "John Carter",
+      "canonical_id": "john_carter",
+      "display_name": "john_carter",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH010/john_carter.md",
+      "notes": "Direct registry match for 'john_carter'."
+    },
+    {
+      "label": "Dejah Thoris",
+      "canonical_id": "dejah_thoris",
+      "display_name": "dejah_thoris",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH010/dejah_thoris.md",
+      "notes": "Direct registry match for 'dejah_thoris'."
+    },
+    {
+      "label": "Woola",
+      "canonical_id": "woola",
+      "display_name": "woola",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH010/woola.md",
+      "notes": "Direct registry match for 'woola'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "The Thark Audience Chamber / Hallways",
+      "canonical_id": "thark_audience_chamber",
+      "display_name": "thark_audience_chamber",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 124,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH012/thark_audience_chamber.md",
+      "notes": "Direct registry match for 'thark_audience_chamber'."
+    }
+  ],
+  "continuity_constraints": [
+    "Tight grouping of john_carter, dejah_thoris, and woola",
+    "Consistent character spacing during movement through hallways"
+  ],
+  "visual_coverage_families": [
+    "Tracking shots following the group exit",
+    "Wide shots establishing scale of chamber and city"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "Group turns to depart the chamber",
+      "purpose": "",
+      "action_start": "characters standing in audience chamber",
+      "action_end": "characters facing exit",
+      "active_subjects": [
+        "john_carter",
+        "dejah_thoris"
+      ],
+      "passive_subjects": [
+        "woola"
+      ],
+      "spatial_context": "thark_audience_chamber main floor",
+      "blocking_hint": "group clustered near center of hall",
+      "environment_subzone": "thark_audience_chamber main floor",
+      "continuity_focus": "tight grouping of trio",
+      "coverage_hint": "wide shot showing scale",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "Crossing the threshold",
+      "purpose": "",
+      "action_start": "walking toward exit",
+      "action_end": "passing through doorway",
+      "active_subjects": [
+        "john_carter",
+        "dejah_thoris",
+        "woola"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "exit threshold",
+      "blocking_hint": "linear procession through archway",
+      "environment_subzone": "thark_audience_chamber exit threshold",
+      "continuity_focus": "maintain spacing between Carter and Thoris",
+      "coverage_hint": "tracking shot",
+      "coverage_priority": "medium",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "Movement into the hallways",
+      "purpose": "",
+      "action_start": "entering hallway [[ ]] action_end=receding into distance",
+      "action_end": "",
+      "active_subjects": [
+        "john_carter",
+        "dejah_thoris",
+        "woola"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "hallways",
+      "blocking_hint": "walking away from camera down corridor",
+      "environment_subzone": "thark_audience_chamber hallways",
+      "continuity_focus": "grouping remains intact",
+      "coverage_hint": "wide tracking shot",
+      "coverage_priority": "medium",
+      "handoff_to_next": "end_of_scene"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish status and scale",
+      "planned_shot_moment_summary": "the group begins to turn away from the throne area",
+      "primary_subject_seed": "john_carter",
+      "secondary_subjects_seed": [
+        "dejah_thoris",
+        "woola"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "thark_audience_chamber main floor",
+      "planned_shot_required_anchor_1": "thark_audience_chamber exit threshold",
+      "planned_shot_scale_proof_detail": "height of chamber walls vs character height",
+      "start_state_seed": "characters standing in tension",
+      "end_state_seed": "characters turning to walk",
+      "action_seed": "turning and initiating movement",
+      "blocking_seed": [
+        "group clustered near center"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "low_angle",
+      "lens_family": "wide",
+      "camera_motion": "pull_back",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "high_contrast_ceremonial",
+      "primary_subject_angle": "front_three_quarter_right"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "track movement and continuity",
+      "planned_shot_moment_summary": "the group crosses the threshold",
+      "primary_subject_seed": "john_carter",
+      "secondary_subjects_seed": [
+        "dejah_thoris",
+        "woola"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "thark_audience_chamber exit threshold",
+      "planned_shot_required_anchor_1": "thark_audience_chamber exit threshold",
+      "planned_shot_scale_proof_detail": "doorway/arch width vs group width",
+      "start_state_seed": "group approaching threshold",
+      "end_state_seed": "group passing through",
+      "action_seed": "walking in formation",
+      "blocking_seed": [
+        "linear procession"
+      ],
+      "shot_size": "full",
+      "camera_angle": "eye_level",
+      "lens_family": "normal",
+      "camera_motion": "track",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "profile_left"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "conclude chapter with scale",
+      "planned_shot_moment_summary": "the group recedes into the distance of the hallway",
+      "primary_subject_seed": "dejah_thoris",
+      "secondary_subjects_seed": [
+        "john_carter",
+        "woola"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "thark_audience_chamber hallways",
+      "planned_shot_required_anchor_1": "hallway corridor walls",
+      "planned_shot_scale_proof_detail": "length of hallway vs character size",
+      "start_state_seed": "group entering hallway",
+      "end_state_seed": "group moving into distance",
+      "action_seed": "walking away from camera",
+      "blocking_seed": [
+        "receding line"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "eye_level",
+      "lens_family": "ultra_wide",
+      "camera_motion": "track",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "low_key_night",
+      "primary_subject_angle": "back"
+    }
+  ],
+  "unresolved_questions": [],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH010",
+      "scene_id": "CH010_SC006"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH010",
+      "scene_id": "CH010_SC006"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH010",
+      "scene_id": "CH010_SC006"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH010",
+      "scene_id": "CH010_SC006"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH010",
+      "scene_id": "CH010_SC006"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH010",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\02_story_analysis\\chapter_analysis\\CH010_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH010",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH010_chapter_x.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH011",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH011_chapter_xi.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH022",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH022_chapter_xxii.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH010",
+      "canonical_id": "john_carter"
+    }
+  ],
+  "evidence_summary": [
+    "[CH010_SC006] Purpose: Conclude the chapter with a movement toward a new objective.",
+    "[CH010_SC006] Summary: Now recognized as a conqueror and chieftain, Carter escorts Dejah Thoris out of the audience chamber, accompanied by Woola.",
+    "[CH010_SC006] Emotional arc: From tension to a sense of protective purpose/movement.",
+    "[CH010_SC006] Coverage: Tracking shots following the group as they exit; wide shots showing the scale of the city/chamber as they depart.",
+    "[CH010_SC006] Continuity: The grouping of Carter, Dejah, and Woola.",
+    "[CH010] Chapter summary: **Setting:** The city of the Tharks (Green Men) and the audience chamber of Lorquas Ptomel. **Characters:** - **John Carter:** An Earthman from Virginia, now possessing the status of a Martian chieftain through combat...",
+    "[CH010] CHAPTER X (book index hit)",
+    "[CH011] CHAPTER XI (book index hit)",
+    "[CH022] CHAPTER XXII (book index hit)",
+    "Character john_carter: [source:C:/FilmCreator_MC/projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH011/john_carter.md] Physical Description: A human male from Earth (Virginia). He possesses the strength and physical capabiliti..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH010_SC006\n\n## Production Intent\nEstablish the new status of john_carter as a chieftain and protector through a decisive exit from the audience chamber. The movement must feel purposeful, transitioning the characters from the political tension of the Thark court into an active mission phase.\n\n## Required Cast\n- john_carter\n- dejah_thoris\n- woola\n\n## Required Environments\n- thark_audience_chamber\n\n## Continuity Constraints\n- Tight grouping of john_carter, dejah_thoris, and woola\n- Consistent character spacing during movement through hallways\n\n## Beat List\n- BT001: Group turns to depart the chamber\n- BT002: Crossing the threshold\n- BT003: Movement into the hallways",
+  "metadata": {
+    "artifact_id": "CH010_SC006_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "d3b1d4e6e231a62de463d87daee81a57a2ab5815",
+    "created_at_utc": "2026-04-26T22:33:59.988935+00:00",
+    "updated_at_utc": "2026-04-26T22:33:59.988935+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH010_SC006",
+        "version": "ee10cd7768ad986f1bcf6892b05815ab945c9415"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH010_SC006",
+        "version": "e82beb5b7f9c72f9b8438ad0cb30df9e20e09146"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH010_SC006",
+        "version": "35c08c30209dcec1c2ff5dd1fec7ae95005a9e7b"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-26T22:34:30.297382+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "d3b1d4e6e231a62de463d87daee81a57a2ab5815"
+      }
+    ]
+  }
+}

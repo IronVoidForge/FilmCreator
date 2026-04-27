@@ -1,0 +1,335 @@
+{
+  "scene_id": "CH017_SC004",
+  "chapter_id": "CH017",
+  "scene_title": "SC004",
+  "purpose": "To conclude the chapter with a high-stakes defeat and a cliffhanger.",
+  "summary": "The narrator attempts a desperate defense against an overwhelming force of Thark warriors. He is eventually overwhelmed and beaten into unconsciousness.",
+  "emotional_arc": "Defiance $\\rightarrow$ Brutal Defeat/Blackout.",
+  "production_intent": "A high-intensity combat sequence where a lone defender is systematically overwhelmed by multiple attackers in an open, desolate landscape. The scene must transition from active resistance to total physical collapse and sensory blackout.",
+  "scene_short_description": "A lone figure defends against a swarm of warriors across vast green mossy plains.",
+  "scene_primary_scale_story_point": "One individual vs. an overwhelming force of multiple combatants.",
+  "scene_required_anchor_catalog": [
+    "Narrator's rifle",
+    "Mossy ground texture"
+  ],
+  "scene_start_state": "The Narrator stands alone in the open, weapon raised, facing approaching threats.",
+  "scene_end_state": "Total darkness/blackout following a physical beating.",
+  "dominant_action_line": "Desperate defense followed by being overwhelmed and beaten unconscious.",
+  "scene_spatial_layout": [
+    "Vast, trackless expanse of mossy plains",
+    "Open terrain with no landmarks for cover"
+  ],
+  "character_spatial_map": [
+    "The Narrator centered in the open space",
+    "Thark Warriors closing in from multiple vectors"
+  ],
+  "environment_subzones": [
+    "mossy_waste_open_expanse"
+  ],
+  "entry_vectors": [
+    "Thark Warrior approach paths (multi-directional)"
+  ],
+  "exit_vectors": [
+    "None (scene ends in blackout)"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: Escalation of combat intensity",
+    "BT002 -> BT003: Transition from active fighting to physical collapse"
+  ],
+  "characters_required": [
+    {
+      "label": "The Narrator",
+      "canonical_id": null,
+      "display_name": "The Narrator",
+      "status": "unresolved",
+      "entity_kind": "",
+      "resolution_score": null,
+      "source_path": "",
+      "notes": "No character candidate found."
+    },
+    {
+      "label": "Thark Warriors",
+      "canonical_id": null,
+      "display_name": "Thark Warriors",
+      "status": "review",
+      "entity_kind": "individual",
+      "resolution_score": 10,
+      "source_path": "",
+      "notes": "Low-confidence character match requires review."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "The Mossy Waste (open terrain)",
+      "canonical_id": "mossy_waste",
+      "display_name": "mossy_waste",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH017/mossy_waste.md",
+      "notes": "Direct registry match for 'mossy_waste'."
+    }
+  ],
+  "continuity_constraints": [
+    "Exact count of Thark Warriors appearing in waves",
+    "Physical damage state of the Narrator's rifle and equipment"
+  ],
+  "visual_coverage_families": [
+    "Chaotic close-quarters combat shots",
+    "Shaky cam violence simulation",
+    "Fade to black blackout"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "Desperate defense begins",
+      "purpose": "",
+      "action_start": "Narrator raising rifle",
+      "action_end": "First Thark warrior engages",
+      "active_subjects": [
+        "The Narrator",
+        "Thark Warriors"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "mossy_waste_open_expanse",
+      "blocking_hint": "Narrator stands isolated against approaching lines",
+      "environment_subzone": "mossy_waste_open_expanse",
+      "continuity_focus": "Rifle condition/ammo status",
+      "coverage_hint": "Wide shots of scale",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "The melee intensifies",
+      "purpose": "",
+      "action_start": "Close combat contact",
+      "action_end": "Narrator is surrounded and losing ground",
+      "active_subjects": [
+        "The Narrator",
+        "Thark Warriors"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "mossy_waste_open_expanse",
+      "blocking_hint": "Chaotic movement in a tight circle around the subject",
+      "environment_subzone": "mossy_waste_open_expanse",
+      "continuity_focus": "Warrior count/equipment damage",
+      "coverage_hint": "Shaky cam, close-quarters",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "Brutal defeat and blackout",
+      "purpose": "",
+      "action_start": "Narrator hit/falling",
+      "action_end": "Total darkness",
+      "active_subjects": [
+        "The Narrator",
+        "Thark Warriors"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "mossy_waste_open_expanse",
+      "blocking_hint": "Subject collapses into the moss under weight of attackers",
+      "environment_subzone": "mossy_waste_open_expanse",
+      "continuity_focus": "Physical state of narrator (unconscious)",
+      "coverage_hint": "Tight close-ups, fade to black",
+      "coverage_priority": "medium",
+      "handoff_to_next": "END"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish_threat",
+      "planned_shot_moment_summary": "Narrator spots the approaching Thark force",
+      "primary_subject_seed": "The Narrator",
+      "secondary_subjects_seed": [
+        "Thark Warriors"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "mossy_waste_open_expanse",
+      "planned_shot_required_anchor_1": "Narrator's rifle",
+      "planned_shot_scale_proof_detail": "vastness of mossy plains vs single man",
+      "start_state_seed": "Narrator scanning horizon",
+      "end_state_seed": "First warrior enters frame",
+      "action_seed": "Scanning/Bracing",
+      "blocking_seed": [
+        "Narrator center",
+        "warriors distant"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "eye_level",
+      "lens_family": "wide",
+      "camera_motion": "pan",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front_three_quarter_right"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "combat_chaos",
+      "planned_shot_moment_summary": "The melee begins and intensifies",
+      "primary_subject_seed": "The Narrator",
+      "secondary_subjects_seed": [
+        "Thark Warriors"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "mossy_waste_open_expanse",
+      "planned_shot_required_anchor_1": "Narrator's rifle",
+      "planned_shot_scale_proof_detail": "number of warriors surrounding subject",
+      "start_state_seed": "First strike landed",
+      "end_state_seed": "Narrator losing footing",
+      "action_seed": "Fighting/Struggling",
+      "blocking_seed": [
+        "Tight cluster of bodies in moss"
+      ],
+      "shot_size": "medium_close",
+      "camera_angle": "dutch",
+      "lens_family": "normal",
+      "camera_motion": "handheld",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "high_contrast_ceremonial",
+      "primary_subject_angle": "profile_left"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "defeat_blackout",
+      "planned_shot_moment_summary": "The final beating and loss of consciousness",
+      "primary_subject_seed": "The Narrator",
+      "secondary_subjects_seed": [
+        "Thark Warriors"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "mossy_waste_open_expanse",
+      "planned_shot_required_anchor_1": "Mossy ground texture",
+      "planned_shot_scale_proof_detail": "Narrator being pressed into the moss",
+      "start_state_seed": "Narrator falling to knees",
+      "end_state_seed": "Fade to black",
+      "action_seed": "Being beaten/Collapsing",
+      "blocking_seed": [
+        "Subject on ground",
+        "warriors looming over"
+      ],
+      "shot_size": "close_up",
+      "camera_angle": "low_angle",
+      "lens_family": "portrait",
+      "camera_motion": "handheld",
+      "zoom_behavior": "subtle_in",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "low_key_night",
+      "primary_subject_angle": "front"
+    }
+  ],
+  "unresolved_questions": [
+    "Resolve The Narrator -> The Narrator",
+    "Resolve Thark Warriors -> Thark Warriors"
+  ],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH017",
+      "scene_id": "CH017_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH017",
+      "scene_id": "CH017_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH017",
+      "scene_id": "CH017_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH017",
+      "scene_id": "CH017_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH017",
+      "scene_id": "CH017_SC004"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH017",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\02_story_analysis\\chapter_analysis\\CH017_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH003",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH003_chapter_iii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH008",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH008_chapter_viii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH026",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH026_chapter_xxvi.md"
+    },
+    {
+      "source": "environment_bible",
+      "chapter_id": "CH017",
+      "canonical_id": "mossy_waste"
+    }
+  ],
+  "evidence_summary": [
+    "[CH017_SC004] Purpose: To conclude the chapter with a high-stakes defeat and a cliffhanger.",
+    "[CH017_SC004] Summary: The narrator attempts a desperate defense against an overwhelming force of Thark warriors. He is eventually overwhelmed and beaten into unconsciousness.",
+    "[CH017_SC004] Emotional arc: Defiance $\\rightarrow$ Brutal Defeat/Blackout.",
+    "[CH017_SC004] Coverage: Chaotic, close-quarters combat shots. Shaky cam to simulate the violence of the beating. Fade to black as the narrator loses consciousness.",
+    "[CH017_SC004] Continuity: The number of warriors appearing; the physical state of the narrator's rifle/equipment.",
+    "[CH017] Chapter summary: **Events:** The narrator infiltrates the city of Thark to rescue Dejah Thoris from the clutches of the Thark Jeddak, Tal Hajus. After witnessing Tal Hajus's cruel intentions and his plan to torture the Princess, the n...",
+    "[CH003] CHAPTER III (book index hit)",
+    "[CH008] CHAPTER VIII (book index hit)",
+    "[CH026] CHAPTER XXVI (book index hit)",
+    "Environment mossy_waste: A vast, trackless expanse of Martian plains characterized by thick green moss coverage. The terrain is desolate and open, presenting an endless landscape of mossy plains with a lack of visible landmarks."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH017_SC004\n\n## Production Intent\nA high-intensity combat sequence where a lone defender is systematically overwhelmed by multiple attackers in an open, desolate landscape. The scene must transition from active resistance to total physical collapse and sensory blackout.\n\n## Required Cast\n- The Narrator\n- Thark Warriors (Multiple)\n\n## Required Environments\n- mossy_waste (vast, trackless expanse of green mossy plains)\n\n## Continuity Constraints\n- Exact count of Thark Warriors appearing in waves\n- Physical damage state of the Narrator's rifle and equipment\n\n## Beat List\n- BT001: Desperate defense begins\n- BT002: The melee intensifies\n- BT003: Brutal defeat and blackout",
+  "metadata": {
+    "artifact_id": "CH017_SC004_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "3f8591733df8516069dbe94954e697576346671f",
+    "created_at_utc": "2026-04-26T22:47:47.261188+00:00",
+    "updated_at_utc": "2026-04-26T22:47:47.261188+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH017_SC004",
+        "version": "e9f15e795bb8359d21790197a8fe450c6a59f4a6"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH017_SC004",
+        "version": "2fb6032a7000d166b9c6efd5a5f52d8c7fdb4395"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH017_SC004",
+        "version": "1026db00e756825b230aed962553ed3d1bef0a98"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-26T22:48:16.767119+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "3f8591733df8516069dbe94954e697576346671f"
+      }
+    ]
+  }
+}

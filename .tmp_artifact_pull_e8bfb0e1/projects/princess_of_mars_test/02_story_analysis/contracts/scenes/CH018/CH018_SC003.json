@@ -1,0 +1,339 @@
+{
+  "scene_id": "CH018_SC003",
+  "chapter_id": "CH018",
+  "scene_title": "SC003",
+  "purpose": "To show the scale of the threat and transition the protagonist to a new location.",
+  "summary": "The massive Warhoon horde, numbering ten thousand, begins their retreat toward the city of Warhoon following the duel.",
+  "emotional_arc": "Momentum/Inevitability.",
+  "production_intent": "Establish the massive scale of ten thousand Warhoon warriors moving across the Martian plains. The sequence must visually communicate a sense of unstoppable momentum as the horde transitions from the open plains toward the city and eventually into the subterranean darkness.",
+  "scene_short_description": "A massive horde of ten thousand warriors marches across open plains toward a city.",
+  "scene_primary_scale_story_point": "Ten thousand individual warrior units forming a singular moving mass.",
+  "scene_required_anchor_catalog": [
+    "martian_plains_march_route",
+    "warhoon_subterranean_dungeon"
+  ],
+  "scene_start_state": "The horde is dispersed across the Martian plains following a duel.",
+  "scene_end_state": "The horde enters the pitch-black subterranean dungeon of Warhoon.",
+  "dominant_action_line": "The massed retreat and march of the Warhoon warriors toward their city.",
+  "scene_spatial_layout": [
+    "Open expanse of martian_plains_march_route",
+    "Transition into warhoon_subterranean_dungeon"
+  ],
+  "character_spatial_map": [
+    "dak_kova leading at the head of the column",
+    "Warhoon Warriors filling the landscape in massed ranks"
+  ],
+  "environment_subzones": [
+    "martian_plains_march_route",
+    "warhoon_subterranean_dungeon"
+  ],
+  "entry_vectors": [
+    "march path from plains to city gates"
+  ],
+  "exit_vectors": [
+    "descent into subterranean dungeon"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: Transition from wide scale to movement momentum",
+    "BT002 -> BT003: Transition from open light to subterranean darkness"
+  ],
+  "characters_required": [
+    {
+      "label": "Dak Kova (leading)",
+      "canonical_id": "dak_kova",
+      "display_name": "dak_kova",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH018/dak_kova.md",
+      "notes": "Direct registry match for 'dak_kova'."
+    },
+    {
+      "label": "Warhoon Warriors",
+      "canonical_id": null,
+      "display_name": "Warhoon Warriors",
+      "status": "review",
+      "entity_kind": "individual",
+      "resolution_score": 10,
+      "source_path": "",
+      "notes": "Low-confidence character match requires review."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "Martian plains",
+      "canonical_id": "martian_plains_march_route",
+      "display_name": "martian_plains_march_route",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 104,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH018/martian_plains_march_route.md",
+      "notes": "Chapter-local environment alias match for 'Martian plains' (key_overlap=2, label_overlap=2, context_overlap=4)."
+    },
+    {
+      "label": "approaching the city of Warhoon",
+      "canonical_id": "warhoon_subterranean_dungeon",
+      "display_name": "warhoon_subterranean_dungeon",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 68,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH018/warhoon_subterranean_dungeon.md",
+      "notes": "Chapter-local environment alias match for 'approaching the city of Warhoon' (key_overlap=1, label_overlap=2, context_overlap=4)."
+    }
+  ],
+  "continuity_constraints": [
+    "Consistent direction of travel toward Warhoon city",
+    "Lighting transition from open Martian plains to subterranean darkness"
+  ],
+  "visual_coverage_families": [
+    "Extreme wide shots (aerial or high angle) for horde scale",
+    "Tracking shots following the march"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "The massive horde begins their retreat across the plains",
+      "purpose": "",
+      "action_start": "horde dispersed post-duel",
+      "action_end": "horde forming a cohesive march",
+      "active_subjects": [
+        "Warhoon Warriors"
+      ],
+      "passive_subjects": [
+        "dak_kova"
+      ],
+      "spatial_context": "martian_plains_march_route",
+      "blocking_hint": "massed ranks spreading across horizon",
+      "environment_subzone": "martian_plains_march_route",
+      "continuity_focus": "direction of travel toward city",
+      "coverage_hint": "extreme wide aerial",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "The march gains momentum under Dak Kova's leadership",
+      "purpose": "",
+      "action_start": "dak_kova begins leading the column",
+      "action_end": "the massed movement is rhythmic and inevitable",
+      "active_subjects": [
+        "dak_kova",
+        "Warhoon Warriors"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "martian_plains_march_route",
+      "blocking_hint": "dak_kova at head of column",
+      "environment_subzone": "martian_plains_march_route",
+      "continuity_focus": "consistent march pace",
+      "coverage_hint": "tracking shots",
+      "coverage_priority": "medium",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "The horde transitions into the city and dungeon",
+      "purpose": "",
+      "action_start": "approaching city gates",
+      "action_end": "entering pitch-black subterranean space",
+      "active_subjects": [
+        "Warhoon Warriors",
+        "dak_kova"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "warhoon_subterranean_dungeon",
+      "blocking_hint": "moving from light into shadow",
+      "environment_subzone": "warhoon_subterranean_dungeon",
+      "continuity_focus": "lighting shift from plains to dark dungeon",
+      "coverage_hint": "wide tracking/push-in",
+      "coverage_priority": "high",
+      "handoff_to_next": "end_of_scene"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish scale",
+      "planned_shot_moment_summary": "The massive horde is visible across the Martian plains",
+      "primary_subject_seed": "Warhoon Warriors",
+      "secondary_subjects_seed": [
+        "dak_kova"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "martian_plains_march_route",
+      "planned_shot_required_anchor_1": "martian_plains_march_route",
+      "planned_shot_scale_proof_detail": "ten thousand warriors",
+      "start_state_seed": "wide view of plains",
+      "end_state_seed": "horde movement established",
+      "action_seed": "marching",
+      "blocking_seed": [
+        "massed ranks across horizon"
+      ],
+      "shot_size": "extreme_wide",
+      "camera_angle": "high_angle",
+      "lens_family": "ultra_wide",
+      "camera_motion": "crane",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front_three_quarter_right"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "show leadership and momentum",
+      "planned_shot_moment_summary": "Dak Kova leads the march through the ranks",
+      "primary_subject_seed": "dak_kova",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "martian_plains_march_route",
+      "planned_shot_required_anchor_1": "dak_kova",
+      "planned_shot_scale_proof_detail": "warrior density",
+      "start_state_seed": "tracking dak_kova",
+      "end_state_seed": "dak_kova moving forward",
+      "action_seed": "marching",
+      "blocking_seed": [
+        "leading the column"
+      ],
+      "shot_size": "medium_full",
+      "camera_angle": "eye_level",
+      "lens_family": "wide",
+      "camera_motion": "track",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "hard_directional",
+      "primary_subject_angle": "profile_left"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "transition to new location",
+      "planned_shot_moment_summary": "The horde enters the pitch-black dungeon",
+      "primary_subject_seed": "Warhoon Warriors",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "silhouette",
+      "narration_mode": "none",
+      "environment_subzone": "warhoon_subterranean_dungeon",
+      "planned_shot_required_anchor_1": "warhoon_subterranean_dungeon",
+      "planned_shot_scale_proof_detail": "diminishing light/increasing darkness",
+      "start_state_seed": "approaching city entrance",
+      "end_state_seed": "total darkness",
+      "action_seed": "descending into dungeon",
+      "blocking_seed": [
+        "moving into shadows"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "high_angle",
+      "lens_family": "normal",
+      "camera_motion": "push_in",
+      "zoom_behavior": "none",
+      "focus_strategy": "environment_priority",
+      "lighting_style": "low_key_night",
+      "primary_subject_angle": "back"
+    }
+  ],
+  "unresolved_questions": [
+    "Resolve Warhoon Warriors -> Warhoon Warriors"
+  ],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH018",
+      "scene_id": "CH018_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH018",
+      "scene_id": "CH018_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH018",
+      "scene_id": "CH018_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH018",
+      "scene_id": "CH018_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH018",
+      "scene_id": "CH018_SC003"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH018",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\02_story_analysis\\chapter_analysis\\CH018_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH020",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH020_chapter_xx.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH014",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH014_chapter_xiv.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH021",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH021_chapter_xxi.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH018",
+      "canonical_id": "dak_kova"
+    }
+  ],
+  "evidence_summary": [
+    "[CH018_SC003] Purpose: To show the scale of the threat and transition the protagonist to a new location.",
+    "[CH018_SC003] Summary: The massive Warhoon horde, numbering ten thousand, begins their retreat toward the city of Warhoon following the duel.",
+    "[CH018_SC003] Emotional arc: Momentum/Inevitability.",
+    "[CH018_SC003] Coverage: Extreme wide shots (aerial or high angle) to show the scale of the ten thousand warriors; tracking shots following the march.",
+    "[CH018_SC003] Continuity: Direction of travel; lighting changes as they approach the city.",
+    "[CH018] Chapter summary: **Setting:** The chapter moves from a small room within a Warhoon camp to the open Martian plains during a military march, and finally to a pitch-black, subterranean dungeon within the city of Warhoon. **Characters:**...",
+    "[CH020] CHAPTER XX (book index hit)",
+    "[CH014] CHAPTER XIV (book index hit)",
+    "[CH021] CHAPTER XXI (book index hit)",
+    "Character dak_kova: Dak Kova is a ferocious, green-skinned Martian Warhoon chieftain. He possesses a scarred physique and carries himself with a primal, animalistic intensity. As a warlord, his silhouette is defined by traditional Warhoon warrior gear and t..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH018_SC003\n\n## Production Intent\nEstablish the massive scale of ten thousand Warhoon warriors moving across the Martian plains. The sequence must visually communicate a sense of unstoppable momentum as the horde transitions from the open plains toward the city and eventually into the subterranean darkness.\n\n## Required Cast\n- dak_kova (Green-skinned, scarred, primal intensity)\n- Warhoon Warriors (Massed horde)\n\n## Required Environments\n- martian_plains_march_route (Open Martian plains)\n- warhoon_subterranean_dungeon (Pitch-black subterranean dungeon within the city of Warhoon)\n\n## Continuity Constraints\n- Direction of travel must remain consistent toward the city.\n- Lighting must transition from open/diffuse Martian light to pitch-black subterranean darkness.\n\n## Beat List\n- BT001: The massive horde begins their retreat across the plains.\n- BT002: The march gains momentum under Dak Kova's leadership.\n- BT003: The horde transitions into the city and dungeon.",
+  "metadata": {
+    "artifact_id": "CH018_SC003_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "1a6895ac6d63e9f326e60d544c6e36749405f5c0",
+    "created_at_utc": "2026-04-26T22:49:20.651421+00:00",
+    "updated_at_utc": "2026-04-26T22:49:20.651421+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH018_SC003",
+        "version": "1cb2b37ad874ff04c74b96a261aba1a967a8674d"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH018_SC003",
+        "version": "9ecb86d514929e0791820fa8cefccc6b79e89403"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH018_SC003",
+        "version": "46fd10238d1714d4de1405ff0d8c63ecac109256"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-26T22:49:51.217161+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "1a6895ac6d63e9f326e60d544c6e36749405f5c0"
+      }
+    ]
+  }
+}

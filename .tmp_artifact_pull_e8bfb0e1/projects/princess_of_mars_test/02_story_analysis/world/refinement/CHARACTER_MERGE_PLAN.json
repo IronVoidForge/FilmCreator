@@ -1,0 +1,114 @@
+{
+  "merge_groups": [
+    {
+      "entity_type": "environment",
+      "action": "merge_into_existing",
+      "canonical_id": "dead_sea_bottom",
+      "subject_ids": [
+        "dead_sea_bottom",
+        "dead_sea_bottom_expanse",
+        "dead_sea_bottom_incubator",
+        "dead_sea_bottom_valley"
+      ],
+      "target_id": "dead_sea_bottom",
+      "new_canonical_id": null,
+      "new_entity_kind": null,
+      "reason": "Variants identified as chapter suffixes or descriptive expansions of the same environment; high confidence in dead_sea_bottom as root.",
+      "confidence": "high"
+    },
+    {
+      "entity_type": "environment",
+      "action": "merge_into_existing",
+      "canonical_id": "green_martian_city",
+      "subject_ids": [
+        "green_martian_city",
+        "green_martian_city_complex"
+      ],
+      "target_id": "green_martian_city",
+      "new_canonical_id": null,
+      "new_entity_kind": null,
+      "reason": "Identified as a chapter suffix/variant; both entities share the same entity_kind (city) and appear in the same chapter.",
+      "confidence": "medium"
+    },
+    {
+      "entity_type": "environment",
+      "action": "merge_into_existing",
+      "canonical_id": "martian_plaza",
+      "subject_ids": [
+        "martian_plaza",
+        "martian_plaza_city"
+      ],
+      "target_id": "martian_plaza",
+      "new_canonical_id": null,
+      "new_entity_kind": null,
+      "reason": "High-confidence match based on chapter suffix/variant detection; both entities share the same entity_kind (plaza).",
+      "confidence": "high"
+    },
+    {
+      "entity_type": "environment",
+      "action": "merge_into_existing",
+      "canonical_id": "martian_wilderness",
+      "subject_ids": [
+        "martian_wilderness",
+        "martian_wilderness_corridor"
+      ],
+      "target_id": "martian_wilderness",
+      "new_canonical_id": null,
+      "new_entity_kind": null,
+      "reason": "High confidence that 'martian_wilderness_corridor' is a variant/suffix of the primary environment 'martian_wilderness'.",
+      "confidence": "high"
+    },
+    {
+      "entity_type": "environment",
+      "action": "merge_into_existing",
+      "canonical_id": "mossy_waste",
+      "subject_ids": [
+        "mossy_waste",
+        "mossy_waste_expanse"
+      ],
+      "target_id": "mossy_waste",
+      "new_canonical_id": null,
+      "new_entity_kind": null,
+      "reason": "mossy_waste_expanse is a descriptive suffix variant of mossy_waste; both share identical entity kind and chapter context.",
+      "confidence": "high"
+    }
+  ],
+  "review": [
+    {
+      "entity_type": "character",
+      "subject_ids": [
+        "bull_ape",
+        "bull_ape_mate"
+      ],
+      "reason": "Taxonomy conflict: low taxonomy confidence",
+      "confidence": "low"
+    },
+    {
+      "entity_type": "character",
+      "subject_ids": [
+        "lorquas_ptomel",
+        "lorquas_ptomel_jed"
+      ],
+      "reason": "Taxonomy conflict: low taxonomy confidence",
+      "confidence": "low"
+    },
+    {
+      "entity_type": "character",
+      "subject_ids": [
+        "martian_warrior",
+        "martian_warrior_leader"
+      ],
+      "reason": "Potential role-based distinction (leader vs warrior) cannot be resolved due to unknown taxonomy and low heuristic score; merging generic roles without high confidence violates guardrails.",
+      "confidence": "low"
+    },
+    {
+      "entity_type": "character",
+      "subject_ids": [
+        "the_watch_dog",
+        "watch_dog"
+      ],
+      "reason": "Taxonomy conflict: 'the_watch_dog' has unknown primary_type/confidence 0.0, while 'watch_dog' is identified as a creature. Cannot safely merge without verifying if they are the same entity type.",
+      "confidence": "low"
+    }
+  ]
+}

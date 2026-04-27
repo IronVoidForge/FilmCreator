@@ -1,0 +1,401 @@
+{
+  "scene_id": "CH023_SC003",
+  "chapter_id": "CH023",
+  "scene_title": "SC003",
+  "purpose": "Provide high-octane action and the primary conflict of the chapter.",
+  "summary": "As Carter and Kantos Kan attempt to depart, Zodangan air patrols intercept them. Kantos Kan dives into darkness to evade capture, leaving Carter to engage in a high-speed aerial chase. Carter uses Heliumite gearing to increase speed but is struck by a projectile from a cruiser, causing his machine to fail.",
+  "emotional_arc": "High Tension $\\rightarrow$ Chaos/Panic.",
+  "production_intent": "Execute a high-velocity aerial chase sequence through Martian airspace involving multiple flight crafts and projectile combat. The sequence must transition from organized evasion to chaotic mechanical failure via kinetic impact.",
+  "scene_short_description": "High-speed aerial chase through Martian sky involving interception and mechanical failure.",
+  "scene_primary_scale_story_point": "Individual flight craft vs. Zodangan air patrol fleet scale.",
+  "scene_required_anchor_catalog": [
+    "martian_sky_aerial_corridors",
+    "Zodangan cruiser"
+  ],
+  "scene_start_state": "Carter and Kantos Kan attempting departure under interception threat.",
+  "scene_end_state": "Carter's machine failing following a projectile strike.",
+  "dominant_action_line": "Aerial evasion leads to high-speed pursuit, resulting in mechanical destruction via projectile.",
+  "scene_spatial_layout": [
+    "Open aerial corridors above Zodanga",
+    "Vertical descent into darkness (Kantos Kan)"
+  ],
+  "character_spatial_map": [
+    "john_carter: piloting primary machine in chase vector",
+    "kantos_kan: diving away from the main flight path",
+    "Zodangan Air Patrols: surrounding/intercepting Carter"
+  ],
+  "environment_subzones": [
+    "martian_sky_aerial_corridors (open sky)",
+    "darkness_void (evasion zone)"
+  ],
+  "entry_vectors": [
+    "interception vector from Zodangan patrols"
+  ],
+  "exit_vectors": [
+    "descent vector following machine failure"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: Kantos Kan breaks formation/dives",
+    "BT002 -> BT003: Carter engages Heliumite gearing/acceleration",
+    "BT003 -> BT004: Projectile impact and mechanical failure"
+  ],
+  "characters_required": [
+    {
+      "label": "John Carter",
+      "canonical_id": "john_carter",
+      "display_name": "john_carter",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH023/john_carter.md",
+      "notes": "Direct registry match for 'john_carter'."
+    },
+    {
+      "label": "Kantos Kan",
+      "canonical_id": "kantos_kan",
+      "display_name": "kantos_kan",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH023/kantos_kan.md",
+      "notes": "Direct registry match for 'kantos_kan'."
+    },
+    {
+      "label": "Zodangan Air Patrols",
+      "canonical_id": null,
+      "display_name": "Zodangan Air Patrols",
+      "status": "review",
+      "entity_kind": "individual",
+      "resolution_score": 10,
+      "source_path": "",
+      "notes": "Low-confidence character match requires review."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "The Martian Sky above Zodanga",
+      "canonical_id": "martian_sky_aerial_corridors",
+      "display_name": "martian_sky_aerial_corridors",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 92,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH023/martian_sky_aerial_corridors.md",
+      "notes": "Chapter-local environment alias match for 'The Martian Sky above Zodanga' (key_overlap=2, label_overlap=2, context_overlap=4)."
+    }
+  ],
+  "continuity_constraints": [
+    "Flight paths of machines must maintain relative velocity",
+    "Directional vector of projectile fire from cruiser to Carter",
+    "Heliumite gearing speed increase vs. baseline machine speed"
+  ],
+  "visual_coverage_families": [
+    "Dynamic tracking shots (chase)",
+    "Wide aerial vistas",
+    "Shaky cam/handheld (impact/plunge)",
+    "Close-ups (frantic piloting)"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "Interception of Carter and Kantos Kan",
+      "purpose": "",
+      "action_start": "departure attempt",
+      "action_end": "patrols surround crafts",
+      "active_subjects": [
+        "john_carter",
+        "kantos_kan"
+      ],
+      "passive_subjects": [
+        "Zodangan Air Patrols"
+      ],
+      "spatial_context": "martian_sky_aerial_corridors",
+      "blocking_hint": "patrols closing distance from multiple angles",
+      "environment_subzone": "martian_sky_aerial_corridors",
+      "continuity_focus": "relative position of patrol crafts",
+      "coverage_hint": "wide aerial vistas",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "Kantos Kan's evasion dive",
+      "purpose": "",
+      "action_start": "patrol contact",
+      "action_end": "Kantos Kan disappears into darkness",
+      "active_subjects": [
+        "kantos_kan"
+      ],
+      "passive_subjects": [
+        "john_carter",
+        "Zodangan Air Patrols"
+      ],
+      "spatial_context": "darkness_void",
+      "blocking_hint": "vertical plunge away from the chase line",
+      "environment_subzone": "darkness_void",
+      "continuity_focus": "direction of dive vs patrol movement",
+      "coverage_hint": "dynamic tracking shots",
+      "coverage_priority": "medium",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "High-speed pursuit with Heliumite gearing",
+      "purpose": "",
+      "action_start": "Carter alone in chase",
+      "action_end": "Carter reaches maximum velocity",
+      "active_subjects": [
+        "john_carter"
+      ],
+      "passive_subjects": [
+        "Zodangan Air Patrols"
+      ],
+      "spatial_context": "martian_sky_aerial_corridors",
+      "blocking_hint": "linear high-speed flight path",
+      "environment_subzone": "martian_sky_aerial_corridors",
+      "continuity_focus": "velocity increase vs baseline speed",
+      "coverage_hint": "close-ups of piloting/dynamic tracking",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT004"
+    },
+    {
+      "beat_id": "BT004",
+      "summary": "Projectile strike and machine failure",
+      "purpose": "",
+      "action_start": "peak velocity pursuit",
+      "action_end": "machine fails and plunges",
+      "active_subjects": [
+        "john_carter"
+      ],
+      "passive_subjects": [
+        "Zodangan Air Patrols"
+      ],
+      "spatial_context": "martian_sky_aerial_corridors",
+      "blocking_hint": "sudden disruption of flight path via impact",
+      "environment_subzone": "martian_sky_aerial_corridors",
+      "continuity_focus": "projectile direction from cruiser to Carter",
+      "coverage_hint": "shaky cam/handheld",
+      "coverage_priority": "critical",
+      "handoff_to_next": "end_scene"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish conflict",
+      "planned_shot_moment_summary": "Zodangan patrols intercept the departing duo",
+      "primary_subject_seed": "kantos_kan, john_carter",
+      "secondary_subjects_seed": [
+        "Zodangan Air Patrols"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "martian_sky_aerial_corridors",
+      "planned_shot_required_anchor_1": "martian_sky_aerial_corridors",
+      "planned_shot_scale_proof_detail": "relative size of patrols vs duo",
+      "start_state_seed": "departure attempt",
+      "end_state_seed": "interception contact",
+      "action_seed": "patrols close in on the two crafts",
+      "blocking_seed": [
+        "surrounding formation"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "eye_level",
+      "lens_family": "wide",
+      "camera_motion": "track",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front_three_quarter_left"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "character separation",
+      "planned_shot_moment_summary": "Kantos Kan dives into darkness to evade",
+      "primary_subject_seed": "kantos_kan",
+      "secondary_subjects_seed": [
+        "john_carter"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "darkness_void",
+      "planned_shot_required_anchor_1": "darkness_void",
+      "planned_shot_scale_proof_detail": "vertical distance of dive",
+      "start_state_seed": "interception",
+      "end_state_seed": "disappearance into dark",
+      "action_seed": "rapid vertical descent",
+      "blocking_seed": [
+        "diving away from camera/Carter"
+      ],
+      "shot_size": "full",
+      "camera_angle": "high_angle",
+      "lens_family": "wide",
+      "camera_motion": "tilt",
+      "zoom_behavior": "none",
+      "focus_strategy": "environment_priority",
+      "lighting_style": "low_key_night",
+      "primary_subject_angle": "profile_right"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "escalation",
+      "planned_shot_moment_summary": "Carter engages Heliumite gearing for speed",
+      "primary_subject_seed": "john_carter",
+      "secondary_subjects_seed": [
+        "Zodangan Air Patrols"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "martian_sky_aerial_corridors",
+      "planned_shot_required_anchor_1": "martian_sky_aerial_corridors",
+      "planned_shot_scale_proof_detail": "velocity increase relative to background",
+      "start_state_seed": "pursuit begins",
+      "end_state_seed": "peak speed reached",
+      "action_seed": "rapid acceleration through sky",
+      "blocking_seed": [
+        "straight chase line"
+      ],
+      "shot_size": "medium_close",
+      "camera_angle": "eye_level",
+      "lens_family": "normal",
+      "camera_motion": "track",
+      "zoom_behavior": "subtle_in",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front"
+    },
+    {
+      "planned_shot_id": "SH004",
+      "beat_id": "BT004",
+      "narrative_function": "climax/disruption",
+      "planned_shot_moment_summary": "Projectile from cruiser strikes Carter's machine",
+      "primary_subject_seed": "john_carter",
+      "secondary_subjects_seed": [
+        "Zodangan Air Patrols"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "martian_sky_aerial_corridors",
+      "planned_shot_required_anchor_1": "Zodangan cruiser",
+      "planned_shot_scale_proof_detail": "projectile trajectory vs machine position",
+      "start_state_seed": "high speed flight",
+      "end_state_seed": "machine failure/plunge",
+      "action_seed": "impact and loss of control",
+      "blocking_seed": [
+        "sudden jarring movement"
+      ],
+      "shot_size": "medium_full",
+      "camera_angle": "dutch",
+      "lens_family": "wide",
+      "camera_motion": "handheld",
+      "zoom_behavior": "none",
+      "focus_strategy": "rack_focus",
+      "lighting_style": "high_contrast_ceremonial",
+      "primary_subject_angle": "rear_three_quarter_left"
+    }
+  ],
+  "unresolved_questions": [
+    "Resolve Zodangan Air Patrols -> Zodangan Air Patrols"
+  ],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH023",
+      "scene_id": "CH023_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH023",
+      "scene_id": "CH023_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH023",
+      "scene_id": "CH023_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH023",
+      "scene_id": "CH023_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH023",
+      "scene_id": "CH023_SC003"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH023",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\02_story_analysis\\chapter_analysis\\CH023_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH021",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH021_chapter_xxi.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH023",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH023_chapter_xxiii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH024",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH024_chapter_xxiv.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH023",
+      "canonical_id": "john_carter"
+    }
+  ],
+  "evidence_summary": [
+    "[CH023_SC003] Purpose: Provide high-octane action and the primary conflict of the chapter.",
+    "[CH023_SC003] Summary: As Carter and Kantos Kan attempt to depart, Zodangan air patrols intercept them. Kantos Kan dives into darkness to evade capture, leaving Carter to engage in a high-speed aerial chase. Carter uses Heliumite gearing to increase speed b...",
+    "[CH023_SC003] Emotional arc: High Tension $\\rightarrow$ Chaos/Panic.",
+    "[CH023_SC003] Coverage: Dynamic tracking shots (chase), wide aerial vistas, shaky cam/handheld for the impact and near-fatal plunge, close-ups of Carter's frantic piloting.",
+    "[CH023_SC003] Continuity: Flight paths of machines, speed/velocity of the chase, direction of projectile fire.",
+    "[CH023] Chapter summary: **Summary:** Following the news that Princess Dejah Thoris has been promised to Sab Than of Zodanga, John Carter meets secretly with Kantos Kan. The two devise a plan to separate: Kantos Kan will infiltrate the Zodang...",
+    "[CH021] CHAPTER XXI (book index hit)",
+    "[CH023] CHAPTER XXIII (book index hit)",
+    "[CH024] CHAPTER XXIV (book index hit)",
+    "Character john_carter: [source:C:/FilmCreator_MC/projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH011/john_carter.md] Physical Description: A human male from Earth (Virginia). He possesses the strength and physical capabiliti..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH023_SC003\n\n## Production Intent\nExecute a high-velocity aerial chase sequence through Martian airspace involving multiple flight crafts and projectile combat. The sequence must transition from organized evasion to chaotic mechanical failure via kinetic impact.\n\n## Required Cast\n- john_carter\n- kantos_kan\n- Zodangan Air Patrols\n\n## Required Environments\n- martian_sky_aerial_corridors\n- darkness_void\n\n## Continuity Constraints\n- Flight paths of machines must maintain relative velocity\n- Directional vector of projectile fire from cruiser to Carter\n- Heliumite gearing speed increase vs. baseline machine speed\n\n## Beat List\n- BT001: Interception of Carter and Kantos Kan\n- BT002: Kantos Kan's evasion dive\n- BT003: High-speed pursuit with Heliumite gearing\n- BT004: Projectile strike and machine failure",
+  "metadata": {
+    "artifact_id": "CH023_SC003_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "4b96ddfc0bd613769fbcaf17ece639479b1c5ce6",
+    "created_at_utc": "2026-04-26T23:01:50.474962+00:00",
+    "updated_at_utc": "2026-04-26T23:01:50.474962+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH023_SC003",
+        "version": "61fe3c338ee40b068bd02b3672ee1bc5f1618ab1"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH023_SC003",
+        "version": "884ce1390f70d33be8132fed69cae0769405b006"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH023_SC003",
+        "version": "db7ac1006d29970df1bfd272291a8b73ec9bccb7"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-26T23:02:26.858542+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "4b96ddfc0bd613769fbcaf17ece639479b1c5ce6"
+      }
+    ]
+  }
+}

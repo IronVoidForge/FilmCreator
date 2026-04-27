@@ -1,0 +1,340 @@
+{
+  "scene_id": "CH016_SC004",
+  "chapter_id": "CH016",
+  "scene_title": "SC004",
+  "purpose": "Climax and the reveal of the trap.",
+  "summary": "Carter maneuvers through the inner courts and uses his agility to climb into Dejah Thoris's quarters. While hiding, he overhears a Thark chieftain ordering an ambush on him and revealing that Dejah Thoris is already in Tal Hajus's custody.",
+  "emotional_arc": "Stealth/Tension $\\rightarrow$ Horror/Despair.",
+  "production_intent": "Establish a high-tension infiltration sequence that transitions into a devastating psychological reveal. The visual language must shift from kinetic, agile movement to static, claustrophobic dread as the protagonist realizes he is trapped and his objective is lost.",
+  "scene_short_description": "An agile infiltrator climbs into marble quarters only to overhear a devastating betrayal.",
+  "scene_primary_scale_story_point": "Verticality of infiltration vs. the crushing weight of overheard information.",
+  "scene_required_anchor_catalog": [
+    "winding stairs",
+    "window threshold",
+    "marble floor"
+  ],
+  "scene_start_state": "Carter scaling the exterior/inner court architecture toward the quarters.",
+  "scene_end_state": "Carter frozen in despair, listening to the Chieftain's voice.",
+  "dominant_action_line": "Infiltration through climbing leads to eavesdropping on a trap reveal.",
+  "scene_spatial_layout": [
+    "Vertical ascent from inner courts to upper quarters",
+    "Interior space defined by marble floors and winding stairs"
+  ],
+  "character_spatial_map": [
+    "john_carter: Hidden near window/door threshold, low to ground or tucked in shadows",
+    "Thark Chieftain: Off-screen or silhouetted behind door/partition",
+    "Thark Warriors (off-screen/background): Distant/unseen presence via sound"
+  ],
+  "environment_subzones": [
+    "inner_courts",
+    "dejah_thoris_quarters"
+  ],
+  "entry_vectors": [
+    "climbing up winding stairs/walls"
+  ],
+  "exit_vectors": [
+    "none (character is trapped by information)"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: Physical arrival at the threshold",
+    "BT002 -> BT003: Auditory trigger of the reveal"
+  ],
+  "characters_required": [
+    {
+      "label": "John Carter",
+      "canonical_id": "john_carter",
+      "display_name": "john_carter",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH016/john_carter.md",
+      "notes": "Direct registry match for 'john_carter'."
+    },
+    {
+      "label": "Thark Chieftain",
+      "canonical_id": null,
+      "display_name": "Thark Chieftain",
+      "status": "review",
+      "entity_kind": "individual",
+      "resolution_score": 6,
+      "source_path": "",
+      "notes": "Low-confidence character match requires review."
+    },
+    {
+      "label": "Thark Warriors (off-screen/background)",
+      "canonical_id": null,
+      "display_name": "Thark Warriors (off-screen/background)",
+      "status": "review",
+      "entity_kind": "individual",
+      "resolution_score": 10,
+      "source_path": "",
+      "notes": "Low-confidence character match requires review."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "Inner courts of Thark",
+      "canonical_id": "dejah_thoris_quarters",
+      "display_name": "dejah_thoris_quarters",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 54,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH016/dejah_thoris_quarters.md",
+      "notes": "Chapter-local environment alias match for 'Inner courts of Thark' (key_overlap=0, label_overlap=3, context_overlap=4)."
+    }
+  ],
+  "continuity_constraints": [
+    "Audio synchronization of overheard dialogue from off-screen",
+    "Carter's physical proximity to door and window thresholds"
+  ],
+  "visual_coverage_families": [
+    "High-angle infiltration/climbing shots",
+    "Extreme close-ups of facial reactions (listening)",
+    "Silhouette/Shadow play for antagonists"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "Carter maneuvers through inner courts and climbs to the quarters",
+      "purpose": "",
+      "action_start": "climbing begins",
+      "action_end": "reaches window ledge",
+      "active_subjects": [
+        "john_carter"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "inner_courts/exterior walls",
+      "blocking_hint": "vertical ascent",
+      "environment_subzone": "inner_courts",
+      "continuity_focus": "physical exertion/agility",
+      "coverage_hint": "high-angle climbing shots",
+      "coverage_priority": "medium",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "Carter enters the quarters and takes cover",
+      "purpose": "",
+      "action_start": "crossing window threshold",
+      "action_end": "settling into a hiding position",
+      "active_subjects": [
+        "john_carter"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "dejah_thoris_quarters",
+      "blocking_hint": "crouching near wall/window",
+      "environment_subzone": "dejah_thoris_quarters",
+      "continuity_focus": "position relative to door/window",
+      "coverage_hint": "medium shots of movement",
+      "coverage_priority": "low",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "Carter overhears the Chieftain's ambush order and Dejah Thoris's status",
+      "purpose": "",
+      "action_start": "sound of voice enters room",
+      "action_end": "Carter realizes the trap/loss",
+      "active_subjects": [
+        "john_carter"
+      ],
+      "passive_subjects": [
+        "Thark Chieftain",
+        "Thark Warriors (off-screen)"
+      ],
+      "spatial_context": "dejah_thoris_quarters",
+      "blocking_hint": "static, frozen in shadow",
+      "environment_subzone": "dejah_thoris_quarters",
+      "continuity_focus": "dialogue timing/audio sync",
+      "coverage_hint": "extreme close-ups of face",
+      "coverage_priority": "high",
+      "handoff_to_next": "end_of_scene"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish agility",
+      "planned_shot_moment_summary": "Carter scaling the architecture",
+      "primary_subject_seed": "john_carter",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "full",
+      "narration_mode": "none",
+      "environment_subzone": "inner_courts",
+      "planned_shot_required_anchor_1": "winding stairs",
+      "planned_shot_scale_proof_detail": "height relative to courtyard floor",
+      "start_state_seed": "climbing motion",
+      "end_state_seed": "reaching window ledge",
+      "action_seed": "climbing",
+      "blocking_seed": [
+        "vertical movement along wall"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "high_angle",
+      "lens_family": "wide",
+      "camera_motion": "track",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "low_key_night",
+      "primary_subject_angle": "profile_right"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "transition to stealth",
+      "planned_shot_moment_summary": "Carter entering the room and hiding",
+      "primary_subject_seed": "john_carter",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "partial",
+      "narration_mode": "none",
+      "environment_subzone": "dejah_thoris_quarters",
+      "planned_shot_required_anchor_1": "window threshold",
+      "planned_shot_scale_proof_detail": "body tucked against marble wall",
+      "start_state_seed": "sliding into frame",
+      "end_state_seed": "settling into shadow",
+      "action_seed": "hiding",
+      "blocking_seed": [
+        "crouching near window"
+      ],
+      "shot_size": "medium_full",
+      "camera_angle": "eye_level",
+      "lens_family": "normal",
+      "camera_motion": "push_in",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "low_key_night",
+      "primary_subject_angle": "rear_three_quarter_left"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "reveal horror",
+      "planned_shot_moment_summary": "Carter hears the Chieftain's voice",
+      "primary_subject_seed": "john_carter",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "off_screen_voice",
+      "environment_subzone": "dejah_thoris_quarters",
+      "planned_shot_required_anchor_1": "marble floor",
+      "planned_shot_scale_proof_detail": "face filling frame",
+      "start_state_seed": "listening intently",
+      "end_state_seed": "expression of despair",
+      "action_seed": "reacting to dialogue",
+      "blocking_seed": [
+        "frozen in place"
+      ],
+      "shot_size": "extreme_close_up",
+      "camera_angle": "eye_level",
+      "lens_family": "portrait",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "subtle_in",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "high_contrast_ceremonial",
+      "primary_subject_angle": "front"
+    }
+  ],
+  "unresolved_questions": [
+    "Resolve Thark Chieftain -> Thark Chieftain",
+    "Resolve Thark Warriors (off-screen/background) -> Thark Warriors (off-screen/background)"
+  ],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH016",
+      "scene_id": "CH016_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH016",
+      "scene_id": "CH016_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH016",
+      "scene_id": "CH016_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH016",
+      "scene_id": "CH016_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH016",
+      "scene_id": "CH016_SC004"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH016",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\02_story_analysis\\chapter_analysis\\CH016_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH019",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH019_chapter_xix.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH024",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH024_chapter_xxiv.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH014",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH014_chapter_xiv.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH016",
+      "canonical_id": "john_carter"
+    }
+  ],
+  "evidence_summary": [
+    "[CH016_SC004] Purpose: Climax and the reveal of the trap.",
+    "[CH016_SC004] Summary: Carter maneuvers through the inner courts and uses his agility to climb into Dejah Thoris's quarters. While hiding, he overhears a Thark chieftain ordering an ambush on him and revealing that Dejah Thoris is already in Tal Hajus's cus...",
+    "[CH016_SC004] Emotional arc: Stealth/Tension $\\rightarrow$ Horror/Despair.",
+    "[CH016_SC004] Coverage: Extreme close-ups of Carter's face as he listens; high-angle shots showing his climbing/infiltration; shadows and silhouettes for the Chieftain.",
+    "[CH016_SC004] Continuity: Sound design (overhearing dialogue); Carter's physical position relative to the door/window.",
+    "[CH016] Chapter summary: **Events:** After a twenty-day journey across Martian sea bottoms and canals, John Carter and his companions arrive at the great city of Thark. Upon arrival, Carter is assigned a large building in the city plaza. He r...",
+    "[CH019] CHAPTER XIX (book index hit)",
+    "[CH024] CHAPTER XXIV (book index hit)",
+    "[CH014] CHAPTER XIV (book index hit)",
+    "Character john_carter: [source:C:/FilmCreator_MC/projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH011/john_carter.md] Physical Description: A human male from Earth (Virginia). He possesses the strength and physical capabiliti..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH016_SC004\n\n## Production Intent\nEstablish a high-tension infiltration sequence that transitions into a devastating psychological reveal. The visual language must shift from kinetic, agile movement to static, claustrophobic dread as the protagonist realizes he is trapped and his objective is lost.\n\n## Required Cast\n- john_carter\n- Thark Chieftain (off-screen/silhouette)\n- Thark Warriors (off-screen/background)\n\n## Required Environments\n- dejah_thoris_quarters (marble floors, winding stairs)\n\n## Continuity Constraints\n- Sound design: Overheard dialogue must drive the emotional shift.\n- Spatial: Carter's position relative to the window and door is critical for the ambush reveal.\n\n## Beat List\n- BT001: Infiltration/Climbing through inner courts.\n- BT002: Entering quarters and taking cover.\n- BT003: Overhearing the Chieftain's reveal (Ambush + Dejah Thoris in custody).",
+  "metadata": {
+    "artifact_id": "CH016_SC004_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "55a122ca58e05ed2db5368a450b8646eae1f120e",
+    "created_at_utc": "2026-04-26T22:45:40.716448+00:00",
+    "updated_at_utc": "2026-04-26T22:45:40.716448+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH016_SC004",
+        "version": "d967ad472ac8eccf432ee73c9431bee6002934dd"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH016_SC004",
+        "version": "a09e1aa27712a9465b2e6ebfed5d0f33217240f4"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH016_SC004",
+        "version": "d0cf24f839e98af9c18c5b38d31a078c97a43e1b"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-26T22:46:11.366038+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "55a122ca58e05ed2db5368a450b8646eae1f120e"
+      }
+    ]
+  }
+}

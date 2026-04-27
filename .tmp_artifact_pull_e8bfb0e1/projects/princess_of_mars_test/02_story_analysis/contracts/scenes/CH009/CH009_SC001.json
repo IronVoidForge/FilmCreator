@@ -1,0 +1,359 @@
+{
+  "scene_id": "CH009_SC001",
+  "chapter_id": "CH009",
+  "scene_title": "SC001",
+  "purpose": "Establish the protagonist's new status as a warrior and his integration into Martian material culture.",
+  "summary": "A respectful but menacing Martian presents the protagonist with warrior's arms and ornaments. Sola and the other women work together to remodel these large pieces of equipment to fit the protagonist's smaller, Earthly frame.",
+  "emotional_arc": "From intimidation (the gift) to communal cooperation and adaptation.",
+  "production_intent": "Establish the protagonist's transition into Martian warrior status through the physical receipt and modification of heavy, oversized martial equipment. The scene must emphasize the scale difference between the Earthman's frame and the massive Martian gear to highlight his integration process.",
+  "scene_short_description": "A menacing warrior presents oversized arms to a smaller man while women remodel the gear.",
+  "scene_primary_scale_story_point": "Martian equipment is significantly larger than the protagonist's Earthly frame.",
+  "scene_required_anchor_catalog": [
+    "heavy warrior arms/ornaments",
+    "remodeling tools"
+  ],
+  "scene_start_state": "unnamed Martian warrior stands over protagonist with intimidating gift.",
+  "scene_end_state": "remodeled gear sits ready for use amidst communal activity.",
+  "dominant_action_line": "Receiving and resizing martial equipment.",
+  "scene_spatial_layout": [
+    "central workshop area for gear modification",
+    "perimeter space for character observation"
+  ],
+  "character_spatial_map": [
+    "protagonist centered/seated receiving gift",
+    "unnamed Martian warrior standing over protagonist",
+    "sola and Other Female Martians clustered around work table"
+  ],
+  "environment_subzones": [
+    "communal_sleeping_quarters_workshop",
+    "communal_sleeping_quarters_work_surface"
+  ],
+  "entry_vectors": [
+    "unnamed Martian warrior enters from workshop perimeter"
+  ],
+  "exit_vectors": [
+    "unnamed Martian warrior exits to workshop perimeter"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: handover of heavy equipment",
+    "BT002 -> BT003: transition from presentation to labor"
+  ],
+  "characters_required": [
+    {
+      "label": "The Protagonist",
+      "canonical_id": "protagonist",
+      "display_name": "protagonist",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH009/protagonist.md",
+      "notes": "Direct registry match for 'protagonist'."
+    },
+    {
+      "label": "Sola",
+      "canonical_id": "sola",
+      "display_name": "sola",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH009/sola.md",
+      "notes": "Direct registry match for 'sola'."
+    },
+    {
+      "label": "Other Female Martians",
+      "canonical_id": null,
+      "display_name": "Other Female Martians",
+      "status": "review",
+      "entity_kind": "individual",
+      "resolution_score": 16,
+      "source_path": "",
+      "notes": "Low-confidence character match requires review."
+    },
+    {
+      "label": "unnamed Martian warrior",
+      "canonical_id": null,
+      "display_name": "unnamed Martian warrior",
+      "status": "review",
+      "entity_kind": "individual",
+      "resolution_score": 6,
+      "source_path": "",
+      "notes": "Low-confidence character match requires review."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "Communal living area/workshop",
+      "canonical_id": "communal_sleeping_quarters",
+      "display_name": "communal_sleeping_quarters",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 68,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH009/communal_sleeping_quarters.md",
+      "notes": "Chapter-local environment alias match for 'Communal living area/workshop' (key_overlap=1, label_overlap=2, context_overlap=4)."
+    }
+  ],
+  "continuity_constraints": [
+    "Fit and scale of remodeled armor vs protagonist frame",
+    "Visual state of remodeling tools"
+  ],
+  "visual_coverage_families": [
+    "Close-ups of ornate weaponry/ornaments",
+    "Medium shots of women working on gear",
+    "Reaction shots of protagonist observing status"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "The presentation of the warrior's arms",
+      "purpose": "",
+      "action_start": "unnamed Martian warrior approaches protagonist",
+      "action_end": "arms are presented to protagonist",
+      "active_subjects": [
+        "unnamed Martian warrior",
+        "protagonist"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "communal_sleeping_quarters_workshop",
+      "blocking_hint": "warrior stands over seated protagonist",
+      "environment_subzone": "communal_sleeping_quarters_workshop",
+      "continuity_focus": "size of arms relative to protagonist",
+      "coverage_hint": "medium_full/low_angle",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "Inspection and scale assessment",
+      "purpose": "",
+      "action_start": "arms placed on work surface",
+      "action_end": "sola touches the gear",
+      "active_subjects": [
+        "sola",
+        "protagonist"
+      ],
+      "passive_subjects": [
+        "unnamed Martian warrior"
+      ],
+      "spatial_context": "communal_sleeping_quarters_work_surface",
+      "blocking_hint": "protagonist watches from side; sola leans in",
+      "environment_subzone": "communal_sleeping_quarters_work_surface",
+      "continuity_focus": "ornate details of gear",
+      "coverage_hint": "close_up",
+      "coverage_priority": "medium",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "Communal remodeling process",
+      "purpose": "",
+      "action_start": "sola and Other Female Martians begin using tools",
+      "action_end": "gear is visibly modified for smaller frame",
+      "active_subjects": [
+        "sola",
+        "Other Female Martians"
+      ],
+      "passive_subjects": [
+        "protagonist"
+      ],
+      "spatial_context": "communal_sleeping_quarters_workshop",
+      "blocking_hint": "women clustered around the central table",
+      "environment_subzone": "communal_sleeping_quarters_workshop",
+      "continuity_focus": "state of remodeling tools and gear fit",
+      "coverage_hint": "medium shots",
+      "coverage_priority": "high",
+      "handoff_to_next": "end_scene"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish status",
+      "planned_shot_moment_summary": "unnamed Martian warrior presents heavy arms",
+      "primary_subject_seed": "unnamed Martian warrior",
+      "secondary_subjects_seed": [
+        "protagonist"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "communal_sleeping_quarters_workshop",
+      "planned_shot_required_anchor_1": "heavy warrior arms/ornaments",
+      "planned_shot_scale_proof_detail": "arms dwarfing protagonist hands",
+      "start_state_seed": "warrior approaching",
+      "end_state_seed": "arms held between subjects",
+      "action_seed": "presentation of gift",
+      "blocking_seed": [
+        "warrior looming over seated protagonist"
+      ],
+      "shot_size": "medium_full",
+      "camera_angle": "low_angle",
+      "lens_family": "normal",
+      "camera_motion": "push_in",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "high_contrast_ceremonial",
+      "primary_subject_angle": "front_three_quarter_right"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "show scale disparity",
+      "planned_shot_moment_summary": "close up of ornate gear being handled",
+      "primary_subject_seed": "heavy warrior arms/ornaments",
+      "secondary_subjects_seed": [
+        "sola"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "communal_sleeping_quarters_work_surface",
+      "planned_shot_required_anchor_1": "heavy warrior arms/ornaments",
+      "planned_shot_scale_proof_detail": "gear size relative to sola's hands",
+      "start_state_seed": "arms resting on table",
+      "end_state_seed": "hands grasping gear",
+      "action_seed": "inspecting equipment",
+      "blocking_seed": [
+        "sola leaning over work surface"
+      ],
+      "shot_size": "close_up",
+      "camera_angle": "eye_level",
+      "lens_family": "portrait",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "profile_left"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "show communal adaptation",
+      "planned_shot_moment_summary": "women working together to remodel gear",
+      "primary_subject_seed": "sola",
+      "secondary_subjects_seed": [
+        "Other Female Martians"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "communal_sleeping_quarters_workshop",
+      "planned_shot_required_anchor_1": "remodeling tools",
+      "planned_shot_scale_proof_detail": "tools interacting with large metal plates",
+      "start_state_seed": "tools touching gear",
+      "end_state_seed": "gear being shaped",
+      "action_seed": "remodeling equipment",
+      "blocking_seed": [
+        "group circle around work surface"
+      ],
+      "shot_size": "medium",
+      "camera_angle": "eye_level",
+      "lens_family": "wide",
+      "camera_motion": "track",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "soft_even",
+      "primary_subject_angle": "front_three_quarter_left"
+    }
+  ],
+  "unresolved_questions": [
+    "Resolve Other Female Martians -> Other Female Martians",
+    "Resolve unnamed Martian warrior -> unnamed Martian warrior"
+  ],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH009",
+      "scene_id": "CH009_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH009",
+      "scene_id": "CH009_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH009",
+      "scene_id": "CH009_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH009",
+      "scene_id": "CH009_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH009",
+      "scene_id": "CH009_SC001"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH009",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\02_story_analysis\\chapter_analysis\\CH009_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH009",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH009_chapter_ix.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH010",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH010_chapter_x.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH021",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH021_chapter_xxi.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH009",
+      "canonical_id": "protagonist"
+    }
+  ],
+  "evidence_summary": [
+    "[CH009_SC001] Purpose: Establish the protagonist's new status as a warrior and his integration into Martian material culture.",
+    "[CH009_SC001] Summary: A respectful but menacing Martian presents the protagonist with warrior's arms and ornaments. Sola and the other women work together to remodel these large pieces of equipment to fit the protagonist's smaller, Earthly frame.",
+    "[CH009_SC001] Emotional arc: From intimidation (the gift) to communal cooperation and adaptation.",
+    "[CH009_SC001] Coverage: Close-ups of the ornate weaponry/ornaments. Medium shots of the women working on the gear. Reaction shots of the protagonist observing his new status.",
+    "[CH009_SC001] Continuity: The specific appearance and fit of the remodeled armor/weapons; the state of the tools used for remodeling.",
+    "[CH009] Chapter summary: **Events:** The protagonist receives a set of warrior's arms and ornaments from a respectful yet menacing Martian, which Sola and other women remodel to fit his smaller size. He begins intensive combat training with t...",
+    "[CH009] CHAPTER IX (book index hit)",
+    "[CH010] CHAPTER X (book index hit)",
+    "[CH021] CHAPTER XXI (book index hit)",
+    "Character protagonist: An experienced Earthman fighter characterized by extreme physical fitness and superhuman agility. His visual identity is defined by a significant metamorphosis; he transitions from an armed, clothed combatant to a naked state followin..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH009_SC001\n\n## Production Intent\nEstablish the protagonist's transition into Martian warrior status through the physical receipt and modification of heavy, oversized martial equipment. The scene must emphasize the scale difference between the Earthman's frame and the massive Martian gear to highlight his integration process.\n\n## Required Cast\n- protagonist\n- sola\n- Other Female Martians\n- unnamed Martian warrior\n\n## Required Environments\n- communal_sleeping_quarters (workshop/work surface)\n\n## Continuity Constraints\n- Fit and scale of remodeled armor/weapons relative to protagonist's frame\n- Visual state and type of remodeling tools used\n- Ornate patterns on the original weaponry\n\n## Beat List\n- BT001: The presentation of the warrior's arms.\n- BT002: Inspection and scale assessment of the gear.\n- BT003: Communal remodeling process by the women.",
+  "metadata": {
+    "artifact_id": "CH009_SC001_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "e32d4b4c1782ff14bb0df5c07f37c636149176be",
+    "created_at_utc": "2026-04-26T22:29:00.325260+00:00",
+    "updated_at_utc": "2026-04-26T22:29:00.325260+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH009_SC001",
+        "version": "227e720b5eb7708a645adb347bd88a983350fe9a"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH009_SC001",
+        "version": "1d5a603e10736c4ffb3250872ede448432e484bb"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH009_SC001",
+        "version": "b368558028a1b02e205412fc5cc02b6d355c7f0d"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-26T22:29:30.283921+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "e32d4b4c1782ff14bb0df5c07f37c636149176be"
+      }
+    ]
+  }
+}

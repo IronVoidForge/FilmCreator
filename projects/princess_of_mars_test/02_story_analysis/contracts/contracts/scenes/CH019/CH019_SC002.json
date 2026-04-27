@@ -1,0 +1,327 @@
+{
+  "scene_id": "CH019_SC002",
+  "chapter_id": "CH019",
+  "scene_title": "SC002",
+  "purpose": "Provide exposition and establish a secondary protagonist/ally.",
+  "summary": "Carter meets Kantos Kan, a padwar from Helium. Kan provides critical intelligence regarding Dejah Thoris and the status of the search efforts for her.",
+  "emotional_arc": "Isolation $\\rightarrow$ Hope/Information Gathering",
+  "production_intent": "Establish the alliance between John Carter and Kantos Kan within a subterranean prison setting. The scene must transition from the heavy atmosphere of isolation to a focused exchange of intelligence regarding Dejah Thoris.",
+  "scene_short_description": "A prisoner meets a padwar in a ruined subterranean amphitheater cell.",
+  "scene_primary_scale_story_point": "Large scale ancient ruins containing small, confined prison subzones.",
+  "scene_required_anchor_catalog": [
+    "Ruined cell wall",
+    "Subterranean floor"
+  ],
+  "scene_start_state": "Carter is isolated within the confines of a cell in the amphitheater.",
+  "scene_end_state": "Carter possesses critical intelligence regarding Dejah Thoris.",
+  "dominant_action_line": "A clandestine meeting and exchange of vital information.",
+  "scene_spatial_layout": [
+    "Confined cell area within a larger amphitheater structure",
+    "Proximity between characters is limited by cell architecture"
+  ],
+  "character_spatial_map": [
+    "john_carter positioned within the cell interior",
+    "kantos_kan approaching or positioned at the cell threshold"
+  ],
+  "environment_subzones": [
+    "subterranean_amphitheater_arena/cell"
+  ],
+  "entry_vectors": [
+    "Cell entrance/threshold"
+  ],
+  "exit_vectors": [
+    "Cell entrance/threshold"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: Arrival of Kan",
+    "BT002 -> BT003: Intelligence exchange"
+  ],
+  "characters_required": [
+    {
+      "label": "* John Carter",
+      "canonical_id": "john_carter",
+      "display_name": "john_carter",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH019/john_carter.md",
+      "notes": "Direct registry match for 'john_carter'."
+    },
+    {
+      "label": "* Kantos Kan",
+      "canonical_id": "kantos_kan",
+      "display_name": "kantos_kan",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH019/kantos_kan.md",
+      "notes": "Direct registry match for 'kantos_kan'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "* Subterranean prison cells",
+      "canonical_id": "subterranean_amphitheater_arena",
+      "display_name": "subterranean_amphitheater_arena",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 46,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH019/subterranean_amphitheater_arena.md",
+      "notes": "Chapter-local environment alias match for '* Subterranean prison cells' (key_overlap=1, label_overlap=1, context_overlap=2)."
+    }
+  ],
+  "continuity_constraints": [
+    "Character positioning relative to cell boundaries",
+    "Lighting consistency between subsequent scenes"
+  ],
+  "visual_coverage_families": [
+    "Two-shot (dialogue)",
+    "Over-the-shoulder shots",
+    "Tight close-ups for whispered secrets"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "Carter's isolation in the cell",
+      "purpose": "",
+      "action_start": "Carter alone in silence",
+      "action_end": "Detection of movement",
+      "active_subjects": [
+        "john_carter"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "inside the cell",
+      "blocking_hint": "Carter stationary within cell bounds",
+      "environment_subzone": "subterranean_amphitheater_arena/cell",
+      "continuity_focus": "Character position in cell",
+      "coverage_hint": "Wide or Medium shot showing isolation",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "Kantos Kan arrives",
+      "purpose": "",
+      "action_start": "Kan appears at threshold",
+      "action_end": "Kan and Carter face each other",
+      "active_subjects": [
+        "kantos_kan",
+        "john_carter"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "cell entrance",
+      "blocking_hint": "Kan stands at the cell boundary",
+      "environment_subzone": "subterranean_amphitheater_arena/cell",
+      "continuity_focus": "Lighting consistency on Kan's arrival",
+      "coverage_hint": "Two-shot",
+      "coverage_priority": "medium",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "Intelligence exchange regarding Dejah Thoris",
+      "purpose": "",
+      "action_start": "Kan leans in to whisper",
+      "action_end": "Carter receives the news",
+      "active_subjects": [
+        "kantos_kan",
+        "john_carter"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "close proximity within cell",
+      "blocking_hint": "Characters leaning toward each other",
+      "environment_subzone": "subterranean_amphitheater_arena/cell",
+      "continuity_focus": "Tight character positioning",
+      "coverage_hint": "Tight close-ups",
+      "coverage_priority": "high",
+      "handoff_to_next": "End of scene"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish isolation",
+      "planned_shot_moment_summary": "Carter alone in the cell",
+      "primary_subject_seed": "john_carter",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "subterranean_amphitheater_arena/cell",
+      "planned_shot_required_anchor_1": "ruined cell wall",
+      "planned_shot_scale_proof_detail": "scale of ruins vs prisoner",
+      "start_state_seed": "Carter sitting/standing alone",
+      "end_state_seed": "Movement detected at threshold",
+      "action_seed": "Carter reacts to presence",
+      "blocking_seed": [
+        "Carter centered in frame"
+      ],
+      "shot_size": "medium_full",
+      "camera_angle": "eye_level",
+      "lens_family": "wide",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "low_key_night",
+      "primary_subject_angle": "front_three_quarter_left"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "introduce ally",
+      "planned_shot_moment_summary": "Kan appears at the cell",
+      "primary_subject_seed": "kantos_kan",
+      "secondary_subjects_seed": [
+        "john_carter"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "subterranean_amphitheater_arena/cell",
+      "planned_shot_required_anchor_1": "cell threshold",
+      "planned_shot_scale_proof_detail": "height of Kan vs cell opening",
+      "start_state_seed": "Kan enters frame",
+      "end_state_seed": "Kan establishes eye contact",
+      "action_seed": "Kan approaches Carter",
+      "blocking_seed": [
+        "Kan at edge of cell"
+      ],
+      "shot_size": "medium",
+      "camera_angle": "eye_level",
+      "lens_family": "normal",
+      "camera_motion": "pan",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "low_key_night",
+      "primary_subject_angle": "profile_right"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "convey intelligence",
+      "planned_shot_moment_summary": "Whispered secrets regarding Dejah Thoris",
+      "primary_subject_seed": "kantos_kan",
+      "secondary_subjects_seed": [
+        "john_carter"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "subterranean_amphitheater_arena/cell",
+      "planned_shot_required_anchor_1": "ruined cell wall",
+      "planned_shot_scale_proof_detail": "tightness of frame vs character faces",
+      "start_state_seed": "Kan leans in",
+      "end_state_seed": "Carter absorbs information",
+      "action_seed": "Kan whispers intelligence",
+      "blocking_seed": [
+        "Characters close together"
+      ],
+      "shot_size": "close_up",
+      "camera_angle": "eye_level",
+      "lens_family": "portrait",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "subtle_in",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "low_key_night",
+      "primary_subject_angle": "front_three_quarter_left"
+    }
+  ],
+  "unresolved_questions": [],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH019",
+      "scene_id": "CH019_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH019",
+      "scene_id": "CH019_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH019",
+      "scene_id": "CH019_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH019",
+      "scene_id": "CH019_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH019",
+      "scene_id": "CH019_SC002"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH019",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\02_story_analysis\\chapter_analysis\\CH019_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH019",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH019_chapter_xix.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH021",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH021_chapter_xxi.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH022",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH022_chapter_xxii.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH019",
+      "canonical_id": "john_carter"
+    }
+  ],
+  "evidence_summary": [
+    "[CH019_SC002] Purpose: Provide exposition and establish a secondary protagonist/ally.",
+    "[CH019_SC002] Summary: Carter meets Kantos Kan, a padwar from Helium. Kan provides critical intelligence regarding Dejah Thoris and the status of the search efforts for her.",
+    "[CH019_SC002] Emotional arc: Isolation $\\rightarrow$ Hope/Information Gathering",
+    "[CH019_SC002] Coverage: * Two-shot (dialogue) * Over-the-shoulder shots * Tight close-ups for whispered secrets",
+    "[CH019_SC002] Continuity: Character positioning in the cell; lighting consistency between scenes.",
+    "[CH019] Chapter summary: **Setting:** A subterranean amphitheater within a ruined, ancient green Martian city; later, the hills east of the Warhoon city. **Characters:** * **John Carter:** An Earthman and prisoner of the Warhoons. * **Kantos...",
+    "[CH019] CHAPTER XIX (book index hit)",
+    "[CH021] CHAPTER XXI (book index hit)",
+    "[CH022] CHAPTER XXII (book index hit)",
+    "Character john_carter: [source:C:/FilmCreator_MC/projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH011/john_carter.md] Physical Description: A human male from Earth (Virginia). He possesses the strength and physical capabiliti..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH019_SC002\n\n## Production Intent\nEstablish the alliance between John Carter and Kantos Kan within a subterranean prison setting. The scene must transition from the heavy atmosphere of isolation to a focused exchange of intelligence regarding Dejah Thoris.\n\n## Required Cast\n- john_carter\n- kantos_kan\n\n## Required Environments\n- subterranean_amphitheater_arena (specifically cell subzone)\n\n## Continuity Constraints\n- Character positioning relative to cell boundaries\n- Lighting consistency between subsequent scenes\n\n## Beat List\n- BT001: Carter's isolation in the cell\n- BT002: Kantos Kan arrives\n- BT003: Intelligence exchange regarding Dejah Thoris",
+  "metadata": {
+    "artifact_id": "CH019_SC002_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "87b64e6573f417c2dc9765898792b75d780ad56b",
+    "created_at_utc": "2026-04-26T22:51:19.613667+00:00",
+    "updated_at_utc": "2026-04-26T22:51:19.613667+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH019_SC002",
+        "version": "f156230f519e48b2383bffe118d2e352d49678f4"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH019_SC002",
+        "version": "be39c67c1eb353e59135785464b96707c4da90ad"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH019_SC002",
+        "version": "ba037c8723b7e600206ba9198944d0b016ba1d34"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-26T22:51:48.128291+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "87b64e6573f417c2dc9765898792b75d780ad56b"
+      }
+    ]
+  }
+}

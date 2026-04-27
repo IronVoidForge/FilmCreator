@@ -1,0 +1,360 @@
+{
+  "scene_id": "CH008_SC001",
+  "chapter_id": "CH008",
+  "scene_title": "SC001",
+  "purpose": "To establish the sudden escalation of conflict and demonstrate the tactical superiority/brutality of the Green Martian warriors.",
+  "summary": "As the protagonist and Sola attempt to return home, a retreat by the green Martians signals an incoming threat: twenty large, gray-painted aerial vessels. A highly organized skirmish ensues as the green warriors use the city's architecture to target specific vulnerabilities in the fleet, routing the attackers.",
+  "emotional_arc": "Calm/Routine $\\rightarrow$ Sudden Alarm $\\rightarrow$ Intense Observation of Warfare.",
+  "production_intent": "Establish the sudden escalation of conflict through a massive aerial threat and demonstrate the tactical superiority of the green_martian_warriors via organized urban warfare.",
+  "scene_short_description": "A sudden retreat by local warriors precedes a massive aerial assault on a deserted city.",
+  "scene_primary_scale_story_point": "Twenty large gray vessels dwarfing the urban architecture and combatants.",
+  "scene_required_anchor_catalog": [
+    "deserted_martian_city rooftops",
+    "Surrounding Valleys/Skyline horizon"
+  ],
+  "scene_start_state": "protagonist and sola walking through a calm, deserted city environment.",
+  "scene_end_state": "The fleet is being routed by organized green warrior fire.",
+  "dominant_action_line": "A retreating force signals an incoming fleet, triggering a tactical skirmish.",
+  "scene_spatial_layout": [
+    "Urban canyon corridors within the deserted_martian_city",
+    "Open sky above the Surrounding Valleys/Skyline"
+  ],
+  "character_spatial_map": [
+    "protagonist and sola positioned near city structures",
+    "green_martian_warriors utilizing rooftops for cover",
+    "gray vessels moving through the skyline"
+  ],
+  "environment_subzones": [
+    "deserted_martian_city rooftops",
+    "Surrounding Valleys/Skyline"
+  ],
+  "entry_vectors": [
+    "skyward descent of gray vessels"
+  ],
+  "exit_vectors": [
+    "retreating movement of green_martian_warriors"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: Sudden retreat signals alarm",
+    "BT002 -> BT003: Fleet arrival triggers combat engagement"
+  ],
+  "characters_required": [
+    {
+      "label": "The Protagonist",
+      "canonical_id": "protagonist",
+      "display_name": "protagonist",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH008/protagonist.md",
+      "notes": "Direct registry match for 'protagonist'."
+    },
+    {
+      "label": "Sola",
+      "canonical_id": "sola",
+      "display_name": "sola",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH008/sola.md",
+      "notes": "Direct registry match for 'sola'."
+    },
+    {
+      "label": "Green Martian Warriors (Combatants)",
+      "canonical_id": "green_martian_warriors",
+      "display_name": "green_martian_warriors",
+      "status": "canonical",
+      "entity_kind": "group",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH008/green_martian_warriors.md",
+      "notes": "Direct registry match for 'green_martian_warriors'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "Deserted Martian City (Buildings/Rooftops)",
+      "canonical_id": "deserted_martian_city",
+      "display_name": "deserted_martian_city",
+      "status": "canonical",
+      "entity_kind": "city",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH008/deserted_martian_city.md",
+      "notes": "Direct registry match for 'deserted_martian_city'."
+    },
+    {
+      "label": "Surrounding Valleys/Skyline",
+      "canonical_id": null,
+      "display_name": "Surrounding Valleys/Skyline",
+      "status": "review",
+      "entity_kind": "environment",
+      "resolution_score": 8,
+      "source_path": "",
+      "notes": "Low-confidence environment match requires review."
+    }
+  ],
+  "continuity_constraints": [
+    "Position of protagonist and sola relative to deserted_martian_city structures",
+    "Directional vector of gray vessels vs. green Martian fire trajectories"
+  ],
+  "visual_coverage_families": [
+    "Wide shots of approaching gray fleet",
+    "Medium shots of green_martian_warriors engaging targets",
+    "Close-ups of protagonist reaction",
+    "Dynamic tracking shots of ship movement"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "Routine travel of protagonist and sola",
+      "purpose": "",
+      "action_start": "walking through city",
+      "action_end": "sudden halt",
+      "active_subjects": [
+        "protagonist",
+        "sola"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "deserted_martian_city rooftops",
+      "blocking_hint": "protagonist and sola walking near structures",
+      "environment_subzone": "deserted_martian_city rooftops",
+      "continuity_focus": "position relative to buildings",
+      "coverage_hint": "medium shots",
+      "coverage_priority": "low",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "Sudden alarm via green warrior retreat",
+      "purpose": "",
+      "action_start": "warriors retreating",
+      "action_end": "fleet appearing in sky",
+      "active_subjects": [
+        "green_martian_warriors"
+      ],
+      "passive_subjects": [
+        "protagonist",
+        "sola"
+      ],
+      "spatial_context": "Surrounding Valleys/Skyline",
+      "blocking_hint": "warriors moving away from the skyline",
+      "environment_subzone": "Surrounding Valleys/Skyline",
+      "continuity_focus": "direction of retreat vs fleet arrival",
+      "coverage_hint": "wide shots",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "Organized skirmish against the fleet",
+      "purpose": "",
+      "action_start": "ships entering engagement range",
+      "action_end": "fleet being routed",
+      "active_subjects": [
+        "green_martian_warriors",
+        "gray vessels"
+      ],
+      "passive_subjects": [
+        "protagonist",
+        "sola"
+      ],
+      "spatial_context": "deserted_martian_city rooftops and sky",
+      "blocking_hint": "warriors using architecture to target ships",
+      "environment_subzone": "deserted_martian_city rooftops",
+      "continuity_focus": "direction of green fire vs ship movement",
+      "coverage_hint": "dynamic tracking shots",
+      "coverage_priority": "high",
+      "handoff_to_next": "end_of_scene"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish routine",
+      "planned_shot_moment_summary": "protagonist and sola walking home",
+      "primary_subject_seed": "protagonist",
+      "secondary_subjects_seed": [
+        "sola"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "deserted_martian_city rooftops",
+      "planned_shot_required_anchor_1": "deserted_martian_city rooftops",
+      "planned_shot_scale_proof_detail": "human scale vs building height",
+      "start_state_seed": "walking calmly",
+      "end_state_seed": "stopping abruptly",
+      "action_seed": "walking",
+      "blocking_seed": [
+        "protagonist and sola walking in tandem"
+      ],
+      "shot_size": "medium_full",
+      "camera_angle": "eye_level",
+      "lens_family": "normal",
+      "camera_motion": "track",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front_three_quarter_right"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "establish threat scale",
+      "planned_shot_moment_summary": "twenty gray vessels appearing in skyline",
+      "primary_subject_seed": "gray vessels",
+      "secondary_subjects_seed": [
+        "green_martian_warriors"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "Surrounding Valleys/Skyline",
+      "planned_shot_required_anchor_1": "Surrounding Valleys/Skyline",
+      "planned_shot_scale_proof_detail": "vessel size vs valley width",
+      "start_state_seed": "empty sky",
+      "end_state_seed": "fleet filling frame",
+      "action_seed": "descending",
+      "blocking_seed": [
+        "ships moving in formation"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "low_angle",
+      "lens_family": "ultra_wide",
+      "camera_motion": "pan",
+      "zoom_behavior": "subtle_out",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "hard_directional",
+      "primary_subject_angle": "front"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "demonstrate tactical superiority",
+      "planned_shot_moment_summary": "warriors firing from rooftops",
+      "primary_subject_seed": "green_martian_warriors",
+      "secondary_subjects_seed": [
+        "gray vessels"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "deserted_martian_city rooftops",
+      "planned_shot_required_anchor_1": "deserted_martian_city rooftops",
+      "planned_shot_scale_proof_detail": "warrior position vs ship distance",
+      "start_state_seed": "warriors taking cover",
+      "end_state_seed": "ships being hit",
+      "action_seed": "skirmish",
+      "blocking_seed": [
+        "warriors using architecture for cover"
+      ],
+      "shot_size": "medium",
+      "camera_angle": "eye_level",
+      "lens_family": "telephoto",
+      "camera_motion": "track",
+      "zoom_behavior": "none",
+      "focus_strategy": "rack_focus",
+      "lighting_style": "high_contrast_ceremonial",
+      "primary_subject_angle": "profile_left"
+    }
+  ],
+  "unresolved_questions": [
+    "Resolve Surrounding Valleys/Skyline -> Surrounding Valleys/Skyline"
+  ],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH008",
+      "scene_id": "CH008_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH008",
+      "scene_id": "CH008_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH008",
+      "scene_id": "CH008_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH008",
+      "scene_id": "CH008_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH008",
+      "scene_id": "CH008_SC001"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH008",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\02_story_analysis\\chapter_analysis\\CH008_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH008",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH008_chapter_viii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH021",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH021_chapter_xxi.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH004",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH004_chapter_iv.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH008",
+      "canonical_id": "protagonist"
+    }
+  ],
+  "evidence_summary": [
+    "[CH008_SC001] Purpose: To establish the sudden escalation of conflict and demonstrate the tactical superiority/brutality of the Green Martian warriors.",
+    "[CH008_SC001] Summary: As the protagonist and Sola attempt to return home, a retreat by the green Martians signals an incoming threat: twenty large, gray-painted aerial vessels. A highly organized skirmish ensues as the green warriors use the city's archite...",
+    "[CH008_SC001] Emotional arc: Calm/Routine $\\rightarrow$ Sudden Alarm $\\rightarrow$ Intense Observation of Warfare.",
+    "[CH008_SC001] Coverage: Wide shots of the approaching fleet. Medium shots of Green Martian warriors engaging targets. Close-ups of the protagonist's reaction to the scale of the battle. Dynamic tracking shots following the movement of the ships.",
+    "[CH008_SC001] Continuity: Position of the Protagonist and Sola relative to the city structures. Directional movement of the gray vessels vs. the green Martian fire.",
+    "[CH008] Chapter summary: **Setting:** A deserted Martian city and the surrounding valleys/hills. **Events:** - As the protagonist and Sola attempt to return home after an incubator ceremony, a sudden retreat by the green Martians reveals the...",
+    "[CH008] CHAPTER VIII (book index hit)",
+    "[CH021] CHAPTER XXI (book index hit)",
+    "[CH004] CHAPTER IV (book index hit)",
+    "Character protagonist: An experienced Earthman fighter characterized by extreme physical fitness and superhuman agility. His visual identity is defined by a significant metamorphosis; he transitions from an armed, clothed combatant to a naked state followin..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH008_SC001\n\n## Production Intent\nEstablish the sudden escalation of conflict and demonstrate the tactical superiority/brutality of the Green Martian warriors.\n\n## Required Cast\n- protagonist\n- sola\n- green_martian_warriors\n\n## Required Environments\n- deserted_martian_city\n- Surrounding Valleys/Skyline\n\n## Continuity Constraints\n- Position of protagonist and sola relative to city structures.\n- Directional movement of the gray vessels vs. the green Martian fire.\n\n## Beat List\n- BT001: Routine travel of protagonist and sola.\n- BT002: Sudden alarm via green warrior retreat and fleet appearance.\n- BT003: Organized skirmish against the fleet using urban architecture.",
+  "metadata": {
+    "artifact_id": "CH008_SC001_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "2af0cf1053f53ca3c20ce3d7a1c1574662166893",
+    "created_at_utc": "2026-04-26T22:27:24.397614+00:00",
+    "updated_at_utc": "2026-04-26T22:27:24.397614+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH008_SC001",
+        "version": "e7da8472b0bf88596793da9c93c67fb2c0a08021"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH008_SC001",
+        "version": "368e97ed324e85f41571f7c3f8d8499923245371"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH008_SC001",
+        "version": "5c51bd9a021b5fe764f30c4c0e159054d439dd1a"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-26T22:27:54.407089+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "2af0cf1053f53ca3c20ce3d7a1c1574662166893"
+      }
+    ]
+  }
+}

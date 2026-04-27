@@ -1,0 +1,5 @@
+- [SC001](#sc001) The Infiltration of Zodanga
+- [SC002](#sc002) The Wedding Interruption
+- [SC003](#sc003) Battle in the Throne Room
+- [SC004](#sc004) Dungeon Rescue
+- [SC005](#sc005) The Declaration

@@ -1,0 +1,352 @@
+{
+  "scene_id": "CH018_SC002",
+  "chapter_id": "CH018",
+  "scene_title": "SC002",
+  "purpose": "To execute a major narrative pivot through a violent power shift.",
+  "summary": "Dak Kova openly defies Bar Comas. The two leaders engage in a primal, savage hand-to-hand duel. Dak Kova kills Bar Comas with a tusk thrust and claims the title of Jeddak.",
+  "emotional_arc": "Tension $\\rightarrow$ Chaos/Violence $\\rightarrow$ Shock/Awe.",
+  "production_intent": "Execute a violent power shift through a primal hand-to-hand duel between two leaders on the Martian plains. The sequence must transition from high tension to chaotic violence, concluding with a definitive kill and a change in leadership status.",
+  "scene_short_description": "Two leaders engage in a savage hand-to-hand duel amidst a surrounding horde on open plains.",
+  "scene_primary_scale_story_point": "The physical dominance of Dak Kova over Bar Comas establishes the new Jeddak hierarchy.",
+  "scene_required_anchor_catalog": [
+    "Warhoon column",
+    "Martian soil/dust"
+  ],
+  "scene_start_state": "Dak Kova stands in open defiance against Bar Comas before the Warhoon Warriors.",
+  "scene_end_state": "Dak Kova stands victorious over the corpse of Bar Comas, claiming the title of Jeddak.",
+  "dominant_action_line": "A primal duel escalating from verbal/postural defiance to a lethal tusk thrust.",
+  "scene_spatial_layout": [
+    "Open Martian plains surrounding the Warhoon column",
+    "Circular formation of spectators (Warhoon Warriors)"
+  ],
+  "character_spatial_map": [
+    "dak_kova: Center of combat zone",
+    "bar_comas: Center of combat zone, opposing dak_kova",
+    "Warhoon Warriors (spectators): Concentric ring around the duelists"
+  ],
+  "environment_subzones": [
+    "combat_circle",
+    "spectator_ring"
+  ],
+  "entry_vectors": [
+    "march_route_approach"
+  ],
+  "exit_vectors": [
+    "march_route_continuation"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: Escalation from defiance to physical contact",
+    "BT002 -> BT003: Transition from combat struggle to lethal conclusion"
+  ],
+  "characters_required": [
+    {
+      "label": "Dak Kova",
+      "canonical_id": "dak_kova",
+      "display_name": "dak_kova",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH018/dak_kova.md",
+      "notes": "Direct registry match for 'dak_kova'."
+    },
+    {
+      "label": "Bar Comas",
+      "canonical_id": "bar_comas",
+      "display_name": "bar_comas",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH018/bar_comas.md",
+      "notes": "Direct registry match for 'bar_comas'."
+    },
+    {
+      "label": "Warhoon Warriors (spectators)",
+      "canonical_id": null,
+      "display_name": "Warhoon Warriors (spectators)",
+      "status": "review",
+      "entity_kind": "individual",
+      "resolution_score": 10,
+      "source_path": "",
+      "notes": "Low-confidence character match requires review."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "Open Martian plains near the Warhoon column",
+      "canonical_id": "martian_plains_march_route",
+      "display_name": "martian_plains_march_route",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 112,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH018/martian_plains_march_route.md",
+      "notes": "Chapter-local environment alias match for 'Open Martian plains near the Warhoon column' (key_overlap=2, label_overlap=4, context_overlap=4)."
+    }
+  ],
+  "continuity_constraints": [
+    "Blood splatter patterns on terrain and characters",
+    "Final positioning of the fallen Bar Comas",
+    "Dak Kova's physical state (scars, sweat, blood) post-combat"
+  ],
+  "visual_coverage_families": [
+    "Low-angle combatant scale shots",
+    "Handheld kinetic duel coverage",
+    "Horde reaction shots"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "Dak Kova defies Bar Comas",
+      "purpose": "",
+      "action_start": "Dak Kova stands in defiance",
+      "action_end": "Physical confrontation begins",
+      "active_subjects": [
+        "dak_kova",
+        "bar_comas"
+      ],
+      "passive_subjects": [
+        "Warhoon Warriors (spectators)"
+      ],
+      "spatial_context": "Open Martian plains near the Warhoon column",
+      "blocking_hint": "Duelists face each other; horde forms a ring",
+      "environment_subzone": "combat_circle",
+      "continuity_focus": "Initial positioning of leaders",
+      "coverage_hint": "Low-angle shots to emphasize scale",
+      "coverage_priority": "high",
+      "handoff_to_next": "The tension breaks into physical violence."
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "Primal, savage hand-to-hand duel",
+      "purpose": "",
+      "action_start": "First strike/grapple",
+      "action_end": "Dak Kova gains lethal advantage",
+      "active_subjects": [
+        "dak_kova",
+        "bar_comas"
+      ],
+      "passive_subjects": [
+        "Warhoon Warriors (spectators)"
+      ],
+      "spatial_context": "Center of the spectator ring",
+      "blocking_hint": "Chaotic movement, grappling, and striking",
+      "environment_subzone": "combat_circle",
+      "continuity_focus": "Blood splatter patterns on skin/ground",
+      "coverage_hint": "Handheld, kinetic camera work",
+      "coverage_priority": "high",
+      "handoff_to_next": "The duel reaches its lethal climax."
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "Dak Kova kills Bar Comas and claims Jeddak title",
+      "purpose": "",
+      "action_start": "Tusk thrust execution",
+      "action_end": "Dak Kova stands over the body",
+      "active_subjects": [
+        "dak_kova",
+        "bar_comas"
+      ],
+      "passive_subjects": [
+        "Warhoon Warriors (spectators)"
+      ],
+      "spatial_context": "The center of the combat circle",
+      "blocking_hint": "Bar Comas collapses; Dak Kova remains upright/dominant",
+      "environment_subzone": "combat_circle",
+      "continuity_focus": "Positioning of fallen Bar Comas; Dak Kova's post-combat physical state",
+      "coverage_hint": "Reaction shots of the horde and low-angle victory shot",
+      "coverage_priority": "critical",
+      "handoff_to_next": "Scene ends."
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish tension",
+      "planned_shot_moment_summary": "Dak Kova stares down Bar Comas",
+      "primary_subject_seed": "dak_kova",
+      "secondary_subjects_seed": [
+        "bar_comas",
+        "Warhoon Warriors (spectators)"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "combat_circle",
+      "planned_shot_required_anchor_1": "Warhoon column",
+      "planned_shot_scale_proof_detail": "height differential between leaders and horde",
+      "start_state_seed": "Dak Kova standing still",
+      "end_state_seed": "Dak Kova stepping forward",
+      "action_seed": "defiant stance",
+      "blocking_seed": [
+        "dak_kova facing bar_comas"
+      ],
+      "shot_size": "medium_full",
+      "camera_angle": "low_angle",
+      "lens_family": "wide",
+      "camera_motion": "push_in",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front_three_quarter_left"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "depict violence",
+      "planned_shot_moment_summary": "The primal hand-to-hand struggle",
+      "primary_subject_seed": "dak_kova",
+      "secondary_subjects_seed": [
+        "bar_comas"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "combat_circle",
+      "planned_shot_required_anchor_1": "Martian soil/dust",
+      "planned_shot_scale_proof_detail": "kinetic movement vs static horde",
+      "start_state_seed": "clash of bodies",
+      "end_state_seed": "struggle for dominance",
+      "action_seed": "savage combat",
+      "blocking_seed": [
+        "interlocking limbs and grappling"
+      ],
+      "shot_size": "medium",
+      "camera_angle": "eye_level",
+      "lens_family": "normal",
+      "camera_motion": "handheld",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "high_contrast_ceremonial",
+      "primary_subject_angle": "profile_left"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "narrative pivot",
+      "planned_shot_moment_summary": "Dak Kova kills Bar Comas with a tusk thrust",
+      "primary_subject_seed": "dak_kova",
+      "secondary_subjects_seed": [
+        "bar_comas"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "combat_circle",
+      "planned_shot_required_anchor_1": "Martian soil/dust",
+      "planned_shot_scale_proof_detail": "death of the former leader",
+      "start_state_seed": "struggle peak",
+      "end_state_seed": "Bar Comas falls lifeless",
+      "action_seed": "tusk thrust kill",
+      "blocking_seed": [
+        "dak_kova driving tusk into bar_comas"
+      ],
+      "shot_size": "close_up",
+      "camera_angle": "low_angle",
+      "lens_family": "portrait",
+      "camera_motion": "handheld",
+      "zoom_behavior": "subtle_in",
+      "focus_strategy": "rack_focus",
+      "lighting_style": "high_contrast_ceremonial",
+      "primary_subject_angle": "front"
+    }
+  ],
+  "unresolved_questions": [
+    "Resolve Warhoon Warriors (spectators) -> Warhoon Warriors (spectators)"
+  ],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH018",
+      "scene_id": "CH018_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH018",
+      "scene_id": "CH018_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH018",
+      "scene_id": "CH018_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH018",
+      "scene_id": "CH018_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH018",
+      "scene_id": "CH018_SC002"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH018",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\02_story_analysis\\chapter_analysis\\CH018_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH018",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH018_chapter_xviii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH014",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH014_chapter_xiv.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH022",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH022_chapter_xxii.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH018",
+      "canonical_id": "dak_kova"
+    }
+  ],
+  "evidence_summary": [
+    "[CH018_SC002] Purpose: To execute a major narrative pivot through a violent power shift.",
+    "[CH018_SC002] Summary: Dak Kova openly defies Bar Comas. The two leaders engage in a primal, savage hand-to-hand duel. Dak Kova kills Bar Comas with a tusk thrust and claims the title of Jeddak.",
+    "[CH018_SC002] Emotional arc: Tension $\\rightarrow$ Chaos/Violence $\\rightarrow$ Shock/Awe.",
+    "[CH018_SC002] Coverage: Low-angle shots of the combatants to emphasize scale; handheld, kinetic camera work during the duel; reaction shots of the surrounding horde.",
+    "[CH018_SC002] Continuity: Blood splatter patterns; positioning of the fallen Bar Comas; Dak Kova's physical state post-combat.",
+    "[CH018] Chapter summary: **Setting:** The chapter moves from a small room within a Warhoon camp to the open Martian plains during a military march, and finally to a pitch-black, subterranean dungeon within the city of Warhoon. **Characters:**...",
+    "[CH018] CHAPTER XVIII (book index hit)",
+    "[CH014] CHAPTER XIV (book index hit)",
+    "[CH022] CHAPTER XXII (book index hit)",
+    "Character dak_kova: Dak Kova is a ferocious, green-skinned Martian Warhoon chieftain. He possesses a scarred physique and carries himself with a primal, animalistic intensity. As a warlord, his silhouette is defined by traditional Warhoon warrior gear and t..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH018_SC002\n\n## Production Intent\nExecute a violent power shift through a primal hand-to-hand duel between two leaders on the Martian plains. The sequence must transition from high tension to chaotic violence, concluding with a definitive kill and a change in leadership status.\n\n## Required Cast\n- dak_kova (ferocious, green-skinned, scarred physique)\n- bar_comas\n- Warhoon Warriors (spectators/horde)\n\n## Required Environments\n- martian_plains_march_route (open plains near the Warhoon column)\n\n## Continuity Constraints\n- Blood splatter patterns on terrain and characters\n- Final positioning of the fallen Bar Comas\n- Dak Kova's physical state (scars, sweat, blood) post-combat\n\n## Beat List\n- BT001: Dak Kova defies Bar Comas.\n- BT002: Primal, savage hand-to-hand duel.\n- BT003: Dak Kova kills Bar Comas with a tusk thrust and claims the title of Jeddak.",
+  "metadata": {
+    "artifact_id": "CH018_SC002_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "174b1cbd30d03fc07099c9eb8044fd09fdf3b68d",
+    "created_at_utc": "2026-04-26T22:48:47.548347+00:00",
+    "updated_at_utc": "2026-04-26T22:48:47.548347+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH018_SC002",
+        "version": "643892bcbabcf484f1e66fc1a20ccaad4ad38cba"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH018_SC002",
+        "version": "e9bb36981c3894a2620d0b4391cb335f97ad8df7"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH018_SC002",
+        "version": "d331a58ed728f42b059dd91ca71f5d0e012efc6b"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-26T22:49:19.909703+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "174b1cbd30d03fc07099c9eb8044fd09fdf3b68d"
+      }
+    ]
+  }
+}

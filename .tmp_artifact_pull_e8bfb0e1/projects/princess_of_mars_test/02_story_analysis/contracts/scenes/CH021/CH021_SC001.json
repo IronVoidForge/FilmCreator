@@ -1,0 +1,325 @@
+{
+  "scene_id": "CH021_SC001",
+  "chapter_id": "CH021",
+  "scene_title": "SC001",
+  "purpose": "Establish the Martian landscape, world-building lore, and the grim news regarding Dejah Thoris.",
+  "summary": "Carter travels through highly advanced agricultural tracts, observing the sophisticated irrigation systems of Mars. During his journey, he receives word from a noble that Dejah Thoris is presumed dead following recent conflicts with Tharks and Warhoons.",
+  "emotional_arc": "Wonder/Curiosity $\\rightarrow$ Somberness/Grief.",
+  "production_intent": "Establish the scale of Martian civilization through advanced irrigation infrastructure and transition the protagonist from curiosity regarding the landscape to profound grief upon receiving news of Dejah Thoris's death.",
+  "scene_short_description": "A traveler moves through advanced irrigation systems across vast cultivated Martian plains.",
+  "scene_primary_scale_story_point": "Massive infrastructure dwarfing the lone human traveler.",
+  "scene_required_anchor_catalog": [
+    "sophisticated irrigation systems",
+    "martian_agricultural_tracts"
+  ],
+  "scene_start_state": "Carter observing the scale of the advanced agricultural tracts.",
+  "scene_end_state": "Carter processing the news of Dejah Thoris's presumed death.",
+  "dominant_action_line": "Carter travels through irrigated fields and receives grim news via off-screen dialogue.",
+  "scene_spatial_layout": [
+    "Expansive open plains with structured irrigation channels",
+    "Linear travel path toward Zodanga"
+  ],
+  "character_spatial_map": [
+    "john_carter moving through the mid-ground of the agricultural tracts",
+    "Martian Noble (off-screen/dialogue) existing as an external auditory presence"
+  ],
+  "environment_subzones": [
+    "martian_agricultural_tracts/irrigation_channels",
+    "martian_agricultural_tracts/open_plains"
+  ],
+  "entry_vectors": [
+    "path from polar ice caps"
+  ],
+  "exit_vectors": [
+    "path toward Zodanga"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: Visual awe to auditory interruption",
+    "BT002 -> BT003: Auditory news to internal emotional collapse"
+  ],
+  "characters_required": [
+    {
+      "label": "John Carter",
+      "canonical_id": "john_carter",
+      "display_name": "john_carter",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH021/john_carter.md",
+      "notes": "Direct registry match for 'john_carter'."
+    },
+    {
+      "label": "Martian Noble (off-screen/dialogue)",
+      "canonical_id": null,
+      "display_name": "Martian Noble (off-screen/dialogue)",
+      "status": "unresolved",
+      "entity_kind": "",
+      "resolution_score": null,
+      "source_path": "",
+      "notes": "No character candidate found."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "Cultivated agricultural tracts between the polar ice caps and Zodanga",
+      "canonical_id": "martian_agricultural_tracts",
+      "display_name": "martian_agricultural_tracts",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 114,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH021/martian_agricultural_tracts.md",
+      "notes": "Chapter-local environment alias match for 'Cultivated agricultural tracts between the polar ice caps and Zodanga' (key_overlap=2, label_overlap=7, context_overlap=4)."
+    }
+  ],
+  "continuity_constraints": [
+    "Travel progression and distance across plains",
+    "Lighting consistency across vast agricultural tracts"
+  ],
+  "visual_coverage_families": [
+    "Wide establishing shots of Martian infrastructure",
+    "Close-ups of Carter's reactions to the landscape and news"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "Observation of Martian infrastructure",
+      "purpose": "",
+      "action_start": "Carter walking through tracts",
+      "action_end": "Carter pausing to look at irrigation",
+      "active_subjects": [
+        "john_carter"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "martian_agricultural_tracts/irrigation_channels",
+      "blocking_hint": "linear movement along channels",
+      "environment_subzone": "irrigation_channels",
+      "continuity_focus": "travel distance",
+      "coverage_hint": "wide establishing",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "Receipt of news",
+      "purpose": "",
+      "action_start": "Voice of Noble begins",
+      "action_end": "Carter stops walking",
+      "active_subjects": [
+        "john_carter"
+      ],
+      "passive_subjects": [
+        "Martian Noble (off-screen/dialogue)"
+      ],
+      "spatial_context": "martian_agricultural_tracts/open_plains",
+      "blocking_hint": "sudden halt in movement",
+      "environment_subzone": "open_plains",
+      "continuity_focus": "lighting consistency",
+      "coverage_hint": "close-up reaction",
+      "coverage_priority": "medium",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "Emotional realization of Dejah Thoris's death",
+      "purpose": "",
+      "action_start": "Carter hears the name Dejah Thoris",
+      "action_end": "Carter stands in somber silence",
+      "active_subjects": [
+        "john_carter"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "martian_agricultural_tracts/open_plains",
+      "blocking_hint": "static, heavy posture",
+      "environment_subzone": "open_plains",
+      "continuity_focus": "facial expression stability",
+      "coverage_hint": "extreme close-up",
+      "coverage_priority": "high",
+      "handoff_to_next": "end_scene"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish_world",
+      "planned_shot_moment_summary": "Carter views the vast irrigation systems",
+      "primary_subject_seed": "john_carter",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "martian_agricultural_tracts/irrigation_channels",
+      "planned_shot_required_anchor_1": "sophisticated irrigation systems",
+      "planned_shot_scale_proof_detail": "infrastructure vs human size",
+      "start_state_seed": "wide vista",
+      "end_state_seed": "pan across channels",
+      "action_seed": "traveling",
+      "blocking_seed": [
+        "walking through field"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "eye_level",
+      "lens_family": "ultra_wide",
+      "camera_motion": "track",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "profile_right"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "introduce_conflict",
+      "planned_shot_moment_summary": "The Noble delivers the news off-screen",
+      "primary_subject_seed": "john_carter",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "off_screen_voice",
+      "environment_subzone": "martian_agricultural_tracts/open_plains",
+      "planned_shot_required_anchor_1": "none",
+      "planned_shot_scale_proof_detail": "none",
+      "start_state_seed": "medium shot of Carter",
+      "end_state_seed": "close-up on Carter",
+      "action_seed": "stopping movement",
+      "blocking_seed": [
+        "halted in mid-stride"
+      ],
+      "shot_size": "close_up",
+      "camera_angle": "eye_level",
+      "lens_family": "portrait",
+      "camera_motion": "push_in",
+      "zoom_behavior": "subtle_in",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "hard_directional",
+      "primary_subject_angle": "front_three_quarter_left"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "emotional_payoff",
+      "planned_shot_moment_summary": "Carter reacts to the news of Dejah Thoris",
+      "primary_subject_seed": "john_carter",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "martian_agricultural_tracts/open_plains",
+      "planned_shot_required_anchor_1": "none",
+      "planned_shot_scale_proof_detail": "none",
+      "start_state_seed": "tight close-up",
+      "end_state_seed": "static tight close-up",
+      "action_seed": "expression shifts to grief",
+      "blocking_seed": [
+        "stationary"
+      ],
+      "shot_size": "extreme_close_up",
+      "camera_angle": "eye_level",
+      "lens_family": "portrait",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "high_contrast_ceremonial",
+      "primary_subject_angle": "front"
+    }
+  ],
+  "unresolved_questions": [
+    "Resolve Martian Noble (off-screen/dialogue) -> Martian Noble (off-screen/dialogue)"
+  ],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH021",
+      "scene_id": "CH021_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH021",
+      "scene_id": "CH021_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH021",
+      "scene_id": "CH021_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH021",
+      "scene_id": "CH021_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH021",
+      "scene_id": "CH021_SC001"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH021",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\02_story_analysis\\chapter_analysis\\CH021_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH011",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH011_chapter_xi.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH019",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH019_chapter_xix.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH020",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH020_chapter_xx.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH021",
+      "canonical_id": "john_carter"
+    }
+  ],
+  "evidence_summary": [
+    "[CH021_SC001] Purpose: Establish the Martian landscape, world-building lore, and the grim news regarding Dejah Thoris.",
+    "[CH021_SC001] Summary: Carter travels through highly advanced agricultural tracts, observing the sophisticated irrigation systems of Mars. During his journey, he receives word from a noble that Dejah Thoris is presumed dead following recent conflicts with T...",
+    "[CH021_SC001] Emotional arc: Wonder/Curiosity $\\rightarrow$ Somberness/Grief.",
+    "[CH021_SC001] Coverage: Wide establishing shots of Martian infrastructure; Close-ups of Carter's reactions to the landscape and news.",
+    "[CH021_SC001] Continuity: Travel progression/distance; Lighting consistency across the vast plains.",
+    "[CH021] Chapter summary: **Setting:** The journey begins on the cultivated agricultural tracts between the polar ice caps and populated centers, moving toward the vast, walled city of Zodanga. The setting features advanced Martian infrastruct...",
+    "[CH011] CHAPTER XI (book index hit)",
+    "[CH019] CHAPTER XIX (book index hit)",
+    "[CH020] CHAPTER XX (book index hit)",
+    "Character john_carter: [source:C:/FilmCreator_MC/projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH011/john_carter.md] Physical Description: A human male from Earth (Virginia). He possesses the strength and physical capabiliti..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH021_SC001\n\n## Production Intent\nEstablish the scale of Martian civilization through advanced irrigation infrastructure and transition the protagonist from curiosity regarding the landscape to profound grief upon receiving news of Dejah Thoris's death.\n\n## Required Cast\n- john_carter\n- Martian Noble (off-screen/dialogue)\n\n## Required Environments\n- martian_agricultural_tracts\n\n## Continuity Constraints\n- Travel progression and distance across plains\n- Lighting consistency across vast agricultural tracts\n\n## Beat List\n- BT001: Observation of Martian infrastructure\n- BT002: Receipt of news\n- BT003: Emotional realization of Dejah Thoris's death",
+  "metadata": {
+    "artifact_id": "CH021_SC001_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "7467383f412c2fd671c8910c2c9fe4d6b004f752",
+    "created_at_utc": "2026-04-26T22:55:15.633171+00:00",
+    "updated_at_utc": "2026-04-26T22:55:15.633171+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH021_SC001",
+        "version": "b3a0c04f01f6be2c637dbfab2d00d16852ca90c3"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH021_SC001",
+        "version": "71547d011fb030b3c7d6c1726eefef1ef36344d7"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH021_SC001",
+        "version": "0e0894d68e72fa5f19f7a3a247ba6b14a4a11801"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-26T22:55:44.075391+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "7467383f412c2fd671c8910c2c9fe4d6b004f752"
+      }
+    ]
+  }
+}

@@ -1,0 +1,342 @@
+{
+  "scene_id": "CH024_SC002",
+  "chapter_id": "CH024",
+  "scene_title": "SC002",
+  "purpose": "Remove political obstacles (Sarkoja) to prepare for the leadership challenge.",
+  "summary": "To avoid the wrath of Jeddak Tal Hajus, John Carter and Tars Tarkas decide to confront him in council. They intercept the priestess Sarkoja, using intimidation to force her to flee Thark, removing her influence from the upcoming political shift.",
+  "emotional_arc": "Tension $\\rightarrow$ Intimidation $\\rightarrow$ Resolution.",
+  "production_intent": "John Carter and Tars Tarkas intercept Sarkoja within the Thark interior to neutralize her political influence through intimidation, clearing the path for a leadership challenge against Jeddak Tal Hajus.",
+  "scene_short_description": "Two warriors intercept a priestess in a dim interior to force her departure.",
+  "scene_primary_scale_story_point": "Two combatants physically dominating one political figure.",
+  "scene_required_anchor_catalog": [
+    "Thark interior architecture/pillars"
+  ],
+  "scene_start_state": "John Carter and Tars Tarkas moving through the shadows of Thark.",
+  "scene_end_state": "Sarkoja fleeing the scene, leaving the duo in control.",
+  "dominant_action_line": "Intercepting and intimidating Sarkoja to force her exile.",
+  "scene_spatial_layout": [
+    "Enclosed interior space with defined corridors or alcoves",
+    "Confrontation point established between two groups"
+  ],
+  "character_spatial_map": [
+    "john_carter and tars_tarkas positioned as a unified front",
+    "sarkoja caught between the duo and an exit path"
+  ],
+  "environment_subzones": [
+    "thark_city_interior_corridor",
+    "thark_city_interior_exit"
+  ],
+  "entry_vectors": [
+    "corridor approach"
+  ],
+  "exit_vectors": [
+    "Sarkoja fleeing through exit"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: Interception/Confrontation",
+    "BT002 -> BT003: Intimidation/Flight"
+  ],
+  "characters_required": [
+    {
+      "label": "John Carter",
+      "canonical_id": "john_carter",
+      "display_name": "john_carter",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH024/john_carter.md",
+      "notes": "Direct registry match for 'john_carter'."
+    },
+    {
+      "label": "Tars Tarkas",
+      "canonical_id": "tars_tarkas",
+      "display_name": "tars_tarkas",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH024/tars_tarkas.md",
+      "notes": "Direct registry match for 'tars_tarkas'."
+    },
+    {
+      "label": "Sarkoja",
+      "canonical_id": "sarkoja",
+      "display_name": "sarkoja",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH024/sarkoja.md",
+      "notes": "Direct registry match for 'sarkoja'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "Thark (City/Interior)",
+      "canonical_id": "thark_city_interior",
+      "display_name": "thark_city_interior",
+      "status": "canonical",
+      "entity_kind": "city",
+      "resolution_score": 108,
+      "source_path": "projects/princess_of_mars_test/02_story_analysis/environment_breakdowns/chapters/CH017/thark_city_interior.md",
+      "notes": "Direct registry match for 'thark_city_interior'."
+    }
+  ],
+  "continuity_constraints": [
+    "Thark interior lighting levels",
+    "Character positioning relative to the threat"
+  ],
+  "visual_coverage_families": [
+    "Low-angle shots emphasizing intimidation of Sarkoja",
+    "Tight close-ups on facial expressions during confrontation",
+    "Tracking shots following Sarkoja's flight"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "Interception of Sarkoja",
+      "purpose": "",
+      "action_start": "Carter and Tars moving through Thark",
+      "action_end": "Sarkoja is blocked by the duo",
+      "active_subjects": [
+        "john_carter",
+        "tars_tarkas"
+      ],
+      "passive_subjects": [
+        "sarkoja"
+      ],
+      "spatial_context": "thark_city_interior_corridor",
+      "blocking_hint": "Carter and Tars close the distance to Sarkoja",
+      "environment_subzone": "thark_city_interior_corridor",
+      "continuity_focus": "lighting levels in interior",
+      "coverage_hint": "medium_full shots",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "Intimidation of the priestess",
+      "purpose": "",
+      "action_start": "Sarkoja realizes she is cornered",
+      "action_end": "Sarkoja yields to the threat",
+      "active_subjects": [
+        "john_carter",
+        "tars_tarkas",
+        "sarkoja"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "thark_city_interior_corridor",
+      "blocking_hint": "Carter and Tars loom over Sarkoja",
+      "environment_subzone": "thark_city_interior_corridor",
+      "continuity_focus": "character positioning during threat",
+      "coverage_hint": "tight close-ups on faces",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "Sarkoja flees Thark",
+      "purpose": "",
+      "action_start": "Sarkoja turns to run",
+      "action_end": "Sarkoja is gone from the immediate area",
+      "active_subjects": [
+        "sarkoja"
+      ],
+      "passive_subjects": [
+        "john_carter",
+        "tars_tarkas"
+      ],
+      "spatial_context": "thark_city_interior_exit",
+      "blocking_hint": "Sarkoja moves away from the duo toward an exit",
+      "environment_subzone": "thark_city_interior_exit",
+      "continuity_focus": "lighting levels during movement",
+      "coverage_hint": "tracking shots",
+      "coverage_priority": "medium",
+      "handoff_to_next": "end_scene"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish threat",
+      "planned_shot_moment_summary": "Carter and Tars Tarkas intercept Sarkoja",
+      "primary_subject_seed": "john_carter",
+      "secondary_subjects_seed": [
+        "tars_tarkas",
+        "sarkoja"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "thark_city_interior_corridor",
+      "planned_shot_required_anchor_1": "thark_city_interior_architecture",
+      "planned_shot_scale_proof_detail": "height differential between warriors and priestess",
+      "start_state_seed": "Carter/Tars moving in shadow",
+      "end_state_seed": "Sarkoja stopped mid-stride",
+      "action_seed": "intercepting movement",
+      "blocking_seed": [
+        "Carter and Tars flank Sarkoja"
+      ],
+      "shot_size": "medium_full",
+      "camera_angle": "eye_level",
+      "lens_family": "wide",
+      "camera_motion": "track",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "low_key_night",
+      "primary_subject_angle": "front_three_quarter_right"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "convey intimidation",
+      "planned_shot_moment_summary": "Close up of Sarkoja reacting to the threat",
+      "primary_subject_seed": "sarkoja",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "thark_city_interior_corridor",
+      "planned_shot_required_anchor_1": "thark_city_interior_architecture",
+      "planned_shot_scale_proof_detail": "tight framing on facial tension",
+      "start_state_seed": "Sarkoja frozen",
+      "end_state_seed": "Sarkoja eyes widening",
+      "action_seed": "facial reaction to intimidation",
+      "blocking_seed": [
+        "Sarkoja stationary"
+      ],
+      "shot_size": "close_up",
+      "camera_angle": "low_angle",
+      "lens_family": "portrait",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "subtle_in",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "hard_directional",
+      "primary_subject_angle": "front"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "resolve scene",
+      "planned_shot_moment_summary": "Sarkoja flees the area",
+      "primary_subject_seed": "sarkoja",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "thark_city_interior_exit",
+      "planned_shot_required_anchor_1": "thark_city_interior_architecture",
+      "planned_shot_scale_proof_detail": "distance increasing from Carter/Tars",
+      "start_state_seed": "Sarkoja turning to run",
+      "end_state_seed": "Sarkoja disappearing into darkness",
+      "action_seed": "fleeing",
+      "blocking_seed": [
+        "Sarkoja running away from camera"
+      ],
+      "shot_size": "full",
+      "camera_angle": "eye_level",
+      "lens_family": "wide",
+      "camera_motion": "track",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "low_key_night",
+      "primary_subject_angle": "rear_three_quarter_left"
+    }
+  ],
+  "unresolved_questions": [],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH024",
+      "scene_id": "CH024_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH024",
+      "scene_id": "CH024_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH024",
+      "scene_id": "CH024_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH024",
+      "scene_id": "CH024_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH024",
+      "scene_id": "CH024_SC002"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH024",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\02_story_analysis\\chapter_analysis\\CH024_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH010",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH010_chapter_x.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH011",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH011_chapter_xi.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH015",
+      "source_path": "C:\\FilmCreator_MC\\projects\\princess_of_mars_test\\01_source\\chapters\\CH015_chapter_xv.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH024",
+      "canonical_id": "john_carter"
+    }
+  ],
+  "evidence_summary": [
+    "[CH024_SC002] Purpose: Remove political obstacles (Sarkoja) to prepare for the leadership challenge.",
+    "[CH024_SC002] Summary: To avoid the wrath of Jeddak Tal Hajus, John Carter and Tars Tarkas decide to confront him in council. They intercept the priestess Sarkoja, using intimidation to force her to flee Thark, removing her influence from the upcoming polit...",
+    "[CH024_SC002] Emotional arc: Tension $\\rightarrow$ Intimidation $\\rightarrow$ Resolution.",
+    "[CH024_SC002] Coverage: Low-angle shots to emphasize the intimidation of Sarkoja. Tight close-ups on facial expressions during the confrontation. Tracking shots as Sarkoja flees.",
+    "[CH024_SC002] Continuity: Lighting levels in Thark interiors, character positioning during the threat.",
+    "[CH024] Chapter summary: **Events:** John Carter's aircraft is shot down during a massive battle between Tharks and Warhoons. He intervenes to save Tars Tarkas from being killed by three Warhoon warriors, cementing a new friendship between th...",
+    "[CH010] CHAPTER X (book index hit)",
+    "[CH011] CHAPTER XI (book index hit)",
+    "[CH015] CHAPTER XV (book index hit)",
+    "Character john_carter: [source:C:/FilmCreator_MC/projects/princess_of_mars_test/02_story_analysis/character_breakdowns/chapters/CH011/john_carter.md] Physical Description: A human male from Earth (Virginia). He possesses the strength and physical capabiliti..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH024_SC002\n\n## Production Intent\nJohn Carter and Tars Tarkas intercept Sarkoja within the Thark interior to neutralize her political influence through intimidation, clearing the path for a leadership challenge against Jeddak Tal Hajus.\n\n## Required Cast\n- john_carter\n- tars_tarkas\n- sarkoja\n\n## Required Environments\n- thark_city_interior\n\n## Continuity Constraints\n- Lighting levels in Thark interiors\n- Character positioning during the threat\n\n## Beat List\n- BT001: Interception of Sarkoja\n- BT002: Intimidation of the priestess\n- BT003: Sarkoja flees Thark",
+  "metadata": {
+    "artifact_id": "CH024_SC002_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "3d63f6e803b8e78574a148a5499943fb29ce7865",
+    "created_at_utc": "2026-04-26T23:03:27.983180+00:00",
+    "updated_at_utc": "2026-04-26T23:03:27.983180+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH024_SC002",
+        "version": "c9673d1b12c2879ff84f5a6c2684dca9e914c4df"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH024_SC002",
+        "version": "5436483b700f260feed3083a8620f32c76fac26c"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH024_SC002",
+        "version": "8aba82f9b638ea1d40d052ac01302563d0f3de7e"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-26T23:03:58.283410+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "3d63f6e803b8e78574a148a5499943fb29ce7865"
+      }
+    ]
+  }
+}
