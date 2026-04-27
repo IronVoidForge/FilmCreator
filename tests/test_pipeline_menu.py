@@ -143,7 +143,7 @@ def test_pipeline_menu_cleanup_dry_run(monkeypatch) -> None:
 
 
 def test_pipeline_menu_advanced_range_runs_selected_span(monkeypatch) -> None:
-    prompts = iter(["13", "8", "12", "14"])
+    prompts = iter(["13", "9", "13", "14"])
     outputs: list[str] = []
     called: dict[str, object] = {}
 

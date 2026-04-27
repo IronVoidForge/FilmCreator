@@ -19,7 +19,7 @@ class RuntimeSettings:
     lmstudio_base_url: str
     lmstudio_model: str | None
     lmstudio_timeout_seconds: float
-    shot_coverage_density: str
+    shot_coverage_density: str = "medium"
 
 
 def load_runtime_settings() -> RuntimeSettings:

@@ -494,13 +494,14 @@ def run_full_production_pipeline(
         break
 
     if downstream_start:
-        downstream_summary = run_downstream_production(
-            project_slug,
-            chapters=chapters,
-            start_phase=downstream_start,
-            mode=mode,
-            coverage_density=coverage_density,
-        )
+        downstream_kwargs: dict[str, Any] = {
+            "chapters": chapters,
+            "start_phase": downstream_start,
+            "mode": mode,
+        }
+        if coverage_density is not None:
+            downstream_kwargs["coverage_density"] = coverage_density
+        downstream_summary = run_downstream_production(project_slug, **downstream_kwargs)
         for phase_name, payload in downstream_summary.phase_summaries.items():
             phase_summaries[phase_name] = payload
         for phase_name in downstream_summary.completed_phases:
