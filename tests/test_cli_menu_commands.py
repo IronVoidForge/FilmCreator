@@ -39,6 +39,45 @@ def test_cli_project_status_command_persists_and_prints(monkeypatch, capsys) -> 
     assert persisted[0][1] == "project-status"
 
 
+def test_cli_resume_check_command_persists_and_prints(monkeypatch, capsys) -> None:
+    cli_module = _load_legacy_cli_module()
+    monkeypatch.setattr(
+        sys,
+        "argv",
+        ["orchestrator", "resume-check", "demo", "--chapters", "2-3"],
+    )
+    monkeypatch.setattr(
+        cli_module,
+        "get_resume_check_summary",
+        lambda project_slug, chapters=None: type(
+            "Summary",
+            (),
+            {
+                "to_dict": lambda self: {
+                    "project_slug": project_slug,
+                    "chapters": chapters,
+                    "resume_from": "scene_contracts",
+                    "report": [],
+                    "command": "resume-check",
+                }
+            },
+        )(),
+    )
+    persisted: list[tuple[str, str, dict]] = []
+    monkeypatch.setattr(
+        cli_module,
+        "persist_run_summary",
+        lambda project_slug, run_type, payload: persisted.append((project_slug, run_type, payload)),
+    )
+
+    cli_module.main()
+
+    payload = json.loads(capsys.readouterr().out)
+    assert payload["resume_from"] == "scene_contracts"
+    assert persisted[0][0] == "demo"
+    assert persisted[0][1] == "resume-check"
+
+
 def test_cli_run_quicktest_composite_dispatches(monkeypatch, capsys) -> None:
     cli_module = _load_legacy_cli_module()
     monkeypatch.setattr(

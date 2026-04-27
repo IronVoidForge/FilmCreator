@@ -41,7 +41,7 @@ from .production_pipeline import (
     run_story_analysis_pipeline,
 )
 from .production_run_state import persist_run_summary
-from .production_status import get_production_status
+from .production_status import get_production_status, get_resume_check_summary
 from .scene_contracts import run_scene_contract_synthesis
 from .scene_bindings import run_scene_binding_synthesis
 from .shot_planner import run_shot_planning
@@ -228,6 +228,10 @@ def build_parser() -> argparse.ArgumentParser:
     ps.add_argument("project_slug", nargs="?", default="princess_of_mars_test")
     ps.add_argument("--chapters", type=str, default=None)
 
+    rc = subparsers.add_parser("resume-check")
+    rc.add_argument("project_slug", nargs="?", default="princess_of_mars_test")
+    rc.add_argument("--chapters", type=str, default=None)
+
     rp = subparsers.add_parser("run-production")
     rp.add_argument("project_slug", nargs="?", default="princess_of_mars_test")
     rp.add_argument("--chapters", type=str, default=None)
@@ -354,6 +358,8 @@ def main() -> None:
         summary = summarize_downstream_run(args.project_slug, pipeline_key=args.pipeline_key)
     elif args.command == "project-status":
         summary = get_production_status(args.project_slug, chapters=args.chapters)
+    elif args.command == "resume-check":
+        summary = get_resume_check_summary(args.project_slug, chapters=args.chapters)
     elif args.command == "run-production":
         if args.plan_only:
             summary = plan_trusted_resume_pipeline(args.project_slug, chapters=args.chapters)

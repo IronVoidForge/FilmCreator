@@ -79,3 +79,31 @@ def format_production_status(summary: ProductionStatusSummary) -> list[str]:
     for note in summary.notes:
         lines.append(f"Note: {note}")
     return lines
+
+
+@dataclass(frozen=True)
+class ResumeCheckSummary:
+    project_slug: str
+    chapters: str | None
+    resume_from: str
+    report: list[dict[str, Any]]
+
+    def to_dict(self) -> dict[str, Any]:
+        return {
+            "project_slug": self.project_slug,
+            "chapters": self.chapters,
+            "resume_from": self.resume_from,
+            "report": self.report,
+            "command": "resume-check",
+        }
+
+
+def get_resume_check_summary(project_slug: str, *, chapters: str | None = None) -> ResumeCheckSummary:
+    report = validation_report(project_slug, chapters or "")
+    resume_from = find_first_incomplete_stage(project_slug, chapters or "") or "complete"
+    return ResumeCheckSummary(
+        project_slug=project_slug,
+        chapters=chapters,
+        resume_from=resume_from,
+        report=report,
+    )
