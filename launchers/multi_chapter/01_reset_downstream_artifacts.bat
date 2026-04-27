@@ -33,7 +33,7 @@ echo   02_story_analysis\grading
 echo   02_story_analysis\dialogue_enrichment
 echo   02_story_analysis\world\refinement
 echo   03_prompt_packages
-echo   04_references
+echo   03_reference_assets
 echo   05_scenes
 echo   06_reviews
 echo   07_finals
@@ -60,7 +60,7 @@ powershell -NoProfile -Command ^
     "    (Join-Path $root '02_story_analysis\dialogue_enrichment')," ^
     "    (Join-Path $root '02_story_analysis\world\refinement')," ^
     "    (Join-Path $root '03_prompt_packages')," ^
-    "    (Join-Path $root '04_references')," ^
+    "    (Join-Path $root '03_reference_assets')," ^
     "    (Join-Path $root '05_scenes')," ^
     "    (Join-Path $root '06_reviews')," ^
     "    (Join-Path $root '07_finals')," ^

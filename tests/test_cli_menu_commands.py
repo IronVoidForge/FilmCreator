@@ -104,3 +104,67 @@ def test_cli_run_production_range_dispatches(monkeypatch, capsys) -> None:
     payload = json.loads(out)
     assert payload["start_phase"] == "scene_contracts"
     assert payload["end_phase"] == "prompt_preparation"
+
+
+def test_cli_generate_character_references_passes_chapters(monkeypatch, capsys) -> None:
+    cli_module = _load_legacy_cli_module()
+    monkeypatch.setattr(
+        sys,
+        "argv",
+        [
+            "orchestrator",
+            "generate-character-references",
+            "demo",
+            "--chapters",
+            "2-3",
+            "--variant",
+            "bust_portrait",
+            "--test-slice",
+        ],
+    )
+    captured: dict[str, object] = {}
+
+    def fake_run(project_slug, **kwargs):
+        captured["project_slug"] = project_slug
+        captured.update(kwargs)
+        return type("Summary", (), {"to_dict": lambda self: {"ok": True, "chapters": kwargs.get("chapters")}})()
+
+    monkeypatch.setattr(cli_module, "run_character_reference_generation", fake_run)
+
+    cli_module.main()
+
+    payload = json.loads(capsys.readouterr().out)
+    assert payload["chapters"] == "2-3"
+    assert captured["chapters"] == "2-3"
+
+
+def test_cli_generate_environment_references_passes_chapters(monkeypatch, capsys) -> None:
+    cli_module = _load_legacy_cli_module()
+    monkeypatch.setattr(
+        sys,
+        "argv",
+        [
+            "orchestrator",
+            "generate-environment-references",
+            "demo",
+            "--chapters",
+            "2-3",
+            "--variant",
+            "establishing_wide",
+            "--test-slice",
+        ],
+    )
+    captured: dict[str, object] = {}
+
+    def fake_run(project_slug, **kwargs):
+        captured["project_slug"] = project_slug
+        captured.update(kwargs)
+        return type("Summary", (), {"to_dict": lambda self: {"ok": True, "chapters": kwargs.get("chapters")}})()
+
+    monkeypatch.setattr(cli_module, "run_environment_reference_generation", fake_run)
+
+    cli_module.main()
+
+    payload = json.loads(capsys.readouterr().out)
+    assert payload["chapters"] == "2-3"
+    assert captured["chapters"] == "2-3"

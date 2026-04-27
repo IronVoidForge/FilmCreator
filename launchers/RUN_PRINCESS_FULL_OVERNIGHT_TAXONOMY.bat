@@ -183,7 +183,7 @@ echo   'projects\%PROJECT_SLUG%\02_story_analysis\dialogue_enrichment', >> "%TEM
 echo   'projects\%PROJECT_SLUG%\02_story_analysis\world\refinement', >> "%TEMP_PS_SCRIPT%"
 echo   'projects\%PROJECT_SLUG%\02_story_analysis\world\global\VISUAL_FALLBACKS.json', >> "%TEMP_PS_SCRIPT%"
 echo   'projects\%PROJECT_SLUG%\03_prompt_packages', >> "%TEMP_PS_SCRIPT%"
-echo   'projects\%PROJECT_SLUG%\04_references', >> "%TEMP_PS_SCRIPT%"
+echo   'projects\%PROJECT_SLUG%\03_reference_assets', >> "%TEMP_PS_SCRIPT%"
 echo   'projects\%PROJECT_SLUG%\05_scenes', >> "%TEMP_PS_SCRIPT%"
 echo   'projects\%PROJECT_SLUG%\06_reviews', >> "%TEMP_PS_SCRIPT%"
 echo   'projects\%PROJECT_SLUG%\07_finals' >> "%TEMP_PS_SCRIPT%"

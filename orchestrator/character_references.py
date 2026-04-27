@@ -6,6 +6,7 @@ from typing import Any
 from .character_bible import _is_film_facing_character
 from .chapter_selection import any_chapter_matches, parse_chapter_selector
 from .core.json_io import read_json
+from .prompt_boosters import apply_booster_bundles
 from .prompt_package import PromptPackage, parse_prompt_package, write_prompt_package, _split_sections
 from .reference_assets import (
     CHARACTER_DEFAULT_VARIANTS,
@@ -24,7 +25,6 @@ from .reference_assets import (
 )
 from .runner import run_still
 from .scaffold import create_project
-from .core.json_io import read_json
 
 CHARACTER_MASTER_VARIANTS = {"full_body_neutral", "bust_portrait"}
 CHARACTER_PRIMARY_MASTER_VARIANT = "full_body_neutral"
@@ -428,6 +428,13 @@ def _write_generation_prompt_package(
     entry["missing_booster_bundle_ids"] = list(booster_meta.get("missing_booster_bundle_ids", []))
     entry["positive_boosters"] = list(booster_meta.get("positive_boosters", []))
     entry["negative_boosters"] = list(booster_meta.get("negative_boosters", []))
+    inputs_markdown = _build_generation_inputs_markdown(
+        package,
+        entry,
+        workflow_id=workflow_id,
+        source_ref=source_ref,
+        booster_meta=booster_meta,
+    )
 
     generated = PromptPackage(
         path=package.path,
@@ -437,7 +444,7 @@ def _write_generation_prompt_package(
         workflow_type=workflow_id,
         positive_prompt=boosted_positive,
         negative_prompt=boosted_negative,
-        inputs_markdown=package.inputs_markdown,
+        inputs_markdown=inputs_markdown,
         continuity_notes_markdown=package.continuity_notes_markdown,
         sources_markdown=package.sources_markdown,
         repair_notes_markdown=repair_notes,
@@ -447,6 +454,34 @@ def _write_generation_prompt_package(
     output_path = project_dir / "03_reference_assets" / "characters" / asset_id / "generation_prompts" / f"{variant}_{workflow_id.replace('/', '_')}_prompt.md"
     write_prompt_package(output_path, generated)
     return output_path
+
+
+def _build_generation_inputs_markdown(
+    package: PromptPackage,
+    entry: dict[str, Any],
+    *,
+    workflow_id: str,
+    source_ref: str,
+    booster_meta: dict[str, Any],
+) -> str:
+    inputs = dict(package.inputs)
+    asset_id = str(entry.get("asset_id", "")).strip().lower()
+    variant = str(entry.get("variant_key", "")).strip().lower()
+
+    inputs.setdefault("subject_kind", "character")
+    inputs.setdefault("subject_id", asset_id)
+    inputs.setdefault("reference_mode", "reference_asset_generation")
+    inputs.setdefault("variant_name", variant)
+    inputs.setdefault("reuse_policy", "reuse approved locked reference assets downstream")
+    inputs["prompt_variant_id"] = str(booster_meta.get("prompt_variant_id", "raw"))
+    inputs["booster_bundle_ids"] = ", ".join(str(item) for item in booster_meta.get("booster_bundle_ids", []))
+    inputs["missing_booster_bundle_ids"] = ", ".join(str(item) for item in booster_meta.get("missing_booster_bundle_ids", []))
+    inputs["positive_boosters"] = ", ".join(str(item) for item in booster_meta.get("positive_boosters", []))
+    inputs["negative_boosters"] = ", ".join(str(item) for item in booster_meta.get("negative_boosters", []))
+    inputs["reference_generation_workflow_id"] = workflow_id
+    if source_ref:
+        inputs["source_reference_image"] = source_ref
+    return "\n".join(f"- {key}: {value}" for key, value in inputs.items())
 
 
 def _manifest_output_files(manifest_path: Path) -> list[str]:

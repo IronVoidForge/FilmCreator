@@ -1,4 +1,4 @@
-﻿Status: 90%
+﻿Status: Complete sans validation
 
 # Phase 12/13 Reference Generation Quicktest Spec
 
