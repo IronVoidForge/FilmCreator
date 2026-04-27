@@ -36,7 +36,7 @@ A human male of standard human scale and bipedal morphology. Specific visual det
 ## Continuity
 
 - continuity_constraints: must maintain human morphology and scale as per taxonomy
-- unresolved_ambiguities: visual age, physical build and proportions, specific costume or attire, mannerisms and movement style
+- unresolved_ambiguities: visual appearance (age, build, clothing) is entirely undocumented, specific movement style or mannerisms are unknown
 
 ## Evidence Summary
 
@@ -50,4 +50,4 @@ A human male of standard human scale and bipedal morphology. Specific visual det
 - status: `generated`
 - source_fingerprint: `7289d26de6ff5e4e42f2a6b93f06a6bcfec89144`
 - created_at_utc: `2026-04-27T07:44:42.401848+00:00`
-- updated_at_utc: `2026-04-27T12:56:13.660100+00:00`
+- updated_at_utc: `2026-04-27T15:36:28.603949+00:00`

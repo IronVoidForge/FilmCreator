@@ -14,29 +14,29 @@
 
 ## Visual Bible
 
-- identity_baseline: A living, straw-filled humanoid figure.
+- identity_baseline: [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH003/the_scarecrow.md] Physical Description: A living figure stuffed with straw.
 - age_presence: unknown
-- physical_build: Bipedal humanoid form of human scale; rustic construction.
-- origin_or_historical_context: Cornfield origin; rustic/traditional scarecrow construction.
-- movement_language: Clumsy movement.
-The Scarecrow is a bipedal, human-scale humanoid figure of rustic construction, appearing as a living entity stuffed entirely with straw. His movement is characterized by a distinct clumsiness. He lacks flesh and is visually defined by his traditional scarecrow silhouette and cornfield origins.
+- physical_build: unknown
+- origin_or_historical_context: unknown
+- movement_language: (none)
+[source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH003/the_scarecrow.md] Physical Description: A living figure stuffed with straw. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH004/the_scarecrow.md] Prompt Phrases: scarecrow, straw-filled humanoid, clumsy movement, rustic construction, cornfield origin. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH008/the_scarecrow.md] Physical Description: Non-flesh entity; immune to poppy scent. Recovered visual evidence: “Well,” said the girl, “let us go.” And she handed the basket to the Scarecrow.
 
-- physical_traits: Immune to poppy scent
-- costume_signature: Traditional scarecrow construction.
-- distinguishing_features: Stuffed with straw, Non-flesh entity
-- state_variants: Standard (straw-filled)
+- physical_traits: (none)
+- costume_signature: Source-supported costume/equipment: “Well,” said the girl, “let us go.” And she handed the basket to the Scarecrow.
+- distinguishing_features: (none)
+- state_variants: (none)
 
 ## Behavioral Bible
 
-- personality: unknown
-- role: unknown
-- voice_notes: unknown
-- relationship_notes: Associated with Dorothy, Toto, Tin Woodman, and Cowardly Lion.
+- personality: (none)
+- role: individual
+- voice_notes: (none)
+- relationship_notes: (none)
 
 ## Continuity
 
-- continuity_constraints: Must maintain a non-flesh, straw-filled internal composition., Movement should remain clumsy as per character archetype.
-- unresolved_ambiguities: Specific facial features or head construction are not detailed beyond "scarecrow" archetype.
+- continuity_constraints: (none)
+- unresolved_ambiguities: (none)
 
 ## Evidence Summary
 
@@ -48,6 +48,7 @@ The Scarecrow is a bipedal, human-scale humanoid figure of rustic construction, 
 - [CH003] Chapter III (query appears in paragraph preview)
 - [CH004] Chapter IV (query appears in paragraph preview)
 - [CH005] Chapter V (query appears in paragraph preview)
+- [visual-evidence:CH004 p27] “Well,” said the girl, “let us go.” And she handed the basket to the Scarecrow.
 
 ## Metadata
 
@@ -55,4 +56,4 @@ The Scarecrow is a bipedal, human-scale humanoid figure of rustic construction, 
 - status: `generated`
 - source_fingerprint: `4a02141cda93fa845c4e68a7d76b3be1a2480512`
 - created_at_utc: `2026-04-27T07:39:16.302568+00:00`
-- updated_at_utc: `2026-04-27T12:52:41.060643+00:00`
+- updated_at_utc: `2026-04-27T16:15:44.795692+00:00`

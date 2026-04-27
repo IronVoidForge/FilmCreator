@@ -1,4 +1,4 @@
-# Character Bible: Glinda
+# Character Bible: glinda
 
 - character_id: `glinda`
 - status: `canonical`
@@ -8,35 +8,35 @@
 
 ## Identity
 
-- display_name: Glinda
+- display_name: glinda
 - aliases: (none)
 - chapter_mentions: CH018, CH022, CH023
 
 ## Visual Bible
 
-- identity_baseline: High-status magical ruler and powerful witch.
+- identity_baseline: [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH023/glinda.md] Costume/Silhouette: Associated with a ruby throne and high-status magical presence.
 - age_presence: unknown
-- physical_build: humanoid biped, human scale
-- origin_or_historical_context: Ruler of the Quadlings; associated with a ruby throne.
+- physical_build: unknown
+- origin_or_historical_context: unknown
 - movement_language: unknown
-Glinda is a powerful humanoid entity and the Witch of the South, possessing a high-status magical presence. Her visual identity is closely tied to her seat of power, specifically associated with a ruby throne.
+[source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH023/glinda.md] Costume/Silhouette: Associated with a ruby throne and high-status magical presence. [CH018] Chapter XVIII (query appears in paragraph preview) [CH022] Chapter XXII (query appears in paragraph preview)
 
-- physical_traits: bipedal morphology
-- costume_signature: high-status magical attire associated with a ruby throne.
-- distinguishing_features: unknown
-- state_variants: seated on ruby throne
+- physical_traits: (none)
+- costume_signature: (none)
+- distinguishing_features: (none)
+- state_variants: (none)
 
 ## Behavioral Bible
 
-- personality: unknown
-- role: The most powerful of all the Witches; ruler of the Quadlings.
-- voice_notes: unknown
-- relationship_notes: Associated with Dorothy, Scarecrow, Tin Woodman, and Lion., Subject to inquiries by travelers seeking her presence.
+- personality: (none)
+- role: individual
+- voice_notes: (none)
+- relationship_notes: (none)
 
 ## Continuity
 
-- continuity_constraints: Visual presentation must maintain a high-status magical presence., Connection to the Quadlings and the ruby throne should be preserved.
-- unresolved_ambiguities: Specific physical appearance (facial features, hair, etc.) is unknown., Specific clothing/armor details beyond "high-status" are unknown.
+- continuity_constraints: (none)
+- unresolved_ambiguities: (none)
 
 ## Evidence Summary
 
@@ -55,4 +55,4 @@ Glinda is a powerful humanoid entity and the Witch of the South, possessing a hi
 - status: `generated`
 - source_fingerprint: `c9a8abdf2ceaf426b38ac5b4ee5756765e33522b`
 - created_at_utc: `2026-04-27T07:45:08.316235+00:00`
-- updated_at_utc: `2026-04-27T12:56:29.414332+00:00`
+- updated_at_utc: `2026-04-27T15:46:52.645001+00:00`

@@ -1,4 +1,4 @@
-# Character Bible: Queen of the Field Mice
+# Character Bible: queen_of_the_field_mice
 
 - character_id: `queen_of_the_field_mice`
 - status: `canonical`
@@ -8,7 +8,7 @@
 
 ## Identity
 
-- display_name: Queen of the Field Mice
+- display_name: queen_of_the_field_mice
 - aliases: (none)
 - chapter_mentions: CH009
 
@@ -19,24 +19,24 @@
 - physical_build: Small-scale rodent frame; tiny proportions.
 - origin_or_historical_context: unknown
 - movement_language: unknown
-A tiny, quadrupedal field mouse of miniature scale. As a non-human animal entity, the visual identity is defined by its small rodent morphology and diminutive size relative to other characters.
+A tiny, quadrupedal field mouse. The character is defined by its extremely small scale and rodent morphology. No specific clothing or distinguishing markings are provided in the evidence.
 
-- physical_traits: quadrupedal
+- physical_traits: quadrupedal, tiny scale
 - costume_signature: unknown
-- distinguishing_features: tiny scale
+- distinguishing_features: Tiny scale (quadruped)
 - state_variants: natural/unclothed
 
 ## Behavioral Bible
 
 - personality: unknown
-- role: leader of field mice (inferred from title)
+- role: leader of the field mice
 - voice_notes: unknown
 - relationship_notes: associated with Field Mice (subjects), associated with Tin Woodman, associated with Scarecrow
 
 ## Continuity
 
-- continuity_constraints: must maintain tiny, quadrupedal rodent morphology
-- unresolved_ambiguities: specific visual appearance of the mouse (color, fur texture, etc.) is not provided, specific personality or vocal qualities are unknown
+- continuity_constraints: Must maintain tiny, quadrupedal scale consistent with a field mouse.
+- unresolved_ambiguities: Specific movement style or temperament is unknown.
 
 ## Evidence Summary
 
@@ -50,4 +50,4 @@ A tiny, quadrupedal field mouse of miniature scale. As a non-human animal entity
 - status: `generated`
 - source_fingerprint: `678546f15ff2bc829e66c96827a0c1ff71cc9b7d`
 - created_at_utc: `2026-04-27T07:41:29.135984+00:00`
-- updated_at_utc: `2026-04-27T12:54:21.272737+00:00`
+- updated_at_utc: `2026-04-27T15:46:53.238673+00:00`

@@ -14,29 +14,29 @@
 
 ## Visual Bible
 
-- identity_baseline: A young human girl and traveler.
-- age_presence: Child / Young girl.
+- identity_baseline: [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md] Costume/Silhouette: Unknown. No specific clothing details are provided in this chapter.
+- age_presence: unknown
 - physical_build: unknown
 - origin_or_historical_context: unknown
-- movement_language: Movement is influenced by the wearing of Silver Shoes, which are central to her movement and magic.
-Dorothy is a young human girl characterized by an expressive face and the appearance of a weary traveler. Her visual identity evolves during her journey, transitioning from previously green clothing to a white dress or clothing. She is most notably identified by her Silver Shoes, which serve as a central element to her movement and magical capabilities.
+- movement_language: (none)
+[source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/dorothy.md] Costume/Silhouette: Unknown. No specific clothing details are provided in this chapter. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH003/dorothy.md] Physical Description: A young girl. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH004/dorothy.md] Prompt Phrases: young girl, traveler, expressive face, weary traveler. Recovered visual evidence: That is the end of her. But the silver shoes are yours, and you shall have them to wear.” She reached down and picked up the shoes, and after shaking the dust out of them handed them to Dorothy. Dorothy carried the shoes into the house and placed them on the table. Then she came out again to the Munchkins and said: Dorothy had only one other dress, but that happened to be clean and was hanging on a peg beside her bed. It was gingham, with checks of white and blue; and although the blue was somewhat faded with many washings, it was still a pretty fr...
 
-- physical_traits: Expressive face
-- costume_signature: White clothing/dress paired with Silver Shoes.
-- distinguishing_features: Silver Shoes (central to movement/magic)
-- state_variants: Initial state: Green clothing (inferred from color change history), Current state: White dress/clothing, Traveler state: Weary traveler appearance
+- physical_traits: source visual evidence (CH002): That is the end of her. But the silver shoes are yours, and you shall have them to wear.” She reached down and picked up the shoes, and after shaking the dust out of them handed..., source visual evidence (CH003): “My dress is blue and white checked,” said Dorothy, smoothing out the wrinkles in it., source visual evidence (CH012): They thanked him and bade him good-bye, and turned toward the West, walking over fields of soft grass dotted here and there with daisies and buttercups. Dorothy still wore the p...
+- costume_signature: Source-supported costume/equipment: That is the end of her. But the silver shoes are yours, and you shall have them to wear.” She reached down and picked up the shoes, and after shaking the dust out of them handed... | Dorothy carried the shoes into the house and placed them on the table. Then she came out again to the Munchkins and said: | Dorothy had only one other dress, but that happened to be clean and was hanging on a peg beside her bed. It was gingham, with checks of white and blue; and although the blue was...
+- distinguishing_features: source-supported evidence (CH002): That is the end of her. But the silver shoes are yours, and you shall have them to wear.” She reached down and picked up the shoes, and after shaking the dust out of them handed..., source-supported evidence (CH003): “My dress is blue and white checked,” said Dorothy, smoothing out the wrinkles in it., source-supported evidence (CH012): They thanked him and bade him good-bye, and turned toward the West, walking over fields of soft grass dotted here and there with daisies and buttercups. Dorothy still wore the p..., source-supported evidence (CH002): Dorothy carried the shoes into the house and placed them on the table. Then she came out again to the Munchkins and said:, source-supported evidence (CH003): Dorothy had only one other dress, but that happened to be clean and was hanging on a peg beside her bed. It was gingham, with checks of white and blue; and although the blue was...
+- state_variants: (none)
 
 ## Behavioral Bible
 
-- personality: unknown
-- role: traveler
-- voice_notes: unknown
-- relationship_notes: Associated with Toto, Associated with Aunt Em and Uncle Henry, Associated with the Witch of the North, Munchkins, Boq, Scarecrow, Tin Woodman, Cowardly Lion, The Great Oz, Wicked Witch of the West, Winkies, Winged Monkeys, and Glinda the Good Witch.
+- personality: (none)
+- role: individual
+- voice_notes: (none)
+- relationship_notes: (none)
 
 ## Continuity
 
-- continuity_constraints: Clothing color transition: Green to White., Silver Shoes must be present as a central movement/magic element.
-- unresolved_ambiguities: Specific silhouette or initial costume details are unknown., Exact physical build and proportions are not specified.
+- continuity_constraints: (none)
+- unresolved_ambiguities: (none)
 
 ## Evidence Summary
 
@@ -48,6 +48,11 @@ Dorothy is a young human girl characterized by an expressive face and the appear
 - [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH012/dorothy.md] Physical Description: A human girl. Her clothing, which was previously green, has turned white during the journey.
 - [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH012/dorothy.md] Costume/Silhouette: White dress/clothing.
 - [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH023/dorothy.md] Costume/Silhouette: Notable for wearing Silver Shoes which are central to her movement and magic.
+- [visual-evidence:CH002 p34] That is the end of her. But the silver shoes are yours, and you shall have them to wear.” She reached down and picked up the shoes, and after shaking the dust out of them handed them to Dorothy.
+- [visual-evidence:CH002 p36] Dorothy carried the shoes into the house and placed them on the table. Then she came out again to the Munchkins and said:
+- [visual-evidence:CH003 p3] Dorothy had only one other dress, but that happened to be clean and was hanging on a peg beside her bed. It was gingham, with checks of white and blue; and although the blue was somewhat faded with many washings, it was still a pretty frock.
+- [visual-evidence:CH003 p19] “My dress is blue and white checked,” said Dorothy, smoothing out the wrinkles in it.
+- [visual-evidence:CH012 p8] They thanked him and bade him good-bye, and turned toward the West, walking over fields of soft grass dotted here and there with daisies and buttercups. Dorothy still wore the pretty silk dress she had put on in the palace, but now, to her surprise, she found it was no longer green, but pure white. The ribbon around Toto’s neck had also lost its green color and was as white as Dorothy’s dress.
 
 ## Metadata
 
@@ -55,4 +60,4 @@ Dorothy is a young human girl characterized by an expressive face and the appear
 - status: `generated`
 - source_fingerprint: `73369102c964ff63fbfea616910a276556c3a313`
 - created_at_utc: `2026-04-27T07:37:10.929639+00:00`
-- updated_at_utc: `2026-04-27T12:51:09.721623+00:00`
+- updated_at_utc: `2026-04-27T16:15:43.782407+00:00`

@@ -16,8 +16,8 @@
 
 - identity_baseline: Humanoid bipedal group of slaves.
 - age_presence: unknown
-- physical_build: human_scale humanoid
-- origin_or_historical_context: Inhabitants of the country of the Winkies; subjects to the Wicked Witch of the West.
+- physical_build: human_scale humanoid frame
+- origin_or_historical_context: Inhabitants of the Country of the Winkies; subjects to the Wicked Witch of the West.
 - movement_language: unknown
 The Winkies are a group of humanoid, bipedal beings of human scale. They are visually defined by their consistent use of yellow clothing and serve as the enslaved population within the territory of the Wicked Witch of the West.
 
@@ -31,12 +31,12 @@ The Winkies are a group of humanoid, bipedal beings of human scale. They are vis
 - personality: unknown
 - role: Humanoid slaves to the Wicked Witch of the West.
 - voice_notes: unknown
-- relationship_notes: Subservient/slaves to the Wicked Witch of the West., Encountered by Dorothy, the Scarecrow, the Tin Woodman, and the Cowardly Lion.
+- relationship_notes: Subservient/enslaved to the Wicked Witch of the West., Interacted with Dorothy, the Tin Woodman, Scarecrow, and Cowardly Lion.
 
 ## Continuity
 
-- continuity_constraints: Maintain consistent yellow color palette for group clothing., Must be rendered as a humanoid bipedal group.
-- unresolved_ambiguities: Specific facial features or individual distinguishing marks are not documented., Exact age range of the population is unknown.
+- continuity_constraints: Maintain consistent yellow clothing across group members., Must be rendered as a humanoid bipedal group.
+- unresolved_ambiguities: Exact age range of the population is unknown.
 
 ## Evidence Summary
 
@@ -55,4 +55,4 @@ The Winkies are a group of humanoid, bipedal beings of human scale. They are vis
 - status: `generated`
 - source_fingerprint: `1c7f0e73684691d79b567a5df6247ed32bf1d269`
 - created_at_utc: `2026-04-27T07:43:14.592345+00:00`
-- updated_at_utc: `2026-04-27T12:55:23.289703+00:00`
+- updated_at_utc: `2026-04-27T15:46:54.730102+00:00`

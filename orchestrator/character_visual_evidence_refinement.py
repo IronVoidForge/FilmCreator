@@ -137,6 +137,10 @@ PRONOUNS_BY_KIND = {
 
 WEAK_VALUES = {"", "unknown", "none", "(none)", "n/a", "[]", "[ ]", "null"}
 AUTO_PATCH_THRESHOLD = 0.85
+VISUAL_OBJECT_PATTERN = (
+    "dress|frock|gown|clothes|clothing|hat|bonnet|sunbonnet|shoes|boots|apron|ribbon|belt|cloak|robe|"
+    "axe|oil-can|oil can|cap|spectacles|staff|basket|sword|knife|lantern"
+)
 
 
 @dataclass
@@ -208,7 +212,8 @@ def run_character_visual_evidence_refinement(
     evidence_dir.mkdir(parents=True, exist_ok=True)
     review_dir.mkdir(parents=True, exist_ok=True)
 
-    bible_paths = sorted(path for path in bible_dir.glob("CHAR_*.json") if path.is_file())
+    all_bible_paths = sorted(path for path in bible_dir.glob("CHAR_*.json") if path.is_file())
+    bible_paths = list(all_bible_paths)
     if limit is not None and limit >= 0:
         bible_paths = bible_paths[:limit]
 
@@ -228,6 +233,7 @@ def run_character_visual_evidence_refinement(
         character_id = str(bible_data.get("character_id") or bible_path.stem.removeprefix("CHAR_")).strip()
         if not character_id:
             continue
+        bible_data, sanitized = _strip_previous_visual_evidence_refinement(bible_data)
         if only_review and not _needs_refinement(bible_data):
             records.append(_bible_from_dict(bible_data))
             continue
@@ -275,27 +281,38 @@ def run_character_visual_evidence_refinement(
             patched_ids.add(character_id)
             records.append(bible)
         else:
-            records.append(_bible_from_dict(bible_data))
+            if sanitized:
+                write_json(bible_path, bible_data)
+                bible = _bible_from_dict(bible_data)
+                write_character_bible_markdown(bible_path.with_suffix(".md"), bible)
+                written_files.extend([str(bible_path), str(bible_path.with_suffix(".md"))])
+                records.append(bible)
+            else:
+                records.append(_bible_from_dict(bible_data))
 
         if review_candidates:
             review_ids.add(character_id)
 
-    index_payload = {
-        "schema_version": SCHEMA_VERSION,
-        "project_slug": project_slug,
-        "generated_at_utc": _utc_now(),
-        "total_records": len(evidence_index),
-        "patched_count": len(patched_ids),
-        "review_count": len(review_ids),
-        "records": evidence_index,
-    }
-    index_json = evidence_dir / "CHARACTER_VISUAL_EVIDENCE_INDEX.json"
-    index_md = evidence_dir / "CHARACTER_VISUAL_EVIDENCE_INDEX.md"
-    write_json(index_json, index_payload)
-    _write_index_markdown(index_md, index_payload)
-    written_files.extend([str(index_json), str(index_md)])
+    if limit is None:
+        index_payload = {
+            "schema_version": SCHEMA_VERSION,
+            "project_slug": project_slug,
+            "generated_at_utc": _utc_now(),
+            "total_records": len(evidence_index),
+            "patched_count": len(patched_ids),
+            "review_count": len(review_ids),
+            "records": evidence_index,
+        }
+        index_json = evidence_dir / "CHARACTER_VISUAL_EVIDENCE_INDEX.json"
+        index_md = evidence_dir / "CHARACTER_VISUAL_EVIDENCE_INDEX.md"
+        write_json(index_json, index_payload)
+        _write_index_markdown(index_md, index_payload)
+        written_files.extend([str(index_json), str(index_md)])
+    else:
+        warnings.append("Limit mode skipped CHARACTER_VISUAL_EVIDENCE_INDEX rewrite because only a subset was processed.")
 
-    _rewrite_character_bible_indexes(bible_dir, review_dir, records)
+    all_records = _load_all_bible_records(all_bible_paths)
+    _rewrite_character_bible_indexes(bible_dir, review_dir, all_records)
     written_files.extend(
         [
             str(bible_dir / "CHARACTER_BIBLE_INDEX.json"),
@@ -309,7 +326,7 @@ def run_character_visual_evidence_refinement(
 
     return CharacterVisualEvidenceRefinementSummary(
         project_slug=project_slug,
-        total_characters=len(bible_paths),
+        total_characters=len(all_bible_paths),
         evidence_characters=len(evidence_index),
         patched_count=len(patched_ids),
         review_count=len(review_ids),
@@ -412,14 +429,18 @@ def _candidate_from_sentence(
 
     possessive_alias = _possessive_alias_match(sentence, aliases)
     direct_aliases = _matching_aliases(sentence, aliases)
-    if possessive_alias:
+    if possessive_alias and _has_possessive_visual_object(sentence, possessive_alias):
         anchor_type = "possession"
         confidence = 0.94
         anchor_text = possessive_alias
     elif direct_aliases:
         anchor_type = "direct_name"
-        confidence = 0.9
         anchor_text = direct_aliases[0]
+        if _has_direct_visual_ownership_or_state(sentence, direct_aliases[0], terms_by_category):
+            confidence = 0.9
+        else:
+            confidence = 0.72
+            risk_flags.append("weak_direct_anchor")
     elif previous_subject == character_id and _has_character_pronoun(sentence, pronoun_kind):
         anchor_type = "pronoun_continuity"
         confidence = 0.78
@@ -524,6 +545,54 @@ def _merge_evidence_into_bible(
     return updated
 
 
+def _strip_previous_visual_evidence_refinement(data: dict[str, Any]) -> tuple[dict[str, Any], bool]:
+    updated = dict(data)
+    changed = False
+    scalar_markers = [
+        "Recovered visual evidence:",
+        " Recovered visual evidence:",
+        "Source-supported costume/equipment:",
+        " Source-supported costume/equipment:",
+        "Source-supported movement:",
+        " Source-supported movement:",
+    ]
+    for field_name in ["stable_visual_summary", "costume_signature", "movement_language"]:
+        value = str(updated.get(field_name) or "")
+        cleaned = value
+        for marker in scalar_markers:
+            if marker in cleaned:
+                cleaned = cleaned.split(marker, 1)[0].rstrip()
+        if cleaned != value:
+            updated[field_name] = cleaned
+            changed = True
+
+    for field_name in ["physical_traits", "distinguishing_features"]:
+        values = _string_list(updated.get(field_name))
+        cleaned_values = [
+            item
+            for item in values
+            if not item.lower().startswith(("source visual evidence", "source-supported evidence"))
+        ]
+        if cleaned_values != values:
+            updated[field_name] = cleaned_values
+            changed = True
+
+    evidence_summary = _string_list(updated.get("evidence_summary"))
+    cleaned_summary = [item for item in evidence_summary if not item.startswith("[visual-evidence:")]
+    if cleaned_summary != evidence_summary:
+        updated["evidence_summary"] = cleaned_summary
+        changed = True
+
+    refs = updated.get("evidence_refs")
+    if isinstance(refs, list):
+        cleaned_refs = [item for item in refs if not (isinstance(item, dict) and item.get("source") == "character_visual_evidence")]
+        if cleaned_refs != refs:
+            updated["evidence_refs"] = cleaned_refs
+            changed = True
+
+    return updated, changed
+
+
 def _rewrite_character_bible_indexes(bible_dir: Path, review_dir: Path, records: list[CharacterBible]) -> None:
     main_records = [record for record in records if record.status == "canonical" and record.entity_kind == "individual"]
     review_records = [
@@ -538,6 +607,15 @@ def _rewrite_character_bible_indexes(bible_dir: Path, review_dir: Path, records:
     write_json(bible_dir / "CHARACTER_BIBLE_REVIEW_INDEX.json", [record.to_dict() for record in sorted(review_records, key=lambda item: item.character_id)])
     write_json(review_dir / "CHARACTER_BIBLE_REVIEW_QUEUE.json", review_queue)
     write_character_review_queue_markdown(review_dir / "CHARACTER_BIBLE_REVIEW_QUEUE.md", review_queue)
+
+
+def _load_all_bible_records(paths: list[Path]) -> list[CharacterBible]:
+    records: list[CharacterBible] = []
+    for path in paths:
+        data = read_json(path)
+        if isinstance(data, dict):
+            records.append(_bible_from_dict(data))
+    return records
 
 
 def _bible_from_dict(data: dict[str, Any]) -> CharacterBible:
@@ -599,16 +677,12 @@ def _character_aliases(bible_data: dict[str, Any]) -> list[str]:
 def _role_aliases(bible_data: dict[str, Any]) -> list[str]:
     text = " ".join(str(bible_data.get(key) or "") for key in ["display_name", "character_id", "identity_baseline", "role"]).lower()
     aliases: list[str] = []
-    if "dorothy" in text:
-        aliases.extend(["the girl", "the little girl", "child"])
     if "scarecrow" in text:
         aliases.extend(["the scarecrow"])
     if "woodman" in text or "tin" in text:
         aliases.extend(["the tin woodman", "the woodman", "the tin man"])
     if "lion" in text:
         aliases.extend(["the lion"])
-    if "witch" in text:
-        aliases.extend(["the witch"])
     if "wizard" in text:
         aliases.extend(["the wizard"])
     return aliases
@@ -715,6 +789,46 @@ def _looks_like_environment_description(sentence: str) -> bool:
     )
 
 
+def _has_direct_visual_ownership_or_state(sentence: str, alias: str, terms_by_category: dict[str, list[str]]) -> bool:
+    normalized = sentence.lower()
+    escaped = re.escape(alias.lower())
+    has_costume_or_equipment = any(category in terms_by_category for category in ["costume", "equipment"])
+
+    if _has_possessive_visual_object(sentence, alias):
+        return True
+    if has_costume_or_equipment and re.search(
+        rf"\b{escaped}\b[^.!?;:,\"]{{0,80}}\b(?:wore|wears|wearing|put on|carried|held)\b[^.!?;:,\"]{{0,80}}\b(?:{VISUAL_OBJECT_PATTERN})\b",
+        normalized,
+    ):
+        return True
+    if has_costume_or_equipment and re.search(
+        rf"\b{escaped}\b[^.!?;:,\"]{{0,80}}\b(?:had|has)\b(?:\s+(?:a|an|the|one|only|other|[\w-]+)){{0,6}}\s+\b(?:{VISUAL_OBJECT_PATTERN})\b",
+        normalized,
+    ):
+        return True
+    if has_costume_or_equipment and re.search(
+        rf"\b{escaped}\b[^.!?;:,\"]{{0,40}}\b(?:was|is|were|are)\b[^.!?;:,\"]{{0,20}}\bdressed\b[^.!?;:,\"]{{0,80}}\b(?:{VISUAL_OBJECT_PATTERN})\b",
+        normalized,
+    ):
+        return True
+    if has_costume_or_equipment and re.search(
+        rf"\b(?:wore|wears|wearing|put on|carried|held)\b[^.!?;:,\"]{{0,80}}\b(?:{VISUAL_OBJECT_PATTERN})\b[^.!?;:,\"]{{0,80}}\b{escaped}\b",
+        normalized,
+    ):
+        return True
+    if has_costume_or_equipment and re.search(rf"\b(?:handed|gave|fitted|put)\b[^.!?;:]{{0,120}}\b(?:to|on|over)\b[^.!?;:]{{0,40}}\b{escaped}\b", normalized):
+        return True
+    if re.search(rf"\b(my|my own)\b[^.!?;:]{{0,80}}\b(?:dress|shoes|hat|bonnet|gown|hair|face|hands|feet|body)\b[^.!?;:]{{0,120}}\bsaid\b[^.!?;:]{{0,40}}\b{escaped}\b", normalized):
+        return True
+    return False
+
+
+def _has_possessive_visual_object(sentence: str, alias: str) -> bool:
+    normalized = sentence.lower()
+    escaped = re.escape(alias.lower())
+    return bool(re.search(rf"\b{escaped}(?:'s|')\b[^.!?;:,\"]{{0,40}}\b(?:{VISUAL_OBJECT_PATTERN})\b", normalized))
+
+
 def _context_snippet(previous_sentence: str, sentence: str, next_sentence: str) -> str:
     parts = [part.strip() for part in [previous_sentence, sentence, next_sentence] if part.strip()]
     return _clean_snippet(" ".join(parts), limit=420)
@@ -782,8 +896,7 @@ def _evidence_phrase(evidence: list[VisualEvidenceCandidate], prefix: str) -> st
 def _evidence_list(evidence: list[VisualEvidenceCandidate], prefix: str) -> list[str]:
     values: list[str] = []
     for item in evidence[:6]:
-        terms = ", ".join(item.visual_terms[:8])
-        values.append(f"{prefix} evidence ({item.chapter_id}): {terms}")
+        values.append(f"{prefix} evidence ({item.chapter_id}): {_clean_snippet(item.snippet, limit=180)}")
     return values
 
 

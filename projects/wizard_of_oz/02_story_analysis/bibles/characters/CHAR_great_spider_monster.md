@@ -14,29 +14,29 @@
 
 ## Visual Bible
 
-- identity_baseline: A giant, multi-legged arachnid creature.
+- identity_baseline: [CH021] Chapter XXI (book index hit)
 - age_presence: unknown
-- physical_build: Giant scale; multi-legged morphology.
+- physical_build: unknown
 - origin_or_historical_context: unknown
 - movement_language: unknown
-A giant, multi-legged monster of arachnid morphology. The creature is characterized by its massive scale and non-humanoid, multi-limbed structure.
+[CH021] Chapter XXI (book index hit) [CH001] Chapter I (book index hit) [CH002] Chapter II (book index hit)
 
-- physical_traits: Giant scale
-- costume_signature: unknown
-- distinguishing_features: Multi-legged anatomy
-- state_variants: unknown
+- physical_traits: (none)
+- costume_signature: (none)
+- distinguishing_features: (none)
+- state_variants: (none)
 
 ## Behavioral Bible
 
-- personality: Monster (sentience level)
-- role: unknown
-- voice_notes: unknown
-- relationship_notes: Associated with forest animals (victims)
+- personality: (none)
+- role: individual
+- voice_notes: (none)
+- relationship_notes: (none)
 
 ## Continuity
 
-- continuity_constraints: Must maintain giant scale and multi-legged morphology.
-- unresolved_ambiguities: Specific visual details of the exoskeleton or coloration are unknown., Precise movement patterns are not documented.
+- continuity_constraints: (none)
+- unresolved_ambiguities: (none)
 
 ## Evidence Summary
 
@@ -50,4 +50,4 @@ A giant, multi-legged monster of arachnid morphology. The creature is characteri
 - status: `generated`
 - source_fingerprint: `4a1d878d241c2b4efa3457c48041a857c24d74cd`
 - created_at_utc: `2026-04-27T07:47:04.740276+00:00`
-- updated_at_utc: `2026-04-27T12:57:38.852636+00:00`
+- updated_at_utc: `2026-04-27T15:40:20.509568+00:00`

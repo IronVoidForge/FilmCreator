@@ -14,29 +14,29 @@
 
 ## Visual Bible
 
-- identity_baseline: Monkey-like creatures possessing wings.
+- identity_baseline: [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH023/winged_monkeys.md] Costume/Silhouette: Monkey-like with wings.
 - age_presence: unknown
 - physical_build: unknown
 - origin_or_historical_context: unknown
-- movement_language: unknown
-A group of winged, monkey-like entities. Their primary visual identifier is a primate-based silhouette augmented by the presence of wings.
+- movement_language: (none)
+[source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH023/winged_monkeys.md] Costume/Silhouette: Monkey-like with wings. [CH012] Chapter XII (query appears in paragraph preview) [CH013] Chapter XIII (query appears in paragraph preview)
 
-- physical_traits: winged morphology
-- costume_signature: monkey-like silhouette with wings
-- distinguishing_features: wings
-- state_variants: []
+- physical_traits: (none)
+- costume_signature: (none)
+- distinguishing_features: (none)
+- state_variants: (none)
 
 ## Behavioral Bible
 
-- personality: unknown
-- role: unknown
-- voice_notes: unknown
-- relationship_notes: Associated with Monkey King, Associated with Dorothy, Associated with Scarecrow, Associated with Tin Woodman, Associated with Lion, Associated with Glinda the Good Witch
+- personality: (none)
+- role: group
+- voice_notes: (none)
+- relationship_notes: (none)
 
 ## Continuity
 
-- continuity_constraints: Maintain monkey-like silhouette across all group members., Wings must be a consistent anatomical or attached feature.
-- unresolved_ambiguities: Scale of the entities is unknown., Sentience level is unknown., Specific wing structure (feathered, leathery, etc.) is unstated.
+- continuity_constraints: (none)
+- unresolved_ambiguities: (none)
 
 ## Evidence Summary
 
@@ -51,4 +51,4 @@ A group of winged, monkey-like entities. Their primary visual identifier is a pr
 - status: `generated`
 - source_fingerprint: `458309ed86136f90fef296f449891f17913814d9`
 - created_at_utc: `2026-04-27T07:43:32.087239+00:00`
-- updated_at_utc: `2026-04-27T12:55:31.693300+00:00`
+- updated_at_utc: `2026-04-27T15:54:05.797235+00:00`

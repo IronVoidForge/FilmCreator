@@ -10,14 +10,14 @@
     "dorothy"
   ],
   "shot_moment_summary": "Boq identifies Dorothy's attire",
-  "start_state": "boq observing crowd",
-  "end_state": "boq speaking to dorothy",
-  "action_during_shot": "Boq approaches Dorothy and speaks",
-  "action_continues_from": "dorothy entering frame",
-  "action_hands_off_to": "The social mood shifts.",
+  "start_state": "Boq approaching Dorothy",
+  "end_state": "Boq speaking to Dorothy",
+  "action_during_shot": "Boq stops in front of Dorothy",
+  "action_continues_from": "medium shot of crowd",
+  "action_hands_off_to": "BT003",
   "shot_size": "medium_close",
   "camera_angle": "eye_level",
-  "lens_family": "portrait",
+  "lens_family": "normal",
   "camera_motion": "push_in",
   "zoom_behavior": "subtle_in",
   "focus_strategy": "shallow_subject",
@@ -32,23 +32,25 @@
   "primary_subject_frame_position": "foreground inside celebration_grounds",
   "primary_subject_scale_relation": "Boq's wealth relative to the surrounding munchkin_country_farms.",
   "primary_subject_facing_direction": "front three-quarter right toward the scene action",
-  "primary_subject_pose_description": "boq observing crowd",
+  "primary_subject_pose_description": "Boq approaching Dorothy",
   "subject_relation_summary": "boq plays against dorothy in the same frame",
   "required_environment_anchor_1": "celebration_grounds",
   "required_subject_anchor_1": "",
   "required_celestial_anchor_1": "",
   "required_scale_proof_detail": "Boq's wealth relative to the surrounding munchkin_country_farms.",
-  "camera_package_description": "medium-close, eye level, portrait lens, push in, zoom subtle in, shallow subject, soft even",
+  "camera_package_description": "medium-close, eye level, normal lens, push in, zoom subtle in, shallow subject, soft even",
   "subject_blocking": [
-    "boq moves toward dorothy",
-    "boq intercepts dorothy's path",
-    "near boq's wealth markers",
+    "Boq moves into Dorothy's personal space",
+    "Boq breaks from the crowd toward Dorothy",
+    "near the center of festivities",
     "Boq remains readable within the active playing space.",
     "dorothy remains readable within the active playing space."
   ],
   "camera_relative_positions": [
     "Camera anchors the action inside the celebration_grounds.",
-    "Background depth should keep munchkin_country_farms legible as the location anchor."
+    "Background depth should keep munchkin_country_farms legible as the location anchor.",
+    "Subject 1: Boq remains visually readable against the environment scale.",
+    "Subject 2: dorothy remains visually readable against the environment scale."
   ],
   "gaze_directions": [
     "boq focuses toward the active scene action."
@@ -57,11 +59,11 @@
   "key_visible_environment_features": [
     "celebration_grounds"
   ],
-  "continuity_from_previous_shot": "dorothy entering frame",
-  "continuity_to_next_shot": "The social mood shifts.",
-  "pose_anchor_frame": "boq observing crowd",
-  "pose_end_frame": "boq speaking to dorothy",
-  "shot_title": "Reaction Closeup 2: Boq's observation and accusation",
+  "continuity_from_previous_shot": "medium shot of crowd",
+  "continuity_to_next_shot": "BT003",
+  "pose_anchor_frame": "Boq approaching Dorothy",
+  "pose_end_frame": "Boq speaking to Dorothy",
+  "shot_title": "Reaction Closeup 2: Boq's approach and observation",
   "shot_type": "reaction_closeup",
   "camera_description": "Close framing that isolates reaction and emotional emphasis.",
   "composition": "Intimate composition that isolates Boq, dorothy against munchkin_country_farms to capture the beat's emotional turn.",
@@ -102,13 +104,11 @@
     "BT002"
   ],
   "continuity_constraints": [
-    "Food and drink prop levels at celebration tables.",
-    "Lighting transition from day to night.",
-    "Boq's observation and accusation",
-    "Resolve Munchkin party guests -> Munchkin party guests"
+    "Food and drink prop levels must remain consistent during celebration beats.",
+    "Lighting transition from day to night if following into night's rest."
   ],
-  "prompt_seed": "Reaction Closeup 2: Boq's observation and accusation. reaction_closeup. size=medium_close. angle=eye_level. lens=portrait. motion=push_in. zoom=subtle_in. focus=shallow_subject. lighting=soft_even. visibility=on_screen. subject_angle=front_three_quarter_right. Close framing that isolates reaction and emotional empha...",
-  "shot_notes": "Boq's observation and accusation",
+  "prompt_seed": "Reaction Closeup 2: Boq's approach and observation. reaction_closeup. size=medium_close. angle=eye_level. lens=normal. motion=push_in. zoom=subtle_in. focus=shallow_subject. lighting=soft_even. visibility=on_screen. subject_angle=front_three_quarter_right. Close framing that isolates reaction and emotional emphasis....",
+  "shot_notes": "Boq's approach and observation",
   "evidence_refs": [
     {
       "source": "scene_contract",
@@ -166,38 +166,38 @@
     }
   ],
   "evidence_summary": [
-    "Establish Boq's wealth and status within munchkin_country_farms through a festive celebration. Use Dorothy's specific visual markers\u2014silver shoes and blue-and-white attire\u2014to trigger a social misunderstanding that shifts the mood from communal joy to locali...",
+    "Establish Boq's wealth and status within munchkin_country_farms through a high-energy celebration. Use the visual contrast of Dorothy's blue-and-white attire and silver shoes to trigger a social misunderstanding that shifts the mood from communal joy to loc...",
     "Dorothy attends a celebration at the home of Boq, a wealthy Munchkin. Amidst the festivities, Boq mistakenly identifies her as a \"friendly witch\" because of her silver shoes and blue-and-white attire.",
     "From festive celebration to social confusion/tension.",
-    "High-energy festive celebration with dancing Munchkins.",
+    "High-energy festive dancing and communal eating in a wealthy courtyard.",
     "Stagnant social tension following the witch accusation.",
     "Dorothy navigates a party until Boq misidentifies her as a friendly witch.",
-    "dorothy | Dorothy is a young human girl characterized by an expressive face. While her initial attire is noted as having been green, she is primarily identified in her journey by white clothing or a white dress. Her most significant visual and functional id...",
-    "Boq | Boq is a small-scale, bipedal humanoid of the Munchkin race. He possesses a high socioeconomic status within his community, characterized as one of the richest Munchkins in the land. Specific facial features or detailed clothing are not documented, bu...",
+    "dorothy | Dorothy is a young human girl characterized by an expressive face and the appearance of a weary traveler. Her visual identity evolves during her journey, transitioning from previously green clothing to a white dress or clothing. She is most notabl...",
+    "Boq | Boq is a small-scale, bipedal humanoid of the Munchkin race. He possesses a high socioeconomic status within his community, characterized as one of the richest Munchkins in the land. While specific facial or bodily details are unstated, his visual ide...",
     "munchkin_country_farms | An idyllic landscape characterized by low-slung, rounded architecture. The environment features repetitive patterns of blue domes integrated with domestic farm structures, suggesting a prosperous and communal settlement. | Low-slung..."
   ],
   "metadata": {
     "artifact_id": "CH003_SC002_SH002_SHOT_PACKAGE",
     "artifact_type": "shot_package",
     "status": "generated",
-    "source_fingerprint": "8ddecf0ef0ff1db7ece11c32e1509a74b9b7120a",
+    "source_fingerprint": "d026cccda1894f61fb046181db3f836999f28ca6",
     "created_at_utc": "2026-04-27T09:52:45.270174+00:00",
-    "updated_at_utc": "2026-04-27T09:52:45.270174+00:00",
+    "updated_at_utc": "2026-04-27T14:57:41.689959+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_contract",
         "dependency_id": "CH003_SC002",
-        "version": "22a74aa612bfe43b256c88b0da17f20a035ee2a0"
+        "version": "5b0b4279c64e5d3b0424cbfbfc060d4e77a50b58"
       },
       {
         "dependency_type": "scene_binding",
         "dependency_id": "CH003_SC002",
-        "version": "2eef1e0802eefd588f6aef5bcce2515e046d0f63"
+        "version": "07638403397da571f572a325f8b826532aa8f17f"
       },
       {
         "dependency_type": "shot_blueprints",
         "dependency_id": "CH003_SC002",
-        "version": "2953357375c60aa91d54a10b6dbed9d36ded3391"
+        "version": "11b6090f8cf05c3963caed0189ac7a41026f866c"
       }
     ],
     "locked_fields": {},
@@ -207,6 +207,11 @@
         "timestamp_utc": "2026-04-27T09:53:53.649300+00:00",
         "action": "synthesized",
         "source_fingerprint": "8ddecf0ef0ff1db7ece11c32e1509a74b9b7120a"
+      },
+      {
+        "timestamp_utc": "2026-04-27T14:58:56.989925+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "d026cccda1894f61fb046181db3f836999f28ca6"
       }
     ]
   }

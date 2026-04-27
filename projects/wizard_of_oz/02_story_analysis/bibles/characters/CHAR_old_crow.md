@@ -1,4 +1,4 @@
-# Character Bible: old crow
+# Character Bible: old_crow
 
 - character_id: `old_crow`
 - status: `canonical`
@@ -8,35 +8,35 @@
 
 ## Identity
 
-- display_name: old crow
+- display_name: old_crow
 - aliases: (none)
 - chapter_mentions: CH004
 
 ## Visual Bible
 
-- identity_baseline: A small, winged bird with black feathers.
+- identity_baseline: [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH004/old_crow.md] Prompt Phrases: old crow, black feathers, talking bird.
 - age_presence: unknown
-- physical_build: Small-scale avian morphology.
+- physical_build: unknown
 - origin_or_historical_context: unknown
 - movement_language: unknown
-A small, winged animal characterized by black feathers. The entity is a talking bird capable of vocal communication.
+[source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH004/old_crow.md] Prompt Phrases: old crow, black feathers, talking bird. [CH004] Chapter IV (query appears in paragraph preview) [CH003] Chapter III (book index hit)
 
-- physical_traits: black feathers
-- costume_signature: unknown
-- distinguishing_features: Black feathers
-- state_variants: talking bird (vocal state)
+- physical_traits: (none)
+- costume_signature: (none)
+- distinguishing_features: (none)
+- state_variants: (none)
 
 ## Behavioral Bible
 
-- personality: unknown
-- role: unknown
-- voice_notes: Capable of speech (talking bird).
-- relationship_notes: Associated with [scarecrow]
+- personality: (none)
+- role: individual
+- voice_notes: (none)
+- relationship_notes: (none)
 
 ## Continuity
 
-- continuity_constraints: Must maintain small scale and black feather coloration.
-- unresolved_ambiguities: Specific species or breed of crow is unknown., Visual age/maturity of the bird is unknown.
+- continuity_constraints: (none)
+- unresolved_ambiguities: (none)
 
 ## Evidence Summary
 
@@ -51,4 +51,4 @@ A small, winged animal characterized by black feathers. The entity is a talking 
 - status: `generated`
 - source_fingerprint: `f234e1a54647089e846500a7af3dadf8a6a7099d`
 - created_at_utc: `2026-04-27T07:40:06.224906+00:00`
-- updated_at_utc: `2026-04-27T12:53:17.750925+00:00`
+- updated_at_utc: `2026-04-27T15:29:58.872945+00:00`

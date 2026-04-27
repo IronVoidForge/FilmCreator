@@ -35,8 +35,8 @@ mr_joker is a small-scale, bipedal humanoid non-human entity. Due to insufficien
 
 ## Continuity
 
-- continuity_constraints: Must maintain small scale as per entity taxonomy., Must maintain bipedal morphology.
-- unresolved_ambiguities: Specific visual appearance (clothing, color, texture) is unknown., Age and specific non-human biological traits are unknown., Movement style and personality are unknown.
+- continuity_constraints: must maintain small scale as per entity taxonomy, must maintain bipedal morphology
+- unresolved_ambiguities: specific visual appearance (clothing, color, facial features), movement style and temperament, exact nature of "non-human" morphology
 
 ## Evidence Summary
 
@@ -50,4 +50,4 @@ mr_joker is a small-scale, bipedal humanoid non-human entity. Due to insufficien
 - status: `generated`
 - source_fingerprint: `f089bf8b09ce6f8a5bc73f6a5356874285e6304a`
 - created_at_utc: `2026-04-27T07:46:52.015253+00:00`
-- updated_at_utc: `2026-04-27T12:57:31.189523+00:00`
+- updated_at_utc: `2026-04-27T15:39:59.757293+00:00`

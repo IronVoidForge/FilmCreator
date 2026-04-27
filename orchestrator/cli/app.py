@@ -4,6 +4,7 @@ import json
 from typing import Any
 
 from ..character_bible import run_character_bible_synthesis
+from ..character_visual_evidence_refinement import run_character_visual_evidence_refinement
 from ..character_references import (
     approve_character_reference_candidate,
     lock_character_reference_candidate,
@@ -47,6 +48,8 @@ def dispatch(args) -> None:
         summary = _refresh_bibles(args)
     elif args.command == "synthesize-visual-fallbacks":
         summary = run_visual_fallback_synthesis(args.project_slug, force=args.force)
+    elif args.command == "refine-character-visual-evidence":
+        summary = run_character_visual_evidence_refinement(args.project_slug, force=args.force, only_review=args.only_review, chapters=args.chapters, limit=args.limit)
     elif args.command == "run-stage":
         summary = _run_stage(args)
     elif args.command == "plan-character-references":
@@ -130,6 +133,7 @@ def _refresh_bibles(args) -> CliSummary:
     data: dict[str, Any] = {}
     if run_characters:
         data["characters"] = run_character_bible_synthesis(args.project_slug, use_llm=not args.no_llm, force=args.force, limit=args.character_limit).to_dict()
+        data["character_visual_evidence"] = run_character_visual_evidence_refinement(args.project_slug, force=args.force).to_dict()
     if run_environments:
         data["environments"] = run_environment_bible_synthesis(args.project_slug, use_llm=not args.no_llm, force=args.force, limit=args.environment_limit).to_dict()
     return CliSummary(command="refresh-bibles", project_slug=args.project_slug, message="Bible refresh complete.", data=data)
@@ -138,6 +142,8 @@ def _refresh_bibles(args) -> CliSummary:
 def _run_stage(args) -> Any:
     if args.stage == "visual_fallbacks":
         return run_visual_fallback_synthesis(args.project_slug, force=args.force)
+    if args.stage == "character_visual_evidence":
+        return run_character_visual_evidence_refinement(args.project_slug, force=args.force, chapters=args.chapters, limit=args.limit)
     if args.stage == "scene_contracts":
         return run_scene_contract_synthesis(args.project_slug, use_llm=not args.no_llm, force=args.force, chapters=args.chapters)
     if args.stage == "scene_bindings":

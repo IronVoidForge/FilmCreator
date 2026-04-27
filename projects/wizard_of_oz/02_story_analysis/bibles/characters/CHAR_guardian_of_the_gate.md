@@ -14,29 +14,29 @@
 
 ## Visual Bible
 
-- identity_baseline: A collective group of bipedal entities.
+- identity_baseline: [CH010] Chapter X (query appears in paragraph preview)
 - age_presence: unknown
-- physical_build: human_scale, bipedal morphology
+- physical_build: unknown
 - origin_or_historical_context: unknown
 - movement_language: unknown
-The guardian_of_the_gate is a group of bipedal entities appearing at human scale. Specific visual details regarding their individual appearances, clothing, or movement patterns are not provided in the available evidence.
+[CH010] Chapter X (query appears in paragraph preview) [CH011] Chapter XI (query appears in paragraph preview) [CH012] Chapter XII (query appears in paragraph preview)
 
-- physical_traits: bipedal morphology
-- costume_signature: unknown
-- distinguishing_features: []
-- state_variants: []
+- physical_traits: (none)
+- costume_signature: (none)
+- distinguishing_features: (none)
+- state_variants: (none)
 
 ## Behavioral Bible
 
-- personality: unknown
-- role: unknown
-- voice_notes: unknown
-- relationship_notes: Associated with Scarecrow
+- personality: (none)
+- role: group
+- voice_notes: (none)
+- relationship_notes: (none)
 
 ## Continuity
 
-- continuity_constraints: Must be treated as a group entity rather than a single individual.
-- unresolved_ambiguities: Specific visual appearance of the group members is unknown., Sentience level is unknown., Individual movement and costume signatures are unknown.
+- continuity_constraints: (none)
+- unresolved_ambiguities: (none)
 
 ## Evidence Summary
 
@@ -50,4 +50,4 @@ The guardian_of_the_gate is a group of bipedal entities appearing at human scale
 - status: `generated`
 - source_fingerprint: `7c033f785b01ce112983e33728fab9af813a2672`
 - created_at_utc: `2026-04-27T07:46:04.878824+00:00`
-- updated_at_utc: `2026-04-27T12:57:02.531789+00:00`
+- updated_at_utc: `2026-04-27T15:38:40.252742+00:00`

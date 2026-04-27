@@ -16,10 +16,10 @@
 
 - identity_baseline: Large quadrupedal predator with a feline head.
 - age_presence: unknown
-- physical_build: Large scale; morphology is quadrupedal.
-- origin_or_historical_context: Fantasy forest setting.
+- physical_build: Large scale; morphology is described as having the head of a tiger (noted in context of Kalidahs).
+- origin_or_historical_context: Forest/Wilderness setting.
 - movement_language: unknown
-A large-scale, quadrupedal beast characterized by a tiger's head. While the specific body type is not explicitly defined for this individual entity, it is associated with "monstrous beasts" that possess bear-like bodies and long, sharp claws.
+A large-scale quadrupedal beast characterized by a feline, tiger-like head. While the specific body morphology is linked to "monstrous beasts" (Kalidahs) possessing bear-like bodies, the primary identifier is the distinct tiger visage.
 
 - physical_traits: unknown
 - costume_signature: unknown
@@ -31,12 +31,12 @@ A large-scale, quadrupedal beast characterized by a tiger's head. While the spec
 - personality: unknown
 - role: unknown
 - voice_notes: unknown
-- relationship_notes: Associated with the Lion and Forest Animals.
+- relationship_notes: Associated with Lion and Forest Animals
 
 ## Continuity
 
-- continuity_constraints: Maintain distinction between a "tiger" and the "Kalidahs" (which are described as having bear bodies and tiger heads).
-- unresolved_ambiguities: The specific body morphology of the entity "tiger" is not explicitly detailed, only its head type., It is unclear if "tiger" refers to a standard feline or a creature with the monstrous proportions of a Kalidah.
+- continuity_constraints: If appearing as part of a Kalidah, must maintain the bear-body/tiger-head hybrid morphology.
+- unresolved_ambiguities: Specific body type (whether purely feline or the bear-hybrid described for Kalidahs) is not explicitly confirmed for "tiger" as a standalone entity versus the Kalidah description.
 
 ## Evidence Summary
 
@@ -53,4 +53,4 @@ A large-scale, quadrupedal beast characterized by a tiger's head. While the spec
 - status: `generated`
 - source_fingerprint: `6d17098d15ef995e20288feaae7499a7948556e2`
 - created_at_utc: `2026-04-27T07:47:17.500312+00:00`
-- updated_at_utc: `2026-04-27T12:57:46.094100+00:00`
+- updated_at_utc: `2026-04-27T15:40:33.566013+00:00`

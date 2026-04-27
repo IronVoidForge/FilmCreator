@@ -19,11 +19,11 @@
 - physical_build: human_scale bipedal group
 - origin_or_historical_context: castle setting
 - movement_language: unknown
-Insufficient visual evidence is provided to establish a stable identity, costume, or physical appearance for the castle_guards. They are categorized as a human-scale bipedal group within a castle setting, but specific aesthetic details remain unknown.
+Insufficient visual evidence is provided to establish a stable identity, costume, or physical appearance for the castle_guards. They are categorized as a human-scale bipedal group within a castle setting, but specific aesthetic details remain undocumented.
 
-- physical_traits: unknown
+- physical_traits: bipedal morphology
 - costume_signature: unknown
-- distinguishing_features: unknown
+- distinguishing_features: none documented
 - state_variants: unknown
 
 ## Behavioral Bible
@@ -35,8 +35,8 @@ Insufficient visual evidence is provided to establish a stable identity, costume
 
 ## Continuity
 
-- continuity_constraints: must maintain group status as bipedal human-scale entities
-- unresolved_ambiguities: visual appearance and costume are entirely undocumented, specific movement language is unknown, sentience is unknown
+- continuity_constraints: must maintain human-scale bipedal morphology if rendered
+- unresolved_ambiguities: visual appearance and costume, specific physical characteristics, movement style and temperament
 
 ## Evidence Summary
 
@@ -50,4 +50,4 @@ Insufficient visual evidence is provided to establish a stable identity, costume
 - status: `generated`
 - source_fingerprint: `9bced56688e6cfae667a112abdf7710c6d82ec35`
 - created_at_utc: `2026-04-27T07:47:30.281461+00:00`
-- updated_at_utc: `2026-04-27T12:57:54.145573+00:00`
+- updated_at_utc: `2026-04-27T15:40:57.571031+00:00`

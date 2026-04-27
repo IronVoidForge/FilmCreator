@@ -16,13 +16,13 @@
 
 - identity_baseline: humanoid non-human biped
 - age_presence: unknown
-- physical_build: human scale, bipedal morphology
+- physical_build: human scale
 - origin_or_historical_context: unknown
 - movement_language: unknown
-The guardian_of_the_gates is a humanoid non-human entity of human scale. Due to insufficient visual evidence in the provided records, a specific costume, movement language, or physical build cannot be established. The character is confirmed as a renderable bipedal individual.
+The guardian_of_the_gates is a humanoid, non-human bipedal entity of human scale. Specific visual details regarding costume, physical build, or movement are not provided in the available evidence.
 
-- physical_traits: bipedal morphology
-- costume_signature: unknown
+- physical_traits: unknown
+- costume_signature: (none)
 - distinguishing_features: unknown
 - state_variants: unknown
 
@@ -35,8 +35,8 @@ The guardian_of_the_gates is a humanoid non-human entity of human scale. Due to 
 
 ## Continuity
 
-- continuity_constraints: must maintain humanoid non-human morphology, must remain human scale
-- unresolved_ambiguities: specific visual appearance (clothing, color, texture) is unknown, specific physical dimensions and build are unknown, movement style and temperament are unknown
+- continuity_constraints: must maintain humanoid non-human morphology, must maintain human scale
+- unresolved_ambiguities: exact biological or mechanical nature of the "non-human" status is unknown, movement style and posture are unknown
 
 ## Evidence Summary
 
@@ -50,4 +50,4 @@ The guardian_of_the_gates is a humanoid non-human entity of human scale. Due to 
 - status: `generated`
 - source_fingerprint: `2413d91aaf048a1416628ac6f55d9cc80d335e8f`
 - created_at_utc: `2026-04-27T07:42:07.895074+00:00`
-- updated_at_utc: `2026-04-27T12:54:43.519338+00:00`
+- updated_at_utc: `2026-04-27T15:49:14.829056+00:00`

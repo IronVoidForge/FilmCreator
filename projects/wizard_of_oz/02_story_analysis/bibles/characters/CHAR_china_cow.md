@@ -14,14 +14,14 @@
 
 ## Visual Bible
 
-- identity_baseline: Small quadruped animal.
+- identity_baseline: small quadruped animal
 - age_presence: unknown
-- physical_build: Small scale, quadrupedal frame.
+- physical_build: small scale, quadrupedal frame
 - origin_or_historical_context: unknown
 - movement_language: unknown
-A small-scale quadruped animal. Specific breed or coloration is not established in the provided evidence.
+A small-scale quadruped animal. Specific breed, color, or markings are not established in the provided evidence.
 
-- physical_traits: Small scale
+- physical_traits: small scale
 - costume_signature: unknown
 - distinguishing_features: []
 - state_variants: []
@@ -35,8 +35,8 @@ A small-scale quadruped animal. Specific breed or coloration is not established 
 
 ## Continuity
 
-- continuity_constraints: Must maintain small quadrupedal morphology.
-- unresolved_ambiguities: Specific species or breed of the animal is unknown., Visual appearance (color, markings) is unknown., Movement patterns and temperament are unknown.
+- continuity_constraints: Must maintain small quadrupedal morphology as defined by taxonomy.
+- unresolved_ambiguities: Specific animal species or breed is unknown., Visual appearance (color, pattern, texture) is unknown., Movement style and temperament are unknown.
 
 ## Evidence Summary
 
@@ -50,4 +50,4 @@ A small-scale quadruped animal. Specific breed or coloration is not established 
 - status: `generated`
 - source_fingerprint: `3479781e68486defacce7c61b68c8a337ed06925`
 - created_at_utc: `2026-04-27T07:46:16.328236+00:00`
-- updated_at_utc: `2026-04-27T12:57:09.609465+00:00`
+- updated_at_utc: `2026-04-27T15:38:58.657282+00:00`

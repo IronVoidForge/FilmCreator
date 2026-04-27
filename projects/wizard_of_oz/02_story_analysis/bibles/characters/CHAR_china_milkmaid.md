@@ -14,29 +14,29 @@
 
 ## Visual Bible
 
-- identity_baseline: small-scale humanoid non-human entity
+- identity_baseline: unknown
 - age_presence: unknown
-- physical_build: small scale, bipedal frame
+- physical_build: small scale, bipedal morphology
 - origin_or_historical_context: unknown
 - movement_language: unknown
-A small-scale, bipedal humanoid non-human entity. Specific visual details regarding clothing, age, or physical markings are not provided in the available evidence.
+No visual data is available to establish a stable identity for this character. The entity is taxonomically classified as a small-scale, bipedal humanoid or non-humanoid person, but specific physical traits, clothing, or movement patterns are not documented in the provided evidence.
 
-- physical_traits: bipedal morphology
+- physical_traits: small scale
 - costume_signature: unknown
-- distinguishing_features: unknown
-- state_variants: unknown
+- distinguishing_features: []
+- state_variants: []
 
 ## Behavioral Bible
 
 - personality: unknown
 - role: unknown
 - voice_notes: unknown
-- relationship_notes: Associated with China Cow
+- relationship_notes: Associated with "China Cow"
 
 ## Continuity
 
-- continuity_constraints: Must maintain small scale as defined by taxonomy., Must maintain bipedal morphology as defined by taxonomy.
-- unresolved_ambiguities: Specific visual appearance (clothing, facial features, hair, etc.) is entirely undocumented., Biological/material composition of the "non-human" humanoid type is unknown.
+- continuity_constraints: Must maintain small scale as per taxonomy.
+- unresolved_ambiguities: Visual appearance is entirely undocumented., Specific morphology (humanoid vs non-humanoid) is unconfirmed beyond bipedalism.
 
 ## Evidence Summary
 
@@ -49,4 +49,4 @@ A small-scale, bipedal humanoid non-human entity. Specific visual details regard
 - status: `generated`
 - source_fingerprint: `2283af352bc56a5b7643e24a259648d2313976a9`
 - created_at_utc: `2026-04-27T07:46:27.924918+00:00`
-- updated_at_utc: `2026-04-27T12:57:16.543237+00:00`
+- updated_at_utc: `2026-04-27T15:39:20.621648+00:00`

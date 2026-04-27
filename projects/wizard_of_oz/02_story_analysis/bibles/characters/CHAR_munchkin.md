@@ -19,9 +19,9 @@
 - physical_build: small scale, bipedal morphology
 - origin_or_historical_context: fantasy setting
 - movement_language: unknown
-A small-scale, bipedal humanoid fantasy creature. While specific clothing or facial details are not provided in the evidence, the character is defined by a diminutive physical scale relative to standard humanoids.
+A small-scale humanoid fantasy creature of bipedal morphology. While specific clothing or movement patterns are not detailed, the character is defined by its diminutive scale relative to other entities.
 
-- physical_traits: humanoid morphology
+- physical_traits: humanoid, biped
 - costume_signature: unknown
 - distinguishing_features: small stature
 - state_variants: unknown
@@ -31,12 +31,12 @@ A small-scale, bipedal humanoid fantasy creature. While specific clothing or fac
 - personality: unknown
 - role: unknown
 - voice_notes: unknown
-- relationship_notes: associated with the Scarecrow (contextual proximity)
+- relationship_notes: associated with Scarecrow
 
 ## Continuity
 
-- continuity_constraints: must maintain small scale relative to other characters
-- unresolved_ambiguities: specific facial features or skin tones, clothing style and color palette, specific movement patterns or temperament
+- continuity_constraints: maintain small scale relative to standard humanoid proportions
+- unresolved_ambiguities: specific facial features or hair, clothing style and color palette, specific mannerisms or gait
 
 ## Evidence Summary
 
@@ -55,4 +55,4 @@ A small-scale, bipedal humanoid fantasy creature. While specific clothing or fac
 - status: `generated`
 - source_fingerprint: `c498da2c4cbaeb406b2280ea9dee4a1d4abba5cc`
 - created_at_utc: `2026-04-27T07:39:53.570651+00:00`
-- updated_at_utc: `2026-04-27T12:53:10.329265+00:00`
+- updated_at_utc: `2026-04-27T15:29:36.784593+00:00`

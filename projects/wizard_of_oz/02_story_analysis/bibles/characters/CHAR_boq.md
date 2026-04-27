@@ -16,27 +16,27 @@
 
 - identity_baseline: A wealthy Munchkin.
 - age_presence: unknown
-- physical_build: Small-scale humanoid; bipedal morphology.
+- physical_build: Small-scale bipedal humanoid.
 - origin_or_historical_context: Land of the Munchkins.
 - movement_language: unknown
-Boq is a small-scale, bipedal humanoid of the Munchkin race. He possesses a high socioeconomic status within his community, characterized as one of the richest Munchkins in the land. While specific facial or bodily details are unstated, his visual identity is defined by his scale and his presentation as a person of significant wealth.
+Boq is a small-scale, bipedal humanoid of the Munchkin species. He possesses a visual identity defined by his significant wealth within his community. While specific facial or bodily details are unstated, he carries the presence of a high-status individual capable of hosting and waiting upon guests in a domestic setting.
 
-- physical_traits: bipedal
-- costume_signature: unknown (noted as being a "rich Munchkin")
-- distinguishing_features: small scale
-- state_variants: wealthy/formal attire (inferred from status)
+- physical_traits: Small scale
+- costume_signature: Wealthy attire (specific style unknown).
+- distinguishing_features: Munchkin morphology
+- state_variants: Clothed (wealthy/formal)
 
 ## Behavioral Bible
 
-- personality: Hospitable; serves as a host to Dorothy.
-- role: Wealthy Munchkin host.
+- personality: Hospitable; acts as a host to Dorothy.
+- role: Wealthy Munchkin resident.
 - voice_notes: unknown
 - relationship_notes: Host to Dorothy
 
 ## Continuity
 
-- continuity_constraints: Must maintain small scale relative to other characters., Visual presentation should reflect high wealth/status.
-- unresolved_ambiguities: Specific facial features and hair., Exact color palette of Munchkin physiology or clothing., Specific age or stage of life.
+- continuity_constraints: Must maintain small scale relative to standard humanoids., Visual presentation must reflect high socio-economic status (wealthy).
+- unresolved_ambiguities: Specific facial features or hair., Exact color palette of Munchkin skin/features., Specific style of "wealthy" clothing.
 
 ## Evidence Summary
 
@@ -51,4 +51,4 @@ Boq is a small-scale, bipedal humanoid of the Munchkin race. He possesses a high
 - status: `generated`
 - source_fingerprint: `c01b72734f9dc506aab8086fa047ee7f826c6738`
 - created_at_utc: `2026-04-27T07:39:02.024835+00:00`
-- updated_at_utc: `2026-04-27T12:52:32.864702+00:00`
+- updated_at_utc: `2026-04-27T15:28:39.496949+00:00`

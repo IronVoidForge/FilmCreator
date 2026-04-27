@@ -95,61 +95,64 @@ if errorlevel 1 goto :end_with_error
 call :run_step "06 Character bibles" "python -m orchestrator synthesize-character-bibles ""%PROJECT_SLUG%"" --force"
 if errorlevel 1 goto :end_with_error
 
-call :run_step "07 Environment bibles" "python -m orchestrator synthesize-environment-bibles ""%PROJECT_SLUG%"" --force"
+call :run_step "07 Character visual evidence" "python -m orchestrator refine-character-visual-evidence ""%PROJECT_SLUG%"" --force"
 if errorlevel 1 goto :end_with_error
 
-call :run_step "08 Visual fallbacks" "python -m orchestrator synthesize-visual-fallbacks ""%PROJECT_SLUG%"" --force"
+call :run_step "08 Environment bibles" "python -m orchestrator synthesize-environment-bibles ""%PROJECT_SLUG%"" --force"
+if errorlevel 1 goto :end_with_error
+
+call :run_step "09 Visual fallbacks" "python -m orchestrator synthesize-visual-fallbacks ""%PROJECT_SLUG%"" --force"
 if errorlevel 1 goto :end_with_error
 
 if "%CHAPTERS%"=="" (
-    call :run_step "09 Scene contracts" "python -m orchestrator synthesize-scene-contracts ""%PROJECT_SLUG%"" --force"
+    call :run_step "10 Scene contracts" "python -m orchestrator synthesize-scene-contracts ""%PROJECT_SLUG%"" --force"
     if errorlevel 1 goto :end_with_error
 ) else (
-    call :run_step "09 Scene contracts" "python -m orchestrator synthesize-scene-contracts ""%PROJECT_SLUG%"" --force --chapters ""%CHAPTERS%"""
+    call :run_step "10 Scene contracts" "python -m orchestrator synthesize-scene-contracts ""%PROJECT_SLUG%"" --force --chapters ""%CHAPTERS%"""
     if errorlevel 1 goto :end_with_error
 )
 
 if "%CHAPTERS%"=="" (
-    call :run_step "10 Scene bindings" "python -m orchestrator synthesize-scene-bindings ""%PROJECT_SLUG%"" --force"
+    call :run_step "11 Scene bindings" "python -m orchestrator synthesize-scene-bindings ""%PROJECT_SLUG%"" --force"
     if errorlevel 1 goto :end_with_error
 ) else (
-    call :run_step "10 Scene bindings" "python -m orchestrator synthesize-scene-bindings ""%PROJECT_SLUG%"" --force --chapters ""%CHAPTERS%"""
+    call :run_step "11 Scene bindings" "python -m orchestrator synthesize-scene-bindings ""%PROJECT_SLUG%"" --force --chapters ""%CHAPTERS%"""
     if errorlevel 1 goto :end_with_error
 )
 
 if "%CHAPTERS%"=="" (
-    call :run_step "11 Shot packages" "python -m orchestrator synthesize-shot-packages ""%PROJECT_SLUG%"" --force"
+    call :run_step "12 Shot packages" "python -m orchestrator synthesize-shot-packages ""%PROJECT_SLUG%"" --force"
     if errorlevel 1 goto :end_with_error
 ) else (
-    call :run_step "11 Shot packages" "python -m orchestrator synthesize-shot-packages ""%PROJECT_SLUG%"" --force --chapters ""%CHAPTERS%"""
+    call :run_step "12 Shot packages" "python -m orchestrator synthesize-shot-packages ""%PROJECT_SLUG%"" --force --chapters ""%CHAPTERS%"""
     if errorlevel 1 goto :end_with_error
 )
 
 if "%CHAPTERS%"=="" (
-    call :run_step "12 Dialogue timeline" "python -m orchestrator synthesize-dialogue-timeline ""%PROJECT_SLUG%"" --force"
+    call :run_step "13 Dialogue timeline" "python -m orchestrator synthesize-dialogue-timeline ""%PROJECT_SLUG%"" --force"
     if errorlevel 1 goto :end_with_error
 ) else (
-    call :run_step "12 Dialogue timeline" "python -m orchestrator synthesize-dialogue-timeline ""%PROJECT_SLUG%"" --force --chapters ""%CHAPTERS%"""
+    call :run_step "13 Dialogue timeline" "python -m orchestrator synthesize-dialogue-timeline ""%PROJECT_SLUG%"" --force --chapters ""%CHAPTERS%"""
     if errorlevel 1 goto :end_with_error
 )
 
 if "%CHAPTERS%"=="" (
-    call :run_step "13 Descriptor enrichment" "python -m orchestrator synthesize-descriptor-enrichment ""%PROJECT_SLUG%"" --force"
+    call :run_step "14 Descriptor enrichment" "python -m orchestrator synthesize-descriptor-enrichment ""%PROJECT_SLUG%"" --force"
     if errorlevel 1 goto :end_with_error
 ) else (
-    call :run_step "13 Descriptor enrichment" "python -m orchestrator synthesize-descriptor-enrichment ""%PROJECT_SLUG%"" --force --chapters ""%CHAPTERS%"""
+    call :run_step "14 Descriptor enrichment" "python -m orchestrator synthesize-descriptor-enrichment ""%PROJECT_SLUG%"" --force --chapters ""%CHAPTERS%"""
     if errorlevel 1 goto :end_with_error
 )
 
 if "%CHAPTERS%"=="" (
-    call :run_step "14 Prompt preparation" "python -m orchestrator synthesize-prompt-preparation ""%PROJECT_SLUG%"" --force"
+    call :run_step "15 Prompt preparation" "python -m orchestrator synthesize-prompt-preparation ""%PROJECT_SLUG%"" --force"
     if errorlevel 1 goto :end_with_error
 ) else (
-    call :run_step "14 Prompt preparation" "python -m orchestrator synthesize-prompt-preparation ""%PROJECT_SLUG%"" --force --chapters ""%CHAPTERS%"""
+    call :run_step "15 Prompt preparation" "python -m orchestrator synthesize-prompt-preparation ""%PROJECT_SLUG%"" --force --chapters ""%CHAPTERS%"""
     if errorlevel 1 goto :end_with_error
 )
 
-call :run_step "15 Quality grading" "python -m orchestrator grade-artifacts ""%PROJECT_SLUG%"""
+call :run_step "16 Quality grading" "python -m orchestrator grade-artifacts ""%PROJECT_SLUG%"""
 if errorlevel 1 goto :end_with_error
 
 echo.

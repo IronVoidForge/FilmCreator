@@ -14,29 +14,29 @@
 
 ## Visual Bible
 
-- identity_baseline: unknown
+- identity_baseline: [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/aunt_em.md] Costume/Silhouette: Unknown.
 - age_presence: unknown
-- physical_build: biped, human_scale
+- physical_build: unknown
 - origin_or_historical_context: unknown
 - movement_language: unknown
-Visual identity is currently unestablished. While the entity is taxonomically classified as a human-scale biped, specific details regarding age, build, costume, or movement are not provided in the available evidence. Note: Chapter CH012 contains conflicting descriptive data regarding "magical winged creatures (monkeys)" which may refer to associated entities rather than this character.
+[source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH001/aunt_em.md] Costume/Silhouette: Unknown. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH012/aunt_em.md] Physical Description: Magical winged creatures (monkeys). [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH012/aunt_em.md] Costume/Silhouette: Flying primates.
 
-- physical_traits: []
-- costume_signature: unknown
-- distinguishing_features: []
-- state_variants: []
+- physical_traits: (none)
+- costume_signature: (none)
+- distinguishing_features: (none)
+- state_variants: (none)
 
 ## Behavioral Bible
 
-- personality: unknown
-- role: unknown
-- voice_notes: unknown
-- relationship_notes: Associated with Dorothy, Associated with Uncle Henry, Associated with Wicked Witch of the West, Associated with Scarecrow, Associated with Tin Woodman, Associated with Cowardly Lion
+- personality: (none)
+- role: individual
+- voice_notes: (none)
+- relationship_notes: (none)
 
 ## Continuity
 
-- continuity_constraints: Maintain bipedal, human-scale morphology as per taxonomy.
-- unresolved_ambiguities: Visual identity (costume, age, build) is entirely unknown., Discrepancy in CH012 suggests potential confusion between this character and associated flying primates.
+- continuity_constraints: (none)
+- unresolved_ambiguities: (none)
 
 ## Evidence Summary
 
@@ -53,4 +53,4 @@ Visual identity is currently unestablished. While the entity is taxonomically cl
 - status: `generated`
 - source_fingerprint: `30b0c7ec7d1e2427f91a9d1d6c3280b7c1b2fbf8`
 - created_at_utc: `2026-04-27T07:36:53.895250+00:00`
-- updated_at_utc: `2026-04-27T12:50:57.775857+00:00`
+- updated_at_utc: `2026-04-27T15:46:51.537171+00:00`

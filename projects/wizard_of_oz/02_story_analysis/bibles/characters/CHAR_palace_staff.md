@@ -17,26 +17,26 @@
 - identity_baseline: unknown
 - age_presence: unknown
 - physical_build: bipedal, human scale
-- origin_or_historical_context: unknown
+- origin_or_historical_context: palace setting (inferred from ID)
 - movement_language: unknown
-No visual data is available to establish a stable identity for this character. The entity is taxonomically defined as a bipedal, human-scale humanoid or non-humanoid, but specific physical traits, clothing, or movement patterns are not documented in the provided evidence.
+No specific visual details are provided for this entity. The character is identified as a humanoid biped of human scale, likely serving within a palace context, but lacks any documented physical descriptors, costume signatures, or movement patterns.
 
-- physical_traits: unknown
+- physical_traits: morphology: biped, scale: human_scale
 - costume_signature: unknown
-- distinguishing_features: unknown
+- distinguishing_features: none documented
 - state_variants: unknown
 
 ## Behavioral Bible
 
 - personality: unknown
-- role: unknown
+- role: palace staff (inferred from ID)
 - voice_notes: unknown
-- relationship_notes: unknown
+- relationship_notes: (none)
 
 ## Continuity
 
-- continuity_constraints: character is a singular individual entity per resolution notes
-- unresolved_ambiguities: complete lack of visual description in provided evidence, identity and appearance are entirely unknown
+- continuity_constraints: must maintain bipedal, human-scale morphology
+- unresolved_ambiguities: specific visual appearance is entirely undocumented, exact nature of "palace_staff" (singular individual vs. representative type) remains ambiguous despite registry status
 
 ## Evidence Summary
 
@@ -50,4 +50,4 @@ No visual data is available to establish a stable identity for this character. T
 - status: `generated`
 - source_fingerprint: `a9692391b4264aaba8643a686435343bfbf35c5c`
 - created_at_utc: `2026-04-27T07:44:29.665280+00:00`
-- updated_at_utc: `2026-04-27T12:56:06.617959+00:00`
+- updated_at_utc: `2026-04-27T15:36:05.949916+00:00`

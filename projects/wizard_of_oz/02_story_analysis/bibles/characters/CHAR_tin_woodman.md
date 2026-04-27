@@ -14,29 +14,29 @@
 
 ## Visual Bible
 
-- identity_baseline: A bipedal humanoid entity constructed entirely of tin.
+- identity_baseline: [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH005/tin_woodman.md] Costume/Silhouette: Entirely metallic (tin) body; carries an axe.
 - age_presence: unknown
-- physical_build: Humanoid frame with an articulated metallic body.
+- physical_build: unknown
 - origin_or_historical_context: unknown
 - movement_language: unknown
-The Tin Woodman is a bipedal humanoid entity composed entirely of articulated tin. He possesses a non-flesh, metallic silhouette and is characterized by his fully metallic construction. His primary equipment is an axe, which he carries as part of his standard visual profile.
+[source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH005/tin_woodman.md] Costume/Silhouette: Entirely metallic (tin) body; carries an axe. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH008/tin_woodman.md] Physical Description: Non-flesh entity; immune to poppy scent. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH008/tin_woodman.md] Costume/Silhouette: Bipedal humanoid form. Recovered visual evidence: Now while the tinsmiths had been at work mending the Woodman himself, another of the Winkies, who was a goldsmith, had made an axe-handle of solid gold and fitted it to the Woodman’s axe, instead of the old broken handle. Others polished...
 
-- physical_traits: Immune to poppy scent
-- costume_signature: Entirely metallic (tin) body; carries an axe.
-- distinguishing_features: Non-flesh, entirely metallic composition, Articulated tin construction
-- state_variants: Standard (articulated tin body carrying an axe)
+- physical_traits: source visual evidence (CH013): Now while the tinsmiths had been at work mending the Woodman himself, another of the Winkies, who was a goldsmith, had made an axe-handle of solid gold and fitted it to the Wood...
+- costume_signature: Source-supported costume/equipment: Now while the tinsmiths had been at work mending the Woodman himself, another of the Winkies, who was a goldsmith, had made an axe-handle of solid gold and fitted it to the Wood...
+- distinguishing_features: source-supported evidence (CH013): Now while the tinsmiths had been at work mending the Woodman himself, another of the Winkies, who was a goldsmith, had made an axe-handle of solid gold and fitted it to the Wood...
+- state_variants: (none)
 
 ## Behavioral Bible
 
-- personality: unknown
-- role: unknown
-- voice_notes: unknown
-- relationship_notes: Associated with Dorothy, Associated with Scarecrow, Associated with Cowardly Lion, Associated with Toto
+- personality: (none)
+- role: individual
+- voice_notes: (none)
+- relationship_notes: (none)
 
 ## Continuity
 
-- continuity_constraints: Must maintain a non-flesh, entirely metallic appearance., Body must be depicted as articulated tin.
-- unresolved_ambiguities: Specific movement language (stiff vs. fluid) is not defined., Visual age or era of construction is unknown.
+- continuity_constraints: (none)
+- unresolved_ambiguities: (none)
 
 ## Evidence Summary
 
@@ -48,6 +48,7 @@ The Tin Woodman is a bipedal humanoid entity composed entirely of articulated ti
 - [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH023/tin_woodman.md] Costume/Silhouette: Metallic, articulated tin body.
 - [CH005] Chapter V (query appears in paragraph preview)
 - [CH006] Chapter VI (query appears in paragraph preview)
+- [visual-evidence:CH013 p17] Now while the tinsmiths had been at work mending the Woodman himself, another of the Winkies, who was a goldsmith, had made an axe-handle of solid gold and fitted it to the Woodman’s axe, instead of the old broken handle. Others polished the blade until all the rust was removed and it glistened like burnished silver.
 
 ## Metadata
 
@@ -55,4 +56,4 @@ The Tin Woodman is a bipedal humanoid entity composed entirely of articulated ti
 - status: `generated`
 - source_fingerprint: `457c199eef081e2f9daffa447bf4f76b58420e11`
 - created_at_utc: `2026-04-27T07:40:18.608857+00:00`
-- updated_at_utc: `2026-04-27T12:53:24.906298+00:00`
+- updated_at_utc: `2026-04-27T16:15:45.200567+00:00`

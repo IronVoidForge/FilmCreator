@@ -16,27 +16,27 @@
 
 - identity_baseline: unknown
 - age_presence: unknown
-- physical_build: human_scale biped
+- physical_build: unknown
 - origin_or_historical_context: unknown
 - movement_language: unknown
-No visual data is available to establish a stable identity, costume, or physical presence for uncle_henry. The character is confirmed as a human-scale individual but lacks specific descriptive evidence regarding appearance or movement.
+No visual data is available to establish a stable identity, build, or costume for Uncle Henry. The character's physical presence remains entirely undefined by the provided evidence.
 
-- physical_traits: morphology: biped
+- physical_traits: (none)
 - costume_signature: unknown
-- distinguishing_features: []
-- state_variants: []
+- distinguishing_features: (none)
+- state_variants: (none)
 
 ## Behavioral Bible
 
 - personality: unknown
 - role: unknown
 - voice_notes: unknown
-- relationship_notes: associated with Aunt Em, associated with Dorothy, associated with Toto
+- relationship_notes: Associated with Aunt Em, Associated with Dorothy, Associated with Toto
 
 ## Continuity
 
-- continuity_constraints: []
-- unresolved_ambiguities: visual identity is entirely undocumented in provided evidence
+- continuity_constraints: (none)
+- unresolved_ambiguities: Visual identity (costume, build, age, and features are all unknown)
 
 ## Evidence Summary
 
@@ -52,4 +52,4 @@ No visual data is available to establish a stable identity, costume, or physical
 - status: `generated`
 - source_fingerprint: `ed9be31508fae0d65ef48e1adc763fb3a6d6b53a`
 - created_at_utc: `2026-04-27T07:38:09.084700+00:00`
-- updated_at_utc: `2026-04-27T12:52:00.175159+00:00`
+- updated_at_utc: `2026-04-27T15:46:54.518274+00:00`

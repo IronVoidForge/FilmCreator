@@ -14,29 +14,29 @@
 
 ## Visual Bible
 
-- identity_baseline: unknown
+- identity_baseline: [CH001] Chapter I (book index hit)
 - age_presence: unknown
 - physical_build: unknown
 - origin_or_historical_context: unknown
 - movement_language: unknown
-No visual data is available to establish a stable identity, physical build, or costume signature for this character.
+[CH001] Chapter I (book index hit) [CH022] Chapter XXII (book index hit)
 
-- physical_traits: []
-- costume_signature: unknown
-- distinguishing_features: []
-- state_variants: []
+- physical_traits: (none)
+- costume_signature: (none)
+- distinguishing_features: (none)
+- state_variants: (none)
 
 ## Behavioral Bible
 
-- personality: unknown
-- role: unknown
-- voice_notes: unknown
-- relationship_notes: []
+- personality: (none)
+- role: individual
+- voice_notes: (none)
+- relationship_notes: (none)
 
 ## Continuity
 
-- continuity_constraints: []
-- unresolved_ambiguities: Visual identity is entirely unestablished in provided evidence., Physical characteristics and costume are unknown.
+- continuity_constraints: (none)
+- unresolved_ambiguities: (none)
 
 ## Evidence Summary
 
@@ -49,4 +49,4 @@ No visual data is available to establish a stable identity, physical build, or c
 - status: `generated`
 - source_fingerprint: `11993ec783d83861ff7feaedf88cfae95bb30660`
 - created_at_utc: `2026-04-27T07:47:42.446280+00:00`
-- updated_at_utc: `2026-04-27T12:58:01.417754+00:00`
+- updated_at_utc: `2026-04-27T15:41:16.677705+00:00`

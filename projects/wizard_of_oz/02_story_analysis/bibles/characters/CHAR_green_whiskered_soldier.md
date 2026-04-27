@@ -19,7 +19,7 @@
 - physical_build: human_scale biped
 - origin_or_historical_context: unknown
 - movement_language: unknown
-A humanoid, non-human entity of human scale. The character is defined by the presence of green whiskers. Further visual details regarding build, costume, or movement are not established in the provided evidence.
+A humanoid, non-human soldier of human scale. The character's most defining and stable visual identifier is the presence of green whiskers. Further details regarding costume, build, or movement are not established in the provided evidence.
 
 - physical_traits: bipedal morphology
 - costume_signature: unknown
@@ -31,12 +31,12 @@ A humanoid, non-human entity of human scale. The character is defined by the pre
 - personality: unknown
 - role: Guardian of the Gate (associated)
 - voice_notes: unknown
-- relationship_notes: Associated with the Guardian of the Gate
+- relationship_notes: Associated with "Guardian of the Gate"
 
 ## Continuity
 
 - continuity_constraints: Must maintain green whiskers as a primary identifier.
-- unresolved_ambiguities: Specific facial structure and skin tone are unknown., Exact nature of "non-human" morphology is undefined., Clothing, armor, or weaponry are not specified.
+- unresolved_ambiguities: Specific facial structure and skin tone are unknown., Exact nature of the "non-human" morphology is undefined., Costume and equipment are entirely unstated.
 
 ## Evidence Summary
 
@@ -50,4 +50,4 @@ A humanoid, non-human entity of human scale. The character is defined by the pre
 - status: `generated`
 - source_fingerprint: `98118215caae5002ae5575279fed273b9174f7f7`
 - created_at_utc: `2026-04-27T07:45:51.305004+00:00`
-- updated_at_utc: `2026-04-27T12:56:54.894852+00:00`
+- updated_at_utc: `2026-04-27T15:38:14.341703+00:00`

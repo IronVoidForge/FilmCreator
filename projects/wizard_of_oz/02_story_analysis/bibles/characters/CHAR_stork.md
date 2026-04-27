@@ -24,7 +24,7 @@ A large-scale winged bird characterized by a prominent avian silhouette. The cre
 - physical_traits: Winged morphology
 - costume_signature: Avian silhouette.
 - distinguishing_features: Large scale wingspan
-- state_variants: Flying
+- state_variants: In flight
 
 ## Behavioral Bible
 
@@ -52,4 +52,4 @@ A large-scale winged bird characterized by a prominent avian silhouette. The cre
 - status: `generated`
 - source_fingerprint: `519081d7e09d91393d90934f2616db9036a74591`
 - created_at_utc: `2026-04-27T07:41:17.423543+00:00`
-- updated_at_utc: `2026-04-27T12:54:14.383408+00:00`
+- updated_at_utc: `2026-04-27T15:30:56.493509+00:00`

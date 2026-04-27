@@ -19,12 +19,12 @@
 - physical_build: human_scale bipedal frame
 - origin_or_historical_context: unknown
 - movement_language: unknown
-A powerful, one-eyed humanoid entity of human scale. While her specific attire is not defined, she possesses the ability to utilize invisible magic. Her physical form is highly unstable when exposed to water, at which point she loses all structural integrity and melts into a shapeless mass.
+A powerful, one-eyed humanoid entity of human scale. While her specific attire is not defined, she utilizes invisible magic for her presence. Her physical form is highly unstable when exposed to water, at which point she loses all structural integrity and melts into a shapeless mass.
 
 - physical_traits: Bipedal morphology
 - costume_signature: unknown (utilizes invisible magic)
 - distinguishing_features: Single eye
-- state_variants: Standard (one-eyed humanoid), Dissolved (shapeless mass upon contact with water)
+- state_variants: Standard (one-eyed humanoid), Melted (shapeless mass upon contact with water)
 
 ## Behavioral Bible
 
@@ -35,7 +35,7 @@ A powerful, one-eyed humanoid entity of human scale. While her specific attire i
 
 ## Continuity
 
-- continuity_constraints: Must maintain a single eye as a primary identifier., Transformation into a shapeless mass must be triggered by water contact.
+- continuity_constraints: Must maintain a single eye as a primary identifier., Transformation into a shapeless mass is triggered specifically by contact with water.
 - unresolved_ambiguities: Specific age and physical build details are not provided., Visual appearance of clothing/armor is unknown due to reliance on invisible magic.
 
 ## Evidence Summary
@@ -52,4 +52,4 @@ A powerful, one-eyed humanoid entity of human scale. While her specific attire i
 - status: `generated`
 - source_fingerprint: `ae4918ed52010089d339e1735ec99d3bb30450f5`
 - created_at_utc: `2026-04-27T07:42:59.770587+00:00`
-- updated_at_utc: `2026-04-27T12:55:15.049744+00:00`
+- updated_at_utc: `2026-04-27T15:33:58.449802+00:00`

@@ -14,14 +14,14 @@
 
 ## Visual Bible
 
-- identity_baseline: A collective group of human-scale bipedal individuals.
+- identity_baseline: A group of human-scale bipedal individuals representing a farming family.
 - age_presence: unknown
 - physical_build: unknown
-- origin_or_historical_context: unknown
+- origin_or_historical_context: rural/farming setting
 - movement_language: unknown
-Insufficient evidence is provided to establish a stable visual identity for this group. The entity is taxonomically defined as a human-scale, bipedal group, but specific physical traits, clothing, or movement patterns are not documented in the available records.
+A group of human-scale bipedal individuals identified as a farming family. Specific visual details regarding age, build, or costume are not provided in the available evidence.
 
-- physical_traits: morphology: biped, scale: human_scale
+- physical_traits: []
 - costume_signature: unknown
 - distinguishing_features: []
 - state_variants: []
@@ -35,8 +35,8 @@ Insufficient evidence is provided to establish a stable visual identity for this
 
 ## Continuity
 
-- continuity_constraints: Must be treated as a group entity rather than a single individual.
-- unresolved_ambiguities: Specific visual appearance of the family members is unknown., Individual ages, builds, and clothing are not established., Sentience level is unknown.
+- continuity_constraints: Maintain group cohesion as a single family unit.
+- unresolved_ambiguities: Specific visual appearance of the family members (age, build, clothing)., Individual identities within the group., Specific movement patterns or mannerisms.
 
 ## Evidence Summary
 
@@ -50,4 +50,4 @@ Insufficient evidence is provided to establish a stable visual identity for this
 - status: `generated`
 - source_fingerprint: `17c1505844c43ff662d3104ea586499a5d7ba32e`
 - created_at_utc: `2026-04-27T07:41:54.939964+00:00`
-- updated_at_utc: `2026-04-27T12:54:36.138486+00:00`
+- updated_at_utc: `2026-04-27T15:32:01.710261+00:00`

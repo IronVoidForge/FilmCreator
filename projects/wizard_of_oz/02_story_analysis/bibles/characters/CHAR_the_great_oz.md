@@ -14,29 +14,29 @@
 
 ## Visual Bible
 
-- identity_baseline: unknown
+- identity_baseline: [CH003] Chapter III (query appears in paragraph preview)
 - age_presence: unknown
 - physical_build: unknown
 - origin_or_historical_context: unknown
 - movement_language: unknown
-No visual data is available to establish a stable identity, physical build, or costume for this character. The entity's morphology and scale remain unknown according to the provided taxonomy.
+[CH003] Chapter III (query appears in paragraph preview) [CH005] Chapter V (query appears in paragraph preview) [CH006] Chapter VI (query appears in paragraph preview)
 
-- physical_traits: []
-- costume_signature: unknown
-- distinguishing_features: []
-- state_variants: []
+- physical_traits: (none)
+- costume_signature: (none)
+- distinguishing_features: (none)
+- state_variants: (none)
 
 ## Behavioral Bible
 
-- personality: unknown
-- role: unknown
-- voice_notes: unknown
-- relationship_notes: Associated with Dorothy, Associated with Scarecrow, Associated with Tin Woodman, Associated with Cowardly Lion
+- personality: (none)
+- role: individual
+- voice_notes: (none)
+- relationship_notes: (none)
 
 ## Continuity
 
-- continuity_constraints: Maintain unknown status for all physical and morphological traits until visual evidence is provided.
-- unresolved_ambiguities: Primary type, morphology, scale, and sentience are currently unknown., Visual identity and costume signature are entirely undocumented in the provided evidence.
+- continuity_constraints: (none)
+- unresolved_ambiguities: (none)
 
 ## Evidence Summary
 
@@ -50,4 +50,4 @@ No visual data is available to establish a stable identity, physical build, or c
 - status: `generated`
 - source_fingerprint: `583661f442453733527ba0b87e7e856ef9a477cf`
 - created_at_utc: `2026-04-27T07:42:47.134000+00:00`
-- updated_at_utc: `2026-04-27T12:55:07.499524+00:00`
+- updated_at_utc: `2026-04-27T15:33:38.122223+00:00`

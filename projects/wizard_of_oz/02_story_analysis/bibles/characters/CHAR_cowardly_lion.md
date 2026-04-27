@@ -14,29 +14,29 @@
 
 ## Visual Bible
 
-- identity_baseline: Large quadrupedal feline predator.
+- identity_baseline: [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH008/cowardly_lion.md] Physical Description: Large animal; too heavy to be carried by the others.
 - age_presence: unknown
-- physical_build: Heavy, large-scale frame; noted as too heavy to be carried by others.
-- origin_or_historical_context: Oz (fantasy setting)
-- movement_language: Quadrupedal movement.
-A large, heavy quadrupedal feline with a predator's silhouette. The character possesses significant mass, described as being too heavy to be carried by companions. As an animal entity, the visual identity is defined by its large scale and feline morphology.
+- physical_build: unknown
+- origin_or_historical_context: unknown
+- movement_language: unknown
+[source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH008/cowardly_lion.md] Physical Description: Large animal; too heavy to be carried by the others. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH008/cowardly_lion.md] Costume/Silhouette: Quadrupedal feline silhouette. [source:C:/FilmCreator/projects/wizard_of_oz/02_story_analysis/character_breakdowns/chapters/CH012/cowardly_lion.md] Physical Description: A large lion.
 
-- physical_traits: Large animal scale
-- costume_signature: Feline silhouette.
-- distinguishing_features: Large predator silhouette
-- state_variants: natural/unclothed
+- physical_traits: (none)
+- costume_signature: (none)
+- distinguishing_features: (none)
+- state_variants: (none)
 
 ## Behavioral Bible
 
-- personality: unknown
-- role: companion/traveler
-- voice_notes: unknown
-- relationship_notes: Associated with Dorothy, Scarecrow, and Tin Woodman., Interacts with the Queen of the Field Mice., Associated with The Great Oz and the Wicked Witch of the West.
+- personality: (none)
+- role: individual
+- voice_notes: (none)
+- relationship_notes: (none)
 
 ## Continuity
 
-- continuity_constraints: Must maintain a large, heavy physical presence consistent with being uncarryable., Silhouette must remain consistently feline/quadrupedal.
-- unresolved_ambiguities: Specific visual details of fur color or pattern are not provided in the evidence., Exact age or stage of life is unknown.
+- continuity_constraints: (none)
+- unresolved_ambiguities: (none)
 
 ## Evidence Summary
 
@@ -55,4 +55,4 @@ A large, heavy quadrupedal feline with a predator's silhouette. The character po
 - status: `generated`
 - source_fingerprint: `a31315d0d98735634276d48aa4cdc22de33bfbab`
 - created_at_utc: `2026-04-27T07:40:39.965566+00:00`
-- updated_at_utc: `2026-04-27T12:53:44.901156+00:00`
+- updated_at_utc: `2026-04-27T15:46:52.042288+00:00`

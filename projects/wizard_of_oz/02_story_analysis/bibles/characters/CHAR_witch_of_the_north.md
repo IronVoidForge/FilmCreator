@@ -18,8 +18,8 @@
 - age_presence: unknown
 - physical_build: human scale, bipedal morphology
 - origin_or_historical_context: unknown
-- movement_language: unknown
-A humanoid non-human entity of human scale. The character is defined by a signature costume consisting of white clothing decorated with star patterns. Further physical details regarding build, age, or movement are currently unestablished.
+- movement_language: (none)
+A humanoid non-human entity of human scale. The character is defined by a signature costume consisting of white clothing decorated with star patterns. Further details regarding physical build, age, or movement are currently unestablished.
 
 - physical_traits: bipedal morphology
 - costume_signature: white clothing featuring star patterns
@@ -35,8 +35,8 @@ A humanoid non-human entity of human scale. The character is defined by a signat
 
 ## Continuity
 
-- continuity_constraints: costume must maintain white color and star pattern motifs
-- unresolved_ambiguities: specific physical appearance (facial features, hair, etc.) is unknown, exact age or stage of life is unknown, movement style and posture are unknown
+- continuity_constraints: maintain white clothing with star patterns as the primary visual identifier
+- unresolved_ambiguities: specific non-human biological traits are unknown
 
 ## Evidence Summary
 
@@ -51,4 +51,4 @@ A humanoid non-human entity of human scale. The character is defined by a signat
 - status: `generated`
 - source_fingerprint: `8155cfe0d146d1e221e28d6074a3386ae34f3fa8`
 - created_at_utc: `2026-04-27T07:38:48.865103+00:00`
-- updated_at_utc: `2026-04-27T12:52:25.341453+00:00`
+- updated_at_utc: `2026-04-27T15:46:54.818265+00:00`

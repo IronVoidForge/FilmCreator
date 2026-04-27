@@ -141,15 +141,16 @@ if "%RESUME_STAGE%"=="story_analysis" set "START_LEVEL=1"
 if "%RESUME_STAGE%"=="character_taxonomy" set "START_LEVEL=3"
 if "%RESUME_STAGE%"=="identity_refinement" set "START_LEVEL=4"
 if "%RESUME_STAGE%"=="character_bibles" set "START_LEVEL=6"
-if "%RESUME_STAGE%"=="environment_bibles" set "START_LEVEL=7"
-if "%RESUME_STAGE%"=="visual_fallbacks" set "START_LEVEL=8"
-if "%RESUME_STAGE%"=="scene_contracts" set "START_LEVEL=9"
-if "%RESUME_STAGE%"=="scene_bindings" set "START_LEVEL=10"
-if "%RESUME_STAGE%"=="shot_packages" set "START_LEVEL=11"
-if "%RESUME_STAGE%"=="dialogue_timeline" set "START_LEVEL=12"
-if "%RESUME_STAGE%"=="descriptor_enrichment" set "START_LEVEL=13"
-if "%RESUME_STAGE%"=="prompt_preparation" set "START_LEVEL=14"
-if "%RESUME_STAGE%"=="quality_grading" set "START_LEVEL=15"
+if "%RESUME_STAGE%"=="character_visual_evidence" set "START_LEVEL=7"
+if "%RESUME_STAGE%"=="environment_bibles" set "START_LEVEL=8"
+if "%RESUME_STAGE%"=="visual_fallbacks" set "START_LEVEL=9"
+if "%RESUME_STAGE%"=="scene_contracts" set "START_LEVEL=10"
+if "%RESUME_STAGE%"=="scene_bindings" set "START_LEVEL=11"
+if "%RESUME_STAGE%"=="shot_packages" set "START_LEVEL=12"
+if "%RESUME_STAGE%"=="dialogue_timeline" set "START_LEVEL=13"
+if "%RESUME_STAGE%"=="descriptor_enrichment" set "START_LEVEL=14"
+if "%RESUME_STAGE%"=="prompt_preparation" set "START_LEVEL=15"
+if "%RESUME_STAGE%"=="quality_grading" set "START_LEVEL=16"
 
 if "%START_LEVEL%"=="" (
     echo ERROR: Unknown resume stage: %RESUME_STAGE%
@@ -169,15 +170,16 @@ if /I "%MODE%"=="PLAN_ONLY" (
     if %START_LEVEL% LEQ 4 echo 04 Identity refinement plan
     if %START_LEVEL% LEQ 5 echo 05 Identity refinement apply
     if %START_LEVEL% LEQ 6 echo 06 Character bibles
-    if %START_LEVEL% LEQ 7 echo 07 Environment bibles
-    if %START_LEVEL% LEQ 8 echo 08 Visual fallbacks
-    if %START_LEVEL% LEQ 9 echo 09 Scene contracts
-    if %START_LEVEL% LEQ 10 echo 10 Scene bindings
-    if %START_LEVEL% LEQ 11 echo 11 Shot packages
-    if %START_LEVEL% LEQ 12 echo 12 Dialogue timeline
-    if %START_LEVEL% LEQ 13 echo 13 Descriptor enrichment
-    if %START_LEVEL% LEQ 14 echo 14 Prompt preparation
-    if %START_LEVEL% LEQ 15 echo 15 Quality grading
+    if %START_LEVEL% LEQ 7 echo 07 Character visual evidence
+    if %START_LEVEL% LEQ 8 echo 08 Environment bibles
+    if %START_LEVEL% LEQ 9 echo 09 Visual fallbacks
+    if %START_LEVEL% LEQ 10 echo 10 Scene contracts
+    if %START_LEVEL% LEQ 11 echo 11 Scene bindings
+    if %START_LEVEL% LEQ 12 echo 12 Shot packages
+    if %START_LEVEL% LEQ 13 echo 13 Dialogue timeline
+    if %START_LEVEL% LEQ 14 echo 14 Descriptor enrichment
+    if %START_LEVEL% LEQ 15 echo 15 Prompt preparation
+    if %START_LEVEL% LEQ 16 echo 16 Quality grading
     echo.
     echo Log: %LOG_FILE%
     exit /b 0
@@ -226,71 +228,76 @@ if %START_LEVEL% LEQ 6 (
 )
 
 if %START_LEVEL% LEQ 7 (
-    call :run_step "07 Environment bibles" "python -m orchestrator synthesize-environment-bibles ""%PROJECT_SLUG%"" --force"
+    call :run_step "07 Character visual evidence" "python -m orchestrator refine-character-visual-evidence ""%PROJECT_SLUG%"" --force"
     if errorlevel 1 goto :fail_run
 )
 
 if %START_LEVEL% LEQ 8 (
-    call :run_step "08 Visual fallbacks" "python -m orchestrator synthesize-visual-fallbacks ""%PROJECT_SLUG%"" --force"
+    call :run_step "08 Environment bibles" "python -m orchestrator synthesize-environment-bibles ""%PROJECT_SLUG%"" --force"
     if errorlevel 1 goto :fail_run
 )
 
 if %START_LEVEL% LEQ 9 (
-    if "%CHAPTERS%"=="" (
-        call :run_step "09 Scene contracts" "python -m orchestrator synthesize-scene-contracts ""%PROJECT_SLUG%"" --force"
-    ) else (
-        call :run_step "09 Scene contracts" "python -m orchestrator synthesize-scene-contracts ""%PROJECT_SLUG%"" --force --chapters ""%CHAPTERS%"""
-    )
+    call :run_step "09 Visual fallbacks" "python -m orchestrator synthesize-visual-fallbacks ""%PROJECT_SLUG%"" --force"
     if errorlevel 1 goto :fail_run
 )
 
 if %START_LEVEL% LEQ 10 (
     if "%CHAPTERS%"=="" (
-        call :run_step "10 Scene bindings" "python -m orchestrator synthesize-scene-bindings ""%PROJECT_SLUG%"" --force"
+        call :run_step "10 Scene contracts" "python -m orchestrator synthesize-scene-contracts ""%PROJECT_SLUG%"" --force"
     ) else (
-        call :run_step "10 Scene bindings" "python -m orchestrator synthesize-scene-bindings ""%PROJECT_SLUG%"" --force --chapters ""%CHAPTERS%"""
+        call :run_step "10 Scene contracts" "python -m orchestrator synthesize-scene-contracts ""%PROJECT_SLUG%"" --force --chapters ""%CHAPTERS%"""
     )
     if errorlevel 1 goto :fail_run
 )
 
 if %START_LEVEL% LEQ 11 (
     if "%CHAPTERS%"=="" (
-        call :run_step "11 Shot packages" "python -m orchestrator synthesize-shot-packages ""%PROJECT_SLUG%"" --force"
+        call :run_step "11 Scene bindings" "python -m orchestrator synthesize-scene-bindings ""%PROJECT_SLUG%"" --force"
     ) else (
-        call :run_step "11 Shot packages" "python -m orchestrator synthesize-shot-packages ""%PROJECT_SLUG%"" --force --chapters ""%CHAPTERS%"""
+        call :run_step "11 Scene bindings" "python -m orchestrator synthesize-scene-bindings ""%PROJECT_SLUG%"" --force --chapters ""%CHAPTERS%"""
     )
     if errorlevel 1 goto :fail_run
 )
 
 if %START_LEVEL% LEQ 12 (
     if "%CHAPTERS%"=="" (
-        call :run_step "12 Dialogue timeline" "python -m orchestrator synthesize-dialogue-timeline ""%PROJECT_SLUG%"" --force"
+        call :run_step "12 Shot packages" "python -m orchestrator synthesize-shot-packages ""%PROJECT_SLUG%"" --force"
     ) else (
-        call :run_step "12 Dialogue timeline" "python -m orchestrator synthesize-dialogue-timeline ""%PROJECT_SLUG%"" --force --chapters ""%CHAPTERS%"""
+        call :run_step "12 Shot packages" "python -m orchestrator synthesize-shot-packages ""%PROJECT_SLUG%"" --force --chapters ""%CHAPTERS%"""
     )
     if errorlevel 1 goto :fail_run
 )
 
 if %START_LEVEL% LEQ 13 (
     if "%CHAPTERS%"=="" (
-        call :run_step "13 Descriptor enrichment" "python -m orchestrator synthesize-descriptor-enrichment ""%PROJECT_SLUG%"" --force"
+        call :run_step "13 Dialogue timeline" "python -m orchestrator synthesize-dialogue-timeline ""%PROJECT_SLUG%"" --force"
     ) else (
-        call :run_step "13 Descriptor enrichment" "python -m orchestrator synthesize-descriptor-enrichment ""%PROJECT_SLUG%"" --force --chapters ""%CHAPTERS%"""
+        call :run_step "13 Dialogue timeline" "python -m orchestrator synthesize-dialogue-timeline ""%PROJECT_SLUG%"" --force --chapters ""%CHAPTERS%"""
     )
     if errorlevel 1 goto :fail_run
 )
 
 if %START_LEVEL% LEQ 14 (
     if "%CHAPTERS%"=="" (
-        call :run_step "14 Prompt preparation" "python -m orchestrator synthesize-prompt-preparation ""%PROJECT_SLUG%"" --force"
+        call :run_step "14 Descriptor enrichment" "python -m orchestrator synthesize-descriptor-enrichment ""%PROJECT_SLUG%"" --force"
     ) else (
-        call :run_step "14 Prompt preparation" "python -m orchestrator synthesize-prompt-preparation ""%PROJECT_SLUG%"" --force --chapters ""%CHAPTERS%"""
+        call :run_step "14 Descriptor enrichment" "python -m orchestrator synthesize-descriptor-enrichment ""%PROJECT_SLUG%"" --force --chapters ""%CHAPTERS%"""
     )
     if errorlevel 1 goto :fail_run
 )
 
 if %START_LEVEL% LEQ 15 (
-    call :run_step "15 Quality grading" "python -m orchestrator grade-artifacts ""%PROJECT_SLUG%"""
+    if "%CHAPTERS%"=="" (
+        call :run_step "15 Prompt preparation" "python -m orchestrator synthesize-prompt-preparation ""%PROJECT_SLUG%"" --force"
+    ) else (
+        call :run_step "15 Prompt preparation" "python -m orchestrator synthesize-prompt-preparation ""%PROJECT_SLUG%"" --force --chapters ""%CHAPTERS%"""
+    )
+    if errorlevel 1 goto :fail_run
+)
+
+if %START_LEVEL% LEQ 16 (
+    call :run_step "16 Quality grading" "python -m orchestrator grade-artifacts ""%PROJECT_SLUG%"""
     if errorlevel 1 goto :fail_run
 )
 

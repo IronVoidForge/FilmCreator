@@ -17,26 +17,26 @@
 - identity_baseline: A bipedal, human-scale group of soldiers associated with the Emerald City.
 - age_presence: unknown
 - physical_build: unknown
-- origin_or_historical_context: Emerald City setting; presence of "little green carts" suggests a specific local logistical or ceremonial culture.
+- origin_or_historical_context: Emerald City setting; presence of green carts and specific facial coloring suggests a localized aesthetic.
 - movement_language: timid (specifically when entering the Throne Room).
-The soldier is a human-scale, bipedal entity appearing within the Emerald City. While the group's collective appearance is not detailed, a specific prominent figure is identified by green whiskers. This individual exhibits timid movement when entering high-status environments like the Throne Room.
+A group of human-scale, bipedal soldiers characterized by the presence of green whiskers. They function as messengers and guides within the Emerald City, capable of moving through streets to lead travelers to specific locations or delivering messages to the Great Oz. Their demeanor can shift from functional/authoritative to timid when appearing before authority.
 
-- physical_traits: unknown
+- physical_traits: green whiskers
 - costume_signature: unknown
-- distinguishing_features: green whiskers (specific to an individual within the group)
-- state_variants: summoned/ceremonial (entering the Throne Room)
+- distinguishing_features: green whiskers
+- state_variants: summoned/active
 
 ## Behavioral Bible
 
-- personality: Timid (when appearing before authority).
-- role: Messenger and guide within the Emerald City; advisor to be summoned.
+- personality: Capable of being timid in high-stakes environments (e.g., the Throne Room).
+- role: Messenger and guide within the Emerald City.
 - voice_notes: unknown
-- relationship_notes: Acts as a messenger for the Guardian of the Gates., Provides guidance/navigation through the streets of the Emerald City.
+- relationship_notes: Acts as a messenger for the Guardian of the Gates., Provides advice or guidance to travelers/protagonists.
 
 ## Continuity
 
-- continuity_constraints: The "soldier with the green whiskers" is a primary identifier for this entity type or its leadership.
-- unresolved_ambiguities: It is unclear if "soldier" refers to a single individual or a collective group of identical entities., Specific uniform or armor details are not provided.
+- continuity_constraints: Must maintain the "green whiskers" identifier if treated as an individual representative of the group.
+- unresolved_ambiguities: The evidence treats "soldier" as a group entity in taxonomy but describes specific actions (timidity, leading through streets) that imply individual agency or a singular representative ("the soldier with the green whiskers")., Specific uniform or armor details are not provided.
 
 ## Evidence Summary
 
@@ -55,4 +55,4 @@ The soldier is a human-scale, bipedal entity appearing within the Emerald City. 
 - status: `generated`
 - source_fingerprint: `0d892a6e369858666779da974401d85eb478f69b`
 - created_at_utc: `2026-04-27T07:45:22.143749+00:00`
-- updated_at_utc: `2026-04-27T12:56:38.645686+00:00`
+- updated_at_utc: `2026-04-27T15:37:23.496768+00:00`

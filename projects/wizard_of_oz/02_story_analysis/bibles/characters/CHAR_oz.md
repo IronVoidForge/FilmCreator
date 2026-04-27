@@ -14,29 +14,29 @@
 
 ## Visual Bible
 
-- identity_baseline: A human male appearing as a man of some stature or authority.
+- identity_baseline: [CH002] Chapter II (book index hit)
 - age_presence: unknown
 - physical_build: unknown
-- origin_or_historical_context: Emerald City / Oz setting.
-- movement_language: Performs deep, low bows.
-Oz is a human male who presents himself with formal gestures, such as bowing very low. While specific clothing details are not provided in the evidence, he maintains a presence that allows him to interact with travelers within the Emerald City.
+- origin_or_historical_context: unknown
+- movement_language: unknown
+[CH002] Chapter II (book index hit) [CH010] Chapter X (book index hit) [CH011] Chapter XI (book index hit)
 
-- physical_traits: unknown
-- costume_signature: unknown
-- distinguishing_features: unknown
-- state_variants: standard (clothed)
+- physical_traits: (none)
+- costume_signature: (none)
+- distinguishing_features: (none)
+- state_variants: (none)
 
 ## Behavioral Bible
 
-- personality: Polite and performative; exhibits exaggerated courtesy (e.g., bowing very low).
-- role: The Wizard / Figure of authority in the Emerald City.
-- voice_notes: unknown
-- relationship_notes: Dorothy (interacts with), Scarecrow (interacts with), Tin Woodman (interacts with), Cowardly Lion (interacts with)
+- personality: (none)
+- role: individual
+- voice_notes: (none)
+- relationship_notes: (none)
 
 ## Continuity
 
-- continuity_constraints: Must maintain human morphology and scale.
-- unresolved_ambiguities: Specific facial features, hair, or age are not documented., Exact costume design is unknown., The nature of his "great box" and the spectacles within it is mentioned but his personal attire is not described.
+- continuity_constraints: (none)
+- unresolved_ambiguities: (none)
 
 ## Evidence Summary
 
@@ -55,4 +55,4 @@ Oz is a human male who presents himself with formal gestures, such as bowing ver
 - status: `generated`
 - source_fingerprint: `eec134c032c3632ad5e81678a0646b53a668e382`
 - created_at_utc: `2026-04-27T07:44:13.296644+00:00`
-- updated_at_utc: `2026-04-27T12:55:57.003823+00:00`
+- updated_at_utc: `2026-04-27T15:35:45.652525+00:00`

@@ -14,17 +14,17 @@
 
 ## Visual Bible
 
-- identity_baseline: A group of small-scale bipedal inhabitants.
+- identity_baseline: A group of small-scale bipedal beings.
 - age_presence: unknown
-- physical_build: Small-scale, bipedal frames.
-- origin_or_historical_context: Unknown setting cues provided.
+- physical_build: Small-scale, bipedal frame.
+- origin_or_historical_context: unknown
 - movement_language: unknown
-The munchkins are a group of small-scale, bipedal entities characterized by a uniform color palette of blue. Their primary visual identifier is their clothing, consisting of blue garments and blue hats that are specifically adorned with bells.
+The munchkins are a group of small-scale, bipedal entities characterized by a uniform color palette of blue. Their primary visual identifier is their attire, consisting of blue clothing and blue hats that are specifically adorned with bells.
 
 - physical_traits: Small scale
 - costume_signature: Blue clothing and blue hats adorned with bells.
 - distinguishing_features: Bell-adorned hats
-- state_variants: Clothed (Blue attire)
+- state_variants: Clothed (standard)
 
 ## Behavioral Bible
 
@@ -35,8 +35,8 @@ The munchkins are a group of small-scale, bipedal entities characterized by a un
 
 ## Continuity
 
-- continuity_constraints: Maintain blue clothing and bell-adorned hats as the primary group identifier.
-- unresolved_ambiguities: Specific facial features or individual physical variations within the group are unknown., Precise movement patterns and age ranges are not established.
+- continuity_constraints: Maintain small scale relative to other characters., Ensure blue clothing and bell-adorned hats remain consistent.
+- unresolved_ambiguities: Specific age or maturity of individuals within the group., Precise movement patterns or social hierarchy., [[/SECTION]
 
 ## Evidence Summary
 
@@ -55,4 +55,4 @@ The munchkins are a group of small-scale, bipedal entities characterized by a un
 - status: `generated`
 - source_fingerprint: `f0f69a694388efabefa3cc5affdd661abc49b688`
 - created_at_utc: `2026-04-27T07:38:22.506827+00:00`
-- updated_at_utc: `2026-04-27T12:52:09.357455+00:00`
+- updated_at_utc: `2026-04-27T15:27:32.561432+00:00`
