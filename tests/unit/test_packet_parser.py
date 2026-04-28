@@ -200,6 +200,23 @@ def test_parse_packet_document_accepts_end_section_variants_from_logs() -> None:
     assert packet.sections["character_index_markdown"].startswith("# Character Index")
 
 
+def test_clean_artifact_markdown_removes_packet_wrapper_debris() -> None:
+    markdown = "\n".join(
+        [
+            "[[markdown]]",
+            "[[SECTION environment_index_markdown]]",
+            "# Environment Index",
+            "- [the_hall](the_hall)",
+            "[[/SECTION]]",
+            "[[/markdown]]",
+        ]
+    )
+
+    cleaned = packet_parser.clean_artifact_markdown(markdown)
+
+    assert cleaned == "# Environment Index\n- [the_hall](the_hall)"
+
+
 def test_parse_packet_document_ignores_bare_section_name_before_matching_section_tag() -> None:
     response = "\n".join(
         [

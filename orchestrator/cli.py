@@ -40,6 +40,7 @@ from .production_pipeline import (
     run_full_production_pipeline,
     run_phase_range,
     run_quicktest_composite,
+    run_scene_slice_pipeline,
     run_story_analysis_pipeline,
 )
 from .production_run_state import persist_run_summary
@@ -266,6 +267,13 @@ def build_parser() -> argparse.ArgumentParser:
     rqc.add_argument("--chapters", type=str, default="2-3")
     rqc.add_argument("--composite", choices=["09_to_14", "11_to_14", "13_to_14"], required=True)
 
+    rss = subparsers.add_parser("run-scene-slice")
+    rss.add_argument("project_slug", nargs="?", default="princess_of_mars_test")
+    rss.add_argument("--chapter", required=True, help="Chapter to analyze, e.g. 1 or CH001")
+    rss.add_argument("--scene", required=True, help="Scene to carry downstream, e.g. 1, SC001, or CH001_SC001")
+    rss.add_argument("--mode", choices=["resume", "force"], default="force")
+    rss.add_argument("--coverage-density", choices=sorted(COVERAGE_DENSITIES), default=None)
+
     cp = subparsers.add_parser("clear-production")
     cp.add_argument("project_slug", nargs="?", default="princess_of_mars_test")
     cp.add_argument("--scope", choices=["prompt_prep_only", "downstream_only", "taxonomy_and_downstream", "story_analysis_and_downstream"], required=True)
@@ -414,6 +422,14 @@ def main() -> None:
             args.project_slug,
             chapters=args.chapters,
             composite=args.composite,
+        )
+    elif args.command == "run-scene-slice":
+        summary = run_scene_slice_pipeline(
+            args.project_slug,
+            chapter=args.chapter,
+            scene=args.scene,
+            mode=args.mode,
+            coverage_density=args.coverage_density,
         )
     elif args.command == "clear-production":
         if args.execute:

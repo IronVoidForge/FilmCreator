@@ -531,6 +531,8 @@ RULES:
 - If a field cannot be improved, omit it.
 - Keep existing good information intact.
 - Use only the provided evidence and current artifact context.
+- Spend more time on semantic fit than completion: each returned value must make sense for this specific character, entity type, scale, movement, role, and visible evidence.
+- Prefer a narrow evidence-supported phrase over a generic filler phrase; omit unsupported fields instead of guessing.
 
 ENTRY:
 {json.dumps(entry, indent=2, ensure_ascii=False)}
@@ -971,10 +973,28 @@ def run_character_bible_synthesis(
         fallback_method = "none"
         fallback_reason = "not_needed"
         fallback = merged.get("visual_production_fallback") or {}
+        llm_repair_applied = False
+
+        if pre_fallback_audit["needs_visual_production_fallback"] and use_llm:
+            repair_fields = [
+                field
+                for field in missing_fields
+                if field in _CHARACTER_PATCHABLE_SCALAR_FIELDS or field in _CHARACTER_PATCHABLE_LIST_FIELDS
+            ]
+            patch_payload = _llm_patch_synthesis(entry, merged, evidence_summary, repair_fields)
+            if patch_payload:
+                llm_repair_applied = True
+                merged = _apply_character_patch(merged, patch_payload, metadata, repair_fields)
+                pre_fallback_audit = visual_field_audit(merged)
+                missing_fields = pre_fallback_audit["missing_fields"]
+                warnings.append(
+                    f"LLM repaired weak visual fields for {char_id} before deterministic fallback: "
+                    f"{', '.join(sorted(patch_payload))}."
+                )
 
         if pre_fallback_audit["needs_visual_production_fallback"]:
             fallback_attempted = True
-            fallback_method = "deterministic"
+            fallback_method = "llm_repair+deterministic" if llm_repair_applied else "deterministic"
             fallback_reason = "missing_prompt_critical_fields"
             fallback = deterministic_visual_fallback(entry, merged, evidence_summary)
             merged["visual_production_fallback"] = fallback

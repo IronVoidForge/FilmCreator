@@ -22,6 +22,7 @@ from .production_pipeline import (
     run_phase_range,
     run_post_taxonomy_pipeline,
     run_prompt_prep_refresh,
+    run_scene_slice_pipeline,
     run_story_analysis_pipeline,
 )
 from .production_run_state import persist_run_summary
@@ -97,6 +98,8 @@ def run_pipeline_menu(
         elif choice == "13":
             _run_advanced_range(state, input_fn, output_fn)
         elif choice == "14":
+            _run_scene_slice(state, input_fn, output_fn)
+        elif choice == "15":
             output_fn("Exiting pipeline menu.")
             return state
         else:
@@ -210,7 +213,8 @@ def _write_main_menu(state: PipelineMenuState, output_fn: OutputFn) -> None:
     output_fn("11. Run Phase 13 environment references")
     output_fn("12. Clear artifacts")
     output_fn("13. Advanced phase range")
-    output_fn("14. Exit")
+    output_fn("14. Run one-scene slice through shot packages")
+    output_fn("15. Exit")
 
 
 def _select_project(state: PipelineMenuState, projects_root: Path, input_fn: InputFn, output_fn: OutputFn) -> None:
@@ -591,6 +595,24 @@ def _show_cleanup_plan(state: PipelineMenuState, scope: str, output_fn: OutputFn
         run_type=f"cleanup_plan_{scope}",
         payload=_to_dict(summary),
     )
+
+
+def _run_scene_slice(state: PipelineMenuState, input_fn: InputFn, output_fn: OutputFn) -> None:
+    output_fn("")
+    output_fn("One-scene slice through shot packages")
+    default_chapter = state.chapters if state.chapters and "," not in state.chapters and "-" not in state.chapters else "1"
+    chapter = input_fn(f"Chapter [Enter for {default_chapter}]: ").strip() or default_chapter
+    scene = input_fn("Scene [Enter for SC001]: ").strip() or "SC001"
+    density = input_fn("Coverage density legacy/low/medium/high [Enter for medium]: ").strip() or "medium"
+    summary = run_scene_slice_pipeline(
+        state.project_slug,
+        chapter=chapter,
+        scene=scene,
+        mode=state.mode,
+        coverage_density=density,
+    )
+    formatted = format_production_run_summary(summary) if hasattr(summary, "profile") else None
+    _emit_summary(_to_dict(summary), output_fn, formatted_lines=formatted)
 
 
 def _run_advanced_range(state: PipelineMenuState, input_fn: InputFn, output_fn: OutputFn) -> None:

@@ -375,7 +375,9 @@ def analyze_chapter(*, project_slug: str, chapter: str | None = None) -> StoryAn
         degraded_prompt_builder=authoring_prompts.character_extraction_user_prompt,
     )
     warnings.extend(character_fallback_warnings)
-    character_index_markdown = _require_packet_section(character_packet, "character_index_markdown")
+    character_index_markdown = authoring_packets.clean_artifact_markdown(
+        _require_packet_section(character_packet, "character_index_markdown")
+    )
     character_index_path = _chapter_character_index_path(project_dir=project_dir, chapter_id=chapter_source.chapter_id)
     _write_text(character_index_path, character_index_markdown)
     _write_text(_legacy_character_index_path(project_dir=project_dir), character_index_markdown)
@@ -511,7 +513,9 @@ def analyze_chapter(*, project_slug: str, chapter: str | None = None) -> StoryAn
         degraded_prompt_builder=authoring_prompts.environment_extraction_user_prompt,
     )
     warnings.extend(environment_fallback_warnings)
-    environment_index_markdown = _require_packet_section(environment_packet, "environment_index_markdown")
+    environment_index_markdown = authoring_packets.clean_artifact_markdown(
+        _require_packet_section(environment_packet, "environment_index_markdown")
+    )
     environment_index_path = _chapter_environment_index_path(project_dir=project_dir, chapter_id=chapter_source.chapter_id)
     _write_text(environment_index_path, environment_index_markdown)
     _write_text(_legacy_environment_index_path(project_dir=project_dir), environment_index_markdown)
@@ -585,6 +589,7 @@ def analyze_chapter(*, project_slug: str, chapter: str | None = None) -> StoryAn
     )
     warnings.extend(scene_output_warnings)
 
+    scene_index_markdown = authoring_packets.clean_artifact_markdown(scene_index_markdown)
     scene_index_path = _chapter_scene_index_path(
         project_dir=project_dir,
         chapter_id=chapter_source.chapter_id,

@@ -2903,14 +2903,18 @@ def run_shot_planning(
     force: bool = False,
     chapters: str | None = None,
     coverage_density: str | None = None,
+    scene_id: str | None = None,
     run_tracker: "DownstreamRunTracker | None" = None,
 ) -> ShotPlanningSummary:
     project_dir = create_project(project_slug)
     resolved_coverage_density = _resolve_coverage_density(project_dir, coverage_density)
     selected_chapters = set(parse_chapter_selector(chapters))
+    selected_scene_id = scene_id.strip().upper() if isinstance(scene_id, str) and scene_id.strip() else None
     scene_contract_files = [
         path for path in _scene_contract_files(project_dir) if chapter_matches(path.parent.name or path.stem[:5], selected_chapters)
     ]
+    if selected_scene_id:
+        scene_contract_files = [path for path in scene_contract_files if selected_scene_id == path.stem.upper()]
 
     output_root = _shot_package_root(project_dir)
     review_dir = output_root / "review"

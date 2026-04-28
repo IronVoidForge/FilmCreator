@@ -315,6 +315,30 @@ def clean_section_text(value: str) -> str:
     return "\n".join(lines).strip()
 
 
+def clean_artifact_markdown(value: str) -> str:
+    """Remove packet wrapper debris before saving user-facing markdown artifacts."""
+    lines: list[str] = []
+    for raw_line in value.strip().splitlines():
+        stripped = raw_line.strip()
+        normalized_tag = normalize_structural_packet_tag(stripped)
+        if not stripped:
+            lines.append(raw_line)
+            continue
+        if stripped.lower() in {"[[markdown]]", "[[/markdown]]"}:
+            continue
+        if normalized_tag in {PACKET_START_TAG, PACKET_END_TAG, RECORD_START_TAG, RECORD_END_TAG, SECTION_END_TAG}:
+            continue
+        if SECTION_TAG_PATTERN.fullmatch(stripped):
+            continue
+        lines.append(raw_line)
+
+    while lines and not lines[0].strip():
+        lines.pop(0)
+    while lines and not lines[-1].strip():
+        lines.pop()
+    return "\n".join(lines).strip()
+
+
 def split_packet_key_value(line: str) -> tuple[str, str]:
     if ":" not in line:
         raise LMStudioError(f"Expected 'key: value' packet line but got '{line}'.")

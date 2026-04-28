@@ -1,3 +1,0 @@
-- [woods_and_house_exterior](woods_and_house_exterior)
-- [duchess_kitchen_interior](duchess_kitchen_interior)
-- [march_hare_house_exterior](march_hare_house_exterior)

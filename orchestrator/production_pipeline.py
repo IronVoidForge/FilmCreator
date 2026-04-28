@@ -303,6 +303,92 @@ def run_quicktest_composite(
     )
 
 
+def run_scene_slice_pipeline(
+    project_slug: str,
+    *,
+    chapter: str,
+    scene: str,
+    mode: str = "force",
+    coverage_density: str | None = None,
+) -> ProductionRunSummary:
+    """Run a compact end-to-end slice through shot packages for one scene."""
+    _validate_mode(mode)
+    chapter_id = _normalize_chapter_id(chapter)
+    scene_id = _normalize_scene_slice_id(chapter_id=chapter_id, scene=scene)
+    ingest_summary = ensure_book_ingested(project_slug=project_slug)
+    phase_summaries: dict[str, Any] = {}
+    completed_phases: list[str] = []
+    warnings: list[str] = [
+        "Scene-slice mode writes standard scene-contract, scene-binding, and shot-package outputs for the selected scene only."
+    ]
+
+    if ingest_summary is not None:
+        phase_summaries["book_ingest"] = ingest_summary.to_dict()
+
+    story_summary = run_story_analysis_pipeline(project_slug, chapters=chapter_id, mode=mode)
+    phase_summaries["story_analysis"] = _to_dict(story_summary)
+    completed_phases.append("story_analysis")
+
+    for phase_name in [
+        "character_taxonomy",
+        "identity_refinement",
+        "character_bibles",
+        "character_visual_evidence",
+        "environment_bibles",
+        "visual_fallbacks",
+    ]:
+        summary = _run_project_phase(project_slug, phase_name, mode=mode)
+        phase_summaries[phase_name] = _to_dict(summary)
+        completed_phases.append(phase_name)
+
+    contract_summary = run_scene_contract_synthesis(
+        project_slug,
+        use_llm=True,
+        force=mode == "force",
+        chapters=chapter_id,
+        scene_id=scene_id,
+    )
+    phase_summaries["scene_contracts"] = _to_dict(contract_summary)
+    completed_phases.append("scene_contracts")
+
+    binding_summary = run_scene_binding_synthesis(
+        project_slug,
+        force=mode == "force",
+        chapters=chapter_id,
+        scene_id=scene_id,
+    )
+    phase_summaries["scene_bindings"] = _to_dict(binding_summary)
+    completed_phases.append("scene_bindings")
+
+    shot_summary = run_shot_planning(
+        project_slug,
+        use_llm=True,
+        force=mode == "force",
+        chapters=chapter_id,
+        scene_id=scene_id,
+        coverage_density=coverage_density,
+    )
+    phase_summaries["shot_packages"] = _to_dict(shot_summary)
+    completed_phases.append("shot_packages")
+
+    phase_summaries["scene_slice"] = {
+        "chapter_id": chapter_id,
+        "scene_id": scene_id,
+        "through_phase": "shot_packages",
+        "later_phases": ["dialogue_timeline", "descriptor_enrichment", "prompt_preparation", "character_references", "environment_references"],
+    }
+
+    return ProductionRunSummary(
+        profile="scene_slice",
+        project_slug=project_slug,
+        chapters=chapter_id,
+        mode=mode,
+        completed_phases=completed_phases,
+        phase_summaries=phase_summaries,
+        warnings=warnings,
+    )
+
+
 def run_phase_range(
     project_slug: str,
     *,
@@ -675,6 +761,26 @@ def _to_dict(summary: Any) -> dict[str, Any]:
     if isinstance(summary, dict):
         return summary
     return {"result": str(summary)}
+
+
+def _normalize_chapter_id(chapter: str) -> str:
+    text = str(chapter or "").strip().upper()
+    if text.startswith("CH") and text[2:].isdigit():
+        return f"CH{int(text[2:]):03d}"
+    if text.isdigit():
+        return f"CH{int(text):03d}"
+    raise ValueError(f"Invalid chapter selector for scene slice: {chapter!r}")
+
+
+def _normalize_scene_slice_id(*, chapter_id: str, scene: str) -> str:
+    text = str(scene or "").strip().upper()
+    if text.startswith(f"{chapter_id}_SC") and text.removeprefix(f"{chapter_id}_SC").isdigit():
+        return f"{chapter_id}_SC{int(text.removeprefix(f'{chapter_id}_SC')):03d}"
+    if text.startswith("SC") and text[2:].isdigit():
+        return f"{chapter_id}_SC{int(text[2:]):03d}"
+    if text.isdigit():
+        return f"{chapter_id}_SC{int(text):03d}"
+    raise ValueError(f"Invalid scene selector for scene slice: {scene!r}")
 
 
 def _validate_mode(mode: str) -> None:

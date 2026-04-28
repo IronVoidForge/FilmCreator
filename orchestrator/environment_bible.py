@@ -614,6 +614,8 @@ RULES:
 - If a field cannot be improved, omit it.
 - Keep existing good information intact.
 - Use only the provided evidence and current artifact context.
+- Spend more time on spatial plausibility than completion: each returned value must make sense for this specific place, scale, era, lighting source, action use, and visible evidence.
+- Prefer a narrow evidence-supported phrase over a generic filler phrase; omit unsupported fields instead of guessing.
 
 ENTRY:
 {json.dumps(entry, indent=2, ensure_ascii=False)}
@@ -726,6 +728,25 @@ def _llm_patch_synthesis(entry: dict[str, Any], existing: dict[str, Any], eviden
         return _parse_environment_patch_packet(text, entry, focus_fields)
     except Exception:
         return None
+
+
+def _environment_weak_fields(payload: dict[str, Any]) -> list[str]:
+    weak: list[str] = []
+    weak_scalars = {
+        "visual_summary": {"", "unknown", "no visual summary provided", "insufficient evidence"},
+        "layout_notes": {"", "unknown", "no layout notes available", "no layout notes provided", "insufficient evidence"},
+        "lighting": {"", "unknown", "insufficient evidence"},
+        "mood": {"", "unknown", "insufficient evidence"},
+    }
+    for field_name, placeholders in weak_scalars.items():
+        value = str(payload.get(field_name, "")).strip().lower().rstrip(".")
+        if value in placeholders:
+            weak.append(field_name)
+    for field_name in ("recurring_elements", "constraints"):
+        value = payload.get(field_name)
+        if not isinstance(value, list) or not any(str(item).strip() for item in value):
+            weak.append(field_name)
+    return weak
 
 
 def _parse_bible_markdown_section(section_text: str) -> tuple[dict[str, str], dict[str, list[str]], list[str]]:
@@ -997,6 +1018,15 @@ def run_environment_bible_synthesis(
                 warnings.append(f"LLM synthesis failed or returned invalid markdown packet for {env_id}; used deterministic fallback.")
 
         merged = _merge_with_existing(synthesized_payload, existing, metadata)
+        weak_fields = _environment_weak_fields(merged)
+        if weak_fields and use_llm:
+            patch_payload = _llm_patch_synthesis(entry, merged, evidence_summary, weak_fields)
+            if patch_payload:
+                merged = _apply_environment_patch(merged, patch_payload, metadata, weak_fields)
+                warnings.append(
+                    f"LLM repaired weak environment fields for {env_id}: "
+                    f"{', '.join(sorted(patch_payload))}."
+                )
 
         metadata.upstream_dependencies = [
             {
