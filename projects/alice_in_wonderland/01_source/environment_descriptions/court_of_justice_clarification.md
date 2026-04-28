@@ -5,17 +5,17 @@ court_of_justice
 
 # Why This Needs Clarification
 Potential existing environment matches detected:
+- the_hall (score 13; chapters: CH002; aliases: -)
 - caucus_race_course (score 8; chapters: CH003; aliases: -)
-- duchess_kitchen_interior (score 8; chapters: CH006; aliases: -)
-- field_and_hedge_setting (score 8; chapters: CH001; aliases: -)
+- forest_canopy (score 8; chapters: CH005; aliases: -)
 
 # Question
 This environment may match one of the existing canonical settings above. Can you inspect the candidate chapter descriptions and confirm whether FilmCreator should merge into one of them, or keep this as a new canonical environment?
 
 # Candidate Matches
+- the_hall (score 13; chapters: CH002; aliases: -)
 - caucus_race_course (score 8; chapters: CH003; aliases: -)
-- duchess_kitchen_interior (score 8; chapters: CH006; aliases: -)
-- field_and_hedge_setting (score 8; chapters: CH001; aliases: -)
+- forest_canopy (score 8; chapters: CH005; aliases: -)
 
 # Guidance
 - answer briefly and concretely

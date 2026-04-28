@@ -6,16 +6,16 @@ gardener_five
 # Why This Needs Clarification
 Potential existing identity matches detected:
 - alice (score 10; chapters: CH001, CH002; aliases: -) Example context: CH001 1-3: Down the Rabbit-Hole Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing to do: once or twice she had peeped into the book her sister ...
-- alice_s_sister (score 10; chapters: CH001; aliases: -)
-- baby_pig (score 10; chapters: CH006; aliases: -)
+- animal_crowd (score 10; chapters: CH002; aliases: -)
+- bill_the_lizard (score 10; chapters: CH004; aliases: -)
 
 # Question
 This character may match one of the existing canonical identities above. Can you inspect the candidate chapter descriptions and confirm whether FilmCreator should merge into one of them, or keep this as a new canonical character?
 
 # Candidate Matches
 - alice (score 10; chapters: CH001, CH002; aliases: -) Example context: CH001 1-3: Down the Rabbit-Hole Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing to do: once or twice she had peeped into the book her sister ...
-- alice_s_sister (score 10; chapters: CH001; aliases: -)
-- baby_pig (score 10; chapters: CH006; aliases: -)
+- animal_crowd (score 10; chapters: CH002; aliases: -)
+- bill_the_lizard (score 10; chapters: CH004; aliases: -)
 
 # Guidance
 - answer briefly and concretely
