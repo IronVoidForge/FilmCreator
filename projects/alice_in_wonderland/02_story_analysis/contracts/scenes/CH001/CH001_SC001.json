@@ -1,0 +1,465 @@
+{
+  "scene_id": "CH001_SC001",
+  "chapter_id": "CH001",
+  "scene_title": "Alice's Descent and Scale Shifts",
+  "purpose": "",
+  "summary": "Alice sits bored by a riverbank until a White Rabbit in a waistcoat runs past checking a watch. She chases him into a rabbit-hole, falling down a deep well lined with cupboards and shelves. After landing on a heap of sticks, she finds herself in a long hall of locked doors where she discovers a tiny golden key and a small door leading to a garden. After shrinking by drinking from a 'DRINK ME' bottle, she realizes she cannot reach the key, then eats an 'EAT ME' cake to alter her size further.",
+  "emotional_arc": "Boredom to intense curiosity/urgency, followed by disorientation and frustration.",
+  "production_intent": "Establish a rapid transition from static boredom to kinetic disorientation through extreme scale fluctuations. The sequence requires precise coordination between character height changes and environmental props (key, bottle, cake) to maintain the logic of Alice's physical instability.",
+  "scene_short_description": "A girl chases a rabbit into a hole, falls through a cupboard-lined well, and struggles with size changes.",
+  "scene_primary_scale_story_point": "Alice fluctuates between standard child height, ten inches tall, and over nine feet tall.",
+  "scene_required_anchor_catalog": [
+    "golden_key",
+    "drink_me_bottle",
+    "eat_me_cake",
+    "orange_marmalade_jar"
+  ],
+  "scene_start_state": "Alice sits bored by a riverbank on a hot day.",
+  "scene_end_state": "Alice eats the cake to alter her size after failing to reach the key.",
+  "dominant_action_line": "Alice chases the White Rabbit, falls through a vertical tunnel, and uses consumable items to manipulate her scale.",
+  "scene_spatial_layout": [
+    "Riverbank exterior transitioning to a vertical descent",
+    "Vertical well lined with shelves/cupboards",
+    "Long hall containing locked doors and a small door",
+    "Glass table area for size manipulation"
+  ],
+  "character_spatial_map": [
+    "alice: moves from riverbank to rabbit_hole_tunnel to hall_of_doors",
+    "white_rabbit: runs past alice at riverbank into The Hedge"
+  ],
+  "environment_subzones": [
+    "riverbank_exterior",
+    "rabbit_hole_tunnel",
+    "hall_of_doors",
+    "miniature_garden_view"
+  ],
+  "scene_event_chain": [
+    "event 1: Alice sits bored by the riverbank until the White Rabbit runs past checking a watch.",
+    "event 2: Alice chases the White Rabbit into a rabbit-hole and falls down a deep well.",
+    "event 3: Alice lands on sticks and finds a golden key in a long hall of locked doors.",
+    "event 4: Alice drinks from a 'DRINK ME' bottle to shrink, then eats an 'EAT ME' cake to change size again."
+  ],
+  "entry_vectors": [
+    "riverbank_exterior (Alice)",
+    "The Hedge (White Rabbit)"
+  ],
+  "exit_vectors": [
+    "hall_of_doors (Alice)"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: kinetic chase/descent",
+    "BT002 -> BT003: landing and exploration",
+    "BT003 -> BT004: scale manipulation cycle"
+  ],
+  "characters_required": [
+    {
+      "label": "Alice",
+      "canonical_id": "alice",
+      "display_name": "alice",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH001/alice.md",
+      "notes": "Direct registry match for 'alice'."
+    },
+    {
+      "label": "White Rabbit",
+      "canonical_id": "white_rabbit",
+      "display_name": "white_rabbit",
+      "status": "canonical",
+      "entity_kind": "group",
+      "resolution_score": 138,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH001/white_rabbit.md",
+      "notes": "Direct registry match for 'white_rabbit'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "Riverbank",
+      "canonical_id": "riverbank_exterior",
+      "display_name": "riverbank_exterior",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 58,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/environment_breakdowns/chapters/CH001/riverbank_exterior.md",
+      "notes": "Chapter-local environment alias match for 'Riverbank' (key_overlap=1, label_overlap=1, context_overlap=2)."
+    },
+    {
+      "label": "The Hedge",
+      "canonical_id": null,
+      "display_name": "The Hedge",
+      "status": "review",
+      "entity_kind": "environment",
+      "resolution_score": 8,
+      "source_path": "",
+      "notes": "Low-confidence environment match requires review."
+    },
+    {
+      "label": "Vertical Well/Tunnel",
+      "canonical_id": "rabbit_hole_tunnel",
+      "display_name": "rabbit_hole_tunnel",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 90,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/environment_breakdowns/chapters/CH001/rabbit_hole_tunnel.md",
+      "notes": "Chapter-local environment alias match for 'Vertical Well/Tunnel' (key_overlap=1, label_overlap=3, context_overlap=2)."
+    },
+    {
+      "label": "Long Passage / Hall of Doors",
+      "canonical_id": "hall_of_doors",
+      "display_name": "hall_of_doors",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 138,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/environment_breakdowns/chapters/CH001/hall_of_doors.md",
+      "notes": "Direct registry match for 'hall_of_doors'."
+    },
+    {
+      "label": "Small Passage / Garden View",
+      "canonical_id": "miniature_garden_view",
+      "display_name": "miniature_garden_view",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 86,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/environment_breakdowns/chapters/CH001/miniature_garden_view.md",
+      "notes": "Chapter-local environment alias match for 'Small Passage / Garden View' (key_overlap=2, label_overlap=2, context_overlap=1)."
+    }
+  ],
+  "continuity_constraints": [
+    "Alice's physical scale relative to objects (key, table, doors)",
+    "Presence and location of the golden key",
+    "Appearance and labeling of 'DRINK ME' bottle and 'EAT ME' cake",
+    "Shelf contents in well (e.g., Orange Marmalade jar)"
+  ],
+  "visual_coverage_families": [
+    "Wide shots of riverbank and long hall",
+    "Close-ups of watch, golden key, bottle label, and cake label",
+    "POV shots of garden through tiny door",
+    "Vertical tracking shots of Alice falling down the well",
+    "Scale-comparison shots (Alice vs. furniture/doors)"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "White Rabbit appearance",
+      "purpose": "",
+      "action_start": "Alice sitting bored",
+      "action_end": "Rabbit runs past checking watch",
+      "active_subjects": [
+        "alice",
+        "white_rabbit"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "riverbank_exterior",
+      "blocking_hint": "Alice stationary, Rabbit moving horizontally",
+      "environment_subzone": "riverbank_exterior",
+      "continuity_focus": "standard child scale",
+      "coverage_hint": "wide shot of riverbank",
+      "coverage_priority": "high",
+      "handoff_to_next": "chase sequence"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "The Descent",
+      "purpose": "",
+      "action_start": "Alice enters rabbit-hole",
+      "action_end": "Alice lands on heap of sticks",
+      "active_subjects": [
+        "alice"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "rabbit_hole_tunnel",
+      "blocking_hint": "Vertical movement through shelves",
+      "environment_subzone": "rabbit_hole_tunnel",
+      "continuity_focus": "presence of Orange Marmalade jar on shelves",
+      "coverage_hint": "vertical tracking shot",
+      "coverage_priority": "medium",
+      "handoff_to_next": "exploration of hall"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "Discovery in the Hall",
+      "purpose": "",
+      "action_start": "Alice walks through long hall",
+      "action_end": "Alice finds golden key",
+      "active_subjects": [
+        "alice"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "hall_of_doors",
+      "blocking_hint": "Walking past locked doors",
+      "environment_subzone": "hall_of_doors",
+      "continuity_focus": "location of the golden key",
+      "coverage_hint": "wide shots and close-ups of key",
+      "coverage_priority": "high",
+      "handoff_to_next": "scale frustration"
+    },
+    {
+      "beat_id": "BT004",
+      "summary": "Scale Manipulation",
+      "purpose": "",
+      "action_start": "Alice drinks 'DRINK ME' bottle",
+      "action_end": "Alice eats 'EAT ME' cake",
+      "active_subjects": [
+        "alice"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "hall_of_doors",
+      "blocking_hint": "Alice interacting with small objects",
+      "environment_subzone": "hall_of_doors",
+      "continuity_focus": "Alice shrinking to 10 inches then eating cake",
+      "coverage_hint": "close-ups of labels and scale comparison shots",
+      "coverage_priority": "high",
+      "handoff_to_next": "end of scene"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish boredom",
+      "planned_shot_moment_summary": "Alice sitting by riverbank",
+      "primary_subject_seed": "alice",
+      "secondary_subjects_seed": [
+        "white_rabbit"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "riverbank_exterior",
+      "planned_shot_required_anchor_1": "riverbank_exterior",
+      "planned_shot_scale_proof_detail": "standard child height",
+      "start_state_seed": "Alice seated",
+      "end_state_seed": "Rabbit runs past",
+      "action_seed": "Alice sits idle",
+      "blocking_seed": [
+        "center frame"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "eye_level",
+      "lens_family": "wide",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front_three_quarter_left"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT001",
+      "narrative_function": "introduce inciting incident",
+      "planned_shot_moment_summary": "White Rabbit checks watch",
+      "primary_subject_seed": "white_rabbit",
+      "secondary_subjects_seed": [
+        "watch"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "riverbank_exterior",
+      "planned_shot_required_anchor_1": "watch",
+      "planned_shot_scale_proof_detail": "standard rabbit size",
+      "start_state_seed": "Rabbit enters frame",
+      "end_state_seed": "Rabbit exits frame",
+      "action_seed": "Rabbit checks watch and runs",
+      "blocking_seed": [
+        "crosses frame horizontally"
+      ],
+      "shot_size": "medium_close",
+      "camera_angle": "eye_level",
+      "lens_family": "normal",
+      "camera_motion": "pan",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "profile_right"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT002",
+      "narrative_function": "depict descent",
+      "planned_shot_moment_summary": "Alice falling through well",
+      "primary_subject_seed": "alice",
+      "secondary_subjects_seed": [
+        "shelves"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "rabbit_hole_tunnel",
+      "planned_shot_required_anchor_1": "orange_marmalade_jar",
+      "planned_shot_scale_proof_detail": "falling verticality",
+      "start_state_seed": "Alice enters hole",
+      "end_state_seed": "Alice hits sticks",
+      "action_seed": "Alice falls past cupboards",
+      "blocking_seed": [
+        "vertical descent through frame"
+      ],
+      "shot_size": "full",
+      "camera_angle": "high_angle",
+      "lens_family": "ultra_wide",
+      "camera_motion": "track",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "low_key_night",
+      "primary_subject_angle": "back"
+    },
+    {
+      "planned_shot_id": "SH004",
+      "beat_id": "BT003",
+      "narrative_function": "reveal key/goal",
+      "planned_shot_moment_summary": "Alice finds golden key",
+      "primary_subject_seed": "golden_key",
+      "secondary_subjects_seed": [
+        "alice"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "hall_of_doors",
+      "planned_shot_required_anchor_1": "golden_key",
+      "planned_shot_scale_proof_detail": "key vs hand size",
+      "start_state_seed": "Alice reaches for key",
+      "end_state_seed": "Alice holds key",
+      "action_seed": "Alice discovers key",
+      "blocking_seed": [
+        "close up on hands"
+      ],
+      "shot_size": "insert_detail",
+      "camera_angle": "eye_level",
+      "lens_family": "telephoto",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "soft_even",
+      "primary_subject_angle": "front"
+    },
+    {
+      "planned_shot_id": "SH005",
+      "beat_id": "BT004",
+      "narrative_function": "execute scale shift",
+      "planned_shot_moment_summary": "Alice drinks from bottle",
+      "primary_subject_seed": "alice",
+      "secondary_subjects_seed": [
+        "drink_me_bottle"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "hall_of_doors",
+      "planned_shot_required_anchor_1": "drink_me_bottle",
+      "planned_shot_scale_proof_detail": "Alice shrinking to 10 inches",
+      "start_state_seed": "Alice picks up bottle",
+      "end_state_seed": "Alice is tiny",
+      "action_seed": "Alice drinks and shrinks",
+      "blocking_seed": [
+        "center frame focus on face/bottle"
+      ],
+      "shot_size": "medium_close",
+      "camera_angle": "eye_level",
+      "lens_family": "normal",
+      "camera_motion": "push_in",
+      "zoom_behavior": "subtle_in",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "soft_even",
+      "primary_subject_angle": "front_three_quarter_right"
+    }
+  ],
+  "unresolved_questions": [
+    "Resolve The Hedge -> The Hedge"
+  ],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH001",
+      "scene_id": "CH001_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH001",
+      "scene_id": "CH001_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH001",
+      "scene_id": "CH001_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH001",
+      "scene_id": "CH001_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH001",
+      "scene_id": "CH001_SC001"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH001",
+      "source_path": "C:\\FilmCreator\\projects\\alice_in_wonderland\\02_story_analysis\\chapter_analysis\\CH001_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH001",
+      "source_path": "projects/alice_in_wonderland/01_source/chapters/CH001_chapter_i.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH004",
+      "source_path": "projects/alice_in_wonderland/01_source/chapters/CH004_chapter_iv.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH012",
+      "source_path": "projects/alice_in_wonderland/01_source/chapters/CH012_chapter_xii.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH001",
+      "canonical_id": "alice"
+    }
+  ],
+  "evidence_summary": [
+    "[CH001_SC001] Purpose:",
+    "[CH001_SC001] Summary: Alice sits bored by a riverbank until a White Rabbit in a waistcoat runs past checking a watch. She chases him into a rabbit-hole, falling down a deep well lined with cupboards and shelves. After landing on a heap of sticks, she finds...",
+    "[CH001_SC001] Emotional arc: Boredom to intense curiosity/urgency, followed by disorientation and frustration.",
+    "[CH001_SC001] Coverage: Wide shots of the riverbank and long hall Close-ups of the watch, golden key, bottle label, and cake label POV shots of the garden through the tiny door Tracking/Vertical shots of Alice falling down the well Scale-comparison shots (A...",
+    "[CH001_SC001] Continuity: Alice's physical scale relative to objects (key, table, doors) The presence and location of the golden key The appearance of the 'DRINK ME' bottle and 'EAT ME' cake The contents/labels on the well shelves (e.g., Orange Marmalade jar)",
+    "[CH001] Chapter summary: **Location: Riverbank** - **Characters:** Alice, Sister (off-screen/passive). - **Events:** Alice sits by a riverbank on a hot day; she expresses boredom with her sister's book (no pictures or conversations). - **Visu...",
+    "[CH001] CHAPTER I. (book index hit)",
+    "[CH004] CHAPTER IV. (book index hit)",
+    "[CH012] CHAPTER XII. (book index hit)",
+    "Character alice: Alice is a young human girl characterized by extreme and rapid physical instability regarding her scale. She fluctuates between being a standard-sized child, shrinking to approximately ten inches in height, and growing to over nine feet tal..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH001_SC001\n\n## Production Intent\nEstablish a rapid transition from static boredom to kinetic disorientation through extreme scale fluctuations. The sequence requires precise coordination between character height changes and environmental props (key, bottle, cake) to maintain the logic of Alice's physical instability.\n\n## Required Cast\n- alice: Young human girl; undergoes rapid scale shifts (10 inches to 9+ feet).\n- white_rabbit: Rabbit in a waistcoat; carries a watch.\n\n## Required Environments\n- riverbank_exterior: Hot day, riverside setting.\n- rabbit_hole_tunnel: Vertical well with cupboards and shelves (include Orange Marmalade jar).\n- hall_of_doors: Long passage with locked doors and a small door leading to miniature_garden_view.\n\n## Continuity Constraints\n- Alice's physical scale relative to objects (key, table, doors).\n- Presence/location of the golden key.\n- Labels on 'DRINK ME' bottle and 'EAT ME' cake.\n- Shelf contents in well.\n\n## Beat List\n- BT001: White Rabbit appearance at riverbank.\n- BT002: Descent through the rabbit-hole tunnel.\n- BT003: Discovery of golden key in hall of doors.\n- BT004: Scale manipulation via bottle and cake.",
+  "metadata": {
+    "artifact_id": "CH001_SC001_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "aff5f28c3a158cd218f47205d8f8d80a3f946287",
+    "created_at_utc": "2026-04-28T04:32:45.747841+00:00",
+    "updated_at_utc": "2026-04-28T04:32:45.747841+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH001_SC001",
+        "version": "2bfdb03002b93b715113a19efca46767a1103f3a"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH001_SC001",
+        "version": "74198c636672d9ba3f90f1915de27a984e28aeea"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH001_SC001",
+        "version": "b5f992cd0ca24b5e0b2d4f2ee9e79ce854954c94"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-28T04:33:24.970500+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "aff5f28c3a158cd218f47205d8f8d80a3f946287"
+      }
+    ]
+  }
+}

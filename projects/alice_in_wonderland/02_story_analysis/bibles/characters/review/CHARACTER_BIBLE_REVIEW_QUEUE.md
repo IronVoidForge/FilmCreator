@@ -1,0 +1,122 @@
+# Character Bible Review Queue
+
+- `alice`
+  - Specific facial features (eyes, hair color, etc.) are unstated.
+  - Specific clothing/costume details are unstated.
+- `animal_crowd`
+  - Specific morphology of the full group beyond mentioned members is unknown.
+  - Sentience and specific behavioral patterns are unstated.
+- `bill_the_lizard`
+  - Specific species or lizard type is unknown.
+  - Visual coloration and skin texture are unstated.
+  - Sentience level is unknown despite being a named entity.
+- `blue_caterpillar`
+  - Specific morphology and body shape are unknown.
+  - Movement patterns and posture are undefined.
+  - Age and temperament are unstated.
+- `caterpillar`
+  - Specific insect species or visual texture of the exoskeleton/skin.
+  - Visual appearance of the hookah.
+- `cheshire_cat`
+  - Specific fur pattern or color
+  - Exact physical dimensions beyond "small" scale
+  - Method of movement while invisible
+- `courtier_diamond`
+  - Specific visual details of the "diamond" suit representation.
+  - Specific movement patterns or personality traits.
+- `crabs`
+  - Specific species or visual appearance of the crabs is not defined beyond morphology and scale.
+  - Movement patterns are unknown.
+- `dinah`
+  - Specific coat color, pattern, or breed is unknown.
+  - Specific physical markings are unknown.
+- `enormous_puppy`
+  - Specific breed or coat texture is unknown.
+  - Exact scale relative to environment (e.g., dog-sized vs. horse-sized) is unstated.
+- `executioner`
+  - Complete lack of physical description (age, build, clothing, facial features).
+  - Unknown specific tools or weaponry used for execution.
+- `flamingo_mallet`
+  - Specific plumage color or markings are not specified.
+  - Movement patterns and behavioral temperament are unknown.
+- `gardener_five`
+  - Specific visual design of the card (suit, value, or pattern).
+  - Movement style and weight of the card-based body.
+- `gardener_seven`
+  - Specific visual design of the "card-based" anatomy (e.g., flat vs. volumetric).
+  - Age, movement style, and specific costume details.
+- `gardener_two`
+  - Specific visual design of the card (suit, rank, or pattern) is unknown.
+  - Movement style and age/maturity are not established.
+- `hedgehog_ball`
+  - Specific species or color patterns of the hedgehog.
+  - Behavioral mannerisms or specific movement style.
+- `king_of_hearts`
+  - specific physical appearance (face, hair, eyes)
+  - clothing and regalia
+  - age and stature
+- `knave_of_hearts`
+  - specific physical appearance is undocumented
+  - age and build are unknown
+  - costume and movement style are unknown
+- `mouse`
+  - Exact scale is unknown.
+  - Sentience level is unknown.
+  - Specific species/visual appearance beyond "small animal" is unstated.
+- `pat`
+  - morphology (exact species or animal type is unknown)
+  - visual appearance (no specific physical traits provided)
+  - movement style
+- `pigeon`
+  - Specific species or plumage coloration.
+  - Behavioral patterns or vocalizations.
+- `queen_of_hearts`
+  - specific physical appearance (age, build, facial features)
+  - costume and color palette
+  - movement style and temperament
+- `royal_child_heart`
+  - Specific visual appearance (clothing, color, facial features) is unknown.
+  - Individual personality or collective behavior is unknown.
+  - Sentience level is unknown.
+- `sister`
+  - complete lack of physical description
+  - visual age relative to Alice is unknown
+- `soldier_club`
+  - Specific facial features or sensory organs are not defined.
+  - Movement style and thickness/depth of the "card" shape are unknown.
+- `the_crowd`
+  - Specific species composition is not defined.
+  - Collective behavior or sentience level is unknown.
+- `the_dodo`
+  - Entity is classified as a "group" despite being described as a single bird.
+  - Sentience is unknown.
+  - Specific movement and costume details are unsupported by evidence.
+- `the_dormouse`
+  - Specific species or visual appearance beyond "small, sleepy creature" is unknown.
+  - Exact age and clothing/costume requirements are unstated.
+- `the_duchess`
+  - physical appearance is completely undocumented
+  - age and build are unknown
+- `the_duck`
+  - Specific breed or coloration of the duck.
+  - Specific movement patterns or behavioral traits.
+- `the_eaglet`
+  - Specific species or plumage details are unknown.
+  - Visual age or stage of life is unknown.
+  - Movement patterns and behavioral mannerisms are unknown.
+- `the_hatter`
+  - Visual appearance of clothing and specific facial features are unknown.
+  - Specific age and movement style are unstated.
+  - The nature of the "group" classification vs. the singular "eccentric figure" description remains unresolved.
+- `the_lory`
+  - Specific species or plumage details are unstated.
+  - Movement patterns and specific color palette are unknown.
+- `the_march_hare`
+  - specific visual markings or fur patterns
+  - exact age or stage of life
+- `various_birds`
+  - Specific species composition beyond Magpies and Canaries is unknown.
+  - Sentience level is unconfirmed.
+- `white_rabbit`
+  - Entity type is classified as "group" despite descriptions suggesting a singular individual.
+  - Sentience level is unknown.

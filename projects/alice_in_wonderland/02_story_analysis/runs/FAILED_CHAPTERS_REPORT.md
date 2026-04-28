@@ -1,0 +1,31 @@
+# Failed Chapters Report
+
+- project_slug: alice_in_wonderland
+- manifest_path: projects/alice_in_wonderland/01_source/book/book_manifest.md
+- generated_at_utc: 2026-04-28T04:20:59.983466+00:00
+
+- CH006
+  - path: projects/alice_in_wonderland/01_source/chapters/CH006_chapter_vi.md
+  - stage: LMStudioError
+  - error_type: LMStudioError
+  - error: Authoring task 'scene_decomposition' failed after retries. Failure artifact: projects/alice_in_wonderland/02_story_analysis/logs/failures/20260428T040901312811Z_scene_decomposition_task.md
+- CH009
+  - path: projects/alice_in_wonderland/01_source/chapters/CH009_chapter_ix.md
+  - stage: character_extraction_validation
+  - error_type: LMStudioError
+  - error: Character extraction returned no usable character records after validation.
+- CH010
+  - path: projects/alice_in_wonderland/01_source/chapters/CH010_chapter_x.md
+  - stage: character_extraction_validation
+  - error_type: LMStudioError
+  - error: Character extraction returned no usable character records after validation.
+- CH011
+  - path: projects/alice_in_wonderland/01_source/chapters/CH011_chapter_xi.md
+  - stage: LMStudioError
+  - error_type: LMStudioError
+  - error: Authoring task 'scene_decomposition' failed after retries. Failure artifact: projects/alice_in_wonderland/02_story_analysis/logs/failures/20260428T041754609742Z_scene_decomposition_task.md
+- CH012
+  - path: projects/alice_in_wonderland/01_source/chapters/CH012_chapter_xii.md
+  - stage: character_extraction_validation
+  - error_type: LMStudioError
+  - error: Character extraction returned no usable character records after validation.

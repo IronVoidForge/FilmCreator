@@ -1,0 +1,366 @@
+{
+  "scene_id": "CH001_SC002",
+  "chapter_id": "CH001",
+  "scene_title": "CH001_SC002",
+  "purpose": "",
+  "summary": "Alice falls slowly down a deep well lined with cupboards and bookshelves. During her descent, she grabs an orange marmalade jar, contemplates her depth and philosophical thoughts, and eventually lands on a heap of sticks.",
+  "emotional_arc": "Confusion to dreamy contemplation to sudden impact.",
+  "production_intent": "Execute a controlled vertical descent sequence utilizing high-angle and POV perspectives to simulate falling through a deep shaft. The sequence must maintain a rhythmic, slow-motion fall speed that allows for character interaction with environmental props like bookshelves and an orange marmalade jar before a sudden impact transition.",
+  "scene_short_description": "A young girl descends slowly through a vertical shaft lined with cupboards and bookshelves.",
+  "scene_primary_scale_story_point": "Alice's scale relative to the massive depth and passing furniture.",
+  "scene_required_anchor_catalog": [
+    "orange marmalade jar",
+    "heap of sticks",
+    "rabbit_hole_tunnel"
+  ],
+  "scene_start_state": "Alice begins her descent into the dark vertical shaft.",
+  "scene_end_state": "Alice lands abruptly on a pile of sticks.",
+  "dominant_action_line": "Alice falls through a cluttered vertical tunnel, interacts with objects, and hits the bottom.",
+  "scene_spatial_layout": [
+    "Vertical axis orientation",
+    "Walls lined with cupboards and bookshelves"
+  ],
+  "character_spatial_map": [
+    "alice centered in the shaft during descent",
+    "alice moving downward toward the floor/heap of sticks"
+  ],
+  "environment_subzones": [
+    "upper shaft",
+    "mid-shaft shelf zones",
+    "bottom landing zone"
+  ],
+  "scene_event_chain": [
+    "event 1: alice begins falling down the rabbit_hole_tunnel",
+    "event 2: alice grabs an orange marmalade jar from a passing shelf",
+    "event 3: alice contemplates her depth and philosophical thoughts while drifting",
+    "event 4: alice lands on a heap of sticks"
+  ],
+  "entry_vectors": [
+    "top of shaft"
+  ],
+  "exit_vectors": [
+    "bottom of shaft (landing)"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: physical contact with object",
+    "BT002 -> BT003: shift from action to internal thought",
+    "BT003 -> BT004: sudden change in velocity/impact"
+  ],
+  "characters_required": [
+    {
+      "label": "Alice",
+      "canonical_id": "alice",
+      "display_name": "alice",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH001/alice.md",
+      "notes": "Direct registry match for 'alice'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "The Vertical Well/Tunnel",
+      "canonical_id": "rabbit_hole_tunnel",
+      "display_name": "rabbit_hole_tunnel",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 90,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/environment_breakdowns/chapters/CH001/rabbit_hole_tunnel.md",
+      "notes": "Chapter-local environment alias match for 'The Vertical Well/Tunnel' (key_overlap=1, label_overlap=3, context_overlap=4)."
+    }
+  ],
+  "continuity_constraints": [
+    "Descent speed and rhythmic timing of the fall",
+    "Fixed placement of objects on shelves as Alice passes them"
+  ],
+  "visual_coverage_families": [
+    "Vertigo-inducing high-angle shots",
+    "POV shots of passing shelves/maps",
+    "Close-ups of ORANGE MARMALADE jar"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "alice begins falling down the rabbit_hole_tunnel",
+      "purpose": "",
+      "action_start": "alice enters vertical descent",
+      "action_end": "alice passes first shelf level",
+      "active_subjects": [
+        "alice"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "upper shaft",
+      "blocking_hint": "center of tunnel",
+      "environment_subzone": "upper shaft",
+      "continuity_focus": "fall rhythm/speed",
+      "coverage_hint": "high-angle wide",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "alice grabs the orange marmalade jar",
+      "purpose": "",
+      "action_start": "hand reaches for shelf",
+      "action_end": "jar is secured in grip",
+      "active_subjects": [
+        "alice"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "mid-shaft shelf zones",
+      "blocking_hint": "near cupboard/shelf edge",
+      "environment_subzone": "mid-shaft shelf zones",
+      "continuity_focus": "object placement on shelf",
+      "coverage_hint": "close-up insert",
+      "coverage_priority": "medium",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "alice contemplates her depth and thoughts",
+      "purpose": "",
+      "action_start": "alice stops reaching",
+      "action_end": "alice continues drifting downward",
+      "active_subjects": [
+        "alice"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "mid-shaft shelf zones",
+      "blocking_hint": "drifting center shaft",
+      "environment_subzone": "mid-shaft shelf zones",
+      "continuity_focus": "rhythm of fall",
+      "coverage_hint": "medium close-up",
+      "coverage_priority": "low",
+      "handoff_to_next": "BT004"
+    },
+    {
+      "beat_id": "BT004",
+      "summary": "alice lands on a heap of sticks",
+      "purpose": "",
+      "action_start": "rapid descent acceleration",
+      "action_end": "impact with sticks",
+      "active_subjects": [
+        "alice"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "bottom landing zone",
+      "blocking_hint": "hitting the floor/heap",
+      "environment_subzone": "bottom landing zone",
+      "continuity_focus": "sudden stop",
+      "coverage_hint": "full shot",
+      "coverage_priority": "high",
+      "handoff_to_next": "scene end"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish descent",
+      "planned_shot_moment_summary": "alice begins falling through the shaft",
+      "primary_subject_seed": "alice",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "upper shaft",
+      "planned_shot_required_anchor_1": "rabbit_hole_tunnel",
+      "planned_shot_scale_proof_detail": "vertical depth vs alice size",
+      "start_state_seed": "falling motion",
+      "end_state_seed": "passing first shelf",
+      "action_seed": "descending",
+      "blocking_seed": [
+        "center shaft"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "high_angle",
+      "lens_family": "ultra_wide",
+      "camera_motion": "crane",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "prop interaction",
+      "planned_shot_moment_summary": "alice grabs the marmalade jar",
+      "primary_subject_seed": "orange marmalade jar",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "mid-shaft shelf zones",
+      "planned_shot_required_anchor_1": "orange marmalade jar",
+      "planned_shot_scale_proof_detail": "hand size vs jar size",
+      "start_state_seed": "reaching out",
+      "end_state_seed": "jar in hand",
+      "action_seed": "grabbing",
+      "blocking_seed": [
+        "shelf edge"
+      ],
+      "shot_size": "close_up",
+      "camera_angle": "eye_level",
+      "lens_family": "normal",
+      "camera_motion": "track",
+      "zoom_behavior": "subtle_in",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "profile_left"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "character internal state",
+      "planned_shot_moment_summary": "alice drifts in thought",
+      "primary_subject_seed": "alice",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "internal_monologue",
+      "environment_subzone": "mid-shaft shelf zones",
+      "planned_shot_required_anchor_1": "rabbit_hole_tunnel",
+      "planned_shot_scale_proof_detail": "floating sensation",
+      "start_state_seed": "drifting",
+      "end_state_seed": "descending further",
+      "action_seed": "contemplating",
+      "blocking_seed": [
+        "center shaft"
+      ],
+      "shot_size": "medium_close",
+      "camera_angle": "eye_level",
+      "lens_family": "portrait",
+      "camera_motion": "handheld",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front_three_quarter_right"
+    },
+    {
+      "planned_shot_id": "SH004",
+      "beat_id": "BT004",
+      "narrative_function": "climax/impact",
+      "planned_shot_moment_summary": "alice hits the sticks",
+      "primary_subject_seed": "alice",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "bottom landing zone",
+      "planned_shot_required_anchor_1": "heap of sticks",
+      "planned_shot_scale_proof_detail": "sudden stop vs fall speed",
+      "start_state_seed": "rapid descent",
+      "end_state_seed": "impact on sticks",
+      "action_seed": "landing",
+      "blocking_seed": [
+        "bottom of shaft"
+      ],
+      "shot_size": "full",
+      "camera_angle": "low_angle",
+      "lens_family": "wide",
+      "camera_motion": "push_in",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front"
+    }
+  ],
+  "unresolved_questions": [],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH001",
+      "scene_id": "CH001_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH001",
+      "scene_id": "CH001_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH001",
+      "scene_id": "CH001_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH001",
+      "scene_id": "CH001_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH001",
+      "scene_id": "CH001_SC002"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH001",
+      "source_path": "C:\\FilmCreator\\projects\\alice_in_wonderland\\02_story_analysis\\chapter_analysis\\CH001_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH009",
+      "source_path": "projects/alice_in_wonderland/01_source/chapters/CH009_chapter_ix.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH001",
+      "source_path": "projects/alice_in_wonderland/01_source/chapters/CH001_chapter_i.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH010",
+      "source_path": "projects/alice_in_wonderland/01_source/chapters/CH010_chapter_x.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH001",
+      "canonical_id": "alice"
+    }
+  ],
+  "evidence_summary": [
+    "[CH001_SC002] Purpose:",
+    "[CH001_SC002] Summary: Alice falls slowly down a deep well lined with cupboards and bookshelves. During her descent, she grabs an orange marmalade jar, contemplates her depth and philosophical thoughts, and eventually lands on a heap of sticks.",
+    "[CH001_SC002] Emotional arc: Confusion to dreamy contemplation to sudden impact.",
+    "[CH001_SC002] Coverage: Vertigo-inducing high-angle shots POV shots of the passing shelves/maps Close-ups of the 'ORANGE MARMALADE' jar",
+    "[CH001_SC002] Continuity: The speed and rhythm of the fall The placement of objects on the shelves as she passes them",
+    "[CH001] Chapter summary: **Location: Riverbank** - **Characters:** Alice, Sister (off-screen/passive). - **Events:** Alice sits by a riverbank on a hot day; she expresses boredom with her sister's book (no pictures or conversations). - **Visu...",
+    "[CH009] CHAPTER IX. (book index hit)",
+    "[CH001] CHAPTER I. (book index hit)",
+    "[CH010] CHAPTER X. (book index hit)",
+    "Character alice: Alice is a young human girl characterized by extreme and rapid physical instability regarding her scale. She fluctuates between being a standard-sized child, shrinking to approximately ten inches in height, and growing to over nine feet tal..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH001_SC002\n\n## Production Intent\nExecute a controlled vertical descent sequence utilizing high-angle and POV perspectives to simulate falling through a deep shaft. The sequence must maintain a rhythmic, slow-motion fall speed that allows for character interaction with environmental props like bookshelves and an orange marmalade jar before a sudden impact transition.\n\n## Required Cast\n- alice (young human girl)\n\n## Required Environments\n- rabbit_hole_tunnel (Vertical Well/Tunnel lined with cupboards and bookshelves)\n\n## Continuity Constraints\n- The speed and rhythm of the fall\n- The placement of objects on the shelves as she passes them\n\n## Beat List\n- BT001: alice begins falling down the rabbit_hole_tunnel\n- BT002: alice grabs the orange marmalade jar\n- BT003: alice contemplates her depth and thoughts\n- BT004: alice lands on a heap of sticks",
+  "metadata": {
+    "artifact_id": "CH001_SC002_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "4539ad3b2d034390968641e0e5574761540cd7ac",
+    "created_at_utc": "2026-04-28T04:33:29.983565+00:00",
+    "updated_at_utc": "2026-04-28T04:33:29.983565+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH001_SC002",
+        "version": "26a5f807b0cc19abaf642d7ac0325dab4b52adeb"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH001_SC002",
+        "version": "5940e3e661ae415e1d5fc6811aaa34c66d35b14a"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH001_SC002",
+        "version": "9230eb0002a3f57cd2451720e41a677ce685a6dc"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-28T04:34:00.829032+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "4539ad3b2d034390968641e0e5574761540cd7ac"
+      }
+    ]
+  }
+}

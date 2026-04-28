@@ -1,0 +1,52 @@
+# Environment Bible Review Queue
+
+- `hall_of_doors`
+  - Specific visual characteristics of the doors or walls are unstated.
+  - Precise spatial dimensions and layout configuration are unknown.
+- `miniature_garden_view`
+  - Visual characteristics of the garden are currently undocumented.
+  - Spatial relationship to primary settings is unknown.
+- `rabbit_hole_tunnel`
+  - Specific visual geometry and textures are not defined.
+  - Lighting conditions during transit are unknown.
+- `riverbank_exterior`
+  - Complete lack of visual or spatial descriptors in provided evidence.
+  - Specific topographical features of the riverbank are unknown.
+- `the_hall`
+  - Specific visual characteristics and spatial dimensions are unknown.
+  - The exact nature of its role as a "transit setting" is undefined.
+- `the_pool_of_tears`
+  - Specific visual characteristics and physical dimensions are not defined in current evidence.
+  - The exact nature of the "tears" (composition/viscosity) is unstated.
+- `caucus_race_course`
+  - Specific visual characteristics and spatial layout are not defined in current evidence.
+  - Relationship between the location's appearance across CH003, CH007, and CH012 is unknown.
+- `riverbank_assembly`
+  - Visual characteristics of the riverbank are not defined in current records.
+  - Spatial relationship between the assembly and surrounding geography is unknown.
+- `thick_woods`
+  - Visual characteristics (Lighting and Atmosphere) are explicitly marked as empty/unknown in source data.
+  - Specific spatial layout is not defined.
+- `white_rabbit_house`
+  - Specific visual characteristics (lighting, atmosphere, layout) are not defined in the provided evidence.
+  - The relationship between the environment and its appearances in CH001 and CH012 is unspecified.
+- `forest_canopy`
+  - Specific visual characteristics and spatial layout are not defined in current records.
+- `mushroom_clearing`
+  - Visual characteristics of the clearing are currently undocumented.
+  - Spatial relationship to other environments is unknown.
+- `small_house_clearing`
+  - Visual characteristics of the house and clearing are undocumented.
+  - Spatial relationship between the house and the clearing is undefined.
+- `tea_party_glade`
+  - Physical characteristics of the glade are currently undocumented.
+  - Spatial relationship to other environments is unknown.
+- `the_garden`
+  - Lack of descriptive detail regarding physical appearance, layout, or atmosphere.
+  - Discrepancy between chapter mentions (CH001, CH002, CH007, CH008) and the specific breakdown source (CH007).
+- `wooded_pathway`
+  - Specific visual characteristics of the wooded pathway are currently undocumented.
+  - Spatial layout and lighting conditions are unknown.
+- `queens_croquet_ground`
+  - Specific visual characteristics of the ground/terrain are not provided in current evidence.
+  - Spatial layout and scale of the croquet ground are unknown.

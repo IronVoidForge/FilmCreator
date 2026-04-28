@@ -1,0 +1,2299 @@
+{
+  "project_slug": "alice_in_wonderland",
+  "generated_at_utc": "2026-04-28T04:29:48.966701+00:00",
+  "total_records": 36,
+  "attempted_count": 36,
+  "non_empty_count": 36,
+  "records": [
+    {
+      "character_id": "alice",
+      "display_name": "alice",
+      "entity_kind": "individual",
+      "first_seen_chapter": "CH001",
+      "chapter_mentions": [
+        "CH001",
+        "CH002",
+        "CH003",
+        "CH004",
+        "CH005",
+        "CH007",
+        "CH008"
+      ],
+      "synthesis_mode": "synthesized",
+      "pre_fallback_audit": {
+        "total_prompt_critical_fields": 10,
+        "missing_count": 3,
+        "present_count": 7,
+        "missing_fields": [
+          "origin_or_historical_context",
+          "movement_language",
+          "costume_signature"
+        ],
+        "present_fields": [
+          "identity_baseline",
+          "age_presence",
+          "physical_build",
+          "stable_visual_summary",
+          "physical_traits",
+          "distinguishing_features",
+          "state_variants"
+        ],
+        "needs_visual_production_fallback": true
+      },
+      "fallback_attempted": true,
+      "fallback_method": "llm_repair+deterministic",
+      "fallback_reason": "missing_prompt_critical_fields",
+      "fallback_result_audit": {
+        "status": "generated",
+        "fallback_bucket": "human",
+        "filled_count": 8,
+        "empty_count": 0,
+        "filled_fields": [
+          "production_identity_descriptor",
+          "production_body_descriptor",
+          "production_face_descriptor",
+          "production_costume_descriptor",
+          "production_silhouette",
+          "production_movement_descriptor",
+          "production_state_variants",
+          "negative_terms"
+        ],
+        "empty_fields": [],
+        "non_empty": true
+      },
+      "fallback_preview": {
+        "production_identity_descriptor": "A young human girl subject to extreme, rapid size fluctuations.",
+        "production_body_descriptor": "Standard human child proportions, though scale is highly unstable.; Subject to extreme size fluctuations",
+        "production_costume_descriptor": "period-appropriate clothing",
+        "production_silhouette": "Extreme physical instability (rapidly changing height/scale); Standard human child proportions, though scale is highly unstable."
+      },
+      "evidence_summary": [
+        "[source:C:/FilmCreator/projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH001/alice.md] Physical Description: A young girl who experiences extreme size fluctuations. She shrinks to ten inches in height after drinking from a bottl...",
+        "[source:C:/FilmCreator/projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH002/alice.md] Physical Description: A human girl who undergoes extreme size fluctuations. At one point, she is over nine feet tall; later, she shrinks to a...",
+        "[source:C:/FilmCreator/projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH003/alice.md] Physical Description: A human girl. Specific clothing or hair details are not provided in this chapter, though she is noted to be wet from th...",
+        "[source:C:/FilmCreator/projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH004/alice.md] Physical Description: A young girl capable of rapid, extreme size fluctuations. At one point, she grows large enough to fill a room, with her...",
+        "[source:C:/FilmCreator/projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH005/alice.md] Physical Description: A young girl. In this chapter, she undergoes extreme physical instability: - **Normal State:** Standard human child pro..."
+      ]
+    },
+    {
+      "character_id": "dinah",
+      "display_name": "dinah",
+      "entity_kind": "individual",
+      "first_seen_chapter": "CH001",
+      "chapter_mentions": [
+        "CH001",
+        "CH002",
+        "CH003"
+      ],
+      "synthesis_mode": "synthesized",
+      "pre_fallback_audit": {
+        "total_prompt_critical_fields": 10,
+        "missing_count": 5,
+        "present_count": 5,
+        "missing_fields": [
+          "age_presence",
+          "origin_or_historical_context",
+          "movement_language",
+          "costume_signature",
+          "distinguishing_features"
+        ],
+        "present_fields": [
+          "identity_baseline",
+          "physical_build",
+          "stable_visual_summary",
+          "physical_traits",
+          "state_variants"
+        ],
+        "needs_visual_production_fallback": true
+      },
+      "fallback_attempted": true,
+      "fallback_method": "llm_repair+deterministic",
+      "fallback_reason": "missing_prompt_critical_fields",
+      "fallback_result_audit": {
+        "status": "generated",
+        "fallback_bucket": "small_quadruped",
+        "filled_count": 8,
+        "empty_count": 0,
+        "filled_fields": [
+          "production_identity_descriptor",
+          "production_body_descriptor",
+          "production_face_descriptor",
+          "production_costume_descriptor",
+          "production_silhouette",
+          "production_movement_descriptor",
+          "production_state_variants",
+          "negative_terms"
+        ],
+        "empty_fields": [],
+        "non_empty": true
+      },
+      "fallback_preview": {
+        "production_identity_descriptor": "A domestic cat.",
+        "production_body_descriptor": "Small quadrupedal frame.; small scale",
+        "production_costume_descriptor": "natural hide or minimal harness",
+        "production_silhouette": "Small quadrupedal frame."
+      },
+      "evidence_summary": [
+        "[source:C:/FilmCreator/projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH001/dinah.md] Physical Description: Identified only as Alice's cat.",
+        "[source:C:/FilmCreator/projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH002/dinah.md] Physical Description: A cat belonging to Alice. No specific physical traits are provided in this chapter.",
+        "[source:C:/FilmCreator/projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH003/dinah.md] Physical Description: A cat capable of catching birds.",
+        "[CH001] CHAPTER I. (query appears in paragraph preview)",
+        "[CH002] CHAPTER II. (query appears in paragraph preview)"
+      ]
+    },
+    {
+      "character_id": "sister",
+      "display_name": "sister",
+      "entity_kind": "individual",
+      "first_seen_chapter": "CH001",
+      "chapter_mentions": [
+        "CH001"
+      ],
+      "synthesis_mode": "synthesized",
+      "pre_fallback_audit": {
+        "total_prompt_critical_fields": 10,
+        "missing_count": 7,
+        "present_count": 3,
+        "missing_fields": [
+          "age_presence",
+          "physical_build",
+          "origin_or_historical_context",
+          "movement_language",
+          "physical_traits",
+          "costume_signature",
+          "distinguishing_features"
+        ],
+        "present_fields": [
+          "identity_baseline",
+          "stable_visual_summary",
+          "state_variants"
+        ],
+        "needs_visual_production_fallback": true
+      },
+      "fallback_attempted": true,
+      "fallback_method": "llm_repair+deterministic",
+      "fallback_reason": "missing_prompt_critical_fields",
+      "fallback_result_audit": {
+        "status": "generated",
+        "fallback_bucket": "human",
+        "filled_count": 8,
+        "empty_count": 0,
+        "filled_fields": [
+          "production_identity_descriptor",
+          "production_body_descriptor",
+          "production_face_descriptor",
+          "production_costume_descriptor",
+          "production_silhouette",
+          "production_movement_descriptor",
+          "production_state_variants",
+          "negative_terms"
+        ],
+        "empty_fields": [],
+        "non_empty": true
+      },
+      "fallback_preview": {
+        "production_identity_descriptor": "human",
+        "production_body_descriptor": "human build and proportions",
+        "production_costume_descriptor": "period-appropriate clothing",
+        "production_silhouette": "upright human silhouette"
+      },
+      "evidence_summary": [
+        "[source:C:/FilmCreator/projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH001/sister.md] Physical Description: No physical description provided.",
+        "[CH001] CHAPTER I. (query appears in paragraph preview)",
+        "[CH007] CHAPTER VII. (query appears in paragraph preview)",
+        "[CH012] CHAPTER XII. (query appears in paragraph preview)",
+        "[CH001 p1-p3] Down the Rabbit-Hole Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing to do: once or twice she had peeped into the book her sister ..."
+      ]
+    },
+    {
+      "character_id": "white_rabbit",
+      "display_name": "white_rabbit",
+      "entity_kind": "group",
+      "first_seen_chapter": "CH001",
+      "chapter_mentions": [
+        "CH001",
+        "CH002",
+        "CH004",
+        "CH008"
+      ],
+      "synthesis_mode": "synthesized",
+      "pre_fallback_audit": {
+        "total_prompt_critical_fields": 10,
+        "missing_count": 2,
+        "present_count": 8,
+        "missing_fields": [
+          "age_presence",
+          "origin_or_historical_context"
+        ],
+        "present_fields": [
+          "identity_baseline",
+          "physical_build",
+          "movement_language",
+          "stable_visual_summary",
+          "physical_traits",
+          "costume_signature",
+          "distinguishing_features",
+          "state_variants"
+        ],
+        "needs_visual_production_fallback": true
+      },
+      "fallback_attempted": true,
+      "fallback_method": "llm_repair+deterministic",
+      "fallback_reason": "missing_prompt_critical_fields",
+      "fallback_result_audit": {
+        "status": "generated",
+        "fallback_bucket": "group_or_horde",
+        "filled_count": 8,
+        "empty_count": 0,
+        "filled_fields": [
+          "production_identity_descriptor",
+          "production_body_descriptor",
+          "production_face_descriptor",
+          "production_costume_descriptor",
+          "production_silhouette",
+          "production_movement_descriptor",
+          "production_state_variants",
+          "negative_terms"
+        ],
+        "empty_fields": [],
+        "non_empty": true
+      },
+      "fallback_preview": {
+        "production_identity_descriptor": "A small, white quadruped rabbit.",
+        "production_body_descriptor": "Small scale; quadrupedal frame.; White fur/coloration",
+        "production_costume_descriptor": "Carries a fan and gloves (associated items).",
+        "production_silhouette": "Distinct pink eyes; Small scale; quadrupedal frame."
+      },
+      "evidence_summary": [
+        "[source:C:/FilmCreator/projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH001/white_rabbit.md] Physical Description: A white rabbit characterized by distinct pink eyes.",
+        "[source:C:/FilmCreator/projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH002/white_rabbit.md] Physical Description: A white rabbit that moves with haste.",
+        "[source:C:/FilmCreator/projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH004/white_rabbit.md] Physical Description: A small rabbit, presumably white in color. He is frantic and preoccupied with finding his lost gloves and fan.",
+        "[source:C:/FilmCreator/projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH008/white_rabbit.md] Physical Description: A white rabbit.",
+        "[CH001] CHAPTER I. (query appears in paragraph preview)"
+      ]
+    },
+    {
+      "character_id": "animal_crowd",
+      "display_name": "animal_crowd",
+      "entity_kind": "group",
+      "first_seen_chapter": "CH002",
+      "chapter_mentions": [
+        "CH002"
+      ],
+      "synthesis_mode": "synthesized",
+      "pre_fallback_audit": {
+        "total_prompt_critical_fields": 10,
+        "missing_count": 3,
+        "present_count": 7,
+        "missing_fields": [
+          "age_presence",
+          "origin_or_historical_context",
+          "costume_signature"
+        ],
+        "present_fields": [
+          "identity_baseline",
+          "physical_build",
+          "movement_language",
+          "stable_visual_summary",
+          "physical_traits",
+          "distinguishing_features",
+          "state_variants"
+        ],
+        "needs_visual_production_fallback": true
+      },
+      "fallback_attempted": true,
+      "fallback_method": "llm_repair+deterministic",
+      "fallback_reason": "missing_prompt_critical_fields",
+      "fallback_result_audit": {
+        "status": "generated",
+        "fallback_bucket": "group_or_horde",
+        "filled_count": 8,
+        "empty_count": 0,
+        "filled_fields": [
+          "production_identity_descriptor",
+          "production_body_descriptor",
+          "production_face_descriptor",
+          "production_costume_descriptor",
+          "production_silhouette",
+          "production_movement_descriptor",
+          "production_state_variants",
+          "negative_terms"
+        ],
+        "empty_fields": [],
+        "non_empty": true
+      },
+      "fallback_preview": {
+        "production_identity_descriptor": "A heterogeneous collection of various small animals.",
+        "production_body_descriptor": "Small-scale varied morphology; includes a Duck, a Dodo, a Lory, and an Eaglet.; Small scale",
+        "production_costume_descriptor": "repeatable group uniform or martial gear",
+        "production_silhouette": "Diverse species composition within the group; Small-scale varied morphology; includes a Duck, a Dodo, a Lory, and an Eaglet."
+      },
+      "evidence_summary": [
+        "[source:C:/FilmCreator/projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH002/animal_crowd.md] Physical Description: A collection of various animals swimming in the pool. Specific members include a Duck, a Dodo, a Lory, and an Ea...",
+        "[CH002] CHAPTER II. (book index hit)",
+        "[CH003] CHAPTER III. (book index hit)",
+        "[CH011] CHAPTER XI. (book index hit)"
+      ]
+    },
+    {
+      "character_id": "mouse",
+      "display_name": "mouse",
+      "entity_kind": "group",
+      "first_seen_chapter": "CH002",
+      "chapter_mentions": [
+        "CH002",
+        "CH003"
+      ],
+      "synthesis_mode": "synthesized",
+      "pre_fallback_audit": {
+        "total_prompt_critical_fields": 10,
+        "missing_count": 3,
+        "present_count": 7,
+        "missing_fields": [
+          "age_presence",
+          "origin_or_historical_context",
+          "costume_signature"
+        ],
+        "present_fields": [
+          "identity_baseline",
+          "physical_build",
+          "movement_language",
+          "stable_visual_summary",
+          "physical_traits",
+          "distinguishing_features",
+          "state_variants"
+        ],
+        "needs_visual_production_fallback": true
+      },
+      "fallback_attempted": true,
+      "fallback_method": "llm_repair+deterministic",
+      "fallback_reason": "missing_prompt_critical_fields",
+      "fallback_result_audit": {
+        "status": "generated",
+        "fallback_bucket": "group_or_horde",
+        "filled_count": 8,
+        "empty_count": 0,
+        "filled_fields": [
+          "production_identity_descriptor",
+          "production_body_descriptor",
+          "production_face_descriptor",
+          "production_costume_descriptor",
+          "production_silhouette",
+          "production_movement_descriptor",
+          "production_state_variants",
+          "negative_terms"
+        ],
+        "empty_fields": [],
+        "non_empty": true
+      },
+      "fallback_preview": {
+        "production_identity_descriptor": "A small quadrupedal animal.",
+        "production_body_descriptor": "Small-scale, quadrupedal frame.; Quadruped morphology",
+        "production_costume_descriptor": "repeatable group uniform or martial gear",
+        "production_silhouette": "Physical tail; Small-scale, quadrupedal frame."
+      },
+      "evidence_summary": [
+        "[source:C:/FilmCreator/projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH002/mouse.md] Physical Description: A small animal that enters the pool of tears.",
+        "[source:C:/FilmCreator/projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH003/mouse.md] Physical Description: A small animal (mouse) with a physical tail that Alice confuses for a \"tale.\"",
+        "[CH002] CHAPTER II. (query appears in paragraph preview)",
+        "[CH003] CHAPTER III. (query appears in paragraph preview)",
+        "[CH007] CHAPTER VII. (query appears in paragraph preview)"
+      ]
+    },
+    {
+      "character_id": "the_duchess",
+      "display_name": "the_duchess",
+      "entity_kind": "individual",
+      "first_seen_chapter": "CH002",
+      "chapter_mentions": [
+        "CH002",
+        "CH008"
+      ],
+      "synthesis_mode": "synthesized",
+      "pre_fallback_audit": {
+        "total_prompt_critical_fields": 10,
+        "missing_count": 7,
+        "present_count": 3,
+        "missing_fields": [
+          "identity_baseline",
+          "age_presence",
+          "origin_or_historical_context",
+          "movement_language",
+          "costume_signature",
+          "distinguishing_features",
+          "state_variants"
+        ],
+        "present_fields": [
+          "physical_build",
+          "stable_visual_summary",
+          "physical_traits"
+        ],
+        "needs_visual_production_fallback": true
+      },
+      "fallback_attempted": true,
+      "fallback_method": "llm_repair+deterministic",
+      "fallback_reason": "missing_prompt_critical_fields",
+      "fallback_result_audit": {
+        "status": "generated",
+        "fallback_bucket": "human",
+        "filled_count": 7,
+        "empty_count": 1,
+        "filled_fields": [
+          "production_identity_descriptor",
+          "production_body_descriptor",
+          "production_face_descriptor",
+          "production_costume_descriptor",
+          "production_silhouette",
+          "production_movement_descriptor",
+          "negative_terms"
+        ],
+        "empty_fields": [
+          "production_state_variants"
+        ],
+        "non_empty": true
+      },
+      "fallback_preview": {
+        "production_identity_descriptor": "human with period-appropriate appearance",
+        "production_body_descriptor": "human_scale biped; primary_type: human; morphology: biped",
+        "production_costume_descriptor": "period-appropriate clothing",
+        "production_silhouette": "human_scale biped"
+      },
+      "evidence_summary": [
+        "[source:C:/FilmCreator/projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH002/the_duchess.md] Physical Description: Unknown. Mentioned by the White Rabbit as he scurries away.",
+        "[source:C:/FilmCreator/projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH008/the_duchess.md] Physical Description: No physical description provided.",
+        "[CH004] CHAPTER IV. (query appears in paragraph preview)",
+        "[CH006] CHAPTER VI. (query appears in paragraph preview)",
+        "[CH008] CHAPTER VIII. (query appears in paragraph preview)"
+      ]
+    },
+    {
+      "character_id": "crabs",
+      "display_name": "crabs",
+      "entity_kind": "individual",
+      "first_seen_chapter": "CH003",
+      "chapter_mentions": [
+        "CH003"
+      ],
+      "synthesis_mode": "synthesized",
+      "pre_fallback_audit": {
+        "total_prompt_critical_fields": 10,
+        "missing_count": 4,
+        "present_count": 6,
+        "missing_fields": [
+          "origin_or_historical_context",
+          "movement_language",
+          "costume_signature",
+          "state_variants"
+        ],
+        "present_fields": [
+          "identity_baseline",
+          "age_presence",
+          "physical_build",
+          "stable_visual_summary",
+          "physical_traits",
+          "distinguishing_features"
+        ],
+        "needs_visual_production_fallback": true
+      },
+      "fallback_attempted": true,
+      "fallback_method": "llm_repair+deterministic",
+      "fallback_reason": "missing_prompt_critical_fields",
+      "fallback_result_audit": {
+        "status": "generated",
+        "fallback_bucket": "small_quadruped",
+        "filled_count": 7,
+        "empty_count": 1,
+        "filled_fields": [
+          "production_identity_descriptor",
+          "production_body_descriptor",
+          "production_face_descriptor",
+          "production_costume_descriptor",
+          "production_silhouette",
+          "production_movement_descriptor",
+          "negative_terms"
+        ],
+        "empty_fields": [
+          "production_state_variants"
+        ],
+        "non_empty": true
+      },
+      "fallback_preview": {
+        "production_identity_descriptor": "Small, multi-legged animals.",
+        "production_body_descriptor": "Small scale; multi-legged morphology.; Multi-legged morphology; Small scale",
+        "production_costume_descriptor": "natural hide or minimal harness",
+        "production_silhouette": "Presence of two distinct age stages (one old, one young); Small scale; multi-legged morphology."
+      },
+      "evidence_summary": [
+        "[source:C:/FilmCreator/projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH003/crabs.md] Physical Description: Crabs (one old, one young)."
+      ]
+    },
+    {
+      "character_id": "the_dodo",
+      "display_name": "the_dodo",
+      "entity_kind": "group",
+      "first_seen_chapter": "CH003",
+      "chapter_mentions": [
+        "CH003"
+      ],
+      "synthesis_mode": "synthesized",
+      "pre_fallback_audit": {
+        "total_prompt_critical_fields": 10,
+        "missing_count": 5,
+        "present_count": 5,
+        "missing_fields": [
+          "age_presence",
+          "origin_or_historical_context",
+          "movement_language",
+          "costume_signature",
+          "state_variants"
+        ],
+        "present_fields": [
+          "identity_baseline",
+          "physical_build",
+          "stable_visual_summary",
+          "physical_traits",
+          "distinguishing_features"
+        ],
+        "needs_visual_production_fallback": true
+      },
+      "fallback_attempted": true,
+      "fallback_method": "llm_repair+deterministic",
+      "fallback_reason": "missing_prompt_critical_fields",
+      "fallback_result_audit": {
+        "status": "generated",
+        "fallback_bucket": "group_or_horde",
+        "filled_count": 7,
+        "empty_count": 1,
+        "filled_fields": [
+          "production_identity_descriptor",
+          "production_body_descriptor",
+          "production_face_descriptor",
+          "production_costume_descriptor",
+          "production_silhouette",
+          "production_movement_descriptor",
+          "negative_terms"
+        ],
+        "empty_fields": [
+          "production_state_variants"
+        ],
+        "non_empty": true
+      },
+      "fallback_preview": {
+        "production_identity_descriptor": "A solemn, small bipedal bird (Dodo).",
+        "production_body_descriptor": "Small-scale bipedal frame.; Bipedal morphology",
+        "production_costume_descriptor": "repeatable group uniform or martial gear",
+        "production_silhouette": "Solemn expression/demeanor; Small-scale bipedal frame."
+      },
+      "evidence_summary": [
+        "[source:C:/FilmCreator/projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH003/the_dodo.md] Physical Description: A solemn bird (Dodo).",
+        "[CH003] CHAPTER III. (query appears in paragraph preview)",
+        "[CH002] CHAPTER II. (book index hit)",
+        "[CH001] CHAPTER I. (book index hit)"
+      ]
+    },
+    {
+      "character_id": "the_duck",
+      "display_name": "the_duck",
+      "entity_kind": "individual",
+      "first_seen_chapter": "CH003",
+      "chapter_mentions": [
+        "CH003"
+      ],
+      "synthesis_mode": "synthesized",
+      "pre_fallback_audit": {
+        "total_prompt_critical_fields": 10,
+        "missing_count": 5,
+        "present_count": 5,
+        "missing_fields": [
+          "age_presence",
+          "origin_or_historical_context",
+          "movement_language",
+          "costume_signature",
+          "state_variants"
+        ],
+        "present_fields": [
+          "identity_baseline",
+          "physical_build",
+          "stable_visual_summary",
+          "physical_traits",
+          "distinguishing_features"
+        ],
+        "needs_visual_production_fallback": true
+      },
+      "fallback_attempted": true,
+      "fallback_method": "llm_repair+deterministic",
+      "fallback_reason": "missing_prompt_critical_fields",
+      "fallback_result_audit": {
+        "status": "generated",
+        "fallback_bucket": "small_creature",
+        "filled_count": 7,
+        "empty_count": 1,
+        "filled_fields": [
+          "production_identity_descriptor",
+          "production_body_descriptor",
+          "production_face_descriptor",
+          "production_costume_descriptor",
+          "production_silhouette",
+          "production_movement_descriptor",
+          "negative_terms"
+        ],
+        "empty_fields": [
+          "production_state_variants"
+        ],
+        "non_empty": true
+      },
+      "fallback_preview": {
+        "production_identity_descriptor": "A small, winged animal (duck).",
+        "production_body_descriptor": "Small scale; winged morphology.; Small scale",
+        "production_costume_descriptor": "natural hide or minimal covering",
+        "production_silhouette": "Winged anatomy; Small scale; winged morphology."
+      },
+      "evidence_summary": [
+        "[source:C:/FilmCreator/projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH003/the_duck.md] Physical Description: A duck.",
+        "[CH003] CHAPTER III. (query appears in paragraph preview)",
+        "[CH002] CHAPTER II. (book index hit)",
+        "[CH010] CHAPTER X. (book index hit)"
+      ]
+    },
+    {
+      "character_id": "the_eaglet",
+      "display_name": "the_eaglet",
+      "entity_kind": "individual",
+      "first_seen_chapter": "CH003",
+      "chapter_mentions": [
+        "CH003"
+      ],
+      "synthesis_mode": "synthesized",
+      "pre_fallback_audit": {
+        "total_prompt_critical_fields": 10,
+        "missing_count": 5,
+        "present_count": 5,
+        "missing_fields": [
+          "age_presence",
+          "origin_or_historical_context",
+          "movement_language",
+          "costume_signature",
+          "state_variants"
+        ],
+        "present_fields": [
+          "identity_baseline",
+          "physical_build",
+          "stable_visual_summary",
+          "physical_traits",
+          "distinguishing_features"
+        ],
+        "needs_visual_production_fallback": true
+      },
+      "fallback_attempted": true,
+      "fallback_method": "llm_repair+deterministic",
+      "fallback_reason": "missing_prompt_critical_fields",
+      "fallback_result_audit": {
+        "status": "generated",
+        "fallback_bucket": "small_creature",
+        "filled_count": 7,
+        "empty_count": 1,
+        "filled_fields": [
+          "production_identity_descriptor",
+          "production_body_descriptor",
+          "production_face_descriptor",
+          "production_costume_descriptor",
+          "production_silhouette",
+          "production_movement_descriptor",
+          "negative_terms"
+        ],
+        "empty_fields": [
+          "production_state_variants"
+        ],
+        "non_empty": true
+      },
+      "fallback_preview": {
+        "production_identity_descriptor": "A small, winged bird.",
+        "production_body_descriptor": "Small scale; avian morphology.; Winged",
+        "production_costume_descriptor": "natural hide or minimal covering",
+        "production_silhouette": "Winged anatomy; Small scale; avian morphology."
+      },
+      "evidence_summary": [
+        "[source:C:/FilmCreator/projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH003/the_eaglet.md] Physical Description: A small bird (Eaglet).",
+        "[CH003] CHAPTER III. (query appears in paragraph preview)",
+        "[CH002] CHAPTER II. (book index hit)",
+        "[CH001] CHAPTER I. (book index hit)"
+      ]
+    },
+    {
+      "character_id": "the_lory",
+      "display_name": "the_lory",
+      "entity_kind": "individual",
+      "first_seen_chapter": "CH003",
+      "chapter_mentions": [
+        "CH003"
+      ],
+      "synthesis_mode": "synthesized",
+      "pre_fallback_audit": {
+        "total_prompt_critical_fields": 10,
+        "missing_count": 5,
+        "present_count": 5,
+        "missing_fields": [
+          "origin_or_historical_context",
+          "movement_language",
+          "costume_signature",
+          "distinguishing_features",
+          "state_variants"
+        ],
+        "present_fields": [
+          "identity_baseline",
+          "age_presence",
+          "physical_build",
+          "stable_visual_summary",
+          "physical_traits"
+        ],
+        "needs_visual_production_fallback": true
+      },
+      "fallback_attempted": true,
+      "fallback_method": "llm_repair+deterministic",
+      "fallback_reason": "missing_prompt_critical_fields",
+      "fallback_result_audit": {
+        "status": "generated",
+        "fallback_bucket": "small_creature",
+        "filled_count": 7,
+        "empty_count": 1,
+        "filled_fields": [
+          "production_identity_descriptor",
+          "production_body_descriptor",
+          "production_face_descriptor",
+          "production_costume_descriptor",
+          "production_silhouette",
+          "production_movement_descriptor",
+          "negative_terms"
+        ],
+        "empty_fields": [
+          "production_state_variants"
+        ],
+        "non_empty": true
+      },
+      "fallback_preview": {
+        "production_identity_descriptor": "A small, winged avian entity.",
+        "production_body_descriptor": "Small scale; winged morphology.; winged",
+        "production_costume_descriptor": "natural hide or minimal covering",
+        "production_silhouette": "Small scale; winged morphology."
+      },
+      "evidence_summary": [
+        "[source:C:/FilmCreator/projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH003/the_lory.md] Physical Description: An older bird.",
+        "[CH003] CHAPTER III. (query appears in paragraph preview)",
+        "[CH002] CHAPTER II. (book index hit)",
+        "[CH001] CHAPTER I. (book index hit)"
+      ]
+    },
+    {
+      "character_id": "various_birds",
+      "display_name": "various_birds",
+      "entity_kind": "group",
+      "first_seen_chapter": "CH003",
+      "chapter_mentions": [
+        "CH003"
+      ],
+      "synthesis_mode": "synthesized",
+      "pre_fallback_audit": {
+        "total_prompt_critical_fields": 10,
+        "missing_count": 4,
+        "present_count": 6,
+        "missing_fields": [
+          "age_presence",
+          "origin_or_historical_context",
+          "movement_language",
+          "costume_signature"
+        ],
+        "present_fields": [
+          "identity_baseline",
+          "physical_build",
+          "stable_visual_summary",
+          "physical_traits",
+          "distinguishing_features",
+          "state_variants"
+        ],
+        "needs_visual_production_fallback": true
+      },
+      "fallback_attempted": true,
+      "fallback_method": "llm_repair+deterministic",
+      "fallback_reason": "missing_prompt_critical_fields",
+      "fallback_result_audit": {
+        "status": "generated",
+        "fallback_bucket": "group_or_horde",
+        "filled_count": 8,
+        "empty_count": 0,
+        "filled_fields": [
+          "production_identity_descriptor",
+          "production_body_descriptor",
+          "production_face_descriptor",
+          "production_costume_descriptor",
+          "production_silhouette",
+          "production_movement_descriptor",
+          "production_state_variants",
+          "negative_terms"
+        ],
+        "empty_fields": [],
+        "non_empty": true
+      },
+      "fallback_preview": {
+        "production_identity_descriptor": "A diverse collection of small, winged avian creatures.",
+        "production_body_descriptor": "Small-scale, varied avian frames.; winged morphology; small scale",
+        "production_costume_descriptor": "repeatable group uniform or martial gear",
+        "production_silhouette": "Presence of Magpies (black/white patterns); Presence of Canaries (yellow coloration); Small-scale, varied avian frames."
+      },
+      "evidence_summary": [
+        "[source:C:/FilmCreator/projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH003/various_birds.md] Physical Description: A collection of small birds, including Magpies and Canaries.",
+        "[CH002] CHAPTER II. (book index hit)",
+        "[CH003] CHAPTER III. (book index hit)",
+        "[CH009] CHAPTER IX. (book index hit)"
+      ]
+    },
+    {
+      "character_id": "bill_the_lizard",
+      "display_name": "bill_the_lizard",
+      "entity_kind": "group",
+      "first_seen_chapter": "CH004",
+      "chapter_mentions": [
+        "CH004"
+      ],
+      "synthesis_mode": "synthesized",
+      "pre_fallback_audit": {
+        "total_prompt_critical_fields": 10,
+        "missing_count": 5,
+        "present_count": 5,
+        "missing_fields": [
+          "age_presence",
+          "origin_or_historical_context",
+          "movement_language",
+          "costume_signature",
+          "state_variants"
+        ],
+        "present_fields": [
+          "identity_baseline",
+          "physical_build",
+          "stable_visual_summary",
+          "physical_traits",
+          "distinguishing_features"
+        ],
+        "needs_visual_production_fallback": true
+      },
+      "fallback_attempted": true,
+      "fallback_method": "llm_repair+deterministic",
+      "fallback_reason": "missing_prompt_critical_fields",
+      "fallback_result_audit": {
+        "status": "generated",
+        "fallback_bucket": "group_or_horde",
+        "filled_count": 7,
+        "empty_count": 1,
+        "filled_fields": [
+          "production_identity_descriptor",
+          "production_body_descriptor",
+          "production_face_descriptor",
+          "production_costume_descriptor",
+          "production_silhouette",
+          "production_movement_descriptor",
+          "negative_terms"
+        ],
+        "empty_fields": [
+          "production_state_variants"
+        ],
+        "non_empty": true
+      },
+      "fallback_preview": {
+        "production_identity_descriptor": "A small lizard.",
+        "production_body_descriptor": "Small quadrupedal frame.; Quadrupedal; Small scale",
+        "production_costume_descriptor": "repeatable group uniform or martial gear",
+        "production_silhouette": "Lizard morphology; Small quadrupedal frame."
+      },
+      "evidence_summary": [
+        "[source:C:/FilmCreator/projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH004/bill_the_lizard.md] Physical Description: A lizard.",
+        "[CH012] CHAPTER XII. (book index hit)",
+        "[CH004] CHAPTER IV. (book index hit)",
+        "[CH009] CHAPTER IX. (book index hit)"
+      ]
+    },
+    {
+      "character_id": "blue_caterpillar",
+      "display_name": "blue_caterpillar",
+      "entity_kind": "individual",
+      "first_seen_chapter": "CH004",
+      "chapter_mentions": [
+        "CH004"
+      ],
+      "synthesis_mode": "synthesized",
+      "pre_fallback_audit": {
+        "total_prompt_critical_fields": 10,
+        "missing_count": 5,
+        "present_count": 5,
+        "missing_fields": [
+          "age_presence",
+          "origin_or_historical_context",
+          "movement_language",
+          "costume_signature",
+          "state_variants"
+        ],
+        "present_fields": [
+          "identity_baseline",
+          "physical_build",
+          "stable_visual_summary",
+          "physical_traits",
+          "distinguishing_features"
+        ],
+        "needs_visual_production_fallback": true
+      },
+      "fallback_attempted": true,
+      "fallback_method": "llm_repair+deterministic",
+      "fallback_reason": "missing_prompt_critical_fields",
+      "fallback_result_audit": {
+        "status": "generated",
+        "fallback_bucket": "small_creature",
+        "filled_count": 7,
+        "empty_count": 1,
+        "filled_fields": [
+          "production_identity_descriptor",
+          "production_body_descriptor",
+          "production_face_descriptor",
+          "production_costume_descriptor",
+          "production_silhouette",
+          "production_movement_descriptor",
+          "negative_terms"
+        ],
+        "empty_fields": [
+          "production_state_variants"
+        ],
+        "non_empty": true
+      },
+      "fallback_preview": {
+        "production_identity_descriptor": "A small, blue-colored caterpillar creature.",
+        "production_body_descriptor": "Small-scale caterpillar morphology.; Blue skin/surface",
+        "production_costume_descriptor": "natural hide or minimal covering",
+        "production_silhouette": "Blue coloration; Small-scale caterpillar morphology."
+      },
+      "evidence_summary": [
+        "[source:C:/FilmCreator/projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH004/blue_caterpillar.md] Physical Description: A blue-colored caterpillar.",
+        "[CH004] CHAPTER IV. (query appears in paragraph preview)",
+        "[CH005] CHAPTER V. (book index hit)"
+      ]
+    },
+    {
+      "character_id": "enormous_puppy",
+      "display_name": "enormous_puppy",
+      "entity_kind": "individual",
+      "first_seen_chapter": "CH004",
+      "chapter_mentions": [
+        "CH004"
+      ],
+      "synthesis_mode": "synthesized",
+      "pre_fallback_audit": {
+        "total_prompt_critical_fields": 10,
+        "missing_count": 3,
+        "present_count": 7,
+        "missing_fields": [
+          "origin_or_historical_context",
+          "movement_language",
+          "costume_signature"
+        ],
+        "present_fields": [
+          "identity_baseline",
+          "age_presence",
+          "physical_build",
+          "stable_visual_summary",
+          "physical_traits",
+          "distinguishing_features",
+          "state_variants"
+        ],
+        "needs_visual_production_fallback": true
+      },
+      "fallback_attempted": true,
+      "fallback_method": "llm_repair+deterministic",
+      "fallback_reason": "missing_prompt_critical_fields",
+      "fallback_result_audit": {
+        "status": "generated",
+        "fallback_bucket": "large_quadruped",
+        "filled_count": 8,
+        "empty_count": 0,
+        "filled_fields": [
+          "production_identity_descriptor",
+          "production_body_descriptor",
+          "production_face_descriptor",
+          "production_costume_descriptor",
+          "production_silhouette",
+          "production_movement_descriptor",
+          "production_state_variants",
+          "negative_terms"
+        ],
+        "empty_fields": [],
+        "non_empty": true
+      },
+      "fallback_preview": {
+        "production_identity_descriptor": "A large-scale quadruped puppy.",
+        "production_body_descriptor": "Disproportionately large frame for a canine of its type.; Large scale",
+        "production_costume_descriptor": "natural hide or riding harness",
+        "production_silhouette": "Disproportionate scale relative to standard puppy morphology; Disproportionately large frame for a canine of its type."
+      },
+      "evidence_summary": [
+        "[source:C:/FilmCreator/projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH004/enormous_puppy.md] Physical Description: A puppy of disproportionately large size.",
+        "[CH004] CHAPTER IV. (query appears in paragraph preview)"
+      ]
+    },
+    {
+      "character_id": "pat",
+      "display_name": "pat",
+      "entity_kind": "individual",
+      "first_seen_chapter": "CH004",
+      "chapter_mentions": [
+        "CH004"
+      ],
+      "synthesis_mode": "synthesized",
+      "pre_fallback_audit": {
+        "total_prompt_critical_fields": 10,
+        "missing_count": 4,
+        "present_count": 6,
+        "missing_fields": [
+          "age_presence",
+          "movement_language",
+          "costume_signature",
+          "distinguishing_features"
+        ],
+        "present_fields": [
+          "identity_baseline",
+          "physical_build",
+          "origin_or_historical_context",
+          "stable_visual_summary",
+          "physical_traits",
+          "state_variants"
+        ],
+        "needs_visual_production_fallback": true
+      },
+      "fallback_attempted": true,
+      "fallback_method": "llm_repair+deterministic",
+      "fallback_reason": "missing_prompt_critical_fields",
+      "fallback_result_audit": {
+        "status": "generated",
+        "fallback_bucket": "small_creature",
+        "filled_count": 8,
+        "empty_count": 0,
+        "filled_fields": [
+          "production_identity_descriptor",
+          "production_body_descriptor",
+          "production_face_descriptor",
+          "production_costume_descriptor",
+          "production_silhouette",
+          "production_movement_descriptor",
+          "production_state_variants",
+          "negative_terms"
+        ],
+        "empty_fields": [],
+        "non_empty": true
+      },
+      "fallback_preview": {
+        "production_identity_descriptor": "small animal worker",
+        "production_body_descriptor": "unknown (scale is small); scale: small",
+        "production_costume_descriptor": "natural hide or minimal covering",
+        "production_silhouette": "unknown (scale is small)"
+      },
+      "evidence_summary": [
+        "[source:C:/FilmCreator/projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH004/pat.md] Physical Description: Unknown. The text identifies Pat as a worker or animal outside the White Rabbit's house, but provides no physical details.",
+        "[CH001] CHAPTER I. (query appears in paragraph preview)",
+        "[CH002] CHAPTER II. (query appears in paragraph preview)",
+        "[CH003] CHAPTER III. (query appears in paragraph preview)",
+        "[CH004 p13-p15] And so she went on, taking first one side and then the other, and making quite a conversation of it altogether; but after a few minutes she heard a voice outside, and stopped to li..."
+      ]
+    },
+    {
+      "character_id": "the_crowd",
+      "display_name": "the_crowd",
+      "entity_kind": "group",
+      "first_seen_chapter": "CH004",
+      "chapter_mentions": [
+        "CH004"
+      ],
+      "synthesis_mode": "synthesized",
+      "pre_fallback_audit": {
+        "total_prompt_critical_fields": 10,
+        "missing_count": 4,
+        "present_count": 6,
+        "missing_fields": [
+          "age_presence",
+          "origin_or_historical_context",
+          "movement_language",
+          "costume_signature"
+        ],
+        "present_fields": [
+          "identity_baseline",
+          "physical_build",
+          "stable_visual_summary",
+          "physical_traits",
+          "distinguishing_features",
+          "state_variants"
+        ],
+        "needs_visual_production_fallback": true
+      },
+      "fallback_attempted": true,
+      "fallback_method": "llm_repair+deterministic",
+      "fallback_reason": "missing_prompt_critical_fields",
+      "fallback_result_audit": {
+        "status": "generated",
+        "fallback_bucket": "group_or_horde",
+        "filled_count": 8,
+        "empty_count": 0,
+        "filled_fields": [
+          "production_identity_descriptor",
+          "production_body_descriptor",
+          "production_face_descriptor",
+          "production_costume_descriptor",
+          "production_silhouette",
+          "production_movement_descriptor",
+          "production_state_variants",
+          "negative_terms"
+        ],
+        "empty_fields": [],
+        "non_empty": true
+      },
+      "fallback_preview": {
+        "production_identity_descriptor": "A heterogeneous collection of small animals and birds.",
+        "production_body_descriptor": "Small-scale, varied biological forms.; Small scale",
+        "production_costume_descriptor": "repeatable group uniform or martial gear",
+        "production_silhouette": "Heterogeneous composition (mixed species); Small-scale, varied biological forms."
+      },
+      "evidence_summary": [
+        "[source:C:/FilmCreator/projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH004/the_crowd.md] Physical Description: A collection of various small animals and birds.",
+        "[CH002] CHAPTER II. (book index hit)",
+        "[CH003] CHAPTER III. (book index hit)",
+        "[CH007] CHAPTER VII. (book index hit)"
+      ]
+    },
+    {
+      "character_id": "caterpillar",
+      "display_name": "caterpillar",
+      "entity_kind": "individual",
+      "first_seen_chapter": "CH005",
+      "chapter_mentions": [
+        "CH005"
+      ],
+      "synthesis_mode": "synthesized",
+      "pre_fallback_audit": {
+        "total_prompt_critical_fields": 10,
+        "missing_count": 1,
+        "present_count": 9,
+        "missing_fields": [
+          "age_presence"
+        ],
+        "present_fields": [
+          "identity_baseline",
+          "physical_build",
+          "origin_or_historical_context",
+          "movement_language",
+          "stable_visual_summary",
+          "physical_traits",
+          "costume_signature",
+          "distinguishing_features",
+          "state_variants"
+        ],
+        "needs_visual_production_fallback": true
+      },
+      "fallback_attempted": true,
+      "fallback_method": "llm_repair+deterministic",
+      "fallback_reason": "missing_prompt_critical_fields",
+      "fallback_result_audit": {
+        "status": "generated",
+        "fallback_bucket": "small_quadruped",
+        "filled_count": 8,
+        "empty_count": 0,
+        "filled_fields": [
+          "production_identity_descriptor",
+          "production_body_descriptor",
+          "production_face_descriptor",
+          "production_costume_descriptor",
+          "production_silhouette",
+          "production_movement_descriptor",
+          "production_state_variants",
+          "negative_terms"
+        ],
+        "empty_fields": [],
+        "non_empty": true
+      },
+      "fallback_preview": {
+        "production_identity_descriptor": "A small, languid insectoid creature.",
+        "production_body_descriptor": "Multi-legged morphology; approximately three inches in height.; Small scale",
+        "production_costume_descriptor": "Uses a hookah.",
+        "production_silhouette": "Multi-legged anatomy; Multi-legged morphology; approximately three inches in height."
+      },
+      "evidence_summary": [
+        "[source:C:/FilmCreator/projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH005/caterpillar.md] Physical Description: A languid insect, approximately three inches in height. He is capable of crawling through grass.",
+        "[CH004] CHAPTER IV. (query appears in paragraph preview)",
+        "[CH005] CHAPTER V. (query appears in paragraph preview)",
+        "[CH005 p1-p2] Advice from a Caterpillar The Caterpillar and Alice looked at each other for some time in silence: at last the Caterpillar took the hookah out of its mouth, and addressed her in a ...",
+        "[CH005 p1-p3] Advice from a Caterpillar The Caterpillar and Alice looked at each other for some time in silence: at last the Caterpillar took the hookah out of its mouth, and addressed her in a ..."
+      ]
+    },
+    {
+      "character_id": "pigeon",
+      "display_name": "pigeon",
+      "entity_kind": "individual",
+      "first_seen_chapter": "CH005",
+      "chapter_mentions": [
+        "CH005"
+      ],
+      "synthesis_mode": "synthesized",
+      "pre_fallback_audit": {
+        "total_prompt_critical_fields": 10,
+        "missing_count": 5,
+        "present_count": 5,
+        "missing_fields": [
+          "age_presence",
+          "origin_or_historical_context",
+          "movement_language",
+          "costume_signature",
+          "state_variants"
+        ],
+        "present_fields": [
+          "identity_baseline",
+          "physical_build",
+          "stable_visual_summary",
+          "physical_traits",
+          "distinguishing_features"
+        ],
+        "needs_visual_production_fallback": true
+      },
+      "fallback_attempted": true,
+      "fallback_method": "llm_repair+deterministic",
+      "fallback_reason": "missing_prompt_critical_fields",
+      "fallback_result_audit": {
+        "status": "generated",
+        "fallback_bucket": "large_creature",
+        "filled_count": 7,
+        "empty_count": 1,
+        "filled_fields": [
+          "production_identity_descriptor",
+          "production_body_descriptor",
+          "production_face_descriptor",
+          "production_costume_descriptor",
+          "production_silhouette",
+          "production_movement_descriptor",
+          "negative_terms"
+        ],
+        "empty_fields": [
+          "production_state_variants"
+        ],
+        "non_empty": true
+      },
+      "fallback_preview": {
+        "production_identity_descriptor": "A large, winged bird.",
+        "production_body_descriptor": "Large scale avian frame.; Large scale",
+        "production_costume_descriptor": "natural hide or thick skin",
+        "production_silhouette": "Winged morphology; Large scale avian frame."
+      },
+      "evidence_summary": [
+        "[source:C:/FilmCreator/projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH005/pigeon.md] Physical Description: A large bird.",
+        "[CH005] CHAPTER V. (query appears in paragraph preview)",
+        "[CH005 p59-p61] \u201cWhat _can_ all that green stuff be?\u201d said Alice. \u201cAnd where _have_ my shoulders got to? And oh, my poor hands, how is it I can\u2019t see you?\u201d She was moving them about as she spoke, ...",
+        "[CH005 p60-p62] As there seemed to be no chance of getting her hands up to her head, she tried to get her head down to them, and was delighted to find that her neck would bend about easily in any ..."
+      ]
+    },
+    {
+      "character_id": "the_dormouse",
+      "display_name": "the_dormouse",
+      "entity_kind": "individual",
+      "first_seen_chapter": "CH007",
+      "chapter_mentions": [
+        "CH007"
+      ],
+      "synthesis_mode": "synthesized",
+      "pre_fallback_audit": {
+        "total_prompt_critical_fields": 10,
+        "missing_count": 3,
+        "present_count": 7,
+        "missing_fields": [
+          "age_presence",
+          "origin_or_historical_context",
+          "costume_signature"
+        ],
+        "present_fields": [
+          "identity_baseline",
+          "physical_build",
+          "movement_language",
+          "stable_visual_summary",
+          "physical_traits",
+          "distinguishing_features",
+          "state_variants"
+        ],
+        "needs_visual_production_fallback": true
+      },
+      "fallback_attempted": true,
+      "fallback_method": "llm_repair+deterministic",
+      "fallback_reason": "missing_prompt_critical_fields",
+      "fallback_result_audit": {
+        "status": "generated",
+        "fallback_bucket": "small_quadruped",
+        "filled_count": 8,
+        "empty_count": 0,
+        "filled_fields": [
+          "production_identity_descriptor",
+          "production_body_descriptor",
+          "production_face_descriptor",
+          "production_costume_descriptor",
+          "production_silhouette",
+          "production_movement_descriptor",
+          "production_state_variants",
+          "negative_terms"
+        ],
+        "empty_fields": [],
+        "non_empty": true
+      },
+      "fallback_preview": {
+        "production_identity_descriptor": "A tiny, sleepy quadruped creature.",
+        "production_body_descriptor": "Small scale; quadrupedal morphology.; Tiny scale",
+        "production_costume_descriptor": "natural hide or minimal harness",
+        "production_silhouette": "Small, sleepy appearance; Small scale; quadrupedal morphology."
+      },
+      "evidence_summary": [
+        "[source:C:/FilmCreator/projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH007/the_dormouse.md] Physical Description: A small, sleepy creature.",
+        "[CH007] CHAPTER VII. (query appears in paragraph preview)",
+        "[CH011] CHAPTER XI. (query appears in paragraph preview)",
+        "[CH001] CHAPTER I. (book index hit)"
+      ]
+    },
+    {
+      "character_id": "the_hatter",
+      "display_name": "the_hatter",
+      "entity_kind": "group",
+      "first_seen_chapter": "CH007",
+      "chapter_mentions": [
+        "CH007"
+      ],
+      "synthesis_mode": "synthesized",
+      "pre_fallback_audit": {
+        "total_prompt_critical_fields": 10,
+        "missing_count": 3,
+        "present_count": 7,
+        "missing_fields": [
+          "age_presence",
+          "origin_or_historical_context",
+          "costume_signature"
+        ],
+        "present_fields": [
+          "identity_baseline",
+          "physical_build",
+          "movement_language",
+          "stable_visual_summary",
+          "physical_traits",
+          "distinguishing_features",
+          "state_variants"
+        ],
+        "needs_visual_production_fallback": true
+      },
+      "fallback_attempted": true,
+      "fallback_method": "llm_repair+deterministic",
+      "fallback_reason": "missing_prompt_critical_fields",
+      "fallback_result_audit": {
+        "status": "generated",
+        "fallback_bucket": "group_or_horde",
+        "filled_count": 8,
+        "empty_count": 0,
+        "filled_fields": [
+          "production_identity_descriptor",
+          "production_body_descriptor",
+          "production_face_descriptor",
+          "production_costume_descriptor",
+          "production_silhouette",
+          "production_movement_descriptor",
+          "production_state_variants",
+          "negative_terms"
+        ],
+        "empty_fields": [],
+        "non_empty": true
+      },
+      "fallback_preview": {
+        "production_identity_descriptor": "An eccentric figure.",
+        "production_body_descriptor": "human_scale biped; bipedal; human_scale",
+        "production_costume_descriptor": "repeatable group uniform or martial gear",
+        "production_silhouette": "Possesses a watch that shows the day of the month but not the time.; human_scale biped"
+      },
+      "evidence_summary": [
+        "[source:C:/FilmCreator/projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH007/the_hatter.md] Physical Description: An eccentric figure. He possesses a watch that shows the day of the month but not the time. He is capable of inter...",
+        "[CH007] CHAPTER VII. (query appears in paragraph preview)",
+        "[CH011] CHAPTER XI. (query appears in paragraph preview)",
+        "[CH006] CHAPTER VI. (book index hit)"
+      ]
+    },
+    {
+      "character_id": "the_march_hare",
+      "display_name": "the_march_hare",
+      "entity_kind": "individual",
+      "first_seen_chapter": "CH007",
+      "chapter_mentions": [
+        "CH007"
+      ],
+      "synthesis_mode": "synthesized",
+      "pre_fallback_audit": {
+        "total_prompt_critical_fields": 10,
+        "missing_count": 4,
+        "present_count": 6,
+        "missing_fields": [
+          "age_presence",
+          "origin_or_historical_context",
+          "costume_signature",
+          "distinguishing_features"
+        ],
+        "present_fields": [
+          "identity_baseline",
+          "physical_build",
+          "movement_language",
+          "stable_visual_summary",
+          "physical_traits",
+          "state_variants"
+        ],
+        "needs_visual_production_fallback": true
+      },
+      "fallback_attempted": true,
+      "fallback_method": "llm_repair+deterministic",
+      "fallback_reason": "missing_prompt_critical_fields",
+      "fallback_result_audit": {
+        "status": "generated",
+        "fallback_bucket": "small_quadruped",
+        "filled_count": 8,
+        "empty_count": 0,
+        "filled_fields": [
+          "production_identity_descriptor",
+          "production_body_descriptor",
+          "production_face_descriptor",
+          "production_costume_descriptor",
+          "production_silhouette",
+          "production_movement_descriptor",
+          "production_state_variants",
+          "negative_terms"
+        ],
+        "empty_fields": [],
+        "non_empty": true
+      },
+      "fallback_preview": {
+        "production_identity_descriptor": "An erratic, small-scale quadrupedal hare.",
+        "production_body_descriptor": "Small-scale quadrupedal frame.; erratic temperament",
+        "production_costume_descriptor": "natural hide or minimal harness",
+        "production_silhouette": "Small-scale quadrupedal frame."
+      },
+      "evidence_summary": [
+        "[source:C:/FilmCreator/projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH007/the_march_hare.md] Physical Description: An erratic animal (hare) participating in a tea party.",
+        "[CH006] CHAPTER VI. (query appears in paragraph preview)",
+        "[CH007] CHAPTER VII. (query appears in paragraph preview)",
+        "[CH011] CHAPTER XI. (query appears in paragraph preview)"
+      ]
+    },
+    {
+      "character_id": "cheshire_cat",
+      "display_name": "cheshire_cat",
+      "entity_kind": "individual",
+      "first_seen_chapter": "CH008",
+      "chapter_mentions": [
+        "CH008"
+      ],
+      "synthesis_mode": "synthesized",
+      "pre_fallback_audit": {
+        "total_prompt_critical_fields": 10,
+        "missing_count": 3,
+        "present_count": 7,
+        "missing_fields": [
+          "age_presence",
+          "origin_or_historical_context",
+          "costume_signature"
+        ],
+        "present_fields": [
+          "identity_baseline",
+          "physical_build",
+          "movement_language",
+          "stable_visual_summary",
+          "physical_traits",
+          "distinguishing_features",
+          "state_variants"
+        ],
+        "needs_visual_production_fallback": true
+      },
+      "fallback_attempted": true,
+      "fallback_method": "llm_repair+deterministic",
+      "fallback_reason": "missing_prompt_critical_fields",
+      "fallback_result_audit": {
+        "status": "generated",
+        "fallback_bucket": "small_quadruped",
+        "filled_count": 8,
+        "empty_count": 0,
+        "filled_fields": [
+          "production_identity_descriptor",
+          "production_body_descriptor",
+          "production_face_descriptor",
+          "production_costume_descriptor",
+          "production_silhouette",
+          "production_movement_descriptor",
+          "production_state_variants",
+          "negative_terms"
+        ],
+        "empty_fields": [],
+        "non_empty": true
+      },
+      "fallback_preview": {
+        "production_identity_descriptor": "A small, sentient quadrupedal cat capable of partial and total vanishing.",
+        "production_body_descriptor": "Small-scale quadruped; frame details unknown.; Small scale",
+        "production_costume_descriptor": "natural hide or minimal harness",
+        "production_silhouette": "Sequential appearance/disappearance capability; Floating grin (primary manifestation); Small-scale quadruped; frame details unknown."
+      },
+      "evidence_summary": [
+        "[source:C:/FilmCreator/projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH008/cheshire_cat.md] Physical Description: Appears via a floating grin, followed by eyes, ears, and then a full head. Can fade away entirely.",
+        "[CH006] CHAPTER VI. (query appears in paragraph preview)",
+        "[CH008] CHAPTER VIII. (query appears in paragraph preview)",
+        "[CH001] CHAPTER I. (book index hit)"
+      ]
+    },
+    {
+      "character_id": "courtier_diamond",
+      "display_name": "courtier_diamond",
+      "entity_kind": "individual",
+      "first_seen_chapter": "CH008",
+      "chapter_mentions": [
+        "CH008"
+      ],
+      "synthesis_mode": "synthesized",
+      "pre_fallback_audit": {
+        "total_prompt_critical_fields": 10,
+        "missing_count": 3,
+        "present_count": 7,
+        "missing_fields": [
+          "age_presence",
+          "movement_language",
+          "state_variants"
+        ],
+        "present_fields": [
+          "identity_baseline",
+          "physical_build",
+          "origin_or_historical_context",
+          "stable_visual_summary",
+          "physical_traits",
+          "costume_signature",
+          "distinguishing_features"
+        ],
+        "needs_visual_production_fallback": true
+      },
+      "fallback_attempted": true,
+      "fallback_method": "llm_repair+deterministic",
+      "fallback_reason": "missing_prompt_critical_fields",
+      "fallback_result_audit": {
+        "status": "generated",
+        "fallback_bucket": "non_human_humanoid",
+        "filled_count": 7,
+        "empty_count": 1,
+        "filled_fields": [
+          "production_identity_descriptor",
+          "production_body_descriptor",
+          "production_face_descriptor",
+          "production_costume_descriptor",
+          "production_silhouette",
+          "production_movement_descriptor",
+          "negative_terms"
+        ],
+        "empty_fields": [
+          "production_state_variants"
+        ],
+        "non_empty": true
+      },
+      "fallback_preview": {
+        "production_identity_descriptor": "Card-based humanoid entity.",
+        "production_body_descriptor": "Bipedal, human-scale frame consistent with a playing card morphology.; Card-based morphology",
+        "production_costume_descriptor": "Unknown (Identity is defined by card-based physical structure).",
+        "production_silhouette": "Card-based anatomy/composition; Bipedal, human-scale frame consistent with a playing card morphology."
+      },
+      "evidence_summary": [
+        "[source:C:/FilmCreator/projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH008/courtier_diamond.md] Physical Description: Likely card-based entities consistent with the court theme.",
+        "[CH008] CHAPTER VIII. (book index hit)"
+      ]
+    },
+    {
+      "character_id": "executioner",
+      "display_name": "executioner",
+      "entity_kind": "individual",
+      "first_seen_chapter": "CH008",
+      "chapter_mentions": [
+        "CH008"
+      ],
+      "synthesis_mode": "synthesized",
+      "pre_fallback_audit": {
+        "total_prompt_critical_fields": 10,
+        "missing_count": 6,
+        "present_count": 4,
+        "missing_fields": [
+          "identity_baseline",
+          "age_presence",
+          "origin_or_historical_context",
+          "movement_language",
+          "costume_signature",
+          "state_variants"
+        ],
+        "present_fields": [
+          "physical_build",
+          "stable_visual_summary",
+          "physical_traits",
+          "distinguishing_features"
+        ],
+        "needs_visual_production_fallback": true
+      },
+      "fallback_attempted": true,
+      "fallback_method": "llm_repair+deterministic",
+      "fallback_reason": "missing_prompt_critical_fields",
+      "fallback_result_audit": {
+        "status": "generated",
+        "fallback_bucket": "human",
+        "filled_count": 7,
+        "empty_count": 1,
+        "filled_fields": [
+          "production_identity_descriptor",
+          "production_body_descriptor",
+          "production_face_descriptor",
+          "production_costume_descriptor",
+          "production_silhouette",
+          "production_movement_descriptor",
+          "negative_terms"
+        ],
+        "empty_fields": [
+          "production_state_variants"
+        ],
+        "non_empty": true
+      },
+      "fallback_preview": {
+        "production_identity_descriptor": "human with period-appropriate appearance",
+        "production_body_descriptor": "human_scale biped; bipedal morphology",
+        "production_costume_descriptor": "period-appropriate clothing",
+        "production_silhouette": "none documented; human_scale biped"
+      },
+      "evidence_summary": [
+        "[source:C:/FilmCreator/projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH008/executioner.md] Physical Description: No specific physical description provided.",
+        "[CH008] CHAPTER VIII. (query appears in paragraph preview)",
+        "[CH008 p60-p62] The Queen had only one way of settling all difficulties, great or small. \u201cOff with his head!\u201d she said, without even looking round. \u201cI\u2019ll fetch the executioner myself,\u201d said the Ki...",
+        "[CH008 p64-p66] By the time she had caught the flamingo and brought it back, the fight was over, and both the hedgehogs were out of sight: \u201cbut it doesn\u2019t matter much,\u201d thought Alice, \u201cas all the ..."
+      ]
+    },
+    {
+      "character_id": "flamingo_mallet",
+      "display_name": "flamingo_mallet",
+      "entity_kind": "individual",
+      "first_seen_chapter": "CH008",
+      "chapter_mentions": [
+        "CH008"
+      ],
+      "synthesis_mode": "synthesized",
+      "pre_fallback_audit": {
+        "total_prompt_critical_fields": 10,
+        "missing_count": 5,
+        "present_count": 5,
+        "missing_fields": [
+          "age_presence",
+          "origin_or_historical_context",
+          "movement_language",
+          "costume_signature",
+          "distinguishing_features"
+        ],
+        "present_fields": [
+          "identity_baseline",
+          "physical_build",
+          "stable_visual_summary",
+          "physical_traits",
+          "state_variants"
+        ],
+        "needs_visual_production_fallback": true
+      },
+      "fallback_attempted": true,
+      "fallback_method": "llm_repair+deterministic",
+      "fallback_reason": "missing_prompt_critical_fields",
+      "fallback_result_audit": {
+        "status": "generated",
+        "fallback_bucket": "small_creature",
+        "filled_count": 8,
+        "empty_count": 0,
+        "filled_fields": [
+          "production_identity_descriptor",
+          "production_body_descriptor",
+          "production_face_descriptor",
+          "production_costume_descriptor",
+          "production_silhouette",
+          "production_movement_descriptor",
+          "production_state_variants",
+          "negative_terms"
+        ],
+        "empty_fields": [],
+        "non_empty": true
+      },
+      "fallback_preview": {
+        "production_identity_descriptor": "A live flamingo.",
+        "production_body_descriptor": "small, bipedal avian frame; avian morphology",
+        "production_costume_descriptor": "natural hide or minimal covering",
+        "production_silhouette": "small, bipedal avian frame"
+      },
+      "evidence_summary": [
+        "[source:C:/FilmCreator/projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH008/flamingo_mallet.md] Physical Description: A live flamingo.",
+        "[CH008] CHAPTER VIII. (book index hit)",
+        "[CH009] CHAPTER IX. (book index hit)"
+      ]
+    },
+    {
+      "character_id": "gardener_five",
+      "display_name": "gardener_five",
+      "entity_kind": "individual",
+      "first_seen_chapter": "CH008",
+      "chapter_mentions": [
+        "CH008"
+      ],
+      "synthesis_mode": "synthesized",
+      "pre_fallback_audit": {
+        "total_prompt_critical_fields": 10,
+        "missing_count": 4,
+        "present_count": 6,
+        "missing_fields": [
+          "age_presence",
+          "origin_or_historical_context",
+          "movement_language",
+          "state_variants"
+        ],
+        "present_fields": [
+          "identity_baseline",
+          "physical_build",
+          "stable_visual_summary",
+          "physical_traits",
+          "costume_signature",
+          "distinguishing_features"
+        ],
+        "needs_visual_production_fallback": true
+      },
+      "fallback_attempted": true,
+      "fallback_method": "llm_repair+deterministic",
+      "fallback_reason": "missing_prompt_critical_fields",
+      "fallback_result_audit": {
+        "status": "generated",
+        "fallback_bucket": "non_human_humanoid",
+        "filled_count": 7,
+        "empty_count": 1,
+        "filled_fields": [
+          "production_identity_descriptor",
+          "production_body_descriptor",
+          "production_face_descriptor",
+          "production_costume_descriptor",
+          "production_silhouette",
+          "production_movement_descriptor",
+          "negative_terms"
+        ],
+        "empty_fields": [
+          "production_state_variants"
+        ],
+        "non_empty": true
+      },
+      "fallback_preview": {
+        "production_identity_descriptor": "A card-based humanoid entity.",
+        "production_body_descriptor": "Bipedal, human-scale frame composed of card material.; Card-based entity",
+        "production_costume_descriptor": "Card-based anatomy/form.",
+        "production_silhouette": "Card-based morphology; Bipedal, human-scale frame composed of card material."
+      },
+      "evidence_summary": [
+        "[source:C:/FilmCreator/projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH008/gardener_five.md] Physical Description: A card-based entity.",
+        "[CH008] CHAPTER VIII. (book index hit)"
+      ]
+    },
+    {
+      "character_id": "gardener_seven",
+      "display_name": "gardener_seven",
+      "entity_kind": "individual",
+      "first_seen_chapter": "CH008",
+      "chapter_mentions": [
+        "CH008"
+      ],
+      "synthesis_mode": "synthesized",
+      "pre_fallback_audit": {
+        "total_prompt_critical_fields": 10,
+        "missing_count": 4,
+        "present_count": 6,
+        "missing_fields": [
+          "age_presence",
+          "origin_or_historical_context",
+          "movement_language",
+          "state_variants"
+        ],
+        "present_fields": [
+          "identity_baseline",
+          "physical_build",
+          "stable_visual_summary",
+          "physical_traits",
+          "costume_signature",
+          "distinguishing_features"
+        ],
+        "needs_visual_production_fallback": true
+      },
+      "fallback_attempted": true,
+      "fallback_method": "llm_repair+deterministic",
+      "fallback_reason": "missing_prompt_critical_fields",
+      "fallback_result_audit": {
+        "status": "generated",
+        "fallback_bucket": "non_human_humanoid",
+        "filled_count": 7,
+        "empty_count": 1,
+        "filled_fields": [
+          "production_identity_descriptor",
+          "production_body_descriptor",
+          "production_face_descriptor",
+          "production_costume_descriptor",
+          "production_silhouette",
+          "production_movement_descriptor",
+          "negative_terms"
+        ],
+        "empty_fields": [
+          "production_state_variants"
+        ],
+        "non_empty": true
+      },
+      "fallback_preview": {
+        "production_identity_descriptor": "A card-based humanoid entity.",
+        "production_body_descriptor": "Bipedal, human-scale morphology.; primary_type: humanoid_nonhuman",
+        "production_costume_descriptor": "Card-based anatomy/form.",
+        "production_silhouette": "Card-based physical composition; Bipedal, human-scale morphology."
+      },
+      "evidence_summary": [
+        "[source:C:/FilmCreator/projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH008/gardener_seven.md] Physical Description: A card-based entity.",
+        "[CH008] CHAPTER VIII. (book index hit)"
+      ]
+    },
+    {
+      "character_id": "gardener_two",
+      "display_name": "gardener_two",
+      "entity_kind": "individual",
+      "first_seen_chapter": "CH008",
+      "chapter_mentions": [
+        "CH008"
+      ],
+      "synthesis_mode": "synthesized",
+      "pre_fallback_audit": {
+        "total_prompt_critical_fields": 10,
+        "missing_count": 2,
+        "present_count": 8,
+        "missing_fields": [
+          "age_presence",
+          "movement_language"
+        ],
+        "present_fields": [
+          "identity_baseline",
+          "physical_build",
+          "origin_or_historical_context",
+          "stable_visual_summary",
+          "physical_traits",
+          "costume_signature",
+          "distinguishing_features",
+          "state_variants"
+        ],
+        "needs_visual_production_fallback": true
+      },
+      "fallback_attempted": true,
+      "fallback_method": "llm_repair+deterministic",
+      "fallback_reason": "missing_prompt_critical_fields",
+      "fallback_result_audit": {
+        "status": "generated",
+        "fallback_bucket": "non_human_humanoid",
+        "filled_count": 8,
+        "empty_count": 0,
+        "filled_fields": [
+          "production_identity_descriptor",
+          "production_body_descriptor",
+          "production_face_descriptor",
+          "production_costume_descriptor",
+          "production_silhouette",
+          "production_movement_descriptor",
+          "production_state_variants",
+          "negative_terms"
+        ],
+        "empty_fields": [],
+        "non_empty": true
+      },
+      "fallback_preview": {
+        "production_identity_descriptor": "A card-based humanoid entity.",
+        "production_body_descriptor": "Bipedal, human-scale frame with the proportions of a playing card.; humanoid morphology",
+        "production_costume_descriptor": "The character's body is composed of card material.",
+        "production_silhouette": "Card-based anatomy; Bipedal, human-scale frame with the proportions of a playing card."
+      },
+      "evidence_summary": [
+        "[source:C:/FilmCreator/projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH008/gardener_two.md] Physical Description: A card-based entity.",
+        "[CH008] CHAPTER VIII. (book index hit)",
+        "[CH004] CHAPTER IV. (book index hit)",
+        "[CH005] CHAPTER V. (book index hit)"
+      ]
+    },
+    {
+      "character_id": "hedgehog_ball",
+      "display_name": "hedgehog_ball",
+      "entity_kind": "individual",
+      "first_seen_chapter": "CH008",
+      "chapter_mentions": [
+        "CH008"
+      ],
+      "synthesis_mode": "synthesized",
+      "pre_fallback_audit": {
+        "total_prompt_critical_fields": 10,
+        "missing_count": 4,
+        "present_count": 6,
+        "missing_fields": [
+          "age_presence",
+          "origin_or_historical_context",
+          "movement_language",
+          "costume_signature"
+        ],
+        "present_fields": [
+          "identity_baseline",
+          "physical_build",
+          "stable_visual_summary",
+          "physical_traits",
+          "distinguishing_features",
+          "state_variants"
+        ],
+        "needs_visual_production_fallback": true
+      },
+      "fallback_attempted": true,
+      "fallback_method": "llm_repair+deterministic",
+      "fallback_reason": "missing_prompt_critical_fields",
+      "fallback_result_audit": {
+        "status": "generated",
+        "fallback_bucket": "small_quadruped",
+        "filled_count": 8,
+        "empty_count": 0,
+        "filled_fields": [
+          "production_identity_descriptor",
+          "production_body_descriptor",
+          "production_face_descriptor",
+          "production_costume_descriptor",
+          "production_silhouette",
+          "production_movement_descriptor",
+          "production_state_variants",
+          "negative_terms"
+        ],
+        "empty_fields": [],
+        "non_empty": true
+      },
+      "fallback_preview": {
+        "production_identity_descriptor": "A live hedgehog.",
+        "production_body_descriptor": "Tiny quadruped with a spiny exterior.; Tiny scale",
+        "production_costume_descriptor": "natural hide or minimal harness",
+        "production_silhouette": "Spines/quills characteristic of a hedgehog; Tiny quadruped with a spiny exterior."
+      },
+      "evidence_summary": [
+        "[source:C:/FilmCreator/projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH008/hedgehog_ball.md] Physical Description: A live hedgehog.",
+        "[CH008] CHAPTER VIII. (book index hit)"
+      ]
+    },
+    {
+      "character_id": "king_of_hearts",
+      "display_name": "king_of_hearts",
+      "entity_kind": "individual",
+      "first_seen_chapter": "CH008",
+      "chapter_mentions": [
+        "CH008"
+      ],
+      "synthesis_mode": "synthesized",
+      "pre_fallback_audit": {
+        "total_prompt_critical_fields": 10,
+        "missing_count": 6,
+        "present_count": 4,
+        "missing_fields": [
+          "identity_baseline",
+          "age_presence",
+          "origin_or_historical_context",
+          "movement_language",
+          "costume_signature",
+          "state_variants"
+        ],
+        "present_fields": [
+          "physical_build",
+          "stable_visual_summary",
+          "physical_traits",
+          "distinguishing_features"
+        ],
+        "needs_visual_production_fallback": true
+      },
+      "fallback_attempted": true,
+      "fallback_method": "llm_repair+deterministic",
+      "fallback_reason": "missing_prompt_critical_fields",
+      "fallback_result_audit": {
+        "status": "generated",
+        "fallback_bucket": "non_human_humanoid",
+        "filled_count": 7,
+        "empty_count": 1,
+        "filled_fields": [
+          "production_identity_descriptor",
+          "production_body_descriptor",
+          "production_face_descriptor",
+          "production_costume_descriptor",
+          "production_silhouette",
+          "production_movement_descriptor",
+          "negative_terms"
+        ],
+        "empty_fields": [
+          "production_state_variants"
+        ],
+        "non_empty": true
+      },
+      "fallback_preview": {
+        "production_identity_descriptor": "humanoid with non-human anatomy",
+        "production_body_descriptor": "bipedal, human-scale humanoid; morphology: biped; scale: human_scale",
+        "production_costume_descriptor": "minimal harness or species-appropriate gear",
+        "production_silhouette": "none documented; bipedal, human-scale humanoid"
+      },
+      "evidence_summary": [
+        "[source:C:/FilmCreator/projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH008/king_of_hearts.md] Physical Description: No specific physical description provided.",
+        "[CH008] CHAPTER VIII. (book index hit)",
+        "[CH011] CHAPTER XI. (book index hit)",
+        "[CH001] CHAPTER I. (book index hit)"
+      ]
+    },
+    {
+      "character_id": "knave_of_hearts",
+      "display_name": "knave_of_hearts",
+      "entity_kind": "individual",
+      "first_seen_chapter": "CH008",
+      "chapter_mentions": [
+        "CH008"
+      ],
+      "synthesis_mode": "synthesized",
+      "pre_fallback_audit": {
+        "total_prompt_critical_fields": 10,
+        "missing_count": 5,
+        "present_count": 5,
+        "missing_fields": [
+          "age_presence",
+          "origin_or_historical_context",
+          "movement_language",
+          "costume_signature",
+          "state_variants"
+        ],
+        "present_fields": [
+          "identity_baseline",
+          "physical_build",
+          "stable_visual_summary",
+          "physical_traits",
+          "distinguishing_features"
+        ],
+        "needs_visual_production_fallback": true
+      },
+      "fallback_attempted": true,
+      "fallback_method": "llm_repair+deterministic",
+      "fallback_reason": "missing_prompt_critical_fields",
+      "fallback_result_audit": {
+        "status": "generated",
+        "fallback_bucket": "non_human_humanoid",
+        "filled_count": 7,
+        "empty_count": 1,
+        "filled_fields": [
+          "production_identity_descriptor",
+          "production_body_descriptor",
+          "production_face_descriptor",
+          "production_costume_descriptor",
+          "production_silhouette",
+          "production_movement_descriptor",
+          "negative_terms"
+        ],
+        "empty_fields": [
+          "production_state_variants"
+        ],
+        "non_empty": true
+      },
+      "fallback_preview": {
+        "production_identity_descriptor": "humanoid bipedal entity",
+        "production_body_descriptor": "humanoid biped, human scale; morphology: biped; scale: human_scale",
+        "production_costume_descriptor": "minimal harness or species-appropriate gear",
+        "production_silhouette": "none documented; humanoid biped, human scale"
+      },
+      "evidence_summary": [
+        "[source:C:/FilmCreator/projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH008/knave_of_hearts.md] Physical Description: No specific physical description provided.",
+        "[CH008] CHAPTER VIII. (query appears in paragraph preview)",
+        "[CH011] CHAPTER XI. (query appears in paragraph preview)",
+        "[CH012] CHAPTER XII. (book index hit)"
+      ]
+    },
+    {
+      "character_id": "queen_of_hearts",
+      "display_name": "queen_of_hearts",
+      "entity_kind": "individual",
+      "first_seen_chapter": "CH008",
+      "chapter_mentions": [
+        "CH008"
+      ],
+      "synthesis_mode": "synthesized",
+      "pre_fallback_audit": {
+        "total_prompt_critical_fields": 10,
+        "missing_count": 5,
+        "present_count": 5,
+        "missing_fields": [
+          "age_presence",
+          "origin_or_historical_context",
+          "movement_language",
+          "costume_signature",
+          "state_variants"
+        ],
+        "present_fields": [
+          "identity_baseline",
+          "physical_build",
+          "stable_visual_summary",
+          "physical_traits",
+          "distinguishing_features"
+        ],
+        "needs_visual_production_fallback": true
+      },
+      "fallback_attempted": true,
+      "fallback_method": "llm_repair+deterministic",
+      "fallback_reason": "missing_prompt_critical_fields",
+      "fallback_result_audit": {
+        "status": "generated",
+        "fallback_bucket": "non_human_humanoid",
+        "filled_count": 7,
+        "empty_count": 1,
+        "filled_fields": [
+          "production_identity_descriptor",
+          "production_body_descriptor",
+          "production_face_descriptor",
+          "production_costume_descriptor",
+          "production_silhouette",
+          "production_movement_descriptor",
+          "negative_terms"
+        ],
+        "empty_fields": [
+          "production_state_variants"
+        ],
+        "non_empty": true
+      },
+      "fallback_preview": {
+        "production_identity_descriptor": "humanoid_nonhuman biped",
+        "production_body_descriptor": "human_scale; morphology: biped",
+        "production_costume_descriptor": "minimal harness or species-appropriate gear",
+        "production_silhouette": "none documented; human_scale"
+      },
+      "evidence_summary": [
+        "[source:C:/FilmCreator/projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH008/queen_of_hearts.md] Physical Description: No specific physical description provided in text.",
+        "[CH011] CHAPTER XI. (query appears in paragraph preview)",
+        "[CH008] CHAPTER VIII. (book index hit)",
+        "[CH006] CHAPTER VI. (book index hit)"
+      ]
+    },
+    {
+      "character_id": "royal_child_heart",
+      "display_name": "royal_child_heart",
+      "entity_kind": "group",
+      "first_seen_chapter": "CH008",
+      "chapter_mentions": [
+        "CH008"
+      ],
+      "synthesis_mode": "synthesized",
+      "pre_fallback_audit": {
+        "total_prompt_critical_fields": 10,
+        "missing_count": 5,
+        "present_count": 5,
+        "missing_fields": [
+          "age_presence",
+          "origin_or_historical_context",
+          "movement_language",
+          "costume_signature",
+          "state_variants"
+        ],
+        "present_fields": [
+          "identity_baseline",
+          "physical_build",
+          "stable_visual_summary",
+          "physical_traits",
+          "distinguishing_features"
+        ],
+        "needs_visual_production_fallback": true
+      },
+      "fallback_attempted": true,
+      "fallback_method": "llm_repair+deterministic",
+      "fallback_reason": "missing_prompt_critical_fields",
+      "fallback_result_audit": {
+        "status": "generated",
+        "fallback_bucket": "group_or_horde",
+        "filled_count": 7,
+        "empty_count": 1,
+        "filled_fields": [
+          "production_identity_descriptor",
+          "production_body_descriptor",
+          "production_face_descriptor",
+          "production_costume_descriptor",
+          "production_silhouette",
+          "production_movement_descriptor",
+          "negative_terms"
+        ],
+        "empty_fields": [
+          "production_state_variants"
+        ],
+        "non_empty": true
+      },
+      "fallback_preview": {
+        "production_identity_descriptor": "A collective of small humanoid entities.",
+        "production_body_descriptor": "Small, bipedal frames.; Small scale",
+        "production_costume_descriptor": "repeatable group uniform or martial gear",
+        "production_silhouette": "Bipedal morphology; Small, bipedal frames."
+      },
+      "evidence_summary": [
+        "[source:C:/FilmCreator/projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH008/royal_child_heart.md] Physical Description: Small humanoid entities.",
+        "[CH008] CHAPTER VIII. (book index hit)",
+        "[CH002] CHAPTER II. (book index hit)",
+        "[CH005] CHAPTER V. (book index hit)"
+      ]
+    },
+    {
+      "character_id": "soldier_club",
+      "display_name": "soldier_club",
+      "entity_kind": "individual",
+      "first_seen_chapter": "CH008",
+      "chapter_mentions": [
+        "CH008"
+      ],
+      "synthesis_mode": "synthesized",
+      "pre_fallback_audit": {
+        "total_prompt_critical_fields": 10,
+        "missing_count": 5,
+        "present_count": 5,
+        "missing_fields": [
+          "age_presence",
+          "origin_or_historical_context",
+          "movement_language",
+          "costume_signature",
+          "state_variants"
+        ],
+        "present_fields": [
+          "identity_baseline",
+          "physical_build",
+          "stable_visual_summary",
+          "physical_traits",
+          "distinguishing_features"
+        ],
+        "needs_visual_production_fallback": true
+      },
+      "fallback_attempted": true,
+      "fallback_method": "llm_repair+deterministic",
+      "fallback_reason": "missing_prompt_critical_fields",
+      "fallback_result_audit": {
+        "status": "generated",
+        "fallback_bucket": "non_human_humanoid",
+        "filled_count": 7,
+        "empty_count": 1,
+        "filled_fields": [
+          "production_identity_descriptor",
+          "production_body_descriptor",
+          "production_face_descriptor",
+          "production_costume_descriptor",
+          "production_silhouette",
+          "production_movement_descriptor",
+          "negative_terms"
+        ],
+        "empty_fields": [
+          "production_state_variants"
+        ],
+        "non_empty": true
+      },
+      "fallback_preview": {
+        "production_identity_descriptor": "Oblong, flat, card-shaped humanoid entities.",
+        "production_body_descriptor": "Flat, oblong, and card-like with human-scale proportions.; Bipedal morphology; Flat geometry",
+        "production_costume_descriptor": "minimal harness or species-appropriate gear",
+        "production_silhouette": "Hands located at the corners of the body; Feet located at the corners of the body; Flat, oblong, and card-like with human-scale proportions."
+      },
+      "evidence_summary": [
+        "[source:C:/FilmCreator/projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH008/soldier_club.md] Physical Description: Oblong, flat card-shaped entities with hands and feet located at the corners.",
+        "[CH008] CHAPTER VIII. (book index hit)"
+      ]
+    }
+  ]
+}
