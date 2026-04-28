@@ -4,10 +4,16 @@
 alice
 
 # Why This Needs Clarification
-The character is not fully identified from this chapter alone.
+Potential existing identity matches detected:
+- present_characters (score 10; chapters: CH003; aliases: -) Example context: CH003 2-4: They were indeed a queer-looking party that assembled on the bank—the birds with draggled feathers, the animals with their fur clinging close to them, and all dripping wet, cross, ...
+- referenced_characters (score 10; chapters: CH003; aliases: -) Example context: CH003 2-4: They were indeed a queer-looking party that assembled on the bank—the birds with draggled feathers, the animals with their fur clinging close to them, and all dripping wet, cross, ...
 
 # Question
-This character is named but lacks a stable visual description. Can you find a description from another source chapter, or should FilmCreator generate a reusable film-wide description?
+This character may match one of the existing canonical identities above. Can you inspect the candidate chapter descriptions and confirm whether FilmCreator should merge into one of them, or keep this as a new canonical character?
+
+# Candidate Matches
+- present_characters (score 10; chapters: CH003; aliases: -) Example context: CH003 2-4: They were indeed a queer-looking party that assembled on the bank—the birds with draggled feathers, the animals with their fur clinging close to them, and all dripping wet, cross, ...
+- referenced_characters (score 10; chapters: CH003; aliases: -) Example context: CH003 2-4: They were indeed a queer-looking party that assembled on the bank—the birds with draggled feathers, the animals with their fur clinging close to them, and all dripping wet, cross, ...
 
 # Guidance
 - answer briefly and concretely

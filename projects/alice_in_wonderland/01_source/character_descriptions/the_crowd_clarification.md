@@ -1,15 +1,13 @@
 <!-- FILMCREATOR_CHARACTER_CLARIFICATION -->
 
 # Asset ID
-bill
+the_crowd
 
 # Why This Needs Clarification
-Potential existing identity matches detected:
-- present_characters (score 10; chapters: CH003; aliases: -)
-- referenced_characters (score 10; chapters: CH003; aliases: -)
+The character record indicates clarification is needed, but LM Studio did not supply a reason.
 
 # Question
-This character may match one of the existing canonical identities above. Can you inspect the candidate chapter descriptions and confirm whether FilmCreator should merge into one of them, or keep this as a new canonical character?
+"Should the crowd be rendered as a single mass or as distinct, identifiable animal characters?"
 
 # Candidate Matches
 - present_characters (score 10; chapters: CH003; aliases: -)
