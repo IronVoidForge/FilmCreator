@@ -1,7 +1,7 @@
 <!-- FILMCREATOR_CHARACTER_CLARIFICATION -->
 
 # Asset ID
-duchess_kitchen_interior
+woods_and_house_exterior
 
 # Why This Needs Clarification
 Potential existing environment matches detected:
