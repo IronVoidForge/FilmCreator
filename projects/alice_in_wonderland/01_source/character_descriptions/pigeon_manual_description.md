@@ -1,13 +1,13 @@
 <!-- FILMCREATOR_MANUAL_PLACEHOLDER -->
 
 # Asset ID
-dinah
+pigeon
 
 # Purpose
 Paste a stable manual visual description for this character so later shared reference generation can use it.
 
 # Why This Is Needed
-"Only mentioned as Alice's cat; no physical description provided."
+The salvaged index summary did not provide enough physical description for dependable image generation.
 
 # Guidance
 - describe face, hair, body type, age impression, silhouette, skin tone, costume logic, and any continuity-critical marks
