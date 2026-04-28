@@ -200,6 +200,31 @@ def test_parse_packet_document_accepts_end_section_variants_from_logs() -> None:
     assert packet.sections["character_index_markdown"].startswith("# Character Index")
 
 
+def test_parse_packet_document_ignores_bare_section_name_before_matching_section_tag() -> None:
+    response = "\n".join(
+        [
+            "[[FILMCREATOR_PACKET]]",
+            "scene_index_markdown",
+            "[[SECTION scene_index_markdown]]",
+            "- SC001: Opening",
+            "[[/SECTION]]",
+            "[[FILMCREATOR_RECORD]]",
+            "type: scene",
+            "scene_id: SC001",
+            "[[SECTION markdown]]",
+            "scene purpose: test",
+            "[[/SECTION]]",
+            "[[/FILMCREATOR_RECORD]]",
+            "[[/FILMCREATOR_PACKET]]",
+        ]
+    )
+
+    packet = packet_parser.parse_packet_document(response, expected_task="scene_decomposition")
+
+    assert packet.sections["scene_index_markdown"].startswith("- SC001")
+    assert packet.records[0].fields["scene_id"] == "SC001"
+
+
 def test_extract_character_records_from_index_markdown_salvages_heading_blocks() -> None:
     markdown = "\n".join(
         [

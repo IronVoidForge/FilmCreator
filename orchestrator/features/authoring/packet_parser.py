@@ -125,6 +125,15 @@ def parse_packet_body(packet_body: str) -> PacketDocument:
         if not stripped:
             index += 1
             continue
+        if (
+            re.fullmatch(r"[a-z0-9_]+", stripped, flags=re.IGNORECASE)
+            and index + 1 < len(lines)
+            and SECTION_TAG_PATTERN.fullmatch(lines[index + 1].strip())
+        ):
+            next_match = SECTION_TAG_PATTERN.fullmatch(lines[index + 1].strip())
+            if next_match and next_match.group(1).lower() == stripped.lower():
+                index += 1
+                continue
         if normalized_tag == SECTION_END_TAG:
             index += 1
             continue

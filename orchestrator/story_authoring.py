@@ -1259,7 +1259,35 @@ def _extract_scene_decomposition_outputs(
         warnings.append(
             f"Synthesized scene_index_markdown for {chapter_id} because the packet omitted the top-level scene index section."
         )
+    scene_records, scene_id_warnings = _repair_scene_records(
+        chapter_id=chapter_id,
+        scene_records=scene_records,
+        scene_index_markdown=scene_index_markdown,
+    )
+    warnings.extend(scene_id_warnings)
     return scene_index_markdown, scene_records, warnings
+
+
+def _repair_scene_records(
+    *,
+    chapter_id: str,
+    scene_records: list[_PacketRecord],
+    scene_index_markdown: str,
+) -> tuple[list[_PacketRecord], list[str]]:
+    warnings: list[str] = []
+    inferred_ids = re.findall(r"\bSC\d{3}\b", scene_index_markdown.upper())
+    repaired: list[_PacketRecord] = []
+    for index, record in enumerate(scene_records, start=1):
+        fields = dict(record.fields)
+        raw_scene_id = str(fields.get("scene_id", "")).strip().upper()
+        if not raw_scene_id:
+            inferred = inferred_ids[index - 1] if index - 1 < len(inferred_ids) else f"SC{index:03d}"
+            fields["scene_id"] = inferred
+            warnings.append(
+                f"Inferred missing scene_id '{inferred}' for {chapter_id} scene record {index}."
+            )
+        repaired.append(_PacketRecord(fields=fields, sections=dict(record.sections)))
+    return repaired, warnings
 
 
 def _synthesize_scene_index_markdown(
