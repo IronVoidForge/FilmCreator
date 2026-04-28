@@ -1,4 +1,0 @@
-- SC001: The Great Trial Begins (The Accident & Rule 42)
-- SC002: The Evidence of the Verses
-- SC003: The Queen's Fury & The Escape
-- SCs004: Awakening on the Riverbank

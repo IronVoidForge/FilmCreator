@@ -1,1 +1,0 @@
-The story follows the surreal adventures of Alice in a fantastical Wonderland. The narrative blends whimsical logic with high-stakes tension as characters navigate shifting scales, arbitrary rules, and nonsensical legal proceedings. Key themes involve the struggle between order and chaos, the nature of reality versus dreams, and the transition from childhood to adulthood.

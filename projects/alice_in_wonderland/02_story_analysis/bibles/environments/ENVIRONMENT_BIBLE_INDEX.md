@@ -1,16 +1,2 @@
 # Environment Bible Index
 
-- `courtroom_jury_box_setting` - courtroom_jury_box_setting (type=Primary setting (Dream/Fantasy), status=canonical, mentions=1, constraints=1)
-- `croquet_ground_field` - croquet_ground_field (type=Primary setting for the Queen's authority and chaotic play., status=canonical, mentions=1, constraints=1)
-- `lamp_lit_hallway` - lamp_lit_hallway (type=Primary (Transition), status=canonical, mentions=1, constraints=2)
-- `lush_garden_view` - lush_garden_view (type=Secondary (Revealed), status=canonical, mentions=1, constraints=1)
-- `rabbit_hole_tunnel` - rabbit_hole_tunnel (type=Transit Setting, status=canonical, mentions=1, constraints=2)
-- `riverbank_setting` - riverbank_setting (type=Primary (Starting), status=canonical, mentions=1, constraints=1)
-- `riverbank_sunset_setting` - riverbank_sunset_setting (type=Secondary setting (Real World), status=canonical, mentions=1, constraints=1)
-- `rocky_ledge_seaography_site` - rocky_ledge_seaography_site (type=Secondary setting for storytelling and melancholic reflection, status=canonical, mentions=1, constraints=1)
-- `seaside_dance_floor` - seaside_dance_floor (type=Social/Dance setting, status=canonical, mentions=1, constraints=1)
-- `sunny_gryphon_resting_area` - sunny_gryphon_resting_area (type=Transit setting / brief respite location, status=canonical, mentions=1, constraints=2)
-- `tea_party_table_setting` - tea_party_table_setting (type=table setting, status=canonical, mentions=1, constraints=1)
-- `the_beautiful_garden` - the_beautiful_garden (type=environment, status=canonical, mentions=1, constraints=1)
-- `the_hall_and_pool` - the_hall_and_pool (type=Primary Setting, status=canonical, mentions=1, constraints=1)
-- `wooded_path_and_hall` - wooded_path_and_hall (type=unknown, status=canonical, mentions=1, constraints=1)

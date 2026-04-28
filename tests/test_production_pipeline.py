@@ -43,6 +43,7 @@ def test_run_full_production_force_runs_remaining_pipeline(monkeypatch) -> None:
         "orchestrator.production_pipeline.get_production_status",
         lambda project_slug, chapters=None: SimpleNamespace(
             phases=[
+                {"phase": "story_analysis", "complete": True},
                 {"phase": "character_taxonomy", "complete": True},
                 {"phase": "identity_refinement", "complete": False},
                 {"phase": "character_bibles", "complete": False},
@@ -60,6 +61,12 @@ def test_run_full_production_force_runs_remaining_pipeline(monkeypatch) -> None:
     )
 
     project_phase_calls: list[str] = []
+    story_calls: list[tuple[str, str | None, str]] = []
+
+    monkeypatch.setattr(
+        "orchestrator.production_pipeline.run_story_analysis_pipeline",
+        lambda project_slug, chapters=None, mode="resume": story_calls.append((project_slug, chapters, mode)) or {"phase": "story_analysis"},
+    )
 
     def fake_project_phase(project_slug, phase_name, *, mode):
         project_phase_calls.append(phase_name)
@@ -80,6 +87,7 @@ def test_run_full_production_force_runs_remaining_pipeline(monkeypatch) -> None:
 
     summary = run_full_production_pipeline("demo", chapters="2-3", mode="force")
 
+    assert story_calls == [("demo", "2-3", "force")]
     assert project_phase_calls == [
         "character_taxonomy",
         "identity_refinement",

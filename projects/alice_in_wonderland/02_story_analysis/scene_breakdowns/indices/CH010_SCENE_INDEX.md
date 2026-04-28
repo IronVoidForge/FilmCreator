@@ -1,3 +1,0 @@
-- SC001: The Lobster Quadrille and Melancholy Puns
-- SC002: Alice's Tale and the Sluggard's Verse
-- SC003: Beautiful Soup and the Sudden Departure

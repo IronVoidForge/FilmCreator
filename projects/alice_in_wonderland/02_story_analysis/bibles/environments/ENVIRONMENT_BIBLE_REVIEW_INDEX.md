@@ -1,16 +1,3 @@
 # Environment Bible Review Index
 
-- `courtroom_jury_box_setting` - courtroom_jury_box_setting (ambiguities=2)
-- `croquet_ground_field` - croquet_ground_field (ambiguities=2)
-- `lamp_lit_hallway` - lamp_lit_hallway (ambiguities=2)
-- `lush_garden_view` - lush_garden_view (ambiguities=2)
-- `rabbit_hole_tunnel` - rabbit_hole_tunnel (ambiguities=2)
-- `riverbank_setting` - riverbank_setting (ambiguities=2)
-- `riverbank_sunset_setting` - riverbank_sunset_setting (ambiguities=2)
-- `rocky_ledge_seaography_site` - rocky_ledge_seaography_site (ambiguities=2)
-- `seaside_dance_floor` - seaside_dance_floor (ambiguities=2)
-- `sunny_gryphon_resting_area` - sunny_gryphon_resting_area (ambiguities=2)
-- `tea_party_table_setting` - tea_party_table_setting (ambiguities=1)
-- `the_beautiful_garden` - the_beautiful_garden (ambiguities=1)
-- `the_hall_and_pool` - the_hall_and_pool (ambiguities=2)
-- `wooded_path_and_hall` - wooded_path_and_hall (ambiguities=1)
+- No review entries.

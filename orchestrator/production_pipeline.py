@@ -28,6 +28,7 @@ from .visual_fallbacks import run_visual_fallback_synthesis
 
 
 PRE_DOWNSTREAM_PHASES = [
+    "story_analysis",
     "character_taxonomy",
     "identity_refinement",
     "character_bibles",
@@ -443,7 +444,7 @@ def run_full_production_pipeline(
     *,
     chapters: str | None = None,
     mode: str = "resume",
-    start_phase: str = "character_taxonomy",
+    start_phase: str = "story_analysis",
     coverage_density: str | None = None,
 ) -> ProductionRunSummary:
     _validate_mode(mode)
@@ -481,7 +482,10 @@ def run_full_production_pipeline(
             phase_summaries[phase_name] = {"skipped": True, "reason": "already complete"}
             completed_phases.append(phase_name)
             continue
-        summary = _run_project_phase(project_slug, phase_name, mode=mode)
+        if phase_name == "story_analysis":
+            summary = run_story_analysis_pipeline(project_slug, chapters=chapters, mode=mode)
+        else:
+            summary = _run_project_phase(project_slug, phase_name, mode=mode)
         phase_summaries[phase_name] = _to_dict(summary)
         completed_phases.append(phase_name)
 

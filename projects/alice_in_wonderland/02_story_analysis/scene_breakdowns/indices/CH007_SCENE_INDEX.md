@@ -1,5 +1,0 @@
-- SC001: The Tea Party Arrival & Riddle
-- SC002: The Watch & The Constant Tea-Time
-- SC003: The Dormouse's Story & The Seat Shift
-- SCty04: Alice's Departure & The Hallway Transition
-- SC005: The Glass Table & Entering the Garden
