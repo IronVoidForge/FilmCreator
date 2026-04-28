@@ -22,11 +22,11 @@ from .production_pipeline import (
     run_phase_range,
     run_post_taxonomy_pipeline,
     run_prompt_prep_refresh,
-    run_scene_slice_pipeline,
     run_story_analysis_pipeline,
 )
 from .production_run_state import persist_run_summary
 from .production_status import format_production_status, get_production_status
+from .scene_slice_pipeline import run_scene_slice_pipeline
 from .settings import DEFAULT_LLM_MODEL, DEFAULT_LMSTUDIO_TIMEOUT_SECONDS, STARTUP_LLM_MODELS
 
 

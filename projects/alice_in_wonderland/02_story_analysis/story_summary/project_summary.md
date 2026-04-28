@@ -1,0 +1,1 @@
+A surreal journey through a nonsensical Wonderland where a young girl named Alice undergoes constant, unpredictable physical transformations in size and shape. The narrative follows her attempts to navigate a world of anthropomorphic creatures, illogical social rules, and shifting biological states, all while searching for a way into a beautiful, mysterious garden.

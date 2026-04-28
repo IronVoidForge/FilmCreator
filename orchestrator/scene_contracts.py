@@ -2079,7 +2079,7 @@ def run_scene_contract_synthesis(
     selected_scene_id = scene_id.strip().upper() if isinstance(scene_id, str) and scene_id.strip() else None
     scene_files = [path for path in _scene_list(project_dir) if chapter_matches(path.parent.name or path.stem[:5], selected_chapters)]
     if selected_scene_id:
-        scene_files = [path for path in scene_files if selected_scene_id in path.stem.upper()]
+        scene_files = [path for path in scene_files if selected_scene_id == path.stem.upper()]
 
     output_root = _scene_contract_root(project_dir)
     review_dir = output_root / "review"

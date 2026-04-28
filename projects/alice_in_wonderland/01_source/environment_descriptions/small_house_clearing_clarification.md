@@ -5,17 +5,17 @@ small_house_clearing
 
 # Why This Needs Clarification
 Potential existing environment matches detected:
-- dense_woodland (score 8; chapters: CH004; aliases: -)
-- mushroom_clearing (score 8; chapters: CH004; aliases: -)
-- riverbank_assembly (score 8; chapters: CH003; aliases: -)
+- caucus_race_course (score 8; chapters: CH003; aliases: -)
+- hall_of_doors (score 8; chapters: CH001; aliases: -)
+- miniature_garden_view (score 8; chapters: CH001; aliases: -)
 
 # Question
 This environment may match one of the existing canonical settings above. Can you inspect the candidate chapter descriptions and confirm whether FilmCreator should merge into one of them, or keep this as a new canonical environment?
 
 # Candidate Matches
-- dense_woodland (score 8; chapters: CH004; aliases: -)
-- mushroom_clearing (score 8; chapters: CH004; aliases: -)
-- riverbank_assembly (score 8; chapters: CH003; aliases: -)
+- caucus_race_course (score 8; chapters: CH003; aliases: -)
+- hall_of_doors (score 8; chapters: CH001; aliases: -)
+- miniature_garden_view (score 8; chapters: CH001; aliases: -)
 
 # Guidance
 - answer briefly and concretely

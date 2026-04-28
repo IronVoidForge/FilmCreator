@@ -4,14 +4,18 @@
 the_crowd
 
 # Why This Needs Clarification
-The character record indicates clarification is needed, but LM Studio did not supply a reason.
+Potential existing identity matches detected:
+- alice (score 10; chapters: CH001, CH002; aliases: -) Example context: CH001 1-3: Down the Rabbit-Hole Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing to do: once or twice she had peeped into the book her sister ...
+- animal_crowd (score 10; chapters: CH002; aliases: -)
+- crabs (score 10; chapters: CH003; aliases: -)
 
 # Question
-"Should the crowd be rendered as a single mass or as distinct, identifiable animal characters?"
+This character may match one of the existing canonical identities above. Can you inspect the candidate chapter descriptions and confirm whether FilmCreator should merge into one of them, or keep this as a new canonical character?
 
 # Candidate Matches
-- present_characters (score 10; chapters: CH003; aliases: -)
-- referenced_characters (score 10; chapters: CH003; aliases: -)
+- alice (score 10; chapters: CH001, CH002; aliases: -) Example context: CH001 1-3: Down the Rabbit-Hole Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing to do: once or twice she had peeped into the book her sister ...
+- animal_crowd (score 10; chapters: CH002; aliases: -)
+- crabs (score 10; chapters: CH003; aliases: -)
 
 # Guidance
 - answer briefly and concretely
