@@ -15,6 +15,8 @@ def test_create_cleanup_plan_writes_expected_targets(tmp_path: Path) -> None:
     assert Path(summary.plan_path).exists()
     payload = json.loads(Path(summary.plan_path).read_text(encoding="utf-8"))
     assert payload["scope"] == "downstream_only"
+    assert "signature" in payload
+    assert payload["project_root"] == str(project_root.resolve())
     assert any(target["relative_path"] == "02_story_analysis/contracts" for target in payload["targets"])
 
 
@@ -37,3 +39,30 @@ def test_execute_cleanup_plan_deletes_only_planned_targets(tmp_path: Path) -> No
     assert not descriptors.exists()
     assert source_dir.exists()
     assert summary.verification_failed == []
+
+
+def test_execute_cleanup_plan_rejects_tampered_out_of_project_target(tmp_path: Path) -> None:
+    project_root = tmp_path / "projects" / "demo"
+    (project_root / "02_story_analysis" / "contracts").mkdir(parents=True)
+
+    summary = create_cleanup_plan("demo", scope="downstream_only", repo_root=tmp_path)
+    plan_path = Path(summary.plan_path)
+    payload = json.loads(plan_path.read_text(encoding="utf-8"))
+    payload["targets"][0]["relative_path"] = "../escape"
+    plan_path.write_text(json.dumps(payload, indent=2), encoding="utf-8")
+
+    try:
+        execute_cleanup_plan("demo", repo_root=tmp_path)
+    except ValueError as exc:
+        assert "unsafe path traversal" in str(exc).lower() or "signature mismatch" in str(exc).lower() or "do not exactly match" in str(exc).lower()
+    else:
+        raise AssertionError("Expected tampered cleanup plan to be rejected.")
+
+
+def test_create_cleanup_plan_rejects_unsafe_project_slug(tmp_path: Path) -> None:
+    try:
+        create_cleanup_plan("../escape", scope="downstream_only", repo_root=tmp_path)
+    except ValueError as exc:
+        assert "project_slug" in str(exc)
+    else:
+        raise AssertionError("Expected unsafe project slug to be rejected.")

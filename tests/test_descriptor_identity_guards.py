@@ -1,4 +1,5 @@
 from orchestrator.descriptor_enrichment import (
+    _best_effort_generated_value,
     _character_identity_review_flags,
     _rewrite_character_generated_fields,
 )
@@ -123,3 +124,14 @@ def test_identity_review_flags_surface_remaining_conflicts() -> None:
     assert "identity_cue_conflict_sex" in flags
     assert "identity_cue_conflict_age" in flags
     assert "identity_cue_conflict_grooming" in flags
+
+
+def test_environment_best_effort_defaults_are_book_agnostic() -> None:
+    geography = _best_effort_generated_value("environment", "geography", None)
+    architecture = _best_effort_generated_value("environment", "architecture", None)
+    weather = _best_effort_generated_value("environment", "weather_or_atmosphere", None)
+
+    assert "martian" not in str(geography).lower()
+    assert "martian" not in str(architecture).lower()
+    assert "martian" not in str(weather).lower()
+    assert "frontier" not in str(geography).lower()

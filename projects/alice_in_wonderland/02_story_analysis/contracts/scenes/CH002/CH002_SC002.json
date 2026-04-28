@@ -1,0 +1,385 @@
+{
+  "scene_id": "CH002_SC002",
+  "chapter_id": "CH002",
+  "scene_title": "SC002",
+  "purpose": "Introduce a secondary character and create a moment of frantic movement/interruption.",
+  "summary": "The White Rabbit scurries into the hall, preoccupied with his errands for the Duchess. Alice attempts to engage him, but her massive size startles him so much that he drops his gloves and fan before fleeing into the darkness. Alice retrieves the dropped items.",
+  "emotional_arc": "Distraction $\\rightarrow$ Startle/Panic",
+  "production_intent": "Establish the scale disparity between a giant Alice and the small White Rabbit through frantic movement and sudden interruption. The scene must visually communicate the physical threat of Alice's size to the Rabbit while managing the transition from errand-focused movement to startled flight.",
+  "scene_short_description": "A tiny rabbit scurries through a hall toward a massive girl before fleeing in a panic.",
+  "scene_primary_scale_story_point": "Alice is over nine feet tall with her head near the ceiling, making the Rabbit appear miniscule.",
+  "scene_required_anchor_catalog": [
+    "The Hall floor/ceiling interface",
+    "The pool of tears area"
+  ],
+  "scene_start_state": "The White Rabbit scurries through the hall, focused on his errands.",
+  "scene_end_state": "Alice retrieves her dropped items from the floor as the Rabbit flees into darkness.",
+  "dominant_action_line": "A frantic errand is interrupted by a massive presence, causing a sudden flight and a collection of lost objects.",
+  "scene_spatial_layout": [
+    "The Hall provides verticality with high ceilings and wide floors.",
+    "The pool of tears area serves as the lower boundary for movement."
+  ],
+  "character_spatial_map": [
+    "Alice looms over the environment with her head near the ceiling.",
+    "The White Rabbit moves along the floor level relative to Alice'"
+  ],
+  "environment_subzones": [
+    "The Hall (upper/mid zone)",
+    "The Floor (lower zone)"
+  ],
+  "scene_event_chain": [
+    "event 1: The White Rabbit scurs into the hall with focused distraction.",
+    "event 2: Alice attempts to engage him, causing a sudden scale shift in his perspective.",
+    "event 3: The White Rabbit drops his gloves and fan while fleeing into the darkness.",
+    "event 4: Alice reaches down to retrieve the dropped items from the floor."
+  ],
+  "entry_vectors": [
+    "The White Rabbit enters via the hall corridor."
+  ],
+  "exit_vectors": [
+    "The White Rabbit flees into the darkness."
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: Sudden interaction/interruption",
+    "BT002 -> BT003: Panic flight and object drop",
+    "BT003 -> BT004: Retrieval of items"
+  ],
+  "characters_required": [
+    {
+      "label": "Alice",
+      "canonical_id": "alice",
+      "display_name": "Alice",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH002/alice.md",
+      "notes": "Direct registry match for 'alice'."
+    },
+    {
+      "label": "The White Rabbit",
+      "canonical_id": "white_rabbit",
+      "display_name": "white_rabbit",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH002/white_rabbit.md",
+      "notes": "Direct registry match for 'white_rabbit'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "The Hall (near the pool of tears)",
+      "canonical_id": "the_hall_and_pool",
+      "display_name": "the_hall_and_pool",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 92,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/environment_breakdowns/chapters/CH002/the_hall_and_pool.md",
+      "notes": "Chapter-local environment alias match for 'The Hall (near the pool of tears)' (key_overlap=2, label_overlap=2, context_overlap=4)."
+    }
+  ],
+  "continuity_constraints": [
+    "Relative distance between the White Rabbit and Alice's giant feet",
+    "Placement of gloves and fan on the floor relative to the Rabbit's path"
+  ],
+  "visual_coverage_families": [
+    "Tracking shots of the Rabbit",
+    "Medium shots of interaction",
+    "Close-ups of dropped items"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "The White Rabbit scurries into the hall",
+      "purpose": "",
+      "action_start": "The White Rabbit enters the hall area",
+      "action_end": "The White Rabbit reaches Alice's vicinity",
+      "active_subjects": [
+        "white_rabbit"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "The Hall floor level",
+      "blocking_hint": "Rabbit moving across a wide floor space",
+      "environment_subzone": "the_hall_and_pool",
+      "continuity_focus": "Rabbit is focused on his errands",
+      "coverage_hint": "Tracking shot of the Rabbit",
+      "coverage_priority": "medium",
+      "handoff_to_next": "Interaction with Alice"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "The interaction/interruption",
+      "purpose": "",
+      "action_start": "Alice attempts to engage him",
+      "action_end": "The Rabbit is startled by her size",
+      "active_subjects": [
+        "alice",
+        "white_rabbit"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "The Hall floor vs ceiling",
+      "blocking_hint": "Alice looms above the tiny rabbit",
+      "environment_subzone": "the_hall_and_pool",
+      "continuity_focus": "Scale must be visually evident",
+      "coverage_hint": "Medium shot of interaction",
+      "coverage_priority": "high",
+      "handoff_to_next": "Panic flight"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "The panic and drop",
+      "purpose": "",
+      "action_start": "The Rabbit drops his gloves and fan",
+      "action_end": "The Rabbit flees into the darkness",
+      "active_subjects": [
+        "white_rabbit"
+      ],
+      "passive_subjects": [
+        "gloves",
+        "fan"
+      ],
+      "spatial_context": "The Hall floor",
+      "blocking_hint": "Items hit the floor as the Rabbit runs away",
+      "environment_subzone": "the_hall_and_pool",
+      "continuity_focus": "Placement of gloves and fan on the floor is critical",
+      "coverage_hint": "Close-up of dropped items",
+      "coverage_priority": "high",
+      "handoff_to_next": "Alice's retrieval"
+    },
+    {
+      "beat_id": "BT004",
+      "summary": "The retrieval",
+      "purpose": "",
+      "action_start": "Alice reaches for the objects",
+      "action_end": "The items are lifted from the floor",
+      "active_subjects": [
+        "alice"
+      ],
+      "passive_subjects": [
+        "gloves",
+        "fan"
+      ],
+      "spatial_context": "The Hall floor",
+      "blocking_hint": "Alice's hand enters the frame to pick up small items",
+      "environment_subzone": "the_hall_and_pool",
+      "continuity_focus": "Items must match their dropped state",
+      "coverage_hint": "Close-up of hands and objects",
+      "coverage_priority": "medium",
+      "handoff_to_next": "Scene end"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "Introduce character movement",
+      "planned_shot_moment_summary": "The White Rabbit scurries through the hall",
+      "primary_subject_seed": "white_rabbit",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "the_hall_and_pool",
+      "planned_shot_required_anchor_1": "the_hall_and_pool",
+      "planned_shot_scale_proof_detail": "Rabbit vs floor space",
+      "start_state_seed": "Rabbit enters frame",
+      "end_state_seed": "Rabbit approaches Alice's feet",
+      "action_seed": "The Rabbit runs with purpose",
+      "blocking_seed": [
+        "Tracking the Rabbit across the hall"
+      ],
+      "shot_size": "full",
+      "camera_angle": "low_angle",
+      "lens_family": "wide",
+      "camera_motion": "track",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front_three_quarter_left"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "Establish scale conflict",
+      "planned_shot_moment_summary": "Alice attempts to engage the Rabbit",
+      "primary_subject_seed": "alice",
+      "secondary_subjects_seed": [
+        "white_rabbit"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "the_hall_and_pool",
+      "planned_shot_required_anchor_1": "the_hall_and_pool",
+      "planned_shot_scale_proof_detail": "Alice's head near ceiling vs Rabbit on floor",
+      "start_state_seed": "Alice looks down",
+      "end_state_seed": "Rabbit freezes",
+      "action_seed": "Alice moves toward the Rabbit",
+      "blocking_seed": [
+        "Medium shot of Alice looming over the Rabbit"
+      ],
+      "shot_size": "medium_full",
+      "camera_angle": "low_angle",
+      "lens_family": "wide",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front_three_quarter_right"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "Show panic and loss",
+      "planned_shot_moment_summary": "The Rabbit drops items and flees",
+      "primary_subject_seed": "white_rabbit",
+      "secondary_subjects_seed": [
+        "gloves/fan"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "the_hall_and_pool",
+      "planned_shot_required_anchor_1": "the_hall_and_pool",
+      "planned_shot_scale_proof_detail": "Items on floor vs Rabbit size",
+      "start_state_seed": "Rabbit drops items",
+      "end_state_seed": "Rabbit vanishes into darkness",
+      "action_seed": "The Rabbit drops his gloves and fan then runs",
+      "blocking_seed": [
+        "Close-up of the drop followed by a pan to the fleeing rabbit"
+      ],
+      "shot_size": "close_up",
+      "camera_angle": "low_angle",
+      "lens_family": "normal",
+      "camera_motion": "pan",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "profile_left"
+    },
+    {
+      "planned_shot_id": "SH004",
+      "beat_id": "BT004",
+      "narrative_function": "Resolve the interaction",
+      "planned_shot_moment_summary": "Alice picks up the items",
+      "primary_subject_seed": "alice",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "the_hall_and_pool",
+      "planned_shot_required_anchor_1": "the_hall_and_pool",
+      "planned_shot_scale_proof_detail": "Alice's hand vs small objects",
+      "start_state_seed": "Alice reaches down",
+      "end_state_seed": "Items are in Alice's hands",
+      "action_seed": "Alice retrieves the gloves and fan",
+      "blocking_seed": [
+        "Close-up of Alice's hand reaching for items on the floor"
+      ],
+      "shot_size": "close_up",
+      "camera_angle": "low_angle",
+      "lens_family": "portrait",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "diff\ub77ce_ambient",
+      "primary_subject_angle": "front"
+    }
+  ],
+  "unresolved_questions": [],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH002",
+      "scene_id": "CH002_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH002",
+      "scene_id": "CH002_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH002",
+      "scene_id": "CH002_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH002",
+      "scene_id": "CH002_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH002",
+      "scene_id": "CH002_SC002"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH002",
+      "source_path": "C:\\FilmCreator\\projects\\alice_in_wonderland\\02_story_analysis\\chapter_analysis\\CH002_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH004",
+      "source_path": "projects/alice_in_wonderland/01_source/chapters/CH004_chapter_iv.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH011",
+      "source_path": "projects/alice_in_wonderland/01_source/chapters/CH011_chapter_xi.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH008",
+      "source_path": "projects/alice_in_wonderland/01_source/chapters/CH008_chapter_viii.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH002",
+      "canonical_id": "alice"
+    }
+  ],
+  "evidence_summary": [
+    "[CH002_SC002] Purpose: Introduce a secondary character and create a moment of frantic movement/interruption.",
+    "[CH002_SC002] Summary: The White Rabbit scurries into the hall, preoccupied with his errands for the Duchess. Alice attempts to engage him, but her massive size startles him so much that he drops his gloves and fan before fleeing into the darkness. Alice re...",
+    "[CH002_SC002] Emotional arc: Distraction $\\rightarrow$ Startle/Panic",
+    "[CH002_SC002] Coverage: Tracking shots of the Rabbit; medium shots of the interaction; close-ups of the dropped gloves and fan.",
+    "[CH002_SC002] Continuity: Position of the White Rabbit relative to Alice's giant feet; placement of the gloves/fan on the floor.",
+    "[CH002] Chapter summary: **Location: The Hall / The Garden Door** - **Visual State:** Alice is giant (over nine feet tall). Her head strikes the ceiling of the hall. - **Event:** Alice looks down at her feet, which appear distant and small fr...",
+    "[CH004] CHAPTER IV. (book index hit)",
+    "[CH011] CHAPTER XI. (book index hit)",
+    "[CH008] CHAPTER VIII. (book index hit)",
+    "Character alice: Alice is a young girl characterized by extreme, sudden fluctuations in physical scale. Her size varies dramatically between being approximately two feet tall and reaching colossal heights of nine feet or even nearly two miles. Despite these..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH002_SC002\n\n## Production Intent\nEstablish the scale disparity between a giant Alice and the small White Rabbit through frantic movement and sudden interruption. The scene must visually communicate the physical threat of Alice's size to the Rabbit while managing the transition from errand-focused movement to startled flight.\n\n## Required Cast\n- Alice (giant scale)\n- The White Rabbit (small scale)\n\n## Required Environments\n- The Hall (near the pool of tears)\n\n## Continuity Constraints\n- Relative distance between the White White Rabbit and Alice's giant feet must be maintained during interaction.\n- Precise placement of the dropped gloves and fan on the floor is required for the final retrieval shot.\n\n## Beat List\n1. The White Rabbit scurries into the hall with focused distraction.\n2. Alice attempts to engage him, causing a sudden scale shift in his perspective.\n3. The White Rabbit drops his gloves and fan while fleeing into the darkness.\n4. Alice reaches down to retrieve the dropped items from the floor.\n[/SECTION]",
+  "metadata": {
+    "artifact_id": "CH002_SC002_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "12ee21b26785e3759b24dc14eba1fac2812ccfaa",
+    "created_at_utc": "2026-04-28T02:45:31.172491+00:00",
+    "updated_at_utc": "2026-04-28T02:45:31.172491+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH002_SC002",
+        "version": "2054248df7475edc8934f5d6efa20521432cd8f6"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH002_SC002",
+        "version": "f6d03fcd8267bfb9c3ee91e96fffdbd163d8e56f"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH002_SC002",
+        "version": "3ba41ee03a7c7259617da06c13a61cd097da1f8c"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-28T02:46:16.696900+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "12ee21b26785e3759b24dc14eba1fac2812ccfaa"
+      }
+    ]
+  }
+}

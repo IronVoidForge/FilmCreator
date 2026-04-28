@@ -141,6 +141,65 @@ def test_parse_packet_document_cleans_malformed_nested_section_wrappers() -> Non
     assert packet_parser.require_packet_section(packet, "chapter_summary_markdown") == "Dorothy returns home."
 
 
+def test_parse_packet_document_accepts_malformed_record_end_tags_from_logs() -> None:
+    response = "\n".join(
+        [
+            "[[FILMCREATOR_PACKET]]",
+            "task: character_extraction",
+            "version: 1",
+            "",
+            "[[SECTION character_index_markdown]]",
+            "# Character Index",
+            "- alice",
+            "[[/SECTION]]",
+            "",
+            "[[FILMCREATOR_RECORD]]",
+            "type: character",
+            "asset_id: alice",
+            "canonical_character_id: alice",
+            "aliases:",
+            "is_fully_identified: true",
+            "manual_description_required: false",
+            "manual_description_reason:",
+            "clarification_required: false",
+            "clarification_reason:",
+            "clarification_question:",
+            "",
+            "[[SECTION markdown]]",
+            "# Alice",
+            "Young girl.",
+            "[[/SECTION]]",
+            "[[/FILcut_record]]",
+            "[[/FILMCREATOR_PACKET]]",
+        ]
+    )
+
+    packet = packet_parser.parse_packet_document(response, expected_task="character_extraction")
+
+    assert packet.metadata["task"] == "character_extraction"
+    assert len(packet.records) == 1
+    assert packet.records[0].fields["asset_id"] == "alice"
+
+
+def test_parse_packet_document_accepts_end_section_variants_from_logs() -> None:
+    response = "\n".join(
+        [
+            "[[FILMCREATOR_PACKET]]",
+            "task: character_extraction",
+            "version: 1",
+            "[[SECTION character_index_markdown]]",
+            "# Character Index",
+            "- alice",
+            "[[end_section]]",
+            "[[/FILMCREATOR_PACKET]]",
+        ]
+    )
+
+    packet = packet_parser.parse_packet_document(response, expected_task="character_extraction")
+
+    assert packet.sections["character_index_markdown"].startswith("# Character Index")
+
+
 def test_extract_character_records_from_index_markdown_salvages_heading_blocks() -> None:
     markdown = "\n".join(
         [

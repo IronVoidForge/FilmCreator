@@ -5,6 +5,7 @@ from orchestrator.visual_fallbacks import (
     default_visual_fallbacks,
     select_environment_fallback_bucket,
     fallback_text,
+    _derive_book_visual_context,
 )
 
 
@@ -156,3 +157,15 @@ def test_cave_fallback_not_injected_into_non_cave():
     
     assert "cave" not in interior_text.lower(), \
         f"Interior fallback should not contain cave language: {interior_text}"
+
+
+def test_book_visual_context_stays_book_agnostic_for_desert_like_digest():
+    context = {
+        "context_digest": "desert cave cliff terrain with warriors and a remote wilderness approach",
+    }
+
+    derived = _derive_book_visual_context(context).lower()
+
+    assert "frontier" not in derived
+    assert "arizona" not in derived
+    assert "martian" not in derived

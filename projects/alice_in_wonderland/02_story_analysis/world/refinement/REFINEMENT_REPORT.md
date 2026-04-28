@@ -1,7 +1,7 @@
 # World Refinement Report
 
 - project_slug: alice_in_wonderland
-- generated_at_utc: 2026-04-28T00:21:48.089129+00:00
+- generated_at_utc: 2026-04-28T02:36:53.488770+00:00
 - candidate_count: 2
 - comparison_count: 2
 - decision_count: 2
