@@ -1,13 +1,13 @@
 <!-- FILMCREATOR_CHARACTER_CLARIFICATION -->
 
 # Asset ID
-puppy
+mary_ann
 
 # Why This Needs Clarification
-The character is not fully identified from this chapter alone.
+"Is Mary Ann a distinct character or just a mistaken identity for Alice?"
 
 # Question
-This character is named but lacks a stable visual description. Can you find a description from another source chapter, or should FilmCreator generate a reusable film-wide description?
+"Does Mary Ann have a unique visual design, or is she purely a narrative device for the Rabbit's mistake?"
 
 # Guidance
 - answer briefly and concretely

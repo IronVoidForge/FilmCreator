@@ -4,10 +4,10 @@
 alice
 
 # Why This Needs Clarification
-Scale is highly dynamic throughout the chapter.
+The character is not fully identified from this chapter alone.
 
 # Question
-What is Alice's exact height at the moment of interaction with the Mouse?
+This character is named but lacks a stable visual description. Can you find a description from another source chapter, or should FilmCreator generate a reusable film-wide description?
 
 # Guidance
 - answer briefly and concretely

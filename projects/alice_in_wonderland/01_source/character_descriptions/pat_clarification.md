@@ -1,13 +1,13 @@
 <!-- FILMCREATOR_CHARACTER_CLARIFICATION -->
 
 # Asset ID
-puppy
+pat
 
 # Why This Needs Clarification
-The character is not fully identified from this chapter alone.
+"What kind of animal is Pat?"
 
 # Question
-This character is named but lacks a stable visual description. Can you find a description from another source chapter, or should FilmCreator generate a reusable film-wide description?
+"What is Pat's species and appearance?"
 
 # Guidance
 - answer briefly and concretely
