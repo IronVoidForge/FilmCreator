@@ -66,3 +66,15 @@ def test_create_cleanup_plan_rejects_unsafe_project_slug(tmp_path: Path) -> None
         assert "project_slug" in str(exc)
     else:
         raise AssertionError("Expected unsafe project slug to be rejected.")
+
+
+def test_story_analysis_and_downstream_plan_includes_chapter_summaries(tmp_path: Path) -> None:
+    project_root = tmp_path / "projects" / "demo"
+    (project_root / "02_story_analysis" / "chapter_analysis").mkdir(parents=True)
+    (project_root / "02_story_analysis" / "story_summary").mkdir(parents=True)
+
+    summary = create_cleanup_plan("demo", scope="story_analysis_and_downstream", repo_root=tmp_path)
+
+    relative_paths = {target["relative_path"] for target in summary.targets}
+    assert "02_story_analysis/chapter_analysis" in relative_paths
+    assert "02_story_analysis/story_summary" in relative_paths

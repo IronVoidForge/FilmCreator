@@ -54,6 +54,29 @@ CLEANUP_SCOPES: dict[str, dict[str, list[str]]] = {
             "02_story_analysis/world/global/VISUAL_FALLBACKS.json",
         ],
     },
+    "story_analysis_and_downstream": {
+        "dirs": [
+            "02_story_analysis/chapter_analysis",
+            "02_story_analysis/story_summary",
+            "02_story_analysis/character_breakdowns",
+            "02_story_analysis/environment_breakdowns",
+            "02_story_analysis/scene_breakdowns",
+            "02_story_analysis/beat_bundles",
+            "02_story_analysis/clip_plans",
+            "02_story_analysis/world",
+            "02_story_analysis/taxonomy",
+            "02_story_analysis/bibles",
+            "02_story_analysis/contracts",
+            "02_story_analysis/timelines",
+            "02_story_analysis/descriptors",
+            "02_story_analysis/grading",
+            "02_story_analysis/dialogue_enrichment",
+            "02_story_analysis/logs",
+            "02_story_analysis/runs",
+            "03_prompt_packages/prepared",
+        ],
+        "files": [],
+    },
 }
 
 

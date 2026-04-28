@@ -268,7 +268,7 @@ def build_parser() -> argparse.ArgumentParser:
 
     cp = subparsers.add_parser("clear-production")
     cp.add_argument("project_slug", nargs="?", default="princess_of_mars_test")
-    cp.add_argument("--scope", choices=["prompt_prep_only", "downstream_only", "taxonomy_and_downstream"], required=True)
+    cp.add_argument("--scope", choices=["prompt_prep_only", "downstream_only", "taxonomy_and_downstream", "story_analysis_and_downstream"], required=True)
     cp.add_argument("--execute", action="store_true")
 
     rpr = subparsers.add_parser("run-production-range")

@@ -206,6 +206,35 @@ def test_pipeline_menu_cleanup_dry_run(monkeypatch) -> None:
     assert any("Scope: downstream_only" in line for line in outputs)
 
 
+def test_pipeline_menu_cleanup_story_analysis_scope(monkeypatch) -> None:
+    prompts = iter(["12", "4", "14"])
+    outputs: list[str] = []
+
+    monkeypatch.setattr(
+        "orchestrator.pipeline_menu.create_cleanup_plan",
+        lambda project_slug, scope="": {
+            "project_slug": project_slug,
+            "scope": scope,
+            "plan_path": "plan.json",
+            "targets": [{"relative_path": "02_story_analysis/chapter_analysis", "kind": "dir", "exists": True}],
+            "preserved": ["01_source"],
+        },
+    )
+    monkeypatch.setattr(
+        "orchestrator.pipeline_menu.format_cleanup_plan",
+        lambda summary: ["Project: demo", "Scope: story_analysis_and_downstream", "- dir: 02_story_analysis/chapter_analysis (EXISTS)"],
+    )
+
+    run_pipeline_menu(
+        initial_project="demo",
+        input_fn=lambda prompt="": next(prompts),
+        output_fn=outputs.append,
+        projects_root=Path("projects"),
+    )
+
+    assert any("Scope: story_analysis_and_downstream" in line for line in outputs)
+
+
 def test_pipeline_menu_advanced_range_runs_selected_span(monkeypatch) -> None:
     prompts = iter(["13", "9", "13", "14"])
     outputs: list[str] = []

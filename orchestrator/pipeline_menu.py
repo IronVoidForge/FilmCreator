@@ -552,8 +552,9 @@ def _run_cleanup(state: PipelineMenuState, input_fn: InputFn, output_fn: OutputF
     output_fn("1. Dry-run: clear prompt prep and descriptors")
     output_fn("2. Dry-run: clear downstream phases")
     output_fn("3. Dry-run: clear taxonomy and everything downstream")
-    output_fn("4. Execute last dry-run plan")
-    output_fn("5. Back")
+    output_fn("4. Dry-run: clear story analysis and everything downstream")
+    output_fn("5. Execute last dry-run plan")
+    output_fn("6. Back")
     choice = input_fn("Choose: ").strip()
     if choice == "1":
         _show_cleanup_plan(state, "prompt_prep_only", output_fn)
@@ -562,13 +563,21 @@ def _run_cleanup(state: PipelineMenuState, input_fn: InputFn, output_fn: OutputF
     elif choice == "3":
         _show_cleanup_plan(state, "taxonomy_and_downstream", output_fn)
     elif choice == "4":
-        confirm = input_fn("Type DELETE to execute this cleanup: ").strip()
-        if confirm != "DELETE":
-            output_fn("Cleanup cancelled.")
-            return
+        _show_cleanup_plan(state, "story_analysis_and_downstream", output_fn)
+    elif choice == "5":
+        if state.last_cleanup_scope == "story_analysis_and_downstream":
+            confirm = input_fn(f"Type DELETE {state.project_slug} to execute this cleanup: ").strip()
+            if confirm != f"DELETE {state.project_slug}":
+                output_fn("Cleanup cancelled.")
+                return
+        else:
+            confirm = input_fn("Type DELETE to execute this cleanup: ").strip()
+            if confirm != "DELETE":
+                output_fn("Cleanup cancelled.")
+                return
         summary = execute_cleanup_plan(state.project_slug)
         _emit_summary(summary.to_dict(), output_fn, formatted_lines=format_cleanup_execution(summary))
-    elif choice != "5":
+    elif choice != "6":
         output_fn("Invalid cleanup selection.")
 
 
