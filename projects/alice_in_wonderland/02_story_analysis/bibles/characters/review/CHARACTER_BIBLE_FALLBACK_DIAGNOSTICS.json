@@ -1,8 +1,1159 @@
 {
   "project_slug": "alice_in_wonderland",
-  "generated_at_utc": "2026-04-27T22:58:01.576667+00:00",
-  "total_records": 0,
-  "attempted_count": 0,
-  "non_empty_count": 0,
-  "records": []
+  "generated_at_utc": "2026-04-28T00:25:48.253108+00:00",
+  "total_records": 18,
+  "attempted_count": 18,
+  "non_empty_count": 18,
+  "records": [
+    {
+      "character_id": "alice",
+      "display_name": "Alice",
+      "entity_kind": "individual",
+      "first_seen_chapter": "CH001",
+      "chapter_mentions": [
+        "CH001",
+        "CH002",
+        "CH007",
+        "CH009",
+        "CH010",
+        "CH012"
+      ],
+      "synthesis_mode": "synthesized",
+      "pre_fallback_audit": {
+        "total_prompt_critical_fields": 10,
+        "missing_count": 2,
+        "present_count": 8,
+        "missing_fields": [
+          "movement_language",
+          "costume_signature"
+        ],
+        "present_fields": [
+          "identity_baseline",
+          "age_presence",
+          "physical_build",
+          "origin_or_historical_context",
+          "stable_visual_summary",
+          "physical_traits",
+          "distinguishing_features",
+          "state_variants"
+        ],
+        "needs_visual_production_fallback": true
+      },
+      "fallback_attempted": true,
+      "fallback_method": "deterministic",
+      "fallback_reason": "missing_prompt_critical_fields",
+      "fallback_result_audit": {
+        "status": "generated",
+        "fallback_bucket": "human",
+        "filled_count": 8,
+        "empty_count": 0,
+        "filled_fields": [
+          "production_identity_descriptor",
+          "production_body_descriptor",
+          "production_face_descriptor",
+          "production_costume_descriptor",
+          "production_silhouette",
+          "production_movement_descriptor",
+          "production_state_variants",
+          "negative_terms"
+        ],
+        "empty_fields": [],
+        "non_empty": true
+      },
+      "fallback_preview": {
+        "production_identity_descriptor": "A young girl subject to extreme scale shifts.",
+        "production_body_descriptor": "Variable; ranges from a small child to colossal proportions (up to two miles high).; Subject to extreme growth and shrinking",
+        "production_costume_descriptor": "period-appropriate clothing",
+        "production_silhouette": "Extreme scale shifts (shrinking and growing); Variable; ranges from a small child to colossal proportions (up to two miles high)."
+      },
+      "evidence_summary": [
+        "[source:C:/FilmCreator/projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH002/alice.md] Physical Description: A girl who undergoes extreme scale shifts, starting at over nine feet tall and shrinking to approximately two feet. She...",
+        "[source:C:/FilmCreator/projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH012/alice.md] Physical Description: Initially depicted at a colossal scale, nearly two miles high. Later shrinks back to the size of a young girl in the re...",
+        "[CH001] CHAPTER I. (query appears in paragraph preview)",
+        "[CH002] CHAPTER II. (query appears in paragraph preview)",
+        "[CH003] CHAPTER III. (query appears in paragraph preview)"
+      ]
+    },
+    {
+      "character_id": "alices_sister",
+      "display_name": "alices_sister",
+      "entity_kind": "individual",
+      "first_seen_chapter": "CH001",
+      "chapter_mentions": [
+        "CH001",
+        "CH012"
+      ],
+      "synthesis_mode": "synthesized",
+      "pre_fallback_audit": {
+        "total_prompt_critical_fields": 10,
+        "missing_count": 4,
+        "present_count": 6,
+        "missing_fields": [
+          "age_presence",
+          "physical_build",
+          "movement_language",
+          "costume_signature"
+        ],
+        "present_fields": [
+          "identity_baseline",
+          "origin_or_historical_context",
+          "stable_visual_summary",
+          "physical_traits",
+          "distinguishing_features",
+          "state_variants"
+        ],
+        "needs_visual_production_fallback": true
+      },
+      "fallback_attempted": true,
+      "fallback_method": "deterministic",
+      "fallback_reason": "missing_prompt_critical_fields",
+      "fallback_result_audit": {
+        "status": "generated",
+        "fallback_bucket": "human",
+        "filled_count": 8,
+        "empty_count": 0,
+        "filled_fields": [
+          "production_identity_descriptor",
+          "production_body_descriptor",
+          "production_face_descriptor",
+          "production_costume_descriptor",
+          "production_silhouette",
+          "production_movement_descriptor",
+          "production_state_variants",
+          "negative_terms"
+        ],
+        "empty_fields": [],
+        "non_empty": true
+      },
+      "fallback_preview": {
+        "production_identity_descriptor": "A human figure existing in the real world.",
+        "production_body_descriptor": "human morphology",
+        "production_costume_descriptor": "period-appropriate clothing",
+        "production_silhouette": "feature 1 (unknown)"
+      },
+      "evidence_summary": [
+        "[source:C:/FilmCreator/projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH012/alices_sister.md] Physical Description: A human figure in the real world, watching the sunset.",
+        "[CH001] CHAPTER I. (book index hit)",
+        "[CH007] CHAPTER VII. (book index hit)",
+        "[CH012] CHAPTER XII. (book index hit)"
+      ]
+    },
+    {
+      "character_id": "dinah",
+      "display_name": "Dinah",
+      "entity_kind": "individual",
+      "first_seen_chapter": "CH001",
+      "chapter_mentions": [
+        "CH001",
+        "CH002"
+      ],
+      "synthesis_mode": "synthesized",
+      "pre_fallback_audit": {
+        "total_prompt_critical_fields": 10,
+        "missing_count": 4,
+        "present_count": 6,
+        "missing_fields": [
+          "age_presence",
+          "origin_or_historical_context",
+          "movement_language",
+          "distinguishing_features"
+        ],
+        "present_fields": [
+          "identity_baseline",
+          "physical_build",
+          "stable_visual_summary",
+          "physical_traits",
+          "costume_signature",
+          "state_variants"
+        ],
+        "needs_visual_production_fallback": true
+      },
+      "fallback_attempted": true,
+      "fallback_method": "deterministic",
+      "fallback_reason": "missing_prompt_critical_fields",
+      "fallback_result_audit": {
+        "status": "generated",
+        "fallback_bucket": "small_quadruped",
+        "filled_count": 8,
+        "empty_count": 0,
+        "filled_fields": [
+          "production_identity_descriptor",
+          "production_body_descriptor",
+          "production_face_descriptor",
+          "production_costume_descriptor",
+          "production_silhouette",
+          "production_movement_descriptor",
+          "production_state_variants",
+          "negative_terms"
+        ],
+        "empty_fields": [],
+        "non_empty": true
+      },
+      "fallback_preview": {
+        "production_identity_descriptor": "A cat belonging to Alice.",
+        "production_body_descriptor": "Small quadrupedal feline frame.; Quadrupedal morphology; Small scale",
+        "production_costume_descriptor": "natural fur",
+        "production_silhouette": "Small quadrupedal feline frame."
+      },
+      "evidence_summary": [
+        "[source:C:/FilmCreator/projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH002/dinah.md] Physical Description: A cat belonging to Alice.",
+        "[CH001] CHAPTER I. (query appears in paragraph preview)",
+        "[CH002] CHAPTER II. (query appears in paragraph preview)",
+        "[CH003] CHAPTER III. (query appears in paragraph preview)",
+        "[CH001 p10-p12] Presently she began again. \u201cI wonder if I shall fall right _through_ the earth! How funny it\u2019ll seem to come out among the people that walk with their heads downward! The Antipathi..."
+      ]
+    },
+    {
+      "character_id": "white_rabbit",
+      "display_name": "white_rabbit",
+      "entity_kind": "individual",
+      "first_seen_chapter": "CH001",
+      "chapter_mentions": [
+        "CH001",
+        "CH002",
+        "CH012"
+      ],
+      "synthesis_mode": "synthesized",
+      "pre_fallback_audit": {
+        "total_prompt_critical_fields": 10,
+        "missing_count": 2,
+        "present_count": 8,
+        "missing_fields": [
+          "age_presence",
+          "origin_or_historical_context"
+        ],
+        "present_fields": [
+          "identity_baseline",
+          "physical_build",
+          "movement_language",
+          "stable_visual_summary",
+          "physical_traits",
+          "costume_signature",
+          "distinguishing_features",
+          "state_variants"
+        ],
+        "needs_visual_production_fallback": true
+      },
+      "fallback_attempted": true,
+      "fallback_method": "deterministic",
+      "fallback_reason": "missing_prompt_critical_fields",
+      "fallback_result_audit": {
+        "status": "generated",
+        "fallback_bucket": "small_quadruped",
+        "filled_count": 8,
+        "empty_count": 0,
+        "filled_fields": [
+          "production_identity_descriptor",
+          "production_body_descriptor",
+          "production_face_descriptor",
+          "production_costume_descriptor",
+          "production_silhouette",
+          "production_movement_descriptor",
+          "production_state_variants",
+          "negative_terms"
+        ],
+        "empty_fields": [],
+        "non_empty": true
+      },
+      "fallback_preview": {
+        "production_identity_descriptor": "A small, quadrupedal rabbit possessing sentience and wearing elaborate clothing.",
+        "production_body_descriptor": "Small-scale quadrupedal frame.; Small scale; Quadrupedal",
+        "production_costume_descriptor": "Splendid attire suitable for a formal figure.",
+        "production_silhouette": "Quadrupedal rabbit anatomy; Small-scale quadrupedal frame."
+      },
+      "evidence_summary": [
+        "[source:C:/FilmCreator/projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH002/white_rabbit.md] Physical Description: A rabbit dressed in splendid attire.",
+        "[source:C:/FilmCreator/projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH012/white_rabbit.md] Physical Description: A hurried and respectful figure who presents evidence (the verses) to the court.",
+        "[CH001] CHAPTER I. (query appears in paragraph preview)",
+        "[CH002] CHAPTER II. (query appears in paragraph preview)",
+        "[CH004] CHAPTER IV. (query appears in paragraph preview)"
+      ]
+    },
+    {
+      "character_id": "group_animals",
+      "display_name": "group_animals",
+      "entity_kind": "group",
+      "first_seen_chapter": "CH002",
+      "chapter_mentions": [
+        "CH002"
+      ],
+      "synthesis_mode": "synthesized",
+      "pre_fallback_audit": {
+        "total_prompt_critical_fields": 10,
+        "missing_count": 2,
+        "present_count": 8,
+        "missing_fields": [
+          "age_presence",
+          "origin_or_historical_context"
+        ],
+        "present_fields": [
+          "identity_baseline",
+          "physical_build",
+          "movement_language",
+          "stable_visual_summary",
+          "physical_traits",
+          "costume_signature",
+          "distinguishing_features",
+          "state_variants"
+        ],
+        "needs_visual_production_fallback": true
+      },
+      "fallback_attempted": true,
+      "fallback_method": "deterministic",
+      "fallback_reason": "missing_prompt_critical_fields",
+      "fallback_result_audit": {
+        "status": "generated",
+        "fallback_bucket": "group_or_horde",
+        "filled_count": 8,
+        "empty_count": 0,
+        "filled_fields": [
+          "production_identity_descriptor",
+          "production_body_descriptor",
+          "production_face_descriptor",
+          "production_costume_descriptor",
+          "production_silhouette",
+          "production_movement_descriptor",
+          "production_state_variants",
+          "negative_terms"
+        ],
+        "empty_fields": [],
+        "non_empty": true
+      },
+      "fallback_preview": {
+        "production_identity_descriptor": "A diverse collection of various animals and birds.",
+        "production_body_descriptor": "variable; a collective mass of different biological forms.; aquatic/swimming context",
+        "production_costume_descriptor": "natural animal/bird plumage, fur, or scales.",
+        "production_silhouette": "diverse species composition (birds and animals); aquatic environment context; variable; a collective mass of different biological forms."
+      },
+      "evidence_summary": [
+        "[source:C:/FilmCreator/projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH002/group_animals.md] Physical Description: A collection of various animals and birds swimming in the pool.",
+        "[CH002] CHAPTER II. (book index hit)",
+        "[CH003] CHAPTER III. (book index hit)",
+        "[CH011] CHAPTER XI. (book index hit)"
+      ]
+    },
+    {
+      "character_id": "the_mouse",
+      "display_name": "the_mouse",
+      "entity_kind": "group",
+      "first_seen_chapter": "CH002",
+      "chapter_mentions": [
+        "CH002"
+      ],
+      "synthesis_mode": "synthesized",
+      "pre_fallback_audit": {
+        "total_prompt_critical_fields": 10,
+        "missing_count": 3,
+        "present_count": 7,
+        "missing_fields": [
+          "age_presence",
+          "origin_or_historical_context",
+          "costume_signature"
+        ],
+        "present_fields": [
+          "identity_baseline",
+          "physical_build",
+          "movement_language",
+          "stable_visual_summary",
+          "physical_traits",
+          "distinguishing_features",
+          "state_variants"
+        ],
+        "needs_visual_production_fallback": true
+      },
+      "fallback_attempted": true,
+      "fallback_method": "deterministic",
+      "fallback_reason": "missing_prompt_critical_fields",
+      "fallback_result_audit": {
+        "status": "generated",
+        "fallback_bucket": "group_or_horde",
+        "filled_count": 8,
+        "empty_count": 0,
+        "filled_fields": [
+          "production_identity_descriptor",
+          "production_body_descriptor",
+          "production_face_descriptor",
+          "production_costume_descriptor",
+          "production_silhouette",
+          "production_movement_descriptor",
+          "production_state_variants",
+          "negative_terms"
+        ],
+        "empty_fields": [],
+        "non_empty": true
+      },
+      "fallback_preview": {
+        "production_identity_descriptor": "A small creature capable of swimming.",
+        "production_body_descriptor": "Small scale; mass is relative to its ability to swim in a pool of tears.; small scale",
+        "production_costume_descriptor": "repeatable group uniform or martial gear",
+        "production_silhouette": "small scale; Small scale; mass is relative to its ability to swim in a pool of tears."
+      },
+      "evidence_summary": [
+        "[source:C:/FilmCreator/projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH002/the_mouse.md] Physical Description: A small creature swimming in the pool of tears.",
+        "[CH002] CHAPTER II. (query appears in paragraph preview)",
+        "[CH003] CHAPTER III. (query appears in paragraph preview)",
+        "[CH007] CHAPTER VII. (book index hit)"
+      ]
+    },
+    {
+      "character_id": "dormouse",
+      "display_name": "Dormouse",
+      "entity_kind": "individual",
+      "first_seen_chapter": "CH007",
+      "chapter_mentions": [
+        "CH007"
+      ],
+      "synthesis_mode": "synthesized",
+      "pre_fallback_audit": {
+        "total_prompt_critical_fields": 10,
+        "missing_count": 4,
+        "present_count": 6,
+        "missing_fields": [
+          "age_presence",
+          "origin_or_historical_context",
+          "costume_signature",
+          "distinguishing_features"
+        ],
+        "present_fields": [
+          "identity_baseline",
+          "physical_build",
+          "movement_language",
+          "stable_visual_summary",
+          "physical_traits",
+          "state_variants"
+        ],
+        "needs_visual_production_fallback": true
+      },
+      "fallback_attempted": true,
+      "fallback_method": "deterministic",
+      "fallback_reason": "missing_prompt_critical_fields",
+      "fallback_result_audit": {
+        "status": "generated",
+        "fallback_bucket": "small_quadruped",
+        "filled_count": 8,
+        "empty_count": 0,
+        "filled_fields": [
+          "production_identity_descriptor",
+          "production_body_descriptor",
+          "production_face_descriptor",
+          "production_costume_descriptor",
+          "production_silhouette",
+          "production_movement_descriptor",
+          "production_state_variants",
+          "negative_terms"
+        ],
+        "empty_fields": [],
+        "non_empty": true
+      },
+      "fallback_preview": {
+        "production_identity_descriptor": "A small, quadrupedal animal.",
+        "production_body_descriptor": "Small scale; quadrupedal frame.; Quadrupedal morphology; Small scale",
+        "production_costume_descriptor": "natural hide or minimal harness",
+        "production_silhouette": "Small scale; quadrupedal frame."
+      },
+      "evidence_summary": [
+        "[CH007] CHAPTER VII. (query appears in paragraph preview)",
+        "[CH011] CHAPTER XI. (query appears in paragraph preview)",
+        "[CH007 p1-p3] A Mad Tea-Party There was a table set out under a tree in front of the house, and the March Hare and the Hatter were having tea at it: a Dormouse was sitting between them, fast asl...",
+        "[CH007 p19-p21] \u201cYou might just as well say,\u201d added the March Hare, \u201cthat \u2018I like what I get\u2019 is the same thing as \u2018I get what I like\u2019!\u201d \u201cYou might just as well say,\u201d added the Dormouse, who seeme...",
+        "[CH011 p18-p20] \u201cYou ought to have finished,\u201d said the King. \u201cWhen did you begin?\u201d The Hatter looked at the March Hare, who had followed him into the court, arm-in-arm with the Dormouse. \u201cFourteen..."
+      ]
+    },
+    {
+      "character_id": "march_hare",
+      "display_name": "march_hare",
+      "entity_kind": "group",
+      "first_seen_chapter": "CH007",
+      "chapter_mentions": [
+        "CH007"
+      ],
+      "synthesis_mode": "synthesized",
+      "pre_fallback_audit": {
+        "total_prompt_critical_fields": 10,
+        "missing_count": 4,
+        "present_count": 6,
+        "missing_fields": [
+          "age_presence",
+          "origin_or_historical_context",
+          "movement_language",
+          "costume_signature"
+        ],
+        "present_fields": [
+          "identity_baseline",
+          "physical_build",
+          "stable_visual_summary",
+          "physical_traits",
+          "distinguishing_features",
+          "state_variants"
+        ],
+        "needs_visual_production_fallback": true
+      },
+      "fallback_attempted": true,
+      "fallback_method": "deterministic",
+      "fallback_reason": "missing_prompt_critical_fields",
+      "fallback_result_audit": {
+        "status": "generated",
+        "fallback_bucket": "group_or_horde",
+        "filled_count": 8,
+        "empty_count": 0,
+        "filled_fields": [
+          "production_identity_descriptor",
+          "production_body_descriptor",
+          "production_face_descriptor",
+          "production_costume_descriptor",
+          "production_silhouette",
+          "production_movement_descriptor",
+          "production_state_variants",
+          "negative_terms"
+        ],
+        "empty_fields": [],
+        "non_empty": true
+      },
+      "fallback_preview": {
+        "production_identity_descriptor": "A human-scale quadruped entity.",
+        "production_body_descriptor": "Human-scale mass with a quadrupedal frame.; Human-scale mass",
+        "production_costume_descriptor": "repeatable group uniform or martial gear",
+        "production_silhouette": "Quadruped morphology; Human-scale mass with a quadrupedal frame."
+      },
+      "evidence_summary": [
+        "[CH006] CHAPTER VI. (query appears in paragraph preview)",
+        "[CH007] CHAPTER VII. (query appears in paragraph preview)",
+        "[CH011] CHAPTER XI. (query appears in paragraph preview)"
+      ]
+    },
+    {
+      "character_id": "the_hatter",
+      "display_name": "the_hatter",
+      "entity_kind": "individual",
+      "first_seen_chapter": "CH007",
+      "chapter_mentions": [
+        "CH007"
+      ],
+      "synthesis_mode": "synthesized",
+      "pre_fallback_audit": {
+        "total_prompt_critical_fields": 10,
+        "missing_count": 5,
+        "present_count": 5,
+        "missing_fields": [
+          "age_presence",
+          "physical_build",
+          "origin_or_historical_context",
+          "movement_language",
+          "costume_signature"
+        ],
+        "present_fields": [
+          "identity_baseline",
+          "stable_visual_summary",
+          "physical_traits",
+          "distinguishing_features",
+          "state_variants"
+        ],
+        "needs_visual_production_fallback": true
+      },
+      "fallback_attempted": true,
+      "fallback_method": "deterministic",
+      "fallback_reason": "missing_prompt_critical_fields",
+      "fallback_result_audit": {
+        "status": "generated",
+        "fallback_bucket": "non_human_humanoid",
+        "filled_count": 8,
+        "empty_count": 0,
+        "filled_fields": [
+          "production_identity_descriptor",
+          "production_body_descriptor",
+          "production_face_descriptor",
+          "production_costume_descriptor",
+          "production_silhouette",
+          "production_movement_descriptor",
+          "production_state_variants",
+          "negative_terms"
+        ],
+        "empty_fields": [],
+        "non_empty": true
+      },
+      "fallback_preview": {
+        "production_identity_descriptor": "humanoid bipedal individual of human scale.",
+        "production_body_descriptor": "humanoid morphology",
+        "production_costume_descriptor": "minimal harness or species-appropriate gear",
+        "production_silhouette": "none documented"
+      },
+      "evidence_summary": [
+        "[CH007] CHAPTER VII. (query appears in paragraph preview)",
+        "[CH011] CHAPTER XI. (query appears in paragraph preview)",
+        "[CH006] CHAPTER VI. (book index hit)"
+      ]
+    },
+    {
+      "character_id": "the_duchess",
+      "display_name": "The Duchess",
+      "entity_kind": "individual",
+      "first_seen_chapter": "CH009",
+      "chapter_mentions": [
+        "CH009"
+      ],
+      "synthesis_mode": "synthesized",
+      "pre_fallback_audit": {
+        "total_prompt_critical_fields": 10,
+        "missing_count": 9,
+        "present_count": 1,
+        "missing_fields": [
+          "identity_baseline",
+          "age_presence",
+          "physical_build",
+          "origin_or_historical_context",
+          "movement_language",
+          "physical_traits",
+          "costume_signature",
+          "distinguishing_features",
+          "state_variants"
+        ],
+        "present_fields": [
+          "stable_visual_summary"
+        ],
+        "needs_visual_production_fallback": true
+      },
+      "fallback_attempted": true,
+      "fallback_method": "deterministic",
+      "fallback_reason": "missing_prompt_critical_fields",
+      "fallback_result_audit": {
+        "status": "generated",
+        "fallback_bucket": "human",
+        "filled_count": 7,
+        "empty_count": 1,
+        "filled_fields": [
+          "production_identity_descriptor",
+          "production_body_descriptor",
+          "production_face_descriptor",
+          "production_costume_descriptor",
+          "production_silhouette",
+          "production_movement_descriptor",
+          "negative_terms"
+        ],
+        "empty_fields": [
+          "production_state_variants"
+        ],
+        "non_empty": true
+      },
+      "fallback_preview": {
+        "production_identity_descriptor": "human with period-appropriate appearance",
+        "production_body_descriptor": "human build and proportions",
+        "production_costume_descriptor": "period-appropriate clothing",
+        "production_silhouette": "upright human silhouette"
+      },
+      "evidence_summary": [
+        "[CH004] CHAPTER IV. (query appears in paragraph preview)",
+        "[CH006] CHAPTER VI. (query appears in paragraph preview)",
+        "[CH008] CHAPTER VIII. (query appears in paragraph preview)"
+      ]
+    },
+    {
+      "character_id": "the_gryphon",
+      "display_name": "the_gryphon",
+      "entity_kind": "group",
+      "first_seen_chapter": "CH009",
+      "chapter_mentions": [
+        "CH009",
+        "CH010"
+      ],
+      "synthesis_mode": "synthesized",
+      "pre_fallback_audit": {
+        "total_prompt_critical_fields": 10,
+        "missing_count": 4,
+        "present_count": 6,
+        "missing_fields": [
+          "age_presence",
+          "origin_or_historical_context",
+          "movement_language",
+          "costume_signature"
+        ],
+        "present_fields": [
+          "identity_baseline",
+          "physical_build",
+          "stable_visual_summary",
+          "physical_traits",
+          "distinguishing_features",
+          "state_variants"
+        ],
+        "needs_visual_production_fallback": true
+      },
+      "fallback_attempted": true,
+      "fallback_method": "deterministic",
+      "fallback_reason": "missing_prompt_critical_fields",
+      "fallback_result_audit": {
+        "status": "generated",
+        "fallback_bucket": "group_or_horde",
+        "filled_count": 8,
+        "empty_count": 0,
+        "filled_fields": [
+          "production_identity_descriptor",
+          "production_body_descriptor",
+          "production_face_descriptor",
+          "production_costume_descriptor",
+          "production_silhouette",
+          "production_movement_descriptor",
+          "production_state_variants",
+          "negative_terms"
+        ],
+        "empty_fields": [],
+        "non_empty": true
+      },
+      "fallback_preview": {
+        "production_identity_descriptor": "A winged, human-scale entity.",
+        "production_body_descriptor": "human_scale; winged morphology.; winged",
+        "production_costume_descriptor": "repeatable group uniform or martial gear",
+        "production_silhouette": "winged anatomy; human_scale; winged morphology."
+      },
+      "evidence_summary": [
+        "[CH009] CHAPTER IX. (query appears in paragraph preview)",
+        "[CH010] CHAPTER X. (query appears in paragraph preview)",
+        "[CH011] CHAPTER XI. (query appears in paragraph preview)"
+      ]
+    },
+    {
+      "character_id": "the_king_of_hearts",
+      "display_name": "The King of Hearts",
+      "entity_kind": "individual",
+      "first_seen_chapter": "CH009",
+      "chapter_mentions": [
+        "CH009"
+      ],
+      "synthesis_mode": "synthesized",
+      "pre_fallback_audit": {
+        "total_prompt_critical_fields": 10,
+        "missing_count": 7,
+        "present_count": 3,
+        "missing_fields": [
+          "age_presence",
+          "physical_build",
+          "origin_or_historical_context",
+          "movement_language",
+          "costume_signature",
+          "distinguishing_features",
+          "state_variants"
+        ],
+        "present_fields": [
+          "identity_baseline",
+          "stable_visual_summary",
+          "physical_traits"
+        ],
+        "needs_visual_production_fallback": true
+      },
+      "fallback_attempted": true,
+      "fallback_method": "deterministic",
+      "fallback_reason": "missing_prompt_critical_fields",
+      "fallback_result_audit": {
+        "status": "generated",
+        "fallback_bucket": "human",
+        "filled_count": 7,
+        "empty_count": 1,
+        "filled_fields": [
+          "production_identity_descriptor",
+          "production_body_descriptor",
+          "production_face_descriptor",
+          "production_costume_descriptor",
+          "production_silhouette",
+          "production_movement_descriptor",
+          "negative_terms"
+        ],
+        "empty_fields": [
+          "production_state_variants"
+        ],
+        "non_empty": true
+      },
+      "fallback_preview": {
+        "production_identity_descriptor": "A human-scale individual of royal status.",
+        "production_body_descriptor": "bipedal morphology",
+        "production_costume_descriptor": "period-appropriate clothing",
+        "production_silhouette": "upright human silhouette"
+      },
+      "evidence_summary": [
+        "[CH008] CHAPTER VIII. (book index hit)",
+        "[CH011] CHAPTER XI. (book index hit)",
+        "[CH001] CHAPTER I. (book index hit)"
+      ]
+    },
+    {
+      "character_id": "the_mock_turtle",
+      "display_name": "the_mock_turtle",
+      "entity_kind": "individual",
+      "first_seen_chapter": "CH009",
+      "chapter_mentions": [
+        "CH009",
+        "CH010"
+      ],
+      "synthesis_mode": "synthesized",
+      "pre_fallback_audit": {
+        "total_prompt_critical_fields": 10,
+        "missing_count": 6,
+        "present_count": 4,
+        "missing_fields": [
+          "identity_baseline",
+          "age_presence",
+          "physical_build",
+          "origin_or_historical_context",
+          "movement_language",
+          "costume_signature"
+        ],
+        "present_fields": [
+          "stable_visual_summary",
+          "physical_traits",
+          "distinguishing_features",
+          "state_variants"
+        ],
+        "needs_visual_production_fallback": true
+      },
+      "fallback_attempted": true,
+      "fallback_method": "deterministic",
+      "fallback_reason": "missing_prompt_critical_fields",
+      "fallback_result_audit": {
+        "status": "generated",
+        "fallback_bucket": "small_creature",
+        "filled_count": 8,
+        "empty_count": 0,
+        "filled_fields": [
+          "production_identity_descriptor",
+          "production_body_descriptor",
+          "production_face_descriptor",
+          "production_costume_descriptor",
+          "production_silhouette",
+          "production_movement_descriptor",
+          "production_state_variants",
+          "negative_terms"
+        ],
+        "empty_fields": [],
+        "non_empty": true
+      },
+      "fallback_preview": {
+        "production_identity_descriptor": "small non-human creature",
+        "production_body_descriptor": "primary_type: creature; morphology: unknown",
+        "production_costume_descriptor": "natural hide or minimal covering",
+        "production_silhouette": "feature 1 (unknown)"
+      },
+      "evidence_summary": [
+        "[CH009] CHAPTER IX. (query appears in paragraph preview)",
+        "[CH010] CHAPTER X. (query appears in paragraph preview)",
+        "[CH001] CHAPTER I. (book index hit)"
+      ]
+    },
+    {
+      "character_id": "the_queen_of_hearts",
+      "display_name": "the_queen_of_hearts",
+      "entity_kind": "individual",
+      "first_seen_chapter": "CH009",
+      "chapter_mentions": [
+        "CH009"
+      ],
+      "synthesis_mode": "synthesized",
+      "pre_fallback_audit": {
+        "total_prompt_critical_fields": 10,
+        "missing_count": 7,
+        "present_count": 3,
+        "missing_fields": [
+          "age_presence",
+          "physical_build",
+          "origin_or_historical_context",
+          "movement_language",
+          "costume_signature",
+          "distinguishing_features",
+          "state_variants"
+        ],
+        "present_fields": [
+          "identity_baseline",
+          "stable_visual_summary",
+          "physical_traits"
+        ],
+        "needs_visual_production_fallback": true
+      },
+      "fallback_attempted": true,
+      "fallback_method": "deterministic",
+      "fallback_reason": "missing_prompt_critical_fields",
+      "fallback_result_audit": {
+        "status": "generated",
+        "fallback_bucket": "human",
+        "filled_count": 7,
+        "empty_count": 1,
+        "filled_fields": [
+          "production_identity_descriptor",
+          "production_body_descriptor",
+          "production_face_descriptor",
+          "production_costume_descriptor",
+          "production_silhouette",
+          "production_movement_descriptor",
+          "negative_terms"
+        ],
+        "empty_fields": [
+          "production_state_variants"
+        ],
+        "non_empty": true
+      },
+      "fallback_preview": {
+        "production_identity_descriptor": "human-scale bipedal figure",
+        "production_body_descriptor": "human morphology",
+        "production_costume_descriptor": "period-appropriate clothing",
+        "production_silhouette": "upright human silhouette"
+      },
+      "evidence_summary": [
+        "[CH011] CHAPTER XI. (query appears in paragraph preview)",
+        "[CH008] CHAPTER VIII. (book index hit)",
+        "[CH006] CHAPTER VI. (book index hit)"
+      ]
+    },
+    {
+      "character_id": "bill",
+      "display_name": "Bill",
+      "entity_kind": "individual",
+      "first_seen_chapter": "CH012",
+      "chapter_mentions": [
+        "CH012"
+      ],
+      "synthesis_mode": "synthesized",
+      "pre_fallback_audit": {
+        "total_prompt_critical_fields": 10,
+        "missing_count": 3,
+        "present_count": 7,
+        "missing_fields": [
+          "age_presence",
+          "origin_or_historical_context",
+          "costume_signature"
+        ],
+        "present_fields": [
+          "identity_baseline",
+          "physical_build",
+          "movement_language",
+          "stable_visual_summary",
+          "physical_traits",
+          "distinguishing_features",
+          "state_variants"
+        ],
+        "needs_visual_production_fallback": true
+      },
+      "fallback_attempted": true,
+      "fallback_method": "deterministic",
+      "fallback_reason": "missing_prompt_critical_fields",
+      "fallback_result_audit": {
+        "status": "insufficient_context",
+        "fallback_bucket": "unknown_reference",
+        "filled_count": 6,
+        "empty_count": 2,
+        "filled_fields": [
+          "production_identity_descriptor",
+          "production_body_descriptor",
+          "production_face_descriptor",
+          "production_silhouette",
+          "production_movement_descriptor",
+          "production_state_variants"
+        ],
+        "empty_fields": [
+          "production_costume_descriptor",
+          "negative_terms"
+        ],
+        "non_empty": true
+      },
+      "fallback_preview": {
+        "production_identity_descriptor": "A lizard serving as a juror.",
+        "production_body_descriptor": "small scale; lizard morphology; Lizard morphology",
+        "production_costume_descriptor": "unknown",
+        "production_silhouette": "Lizard anatomy; small scale; lizard morphology"
+      },
+      "evidence_summary": [
+        "[source:C:/FilmCreator/projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH012/bill.md] Physical Description: A lizard serving as a juror; he is knocked over when the jury box tips and later has ink spilled on him.",
+        "[CH004] CHAPTER IV. (query appears in paragraph preview)",
+        "[CH009] CHAPTER IX. (query appears in paragraph preview)",
+        "[CH012] CHAPTER XII. (query appears in paragraph preview)",
+        "[CH012 p55-p57] \u201cWhy, there they are!\u201d said the King triumphantly, pointing to the tarts on the table. \u201cNothing can be clearer than _that_. Then again\u2014\u2018_before she had this fit_\u2014\u2019 you never had fi..."
+      ]
+    },
+    {
+      "character_id": "the_king",
+      "display_name": "The King",
+      "entity_kind": "individual",
+      "first_seen_chapter": "CH012",
+      "chapter_mentions": [
+        "CH012"
+      ],
+      "synthesis_mode": "synthesized",
+      "pre_fallback_audit": {
+        "total_prompt_critical_fields": 10,
+        "missing_count": 3,
+        "present_count": 7,
+        "missing_fields": [
+          "age_presence",
+          "physical_build",
+          "origin_or_historical_context"
+        ],
+        "present_fields": [
+          "identity_baseline",
+          "movement_language",
+          "stable_visual_summary",
+          "physical_traits",
+          "costume_signature",
+          "distinguishing_features",
+          "state_variants"
+        ],
+        "needs_visual_production_fallback": true
+      },
+      "fallback_attempted": true,
+      "fallback_method": "deterministic",
+      "fallback_reason": "missing_prompt_critical_fields",
+      "fallback_result_audit": {
+        "status": "insufficient_context",
+        "fallback_bucket": "unknown_reference",
+        "filled_count": 7,
+        "empty_count": 1,
+        "filled_fields": [
+          "production_identity_descriptor",
+          "production_body_descriptor",
+          "production_face_descriptor",
+          "production_costume_descriptor",
+          "production_silhouette",
+          "production_movement_descriptor",
+          "production_state_variants"
+        ],
+        "empty_fields": [
+          "negative_terms"
+        ],
+        "non_empty": true
+      },
+      "fallback_preview": {
+        "production_identity_descriptor": "An authoritative but somewhat bumbling figure.",
+        "production_body_descriptor": "carries a notebook",
+        "production_costume_descriptor": "carries or utilizes a notebook for reading rules and interpreting evidence.",
+        "production_silhouette": "often seen with a notebook"
+      },
+      "evidence_summary": [
+        "[source:C:/FilmCreator/projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH012/the_king.md] Physical Description: An authoritative but somewhat bumbling figure who reads from a notebook to issue rules and interpret evidence.",
+        "[CH008] CHAPTER VIII. (query appears in paragraph preview)",
+        "[CH009] CHAPTER IX. (query appears in paragraph preview)",
+        "[CH011] CHAPTER XI. (query appears in paragraph preview)"
+      ]
+    },
+    {
+      "character_id": "the_knave",
+      "display_name": "the_knave",
+      "entity_kind": "individual",
+      "first_seen_chapter": "CH012",
+      "chapter_mentions": [
+        "CH012"
+      ],
+      "synthesis_mode": "synthesized",
+      "pre_fallback_audit": {
+        "total_prompt_critical_fields": 10,
+        "missing_count": 2,
+        "present_count": 8,
+        "missing_fields": [
+          "age_presence",
+          "origin_or_historical_context"
+        ],
+        "present_fields": [
+          "identity_baseline",
+          "physical_build",
+          "movement_language",
+          "stable_visual_summary",
+          "physical_traits",
+          "costume_signature",
+          "distinguishing_features",
+          "state_variants"
+        ],
+        "needs_visual_production_fallback": true
+      },
+      "fallback_attempted": true,
+      "fallback_method": "deterministic",
+      "fallback_reason": "missing_prompt_critical_fields",
+      "fallback_result_audit": {
+        "status": "insufficient_context",
+        "fallback_bucket": "unknown_reference",
+        "filled_count": 7,
+        "empty_count": 1,
+        "filled_fields": [
+          "production_identity_descriptor",
+          "production_body_descriptor",
+          "production_face_descriptor",
+          "production_costume_descriptor",
+          "production_silhouette",
+          "production_movement_descriptor",
+          "production_state_variants"
+        ],
+        "empty_fields": [
+          "negative_terms"
+        ],
+        "non_empty": true
+      },
+      "fallback_preview": {
+        "production_identity_descriptor": "A figure constructed entirely of cardboard.",
+        "production_body_descriptor": "Flat, rigid, or structured mass composed of cardboard material.; Physically incapable of swimming due to material composition",
+        "production_costume_descriptor": "Entirely made of cardboard.",
+        "production_silhouette": "Composed entirely of cardboard; Flat, rigid, or structured mass composed of cardboard material."
+      },
+      "evidence_summary": [
+        "[source:C:/FilmCreator/projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH012/the_knave.md] Physical Description: A figure made entirely of cardboard, making him physically incapable of swimming.",
+        "[CH008] CHAPTER VIII. (query appears in paragraph preview)",
+        "[CH011] CHAPTER XI. (query appears in paragraph preview)",
+        "[CH012] CHAPTER XII. (query appears in paragraph preview)"
+      ]
+    },
+    {
+      "character_id": "the_queen",
+      "display_name": "the_queen",
+      "entity_kind": "individual",
+      "first_seen_chapter": "CH012",
+      "chapter_mentions": [
+        "CH012"
+      ],
+      "synthesis_mode": "synthesized",
+      "pre_fallback_audit": {
+        "total_prompt_critical_fields": 10,
+        "missing_count": 6,
+        "present_count": 4,
+        "missing_fields": [
+          "age_presence",
+          "physical_build",
+          "origin_or_historical_context",
+          "movement_language",
+          "costume_signature",
+          "distinguishing_features"
+        ],
+        "present_fields": [
+          "identity_baseline",
+          "stable_visual_summary",
+          "physical_traits",
+          "state_variants"
+        ],
+        "needs_visual_production_fallback": true
+      },
+      "fallback_attempted": true,
+      "fallback_method": "deterministic",
+      "fallback_reason": "missing_prompt_critical_fields",
+      "fallback_result_audit": {
+        "status": "insufficient_context",
+        "fallback_bucket": "unknown_reference",
+        "filled_count": 3,
+        "empty_count": 5,
+        "filled_fields": [
+          "production_identity_descriptor",
+          "production_body_descriptor",
+          "production_state_variants"
+        ],
+        "empty_fields": [
+          "production_face_descriptor",
+          "production_costume_descriptor",
+          "production_silhouette",
+          "production_movement_descriptor",
+          "negative_terms"
+        ],
+        "non_empty": true
+      },
+      "fallback_preview": {
+        "production_identity_descriptor": "A temperamental and furious ruler.",
+        "production_body_descriptor": "known for sudden outbursts of anger",
+        "production_costume_descriptor": "unknown",
+        "production_silhouette": "unknown"
+      },
+      "evidence_summary": [
+        "[source:C:/FilmCreator/projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH012/the_queen.md] Physical Description: A temperamental and furious ruler known for sudden outbursts of anger.",
+        "[CH006] CHAPTER VI. (query appears in paragraph preview)",
+        "[CH007] CHAPTER VII. (query appears in paragraph preview)",
+        "[CH008] CHAPTER VIII. (query appears in paragraph preview)"
+      ]
+    }
+  ]
 }

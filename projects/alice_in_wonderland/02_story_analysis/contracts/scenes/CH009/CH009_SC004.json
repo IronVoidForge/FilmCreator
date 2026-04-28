@@ -1,0 +1,361 @@
+{
+  "scene_id": "CH009_SC004",
+  "chapter_id": "CH009",
+  "scene_title": "SC004",
+  "purpose": "To transition Alice from the court to a more melancholic, surreal environment.",
+  "summary": "After the Queen sends Alice off to find the Mock Turtle (explaining it is soup), Alice meets the Gryphon and they travel toward the sound of sobbing.",
+  "emotional_arc": "From the high energy of the court to a more whimsical, searching mood.",
+  "production_intent": "Transition the visual energy from the high-stakes court environment to a whimsical, searching landscape as Alice moves toward new allies.",
+  "scene_short_description": "A young girl leaves a royal court to walk through a sunlit landscape with a large creature.",
+  "scene_primary_scale_story_point": "The physical scale difference between Alice and the Gryphon is a central visual element.",
+  "scene_required_anchor_catalog": [
+    "croquet_ground_field",
+    "sunny path"
+  ],
+  "scene_start_state": "High energy interaction in the court as the Queen gives orders.",
+  "scene_end_state": "A wide shot of Alice walking alongside the much larger Gryphon toward a distant sound.",
+  "dominant_action_line": "Alice departs the court and joins the Gryphon to find the Mock Turtle.",
+  "scene_spatial_layout": [
+    "The physical scale/size difference between Alice and the Gryphon during their walk.",
+    "Visual consistency of the environment as it transitions from the croquet-ground to the sunny path where the Gryphon is found."
+  ],
+  "character_spatial_map": [
+    "The Queen and King stand as authority figures in the court.",
+    "Alice moves from the court towards the path.",
+    "The Gryphon walks alongside or ahead of Alice."
+  ],
+  "environment_subzones": [
+    "croquet_ground_field",
+    "sunny path"
+  ],
+  "scene_event_chain": [
+    "event 1: The Queen sends Alice off to find the Mock Turtle.",
+    "event 2: Alice meets the Gryphon in the transition area.",
+    "event 3: Alice and the Gryphon begin their walk toward the sound of sobbing."
+  ],
+  "entry_vectors": [
+    "The court boundary"
+  ],
+  "exit_vectors": [
+    "The path leading away from the kitchen/field"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT020: Transition from court to path",
+    "BT020 -> BT030: Scale reveal of Alice and Gryphon"
+  ],
+  "characters_required": [
+    {
+      "label": "Alice",
+      "canonical_id": "alice",
+      "display_name": "Alice",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH009/alice.md",
+      "notes": "Direct registry match for 'alice'."
+    },
+    {
+      "label": "The Queen of Hearts",
+      "canonical_id": "the_queen_of_hearts",
+      "display_name": "the_queen_of_hearts",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH009/the_queen_of_hearts.md",
+      "notes": "Direct registry match for 'the_queen_of_hearts'."
+    },
+    {
+      "label": "The King of Hearts",
+      "canonical_id": "the_king_of_hearts",
+      "display_name": "The King of Hearts",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH009/the_king_of_hearts.md",
+      "notes": "Direct registry match for 'the_king_of_hearts'."
+    },
+    {
+      "label": "The Gryphon",
+      "canonical_id": "the_gryphon",
+      "display_name": "the_gryphon",
+      "status": "canonical",
+      "entity_kind": "group",
+      "resolution_score": 138,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH009/the_gryphon.md",
+      "notes": "Direct registry match for 'the_gryphon'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "The Croquet-ground transitioning into a sunny area/pathway",
+      "canonical_id": "croquet_ground_field",
+      "display_name": "croquet_ground_field",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 92,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/environment_breakdowns/chapters/CH009/croquet_ground_field.md",
+      "notes": "Chapter-local environment alias match for 'The Croquet-ground transitioning into a sunny area/pathway' (key_overlap=2, label_overlap=2, context_overlap=4)."
+    }
+  ],
+  "continuity_constraints": [
+    "Maintain visual consistency during transition from croquet_ground_field to sunny path",
+    "Manage physical scale difference between Alice (small child size) and the Gryvalent Gryphon"
+  ],
+  "visual_coverage_families": [
+    "Medium interaction between Alice and the Royal Court",
+    "Wide landscape walk of Alice and the Gryphon"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "The Queen sends Alice off to find the Mock Turtle",
+      "purpose": "",
+      "action_start": "The Queen gestures toward the exit",
+      "action_end": "Alice turns her back on the court",
+      "active_subjects": [
+        "the_queen_of_hearts",
+        "alice"
+      ],
+      "passive_subjects": [
+        "the_king_of_hearts"
+      ],
+      "spatial_context": "croquet_ground_field",
+      "blocking_hint": "Queen is dominant; Alice moves away from center",
+      "environment_subzone": "croquet_ground_field",
+      "continuity_focus": "High energy court setting",
+      "coverage_hint": "Medium shot of interaction",
+      "coverage_priority": "high",
+      "handoff_to_next": "Alice leaves the court"
+    },
+    {
+      "beat_id": "BT020",
+      "summary": "Alice meets the Gryphon",
+      "purpose": "",
+      "action_start": "Alice walks into the sunny path area",
+      "action_end": "The Gryphon and Alice stand in frame together",
+      "active_subjects": [
+        "alice",
+        "the_gryphon"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "sunny_path",
+      "blocking_hint": "Alice is small; Gryphon is large",
+      "environment_subzone": "sunny_path",
+      "continuity_focus": "Transition from court to path visual consistency",
+      "coverage_hint": "Wide shot showing scale",
+      "coverage_priority": "medium",
+      "handoff_to_next": "The duo begins the journey"
+    },
+    {
+      "beat_id": "BT030",
+      "summary": "The pair travels toward the sobbing",
+      "purpose": "",
+      "action_start": "Alice and the Gryphon begin walking",
+      "action_end": "They move away from the camera towards the sound of sobbing",
+      "active_subjects": [
+        "alice",
+        "the_gryphon"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "sunny_path",
+      "blocking_hint": "Walking side-by-side with scale difference visible",
+      "environment_subzone": "sunny_path",
+      "continuity_focus": "Scale relationship between Alice and Gryphon is maintained",
+      "coverage_hint": "Wide shot of landscape walk",
+      "coverage_priority": "medium",
+      "handoff_to_next": "The journey continues"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish authority",
+      "planned_shot_moment_summary": "The Queen dismisses Alice",
+      "primary_subject_seed": "the_queen_of_hearts",
+      "secondary_subjects_seed": [
+        "alice",
+        "the_king_of_hearts"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "croquet_ground_field",
+      "planned_shot_required_anchor_1": "croquet_ground_field",
+      "planned_shot_scale_proof_detail": "Alice is child-sized",
+      "start_state_seed": "Queen speaking",
+      "end_state_seed": "Alice turning to leave",
+      "action_seed": "The Queen points toward the exit",
+      "blocking_seed": [
+        "Queen central",
+        "Alice moving away"
+      ],
+      "shot_size": "medium_close",
+      "camera_angle": "eye_level",
+      "lens_family": "normal",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "hard_directional",
+      "primary_subject_angle": "front_three_quarter_left"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT020",
+      "narrative_function": "introduce scale",
+      "planned_shot_moment_summary": "Alice meets the Gryphon",
+      "primary_subject_seed": "the_gryphon",
+      "secondary_subjects_seed": [
+        "alice"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "sunny_path",
+      "planned_shot_required_anchor_1": "sunny_path",
+      "planned_shot_scale_proof_detail": "Gryphon vs Alice height difference",
+      "start_state_seed": "Alice walking alone",
+      "end_state_seed": "Gryphon enters frame",
+      "action_seed": "The Gryphon approaches Alice",
+      "blocking_seed": [
+        "Alice in foreground",
+        "Gryphon entering from side"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "",
+      "lens_family": "wide",
+      "camera_motion": "pan",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "profile_left"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT030",
+      "narrative_function": "travel sequence",
+      "planned_shot_moment_summary": "The duo walks toward the sobbing",
+      "primary_subject_seed": "alice",
+      "secondary_subjects_seed": [
+        "the_gryphon"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "sunny_path",
+      "planned_shot_required_anchor_1": "sunny_path",
+      "planned_shot_scale_proof_detail": "Alice's small stature vs Gryphon",
+      "start_state_seed": "Walking begins",
+      "end_state_seed": "Moving into distance",
+      "action_seed": "The pair walks in unison",
+      "blocking_seed": [
+        "Side-by-side walking"
+      ],
+      "shot_size": "full",
+      "camera_angle": "eye_level",
+      "lens_family": "wide",
+      "camera_motion": "track",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front_three_quarter_right"
+    }
+  ],
+  "unresolved_questions": [],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH009",
+      "scene_id": "CH009_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH009",
+      "scene_id": "CH009_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH009",
+      "scene_id": "CH009_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH009",
+      "scene_id": "CH009_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH009",
+      "scene_id": "CH009_SC004"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH009",
+      "source_path": "C:\\FilmCreator\\projects\\alice_in_wonderland\\02_story_analysis\\chapter_analysis\\CH009_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH009",
+      "source_path": "projects/alice_in_wonderland/01_source/chapters/CH009_chapter_ix.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH010",
+      "source_path": "projects/alice_in_wonderland/01_source/chapters/CH010_chapter_x.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH011",
+      "source_path": "projects/alice_in_wonderland/01_source/chapters/CH011_chapter_xi.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH009",
+      "canonical_id": "alice"
+    }
+  ],
+  "evidence_summary": [
+    "[CH009_SC004] Purpose: To transition Alice from the court to a more melancholic, surreal environment.",
+    "[CH009_SC004] Summary: After the Queen sends Alice off to find the Mock Turtle (explaining it is soup), Alice meets the Gryphon and they travel toward the sound of sobbing.",
+    "[CH009_SC004] Emotional arc: From the high energy of the court to a more whimsical, searching mood.",
+    "[CH009_SC004] Coverage: Medium: Interaction between Alice and the Queen/King. Wide: Alice walking with the Gryphon through the landscape.",
+    "[CH009_SC004] Continuity: The physical scale/size difference between Alice and the Gryphon during their walk. Visual consistency of the environment as it transitions from the croquet-ground to the sunny path where the Gryphon is found.",
+    "[CH009] Chapter summary: **Setting:** A path leading away from the kitchen; a croquet-ground with players/soldiers; a sunny area where a Gryphon sleeps; a rocky ledge where the Mock Turtle sits. **Characters:** * **Alice:** Curious, polite bu...",
+    "[CH009] CHAPTER IX. (book index hit)",
+    "[CH010] CHAPTER X. (book index hit)",
+    "[CH011] CHAPTER XI. (book index hit)",
+    "Character alice: Alice is a young girl characterized by extreme, sudden changes in physical scale. Her size fluctuates between the stature of a small child (approximately two feet tall) and colossal proportions reaching up to nine feet or even nearly two mi..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH009_SC004\n\n## Production Intent\nTransition the visual energy from the high-stakes court environment to a whimsical, searching landscape as Alice moves toward new allies.\n\n## Required Cast\n- alice\n- the_queen_of_hearts\n- the_king_of_hearts\n- the_gryphon\n\n## Required Environments\n- croquet_ground_field\n- sunny_path (transitioned from field)\n\n## Continuity Constraints\n- Maintain visual consistency during transition from croquet_ground_field to sunny path.\n- Manage physical scale difference between Alice (small child size) and the Gryphon.\n\n## Beat List\n- The Queen sends Alice off to find the Mock Turtle.\n- Alice meets the Gryphon in the transition area.\n- Alice and the Gryphon begin their walk toward the sound of sobbing.",
+  "metadata": {
+    "artifact_id": "CH009_SC004_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "ba874b3f405abbddb8c54cc7dcba9f93e25d3da7",
+    "created_at_utc": "2026-04-28T00:40:25.887405+00:00",
+    "updated_at_utc": "2026-04-28T00:40:25.887405+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH009_SC004",
+        "version": "6bec431320d5eba309cdd9edbb71f19c1af67f99"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH009_SC004",
+        "version": "b44876b0d23349b4dd6da0c767b73cbb713bb013"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH009_SC004",
+        "version": "ab2e20e2fe01ab3babe16587ad2d60638505caea"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-28T00:41:06.522152+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "ba874b3f405abbddb8c54cc7dcba9f93e25d3da7"
+      }
+    ]
+  }
+}

@@ -1,0 +1,403 @@
+{
+  "scene_id": "CH002_SC005",
+  "chapter_id": "CH002",
+  "scene_title": "SC005",
+  "purpose": "Transition from a solo/duo interaction to a group ensemble movement.",
+  "summary": "The pool becomes crowded with various animals (Duck, Dodo, Lory, Eaglet). Alice leads the collective group of creatures as they swim toward the shore to escape the water.",
+  "emotional_arc": "Chaos $\\rightarrow$ Purposeful movement",
+  "production_intent": "Coordinate a large-scale ensemble movement of diverse animal characters within the water environment to transition from chaotic swimming to purposeful shoreward travel.",
+  "scene_short_description": "A crowded group of animals swims collectively from the water towards the shoreline.",
+  "scene_primary_scale_story_point": "Alice leads a mass of smaller creatures as she moves through the water.",
+  "scene_required_anchor_catalog": [
+    "The Pool of Tears (water surface)",
+    "The Shore (land boundary)"
+  ],
+  "scene_start_state": "A crowded pool filled with various animals swimming in chaotic motion.",
+  "scene_end_state": "The group moves as a single unit toward the shore to escape the water.",
+  "dominant_action_line": "Alice leads the collective group of creatures as they swim toward the shore.",
+  "scene_spatial_layout": [
+    "The Pool of Tears serves as the fluid medium for movement.",
+    "The Shore acts as the destination and exit point."
+  ],
+  "character_spatial_map": [
+    "Alice leads the front of the animal group.",
+    "The Duck, Dodo, Lory, and Eaglet follow in a collective cluster."
+  ],
+  "environment_subzones": [
+    "The Pool of Tears (water)",
+    "The Shore (land interface)"
+  ],
+  "scene_event_chain": [
+    "event 1: The pool becomes crowded with the Duck, Dodo, Lory, and Eaglet.",
+    "event 2: Alice leads the collective group of creatures through the water.",
+    "event 3: The animals swim toward the shore to escape the water."
+  ],
+  "entry_vectors": [
+    "The animal group enters from the deep pool area."
+  ],
+  "exit_vectors": [
+    "The group moves onto the shore."
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT02: Chaos of crowding transitions to organized swimming.",
+    "BT02 -> BT03: Swimming transitions to reaching the shoreline."
+  ],
+  "characters_required": [
+    {
+      "label": "Alice",
+      "canonical_id": "alice",
+      "display_name": "Alice",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH002/alice.md",
+      "notes": "Direct registry match for 'alice'."
+    },
+    {
+      "label": "The Mouse",
+      "canonical_id": "the_mouse",
+      "display_name": "the_mouse",
+      "status": "canonical",
+      "entity_kind": "group",
+      "resolution_score": 138,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH002/the_mouse.md",
+      "notes": "Direct registry match for 'the_mouse'."
+    },
+    {
+      "label": "The Duck",
+      "canonical_id": null,
+      "display_name": "The Duck",
+      "status": "review",
+      "entity_kind": "individual",
+      "resolution_score": 16,
+      "source_path": "",
+      "notes": "Low-confidence character match requires review."
+    },
+    {
+      "label": "The Dodo",
+      "canonical_id": null,
+      "display_name": "The Dodo",
+      "status": "review",
+      "entity_kind": "individual",
+      "resolution_score": 16,
+      "source_path": "",
+      "notes": "Low-confidence character match requires review."
+    },
+    {
+      "label": "The Lory",
+      "canonical_id": null,
+      "display_name": "The Lory",
+      "status": "review",
+      "entity_kind": "individual",
+      "resolution_score": 16,
+      "source_path": "",
+      "notes": "Low-confidence character match requires review."
+    },
+    {
+      "label": "The Eaglet",
+      "canonical_id": null,
+      "display_name": "The Eaglet",
+      "status": "review",
+      "entity_kind": "individual",
+      "resolution_score": 16,
+      "source_path": "",
+      "notes": "Low-confidence character match requires review."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "The Pool of Tears / The Shore",
+      "canonical_id": "the_hall_and_pool",
+      "display_name": "the_hall_and_pool",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 58,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/environment_breakdowns/chapters/CH002/the_hall_and_pool.md",
+      "notes": "Chapter-local environment alias match for 'The Pool of Tears / The Shore' (key_overlap=1, label_overlap=1, context_overlap=4)."
+    }
+  ],
+  "continuity_constraints": [
+    "The specific count and relative order of Duck, Dodo, Lory, and Eaglet in the swim line",
+    "Directional travel toward the shore vs. the pool center"
+  ],
+  "visual_coverage_families": [
+    "Wide shots of the group swimming",
+    "Ensemble tracking shots along the water'ss edge"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "The pool becomes crowded with animals",
+      "purpose": "",
+      "action_start": "Animals enter the water frame",
+      "action_end": "The group is densely packed in the pool",
+      "active_subjects": [
+        "The Duck",
+        "The Dodo",
+        "The Lory",
+        "The Eaglet"
+      ],
+      "passive_subjects": [
+        "the_mouse"
+      ],
+      "spatial_context": "The Pool of Tears",
+      "blocking_hint": "Scattered movement within the water",
+      "environment_subzone": "the_hall_and_pool",
+      "continuity_focus": "Animal count must be visible",
+      "coverage_hint": "Wide shot of crowded pool",
+      "coverage_priority": "high",
+      "handoff_to_next": "Transition to collective movement."
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "Alice leads the group through the water",
+      "purpose": "",
+      "action_start": "Alice begins leading the swim",
+      "action_end": "The animals follow her lead in a line",
+      "active_subjects": [
+        "alice",
+        "The Duck",
+        "The Dodo",
+        "The Lory",
+        "The Eaglet"
+      ],
+      "passive_subjects": [
+        "the_mouse"
+      ],
+      "spatial_context": "The Pool of Tears",
+      "blocking_hint": "Alice at the front with animals trailing",
+      "environment_subzone": "the_hall_and_pool",
+      "continuity_focus": "Maintain relative scale between Alice and animals",
+      "coverage_hint": "Tracking shot of the group",
+      "coverage_priority": "medium",
+      "handoff_to_next": "Movement toward the shore."
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "The group swims toward the shore to escape",
+      "purpose": "",
+      "action_start": "The collective group moves toward land",
+      "action_end": "The group reaches the shoreline edge",
+      "active_subjects": [
+        "alice",
+        "The Duck",
+        "The Dodo",
+        "The Lory",
+        "The Eaglet"
+      ],
+      "passive_subjects": [
+        "the_mouse"
+      ],
+      "spatial_context": "Transition from water to shore",
+      "blocking_hint": "Group moving in a single direction towards the land",
+      "environment_subzone": "the_hall_and_pool",
+      "continuity_focus": "Direction of travel must be consistent toward the shore",
+      "coverage_hint": "Wide shot tracking the shoreline approach",
+      "coverage_priority": "high",
+      "handoff_to_next": "The group exits the water."
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish chaos",
+      "planned_shot_moment_summary": "The pool fills with animals",
+      "primary_subject_seed": "the_mouse",
+      "secondary_subjects_seed": [
+        "The Duck",
+        "The Dodo",
+        "The Lory",
+        "The Eaglet"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "the_hall_and_pool",
+      "planned_shot_required_anchor_1": "the_hall_and_pool",
+      "planned_shot_scale_proof_detail": "crowded water surface",
+      "start_state_seed": "animals appearing in frame",
+      "end_state_seed": "group density established",
+      "action_seed": "various animals entering the pool space",
+      "blocking_seed": [
+        "scattered swimming"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "eye_level",
+      "lens_family": "wide",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "show leadership",
+      "planned_shot_moment_summary": "Alice leads the group",
+      "primary_subject_seed": "alice",
+      "secondary_subjects_seed": [
+        "The Duck",
+        "The Dodo",
+        "The Lory",
+        "The Eaglet"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "the_hall_and_pool",
+      "planned_shot_required_anchor_1": "the_hall_and_pool",
+      "planned_shot_scale_proof_detail": "Alice vs animal size",
+      "start_state_seed": "Alice begins leading the swim",
+      "end_state_seed": "group follows Alice",
+      "action_seed": "Alice swims forward with the group",
+      "blocking_seed": [
+        "linear movement"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "eye_level",
+      "lens_family": "wide",
+      "camera_motion": "track",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front_three_quarter_left"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "resolve movement",
+      "planned_shot_moment_summary": "The group reaches the shore",
+      "primary_subject_seed": "alice",
+      "secondary_subjects_seed": [
+        "The Duck",
+        "The Dodo",
+        "The Lory",
+        "The:%Eaglet"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "the_hall_and_pool",
+      "planned_shot_required_anchor_1": "the_hall_and_pool",
+      "planned_shot_scale_proof_detail": "water to land transition",
+      "start_state_seed": "group approaches shore",
+      "end_state_seed": "group reaches the edge",
+      "action_seed": "The group swims toward the shore to escape",
+      "blocking_seed": [
+        "approaching shoreline"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "low_angle",
+      "lens_family": "wide",
+      "camera_motion": "track",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "profile_right"
+    }
+  ],
+  "unresolved_questions": [
+    "Resolve The Duck -> The Duck",
+    "Resolve The Dodo -> The Dodo",
+    "Resolve The Lory -> The Lory",
+    "Resolve The Eaglet -> The Eaglet"
+  ],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH002",
+      "scene_id": "CH002_SC005"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH002",
+      "scene_id": "CH002_SC005"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH002",
+      "scene_id": "CH002_SC005"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH002",
+      "scene_id": "CH002_SC005"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH002",
+      "scene_id": "CH002_SC005"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH002",
+      "source_path": "C:\\FilmCreator\\projects\\alice_in_wonderland\\02_story_analysis\\chapter_analysis\\CH002_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH002",
+      "source_path": "projects/alice_in_wonderland/01_source/chapters/CH002_chapter_ii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH003",
+      "source_path": "projects/alice_in_wonderland/01_source/chapters/CH003_chapter_iii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH012",
+      "source_path": "projects/alice_in_wonderland/01_source/chapters/CH012_chapter_xii.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH002",
+      "canonical_id": "alice"
+    }
+  ],
+  "evidence_summary": [
+    "[CH002_SC005] Purpose: Transition from a solo/duo interaction to a group ensemble movement.",
+    "[CH002_SC005] Summary: The pool becomes crowded with various animals (Duck, Dodo, Lory, Eaglet). Alice leads the collective group of creatures as they swim toward the shore to escape the water.",
+    "[CH002_SC005] Emotional arc: Chaos $\\rightarrow$ Purposeful movement",
+    "[CH002_SC005] Coverage: Wide shots of the group swimming; ensemble tracking shots along the water's edge.",
+    "[CH002_SC005] Continuity: The number and order of animals in the group; the direction of travel toward the shore.",
+    "[CH002] Chapter summary: **Location: The Hall / The Garden Door** - **Visual State:** Alice is giant (over nine feet tall). Her head strikes the ceiling of the hall. - **Event:** Alice looks down at her feet, which appear distant and small fr...",
+    "[CH002] CHAPTER II. (book index hit)",
+    "[CH003] CHAPTER III. (book index hit)",
+    "[CH012] CHAPTER XII. (book index hit)",
+    "Character alice: Alice is a young girl characterized by extreme, sudden changes in physical scale. Her size fluctuates between the stature of a small child (approximately two feet tall) and colossal proportions reaching up to nine feet or even nearly two mi..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH002_SC005\n\n## Production Intent\nCoordinate a large-scale ensemble movement of diverse animal characters within the water environment to transition from chaotic swimming to purposeful shoreward travel.\n\n## Required Cast\n- Alice (alice)\n- The Mouse (the_mouse)\n\n- The Duck (The Duck)\n- The Dodo (The Dodo)\n- The Lory (The Lory)\n- The Eaglet (The Eaglet)\n\n## Required Environments\n- The Pool of Tears / The Shore (the_hall_and_pool)\n\n## Continuity Constraints\n- The specific count and relative order of Duck, Dodo, Lory, and Eaglet in the swim line.\n- Directional travel toward the shore vs. the pool center.\n\n## Beat List\n- BT001: The pool becomes crowded with animals.\n- BT002: Alice leads the group through the water.\n- BT003: The group swims toward the shore to escape.",
+  "metadata": {
+    "artifact_id": "CH002_SC005_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "68f66e7a6dac5d7539f42eee2bacc9a33c104d66",
+    "created_at_utc": "2026-04-28T00:33:42.906529+00:00",
+    "updated_at_utc": "2026-04-28T00:33:42.906529+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH002_SC005",
+        "version": "265c0bd9157f182c984fa055a4bd3b9c5fe07c7b"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH002_SC005",
+        "version": "22bada8f8ba37e1fa5706cc03410564ff56e501b"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH002_SC005",
+        "version": "a01f0755335a14447af455d2a5eef4cb5ac4a7dc"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-28T00:34:25.889587+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "68f66e7a6dac5d7539f42eee2bacc9a33c104d66"
+      }
+    ]
+  }
+}

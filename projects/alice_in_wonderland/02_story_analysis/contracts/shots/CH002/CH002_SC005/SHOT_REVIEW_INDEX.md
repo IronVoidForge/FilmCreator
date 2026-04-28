@@ -1,0 +1,17 @@
+# Shot Index
+
+- `SH001` - Handoff Medium 1: The pool becomes crowded with animals (type=handoff_medium, target=7.0s, beat_ids=BT001, cast=3, env=the_hall_and_pool, prev=(none), next=SH002)
+- `SH002` - Transition Wide 2: The pool becomes crowded with animals (type=transition_wide, target=10.8s, beat_ids=BT001, cast=3, env=the_hall_and_pool, prev=SH001, next=SH003)
+- `SH003` - Ceremonial Master 3: Alice leads the group through the water (type=ceremonial_master, target=10.0s, beat_ids=BT002, cast=3, env=the_hall_and_pool, prev=SH002, next=SH004)
+- `SH004` - Authority Single 4: Alice leads the group through the water (type=authority_single, target=6.5s, beat_ids=BT002, cast=3, env=the_hall_and_pool, prev=SH003, next=SH005)
+- `SH005` - Petitioner Group 5: Alice leads the group through the water (type=petitioner_group, target=6.5s, beat_ids=BT002, cast=3, env=the_hall_and_pool, prev=SH004, next=SH006)
+- `SH006` - Crowd Response 6: Alice leads the group through the water (type=crowd_response, target=6.5s, beat_ids=BT002, cast=3, env=the_hall_and_pool, prev=SH005, next=SH007)
+- `SH007` - Symbol Insert 7: Alice leads the group through the water (type=symbol_insert, target=5.0s, beat_ids=BT002, cast=3, env=the_hall_and_pool, prev=SH006, next=SH008)
+- `SH008` - Reaction Closeup 8: Alice leads the group through the water (type=reaction_closeup, target=6.5s, beat_ids=BT002, cast=2, env=the_hall_and_pool, prev=SH007, next=SH009)
+- `SH009` - Ceremonial Master 9: The group swims toward the shore to escape (type=ceremonial_master, target=10.8s, beat_ids=BT003, cast=3, env=the_hall_and_pool, prev=SH008, next=SH010)
+- `SH010` - Authority Single 10: The group swims toward the shore to escape (type=authority_single, target=7.0s, beat_ids=BT003, cast=3, env=the_hall_and_pool, prev=SH009, next=SH011)
+- `SH011` - Petitioner Group 11: The group swims toward the shore to escape (type=petitioner_group, target=7.0s, beat_ids=BT003, cast=3, env=the_hall_and_pool, prev=SH010, next=SH012)
+- `SH012` - Crowd Response 12: The group swims toward the shore to escape (type=crowd_response, target=7.0s, beat_ids=BT003, cast=3, env=the_hall_and_pool, prev=SH011, next=SH013)
+- `SH013` - Symbol Insert 13: The group swims toward the shore to escape (type=symbol_insert, target=5.4s, beat_ids=BT003, cast=3, env=the_hall_and_pool, prev=SH012, next=SH014)
+- `SH014` - Reaction Closeup 14: The group swims toward the shore to escape (type=reaction_closeup, target=7.0s, beat_ids=BT003, cast=2, env=the_hall_and_pool, prev=SH013, next=SH015)
+- `SH015` - Scale Proof Wide 15: The group swims toward the shore to escape (type=scale_proof_wide, target=10.8s, beat_ids=BT003, cast=3, env=the_hall_and_pool, prev=SH014, next=(none))

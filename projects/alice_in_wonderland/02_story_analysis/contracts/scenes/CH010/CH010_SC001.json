@@ -1,0 +1,354 @@
+{
+  "scene_id": "CH010_SC001",
+  "chapter_id": "CH010",
+  "scene_title": "SC001",
+  "purpose": "To introduce the whimsical, physical, and pun-heavy nature of the Mock Turtle and Gryphon through a dance.",
+  "summary": "The Mock Turtle and the Gryphon perform the \"Lobster Quadrille\" around Alice, stepping on her toes as they explain the dance. This is interspersed with the Mock Turtle's melancholic singing about whiting and snails, leading to a linguistic debate over puns.",
+  "emotional_arc": "From playful, rhythmic movement to whimsical confusion and melancholic whimsy.",
+  "production_intent": "Establish the whimsical and physical nature of the Mock Turtle and Gryphon through a rhythmic dance sequence that incorporates pun-heavy dialogue. The scene uses movement to contrast the creatures' playful energy with Alice's reactive confusion.",
+  "scene_short_description": "A whimsical seaside dance where two creatures circle a young girl with rhythmic, toe-stepping movements.",
+  "scene_primary_scale_story_point": "Alice fluctuates between child-sized and colossal proportions relative to the environment.",
+  "scene_required_anchor_catalog": [
+    "seaside_dance_floor"
+  ],
+  "scene_start_state": "The Mock Turtle and Gryphon begin the Lobster Quadrille around a stationary Alice.",
+  "scene_end_state": "The Mock Turtle transitions into sudden, melancholic singing about snails and whiting.",
+  "dominant_action_line": "The creatures perform a choreographed dance while stepping on Alice's toes to explain the rules.",
+  "scene_spatial_layout": [
+    "A circular movement pattern around a central anchor point.",
+    "Interaction between moving dancers and a stationary subject."
+  ],
+  "character_spatial_map": [
+    "alice is positioned as the central axis for the dance.",
+    "the_mock_turtle and the_gryphon move in a rhythmic circuit around alice."
+  ],
+  "environment_subzones": [
+    "seaside_dance_floor"
+  ],
+  "scene_event_chain": [
+    "event 1: The Mock Turtle and Gryphon begin the Lobster Quadrille around Alice.",
+    "event 2: The creatures step on Alice's toes while explaining the dance rules.",
+    "event 3: The rhythmic movement shifts as the Mock Turtle begins melancholic singing.",
+    "event 4: A linguistic debate over puns ensues amidst the whimsy."
+  ],
+  "entry_vectors": [
+    "The Lobster Quadrille movement pattern."
+  ],
+  "exit_vectors": [
+    "The transition to melancholic singing and pun-based dialogue."
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT020: Rhythmic dance shifts into physical contact/stepping on toes.",
+    "BT020 -> BT030: Physical comedy shifts into sudden melancholic whimsy."
+  ],
+  "characters_required": [
+    {
+      "label": "* Alice",
+      "canonical_id": "alice",
+      "display_name": "Alice",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH010/alice.md",
+      "notes": "Direct registry match for 'alice'."
+    },
+    {
+      "label": "* The Mock Turtle",
+      "canonical_id": "the_mock_turtle",
+      "display_name": "the_mock_turtle",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH010/the_mock_turtle.md",
+      "notes": "Direct registry match for 'the_mock_turtle'."
+    },
+    {
+      "label": "* The Gryphon",
+      "canonical_id": "the_gryphon",
+      "display_name": "the_gryphon",
+      "status": "canonical",
+      "entity_kind": "group",
+      "resolution_score": 138,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH010/the_gryphon.md",
+      "notes": "Direct registry match for 'the_gryphon'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "A seaside-adjacent landscape/environment",
+      "canonical_id": "seaside_dance_floor",
+      "display_name": "seaside_dance_floor",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 90,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/environment_breakdowns/chapters/CH010/seaside_dance_floor.md",
+      "notes": "Chapter-local environment alias match for 'A seaside-adjacent landscape/environment' (key_overlap=1, label_overlap=3, context_overlap=4)."
+    }
+  ],
+  "continuity_constraints": [
+    "The specific pattern and choreography of the first figure of the Lobster Quadrille.",
+    "Physical interaction spacing between Alice and the dancing creatures as they step on her toes.",
+    "The transition from rhythmic dance to sudden melancholic singing."
+  ],
+  "visual_coverage_families": [
+    "Wide shots of the dance/movement around Alice.",
+    "Medium close-ups of the Mock Turtle's weeping face.",
+    "Close-ups of feet stepping on toes for physical comedy."
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "The Lobster Quadrille begins",
+      "purpose": "",
+      "action_start": "The Mock Turtle and Gryphon start the dance ->",
+      "action_end": "The first figure of the dance is completed",
+      "active_subjects": [
+        "the_mock_turtle",
+        "the_gryphon"
+      ],
+      "passive_subjects": [
+        "alice"
+      ],
+      "spatial_context": "seaside_dance_floor",
+      "blocking_hint": "Circular movement around Alice",
+      "environment_subzone": "seaside_dance_floor",
+      "continuity_focus": "Strict adherence to first figure choreography",
+      "coverage_hint": "Wide shot of dance ->",
+      "coverage_priority": "high",
+      "handoff_to_next": "The physical interaction with Alice."
+    },
+    {
+      "beat_id": "BT020",
+      "summary": "The creatures step on toes",
+      "purpose": "",
+      "action_start": "The dancers move closer to the center ->",
+      "action_end": "Toes are stepped on and explained",
+      "active_subjects": [
+        "the_mock_turtle",
+        "the_gryphon"
+      ],
+      "passive_subjects": [
+        "alice"
+      ],
+      "spatial_context": "seaside_dance_floor",
+      "blocking_hint": "Feet making contact with Alice's feet",
+      "environment_subzone": "seaside_dance_floor",
+      "continuity_focus": "Physical spacing between dancers and Alice ->",
+      "coverage_hint": "Close-up of feet/toes ->",
+      "coverage_priority": "medium",
+      "handoff_to_next": "The shift to melancholic singing."
+    },
+    {
+      "beat_id": "BT030",
+      "summary": "The Mock Turtle sings",
+      "purpose": "",
+      "action_start": "The rhythmic dance slows into song ->",
+      "action_end": "The debate over puns begins",
+      "active_subjects": [
+        "the_mock_turtle"
+      ],
+      "passive_subjects": [
+        "alice",
+        "the_gryphon"
+      ],
+      "spatial_context": "seaside_dance_floor",
+      "blocking_hint": "Mock Turtle faces forward while weeping ->",
+      "environment_subzone": "seaside_dance_floor",
+      "continuity_focus": "Transition from movement to vocal whimsy ->",
+      "coverage_hint": "Medium close-up of face ->",
+      "coverage_priority": "medium",
+      "handoff_to_next": "The linguistic debate."
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish movement",
+      "planned_shot_moment_summary": "The Lobster Quadrille begins",
+      "primary_subject_seed": "the_mock_turtle",
+      "secondary_subjects_seed": [
+        "the_gryphon",
+        "alice"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "seaside_dance_floor",
+      "planned_shot_required_anchor_1": "seaside_dance_floor",
+      "planned_shot_scale_proof_detail": "Full body visible",
+      "start_state_seed": "Creatures in motion",
+      "end_state_seed": "Dance pattern established",
+      "action_seed": "The creatures circle Alice",
+      "blocking_seed": [
+        "Circular orbit around center"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "eye_level",
+      "lens_family": "wide",
+      "camera_motion": "pan",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front_three_quarter_left"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT020",
+      "narrative_function": "physical comedy",
+      "planned_shot_moment_summary": "The creatures step on Alice's toes",
+      "primary_subject_seed": "alice",
+      "secondary_subjects_seed": [
+        "the_mock_turtle",
+        "the_gryphon"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "seaside_dance_floor",
+      "planned_shot_required_anchor_1": "seaside_dance_floor",
+      "planned_shot_scale_proof_detail": "Feet contact with toes",
+      "start_state_seed": "Movement approaches Alice",
+      "end_state_seed": "Toes are stepped on",
+      "action_seed": "The creatures step on Alice's feet",
+      "blocking_seed": [
+        "Close proximity to ground level"
+      ],
+      "shot_size": "close_up",
+      "camera_angle": "low_angle",
+      "lens_family": "normal",
+      "camera_motion": "none",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT030",
+      "narrative_function": "emotional shift",
+      "planned_shot_moment_summary": "The Mock Turtle weeps while singing",
+      "primary_subject_seed": "the_mock_turtle",
+      "secondary_subjects_seed": [
+        "alice"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "seaside_dance_floor",
+      "planned_shot_required_anchor_1": "se\u3044de_dance_floor",
+      "planned_shot_scale_proof_detail": "Facial expression focus",
+      "start_state_seed": "Singing begins",
+      "end_state_seed": "Melancholic whimsy established",
+      "action_seed": "The Mock Turtle sings about whiting and snails",
+      "blocking_seed": [
+        "Static upper body with emotional face"
+      ],
+      "shot_size": "medium_close",
+      "camera_angle": "eye_level",
+      "lens_family": "portrait",
+      "camera_motion": "none",
+      "zoom_behavior": "subtle_in",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front_three_quarter_right"
+    }
+  ],
+  "unresolved_questions": [],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH010",
+      "scene_id": "CH010_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH010",
+      "scene_id": "CH010_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH010",
+      "scene_id": "CH010_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH010",
+      "scene_id": "CH010_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH010",
+      "scene_id": "CH010_SC001"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH010",
+      "source_path": "C:\\FilmCreator\\projects\\alice_in_wonderland\\02_story_analysis\\chapter_analysis\\CH010_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH010",
+      "source_path": "projects/alice_in_wonderland/01_source/chapters/CH010_chapter_x.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH009",
+      "source_path": "projects/alice_in_wonderland/01_source/chapters/CH009_chapter_ix.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH012",
+      "source_path": "projects/alice_in_wonderland/01_source/chapters/CH012_chapter_xii.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH010",
+      "canonical_id": "alice"
+    }
+  ],
+  "evidence_summary": [
+    "[CH010_SC001] Purpose: To introduce the whimsical, physical, and pun-heavy nature of the Mock Turtle and Gryphon through a dance.",
+    "[CH010_SC001] Summary: The Mock Turtle and the Gryphon perform the \"Lobster Quadrille\" around Alice, stepping on her toes as they explain the dance. This is interspersed with the Mock Turtle's melancholic singing about whiting and snails, leading to a lingu...",
+    "[CH010_SC001] Emotional arc: From playful, rhythmic movement to whimsical confusion and melancholic whimsy.",
+    "[CH010_SC001] Coverage: * Wide shots of the dance/movement around Alice. * Medium close-ups of the Mock Turtle's weeping face. * Close-ups of feet stepping on toes for physical comedy.",
+    "[CH010_SC001] Continuity: The specific pattern and choreography of the 'first figure' of the Lobster Quadrille. Physical interaction/spacing between Alice and the dancing creatures (stepping on toes). The transition from the rhythmic dance to the Mock Turtl...",
+    "[CH010] Chapter summary: **Setting:** A seaside-adjacent environment where the Mock Turtle and Gryphon reside. **Characters:** * **Alice:** A young girl, currently feeling a mix of curiosity, confusion, and social pressure to conform to the c...",
+    "[CH010] CHAPTER X. (book index hit)",
+    "[CH009] CHAPTER IX. (book index hit)",
+    "[CH012] CHAPTER XII. (book index hit)",
+    "Character alice: Alice is a young girl characterized by extreme, sudden changes in physical scale. Her size fluctuates between the stature of a small child (approximately two feet tall) and colossal proportions reaching up to nine feet or even nearly two mi..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH010_SC001\n\n## Production Intent\nEstablish the whimsical and physical nature of the Mock Turtle and Gryphon through a rhythmic dance sequence that incorporates pun-heavy dialogue. The scene uses movement to contrast the creatures' playful energy with Alice's reactive confusion.\n\n## Required Cast\n- alice\n- the_mock_turtle\n- the_gryphon\n\n## Required Environments\n- seaside_dance_floor\n\n## Continuity Constraints\n- The specific pattern and choreography of the first figure of the Lobster Quadrille.\n- Physical interaction spacing between Alice and the dancing creatures as they step on her toes.\n- The transition from rhythmic dance to sudden melancholic singing.\n\n## Beat List\n- BT001: The Lobster Quadrille begins.\n- BT020: The creatures step on Alice's toes while explaining the dance.\n- BT030: The Mock Turtle transitions into melancholic singing about whiting and snails.\n[/SECTION]",
+  "metadata": {
+    "artifact_id": "CH010_SC001_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "da703bbf7d9061f437330edac4dae029aa05b4dd",
+    "created_at_utc": "2026-04-28T00:41:51.061646+00:00",
+    "updated_at_utc": "2026-04-28T00:41:51.061646+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH010_SC001",
+        "version": "f4374a07cc2e1822a978116a9e8167f64f7d936e"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH010_SC001",
+        "version": "badc77363b4640e2074bc6667eb8bb91d479593e"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH010_SC001",
+        "version": "92a91301d5f136c75d21e04e01c5eac4b84e3f98"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-28T00:42:35.449008+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "da703bbf7d9061f437330edac4dae029aa05b4dd"
+      }
+    ]
+  }
+}

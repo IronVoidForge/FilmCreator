@@ -1,3 +1,29 @@
 # Scene Binding Review Queue
 
-- No binding review items.
+- `CH001_SC001`
+  - multiple_scene_environment_candidates
+  - scene_cast_contains_unresolved_references
+- `CH001_SC003`
+  - multiple_scene_environment_candidates
+- `CH002_SC005`
+  - scene_cast_contains_unresolved_references
+- `CH007_SC003`
+  - scene_cast_contains_unresolved_references
+- `CH007_SC005`
+  - multiple_scene_environment_candidates
+- `CH009_SC001`
+  - scene_environment_unresolved
+- `CH009_SC002`
+  - scene_environment_unresolved
+- `CH009_SC003`
+  - scene_cast_contains_unresolved_references
+- `CH010_SC003`
+  - scene_cast_contains_unresolved_references
+- `CH012_SC001`
+  - scene_cast_contains_unresolved_references
+- `CH012_SC002`
+  - scene_cast_contains_unresolved_references
+- `CH012_SC003`
+  - scene_cast_contains_unresolved_references
+- `CH012_SC004`
+  - scene_cast_contains_unresolved_references

@@ -1,0 +1,422 @@
+{
+  "scene_id": "CH012_SC002",
+  "chapter_id": "CH012",
+  "scene_title": "SC002",
+  "purpose": "To present the \"evidence\" and escalate the tension through a logic-defying trial.",
+  "summary": "The White Rabbit presents the verses found on the Knave. As the Rabbit reads the cryptic poem, the King attempts to interpret it as proof of the theft. Alice watches with growing skepticism as the absurdity of the legal proceedings mounts.",
+  "emotional_arc": "From curious investigation to mounting frustration/absurdity.",
+  "production_intent": "Present the physical evidence of the verses to escalate tension through a logic-defying legal trial.",
+  "scene_short_description": "A formal courtroom trial where a cryptic poem is used as evidence against the Knave.",
+  "scene_primary_scale_story_point": "The scale of the King's authority versus the smallness of the physical paper.",
+  "scene_required_anchor_catalog": [
+    "The verse paper prop",
+    "The Knave in his dock"
+  ],
+  "scene_start_state": "The White Rabbit holds the verses, preparing to present them to the court.",
+  "scene_end_state": "Alice watches with growing skepticism as the King's interpretation peaks.",
+  "dominant_action_line": "The presentation and reading of the verse leads to a chaotic legal interpretation.",
+  "scene_spatial_layout": [
+    "The courtroom jury box setting provides the central structure",
+    "The Knave is positioned in his dock"
+  ],
+  "character_spatial_map": [
+    "The White Rabbit stands as the presenter with the paper",
+    "The King interprets from a position of authority",
+    "Alice watches from the periphery/audience",
+    "The Knave remains fixed in the dock"
+  ],
+  "environment_subzones": [
+    "The jury box area",
+    "The defendant's dock"
+  ],
+  "scene_event_chain": [
+    "event 1: The White Rabbit presents the verses found on the Knave",
+    "event 2: The White Rabbit reads the cryptic poem aloud",
+    "event 3: The King attempts to interpret the poem as proof of theft",
+    "event 4: Alice watches with growing skepticism at the absurdity"
+  ],
+  "entry_vectors": [
+    "The presentation of the paper"
+  ],
+  "exit_vectors": [
+    "The tension of the unfolding verdict"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: The reading begins",
+    "BT002 -> BT003: The King's interpretation shifts focus to the theft",
+    "BT003 -> BT004: Alice reacts to the logic"
+  ],
+  "characters_required": [
+    {
+      "label": "The White Rabbit",
+      "canonical_id": "white_rabbit",
+      "display_name": "white_rabbit",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH012/white_rabbit.md",
+      "notes": "Direct registry match for 'white_rabbit'."
+    },
+    {
+      "label": "The King",
+      "canonical_id": "the_king",
+      "display_name": "The King",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH012/the_king.md",
+      "notes": "Direct registry match for 'the_king'."
+    },
+    {
+      "label": "s- The Knave",
+      "canonical_id": null,
+      "display_name": "s- The Knave",
+      "status": "review",
+      "entity_kind": "individual",
+      "resolution_score": 16,
+      "source_path": "",
+      "notes": "Low-confidence character match requires review."
+    },
+    {
+      "label": "The Queen (watching)",
+      "canonical_id": "the_queen",
+      "display_name": "the_queen",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH012/the_queen.md",
+      "notes": "Direct registry match for 'the_queen'."
+    },
+    {
+      "label": "Alice",
+      "canonical_id": "alice",
+      "display_name": "Alice",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH012/alice.md",
+      "notes": "Direct registry match for 'alice'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "The Courtroom",
+      "canonical_id": "courtroom_jury_box_setting",
+      "display_name": "courtroom_jury_box_setting",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 58,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/environment_breakdowns/chapters/CH012/courtroom_jury_box_setting.md",
+      "notes": "Chapter-local environment alias match for 'The Courtroom' (key_overlap=1, label_overlap=1, context_overlap=4)."
+    }
+  ],
+  "continuity_constraints": [
+    "The physical prop of the verse paper must remain consistent during handoffs",
+    "The Knave's positioning in his dock relative to the court"
+  ],
+  "visual_coverage_families": [
+    "Close-ups of the verse paper held by the White Rabbit",
+    "Reaction shots of the King's intense bumbling interpretations",
+    "Alice's skeptical facial expressions"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "The presentation of the verses",
+      "purpose": "",
+      "action_start": "White Rabbit holds up the paper",
+      "action_end": "The paper is presented to the court",
+      "active_subjects": [
+        "white_rabbit"
+      ],
+      "passive_subjects": [
+        "the_king",
+        "alice",
+        "s- The Knave"
+      ],
+      "spatial_context": "courtroom_jury_box_setting",
+      "blocking_hint": "Rabbit at center focus",
+      "environment_subzone": "jury_box_setting",
+      "continuity_focus": "The physical paper prop is visible",
+      "coverage_hint": "Close-up of the paper",
+      "coverage_priority": "high",
+      "handoff_to_next": "The reading begins"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "The reading of the poem",
+      "purpose": "",
+      "action_start": "White Rabbit looks down at text",
+      "action_end": "The last word is spoken",
+      "active_subjects": [
+        "white_rabbit"
+      ],
+      "passive_subjects": [
+        "the_king",
+        "alice",
+        "s- The Knave"
+      ],
+      "spatial_context": "courtroom_jury_box_setting",
+      "blocking_hint": "Rabbit reading to the court",
+      "environment_subzone": "jury_box_setting",
+      "continuity_focus": "Paper remains in hand",
+      "coverage_hint": "Close-up of Rabbit and paper",
+      "coverage_priority": "medium",
+      "handoff_to_next": "The King reacts"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "The King's interpretation",
+      "purpose": "",
+      "action_start": "King leans forward :: action_end=King points toward the Knave",
+      "action_end": "",
+      "active_subjects": [
+        "the_king"
+      ],
+      "passive_subjects": [
+        "white_rabbit",
+        "s- The Knave"
+      ],
+      "spatial_context": "courtroom_jury_box_setting",
+      "blocking_hint": "King moves from his seat towards the dock area",
+      "environment_subzone": "jury_box_setting",
+      "continuity_focus": "The King's bumbling movement vs paper stability",
+      "coverage_hint": "Medium shot of King",
+      "coverage_priority": "high",
+      "handoff_to_next": "Alice reacts"
+    },
+    {
+      "beat_id": "BT004",
+      "summary": "Alice's skepticism",
+      "purpose": "",
+      "action_start": "Alice watches :: action_end=Alice narrows eyes",
+      "action_end": "",
+      "active_subjects": [
+        "alice"
+      ],
+      "passive_subjects": [
+        "the_king",
+        "white_rabbit"
+      ],
+      "spatial_context": "courtroom_jury_box_setting",
+      "blocking_hint": "Alice is a static observer",
+      "environment_subzone": "jury_box_setting",
+      "continuity_focus": "Alice's scale relative to the court",
+      "coverage_hint": "Reaction shot of Alice",
+      "coverage_priority": "medium",
+      "handoff_to_next": "Scene concludes"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish evidence",
+      "planned_shot_moment_summary": "White Rabbit holds up the paper",
+      "primary_subject_seed": "white_rabbit",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "jury_box_setting",
+      "planned_shot_required_anchor_1": "verse_paper",
+      "planned_shot_scale_proof_detail": "small paper vs rabbit size",
+      "start_state_seed": "Rabbit holding paper",
+      "end_state_seed": "Paper held high",
+      "action_seed": "The White Rabbit presents the verses",
+      "blocking_seed": [
+        "Rabbit center frame"
+      ],
+      "shot_size": "close_up",
+      "camera_angle": "eye_level",
+      "lens_family": "normal",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "high_contrast_ceremonial",
+      "primary_subject_angle": "front_three_quarter_left"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "dialogue delivery",
+      "planned_shot_moment_summary": "The reading of the poem",
+      "primary_subject_seed": "white_rabbit",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "jury_box_setting",
+      "planned_shot_required_anchor_1": "verse_paper",
+      "planned_shot_scale_proof_detail": "text on paper visible",
+      "start_state_seed": "Rabbit looking at paper",
+      "end_state_seed": "Paper lowered slightly",
+      "action_seed": "The White Rabbit reads the cryptic poem",
+      "blocking_seed": [
+        "Rabbit reading to court"
+      ],
+      "shot_size": "close_up",
+      "camera_angle": "eye_level",
+      "lens_family": "portrait",
+      "camera_motion": "none",
+      "zoom_behavior": "subtle_in",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "high_contrast_ceremonial",
+      "primary_subject_angle": "front_three_quarter_left"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "conflict escalation",
+      "planned_shot_moment_summary": "The King's interpretation",
+      "primary_subject_seed": "the_king",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "jury_box_setting",
+      "planned_shot_required_anchor_1": "King position",
+      "planned_shot_scale_proof_detail": "authority vs paper",
+      "start_state_seed": "King leaning in",
+      "end_state_seed": "King pointing at Knave",
+      "action_seed": "The King interprets the poem as proof of theft",
+      "blocking_seed": [
+        "King moving toward the dock"
+      ],
+      "shot_size": "medium_close",
+      "camera_angle": "low_angle",
+      "lens_family": "normal",
+      "camera_motion": "push_in",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "high_contrast_ceremonial",
+      "primary_subject_angle": "front"
+    },
+    {
+      "planned_shot_id": "SH004",
+      "beat_id": "BT004",
+      "narrative_function": "reaction/thematic anchor",
+      "planned_shot_moment_summary": "Alice's skepticism",
+      "primary_subject_seed": "alice",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "jury_box_setting",
+      "planned_shot_required_anchor_1": "Alice position",
+      "planned_shot_scale_proof_detail": "",
+      "start_state_seed": "Alice watching :: end=Alice frowning",
+      "end_state_seed": "",
+      "action_seed": "Alice watches with growing skepticism",
+      "blocking_seed": [
+        "Alice static in frame"
+      ],
+      "shot_size": "medium_close",
+      "camera_angle": "eye_level",
+      "lens_family": "normal",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front_three_quarter_right"
+    }
+  ],
+  "unresolved_questions": [
+    "Resolve s- The Knave -> s- The Knave"
+  ],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH012",
+      "scene_id": "CH012_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH012",
+      "scene_id": "CH012_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH012",
+      "scene_id": "CH012_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH012",
+      "scene_id": "CH012_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH012",
+      "scene_id": "CH012_SC002"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH012",
+      "source_path": "C:\\FilmCreator\\projects\\alice_in_wonderland\\02_story_analysis\\chapter_analysis\\CH012_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH012",
+      "source_path": "projects/alice_in_wonderland/01_source/chapters/CH012_chapter_xii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH011",
+      "source_path": "projects/alice_in_wonderland/01_source/chapters/CH011_chapter_xi.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH001",
+      "source_path": "projects/alice_in_wonderland/01_source/chapters/CH001_chapter_i.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH012",
+      "canonical_id": "white_rabbit"
+    }
+  ],
+  "evidence_summary": [
+    "[CH012_SC002] Purpose: To present the \"evidence\" and escalate the tension through a logic-defying trial.",
+    "[CH012_SC002] Summary: The White Rabbit presents the verses found on the Knave. As the Rabbit reads the cryptic poem, the King attempts to interpret it as proof of the theft. Alice watches with growing skepticism as the absurdity of the legal proceedings mo...",
+    "[CH012_SC002] Emotional arc: From curious investigation to mounting frustration/absurdity.",
+    "[CH012_SC002] Coverage: Close-ups of the paper/verses being held by the White Rabbit. Reaction shots of the King's intense, bumbling interpretation. Alice's skeptical facial expressions.",
+    "[CH012_SC002] Continuity: The physical prop of the verse paper. The positioning of the Knave in his dock.",
+    "[CH012] Chapter summary: **Setting:** A courtroom where a jury sits in a box; later, a riverbank under trees as the sun sets. **Characters:** - **Alice:** Currently at her full size (nearly two miles high), then shrinking back to normal size....",
+    "[CH012] CHAPTER XII. (book index hit)",
+    "[CH011] CHAPTER XI. (book index hit)",
+    "[CH001] CHAPTER I. (book index hit)",
+    "Character white_rabbit: The White Rabbit is a small, sentient quadrupedal rabbit characterized by its hurried manner and respectful bearing. It wears splendid, formal attire that contrasts with its animal morphology, presenting as a figure of some importanc..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH012_SC002\n\n## Production Intent\nThe scene aims to present the physical evidence (the verses) and escalate tension through a logic-defying trial. The focus is on the contrast between the formal setting and the absurd interpretation of the text.\n\n## Required Cast\n- The White Rabbit: Small, formal attire, hurried but respectful.\n- The King: Intense, bumbling authority.\n- The Knave: Positioned in his dock.\n- Alice: Full size (nearly two miles high), skeptical observer.\n- The Queen: Watching from the sidelines.\n\n## Required Environments\n- The Courtroom: Specifically the jury box and defendant's dock area.\n\n## Continuity Constraints\n- The physical verse paper must be handled consistently as it is passed or held.\n- The Knave's position in his dock must remain stable relative to the King's movements.\n\n## Beat List\n- BT001: The White Rabbit presents the verses found on the Knave.\n- BT002: The White Rabbit reads the cryptic poem aloud.\n- BT003: The King interprets the poem as proof of theft.\n- BT004: Alice watches with growing skepticism at the absurdity.\n[/SECTION]",
+  "metadata": {
+    "artifact_id": "CH012_SC002_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "9641ebf91c3fb3b55e023186b15341d57527967f",
+    "created_at_utc": "2026-04-28T00:44:58.473361+00:00",
+    "updated_at_utc": "2026-04-28T00:44:58.473361+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH012_SC002",
+        "version": "466ece54f6738959c40acd82b01e4df7763290f7"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH012_SC002",
+        "version": "2788198286b4bd9aa2854c78e2911d16f431c6fb"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH012_SC002",
+        "version": "8fabcac6d9bf65cb3ada1db501ae643109576a34"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-28T00:45:47.489561+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "9641ebf91c3fb3b55e023186b15341d57527967f"
+      }
+    ]
+  }
+}

@@ -1,0 +1,356 @@
+{
+  "scene_id": "CH007_SC004",
+  "chapter_id": "CH007",
+  "scene_title": "SC004",
+  "purpose": "To provide the emotional climax of Alice's frustration and her transition away from the tea party.",
+  "summary": "Frustrated by the Hatter's rudeness, Alice decides to leave. She walks through the woods toward a long hall. As she leaves, she observes the hosts putting the Dormouse into a teapot.",
+  "emotional_arc": "From irritation to a sense of lonely, purposeful departure.",
+  "production_intent": "Establish the emotional break between Alice and the tea party hosts through a physical departure. The visual focus must balance her small stature against the expansive wooded path as she moves away from the table.",
+  "scene_short_description": "A frustrated girl walks away from a tea party into a vast wooded path.",
+  "scene_primary_scale_story_point": "Alice's physical scale relative to the woods and the distant table.",
+  "scene_required_anchor_catalog": [
+    "The tea party table",
+    "The wooded path"
+  ],
+  "scene_start_state": "Alice stands at the table, visibly irritated by the Hatter.",
+  "scene_end_state": "Alice walks through the woods toward a long hall, looking back one last time.",
+  "dominant_action_line": "Alice leaves the hosts and treks through the woods.",
+  "scene_spatial_layout": [
+    "The tea party is located under a tree in front of a house.",
+    "A wooded path leads away from the table toward a long hall."
+  ],
+  "character_spatial_map": [
+    "Alice moves from the table area into the wooded path.",
+    "The hosts remain at the distant table."
+  ],
+  "environment_subzones": [
+    "tea_party_table",
+    "wooded_path_and_hall"
+  ],
+  "scene_event_chain": [
+    "event 1: Alice reacts to the Hatter's rudeness and decides to leave.",
+    "event 2: Alice walks away from the table into the woods.",
+    "event 3: The hosts put the dormouse into a teapot in the distance.",
+    "event 4: Alice looks back at the tea party as she moves toward the hall."
+  ],
+  "entry_vectors": [
+    "The wooded path leading to the long hall."
+  ],
+  "exit_vectors": [
+    "The direction of the long hall."
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT020: Physical departure from the table.",
+    "BT020 -> BT030: Movement through the woods toward the hall."
+  ],
+  "characters_required": [
+    {
+      "label": "Alice",
+      "canonical_id": "alice",
+      "display_name": "Alice",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH007/alice.md",
+      "notes": "Direct registry match for 'alice'."
+    },
+    {
+      "label": "The March Hare (briefly seen)",
+      "canonical_id": "march_hare",
+      "display_name": "march_hare",
+      "status": "canonical",
+      "entity_kind": "group",
+      "resolution_score": 138,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH007/march_hare.md",
+      "notes": "Direct registry match for 'march_hare'."
+    },
+    {
+      "label": "The Hatter (briefly seen)",
+      "canonical_id": "the_hatter",
+      "display_name": "the_hatter",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH007/the_hatter.md",
+      "notes": "Direct registry match for 'the_hatter'."
+    },
+    {
+      "label": "The Dormouse (seen in distance/transition)",
+      "canonical_id": "dormouse",
+      "display_name": "Dormouse",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH007/dormouse.md",
+      "notes": "Direct registry match for 'dormouse'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "The wooded path leading away from the table",
+      "canonical_id": "wooded_path_and_hall",
+      "display_name": "wooded_path_and_hall",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 112,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/environment_breakdowns/chapters/CH007/wooded_path_and_hall.md",
+      "notes": "Chapter-local environment alias match for 'The wooded path leading away from the table' (key_overlap=2, label_overlap=4, context_overlap=4)."
+    }
+  ],
+  "continuity_constraints": [
+    "Alice's costume and physical appearance must remain consistent as she transitions from the table to the wooded path."
+  ],
+  "visual_coverage_families": [
+    "Medium tracking shot of Alice walking.",
+    "Wide shots showing the scale of the woods vs. Alice.",
+    "Final look back at the tea party (distance shot)."
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "Alice decides to leave the table",
+      "purpose": "",
+      "action_start": "Alice reacts to the Hatter's rudeness",
+      "action_end": "Alice turns her back on the hosts",
+      "active_subjects": [
+        "alice"
+      ],
+      "passive_subjects": [
+        "the_hatter",
+        "march_hare"
+      ],
+      "spatial_context": "tea_party_table",
+      "blocking_hint": "Alice moves away from the table group",
+      "environment_subzone": "tea_party_table",
+      "continuity_focus": "Alice's costume/appearance as she leaves",
+      "coverage_hint": "medium_close",
+      "coverage_priority": "high",
+      "handoff_to_next": "The physical departure begins."
+    },
+    {
+      "beat_id": "BT020",
+      "summary": "Alice walks through the woods",
+      "purpose": "",
+      "action_start": "Alice steps onto the path",
+      "action_end": "Alice moves deeper into the trees",
+      "active_subjects": [
+        "alice"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "wooded_path_and_hall",
+      "blocking_hint": "Alice walking away from the table area",
+      "environment_subzone": "wooded_path_and_hall",
+      "continuity_focus": "Scale of Alice vs woods",
+      "coverage_hint": "wide",
+      "coverage_priority": "medium",
+      "handoff_to_next": "The distance between Alice and the table grows."
+    },
+    {
+      "beat_id": "BT030",
+      "summary": "The hosts put the dormouse into a teapot",
+      "purpose": "",
+      "action_start": "The hosts move the dormouse",
+      "action_end": "Dormouse is placed in the pot",
+      "active_subjects": [
+        "the_hatter",
+        "march_hare"
+      ],
+      "passive_subjects": [
+        "dormouse"
+      ],
+      "spatial_context": "tea_party_table",
+      "blocking_hint": "Hosts are seen at a distance from Alice's perspective",
+      "environment_subzone": "tea_party_table",
+      "continuity_focus": "Distant visual of the tea party :: Alice is far away",
+      "coverage_hint": "wide",
+      "coverage_priority": "low",
+      "handoff_to_next": "Alice looks back one last time."
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "character motivation",
+      "planned_shot_moment_summary": "Alice turns away from the table",
+      "primary_subject_seed": "alice",
+      "secondary_subjects_seed": [
+        "the_hatter",
+        "march_hare"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "tea_party_table",
+      "planned_shot_required_anchor_1": "the_hatter",
+      "planned_shot_scale_proof_detail": "child-sized vs adult-sized :: focus on Alice's expression",
+      "start_state_seed": "Alice standing by the table",
+      "end_state_seed": "Alice turning her back",
+      "action_seed": "Alice turns to leave",
+      "blocking_seed": [
+        "Alice moves away from the group"
+      ],
+      "shot_size": "medium_close",
+      "camera_angle": "eye_level",
+      "lens_family": "normal",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "profile_left"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT020",
+      "narrative_function": "scale comparison",
+      "planned_shot_moment_summary": "Alice walking through the woods",
+      "primary_subject_seed": "alice",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "wooded_path_and_hall",
+      "planned_shot_required_anchor_1": "the_woods",
+      "planned_shot_scale_proof_detail": "small child vs massive trees",
+      "start_state_seed": "Alice entering the path",
+      "end_state_seed": "Alice deep in the woods",
+      "action_seed": "Alice walks through the trees",
+      "blocking_seed": [
+        "Alice walking away from camera"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "eye_level",
+      "lens_family": "ultra_wide",
+      "camera_motion": "track",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "back"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT030",
+      "narrative_function": "narrative transition",
+      "planned_shot_moment_summary": "The hosts put the dormouse in a teapot",
+      "primary_subject_seed": "dormouse",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "tea_party_table",
+      "planned_shot_required_anchor_1": "the_hatter",
+      "planned_shot_scale_proof_detail": "distant view of table :: Alice is far away",
+      "start_state_seed": "The tea party visible in distance",
+      "end_state_seed": "Dormouse being tucked into the pot",
+      "action_seed": "Hosts put dormouse into teapot",
+      "blocking_seed": [
+        "Static wide shot of distant table"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "eye_level",
+      "lens_family": "telephoto",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front_three_quarter_left"
+    }
+  ],
+  "unresolved_questions": [],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH007",
+      "scene_id": "CH007_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH007",
+      "scene_id": "CH007_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH007",
+      "scene_id": "CH007_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH007",
+      "scene_id": "CH007_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH007",
+      "scene_id": "CH007_SC004"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH007",
+      "source_path": "C:\\FilmCreator\\projects\\alice_in_wonderland\\02_story_analysis\\chapter_analysis\\CH007_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH007",
+      "source_path": "projects/alice_in_wonderland/01_source/chapters/CH007_chapter_vii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH011",
+      "source_path": "projects/alice_in_wonderland/01_source/chapters/CH011_chapter_xi.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH004",
+      "source_path": "projects/alice_in_wonderland/01_source/chapters/CH004_chapter_iv.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH007",
+      "canonical_id": "alice"
+    }
+  ],
+  "evidence_summary": [
+    "[CH007_SC004] Purpose: To provide the emotional climax of Alice's frustration and her transition away from the tea party.",
+    "[CH007_SC004] Summary: Frustrated by the Hatter's rudeness, Alice decides to leave. She walks through the woods toward a long hall. As she leaves, she observes the hosts putting the Dormouse into a teapot.",
+    "[CH007_SC004] Emotional arc: From irritation to a sense of lonely, purposeful departure.",
+    "[CH007_SC004] Coverage: Medium tracking shot of Alice walking. Wide shots showing the scale of the woods vs. Alice. A final look back at the tea party (distance shot).",
+    "[CH007_SC004] Continuity: Alice's costume/appearance as she moves from the table to the path.",
+    "[CH007] Chapter summary: **Setting:** A large table set under a tree in front of a house; later, a wooded path leading to a long hall with a glass table, and finally the beautiful garden. **Characters:** - **Alice:** A young girl attempting t...",
+    "[CH007] CHAPTER VII. (book index hit)",
+    "[CH011] CHAPTER XI. (book index hit)",
+    "[CH004] CHAPTER IV. (book index hit)",
+    "Character alice: Alice is a young girl characterized by extreme, sudden changes in physical scale. Her size fluctuates between the stature of a small child (approximately two feet tall) and colossal proportions reaching up to nine feet or even nearly two mi..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH007_SC004\n\n## Production Intent\nEstablish the emotional break between Alice and the tea party hosts through a physical departure. The visual focus must balance her small stature against the expansive wooded path as she moves away from the table.\n\n## Required Cast\n- alice\n- march_hare (briefly seen)\n- the_hatter (briefly seen)\n- dormouse (seen in distance/transition)\n\n## Required Environments\n- tea_party_table\n- wooded_path_and_hall\n\n## Continuity Constraints\n- Alice's costume and physical appearance must remain consistent as she transitions from the table to the wooded path.\n\n## Beat List\n- BT001: Alice decides to leave the table.\n- BT020: Alice walks through the woods.\n- BT030: The hosts put the dormouse into a teapot.",
+  "metadata": {
+    "artifact_id": "CH007_SC004_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "38f8eecfead02d30ea8b9601389d3c368777c042",
+    "created_at_utc": "2026-04-28T00:36:47.830486+00:00",
+    "updated_at_utc": "2026-04-28T00:36:47.830486+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH007_SC004",
+        "version": "d38b4bd2512df839fb5f4c9e9cfcd5f607d0b9a6"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH007_SC004",
+        "version": "9da1b58513c786adac566f622d2f6745875eb494"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH007_SC004",
+        "version": "3d13f83c82c07890ecd68bf2f1ef515eef45c0cb"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-28T00:37:30.014233+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "38f8eecfead02d30ea8b9601389d3c368777c042"
+      }
+    ]
+  }
+}

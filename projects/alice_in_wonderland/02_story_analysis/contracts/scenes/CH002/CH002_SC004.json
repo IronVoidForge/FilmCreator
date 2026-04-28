@@ -1,0 +1,354 @@
+{
+  "scene_id": "CH002_SC004",
+  "chapter_id": "CH002",
+  "scene_title": "SC004",
+  "purpose": "Introduce a new character through a social/linguistic misunderverstanding.",
+  "summary": "While swimming in the pool of tears, Alice encounters a Mouse. She attempts to communicate with it in English and then French to test its intelligence. The mention of \"cats\" offends the Mouse, leading to a tense but polite negotiation about their shared predicament.",
+  "emotional_arc": "Curiosity $\\rightarrow$ Social awkwardness $\\rightarrow$ Tension",
+  "production_intent": "Establish the social friction between Alice and The Mouse through linguistic testing and scale-based tension within a water-filled environment.",
+  "scene_short_description": "A girl swims through a pool of tears while encountering a small, sensitive mouse.",
+  "scene_primary_scale_story_point": "Alice is large relative to the tiny Mouse.",
+  "scene_required_anchor_catalog": [
+    "The Pool of Tears surface",
+    "The Mouse's position in water"
+  ],
+  "scene_start_state": "Alice swims through the pool of tears encountering a small creature.",
+  "scene_end_state": "A tense negotiation between Alice and the offended Mouse.",
+  "dominant_action_line": "Testing intelligence through language leads to social friction.",
+  "scene_spatial_layout": [
+    "The environment is defined by the water surface level.",
+    "Proximity between Alice and the Mouse is tight."
+  ],
+  "character_spatial_map": [
+    "Alice swims at the surface level.",
+    "The Mouse floats or swims near Alice's chin/face."
+  ],
+  "environment_subzones": [
+    "The Pool of Tears (Water surface)"
+  ],
+  "scene_event_chain": [
+    "event 1: Alice encounters the Mouse while swimming in the pool of tears.",
+    "event 2: Alice speaks to the Mouse in English and then French to test its intelligence.",
+    "event 3: The mention of cats offends the Mouse.",
+    "event 4: A tense but polite negotiation begins between the two."
+  ],
+  "entry_vectors": [
+    "Alice swimming into frame"
+  ],
+  "exit_vectors": [
+    "Tension held as they negotiate"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: Linguistic testing",
+    "BT002 -> BT003: Thematic friction (cats)",
+    "BT003 -> BT004: Social negotiation"
+  ],
+  "characters_required": [
+    {
+      "label": "Alice",
+      "canonical_id": "alice",
+      "display_name": "Alice",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH002/alice.md",
+      "notes": "Direct registry match for 'alice'."
+    },
+    {
+      "label": "The Mouse",
+      "canonical_id": "the_mouse",
+      "display_name": "the_mouse",
+      "status": "canonical",
+      "entity_kind": "group",
+      "resolution_score": 138,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH002/the_mouse.md",
+      "notes": "Direct registry match for 'the_mouse'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "The Pool of Tears (Water surface)",
+      "canonical_id": "the_hall_and_pool",
+      "display_name": "the_hall_and_pool",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 78,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/environment_breakdowns/chapters/CH002/the_hall_and_pool.md",
+      "notes": "Chapter-local environment alias match for 'The Pool of Tears (Water surface)' (key_overlap=1, label_overlap=3, context_overlap=4)."
+    }
+  ],
+  "continuity_constraints": [
+    "Water level relative to Alice's chin",
+    "Physical proximity between Alice and The Mouse"
+  ],
+  "visual_coverage_families": [
+    "Underwater/Surface level shots",
+    "Close-ups of the Mouse's expressions",
+    "Medium shots of Alice swimming"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "The Encounter",
+      "purpose": "",
+      "action_start": "Alice swims through the pool of tears",
+      "action_end": "Alice spots the Mouse",
+      "active_subjects": [
+        "alice"
+      ],
+      "passive_subjects": [
+        "the_mouse"
+      ],
+      "spatial_context": "The Pool of Tears surface",
+      "blocking_hint": "Alice floating near the mouse",
+      "environment_subzone": "the_hall_and_pool",
+      "continuity_focus": "Water level at chin",
+      "coverage_hint": "Medium shot of Alice swimming",
+      "coverage_priority": "high",
+      "handoff_to_next": "Linguistic testing"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "The Linguistic Test",
+      "purpose": "",
+      "action_start": "Alice speaks English to the Mouse",
+      "action_end": "Alice switches to French",
+      "active_subjects": [
+        "alice",
+        "the_mouse"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "Close proximity in water",
+      "blocking_hint": "Alice leaning toward the mouse",
+      "environment_subzone": "the_hall_and_pool",
+      "continuity_focus": "Proximity of Mouse to Alice",
+      "coverage_hint": "Medium close-up on Alice's face",
+      "coverage_priority": "medium",
+      "handoff_to_next": "The mention of cats"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "The Offense",
+      "purpose": "",
+      "action_start": "Alice mentions cats",
+      "action_end": "The Mouse becomes offended",
+      "active_subjects": [
+        "the_mouse"
+      ],
+      "passive_subjects": [
+        "alice"
+      ],
+      "spatial_context": "Tension in the water",
+      "blocking_hint": "Mouse pulling back slightly",
+      "environment_subzone": "the_hall_and_pool",
+      "continuity_focus": "Mouse reaction to scale of words",
+      "coverage_hint": "Close-up on Mouse's expression",
+      "coverage_priority": "high",
+      "handoff_to_next": "Negotiation"
+    },
+    {
+      "beat_id": "BT004",
+      "summary": "The Negotiation",
+      "purpose": "",
+      "action_start": "The Mouse reacts with tension",
+      "action_end": "A polite negotiation is established",
+      "active_subjects": [
+        "alice",
+        "the_mouse"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "Shared predicament in water",
+      "blocking_hint": "Both subjects stationary but tense",
+      "environment_subzone": "the_hall_and_pool",
+      "continuity_focus": "Stable scale relationship",
+      "coverage_hint": "Two-shot or alternating close-ups",
+      "coverage_priority": "medium",
+      "handoff_to_next": "Scene end"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "Introduce encounter",
+      "planned_shot_moment_summary": "Alice meets the Mouse in the water",
+      "primary_subject_seed": "alice",
+      "secondary_subjects_seed": [
+        "the_mouse"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "the_hall_and_pool",
+      "planned_shot_required_anchor_1": "the_hall_and_pool",
+      "planned_shot_scale_proof_detail": "Alice's chin level vs mouse size",
+      "start_state_seed": "Alice swimming towards Mouse",
+      "end_state_seed": "Alice making eye contact with Mouse",
+      "action_seed": "Alice approaches the Mouse",
+      "blocking_seed": [
+        "Alice floating at surface"
+      ],
+      "shot_size": "medium_full",
+      "camera_angle": "eye_level",
+      "lens_family": "wide",
+      "camera_motion": "none",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front_three_quarter_left"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "Test intelligence",
+      "planned_shot_moment_summary": "Alice speaks English and French",
+      "primary_subject_seed": "alice",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "the_hall_and_pool",
+      "planned_shot_required_anchor_1": "the_hall_and_pool",
+      "planned_shot_scale_proof_detail": "Alice's facial movement vs Mouse reaction",
+      "start_state_seed": "Alice speaking to the Mouse",
+      "end_state_seed": "The Mouse reacting to French",
+      "action_seed": "Alice gestures while speaking",
+      "blocking_seed": [
+        "Alice close to Mouse"
+      ],
+      "shot_size": "medium_close",
+      "camera_angle": "eye_level",
+      "lens_family": "normal",
+      "camera_motion": "none",
+      "zoom_behavior": "subtle_in",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "Conflict trigger",
+      "planned_shot_moment_summary": "The mention of cats causes offense",
+      "primary_subject_seed": "the_mouse",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "the_hall_and_pool",
+      "planned_shot_required_anchor_1": "the_hall_and_pool",
+      "planned_shot_scale_proof_detail": "Mouse's small size vs the weight of the word",
+      "start_state_seed": "The Mouse hears 'cats'",
+      "end_state_seed": "The Mouse looking offended",
+      "action_seed": "The Mouse reacts to the word",
+      "blocking_seed": [
+        "The Mouse floating near Alice"
+      ],
+      "shot_size": "close_up",
+      "camera_angle": "eye_level",
+      "lens_family": "portrait",
+      "camera_motion": "none",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front"
+    }
+  ],
+  "unresolved_questions": [],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH002",
+      "scene_id": "CH002_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH002",
+      "scene_id": "CH002_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH002",
+      "scene_id": "CH002_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH002",
+      "scene_id": "CH002_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH002",
+      "scene_id": "CH002_SC004"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH002",
+      "source_path": "C:\\FilmCreator\\projects\\alice_in_wonderland\\02_story_analysis\\chapter_analysis\\CH002_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH007",
+      "source_path": "projects/alice_in_wonderland/01_source/chapters/CH007_chapter_vii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH012",
+      "source_path": "projects/alice_in_wonderland/01_source/chapters/CH012_chapter_xii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH002",
+      "source_path": "projects/alice_in_wonderland/01_source/chapters/CH002_chapter_ii.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH002",
+      "canonical_id": "alice"
+    }
+  ],
+  "evidence_summary": [
+    "[CH002_SC004] Purpose: Introduce a new character through a social/linguistic misunderverstanding.",
+    "[CH002_SC004] Summary: While swimming in the pool of tears, Alice encounters a Mouse. She attempts to communicate with it in English and then French to test its intelligence. The mention of \"cats\" offends the Mouse, leading to a tense but polite negotiation...",
+    "[CH002_SC004] Emotional arc: Curiosity $\\rightarrow$ Social awkwardness $\\rightarrow$ Tension",
+    "[CH002_SC004] Coverage: Underwater/Surface level shots; close-ups of the Mouse's expressions; medium shots of Alice swimming.",
+    "[CH002_SC004] Continuity: Water level relative to Alice's chin; the physical proximity of the Mouse to Alice.",
+    "[CH002] Chapter summary: **Location: The Hall / The Garden Door** - **Visual State:** Alice is giant (over nine feet tall). Her head strikes the ceiling of the hall. - **Event:** Alice looks down at her feet, which appear distant and small fr...",
+    "[CH007] CHAPTER VII. (book index hit)",
+    "[CH012] CHAPTER XII. (book index hit)",
+    "[CH002] CHAPTER II. (book index hit)",
+    "Character alice: Alice is a young girl characterized by extreme, sudden changes in physical scale. Her size fluctuates between the stature of a small child (approximately two feet tall) and colossal proportions reaching up to nine feet or even nearly two mi..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH002_SC004\n\n## Production Intent\nEstablish the social friction between Alice and The Mouse through linguistic testing and scale-based tension within a water-filled environment.\n\n## Required Cast\n- Alice (Young girl, variable scale)\n- The Mouse (Small creature)\n\n## Required Environments\n- The Pool of Tears (Water surface / The Hall)\n\n## Continuity Constraints\n- Water level relative to Alice's chin must remain consistent during swimming.\n- Physical proximity between the large Alice and the small Mouse must be maintained for tension.\n\n## Beat List\n- BT001: The Encounter - Alice meets the Mouse in the pool of tears.\n- BT02: The Linguistic Test - Alice speaks English then French to test intelligence.\n- BT03: The Offense - The mention of cats offends the Mouse.\n- BT04: The Negotiation - A tense but polite negotiation begins.",
+  "metadata": {
+    "artifact_id": "CH002_SC004_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "432004dcb7da2d6ef280e1235d77763f2b79dcbd",
+    "created_at_utc": "2026-04-28T00:33:00.160357+00:00",
+    "updated_at_utc": "2026-04-28T00:33:00.160357+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH002_SC004",
+        "version": "9d9c321bda1e10ffcda8108f62b201f437205c79"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH002_SC004",
+        "version": "6d26545066c7c778710be2f78c1497e4f25f3805"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH002_SC004",
+        "version": "648d0c1e60836e491a5471a7fe689393f8d7b851"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-28T00:33:42.039332+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "432004dcb7da2d6ef280e1235d77763f2b79dcbd"
+      }
+    ]
+  }
+}

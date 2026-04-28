@@ -1,0 +1,405 @@
+{
+  "scene_id": "CH001_SC001",
+  "chapter_id": "CH001",
+  "scene_title": "SC001",
+  "purpose": "Establish the mundane reality and introduce the inciting incident (the Rabbit).",
+  "summary": "Alice sits bored by the riverbank with her sister. The tranquility is broken when a White Rabbit in a waistcoat runs past, checking a pocket watch, prompting Alice to chase it into a rabbit-hole under a hedge.",
+  "emotional_arc": "Boredom $\\rightarrow$ Intense Curiosity/Urgency.",
+  "production_intent": "Establish the mundane reality of a hot riverbank before disrupting it with the arrival of an impossible creature. The transition must move from static boredom to kinetic pursuit.",
+  "scene_short_description": "A bored girl watches a waistcoat-clad rabbit dash past her into a dark hedge.",
+  "scene_primary_scale_story_point": "Alice is approximately two feet tall compared to the environment.",
+  "scene_required_anchor_catalog": [
+    "riverbank_setting",
+    "rabbit_hole_tunnel"
+  ],
+  "scene_start_state": "Alice sits idle by the sunny riverbank with her sister.",
+  "scene_end_state": "Alice plunges into the dark rabbit_hole_tunnel.",
+  "dominant_action_line": "The White Rabbit runs past, prompting Alice to chase him into a hole.",
+  "scene_spatial_layout": [
+    "A wide, sunlit riverbank area",
+    "A transition point at the hedge entrance"
+  ],
+  "character_spatial_map": [
+    "Alice and her sister are seated on the bank",
+    "The white_rabbit moves through the mid-ground/background"
+  ],
+  "environment_subzones": [
+    "riverbank_setting",
+    "rabbit_hole_tunnel"
+  ],
+  "scene_event_chain": [
+    "event 1: Alice sits bored by the riverbank with hers sister.",
+    "event 2: The white_rabbit runs past checking a pocket watch.",
+    "event 3: Alice stands to chase the white_rabbit.",
+    "event 4: Alice enters the rabbit_hole_tunnel."
+  ],
+  "entry_vectors": [
+    "The white_rabbit enters from off-screen/distance"
+  ],
+  "exit_vectors": [
+    "Alice exits via the rabbit_hole_tunnel"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: Sudden movement breaks the stillness",
+    "BT002 -> BT003: Curiosity drives physical pursuit",
+    "BT003 -> BT004: The chase leads into the hole"
+  ],
+  "characters_required": [
+    {
+      "label": "Alice",
+      "canonical_id": "alice",
+      "display_name": "Alice",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH001/alice.md",
+      "notes": "Direct registry match for 'alice'."
+    },
+    {
+      "label": "Alice's Sister (background)",
+      "canonical_id": null,
+      "display_name": "Alice's Sister (background)",
+      "status": "review",
+      "entity_kind": "individual",
+      "resolution_score": 16,
+      "source_path": "",
+      "notes": "Low-confidence character match requires review."
+    },
+    {
+      "label": "The White Rabbit",
+      "canonical_id": "white_rabbit",
+      "display_name": "white_rabbit",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH001/white_rabbit.md",
+      "notes": "Direct registry match for 'white_rabbit'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "Sunny riverbank",
+      "canonical_id": "riverbank_setting",
+      "display_name": "riverbank_setting",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 68,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/environment_breakdowns/chapters/CH001/riverbank_setting.md",
+      "notes": "Chapter-local environment alias match for 'Sunny riverbank' (key_overlap=1, label_overlap=2, context_overlap=4)."
+    },
+    {
+      "label": "Hedge/Rabbit-hole entrance",
+      "canonical_id": "rabbit_hole_tunnel",
+      "display_name": "rabbit_hole_tunnel",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 58,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/environment_breakdowns/chapters/CH001/rabbit_hole_tunnel.md",
+      "notes": "Chapter-local environment alias match for 'Hedge/Rabbit-hole entrance' (key_overlap=2, label_overlap=2, context_overlap=3)."
+    }
+  ],
+  "continuity_constraints": [
+    "The lighting shift from sunny riverbank to shaded hedge entrance",
+    "Alice's physical scale relative to the rabbit and the hole"
+  ],
+  "visual_coverage_families": [
+    "Wide shots of the landscape",
+    "Medium shots of Alice and her sister",
+    "Close-ups of the White Rabbit's watch and waistcoat",
+    "Tracking shot of the chase"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "The mundane reality of the riverbank",
+      "purpose": "",
+      "action_start": "Alice sitting still",
+      "action_end": "The stillness is broken by movement",
+      "active_subjects": [
+        "alice",
+        "Alice's Sister (background)"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "riverbank_setting",
+      "blocking_hint": "Seated near sister",
+      "environment_subzone": "riverbank_setting",
+      "continuity_focus": "Sunny lighting",
+      "coverage_hint": "Medium shot of pair",
+      "coverage_priority": "High",
+      "handoff_to_next": "The arrival of the rabbit"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "The White Rabbit appears",
+      "purpose": "",
+      "action_start": "white_rabbit runs into view",
+      "action_end": "white_rabbit passes Alice",
+      "active_subjects": [
+        "white_rabbit"
+      ],
+      "passive_subjects": [
+        "alice",
+        "Alice's Sister (background)"
+      ],
+      "spatial_context": "riverbank_setting",
+      "blocking_hint": "Rabbit running across the frame",
+      "environment_subzone": "riverbank_setting",
+      "continuity_focus": "Movement vs static subjects",
+      "coverage_hint": "Close-up on watch/waistcoat",
+      "coverage_priority": "High",
+      "handoff_to_next": "Alice's reaction"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "Alice decides to chase",
+      "purpose": "",
+      "action_start": "Alice stands up",
+      "action_end": "Alice begins running",
+      "active_subjects": [
+        "alice"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "riverbank_setting",
+      "blocking_hint": "Moving from seated to standing/running",
+      "environment_subzone": "riverbank_setting",
+      "continuity_focus": "Transition from sitting to motion",
+      "coverage_hint": "Medium shot of Alice",
+      "coverage_priority": "Medium",
+      "handoff_to_next": "The chase begins"
+    },
+    {
+      "beat_id": "BT004",
+      "summary": "Entering the rabbit hole",
+      "purpose": "",
+      "action_start": "Alice reaches the hedge",
+      "action_end": "Alice disappears into the tunnel",
+      "active_subjects": [
+        "alice"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "rabbit_hole_tunnel",
+      "blocking_hint": "Moving from light to dark/downward",
+      "environment_subzone": "rabbit_hole_tunnel",
+      "continuity_focus": "Light shift to shade",
+      "coverage_hint": "Tracking shot of chase",
+      "coverage_priority": "High",
+      "handoff_to_next": "The descent"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish setting",
+      "planned_shot_moment_summary": "Alice sits bored",
+      "primary_subject_seed": "alice",
+      "secondary_subjects_seed": [
+        "Alice's Sister (background)"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "riverbank_setting",
+      "planned_shot_required_anchor_1": "riverbank_setting",
+      "planned_shot_scale_proof_detail": "child-sized stature",
+      "start_state_seed": "static seated position",
+      "end_state_seed": "stillness broken",
+      "action_seed": "sitting idle",
+      "blocking_seed": [
+        "seated on bank"
+      ],
+      "shot_size": "medium_full",
+      "camera_angle": "eye_level",
+      "lens_family": "wide",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front_three_quarter_left"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "inciting incident",
+      "planned_shot_moment_summary": "Rabbit runs past",
+      "primary_subject_seed": "white_rabbit",
+      "secondary_subjects_seed": [
+        "alice"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "riverbank_setting",
+      "planned_shot_required_anchor_1": "riverbank_setting",
+      "planned_shot_scale_proof_detail": "small animal size",
+      "start_state_seed": "rabbit enters frame",
+      "end_state_seed": "rabbit exits frame",
+      "action_seed": "checking watch while running",
+      "blocking_seed": [
+        "running across the bank"
+      ],
+      "shot_size": "medium_close",
+      "camera_angle": "eye_level",
+      "lens_family": "normal",
+      "camera_motion": "pan",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "hard_directional",
+      "primary_subject_angle": "profile_right"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "reaction/motivation",
+      "planned_shot_moment_summary": "Alice reacts to rabbit",
+      "primary_subject_seed": "alice",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "riverbank_setting",
+      "planned_shot_required_anchor_1": "riverbank_setting",
+      "planned_shot_scale_proof_detail": "child-sized stature",
+      "start_state_seed": "standing up",
+      "end_state_seed": "running",
+      "action_seed": "eyes widening and standing",
+      "blocking_seed": [
+        "moving toward the hedge"
+      ],
+      "shot_size": "medium",
+      "camera_angle": "eye_level",
+      "lens_family": "normal",
+      "camera_motion": "track",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "hard_directional",
+      "primary_subject_angle": "front"
+    },
+    {
+      "planned_shot_id": "SH004",
+      "beat_id": "BT004",
+      "narrative_function": "transition to next scene",
+      "planned_shot_moment_summary": "Alice enters hole",
+      "primary_subject_seed": "alice",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "rabbit_hole_tunnel",
+      "planned_shot_required_anchor_1": "rabbit_hole_tunnel",
+      "planned_shot_scale_proof_detail": "shrinking into the hole",
+      "start_state_seed": "approaching hedge",
+      "end_state_seed": "disappearing into darkness",
+      "action_seed": "diving/clambering into the hole",
+      "blocking_seed": [
+        "moving from light to dark"
+      ],
+      "shot_size": "full",
+      "camera_angle": "high_angle",
+      "lens_family": "wide",
+      "camera_motion": "push_in",
+      "zoom_behavior": "none",
+      "focus_strategy": "environment_priority",
+      "lighting_style": "low_key_night",
+      "primary_subject_angle": "front_three_quarter_right"
+    }
+  ],
+  "unresolved_questions": [
+    "Resolve Alice's Sister (background) -> Alice's Sister (background)"
+  ],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH001",
+      "scene_id": "CH001_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH001",
+      "scene_id": "CH001_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH001",
+      "scene_id": "CH001_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH001",
+      "scene_id": "CH001_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH001",
+      "scene_id": "CH001_SC001"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH001",
+      "source_path": "C:\\FilmCreator\\projects\\alice_in_wonderland\\02_story_analysis\\chapter_analysis\\CH001_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH008",
+      "source_path": "projects/alice_in_wonderland/01_source/chapters/CH008_chapter_viii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH012",
+      "source_path": "projects/alice_in_wonderland/01_source/chapters/CH012_chapter_xii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH004",
+      "source_path": "projects/alice_in_wonderland/01_source/chapters/CH004_chapter_iv.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH001",
+      "canonical_id": "alice"
+    }
+  ],
+  "evidence_summary": [
+    "[CH001_SC001] Purpose: Establish the mundane reality and introduce the inciting incident (the Rabbit).",
+    "[CH001_SC001] Summary: Alice sits bored by the riverbank with her sister. The tranquility is broken when a White Rabbit in a waistcoat runs past, checking a pocket watch, prompting Alice to chase it into a rabbit-hole under a hedge.",
+    "[CH001_SC001] Emotional arc: Boredom $\\rightarrow$ Intense Curiosity/Urgency.",
+    "[CH001_SC001] Coverage: Wide shots of the landscape; Medium shots of Alice and her sister; Close-ups of the White Rabbit's watch and waistcoat; Tracking shot of the chase.",
+    "[CH001_SC001] Continuity: The transition from the sunny bank to the shade of the hedge; Alice's physical movement into the hole.",
+    "[CH001] Chapter summary: **Setting:** - A riverbank (sunny, hot day). - A large rabbit-hole under a hedge. - A deep vertical well/tunnel lined with cupboards, bookshelves, maps, and pictures. - A long, low hall lit by a row of hanging lamps,...",
+    "[CH008] CHAPTER VIII. (book index hit)",
+    "[CH012] CHAPTER XII. (book index hit)",
+    "[CH004] CHAPTER IV. (book index hit)",
+    "Character alice: Alice is a young girl characterized by extreme, sudden changes in physical scale. Her size fluctuates between the stature of a small child (approximately two feet tall) and colossal proportions reaching up to nine feet or even nearly two mi..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH001_SC001\n\n## Production Intent\nEstablish the mundane reality of a hot riverbank before disrupting it with the arrival of an impossible creature. The transition must move from static boredom to kinetic pursuit.\n\n## Required Cast\n- alice (Child stature)\n- Alice's Sister (background)\n- white_rabbit (Small animal scale)\n\n## Required Environments\n- riverbank_setting (Sunny, hot day)\n- rabbit_hole_tunnel (Shaded, dark entrance)\n\n## Continuity Constraints\n- The lighting shift from sunny bank to shaded hedge.\n- Alice's physical size relative to the rabbit and the hole.\n\n## Beat List\n1. Alice sits bored by the riverbank with her sister.\n2. The White Rabbit runs past checking a pocket watch.\n3. Alice stands up to chase him.\n4. Alice enters the dark rabbit_hole_tunnel.",
+  "metadata": {
+    "artifact_id": "CH001_SC001_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "0eab401c0794967966ff4a238bbd0e2ff743d46b",
+    "created_at_utc": "2026-04-28T00:27:54.043299+00:00",
+    "updated_at_utc": "2026-04-28T00:27:54.043299+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH001_SC001",
+        "version": "85dc0056fc009a19f61fce4b0491f52bb7586650"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH001_SC001",
+        "version": "fd2c81ecd2f217ad48e1f36f02111349c909cbb0"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH001_SC001",
+        "version": "3c6334c957603545158ec7ff2b075757b4f24bff"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-28T00:28:39.392766+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "0eab401c0794967966ff4a238bbd0e2ff743d46b"
+      }
+    ]
+  }
+}

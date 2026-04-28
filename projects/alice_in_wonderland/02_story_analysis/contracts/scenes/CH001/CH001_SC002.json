@@ -1,0 +1,313 @@
+{
+  "scene_id": "CH001_SC002",
+  "chapter_id": "CH001",
+  "scene_title": "SC002",
+  "purpose": "Introduce the surreal physics and scale of Wonderland through a descent.",
+  "summary": "Alice falls slowly down a deep, vertical tunnel. The walls are lined with domestic objects like cupboards and bookshelves. She interacts with her environment by grabbing an \"ORANGE MARMALADE\" jar to save it. During the fall, she engages in internal monologue about geography and her cat, Dinah.",
+  "emotional_arc": "Confusion $\\rightarrow$ Philosophical Contemplation $\\rightarrow$ Impact.",
+  "production_intent": "Establish the surreal physics of a vertical descent where domestic objects line the walls. The scale must fluctuate between Alice's child-sized stature and the vastness of the shaft to emphasize the dreamlike environment.",
+  "scene_short_description": "A young girl falls slowly through a deep, vertical tunnel lined with domestic furniture.",
+  "scene_primary_scale_story_point": "Alice fluctuates between child-sized and colossal proportions relative to the shaft.",
+  "scene_required_anchor_catalog": [
+    "rabbit_hole_tunnel (vertical well)",
+    "orange_marmalade_jar"
+  ],
+  "scene_start_state": "Alice is in mid-air, descending through a dark vertical tunnel.",
+  "scene_end_state": "Alice reaches the end of her descent as gravity or impact takes hold.",
+  "dominant_action_line": "A slow, drifting fall through a domestic-lined shaft.",
+  "scene_spatial_layout": [
+    "The environment is a deep, vertical well/tunnel.",
+    "Walls are lined with cupboards and bookshelves."
+  ],
+  "character_spatial_map": [
+    "Alice is centered in the vertical axis of the tunnel.",
+    "Objects pass her at varying distances based on her scale."
+  ],
+  "environment_subzones": [
+    "rabbit_hole_tunnel (the shaft)",
+    "shelf_lining (walls/furniture)"
+  ],
+  "scene_event_chain": [
+    "event 1: Alice falls slowly through the deep vertical tunnel.",
+    "event 2: Alice reaches out to grab an orange marmalade jar from a shelf.",
+    "event 3: Alice engages in internal monologue regarding geography and Dinah.",
+    "event 4: The descent leads toward a sudden impact or transition."
+  ],
+  "entry_vectors": [
+    "Vertical descent from above"
+  ],
+  "exit_vectors": [
+    "Impact at the bottom of the shaft"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: Physical interaction with environment",
+    "BT002 -> BT003: Shift to internal monologue"
+  ],
+  "characters_required": [
+    {
+      "label": "Alice",
+      "canonical_id": "alice",
+      "display_name": "Alice",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH001/alice.md",
+      "notes": "Direct registry match for 'alice'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "The deep vertical well/tunnel (lined with shelves and cupboards)",
+      "canonical_id": "rabbit_hole_tunnel",
+      "display_name": "rabbit_hole_tunnel",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 118,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/environment_breakdowns/chapters/CH001/rabbit_hole_tunnel.md",
+      "notes": "Chapter-local environment alias match for 'The deep vertical well/tunnel (lined with shelves and cupboards)' (key_overlap=1, label_overlap=7, context_overlap=4)."
+    }
+  ],
+  "continuity_constraints": [
+    "The speed of the fall must remain slow and dreamlike despite the verticality.",
+    "Fixed placement of cupboards/bookshelves relative to Alice's passing velocity."
+  ],
+  "visual_coverage_families": [
+    "Vertical tracking shots",
+    "POV shots looking down the shaft",
+    "Close-ups of objects (marmalade jar, bookshelves)",
+    "Extreme long shot of Alice falling"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "The initial descent begins",
+      "purpose": "",
+      "action_start": "Alice enters frame falling :: action_end=Alice passes the first set of shelves",
+      "action_end": "",
+      "active_subjects": [
+        "alice"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "rabbit_hole_tunnel",
+      "blocking_hint": "centered vertical fall",
+      "environment_subzone": "rabbit_hole_tunnel",
+      "continuity_focus": "slow/dreamlike speed",
+      "coverage_hint": "extreme_long_shot",
+      "coverage_priority": "high",
+      "handoff_to_next": "physical interaction"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "Alice grabs the marmalade jar",
+      "purpose": "",
+      "action_start": "Alice reaches for a shelf :: action_end=Alice secures the orange marmalade jar",
+      "action_end": "",
+      "active_subjects": [
+        "alice"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "shelf_lining",
+      "blocking_hint": "reaching sideways :: motion=grab",
+      "environment_subzone": "shelf_lining",
+      "continuity_focus": "jar placement on shelf vs hand grip",
+      "coverage_hint": "close_up",
+      "coverage_priority": "medium",
+      "handoff_to_next": "internal monologue"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "BT0s03: Internal reflection on geography and Dinah",
+      "purpose": "",
+      "action_start": "Alice looks around the shaft :: action_end=The descent continues towards impact",
+      "action_end": "",
+      "active_subjects": [
+        "alice"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "rabbit_hole_tunnel",
+      "blocking_hint": "drifting while thinking",
+      "environment_subzone": "rabbit_hole_tunnel",
+      "continuity_focus": "scale vs objects",
+      "coverage_hint": "medium_close",
+      "coverage_priority": "low",
+      "handoff_to_next": "impact"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish scale",
+      "planned_shot_moment_summary": "Alice falling through the shaft",
+      "primary_subject_seed": "alice",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "rabbit_hole_tunnel",
+      "planned_shot_required_anchor_1": "rabbit_hole_tunnel",
+      "planned_shot_scale_proof_detail": "Alice vs tunnel width",
+      "start_state_seed": "Alice in mid-air",
+      "end_state_seed": "Alice drifting past shelves",
+      "action_seed": "falling :: motion=track",
+      "blocking_seed": [],
+      "shot_size": "full",
+      "camera_angle": "eye_level",
+      "lens_family": "wide",
+      "camera_motion": "track",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "interact with environment",
+      "planned_shot_moment_summary": "Alice grabs the jar",
+      "primary_subject_seed": "alice",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "shelf_lining",
+      "planned_shot_required_anchor_1": "orange_marmalade_jar",
+      "planned_shot_scale_proof_detail": "hand grasping jar",
+      "start_state_seed": "reaching for shelf",
+      "end_state_seed": "holding jar",
+      "action_seed": "grabbing :: motion=pan",
+      "blocking_seed": [],
+      "shot_size": "close_up",
+      "camera_angle": "eye_level",
+      "lens_family": "normal",
+      "camera_motion": "none",
+      "zoom_behavior": "subtle_in",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front_three_quarter_left"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "internal monologue",
+      "planned_shot_moment_summary": "Alice thinks of Dinah",
+      "primary_subject_seed": "alice",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "internal_monologue",
+      "environment_subzone": "rabbit_hole_tunnel",
+      "planned_shot_required_anchor_1": "none",
+      "planned_shot_scale_proof_detail": "facial expression vs environment",
+      "start_state_seed": "holding jar",
+      "end_state_seed": "drifting :: motion=none",
+      "action_seed": "",
+      "blocking_seed": [],
+      "shot_size": "medium_close",
+      "camera_angle": "eye_level",
+      "lens_family": "portrait",
+      "camera_motion": "none",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front"
+    }
+  ],
+  "unresolved_questions": [],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH001",
+      "scene_id": "CH001_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH001",
+      "scene_id": "CH001_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH001",
+      "scene_id": "CH001_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH001",
+      "scene_id": "CH001_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH001",
+      "scene_id": "CH001_SC002"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH001",
+      "source_path": "C:\\FilmCreator\\projects\\alice_in_wonderland\\02_story_analysis\\chapter_analysis\\CH001_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH001",
+      "source_path": "projects/alice_in_wonderland/01_source/chapters/CH001_chapter_i.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH002",
+      "source_path": "projects/alice_in_wonderland/01_source/chapters/CH002_chapter_ii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH004",
+      "source_path": "projects/alice_in_wonderland/01_source/chapters/CH004_chapter_iv.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH001",
+      "canonical_id": "alice"
+    }
+  ],
+  "evidence_summary": [
+    "[CH001_SC002] Purpose: Introduce the surreal physics and scale of Wonderland through a descent.",
+    "[CH001_SC002] Summary: Alice falls slowly down a deep, vertical tunnel. The walls are lined with domestic objects like cupboards and bookshelves. She interacts with her environment by grabbing an \"ORANGE MARMALADE\" jar to save it. During the fall, she engag...",
+    "[CH001_SC002] Emotional arc: Confusion $\\rightarrow$ Philosophical Contemplation $\\rightarrow$ Impact.",
+    "[CH001_SC002] Coverage: Vertical tracking shots; POV shots looking down the shaft; Close-ups of the marmalade jar and bookshelves; Extreme long shot of Alice falling.",
+    "[CH001_SC002] Continuity: The speed of the fall (slow/dreamlike vs. fast); The placement of objects on the shelves as she passes them.",
+    "[CH001] Chapter summary: **Setting:** - A riverbank (sunny, hot day). - A large rabbit-hole under a hedge. - A deep vertical well/tunnel lined with cupboards, bookshelves, maps, and pictures. - A long, low hall lit by a row of hanging lamps,...",
+    "[CH001] CHAPTER I. (book index hit)",
+    "[CH002] CHAPTER II. (book index hit)",
+    "[CH004] CHAPTER IV. (book index hit)",
+    "Character alice: Alice is a young girl characterized by extreme, sudden changes in physical scale. Her size fluctuates between the stature of a small child (approximately two feet tall) and colossal proportions reaching up to nine feet or even nearly two mi..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH001_SC002\n\n## Production Intent\nEstablish the surreal physics of a vertical descent where domestic objects line the walls. The scale must fluctuate between Alice's child-sized stature and the vastness of the shaft to emphasize the dreamlike environment.\n\n## Required Cast\n- alice (child-sized/fluctuating)\n\n## Required Environments\n- rabbit_hole_tunnel (vertical well with cupboards, bookshelves, maps, and pictures)\n\n## Continuity Constraints\n- The speed of the fall must remain slow and dreamlike despite the verticality.\n- Fixed placement of cupboards/booksshelves relative to Alice's passing velocity.\n\n## Beat List\n- BT001: Initial descent through the tunnel.\n- BT002: Grabbing the orange marmalade jar.\n- BT003: Internal monologue regarding geography and Dinah.",
+  "metadata": {
+    "artifact_id": "CH001_SC002_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "785488a4467ea16b921691b7e1678a58c1f415c4",
+    "created_at_utc": "2026-04-28T00:28:39.415761+00:00",
+    "updated_at_utc": "2026-04-28T00:28:39.415761+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH001_SC002",
+        "version": "eaa4c613e746842c56874d874ac434aadd9296f8"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH001_SC002",
+        "version": "88e92b1a3472106303c7fcc407c25124224ffdd0"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH001_SC002",
+        "version": "eb47e474b091470f9af583be5f908be2128b7813"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-28T00:29:17.998600+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "785488a4467ea16b921691b7e1678a58c1f415c4"
+      }
+    ]
+  }
+}

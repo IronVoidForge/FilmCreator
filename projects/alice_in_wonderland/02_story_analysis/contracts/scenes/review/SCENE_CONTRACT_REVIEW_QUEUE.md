@@ -1,3 +1,27 @@
 # Scene Contract Review Queue
 
-- No review items.
+- `CH001_SC001`
+  - Resolve Alice's Sister (background) -> Alice's Sister (background)
+- `CH002_SC005`
+  - Resolve The Duck -> The Duck
+  - Resolve The Dodo -> The Dodo
+  - Resolve The Lory -> The Lory
+  - Resolve The Eaglet -> The Eaglet
+- `CH007_SC003`
+  - Resolve e- The March Hare -> e- The March Hare
+- `CH009_SC001`
+  - Resolve A path leading away from the kitchen -> A path leading away from the kitchen
+- `CH009_SC002`
+  - Resolve The path/garden entrance -> The path/garden entrance
+- `CH009_SC003`
+  - Resolve Soldiers/Players -> Soldiers/Players
+- `CH010_SC003`
+  - Resolve * The Mock le Turtle -> * The Mock le Turtle
+- `CH012_SC001`
+  - Resolve The Jury (including Bill the Lizard) -> The Jury (including Bill the Lizard)
+- `CH012_SC002`
+  - Resolve s- The Knave -> s- The Knave
+- `CH012_SC003`
+  - Resolve The Pack of Cards (The Jury/Soldiers) -> The Pack of Cards (The Jury/Soldiers)
+- `CH012_SC004`
+  - Resolve Alice's Sister -> Alice's Sister

@@ -1,0 +1,365 @@
+{
+  "scene_id": "CH002_SC001",
+  "chapter_id": "CH002",
+  "scene_title": "SC001",
+  "purpose": "Establish Alice's massive scale and her initial frustration with the physical environment.",
+  "summary": "Alice, now over nine feet tall, struggles with her size in the hall. Her head hits the ceiling, and she feels disconnected from her own feet. After picking up a golden key, she realizes she is too large to fit through the garden door and begins to cry, creating a pool of salt water.",
+  "emotional_arc": "Confusion $\\rightarrow$ Frustration $\\rightarrow$ Despair",
+  "production_intent": "Establish the physical tension of a nine-foot tall Alice navigating a standard architectural space. The visual focus must emphasize her massive scale relative to the hall ceiling and the garden door, using height as a source of frustration.",
+  "scene_short_description": "A giant girl struggles with a low ceiling before weeping into a growing pool.",
+  "scene_primary_scale_story_point": "Alice is over nine feet tall, making standard doors and ceilings tight constraints.",
+  "scene_required_anchor_catalog": [
+    "The Hall Ceiling",
+    "The Garden Door",
+    "The Golden Key"
+  ],
+  "scene_start_state": "Alice stands in the hall, her head nearly touching or striking the ceiling.",
+  "scene_end_state": "Alice sits amidst a growing pool of salt water from her tears.",
+  "dominant_action_line": "Alice navigates the hall, realizes her size prevents passage through the door, and cries.",
+  "scene_spatial_layout": [
+    "Verticality is the primary axis; the ceiling is an immediate physical obstacle.",
+    "The garden door serves as a narrow exit point compared to her scale."
+  ],
+  "character_spatial_map": [
+    "Alice moves between the hall center and the garden door.",
+    "Her feet are positioned at the floor level, distant from her head."
+  ],
+  "environment_subzones": [
+    "The Hall (High ceiling/Large scale)",
+    "The Garden Door threshold"
+  ],
+  "scene_event_chain": [
+    "event 1: Alice strikes her head against the hall ceiling while moving.",
+    "event 2: Alice looks down at her feet and picks up a golden key.",
+    "event 3: Alice realizes she is too large to fit through the garden door.",
+    "event 4: Alice begins to cry, creating a pool of salt water on the floor."
+  ],
+  "entry_vectors": [
+    "The Hall entrance"
+  ],
+  "exit_vectors": [
+    "The rising salt water pool"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: Physical impact leads to visual inspection of scale.",
+    "BT002 -> BT003: Discovery of the key leads to realization of the door constraint.",
+    "BT003 -> BT004: Realization leads to emotional collapse and water accumulation."
+  ],
+  "characters_required": [
+    {
+      "label": "Alice",
+      "canonical_id": "alice",
+      "display_name": "Alice",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH002/alice.md",
+      "notes": "Direct registry match for 'alice'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "The Hall (Large scale/High ceiling)",
+      "canonical_id": "the_hall_and_pool",
+      "display_name": "the_hall_and_pool",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 88,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/environment_breakdowns/chapters/CH002/the_hall_and_pool.md",
+      "notes": "Chapter-local environment alias match for 'The Hall (Large scale/High ceiling)' (key_overlap=1, label_overlap=4, context_overlap=4)."
+    }
+  ],
+  "continuity_constraints": [
+    "Alice's height must remain constant at over nine feet relative to the ceiling/door.",
+    "The rising level of the salt water pool from her tears."
+  ],
+  "visual_coverage_families": [
+    "Extreme low-angle shots (looking up at Alice)",
+    "Wide shots for scale comparison",
+    "Close-ups of the golden key and facial expressions"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "Physical struggle with scale",
+      "purpose": "",
+      "action_start": "Alice moves through the hall",
+      "action_end": "Head strikes ceiling",
+      "active_subjects": [
+        "alice"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "The Hall",
+      "blocking_hint": "Walking upward/forward",
+      "environment_subzone": "the_hall_and_pool",
+      "continuity_focus": "Height relative to ceiling",
+      "coverage_hint": "Extreme low-angle",
+      "coverage_priority": "high",
+      "handoff_to_next": "Visual inspection of body"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "Inspection of size and the key",
+      "purpose": "",
+      "action_start": "Alice looks down at her feet",
+      "action_end": "Alice picks up the golden key",
+      "active_subjects": [
+        "alice"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "The Hall",
+      "blocking_hint": "Looking down/reaching low",
+      "environment_subzone": "the_hall_and_pool",
+      "continuity_focus": "Scale of hands vs body",
+      "coverage_hint": "Medium-full shot",
+      "coverage_priority": "medium",
+      "handoff_to_next": "Comparison to the door"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "The realization of the barrier",
+      "purpose": "",
+      "action_start": "Alice holds the key near the door",
+      "action_end": "Alice stands before the garden door",
+      "active_subjects": [
+        "alice"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "The Garden Door",
+      "blocking_hint": "Standing at the threshold",
+      "environment_subzone": "the_hall_and_pool",
+      "continuity_focus": "Alice's width vs door frame",
+      "coverage_hint": "Wide shot",
+      "coverage_priority": "high",
+      "handoff_to_next": "Emotional collapse"
+    },
+    {
+      "beat_id": "BT004",
+      "summary": "The descent into despair",
+      "purpose": "",
+      "action_start": "Alice begins to cry",
+      "action_end": "A pool of salt water forms at her feet",
+      "active_subjects": [
+        "alice"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "The Hall floor",
+      "blocking_hint": "Sitting/kneeling on the floor",
+      "environment_subzone": "the_hall_and_pool",
+      "continuity_focus": "Rising level of salt water",
+      "coverage_hint": "Close-up to medium shot",
+      "coverage_priority": "high",
+      "handoff_to_next": "End of scene"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "Establish scale",
+      "planned_shot_moment_summary": "Alice hits the ceiling",
+      "primary_subject_seed": "alice",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "the_hall_and_pool",
+      "planned_shot_required_anchor_1": "the_hall_and_pool",
+      "planned_shot_scale_proof_detail": "head-to-ceiling contact",
+      "start_state_seed": "Alice moving through hall",
+      "end_state_seed": "Impact with ceiling",
+      "action_seed": "Alice's head strikes the ceiling",
+      "blocking_seed": [
+        "Walking toward camera/upward"
+      ],
+      "shot_size": "full",
+      "camera_angle": "low_angle",
+      "lens_family": "wide",
+      "camera_motion": "none",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "Show disconnection",
+      "planned_shot_moment_summary": "Alice looks at her feet and the key",
+      "primary_subject_seed": "alice",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "the_hall_and_pool",
+      "planned_shot_required_anchor_1": "the_hall_and_pool",
+      "planned_shot_scale_proof_detail": "feet vs head distance",
+      "start_state_seed": "Looking down",
+      "end_state_seed": "Picking up key",
+      "action_seed": "Alice picks up the golden key",
+      "blocking_seed": [
+        "Stooping/reaching"
+      ],
+      "shot_size": "medium_full",
+      "camera_angle": "low_angle",
+      "lens_family": "wide",
+      "camera_motion": "tilt",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front_three_quarter_left"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "Establish the obstacle",
+      "planned_shot_moment_summary": "Alice compares herself to the door",
+      "primary_subject_seed": "alice",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "the_hall_and_pool",
+      "planned_shot_required_anchor_1": "the_hall_and_pool",
+      "planned_shot_scale_proof_detail": "Alice vs garden door width",
+      "start_state_seed": "Holding key near door",
+      "end_state_seed": "Staring at door frame",
+      "action_seed": "Alice realizes she cannot fit through the door",
+      "blocking_seed": [
+        "Standing by the door"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "low_angle",
+      "lens_family": "ultra_wide",
+      "camera_motion": "none",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "profile_left"
+    },
+    {
+      "planned_shot_id": "SH004",
+      "beat_id": "BT004",
+      "narrative_function": "Emotional climax",
+      "planned_shot_moment_summary": "Alice cries and water rises",
+      "primary_subject_seed": "alice",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "the_hall_and_pool",
+      "planned_shot_required_anchor_1": "the_hall_and_pool",
+      "planned_shot_scale_proof_detail": "rising salt water level",
+      "start_state_seed": "Crying begins",
+      "end_state_seed": "Pool forms around feet",
+      "action_seed": "Alice weeps as a pool of salt water grows",
+      "blocking_seed": [
+        "Sitting on floor"
+      ],
+      "shot_size": "medium_close",
+      "camera_angle": "eye_level",
+      "lens_family": "normal",
+      "camera_motion": "none",
+      "zoom_behavior": "subtle_in",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "high_contrast_ceremonial",
+      "primary_subject_angle": "front"
+    }
+  ],
+  "unresolved_questions": [],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH002",
+      "scene_id": "CH002_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH002",
+      "scene_id": "CH002_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH002",
+      "scene_id": "CH002_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH002",
+      "scene_id": "CH002_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH002",
+      "scene_id": "CH002_SC001"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH002",
+      "source_path": "C:\\FilmCreator\\projects\\alice_in_wonderland\\02_story_analysis\\chapter_analysis\\CH002_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH002",
+      "source_path": "projects/alice_in_wonderland/01_source/chapters/CH002_chapter_ii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH004",
+      "source_path": "projects/alice_in_wonderland/01_source/chapters/CH004_chapter_iv.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH001",
+      "source_path": "projects/alice_in_wonderland/01_source/chapters/CH001_chapter_i.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH002",
+      "canonical_id": "alice"
+    }
+  ],
+  "evidence_summary": [
+    "[CH002_SC001] Purpose: Establish Alice's massive scale and her initial frustration with the physical environment.",
+    "[CH002_SC001] Summary: Alice, now over nine feet tall, struggles with her size in the hall. Her head hits the ceiling, and she feels disconnected from her own feet. After picking up a golden key, she realizes she is too large to fit through the garden door...",
+    "[CH002_SC001] Emotional arc: Confusion $\\rightarrow$ Frustration $\\rightarrow$ Despair",
+    "[CH002_SC001] Coverage: Extreme low-angle shots (looking up at Alice), wide shots to show scale, close-ups of the golden key and Alice's face.",
+    "[CH002_SC001] Continuity: The height of Alice relative to the door; the rising level of the salt water pool.",
+    "[CH002] Chapter summary: **Location: The Hall / The Garden Door** - **Visual State:** Alice is giant (over nine feet tall). Her head strikes the ceiling of the hall. - **Event:** Alice looks down at her feet, which appear distant and small fr...",
+    "[CH002] CHAPTER II. (book index hit)",
+    "[CH004] CHAPTER IV. (book index hit)",
+    "[CH001] CHAPTER I. (book index hit)",
+    "Character alice: Alice is a young girl characterized by extreme, sudden changes in physical scale. Her size fluctuates between the stature of a small child (approximately two feet tall) and colossal proportions reaching up to nine feet or even nearly two mi..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH002_SC001\n\n## Production Intent\nEstablish the physical tension of a nine-foot tall Alice navigating a standard architectural space. The visual focus must emphasize her massive scale relative to the hall ceiling and the garden door, using height as a source of frustration.\n\n## Required Cast\n- alice (9ft+ stature)\n\n## Required Environments\n- the_hall_and_pool (Large scale/High ceiling with Garden Door)\n\n## Continuity Constraints\n- Alice's height must remain constant at over nine feet relative to the ceiling/door.\n- The rising level of the salt water pool from her tears.\n\n## Beat List\n1. Physical struggle with scale (Head hits ceiling).\n2. Inspection of size and the key (Looking at feet/picking up key).\n3. The realization of the barrier (Comparing herself to the door).\n4. The descent into despair (Crying and rising salt water pool).",
+  "metadata": {
+    "artifact_id": "CH002_SC001_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "80677148a10fad0438b96f1519f2500eaae0c78f",
+    "created_at_utc": "2026-04-28T00:30:44.200593+00:00",
+    "updated_at_utc": "2026-04-28T00:30:44.200593+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH002_SC001",
+        "version": "09c283df57a63cea0f87abad7d7c714d26d49e4d"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH002_SC001",
+        "version": "5548a237a56a3b4e1a8638d8739903b1ab646840"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH002_SC001",
+        "version": "0d37e6ff4d2c0890dd906ce524a83455c8142040"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-28T00:31:31.410113+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "80677148a10fad0438b96f1519f2500eaae0c78f"
+      }
+    ]
+  }
+}

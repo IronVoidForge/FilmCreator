@@ -1,0 +1,17 @@
+# Shot Index
+
+- `SH001` - Ceremonial Master 1: The Queen sends Alice off to find the Mock Turtle (type=ceremonial_master, target=10.8s, beat_ids=BT001, cast=2, env=croquet_ground_field, prev=(none), next=SH002)
+- `SH002` - Authority Single 2: The Queen sends Alice off to find the Mock Turtle (type=authority_single, target=7.0s, beat_ids=BT001, cast=3, env=croquet_ground_field, prev=SH001, next=SH003)
+- `SH003` - Petitioner Group 3: The Queen sends Alice off to find the Mock Turtle (type=petitioner_group, target=7.0s, beat_ids=BT001, cast=3, env=croquet_ground_field, prev=SH002, next=SH004)
+- `SH004` - Crowd Response 4: The Queen sends Alice off to find the Mock Turtle (type=crowd_response, target=7.0s, beat_ids=BT001, cast=3, env=croquet_ground_field, prev=SH003, next=SH005)
+- `SH005` - Symbol Insert 5: The Queen sends Alice off to find the Mock Turtle (type=symbol_insert, target=5.4s, beat_ids=BT001, cast=3, env=croquet_ground_field, prev=SH004, next=SH006)
+- `SH006` - Reaction Closeup 6: The Queen sends Alice off to find the Mock Turtle (type=reaction_closeup, target=7.0s, beat_ids=BT001, cast=2, env=croquet_ground_field, prev=SH005, next=SH007)
+- `SH007` - Scale Proof Wide 7: The Queen sends Alice off to find the Mock Turtle (type=scale_proof_wide, target=10.8s, beat_ids=BT001, cast=3, env=croquet_ground_field, prev=SH006, next=SH008)
+- `SH008` - Travel Wide 8: Alice meets the Gryphon (type=travel_wide, target=9.2s, beat_ids=BT020, cast=2, env=sunny_gryphon_resting_area, prev=SH007, next=SH009)
+- `SH009` - Tracking Group 9: Alice meets the Gryphon (type=tracking_group, target=6.0s, beat_ids=BT020, cast=2, env=sunny_gryphon_resting_area, prev=SH008, next=SH010)
+- `SH010` - Ceremonial Master 10: The pair travels toward the sobbing (type=ceremonial_master, target=10.0s, beat_ids=BT030, cast=2, env=croquet_ground_field, prev=SH009, next=SH011)
+- `SH011` - Authority Single 11: The pair travels toward the sobbing (type=authority_single, target=6.5s, beat_ids=BT030, cast=2, env=croquet_ground_field, prev=SH010, next=SH012)
+- `SH012` - Petitioner Group 12: The pair travels toward the sobbing (type=petitioner_group, target=6.5s, beat_ids=BT030, cast=2, env=croquet_ground_field, prev=SH011, next=SH013)
+- `SH013` - Crowd Response 13: The pair travels toward the sobbing (type=crowd_response, target=6.5s, beat_ids=BT030, cast=2, env=croquet_ground_field, prev=SH012, next=SH014)
+- `SH014` - Symbol Insert 14: The pair travels toward the sobbing (type=symbol_insert, target=5.0s, beat_ids=BT030, cast=2, env=croquet_ground_field, prev=SH013, next=SH015)
+- `SH015` - Reaction Closeup 15: The pair travels toward the sobbing (type=reaction_closeup, target=6.5s, beat_ids=BT030, cast=1, env=croquet_ground_field, prev=SH014, next=(none))

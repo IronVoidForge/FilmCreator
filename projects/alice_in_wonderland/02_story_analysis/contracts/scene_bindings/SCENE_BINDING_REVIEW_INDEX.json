@@ -1,1 +1,2166 @@
-[]
+[
+  {
+    "scene_id": "CH001_SC001",
+    "chapter_id": "CH001",
+    "binding_mode": "scene_level",
+    "resolved_characters": [
+      {
+        "label": "Alice",
+        "canonical_id": "alice",
+        "display_name": "Alice",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH001/alice.md",
+        "notes": "Direct registry match for 'alice'."
+      },
+      {
+        "label": "Alice's Sister (background)",
+        "canonical_id": null,
+        "display_name": "Alice's Sister (background)",
+        "status": "review",
+        "entity_kind": "individual",
+        "resolution_score": 16,
+        "source_path": "",
+        "notes": "Low-confidence character match requires review."
+      },
+      {
+        "label": "The White Rabbit",
+        "canonical_id": "white_rabbit",
+        "display_name": "white_rabbit",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH001/white_rabbit.md",
+        "notes": "Direct registry match for 'white_rabbit'."
+      }
+    ],
+    "resolved_environment": {
+      "label": "Sunny riverbank",
+      "canonical_id": "riverbank_setting",
+      "display_name": "riverbank_setting",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 68,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/environment_breakdowns/chapters/CH001/riverbank_setting.md",
+      "notes": "Chapter-local environment alias match for 'Sunny riverbank' (key_overlap=1, label_overlap=2, context_overlap=4)."
+    },
+    "beat_environment_overrides": [
+      {
+        "beat_id": "BT001",
+        "environment": {
+          "label": "Sunny riverbank",
+          "canonical_id": "riverbank_setting",
+          "display_name": "riverbank_setting",
+          "status": "canonical",
+          "entity_kind": "environment",
+          "resolution_score": 68,
+          "source_path": "projects/alice_in_wonderland/02_story_analysis/environment_breakdowns/chapters/CH001/riverbank_setting.md",
+          "notes": "Chapter-local environment alias match for 'Sunny riverbank' (key_overlap=1, label_overlap=2, context_overlap=4)."
+        },
+        "reason": "Beat environment matched riverbank_setting from beat subzone/spatial context."
+      },
+      {
+        "beat_id": "BT002",
+        "environment": {
+          "label": "Sunny riverbank",
+          "canonical_id": "riverbank_setting",
+          "display_name": "riverbank_setting",
+          "status": "canonical",
+          "entity_kind": "environment",
+          "resolution_score": 68,
+          "source_path": "projects/alice_in_wonderland/02_story_analysis/environment_breakdowns/chapters/CH001/riverbank_setting.md",
+          "notes": "Chapter-local environment alias match for 'Sunny riverbank' (key_overlap=1, label_overlap=2, context_overlap=4)."
+        },
+        "reason": "Beat environment matched riverbank_setting from beat subzone/spatial context."
+      },
+      {
+        "beat_id": "BT003",
+        "environment": {
+          "label": "Sunny riverbank",
+          "canonical_id": "riverbank_setting",
+          "display_name": "riverbank_setting",
+          "status": "canonical",
+          "entity_kind": "environment",
+          "resolution_score": 68,
+          "source_path": "projects/alice_in_wonderland/02_story_analysis/environment_breakdowns/chapters/CH001/riverbank_setting.md",
+          "notes": "Chapter-local environment alias match for 'Sunny riverbank' (key_overlap=1, label_overlap=2, context_overlap=4)."
+        },
+        "reason": "Beat environment matched riverbank_setting from beat subzone/spatial context."
+      },
+      {
+        "beat_id": "BT004",
+        "environment": {
+          "label": "Hedge/Rabbit-hole entrance",
+          "canonical_id": "rabbit_hole_tunnel",
+          "display_name": "rabbit_hole_tunnel",
+          "status": "canonical",
+          "entity_kind": "environment",
+          "resolution_score": 58,
+          "source_path": "projects/alice_in_wonderland/02_story_analysis/environment_breakdowns/chapters/CH001/rabbit_hole_tunnel.md",
+          "notes": "Chapter-local environment alias match for 'Hedge/Rabbit-hole entrance' (key_overlap=2, label_overlap=2, context_overlap=3)."
+        },
+        "reason": "Beat environment matched rabbit_hole_tunnel from beat subzone/spatial context."
+      }
+    ],
+    "candidate_environment_ids": [
+      "riverbank_setting",
+      "rabbit_hole_tunnel"
+    ],
+    "future_environment_requests": [],
+    "review_flags": [
+      "multiple_scene_environment_candidates",
+      "scene_cast_contains_unresolved_references"
+    ],
+    "notes": [
+      "Multiple canonical environments were listed; chose the dominant beat-matched environment and stored per-beat overrides.",
+      "1 scene cast reference(s) still require review."
+    ],
+    "evidence_refs": [
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC001"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC001"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC001"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC001"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC001"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH001",
+        "source_path": "C:\\FilmCreator\\projects\\alice_in_wonderland\\02_story_analysis\\chapter_analysis\\CH001_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH008",
+        "source_path": "projects/alice_in_wonderland/01_source/chapters/CH008_chapter_viii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH012",
+        "source_path": "projects/alice_in_wonderland/01_source/chapters/CH012_chapter_xii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH004",
+        "source_path": "projects/alice_in_wonderland/01_source/chapters/CH004_chapter_iv.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH001",
+        "canonical_id": "alice"
+      }
+    ],
+    "evidence_summary": [
+      "[CH001_SC001] Purpose: Establish the mundane reality and introduce the inciting incident (the Rabbit).",
+      "[CH001_SC001] Summary: Alice sits bored by the riverbank with her sister. The tranquility is broken when a White Rabbit in a waistcoat runs past, checking a pocket watch, prompting Alice to chase it into a rabbit-hole under a hedge.",
+      "[CH001_SC001] Emotional arc: Boredom $\\rightarrow$ Intense Curiosity/Urgency.",
+      "[CH001_SC001] Coverage: Wide shots of the landscape; Medium shots of Alice and her sister; Close-ups of the White Rabbit's watch and waistcoat; Tracking shot of the chase.",
+      "[CH001_SC001] Continuity: The transition from the sunny bank to the shade of the hedge; Alice's physical movement into the hole.",
+      "[CH001] Chapter summary: **Setting:** - A riverbank (sunny, hot day). - A large rabbit-hole under a hedge. - A deep vertical well/tunnel lined with cupboards, bookshelves, maps, and pictures. - A long, low hall lit by a row of hanging lamps,...",
+      "[CH008] CHAPTER VIII. (book index hit)",
+      "[CH012] CHAPTER XII. (book index hit)",
+      "[CH004] CHAPTER IV. (book index hit)",
+      "Character alice: Alice is a young girl characterized by extreme, sudden changes in physical scale. Her size fluctuates between the stature of a small child (approximately two feet tall) and colossal proportions reaching up to nine feet or even nearly two mi..."
+    ],
+    "metadata": {
+      "artifact_id": "CH001_SC001_SCENE_BINDINGS",
+      "artifact_type": "scene_binding",
+      "status": "generated",
+      "source_fingerprint": "63aa0bd6422cdc8a22effdeab43bb52e71f4b550",
+      "created_at_utc": "2026-04-28T00:47:20.582444+00:00",
+      "updated_at_utc": "2026-04-28T00:47:20.582444+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH001_SC001",
+          "version": "c1b432d977648fcaf9b27669a77b80375d2490c0"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-28T00:47:20.583446+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "63aa0bd6422cdc8a22effdeab43bb52e71f4b550"
+        }
+      ]
+    }
+  },
+  {
+    "scene_id": "CH001_SC003",
+    "chapter_id": "CH001",
+    "binding_mode": "scene_level",
+    "resolved_characters": [
+      {
+        "label": "Alice",
+        "canonical_id": "alice",
+        "display_name": "Alice",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH001/alice.md",
+        "notes": "Direct registry match for 'alice'."
+      },
+      {
+        "label": "The White Rabbit (fleeting)",
+        "canonical_id": "white_rabbit",
+        "display_name": "white_rabbit",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH001/white_rabbit.md",
+        "notes": "Direct registry match for 'white_rabbit'."
+      }
+    ],
+    "resolved_environment": {
+      "label": "The Hallway (lamp-lit)",
+      "canonical_id": "lamp_lit_hallway",
+      "display_name": "lamp_lit_hallway",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 126,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/environment_breakdowns/chapters/CH001/lamp_lit_hallway.md",
+      "notes": "Chapter-local environment alias match for 'The Hallway (lamp-lit)' (key_overlap=3, label_overlap=3, context_overlap=4)."
+    },
+    "beat_environment_overrides": [
+      {
+        "beat_id": "BT001",
+        "environment": {
+          "label": "The Hallway (lamp-lit)",
+          "canonical_id": "lamp_lit_hallway",
+          "display_name": "lamp_lit_hallway",
+          "status": "canonical",
+          "entity_kind": "environment",
+          "resolution_score": 126,
+          "source_path": "projects/alice_in_wonderland/02_story_analysis/environment_breakdowns/chapters/CH001/lamp_lit_hallway.md",
+          "notes": "Chapter-local environment alias match for 'The Hallway (lamp-lit)' (key_overlap=3, label_overlap=3, context_overlap=4)."
+        },
+        "reason": "Beat environment matched lamp_lit_hallway from beat subzone/spatial context."
+      },
+      {
+        "beat_id": "BT002",
+        "environment": {
+          "label": "The Hallway (lamp-lit)",
+          "canonical_id": "lamp_lit_hallway",
+          "display_name": "lamp_lit_hallway",
+          "status": "canonical",
+          "entity_kind": "environment",
+          "resolution_score": 126,
+          "source_path": "projects/alice_in_wonderland/02_story_analysis/environment_breakdowns/chapters/CH001/lamp_lit_hallway.md",
+          "notes": "Chapter-local environment alias match for 'The Hallway (lamp-lit)' (key_overlap=3, label_overlap=3, context_overlap=4)."
+        },
+        "reason": "Beat environment matched lamp_lit_hallway from beat subzone/spatial context."
+      }
+    ],
+    "candidate_environment_ids": [
+      "lamp_lit_hallway",
+      "lush_garden_view"
+    ],
+    "future_environment_requests": [],
+    "review_flags": [
+      "multiple_scene_environment_candidates"
+    ],
+    "notes": [
+      "Multiple canonical environments were listed; chose the dominant beat-matched environment and stored per-beat overrides."
+    ],
+    "evidence_refs": [
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH001",
+        "scene_id": "CH001_SC003"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH001",
+        "source_path": "C:\\FilmCreator\\projects\\alice_in_wonderland\\02_story_analysis\\chapter_analysis\\CH001_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH001",
+        "source_path": "projects/alice_in_wonderland/01_source/chapters/CH001_chapter_i.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH004",
+        "source_path": "projects/alice_in_wonderland/01_source/chapters/CH004_chapter_iv.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH002",
+        "source_path": "projects/alice_in_wonderland/01_source/chapters/CH002_chapter_ii.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH001",
+        "canonical_id": "alice"
+      }
+    ],
+    "evidence_summary": [
+      "[CH001_SC003] Purpose: Establish the goal (the garden) and the immediate obstacle (the locked doors).",
+      "[CH001_SC003] Summary: Alice lands on a heap of sticks and leaves. She follows the Rabbit into a long, lamp-lit hall filled with many locked doors. She discovers a tiny golden key on a glass table and finds a small door hidden behind a curtain. The key work...",
+      "[CH001_SC003] Emotional arc: Disorientation $\\rightarrow$ Discovery $\\rightarrow$ Frustration/Longing.",
+      "[CH001_SC003] Coverage: Low-angle shots of the hall; Close-ups of the golden key and the lock; Macro shots of the garden through the small opening.",
+      "[CH001_SC003] Continuity: The scale of Alice relative to the door; The lighting transition from the dark hall to the bright garden view.",
+      "[CH001] Chapter summary: **Setting:** - A riverbank (sunny, hot day). - A large rabbit-hole under a hedge. - A deep vertical well/tunnel lined with cupboards, bookshelves, maps, and pictures. - A long, low hall lit by a row of hanging lamps,...",
+      "[CH001] CHAPTER I. (book index hit)",
+      "[CH004] CHAPTER IV. (book index hit)",
+      "[CH002] CHAPTER II. (book index hit)",
+      "Character alice: Alice is a young girl characterized by extreme, sudden changes in physical scale. Her size fluctuates between the stature of a small child (approximately two feet tall) and colossal proportions reaching up to nine feet or even nearly two mi..."
+    ],
+    "metadata": {
+      "artifact_id": "CH001_SC003_SCENE_BINDINGS",
+      "artifact_type": "scene_binding",
+      "status": "generated",
+      "source_fingerprint": "4eef92360cd986d6b6f50ae9ae8cb9b33b96bb3a",
+      "created_at_utc": "2026-04-28T00:47:20.594953+00:00",
+      "updated_at_utc": "2026-04-28T00:47:20.594953+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH001_SC003",
+          "version": "4b0cf38e0b205890917c4eeb594874de48bad55b"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-28T00:47:20.594953+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "4eef92360cd986d6b6f50ae9ae8cb9b33b96bb3a"
+        }
+      ]
+    }
+  },
+  {
+    "scene_id": "CH002_SC005",
+    "chapter_id": "CH002",
+    "binding_mode": "scene_level",
+    "resolved_characters": [
+      {
+        "label": "Alice",
+        "canonical_id": "alice",
+        "display_name": "Alice",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH002/alice.md",
+        "notes": "Direct registry match for 'alice'."
+      },
+      {
+        "label": "The Mouse",
+        "canonical_id": "the_mouse",
+        "display_name": "the_mouse",
+        "status": "canonical",
+        "entity_kind": "group",
+        "resolution_score": 138,
+        "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH002/the_mouse.md",
+        "notes": "Direct registry match for 'the_mouse'."
+      },
+      {
+        "label": "The Duck",
+        "canonical_id": null,
+        "display_name": "The Duck",
+        "status": "review",
+        "entity_kind": "individual",
+        "resolution_score": 16,
+        "source_path": "",
+        "notes": "Low-confidence character match requires review."
+      },
+      {
+        "label": "The Dodo",
+        "canonical_id": null,
+        "display_name": "The Dodo",
+        "status": "review",
+        "entity_kind": "individual",
+        "resolution_score": 16,
+        "source_path": "",
+        "notes": "Low-confidence character match requires review."
+      },
+      {
+        "label": "The Lory",
+        "canonical_id": null,
+        "display_name": "The Lory",
+        "status": "review",
+        "entity_kind": "individual",
+        "resolution_score": 16,
+        "source_path": "",
+        "notes": "Low-confidence character match requires review."
+      },
+      {
+        "label": "The Eaglet",
+        "canonical_id": null,
+        "display_name": "The Eaglet",
+        "status": "review",
+        "entity_kind": "individual",
+        "resolution_score": 16,
+        "source_path": "",
+        "notes": "Low-confidence character match requires review."
+      }
+    ],
+    "resolved_environment": {
+      "label": "The Pool of Tears / The Shore",
+      "canonical_id": "the_hall_and_pool",
+      "display_name": "the_hall_and_pool",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 58,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/environment_breakdowns/chapters/CH002/the_hall_and_pool.md",
+      "notes": "Chapter-local environment alias match for 'The Pool of Tears / The Shore' (key_overlap=1, label_overlap=1, context_overlap=4)."
+    },
+    "beat_environment_overrides": [],
+    "candidate_environment_ids": [
+      "the_hall_and_pool"
+    ],
+    "future_environment_requests": [],
+    "review_flags": [
+      "scene_cast_contains_unresolved_references"
+    ],
+    "notes": [
+      "4 scene cast reference(s) still require review."
+    ],
+    "evidence_refs": [
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH002",
+        "scene_id": "CH002_SC005"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH002",
+        "scene_id": "CH002_SC005"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH002",
+        "scene_id": "CH002_SC005"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH002",
+        "scene_id": "CH002_SC005"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH002",
+        "scene_id": "CH002_SC005"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH002",
+        "source_path": "C:\\FilmCreator\\projects\\alice_in_wonderland\\02_story_analysis\\chapter_analysis\\CH002_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH002",
+        "source_path": "projects/alice_in_wonderland/01_source/chapters/CH002_chapter_ii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH003",
+        "source_path": "projects/alice_in_wonderland/01_source/chapters/CH003_chapter_iii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH012",
+        "source_path": "projects/alice_in_wonderland/01_source/chapters/CH012_chapter_xii.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH002",
+        "canonical_id": "alice"
+      }
+    ],
+    "evidence_summary": [
+      "[CH002_SC005] Purpose: Transition from a solo/duo interaction to a group ensemble movement.",
+      "[CH002_SC005] Summary: The pool becomes crowded with various animals (Duck, Dodo, Lory, Eaglet). Alice leads the collective group of creatures as they swim toward the shore to escape the water.",
+      "[CH002_SC005] Emotional arc: Chaos $\\rightarrow$ Purposeful movement",
+      "[CH002_SC005] Coverage: Wide shots of the group swimming; ensemble tracking shots along the water's edge.",
+      "[CH002_SC005] Continuity: The number and order of animals in the group; the direction of travel toward the shore.",
+      "[CH002] Chapter summary: **Location: The Hall / The Garden Door** - **Visual State:** Alice is giant (over nine feet tall). Her head strikes the ceiling of the hall. - **Event:** Alice looks down at her feet, which appear distant and small fr...",
+      "[CH002] CHAPTER II. (book index hit)",
+      "[CH003] CHAPTER III. (book index hit)",
+      "[CH012] CHAPTER XII. (book index hit)",
+      "Character alice: Alice is a young girl characterized by extreme, sudden changes in physical scale. Her size fluctuates between the stature of a small child (approximately two feet tall) and colossal proportions reaching up to nine feet or even nearly two mi..."
+    ],
+    "metadata": {
+      "artifact_id": "CH002_SC005_SCENE_BINDINGS",
+      "artifact_type": "scene_binding",
+      "status": "generated",
+      "source_fingerprint": "a067b852326a2de62a4538c8da12e7b4aa0c60b3",
+      "created_at_utc": "2026-04-28T00:47:20.629956+00:00",
+      "updated_at_utc": "2026-04-28T00:47:20.629956+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH002_SC005",
+          "version": "4ae3d042614253793d247c34b4b4c5009db11513"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-28T00:47:20.629956+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "a067b852326a2de62a4538c8da12e7b4aa0c60b3"
+        }
+      ]
+    }
+  },
+  {
+    "scene_id": "CH007_SC003",
+    "chapter_id": "CH007",
+    "binding_mode": "scene_level",
+    "resolved_characters": [
+      {
+        "label": "Alice",
+        "canonical_id": "alice",
+        "display_name": "Alice",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH007/alice.md",
+        "notes": "Direct registry match for 'alice'."
+      },
+      {
+        "label": "e- The March Hare",
+        "canonical_id": null,
+        "display_name": "e- The March Hare",
+        "status": "review",
+        "entity_kind": "individual",
+        "resolution_score": 16,
+        "source_path": "",
+        "notes": "Low-confidence character match requires review."
+      },
+      {
+        "label": "The Hatter",
+        "canonical_id": "the_hatter",
+        "display_name": "the_hatter",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH007/the_hatter.md",
+        "notes": "Direct registry match for 'the_hatter'."
+      },
+      {
+        "label": "The Dormouse",
+        "canonical_id": "dormouse",
+        "display_name": "Dormouse",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH007/dormouse.md",
+        "notes": "Direct registry match for 'dormouse'."
+      }
+    ],
+    "resolved_environment": {
+      "label": "Under the tree at the tea table",
+      "canonical_id": "tea_party_table_setting",
+      "display_name": "tea_party_table_setting",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 102,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/environment_breakdowns/chapters/CH007/tea_party_table_setting.md",
+      "notes": "Chapter-local environment alias match for 'Under the tree at the tea table' (key_overlap=2, label_overlap=3, context_overlap=4)."
+    },
+    "beat_environment_overrides": [],
+    "candidate_environment_ids": [
+      "tea_party_table_setting"
+    ],
+    "future_environment_requests": [],
+    "review_flags": [
+      "scene_cast_contains_unresolved_references"
+    ],
+    "notes": [
+      "1 scene cast reference(s) still require review."
+    ],
+    "evidence_refs": [
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH007",
+        "scene_id": "CH007_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH007",
+        "scene_id": "CH007_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH007",
+        "scene_id": "CH007_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH007",
+        "scene_id": "CH007_SC003"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH007",
+        "source_path": "C:\\FilmCreator\\projects\\alice_in_wonderland\\02_story_analysis\\chapter_analysis\\CH007_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH007",
+        "source_path": "projects/alice_in_wonderland/01_source/chapters/CH007_chapter_vii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH011",
+        "source_path": "projects/alice_in_wonderland/01_source/chapters/CH011_chapter_xi.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH012",
+        "source_path": "projects/alice_in_wonderland/01_source/chapters/CH012_chapter_xii.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH007",
+        "canonical_id": "alice"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH007",
+        "canonical_id": "the_hatter"
+      }
+    ],
+    "evidence_summary": [
+      "[CH007_SC003] Purpose: To escalate the absurdity through a surreal story and the physical movement of the characters.",
+      "[CH007_SC003] Summary: The Dormouse tells a dream-like story about three sisters in a treacle-well. As Alice questions the logic, the group performs a synchronized shift: they move one seat over to find clean dishes. Alice is splashed with milk during the t...",
+      "[CH007_SC003] Emotional arc: From whimsical storytelling to chaotic, physical movement.",
+      "[CH007_SC003] Coverage: Medium shots of the Dormouse telling the story. Tracking/panning shots as the characters move around the table. Close-up of milk splashing on Alice.",
+      "[CH007] Chapter summary: **Setting:** A large table set under a tree in front of a house; later, a wooded path leading to a long hall with a glass table, and finally the beautiful garden. **Characters:** - **Alice:** A young girl attempting t...",
+      "[CH007] CHAPTER VII. (book index hit)",
+      "[CH011] CHAPTER XI. (book index hit)",
+      "[CH012] CHAPTER XII. (book index hit)",
+      "Character alice: Alice is a young girl characterized by extreme, sudden changes in physical scale. Her size fluctuates between the stature of a small child (approximately two feet tall) and colossal proportions reaching up to nine feet or even nearly two mi...",
+      "Character the_hatter: The character is a human-scale, bipedal individual. Due to the current level of available evidence, specific physical descriptors regarding age, build, or costume are not yet established."
+    ],
+    "metadata": {
+      "artifact_id": "CH007_SC003_SCENE_BINDINGS",
+      "artifact_type": "scene_binding",
+      "status": "generated",
+      "source_fingerprint": "81d9bba7fbcd2524cf7b745704ddf3c37d468b33",
+      "created_at_utc": "2026-04-28T00:47:20.654023+00:00",
+      "updated_at_utc": "2026-04-28T00:47:20.654023+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH007_SC003",
+          "version": "e791347558d32ea7659b26e972480122c3aa9bb2"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-28T00:47:20.655023+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "81d9bba7fbcd2524cf7b745704ddf3c37d468b33"
+        }
+      ]
+    }
+  },
+  {
+    "scene_id": "CH007_SC005",
+    "chapter_id": "CH007",
+    "binding_mode": "scene_level",
+    "resolved_characters": [
+      {
+        "label": "Alice",
+        "canonical_id": "alice",
+        "display_name": "Alice",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH007/alice.md",
+        "notes": "Direct registry match for 'alice'."
+      }
+    ],
+    "resolved_environment": {
+      "label": "A long hall with a glass table",
+      "canonical_id": "wooded_path_and_hall",
+      "display_name": "wooded_path_and_hall",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 88,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/environment_breakdowns/chapters/CH007/wooded_path_and_hall.md",
+      "notes": "Chapter-local environment alias match for 'A long hall with a glass table' (key_overlap=1, label_overlap=4, context_overlap=4)."
+    },
+    "beat_environment_overrides": [
+      {
+        "beat_id": "BT001",
+        "environment": {
+          "label": "A long hall with a glass table",
+          "canonical_id": "wooded_path_and_hall",
+          "display_name": "wooded_path_and_hall",
+          "status": "canonical",
+          "entity_kind": "environment",
+          "resolution_score": 88,
+          "source_path": "projects/alice_in_wonderland/02_story_analysis/environment_breakdowns/chapters/CH007/wooded_path_and_hall.md",
+          "notes": "Chapter-local environment alias match for 'A long hall with a glass table' (key_overlap=1, label_overlap=4, context_overlap=4)."
+        },
+        "reason": "Beat environment matched wooded_path_and_hall from beat subzone/spatial context."
+      },
+      {
+        "beat_id": "BT002",
+        "environment": {
+          "label": "A long hall with a glass table",
+          "canonical_id": "wooded_path_and_hall",
+          "display_name": "wooded_path_and_hall",
+          "status": "canonical",
+          "entity_kind": "environment",
+          "resolution_score": 88,
+          "source_path": "projects/alice_in_wonderland/02_story_analysis/environment_breakdowns/chapters/CH007/wooded_path_and_hall.md",
+          "notes": "Chapter-local environment alias match for 'A long hall with a glass table' (key_overlap=1, label_overlap=4, context_overlap=4)."
+        },
+        "reason": "Beat environment matched wooded_path_and_hall from beat subzone/spatial context."
+      },
+      {
+        "beat_id": "BT003",
+        "environment": {
+          "label": "A long hall with a glass table",
+          "canonical_id": "wooded_path_and_hall",
+          "display_name": "wooded_path_and_hall",
+          "status": "canonical",
+          "entity_kind": "environment",
+          "resolution_score": 88,
+          "source_path": "projects/alice_in_wonderland/02_story_analysis/environment_breakdowns/chapters/CH007/wooded_path_and_hall.md",
+          "notes": "Chapter-local environment alias match for 'A long hall with a glass table' (key_overlap=1, label_overlap=4, context_overlap=4)."
+        },
+        "reason": "Beat environment matched wooded_path_and_hall from beat subzone/spatial context."
+      },
+      {
+        "beat_id": "BT004",
+        "environment": {
+          "label": "The Beautiful Garden",
+          "canonical_id": "the_beautiful_garden",
+          "display_name": "the_beautiful_garden",
+          "status": "canonical",
+          "entity_kind": "environment",
+          "resolution_score": 138,
+          "source_path": "projects/alice_in_wonderland/02_story_analysis/environment_breakdowns/chapters/CH007/the_beautiful_garden.md",
+          "notes": "Direct registry match for 'the_beautiful_garden'."
+        },
+        "reason": "Beat environment matched the_beautiful_garden from beat subzone/spatial context."
+      }
+    ],
+    "candidate_environment_ids": [
+      "wooded_path_and_hall",
+      "the_beautiful_garden"
+    ],
+    "future_environment_requests": [],
+    "review_flags": [
+      "multiple_scene_environment_candidates"
+    ],
+    "notes": [
+      "Multiple canonical environments were listed; chose the dominant beat-matched environment and stored per-beat overrides."
+    ],
+    "evidence_refs": [
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH007",
+        "scene_id": "CH007_SC005"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH007",
+        "scene_id": "CH007_SC005"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH007",
+        "scene_id": "CH007_SC005"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH007",
+        "scene_id": "CH007_SC005"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH007",
+        "scene_id": "CH007_SC005"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH007",
+        "source_path": "C:\\FilmCreator\\projects\\alice_in_wonderland\\02_story_analysis\\chapter_analysis\\CH007_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH007",
+        "source_path": "projects/alice_in_wonderland/01_source/chapters/CH007_chapter_vii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH004",
+        "source_path": "projects/alice_in_wonderland/01_source/chapters/CH004_chapter_iv.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH001",
+        "source_path": "projects/alice_in_wonderland/01_source/chapters/CH001_chapter_i.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH007",
+        "canonical_id": "alice"
+      }
+    ],
+    "evidence_summary": [
+      "[CH007_SC005] Purpose: To resolve the chapter with a successful transition into the new environment (the garden).",
+      "[CH007_SC005] Summary: Alice finds a door in a tree and enters a long hall. She uses her golden key on the glass table, nibbles on the mushroom she has in her pocket, shrinks down, and successfully enters the beautiful garden.",
+      "[CH007_SC005] Emotional arc: From tension/shrinking to wonder/triumph.",
+      "[CH007_SC005] Coverage: Low angle shots of the glass table. Special effects/Scale shots (Alice shrinking). Wide, lush shots of the garden reveal.",
+      "[CH007_SC005] Continuity: The golden key The mushroom piece in Alice's pocket The scale shift between Alice and the environment",
+      "[CH007] Chapter summary: **Setting:** A large table set under a tree in front of a house; later, a wooded path leading to a long hall with a glass table, and finally the beautiful garden. **Characters:** - **Alice:** A young girl attempting t...",
+      "[CH007] CHAPTER VII. (book index hit)",
+      "[CH004] CHAPTER IV. (book index hit)",
+      "[CH001] CHAPTER I. (book index hit)",
+      "Character alice: Alice is a young girl characterized by extreme, sudden changes in physical scale. Her size fluctuates between the stature of a small child (approximately two feet tall) and colossal proportions reaching up to nine feet or even nearly two mi..."
+    ],
+    "metadata": {
+      "artifact_id": "CH007_SC005_SCENE_BINDINGS",
+      "artifact_type": "scene_binding",
+      "status": "generated",
+      "source_fingerprint": "3dd05736a1abdba57359c78a42bac8f355874ce3",
+      "created_at_utc": "2026-04-28T00:47:20.665023+00:00",
+      "updated_at_utc": "2026-04-28T00:47:20.665023+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH007_SC005",
+          "version": "164dcd61e32c9c02f727872090a6b3d1f3b60069"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-28T00:47:20.665023+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "3dd05736a1abdba57359c78a42bac8f355874ce3"
+        }
+      ]
+    }
+  },
+  {
+    "scene_id": "CH009_SC001",
+    "chapter_id": "CH009",
+    "binding_mode": "unresolved",
+    "resolved_characters": [
+      {
+        "label": "Alice",
+        "canonical_id": "alice",
+        "display_name": "Alice",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH009/alice.md",
+        "notes": "Direct registry match for 'alice'."
+      },
+      {
+        "label": "The Duchess",
+        "canonical_id": "the_duchess",
+        "display_name": "The Duchess",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH009/the_duchess.md",
+        "notes": "Direct registry match for 'the_duchess'."
+      }
+    ],
+    "resolved_environment": {
+      "label": "A path leading away from the kitchen",
+      "canonical_id": null,
+      "display_name": "A path leading away from the kitchen",
+      "status": "review",
+      "entity_kind": "environment",
+      "resolution_score": 8,
+      "source_path": "",
+      "notes": "Low-confidence environment match requires review."
+    },
+    "beat_environment_overrides": [],
+    "candidate_environment_ids": [],
+    "future_environment_requests": [
+      {
+        "scene_id": "CH009_SC001",
+        "chapter_id": "CH009",
+        "requested_label": "A path leading away from the kitchen",
+        "request_type": "missing_environment",
+        "reason": "Low-confidence environment match requires review.",
+        "parent_environment_id": null,
+        "evidence_refs": [
+          {
+            "source": "scene_breakdown",
+            "chapter_id": "CH009",
+            "scene_id": "CH009_SC001"
+          },
+          {
+            "source": "scene_breakdown",
+            "chapter_id": "CH009",
+            "scene_id": "CH009_SC001"
+          },
+          {
+            "source": "scene_breakdown",
+            "chapter_id": "CH009",
+            "scene_id": "CH009_SC001"
+          },
+          {
+            "source": "scene_breakdown",
+            "chapter_id": "CH009",
+            "scene_id": "CH009_SC001"
+          },
+          {
+            "source": "scene_breakdown",
+            "chapter_id": "CH009",
+            "scene_id": "CH009_SC001"
+          },
+          {
+            "source": "chapter_summary",
+            "chapter_id": "CH009",
+            "source_path": "C:\\FilmCreator\\projects\\alice_in_wonderland\\02_story_analysis\\chapter_analysis\\CH009_summary.md"
+          }
+        ]
+      }
+    ],
+    "review_flags": [
+      "scene_environment_unresolved"
+    ],
+    "notes": [
+      "Scene referenced a non-canonical environment and no chapter fallback was available."
+    ],
+    "evidence_refs": [
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH009",
+        "scene_id": "CH009_SC001"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH009",
+        "scene_id": "CH009_SC001"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH009",
+        "scene_id": "CH009_SC001"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH009",
+        "scene_id": "CH009_SC001"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH009",
+        "scene_id": "CH009_SC001"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH009",
+        "source_path": "C:\\FilmCreator\\projects\\alice_in_wonderland\\02_story_analysis\\chapter_analysis\\CH009_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH009",
+        "source_path": "projects/alice_in_wonderland/01_source/chapters/CH009_chapter_ix.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH006",
+        "source_path": "projects/alice_in_wonderland/01_source/chapters/CH006_chapter_vi.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH004",
+        "source_path": "projects/alice_in_wonderland/01_source/chapters/CH004_chapter_iv.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH009",
+        "canonical_id": "alice"
+      }
+    ],
+    "evidence_summary": [
+      "[CH009_SC001] Purpose: To establish the eccentric, didactic nature of the Duchess and Alice's growing bewilderment.",
+      "[CH009_SC001] Summary: Alice walks with the Duchess, who provides a constant stream of illogical \"morals\" regarding life and temper, much to Alice's polite frustration.",
+      "[CH009_SC001] Emotional arc: From polite curiosity to mild bewilderment/irritation.",
+      "[CH009_SC001] Coverage: Two-shot: Walking side-by-side. Close-up: The Duchess's sharp features and Alice's reacting expressions.",
+      "[CH009_SC001] Continuity: Walking pace, the physical distance between characters as they move through the environment.",
+      "[CH009] Chapter summary: **Setting:** A path leading away from the kitchen; a croquet-ground with players/soldiers; a sunny area where a Gryphon sleeps; a rocky ledge where the Mock Turtle sits. **Characters:** * **Alice:** Curious, polite bu...",
+      "[CH009] CHAPTER IX. (book index hit)",
+      "[CH006] CHAPTER VI. (book index hit)",
+      "[CH004] CHAPTER IV. (book index hit)",
+      "Character alice: Alice is a young girl characterized by extreme, sudden changes in physical scale. Her size fluctuates between the stature of a small child (approximately two feet tall) and colossal proportions reaching up to nine feet or even nearly two mi..."
+    ],
+    "metadata": {
+      "artifact_id": "CH009_SC001_SCENE_BINDINGS",
+      "artifact_type": "scene_binding",
+      "status": "generated",
+      "source_fingerprint": "d372cd072a51b16413e2528141611fc32ca62ec8",
+      "created_at_utc": "2026-04-28T00:47:20.671023+00:00",
+      "updated_at_utc": "2026-04-28T00:47:20.671023+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH009_SC001",
+          "version": "94a4cfe9b13c3bb7d175dd4cb3c692ba709a7d44"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-28T00:47:20.671023+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "d372cd072a51b16413e2528141611fc32ca62ec8"
+        }
+      ]
+    }
+  },
+  {
+    "scene_id": "CH009_SC002",
+    "chapter_id": "CH009",
+    "binding_mode": "unresolved",
+    "resolved_characters": [
+      {
+        "label": "Alice",
+        "canonical_id": "alice",
+        "display_name": "Alice",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH009/alice.md",
+        "notes": "Direct registry match for 'alice'."
+      },
+      {
+        "label": "The Duchess",
+        "canonical_id": "the_duchess",
+        "display_name": "The Duchess",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH009/the_duchess.md",
+        "notes": "Direct registry match for 'the_duchess'."
+      },
+      {
+        "label": "The Queen of Hearts",
+        "canonical_id": "the_queen_of_hearts",
+        "display_name": "the_queen_of_hearts",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH009/the_queen_of_hearts.md",
+        "notes": "Direct registry match for 'the_queen_of_hearts'."
+      }
+    ],
+    "resolved_environment": {
+      "label": "The path/garden entrance",
+      "canonical_id": null,
+      "display_name": "The path/garden entrance",
+      "status": "review",
+      "entity_kind": "environment",
+      "resolution_score": 8,
+      "source_path": "",
+      "notes": "Low-confidence environment match requires review."
+    },
+    "beat_environment_overrides": [],
+    "candidate_environment_ids": [],
+    "future_environment_requests": [
+      {
+        "scene_id": "CH009_SC002",
+        "chapter_id": "CH009",
+        "requested_label": "The path/garden entrance",
+        "request_type": "missing_environment",
+        "reason": "Low-confidence environment match requires review.",
+        "parent_environment_id": null,
+        "evidence_refs": [
+          {
+            "source": "scene_breakdown",
+            "chapter_id": "CH009",
+            "scene_id": "CH009_SC002"
+          },
+          {
+            "source": "scene_breakdown",
+            "chapter_id": "CH009",
+            "scene_id": "CH009_SC002"
+          },
+          {
+            "source": "scene_breakdown",
+            "chapter_id": "CH009",
+            "scene_id": "CH009_SC002"
+          },
+          {
+            "source": "scene_breakdown",
+            "chapter_id": "CH009",
+            "scene_id": "CH009_SC002"
+          },
+          {
+            "source": "scene_breakdown",
+            "chapter_id": "CH009",
+            "scene_id": "CH009_SC002"
+          },
+          {
+            "source": "chapter_summary",
+            "chapter_id": "CH009",
+            "source_path": "C:\\FilmCreator\\projects\\alice_in_wonderland\\02_story_analysis\\chapter_analysis\\CH009_summary.md"
+          }
+        ]
+      }
+    ],
+    "review_flags": [
+      "scene_environment_unresolved"
+    ],
+    "notes": [
+      "Scene referenced a non-canonical environment and no chapter fallback was available."
+    ],
+    "evidence_refs": [
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH009",
+        "scene_id": "CH009_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH009",
+        "scene_id": "CH009_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH009",
+        "scene_id": "CH009_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH009",
+        "scene_id": "CH009_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH009",
+        "scene_id": "CH009_SC002"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH009",
+        "source_path": "C:\\FilmCreator\\projects\\alice_in_wonderland\\02_story_analysis\\chapter_analysis\\CH009_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH008",
+        "source_path": "projects/alice_in_wonderland/01_source/chapters/CH008_chapter_viii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH006",
+        "source_path": "projects/alice_in_wonderland/01_source/chapters/CH006_chapter_vi.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH009",
+        "source_path": "projects/alice_in_wonderland/01_source/chapters/CH009_chapter_ix.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH009",
+        "canonical_id": "alice"
+      }
+    ],
+    "evidence_summary": [
+      "[CH009_SC002] Purpose: To introduce the Queen's terrifying authority and its arbitrary nature.",
+      "[CH009_SC002] Summary: The Queen of Hearts makes a sudden, startling appearance. She presents the Duchess with an ultimatum; the Duchess chooses to depart immediately to avoid execution.",
+      "[CH009_SC002] Emotional arc: From calm walking to sudden terror and abrupt departure.",
+      "[CH009_SC002] Coverage: Wide: The arrival of the Queen. Medium: The interaction between the Queen and the Duchess.",
+      "[CH009_SC002] Continuity: Suddenness of movement, costume/prop consistency for the Queen.",
+      "[CH009] Chapter summary: **Setting:** A path leading away from the kitchen; a croquet-ground with players/soldiers; a sunny area where a Gryphon sleeps; a rocky ledge where the Mock Turtle sits. **Characters:** * **Alice:** Curious, polite bu...",
+      "[CH008] CHAPTER VIII. (book index hit)",
+      "[CH006] CHAPTER VI. (book index hit)",
+      "[CH009] CHAPTER IX. (book index hit)",
+      "Character alice: Alice is a young girl characterized by extreme, sudden changes in physical scale. Her size fluctuates between the stature of a small child (approximately two feet tall) and colossal proportions reaching up to nine feet or even nearly two mi..."
+    ],
+    "metadata": {
+      "artifact_id": "CH009_SC002_SCENE_BINDINGS",
+      "artifact_type": "scene_binding",
+      "status": "generated",
+      "source_fingerprint": "f0d4d5feebd0922537b908fdf56e037db94a332f",
+      "created_at_utc": "2026-04-28T00:47:20.677022+00:00",
+      "updated_at_utc": "2026-04-28T00:47:20.677022+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH009_SC002",
+          "version": "910c1fc87fef448ac62c85567755dda12b111215"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-28T00:47:20.677022+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "f0d4d5feebd0922537b908fdf56e037db94a332f"
+        }
+      ]
+    }
+  },
+  {
+    "scene_id": "CH009_SC003",
+    "chapter_id": "CH009",
+    "binding_mode": "scene_level",
+    "resolved_characters": [
+      {
+        "label": "Alice",
+        "canonical_id": "alice",
+        "display_name": "Alice",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH009/alice.md",
+        "notes": "Direct registry match for 'alice'."
+      },
+      {
+        "label": "The Queen of Hearts",
+        "canonical_id": "the_queen_of_hearts",
+        "display_name": "the_queen_of_hearts",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH009/the_queen_of_hearts.md",
+        "notes": "Direct registry match for 'the_queen_of_hearts'."
+      },
+      {
+        "label": "The King of Hearts",
+        "canonical_id": "the_king_of_hearts",
+        "display_name": "The King of Hearts",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH009/the_king_of_hearts.md",
+        "notes": "Direct registry match for 'the_king_of_hearts'."
+      },
+      {
+        "label": "Soldiers/Players",
+        "canonical_id": null,
+        "display_name": "Soldiers/Players",
+        "status": "review",
+        "entity_kind": "individual",
+        "resolution_score": 16,
+        "source_path": "",
+        "notes": "Low-confidence character match requires review."
+      }
+    ],
+    "resolved_environment": {
+      "label": "The Croquet-ground",
+      "canonical_id": "croquet_ground_field",
+      "display_name": "croquet_ground_field",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 92,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/environment_breakdowns/chapters/CH009/croquet_ground_field.md",
+      "notes": "Chapter-local environment alias match for 'The Croquet-ground' (key_overlap=2, label_overlap=2, context_overlap=4)."
+    },
+    "beat_environment_overrides": [],
+    "candidate_environment_ids": [
+      "croquet_ground_field"
+    ],
+    "future_environment_requests": [],
+    "review_flags": [
+      "scene_cast_contains_unresolved_references"
+    ],
+    "notes": [
+      "1 scene cast reference(s) still require review."
+    ],
+    "evidence_refs": [
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH009",
+        "scene_id": "CH009_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH009",
+        "scene_id": "CH009_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH009",
+        "scene_id": "CH009_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH009",
+        "scene_id": "CH009_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH009",
+        "scene_id": "CH009_SC003"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH009",
+        "source_path": "C:\\FilmCreator\\projects\\alice_in_wonderland\\02_story_analysis\\chapter_analysis\\CH009_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH008",
+        "source_path": "projects/alice_in_wonderland/01_source/chapters/CH008_chapter_viii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH009",
+        "source_path": "projects/alice_in_wonderland/01_source/chapters/CH009_chapter_ix.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH006",
+        "source_path": "projects/alice_in_wonderland/01_source/chapters/CH006_chapter_vi.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH009",
+        "canonical_id": "alice"
+      }
+    ],
+    "evidence_summary": [
+      "[CH009_SC003] Purpose: To showcase the chaos of the croquet game and the Queen's capricious rule.",
+      "[CH009_SC003] Summary: Alice follows the Queen to a croquet-ground where players (soldiers) are frequently ordered to be executed. The game is a cycle of arbitrary arrests and pardons.",
+      "[CH009_SC003] Emotional arc: From tension to chaotic absurdity.",
+      "[CH009_SC003] Coverage: Wide: The scale of the croquet ground and the players. Medium: The Queen issuing commands; Alice observing the carnage.",
+      "[CH009_SC003] Continuity: The movement of the game pieces/players, the visual distinction between soldiers and players.",
+      "[CH009] Chapter summary: **Setting:** A path leading away from the kitchen; a croquet-ground with players/soldiers; a sunny area where a Gryphon sleeps; a rocky ledge where the Mock Turtle sits. **Characters:** * **Alice:** Curious, polite bu...",
+      "[CH008] CHAPTER VIII. (book index hit)",
+      "[CH009] CHAPTER IX. (book index hit)",
+      "[CH006] CHAPTER VI. (book index hit)",
+      "Character alice: Alice is a young girl characterized by extreme, sudden changes in physical scale. Her size fluctuates between the stature of a small child (approximately two feet tall) and colossal proportions reaching up to nine feet or even nearly two mi..."
+    ],
+    "metadata": {
+      "artifact_id": "CH009_SC003_SCENE_BINDINGS",
+      "artifact_type": "scene_binding",
+      "status": "generated",
+      "source_fingerprint": "b9bb7544d6d8052fbb3419f2db48393822025357",
+      "created_at_utc": "2026-04-28T00:47:20.683023+00:00",
+      "updated_at_utc": "2026-04-28T00:47:20.683023+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH009_SC003",
+          "version": "f42c9962b48abf2c07a465799aec7f906b1aa5d8"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-28T00:47:20.683023+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "b9bb7544d6d8052fbb3419f2db48393822025357"
+        }
+      ]
+    }
+  },
+  {
+    "scene_id": "CH010_SC003",
+    "chapter_id": "CH010",
+    "binding_mode": "scene_level",
+    "resolved_characters": [
+      {
+        "label": "* Alice",
+        "canonical_id": "alice",
+        "display_name": "Alice",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH010/alice.md",
+        "notes": "Direct registry match for 'alice'."
+      },
+      {
+        "label": "* The Mock le Turtle",
+        "canonical_id": null,
+        "display_name": "* The Mock le Turtle",
+        "status": "review",
+        "entity_kind": "individual",
+        "resolution_score": 16,
+        "source_path": "",
+        "notes": "Low-confidence character match requires review."
+      },
+      {
+        "label": "* The Gryphon",
+        "canonical_id": "the_gryphon",
+        "display_name": "the_gryphon",
+        "status": "canonical",
+        "entity_kind": "group",
+        "resolution_score": 138,
+        "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH010/the_gryphon.md",
+        "notes": "Direct registry match for 'the_gryphon'."
+      }
+    ],
+    "resolved_environment": {
+      "label": "The seaside-adjacent environment",
+      "canonical_id": "seaside_dance_floor",
+      "display_name": "seaside_dance_floor",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 68,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/environment_breakdowns/chapters/CH010/seaside_dance_floor.md",
+      "notes": "Chapter-local environment alias match for 'The seaside-adjacent environment' (key_overlap=1, label_overlap=2, context_overlap=4)."
+    },
+    "beat_environment_overrides": [],
+    "candidate_environment_ids": [
+      "seaside_dance_floor"
+    ],
+    "future_environment_requests": [],
+    "review_flags": [
+      "scene_cast_contains_unresolved_references"
+    ],
+    "notes": [
+      "1 scene cast reference(s) still require review."
+    ],
+    "evidence_refs": [
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH010",
+        "scene_id": "CH010_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH010",
+        "scene_id": "CH010_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH010",
+        "scene_id": "CH010_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH010",
+        "scene_id": "CH010_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH010",
+        "scene_id": "CH010_SC003"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH010",
+        "source_path": "C:\\FilmCreator\\projects\\alice_in_wonderland\\02_story_analysis\\chapter_analysis\\CH010_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH010",
+        "source_path": "projects/alice_in_wonderland/01_source/chapters/CH010_chapter_x.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH009",
+        "source_path": "projects/alice_in_wonderland/01_source/chapters/CH009_chapter_ix.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH001",
+        "source_path": "projects/alice_in_wonderland/01_source/chapters/CH001_chapter_i.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH010",
+        "canonical_id": "alice"
+      }
+    ],
+    "evidence_summary": [
+      "[CH010_SC003] Purpose: To provide a moment of beautiful, sad musicality before an abrupt, high-stakes transition.",
+      "[CH010_SC003] Summary: The Mock Turtle sings \"Beautiful Soup\" with deep sorrow. The song is suddenly interrupted by the distant cry that the trial is beginning. The Gryphon grabs Alice and leads her away in a frantic run, cutting the moment short.",
+      "[CH010_SC003] Emotional arc: From deep, soulful melancholy to sudden, urgent momentum.",
+      "[CH010_SC003] Coverage: * Close-up of the Mock Turtle singing (emotional focus). * Handheld/dynamic shots as the Gryphon grabs Alice and they run away. * A wide shot showing the distance between them and their destination.",
+      "[CH010_SC003] Continuity: The transition from the Mock Turtle's stationary/slow singing to the sudden physical movement of the Gryphon grabbing Alice. Maintaining the emotional weight of the song while transitioning into a high-speed run. Physical contact b...",
+      "[CH010] Chapter summary: **Setting:** A seaside-adjacent environment where the Mock Turtle and Gryphon reside. **Characters:** * **Alice:** A young girl, currently feeling a mix of curiosity, confusion, and social pressure to conform to the c...",
+      "[CH010] CHAPTER X. (book index hit)",
+      "[CH009] CHAPTER IX. (book index hit)",
+      "[CH001] CHAPTER I. (book index hit)",
+      "Character alice: Alice is a young girl characterized by extreme, sudden changes in physical scale. Her size fluctuates between the stature of a small child (approximately two feet tall) and colossal proportions reaching up to nine feet or even nearly two mi..."
+    ],
+    "metadata": {
+      "artifact_id": "CH010_SC003_SCENE_BINDINGS",
+      "artifact_type": "scene_binding",
+      "status": "generated",
+      "source_fingerprint": "431c3a35b55a0d53d13b5a03c21ba9f4e1a9bc8b",
+      "created_at_utc": "2026-04-28T00:47:20.711023+00:00",
+      "updated_at_utc": "2026-04-28T00:47:20.711023+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH010_SC003",
+          "version": "9c848119e1c6b20b37770f3e9c04b0cc1d53434c"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-28T00:47:20.712025+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "431c3a35b55a0d53d13b5a03c21ba9f4e1a9bc8b"
+        }
+      ]
+    }
+  },
+  {
+    "scene_id": "CH012_SC001",
+    "chapter_id": "CH012",
+    "binding_mode": "scene_level",
+    "resolved_characters": [
+      {
+        "label": "Alice (Giant)",
+        "canonical_id": "alice",
+        "display_name": "Alice",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH012/alice.md",
+        "notes": "Direct registry match for 'alice'."
+      },
+      {
+        "label": "The King",
+        "canonical_id": "the_king",
+        "display_name": "The King",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH012/the_king.md",
+        "notes": "Direct registry match for 'the_king'."
+      },
+      {
+        "label": "The White Rabbit",
+        "canonical_id": "white_rabbit",
+        "display_name": "white_rabbit",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH012/white_rabbit.md",
+        "notes": "Direct registry match for 'white_rabbit'."
+      },
+      {
+        "label": "The Jury (including Bill the Lizard)",
+        "canonical_id": null,
+        "display_name": "The Jury (including Bill the Lizard)",
+        "status": "review",
+        "entity_kind": "individual",
+        "resolution_score": 16,
+        "source_path": "",
+        "notes": "Low-confidence character match requires review."
+      },
+      {
+        "label": "The Knave (Prisoner)",
+        "canonical_id": "the_knave",
+        "display_name": "the_knave",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH012/the_knave.md",
+        "notes": "Direct registry match for 'the_knave'."
+      }
+    ],
+    "resolved_environment": {
+      "label": "The Courtroom (surreal/dreamscape)",
+      "canonical_id": "courtroom_jury_box_setting",
+      "display_name": "courtroom_jury_box_setting",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 68,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/environment_breakdowns/chapters/CH012/courtroom_jury_box_setting.md",
+      "notes": "Chapter-local environment alias match for 'The Courtroom (surreal/dreamscape)' (key_overlap=1, label_overlap=2, context_overlap=4)."
+    },
+    "beat_environment_overrides": [],
+    "candidate_environment_ids": [
+      "courtroom_jury_box_setting"
+    ],
+    "future_environment_requests": [],
+    "review_flags": [
+      "scene_cast_contains_unresolved_references"
+    ],
+    "notes": [
+      "1 scene cast reference(s) still require review."
+    ],
+    "evidence_refs": [
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH012",
+        "scene_id": "CH012_SC001"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH012",
+        "scene_id": "CH012_SC001"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH012",
+        "scene_id": "CH012_SC001"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH012",
+        "scene_id": "CH012_SC001"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH012",
+        "scene_id": "CH012_SC001"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH012",
+        "source_path": "C:\\FilmCreator\\projects\\alice_in_wonderland\\02_story_analysis\\chapter_analysis\\CH012_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH012",
+        "source_path": "projects/alice_in_wonderland/01_source/chapters/CH012_chapter_xii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH011",
+        "source_path": "projects/alice_in_wonderland/01_source/chapters/CH011_chapter_xi.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH001",
+        "source_path": "projects/alice_in_wonderland/01_source/chapters/CH001_chapter_i.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH012",
+        "canonical_id": "alice"
+      }
+    ],
+    "evidence_summary": [
+      "[CH012_SC001] Purpose: To establish the surreal scale of Alice and the chaotic start to the trial.",
+      "[CH012_SC001] Summary: As Alice grows to a massive size, she accidentally tips over the jury box, scattering the jurors like goldfish. The King attempts to maintain order by reading Rule 42, which dictates that anyone over a mile high must leave the court,...",
+      "[CH012_SC001] Emotional arc: From chaotic physical accident to a tense, bureaucratic confrontation.",
+      "[CH012_SC001] Coverage: Wide shots showing Alice's massive scale relative to the tiny jury. Medium shots of the King reading from his notebook. Close-ups of the jurors falling/tumbling out of the box.",
+      "[CH012_SC001] Continuity: The physical size of Alice vs. the courtroom elements. The state of the jury box (tipped vs. upright).",
+      "[CH012] Chapter summary: **Setting:** A courtroom where a jury sits in a box; later, a riverbank under trees as the sun sets. **Characters:** - **Alice:** Currently at her full size (nearly two miles high), then shrinking back to normal size....",
+      "[CH012] CHAPTER XII. (book index hit)",
+      "[CH011] CHAPTER XI. (book index hit)",
+      "[CH001] CHAPTER I. (book index hit)",
+      "Character alice: Alice is a young girl characterized by extreme, sudden changes in physical scale. Her size fluctuates between the stature of a small child (approximately two feet tall) and colossal proportions reaching up to nine feet or even nearly two mi..."
+    ],
+    "metadata": {
+      "artifact_id": "CH012_SC001_SCENE_BINDINGS",
+      "artifact_type": "scene_binding",
+      "status": "generated",
+      "source_fingerprint": "5ec3d3dcb5acce2d04098b12f25d2b80ff1f4e59",
+      "created_at_utc": "2026-04-28T00:47:20.717024+00:00",
+      "updated_at_utc": "2026-04-28T00:47:20.717024+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH012_SC001",
+          "version": "83c290d8599fefa2ec2a15752864942b0df8a285"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-28T00:47:20.717024+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "5ec3d3dcb5acce2d04098b12f25d2b80ff1f4e59"
+        }
+      ]
+    }
+  },
+  {
+    "scene_id": "CH012_SC002",
+    "chapter_id": "CH012",
+    "binding_mode": "scene_level",
+    "resolved_characters": [
+      {
+        "label": "The White Rabbit",
+        "canonical_id": "white_rabbit",
+        "display_name": "white_rabbit",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH012/white_rabbit.md",
+        "notes": "Direct registry match for 'white_rabbit'."
+      },
+      {
+        "label": "The King",
+        "canonical_id": "the_king",
+        "display_name": "The King",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH012/the_king.md",
+        "notes": "Direct registry match for 'the_king'."
+      },
+      {
+        "label": "s- The Knave",
+        "canonical_id": null,
+        "display_name": "s- The Knave",
+        "status": "review",
+        "entity_kind": "individual",
+        "resolution_score": 16,
+        "source_path": "",
+        "notes": "Low-confidence character match requires review."
+      },
+      {
+        "label": "The Queen (watching)",
+        "canonical_id": "the_queen",
+        "display_name": "the_queen",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH012/the_queen.md",
+        "notes": "Direct registry match for 'the_queen'."
+      },
+      {
+        "label": "Alice",
+        "canonical_id": "alice",
+        "display_name": "Alice",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH012/alice.md",
+        "notes": "Direct registry match for 'alice'."
+      }
+    ],
+    "resolved_environment": {
+      "label": "The Courtroom",
+      "canonical_id": "courtroom_jury_box_setting",
+      "display_name": "courtroom_jury_box_setting",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 58,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/environment_breakdowns/chapters/CH012/courtroom_jury_box_setting.md",
+      "notes": "Chapter-local environment alias match for 'The Courtroom' (key_overlap=1, label_overlap=1, context_overlap=4)."
+    },
+    "beat_environment_overrides": [],
+    "candidate_environment_ids": [
+      "courtroom_jury_box_setting"
+    ],
+    "future_environment_requests": [],
+    "review_flags": [
+      "scene_cast_contains_unresolved_references"
+    ],
+    "notes": [
+      "1 scene cast reference(s) still require review."
+    ],
+    "evidence_refs": [
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH012",
+        "scene_id": "CH012_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH012",
+        "scene_id": "CH012_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH012",
+        "scene_id": "CH012_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH012",
+        "scene_id": "CH012_SC002"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH012",
+        "scene_id": "CH012_SC002"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH012",
+        "source_path": "C:\\FilmCreator\\projects\\alice_in_wonderland\\02_story_analysis\\chapter_analysis\\CH012_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH012",
+        "source_path": "projects/alice_in_wonderland/01_source/chapters/CH012_chapter_xii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH011",
+        "source_path": "projects/alice_in_wonderland/01_source/chapters/CH011_chapter_xi.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH001",
+        "source_path": "projects/alice_in_wonderland/01_source/chapters/CH001_chapter_i.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH012",
+        "canonical_id": "white_rabbit"
+      }
+    ],
+    "evidence_summary": [
+      "[CH012_SC002] Purpose: To present the \"evidence\" and escalate the tension through a logic-defying trial.",
+      "[CH012_SC002] Summary: The White Rabbit presents the verses found on the Knave. As the Rabbit reads the cryptic poem, the King attempts to interpret it as proof of the theft. Alice watches with growing skepticism as the absurdity of the legal proceedings mo...",
+      "[CH012_SC002] Emotional arc: From curious investigation to mounting frustration/absurdity.",
+      "[CH012_SC002] Coverage: Close-ups of the paper/verses being held by the White Rabbit. Reaction shots of the King's intense, bumbling interpretation. Alice's skeptical facial expressions.",
+      "[CH012_SC002] Continuity: The physical prop of the verse paper. The positioning of the Knave in his dock.",
+      "[CH012] Chapter summary: **Setting:** A courtroom where a jury sits in a box; later, a riverbank under trees as the sun sets. **Characters:** - **Alice:** Currently at her full size (nearly two miles high), then shrinking back to normal size....",
+      "[CH012] CHAPTER XII. (book index hit)",
+      "[CH011] CHAPTER XI. (book index hit)",
+      "[CH001] CHAPTER I. (book index hit)",
+      "Character white_rabbit: The White Rabbit is a small, sentient quadrupedal rabbit characterized by its hurried manner and respectful bearing. It wears splendid, formal attire that contrasts with its animal morphology, presenting as a figure of some importanc..."
+    ],
+    "metadata": {
+      "artifact_id": "CH012_SC002_SCENE_BINDINGS",
+      "artifact_type": "scene_binding",
+      "status": "generated",
+      "source_fingerprint": "c0958c86fd9db01e222ca5e1a20552110f0f05ed",
+      "created_at_utc": "2026-04-28T00:47:20.723027+00:00",
+      "updated_at_utc": "2026-04-28T00:47:20.723027+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH012_SC002",
+          "version": "cc6d35962f8aaa773c23d3a93238fecef28f21fd"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-28T00:47:20.723027+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "c0958c86fd9db01e222ca5e1a20552110f0f05ed"
+        }
+      ]
+    }
+  },
+  {
+    "scene_id": "CH012_SC003",
+    "chapter_id": "CH012",
+    "binding_mode": "scene_level",
+    "resolved_characters": [
+      {
+        "label": "Alice (Giant)",
+        "canonical_id": "alice",
+        "display_name": "Alice",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH012/alice.md",
+        "notes": "Direct registry match for 'alice'."
+      },
+      {
+        "label": "The Queen",
+        "canonical_id": "the_queen",
+        "display_name": "the_queen",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH012/the_queen.md",
+        "notes": "Direct registry match for 'the_queen'."
+      },
+      {
+        "label": "The Pack of Cards (The Jury/Soldiers)",
+        "canonical_id": null,
+        "display_name": "The Pack of Cards (The Jury/Soldiers)",
+        "status": "review",
+        "entity_kind": "individual",
+        "resolution_score": 16,
+        "source_path": "",
+        "notes": "Low-confidence character match requires review."
+      }
+    ],
+    "resolved_environment": {
+      "label": "The Courtroom (surreal/dreamscape)",
+      "canonical_id": "courtroom_jury_box_setting",
+      "display_name": "courtroom_jury_box_setting",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 68,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/environment_breakdowns/chapters/CH012/courtroom_jury_box_setting.md",
+      "notes": "Chapter-local environment alias match for 'The Courtroom (surreal/dreamscape)' (key_overlap=1, label_overlap=2, context_overlap=4)."
+    },
+    "beat_environment_overrides": [],
+    "candidate_environment_ids": [
+      "courtroom_jury_box_setting"
+    ],
+    "future_environment_requests": [],
+    "review_flags": [
+      "scene_cast_contains_unresolved_references"
+    ],
+    "notes": [
+      "1 scene cast reference(s) still require review."
+    ],
+    "evidence_refs": [
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH012",
+        "scene_id": "CH012_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH012",
+        "scene_id": "CH012_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH012",
+        "scene_id": "CH012_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH012",
+        "scene_id": "CH012_SC003"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH012",
+        "scene_id": "CH012_SC003"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH012",
+        "source_path": "C:\\FilmCreator\\projects\\alice_in_wonderland\\02_story_analysis\\chapter_analysis\\CH012_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH012",
+        "source_path": "projects/alice_in_wonderland/01_source/chapters/CH012_chapter_xii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH005",
+        "source_path": "projects/alice_in_wonderland/01_source/chapters/CH005_chapter_v.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH008",
+        "source_path": "projects/alice_in_wonderland/01_source/chapters/CH008_chapter_viii.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH012",
+        "canonical_id": "alice"
+      }
+    ],
+    "evidence_summary": [
+      "[CH012_SC003] Purpose: To provide a climactic confrontation and the transition from dream to reality.",
+      "[CH012_SC003] Summary: Alice challenges the logic of the trial, prompting the Queen to order \"Off with her head!\" The cards fly at Alice in an overwhelming swarm. This chaotic assault triggers Alice's sudden awakening as she shrinks back to normal size.",
+      "[CH012_SC003] Emotional arc: From high-stakes tension to a sudden, jarring release.",
+      "[CH012_SC003] Coverage: Low angle shots of the Queen's outburst. Fast-paced, kinetic shots of cards flying toward the camera/Alice. A \"match cut\" or seamless transition from the swarm to Alice waking up.",
+      "[CH012_SC003] Continuity: The visual effect of the cards as a physical force. The sudden change in scale (Giant Alice to human-sized Alice).",
+      "[CH012] Chapter summary: **Setting:** A courtroom where a jury sits in a box; later, a riverbank under trees as the sun sets. **Characters:** - **Alice:** Currently at her full size (nearly two miles high), then shrinking back to normal size....",
+      "[CH012] CHAPTER XII. (book index hit)",
+      "[CH005] CHAPTER V. (book index hit)",
+      "[CH008] CHAPTER VIII. (book index hit)",
+      "Character alice: Alice is a young girl characterized by extreme, sudden changes in physical scale. Her size fluctuates between the stature of a small child (approximately two feet tall) and colossal proportions reaching up to nine feet or even nearly two mi..."
+    ],
+    "metadata": {
+      "artifact_id": "CH012_SC003_SCENE_BINDINGS",
+      "artifact_type": "scene_binding",
+      "status": "generated",
+      "source_fingerprint": "31a6f7d38ae38fb0ac62604af584f2ca038c4305",
+      "created_at_utc": "2026-04-28T00:47:20.728025+00:00",
+      "updated_at_utc": "2026-04-28T00:47:20.728025+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH012_SC003",
+          "version": "053cf9b7f4c76194d9cb0e81d64d3e6df369a4e5"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-28T00:47:20.729026+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "31a6f7d38ae38fb0ac62604af584f2ca038c4305"
+        }
+      ]
+    }
+  },
+  {
+    "scene_id": "CH012_SC004",
+    "chapter_id": "CH012",
+    "binding_mode": "scene_level",
+    "resolved_characters": [
+      {
+        "label": "Alice (Normal)",
+        "canonical_id": "alice",
+        "display_name": "Alice",
+        "status": "canonical",
+        "entity_kind": "individual",
+        "resolution_score": 138,
+        "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH012/alice.md",
+        "notes": "Direct registry match for 'alice'."
+      },
+      {
+        "label": "Alice's Sister",
+        "canonical_id": null,
+        "display_name": "Alice's Sister",
+        "status": "review",
+        "entity_kind": "individual",
+        "resolution_score": 16,
+        "source_path": "",
+        "notes": "Low-confidence character match requires review."
+      }
+    ],
+    "resolved_environment": {
+      "label": "The Riverbank (Real World/Natural Setting)",
+      "canonical_id": "riverbank_sunset_setting",
+      "display_name": "riverbank_sunset_setting",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 122,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/environment_breakdowns/chapters/CH012/riverbank_sunset_setting.md",
+      "notes": "Chapter-local environment alias match for 'The Riverbank (Real World/Natural Setting)' (key_overlap=2, label_overlap=5, context_overlap=4)."
+    },
+    "beat_environment_overrides": [],
+    "candidate_environment_ids": [
+      "riverbank_sunset_setting"
+    ],
+    "future_environment_requests": [],
+    "review_flags": [
+      "scene_cast_contains_unresolved_references"
+    ],
+    "notes": [
+      "1 scene cast reference(s) still require review."
+    ],
+    "evidence_refs": [
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH012",
+        "scene_id": "CH012_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH012",
+        "scene_id": "CH012_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH012",
+        "scene_id": "CH012_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH012",
+        "scene_id": "CH012_SC004"
+      },
+      {
+        "source": "scene_breakdown",
+        "chapter_id": "CH012",
+        "scene_id": "CH012_SC004"
+      },
+      {
+        "source": "chapter_summary",
+        "chapter_id": "CH012",
+        "source_path": "C:\\FilmCreator\\projects\\alice_in_wonderland\\02_story_analysis\\chapter_analysis\\CH012_summary.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH012",
+        "source_path": "projects/alice_in_wonderland/01_source/chapters/CH012_chapter_xii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH007",
+        "source_path": "projects/alice_in_wonderland/01_source/chapters/CH007_chapter_vii.md"
+      },
+      {
+        "source": "book_index",
+        "chapter_id": "CH009",
+        "source_path": "projects/alice_in_wonderland/01_source/chapters/CH009_chapter_ix.md"
+      },
+      {
+        "source": "character_bible",
+        "chapter_id": "CH012",
+        "canonical_id": "alice"
+      }
+    ],
+    "evidence_summary": [
+      "[CH012_SC004] Purpose: To ground the story in reality and provide a thematic epilogue.",
+      "[CH012_SC004] Summary: Alice wakes up on the riverbank, back to her normal size. She tells her sister about the dream. As they sit together at sunset, the sister reflects on how the sounds of the real world echo the strange sounds of Wonderland.",
+      "[CH012_SC004] Emotional arc: From the disorientation of waking to a peaceful, reflective calm.",
+      "[CH012_SC004] Coverage: Wide shots of the beautiful riverbank at sunset. Close-ups of Alice and her sister's faces. Static, tranquil shots of the natural environment.",
+      "[CH012_SC004] Continuity: The lighting transition from bright daylight to golden hour/sunset. The contrast in scale between the dream world and this grounded reality.",
+      "[CH012] Chapter summary: **Setting:** A courtroom where a jury sits in a box; later, a riverbank under trees as the sun sets. **Characters:** - **Alice:** Currently at her full size (nearly two miles high), then shrinking back to normal size....",
+      "[CH012] CHAPTER XII. (book index hit)",
+      "[CH007] CHAPTER VII. (book index hit)",
+      "[CH009] CHAPTER IX. (book index hit)",
+      "Character alice: Alice is a young girl characterized by extreme, sudden changes in physical scale. Her size fluctuates between the stature of a small child (approximately two feet tall) and colossal proportions reaching up to nine feet or even nearly two mi..."
+    ],
+    "metadata": {
+      "artifact_id": "CH012_SC004_SCENE_BINDINGS",
+      "artifact_type": "scene_binding",
+      "status": "generated",
+      "source_fingerprint": "2d675ed860849fc50d277f560fc7f9f651afa29c",
+      "created_at_utc": "2026-04-28T00:47:20.735025+00:00",
+      "updated_at_utc": "2026-04-28T00:47:20.735025+00:00",
+      "upstream_dependencies": [
+        {
+          "dependency_type": "scene_contract",
+          "dependency_id": "CH012_SC004",
+          "version": "84c90369e23dc42fabb11678d708af796b598ee7"
+        }
+      ],
+      "locked_fields": {},
+      "manual_overrides": {},
+      "revision_history": [
+        {
+          "timestamp_utc": "2026-04-28T00:47:20.735025+00:00",
+          "action": "synthesized",
+          "source_fingerprint": "2d675ed860849fc50d277f560fc7f9f651afa29c"
+        }
+      ]
+    }
+  }
+]

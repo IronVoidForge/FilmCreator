@@ -1,0 +1,334 @@
+{
+  "scene_id": "CH009_SC001",
+  "chapter_id": "CH009",
+  "scene_title": "SC001",
+  "purpose": "To establish the eccentric, didactic nature of the Duchess and Alice's growing bewilderment.",
+  "summary": "Alice walks with the Duchess, who provides a constant stream of illogical \"morals\" regarding life and temper, much to Alice's polite frustration.",
+  "emotional_arc": "From polite curiosity to mild bewilderment/irritation.",
+  "production_intent": "Establish the dynamic between a lecturing Duchess and an increasingly bewildered Alice through walking dialogue. The focus is on the friction between illogical moralizing and polite confusion.",
+  "scene_short_description": "A young girl walks alongside a lecturing Duchess on a path leading away from the kitchen.",
+  "scene_primary_scale_story_point": "Alice's scale is variable, but currently maintains child-like stature relative to the environment.",
+  "scene_required_anchor_catalog": [
+    "The path leading away from the kitchen"
+  ],
+  "scene_start_state": "Alice and the Duchess walk side-by-side in a polite, rhythmic pace.",
+  "scene_end_state": "Alice shows visible irritation as the Duchess delivers an illogical moral.",
+  "dominant_action_line": "The Duchess lectures while they walk; Alice reacts to the absurdity.",
+  "scene_spatial_layout": [
+    "Linear movement along a defined path.",
+    "Side-by-side character positioning."
+  ],
+  "character_spatial_map": [
+    "The Duchess leads or walks shoulder-to-shoulder with Alice.",
+    "Alice maintains a polite but slightly trailing distance if necessary for reaction shots."
+  ],
+  "environment_subzones": [
+    "A path leading away from the kitchen"
+  ],
+  "scene_event_chain": [
+    "event 1: Alice and the Duchess begin walking side-by-side along the path.",
+    "event 2: The Duchess delivers a stream of illogical morals regarding life and temper.",
+    "event 3: Alice listens with polite curiosity, her expression shifting toward bewilderment.",
+    "event 4: The Duchess finishes a lecture as they continue their walk."
+  ],
+  "entry_vectors": [
+    "Path leading from the kitchen"
+  ],
+  "exit_vectors": [
+    "Forward along the path"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: Continuous walking motion",
+    "BT002 -> BT003: Shift from lecture to reaction focus"
+  ],
+  "characters_required": [
+    {
+      "label": "Alice",
+      "canonical_id": "alice",
+      "display_name": "Alice",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH009/alice.md",
+      "notes": "Direct registry match for 'alice'."
+    },
+    {
+      "label": "The Duchess",
+      "canonical_id": "the_duchess",
+      "display_name": "The Duchess",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH009/the_duchess.md",
+      "notes": "Direct registry match for 'the_duchess'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "A path leading away from the kitchen",
+      "canonical_id": null,
+      "display_name": "A path leading away from the kitchen",
+      "status": "review",
+      "entity_kind": "environment",
+      "resolution_score": 8,
+      "source_path": "",
+      "notes": "Low-confidence environment match requires review."
+    }
+  ],
+  "continuity_constraints": [
+    "Synchronized walking pace between characters.",
+    "Maintaining consistent physical distance as they traverse the path."
+  ],
+  "visual_coverage_families": [
+    "Two-shot: Walking side-by-side.",
+    "Close-up: The Duchess's sharp features and Alice's reacting expressions."
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "The walk begins",
+      "purpose": "",
+      "action_start": "Alice and the Duchess step onto the path",
+      "action_end": "The pair is in steady motion",
+      "active_subjects": [
+        "alice",
+        "the_duchess"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "A path leading away from the kitchen",
+      "blocking_hint": "Walking side-by-side",
+      "environment_subzone": "A path leading away from the kitchen",
+      "continuity_focus": "Consistent walking pace",
+      "coverage_hint": "Two-shot",
+      "coverage_priority": "medium",
+      "handoff_to_next": "The lecture begins."
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "The Duchess delivers morals",
+      "purpose": "",
+      "action_start": "The Duchess speaks an illogical moral",
+      "action_end": "The Duchess pauses for breath",
+      "active_subjects": [
+        "the_duchess"
+      ],
+      "passive_subjects": [
+        "alice"
+      ],
+      "spatial_context": "A path leading away from the kitchen",
+      "blocking_hint": "Walking while gesturing",
+      "environment_subzone": "A path leading away from the kitchen",
+      "continuity_focus": "Maintaining distance between characters",
+      "coverage_hint": "Close-up on Duchess",
+      "coverage_priority": "high",
+      "handoff_to_next": "Alice reacts to the words."
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "Alice's bewilderment",
+      "purpose": "",
+      "action_start": "Alice hears a particularly illogical statement",
+      "action_end": "Alice shows mild irritation",
+      "active_subjects": [
+        "alice"
+      ],
+      "passive_subjects": [
+        "the_duchess"
+      ],
+      "spatial_context": "A path leading away from the kitchen",
+      "blocking_hint": "Walking while listening",
+      "environment_subzone": "A path leading away from the kitchen",
+      "continuity_focus": "Maintaining distance between characters",
+      "coverage_hint": "Close-up on Alice",
+      "coverage_priority": "high",
+      "handoff_to_next": "The walk continues."
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish relationship and setting",
+      "planned_shot_moment_summary": "The pair begins their walk",
+      "primary_subject_seed": "the_duchess",
+      "secondary_subjects_seed": [
+        "alice"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "A path leading away from the kitchen",
+      "planned_shot_required_anchor_1": "A path leading away from the kitchen",
+      "planned_shot_scale_proof_detail": "Alice is child-sized relative to Duchess",
+      "start_state_seed": "Walking side-by-side",
+      "end_state_seed": "The lecture begins",
+      "action_seed": "Walking in unison",
+      "blocking_seed": [
+        "Side-by-side walking"
+      ],
+      "shot_size": "medium_full",
+      "camera_angle": "eye_level",
+      "lens_family": "wide",
+      "camera_motion": "track",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front_three_quarter_left"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "emphasize didactic nature",
+      "planned_shot_moment_summary": "The Duchess speaks sharply",
+      "primary_subject_seed": "the_ducess",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "A path leading away from the kitchen",
+      "planned_shot_required_anchor_1": "A path leading away from the kitchen",
+      "planned_shot_scale_proof_detail": "N/A",
+      "start_state_seed": "The Duchess gestures while speaking",
+      "end_state_seed": "The lecture continues",
+      "action_seed": "Sharp gesturing and talking",
+      "blocking_seed": [
+        "Walking forward"
+      ],
+      "shot_size": "close_up",
+      "camera_angle": "eye_level",
+      "lens_family": "portrait",
+      "camera_motion": "track",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "hard_directional",
+      "primary_subject_angle": "front_three_quarter_right"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "show Alice's reaction",
+      "planned_shot_moment_summary": "Alice processes the illogical morals",
+      "primary_subject_seed": "alice",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "A path leading away from the kitchen",
+      "planned_shot_required_anchor_1": "A path leading away from the kitchen",
+      "planned_shot_scale_proof_detail": "N/A",
+      "start_state_seed": "Alice listens politely",
+      "end_state_seed": "Alice shows irritation",
+      "action_seed": "Subtle facial shifts",
+      "blocking_seed": [
+        "Walking while listening"
+      ],
+      "shot_size": "close_up",
+      "camera_angle": "eye_level",
+      "lens_family": "portrait",
+      "camera_motion": "track",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front_three_quarter_left"
+    }
+  ],
+  "unresolved_questions": [
+    "Resolve A path leading away from the kitchen -> A path leading away from the kitchen"
+  ],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH009",
+      "scene_id": "CH009_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH009",
+      "scene_id": "CH009_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH009",
+      "scene_id": "CH009_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH009",
+      "scene_id": "CH009_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH009",
+      "scene_id": "CH009_SC001"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH009",
+      "source_path": "C:\\FilmCreator\\projects\\alice_in_wonderland\\02_story_analysis\\chapter_analysis\\CH009_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH009",
+      "source_path": "projects/alice_in_wonderland/01_source/chapters/CH009_chapter_ix.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH006",
+      "source_path": "projects/alice_in_wonderland/01_source/chapters/CH006_chapter_vi.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH004",
+      "source_path": "projects/alice_in_wonderland/01_source/chapters/CH004_chapter_iv.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH009",
+      "canonical_id": "alice"
+    }
+  ],
+  "evidence_summary": [
+    "[CH009_SC001] Purpose: To establish the eccentric, didactic nature of the Duchess and Alice's growing bewilderment.",
+    "[CH009_SC001] Summary: Alice walks with the Duchess, who provides a constant stream of illogical \"morals\" regarding life and temper, much to Alice's polite frustration.",
+    "[CH009_SC001] Emotional arc: From polite curiosity to mild bewilderment/irritation.",
+    "[CH009_SC001] Coverage: Two-shot: Walking side-by-side. Close-up: The Duchess's sharp features and Alice's reacting expressions.",
+    "[CH009_SC001] Continuity: Walking pace, the physical distance between characters as they move through the environment.",
+    "[CH009] Chapter summary: **Setting:** A path leading away from the kitchen; a croquet-ground with players/soldiers; a sunny area where a Gryphon sleeps; a rocky ledge where the Mock Turtle sits. **Characters:** * **Alice:** Curious, polite bu...",
+    "[CH009] CHAPTER IX. (book index hit)",
+    "[CH006] CHAPTER VI. (book index hit)",
+    "[CH004] CHAPTER IV. (book index hit)",
+    "Character alice: Alice is a young girl characterized by extreme, sudden changes in physical scale. Her size fluctuates between the stature of a small child (approximately two feet tall) and colossal proportions reaching up to nine feet or even nearly two mi..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH009_SC001\n\n## Production Intent\nEstablish the dynamic between a lecturing Duchess and an increasingly bewildered Alice through walking dialogue. The focus is on the friction between illogical moralizing and polite confusion.\n\n## Required Cast\n- alice\n- the_duchess\n\n## Required Environments\n- A path leading away from the kitchen\n\n## Continuity Constraints\n- Synchronized walking pace between characters.\n- Maintaining consistent physical distance as they traverse the path.\n\n## Beat List\n- BT001: The walk begins.\n- BT02: The Duchess delivers morals.\n- BT03: Alice's bewilderment.",
+  "metadata": {
+    "artifact_id": "CH009_SC001_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "8f0f440d79bb9b00b2554bd8e8a794cd1b070b20",
+    "created_at_utc": "2026-04-28T00:38:20.144228+00:00",
+    "updated_at_utc": "2026-04-28T00:38:20.144228+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH009_SC001",
+        "version": "ca04c5caad764b753f487503bd62be0d7c520d36"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH009_SC001",
+        "version": "5efe29b3e9cf4731cc66806dad6c2ded7796a23e"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH009_SC001",
+        "version": "5541fbd5215adc2f65c8af84ad9c0671e611ade4"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-28T00:38:59.178780+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "8f0f440d79bb9b00b2554bd8e8a794cd1b070b20"
+      }
+    ]
+  }
+}

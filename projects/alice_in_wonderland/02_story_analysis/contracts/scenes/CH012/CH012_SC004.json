@@ -1,0 +1,326 @@
+{
+  "scene_id": "CH012_SC004",
+  "chapter_id": "CH012",
+  "scene_title": "SC004",
+  "purpose": "To ground the story in reality and provide a thematic epilogue.",
+  "summary": "Alice wakes up on the riverbank, back to her normal size. She tells her sister about the dream. As they sit together at sunset, the sister reflects on how the sounds of the real world echo the strange sounds of Wonderland.",
+  "emotional_arc": "From the disorientation of waking to a peaceful, reflective calm.",
+  "production_intent": "Ground the narrative in a naturalistic reality to provide a thematic epilogue following the surrealism of the dream world.",
+  "scene_short_description": "A young girl wakes on a riverbank to share her dream with her sister at sunset.",
+  "scene_primary_scale_story_point": "Alice has returned to her normal child-sized scale from her colossal proportions.",
+  "scene_required_anchor_catalog": [
+    "The Riverbank",
+    "The Sun/Horizon"
+  ],
+  "scene_start_state": "Alice wakes up on the riverbank, disoriented by her return to normal size.",
+  "scene_end_state": "A peaceful moment of reflection as the sun sets over the riverbank.",
+  "dominant_action_line": "Alice wakes and recounts her dream while sitting with her sister at sunset.",
+  "scene_spatial_layout": [
+    "The characters are positioned on the natural terrain of the riverbank.",
+    "The horizon line provides a sense of depth and scale."
+  ],
+  "character_spatial_map": [
+    "Alice sits on the ground, transitioning from waking to talking.",
+    "Alice's Sister sits near Alice, listening and reflecting."
+  ],
+  "environment_subzones": [
+    "Riverbank grass/ground",
+    "Sunset horizon"
+  ],
+  "scene_event_chain": [
+    "event 1: Alice wakes up on the rivercia bank at her normal size.",
+    "event 2: Alice tells her sister about the dream.",
+    "event 3: The sisters sit together as the sun sets.",
+    "event 4: The sister reflects on how real sounds echo Wonderland."
+  ],
+  "entry_vectors": [
+    "Waking from sleep"
+  ],
+  "exit_vectors": [
+    "Fading into sunset reflection"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: Dialogue transition from waking to storytelling",
+    "BT002 -> BT003: Temporal shift to golden hour/sunset"
+  ],
+  "characters_required": [
+    {
+      "label": "Alice (Normal)",
+      "canonical_id": "alice",
+      "display_name": "Alice",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH012/alice.md",
+      "notes": "Direct registry match for 'alice'."
+    },
+    {
+      "label": "Alice's Sister",
+      "canonical_id": null,
+      "display_name": "Alice's Sister",
+      "status": "review",
+      "entity_kind": "individual",
+      "resolution_score": 16,
+      "source_path": "",
+      "notes": "Low-confidence character match requires review."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "The Riverbank (Real World/Natural Setting)",
+      "canonical_id": "riverbank_sunset_setting",
+      "display_name": "riverbank_sunset_setting",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 122,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/environment_breakdowns/chapters/CH012/riverbank_sunset_setting.md",
+      "notes": "Chapter-local environment alias match for 'The Riverbank (Real World/Natural Setting)' (key_overlap=2, label_overlap=5, context_overlap=4)."
+    }
+  ],
+  "continuity_constraints": [
+    "Lighting transition from bright daylight to golden hour/sunset",
+    "Scale contrast between dream proportions and normal human size"
+  ],
+  "visual_coverage_families": [
+    "Wide shots of the riverbank at sunset",
+    "Close-ups of Alice and her sister's faces",
+    "Static tranquil environmental shots"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "Alice wakes up :: action_start=Alice opens eyes on the riverbank :: action_end=Alice is fully awake and sitting :: active_subjects=alice",
+      "purpose": "",
+      "action_start": "",
+      "action_end": "",
+      "active_subjects": [],
+      "passive_subjects": [],
+      "spatial_context": "riverbank_sunset_setting :: blocking_hint=sitting on ground :: environment_subzone=riverbank_sunset_setting :: continuity=normal size scale :: coverage=medium_close",
+      "blocking_hint": "",
+      "environment_subzone": "",
+      "continuity_focus": "",
+      "coverage_hint": "",
+      "coverage_priority": "high",
+      "handoff_to_next": "Alice begins telling the story"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "Alice tells her sister about the dream :: action_start=Alice starts speaking :: action_end=The conversation settles into reflection :: active_subjects=alice, Alice's Sister",
+      "purpose": "",
+      "action_start": "",
+      "action_end": "",
+      "active_subjects": [],
+      "passive_subjects": [],
+      "spatial_context": "riverbank_sunset_setting :: blocking_hint=sitting together :: environment_subzone=riverbank_sunset_setting :: continuity=transition to golden hour :: coverage=medium",
+      "blocking_hint": "",
+      "environment_subzone": "",
+      "continuity_focus": "",
+      "coverage_hint": "",
+      "coverage_priority": "medium",
+      "handoff_to_next": "The sun sets further"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "The sister reflects on the sounds :: action_start=Sister listens to the environment :: action_end=The scene fades as she reflects :: active_subjects=Alice's Sister",
+      "purpose": "",
+      "action_start": "",
+      "action_end": "",
+      "active_subjects": [],
+      "passive_subjects": [
+        "alice"
+      ],
+      "spatial_context": "riverbank_sunset_setting :: blocking_hint=sitting still looking at horizon :: environment_subzone=riverbank_sunset_setting :: continuity=deep golden hour :: coverage=close_up",
+      "blocking_hint": "",
+      "environment_subzone": "",
+      "continuity_focus": "",
+      "coverage_hint": "",
+      "coverage_priority": "high",
+      "handoff_to_next": "End of scene"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish scale and reality",
+      "planned_shot_moment_summary": "Alice waking up on the ground",
+      "primary_subject_seed": "alice",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "riverbank_sunset_setting",
+      "planned_shot_required_anchor_1": "riverbank_sunset_setting",
+      "planned_shot_scale_proof_detail": "normal size vs dream scale",
+      "start_state_seed": "Alice opening eyes",
+      "end_state_seed": "Alice sitting up",
+      "action_seed": "Alice waking and looking around",
+      "blocking_seed": [
+        "sitting on ground"
+      ],
+      "shot_size": "medium_close",
+      "camera_angle": "eye_level",
+      "lens_family": "normal",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "bright_daylight",
+      "primary_subject_angle": "front_three_quarter_left"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "narrative exposition",
+      "planned_shot_moment_summary": "Alice speaking to her sister",
+      "primary_subject_seed": "alice",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "riverbank_sunset_setting",
+      "planned_shot_required_anchor_1": "riverbank_sunset_setting",
+      "planned_shot_scale_proof_detail": "human scale",
+      "start_state_seed": "Alice talking",
+      "end_state_seed": "Alice finishing the story",
+      "action_seed": "Alice gesturing while speaking",
+      "blocking_seed": [
+        "sitting facing sister"
+      ],
+      "shot_size": "medium",
+      "camera_angle": "eye_level",
+      "lens_family": "normal",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "golden_hour",
+      "primary_subject_angle": "front_threely_quarter_left"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "thematic resolution",
+      "planned_shot_moment_summary": "The sister reflecting on the sounds",
+      "primary_subject_seed": "Alice's Sister",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "riverbank_sunset_setting",
+      "planned_shot_required_anchor_1": "riverbank_sunset_setting",
+      "planned_shot_scale_proof_detail": "human scale",
+      "start_state_seed": "Sister listening",
+      "end_state_seed": "Sister looking at the horizon",
+      "action_seed": "Sister reflecting on sounds",
+      "blocking_seed": [
+        "sitting still"
+      ],
+      "shot_size": "close_up",
+      "camera_angle": "eye_level",
+      "lens_family": "portrait",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "backlit",
+      "primary_subject_angle": "front_three_quarter_right"
+    }
+  ],
+  "unresolved_questions": [
+    "Resolve Alice's Sister -> Alice's Sister"
+  ],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH012",
+      "scene_id": "CH012_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH012",
+      "scene_id": "CH012_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH012",
+      "scene_id": "CH012_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH012",
+      "scene_id": "CH012_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH012",
+      "scene_id": "CH012_SC004"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH012",
+      "source_path": "C:\\FilmCreator\\projects\\alice_in_wonderland\\02_story_analysis\\chapter_analysis\\CH012_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH012",
+      "source_path": "projects/alice_in_wonderland/01_source/chapters/CH012_chapter_xii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH007",
+      "source_path": "projects/alice_in_wonderland/01_source/chapters/CH007_chapter_vii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH009",
+      "source_path": "projects/alice_in_wonderland/01_source/chapters/CH009_chapter_ix.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH012",
+      "canonical_id": "alice"
+    }
+  ],
+  "evidence_summary": [
+    "[CH012_SC004] Purpose: To ground the story in reality and provide a thematic epilogue.",
+    "[CH012_SC004] Summary: Alice wakes up on the riverbank, back to her normal size. She tells her sister about the dream. As they sit together at sunset, the sister reflects on how the sounds of the real world echo the strange sounds of Wonderland.",
+    "[CH012_SC004] Emotional arc: From the disorientation of waking to a peaceful, reflective calm.",
+    "[CH012_SC004] Coverage: Wide shots of the beautiful riverbank at sunset. Close-ups of Alice and her sister's faces. Static, tranquil shots of the natural environment.",
+    "[CH012_SC004] Continuity: The lighting transition from bright daylight to golden hour/sunset. The contrast in scale between the dream world and this grounded reality.",
+    "[CH012] Chapter summary: **Setting:** A courtroom where a jury sits in a box; later, a riverbank under trees as the sun sets. **Characters:** - **Alice:** Currently at her full size (nearly two miles high), then shrinking back to normal size....",
+    "[CH012] CHAPTER XII. (book index hit)",
+    "[CH007] CHAPTER VII. (book index hit)",
+    "[CH009] CHAPTER IX. (book index hit)",
+    "Character alice: Alice is a young girl characterized by extreme, sudden changes in physical scale. Her size fluctuates between the stature of a small child (approximately two feet tall) and colossal proportions reaching up to nine feet or even nearly two mi..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH012_SC04\n\n## Production Intent\nGround the story in a naturalistic reality to provide a thematic epilogue following the surrealism of the dream world.\n\n## Required Cast\n- Alice (Normal)\n- Alice's Sister\n\n## Required Environments\n- The Riverbank (Real World/Natural Setting)\n\n## Continuity Constraints\n- Lighting transition from bright daylight to golden hour/sunset.\n- Contrast in scale between the dream world and this grounded reality.\n\n## Beat List\n- BT001: Alice wakes up on the riverbank at her normal size.\n- BT002: Alice tells her sister about the dream.\n- BT003: The sister reflects on how the sounds of the real world echo Wonderland.",
+  "metadata": {
+    "artifact_id": "CH012_SC004_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "3bff4fcca6c617990a0be672dc652bc59a585277",
+    "created_at_utc": "2026-04-28T00:46:41.680705+00:00",
+    "updated_at_utc": "2026-04-28T00:46:41.680705+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH012_SC004",
+        "version": "4b10f7b42b7040147824600625bd816afae604df"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH012_SC004",
+        "version": "fb43c04f71ca624eb552d557c3ee82d45e0e29d5"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH012_SC004",
+        "version": "09a66471395c8bd9132daeada00a580998eaf44b"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-28T00:47:20.561441+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "3bff4fcca6c617990a0be672dc652bc59a585277"
+      }
+    ]
+  }
+}

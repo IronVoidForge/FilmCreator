@@ -1,2 +1,16 @@
 # Character Bible Index
 
+- `alice` â€” Alice (status=canonical, mentions=6, ambiguities=2)
+- `alices_sister` â€” alices_sister (status=canonical, mentions=2, ambiguities=2)
+- `bill` â€” Bill (status=canonical, mentions=1, ambiguities=2)
+- `dinah` â€” Dinah (status=canonical, mentions=2, ambiguities=2)
+- `dormouse` â€” Dormouse (status=canonical, mentions=1, ambiguities=2)
+- `the_duchess` â€” The Duchess (status=canonical, mentions=1, ambiguities=3)
+- `the_hatter` â€” the_hatter (status=canonical, mentions=1, ambiguities=2)
+- `the_king` â€” The King (status=canonical, mentions=1, ambiguities=2)
+- `the_king_of_hearts` â€” The King of Hearts (status=canonical, mentions=1, ambiguities=3)
+- `the_knave` â€” the_knave (status=canonical, mentions=1, ambiguities=2)
+- `the_mock_turtle` â€” the_mock_turtle (status=canonical, mentions=2, ambiguities=3)
+- `the_queen` â€” the_queen (status=canonical, mentions=1, ambiguities=3)
+- `the_queen_of_hearts` â€” the_queen_of_hearts (status=canonical, mentions=1, ambiguities=2)
+- `white_rabbit` â€” white_rabbit (status=canonical, mentions=3, ambiguities=2)

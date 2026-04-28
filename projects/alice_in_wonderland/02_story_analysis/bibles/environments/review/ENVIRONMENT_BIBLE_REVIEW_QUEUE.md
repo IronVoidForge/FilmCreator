@@ -1,3 +1,41 @@
 # Environment Bible Review Queue
 
-- No environment bible review items.
+- `lamp_lit_hallway`
+  - Specific placement of the glass pedestal table relative to the doors is unconfirmed.
+  - Exact number or arrangement of locked doors is not specified.
+- `lush_garden_view`
+  - Specific geometry of the aperture is not defined.
+  - Exact botanical composition remains unstated.
+- `rabbit_hole_tunnel`
+  - The exact scale of the vertical shaft relative to the floating objects is unconfirmed.
+  - The relationship between the "subterranean library" and the physical structure of the shaft is not fully defined.
+- `riverbank_setting`
+  - Specific geographical boundaries or scale of the riverbank are not defined.
+  - The exactness of the "slow-moving" current vs. the "shimmering" surface is visually dependent on light interaction.
+- `the_hall_and_pool`
+  - Lighting and atmosphere are currently unextracted.
+  - Spatial layout and physical dimensions are not yet defined in the provided evidence.
+- `tea_party_table_setting`
+  - Specific visual details of the tea party elements are not yet extracted from the source.
+- `the_beautiful_garden`
+  - Visual characteristics are currently unextracted from the source.
+- `wooded_path_and_hall`
+  - Specific visual characteristics of the wooded path and hall are not yet described in the provided evidence.
+- `croquet_ground_field`
+  - Specific physical dimensions and terrain of the field.
+  - Visual manifestations of "chaotic play" vs "authority".
+- `rocky_ledge_seaography_site`
+  - Specific physical geography and visual composition are not yet defined.
+  - The exact relationship between the "rocky ledge" and "seaography site" is unclarified in current evidence.
+- `sunny_gryphon_resting_area`
+  - Specific visual geometry and terrain are not yet defined in the provided evidence.
+  - The exact physical boundaries of the area remain unknown.
+- `seaside_dance_floor`
+  - Specific visual geography of the seaside location is not yet defined.
+  - The exact physical boundaries of the "dance floor" are unknown.
+- `courtroom_jury_box_setting`
+  - Specific physical geometry and layout of the jury box are not yet established.
+  - Visual texture and lighting cues remain undefined in current evidence.
+- `riverbank_sunset_setting`
+  - Specific visual characteristics of the riverbank are not yet detailed.
+  - The relationship between the physical geography and the "sunset" descriptor is unestablished in current evidence.

@@ -1,0 +1,343 @@
+{
+  "scene_id": "CH010_SC003",
+  "chapter_id": "CH010",
+  "scene_title": "SC003",
+  "purpose": "To provide a moment of beautiful, sad musicality before an abrupt, high-stakes transition.",
+  "summary": "The Mock Turtle sings \"Beautiful Soup\" with deep sorrow. The song is suddenly interrupted by the distant cry that the trial is beginning. The Gryphon grabs Alice and leads her away in a frantic run, cutting the moment short.",
+  "emotional_arc": "From deep, soulful melancholy to sudden, urgent momentum.",
+  "production_intent": "Establish a heavy emotional weight through musicality before shattering the stillness with an urgent, high-stakes physical transition.",
+  "scene_short_description": "A sorrowful song is interrupted by a frantic, sudden departure toward a distant trial.",
+  "scene_primary_scale_story_point": "The scale shifts from stationary emotional focus to wide-scale movement.",
+  "scene_required_anchor_catalog": [
+    "seaside_dance_floor",
+    "the_gryphon's grip"
+  ],
+  "scene_start_state": "The Mock Turtle sings with deep sorrow in a still environment.",
+  "scene_end_state": "The Gryphon and Alice run away from the scene toward their destination.",
+  "dominant_action_line": "A slow musical moment is broken by an urgent flight.",
+  "scene_spatial_layout": [
+    "stationary singing zone vs moving path",
+    "distance between current location and trial destination"
+  ],
+  "character_spatial_map": [
+    "The Mock le Turtle remains stationary during the song",
+    "the_gryphon moves to grab alice",
+    "alice is pulled into motion"
+  ],
+  "environment_subzones": [
+    "seaside_dance_floor"
+  ],
+  "scene_event_chain": [
+    "event 1: The Mock le Turtle sings \"Beautiful Soup\" with deep sorrow.",
+    "event 2: A distant cry signals the start of the trial.",
+    "event 3: the_gryphon grabs alice's hand to lead her away.",
+    "event 4: the_gryphon and alice run frantically toward the destination."
+  ],
+  "entry_vectors": [
+    "The Mock le Turtle singing in place"
+  ],
+  "exit_vectors": [
+    "The Gryphon and Alice running out of frame"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: Sudden auditory interruption",
+    "BT002 -> BT003: Physical grab and sudden momentum shift"
+  ],
+  "characters_required": [
+    {
+      "label": "* Alice",
+      "canonical_id": "alice",
+      "display_name": "Alice",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH010/alice.md",
+      "notes": "Direct registry match for 'alice'."
+    },
+    {
+      "label": "* The Mock le Turtle",
+      "canonical_id": null,
+      "display_name": "* The Mock le Turtle",
+      "status": "review",
+      "entity_kind": "individual",
+      "resolution_score": 16,
+      "source_path": "",
+      "notes": "Low-confidence character match requires review."
+    },
+    {
+      "label": "* The Gryphon",
+      "canonical_id": "the_gryphon",
+      "display_name": "the_gryphon",
+      "status": "canonical",
+      "entity_kind": "group",
+      "resolution_score": 138,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH010/the_gryphon.md",
+      "notes": "Direct registry match for 'the_gryphon'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "The seaside-adjacent environment",
+      "canonical_id": "seaside_dance_floor",
+      "display_name": "seaside_dance_floor",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 68,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/environment_breakdowns/chapters/CH010/seaside_dance_floor.md",
+      "notes": "Chapter-local environment alias match for 'The seaside-adjacent environment' (key_overlap=1, label_overlap=2, context_overlap=4)."
+    }
+  ],
+  "continuity_constraints": [
+    "Transition from stationary singing to high-speed movement",
+    "Physical grip of the Gryphon on Alice's hand"
+  ],
+  "visual_coverage_families": [
+    "Close-up focus on the Mock Turtle singing",
+    "Handheld/dynamic shots for the Gryphon and Alice running",
+    "Wide shot showing distance to destination"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "The Mock le Turtle sings \"Beautiful Soup\"",
+      "purpose": "",
+      "action_start": "The Mock le Turtle begins singing with deep sorrow",
+      "action_end": "The song is interrupted by a cry",
+      "active_subjects": [
+        "The Mock le Turtle"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "seaside_dance_floor",
+      "blocking_hint": "stationary focus on the singer",
+      "environment_subzone": "seaside_dance_floor",
+      "continuity_focus": "slow, stationary singing",
+      "coverage_hint": "close-up of emotional focus",
+      "coverage_priority": "high",
+      "handoff_to_next": "The song is cut short by a distant cry."
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "The distant cry interrupts the song",
+      "purpose": "",
+      "action_start": "A distant cry sounds from afar",
+      "action_end": "the_gryphon moves toward alice",
+      "active_subjects": [],
+      "passive_subjects": [
+        "The Mock le Turtle"
+      ],
+      "spatial_context": "seaside_dance_floor",
+      "blocking_hint": "sudden shift in focus",
+      "environment_subzone": "seaside_dance_floor",
+      "continuity_focus": "transition from stillness to urgency",
+      "coverage_hint": "wide shot of the scene",
+      "coverage_priority": "medium",
+      "handoff_to_next": "the_gryphon reaches for alice."
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "The Gryphon grabs Alice and leads her away",
+      "purpose": "",
+      "action_start": "the_gryphon grabs alice's hand",
+      "action_end": "The pair runs out of frame",
+      "active_subjects": [
+        "the_gryphon",
+        "alice"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "seaside_dance_floor to destination path",
+      "blocking_hint": "the_gryphon pulls alice away from the singer",
+      "environment_subzone": "seaside_dance_floor",
+      "continuity_focus": "physical contact and sudden speed shift",
+      "coverage_hint": "handheld/dynamic shots of the run",
+      "coverage_priority": "high",
+      "handoff_to_next": "The scene ends as they depart."
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "emotional focus",
+      "planned_shot_moment_summary": "The Mock le Turtle sings with sorrow",
+      "primary_subject_seed": "The Mock le Turtle",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "seaside_dance_floor",
+      "planned_shot_required_anchor_1": "seaside_dance_floor",
+      "planned_shot_scale_proof_detail": "stationary vs moving",
+      "start_state_seed": "Mock le Turtle singing",
+      "end_state_seed": "the_gryphon interrupts",
+      "action_seed": "singing \"\"Beautiful Soup\"\"",
+      "blocking_seed": [
+        "stationary focus"
+      ],
+      "shot_size": "close_up",
+      "camera_angle": "eye_level",
+      "lens_family": "portrait",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front_three_quarter_left"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "transition trigger",
+      "planned_shot_moment_summary": "The distant cry is heard",
+      "primary_subject_seed": "none",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "off_screen_voice",
+      "narration_mode": "none",
+      "environment_subzone": "seaside_dance_floor",
+      "planned_shot_required_anchor_1": "seaside_dance_floor",
+      "planned_shot_scale_proof_detail": "stationary vs moving",
+      "start_state_seed": "singing continues",
+      "end_state_seed": "the_gryphon grabs alice",
+      "action_seed": "distant cry interrupts the song",
+      "blocking_seed": [
+        "static environment"
+      ],
+      "shot_size": "medium_full",
+      "camera_angle": "eye_level",
+      "lens_family": "wide",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "dynamic movement",
+      "planned_shot_moment_summary": "The Gryphon grabs Alice and they run",
+      "primary_subject_seed": "the_gryphon",
+      "secondary_subjects_seed": [
+        "alice"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "seaside_dance_floor",
+      "planned_shot_required_anchor_1": "the_gryphon's grip",
+      "planned_shot_scale_proof_detail": "sudden motion vs stationary",
+      "start_state_seed": "the_gryphon reaches for alice",
+      "end_state_seed": "they run out of frame",
+      "action_seed": "the_gryphon grabs alice and leads her away in a frantic run",
+      "blocking_seed": [
+        "handheld movement as they depart"
+      ],
+      "shot_size": "medium_full",
+      "camera_angle": "eye_level",
+      "lens_family": "wide",
+      "camera_motion": "handheld",
+      "zoom_behavior": "none",
+      "focus_strategy": "environment_priority",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "profile_left"
+    }
+  ],
+  "unresolved_questions": [
+    "Resolve * The Mock le Turtle -> * The Mock le Turtle"
+  ],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH010",
+      "scene_id": "CH010_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH010",
+      "scene_id": "CH010_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH010",
+      "scene_id": "CH010_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH010",
+      "scene_id": "CH010_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH010",
+      "scene_id": "CH010_SC003"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH010",
+      "source_path": "C:\\FilmCreator\\projects\\alice_in_wonderland\\02_story_analysis\\chapter_analysis\\CH010_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH010",
+      "source_path": "projects/alice_in_wonderland/01_source/chapters/CH010_chapter_x.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH009",
+      "source_path": "projects/alice_in_wonderland/01_source/chapters/CH009_chapter_ix.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH001",
+      "source_path": "projects/alice_in_wonderland/01_source/chapters/CH001_chapter_i.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH010",
+      "canonical_id": "alice"
+    }
+  ],
+  "evidence_summary": [
+    "[CH010_SC003] Purpose: To provide a moment of beautiful, sad musicality before an abrupt, high-stakes transition.",
+    "[CH010_SC003] Summary: The Mock Turtle sings \"Beautiful Soup\" with deep sorrow. The song is suddenly interrupted by the distant cry that the trial is beginning. The Gryphon grabs Alice and leads her away in a frantic run, cutting the moment short.",
+    "[CH010_SC003] Emotional arc: From deep, soulful melancholy to sudden, urgent momentum.",
+    "[CH010_SC003] Coverage: * Close-up of the Mock Turtle singing (emotional focus). * Handheld/dynamic shots as the Gryphon grabs Alice and they run away. * A wide shot showing the distance between them and their destination.",
+    "[CH010_SC003] Continuity: The transition from the Mock Turtle's stationary/slow singing to the sudden physical movement of the Gryphon grabbing Alice. Maintaining the emotional weight of the song while transitioning into a high-speed run. Physical contact b...",
+    "[CH010] Chapter summary: **Setting:** A seaside-adjacent environment where the Mock Turtle and Gryphon reside. **Characters:** * **Alice:** A young girl, currently feeling a mix of curiosity, confusion, and social pressure to conform to the c...",
+    "[CH010] CHAPTER X. (book index hit)",
+    "[CH009] CHAPTER IX. (book index hit)",
+    "[CH001] CHAPTER I. (book index hit)",
+    "Character alice: Alice is a young girl characterized by extreme, sudden changes in physical scale. Her size fluctuates between the stature of a small child (approximately two feet tall) and colossal proportions reaching up to nine feet or even nearly two mi..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH010_SC03\n\n## Production Intent\nEstablish a heavy emotional weight through musicality before shattering the stillness with an urgent, high-stakes physical transition.\n\n## Required Cast\n- Alice (alice)\n- The Mock le Turtle (The Mock le Turtle)\n- The Gryphon (the_gryphon)\n\n## Required Environments\n- Seaside environment (seaside_dance_floor)\n\n## Continuity Constraints\n- Transition from stationary singing to high-speed movement.\n- Physical grip of the Gryphon on Alice's hand.\n\n## Beat List\n- BT001: The Mock le Turtle sings \"Beautiful Soup\" with deep sorrow.\n- BT002: A distant cry interrupts the song.\n- BT003: The Gryphon grabs Alice and leads her away in a frantic run.",
+  "metadata": {
+    "artifact_id": "CH010_SC003_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "39793c7819b887e597c9689765fbec56f12b9163",
+    "created_at_utc": "2026-04-28T00:43:32.333541+00:00",
+    "updated_at_utc": "2026-04-28T00:43:32.333541+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH010_SC003",
+        "version": "12a0984228dfd929a22ec68089af245c3ef72662"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH010_SC003",
+        "version": "d8b9d56e2d0019c0d8b9c0edcf0bcfe2a57bc7f9"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH010_SC003",
+        "version": "b86ccc617cb84f2df9bb2862721b3724af3b5436"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-28T00:44:13.855030+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "39793c7819b887e597c9689765fbec56f12b9163"
+      }
+    ]
+  }
+}

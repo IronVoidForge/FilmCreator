@@ -1,0 +1,20 @@
+# Scene Dialogue Index: CH007_SC002
+
+- `CH007_DLG037` -> `SH001` speaker=unresolved
+- `CH007_DLG038` -> `SH001` speaker=unresolved
+- `CH007_DLG039` -> `SH001` speaker=unresolved
+- `CH007_DLG040` -> `SH002` speaker=the_hatter
+- `CH007_DLG041` -> `SH002` speaker=the_hatter
+- `CH007_DLG042` -> `SH003` speaker=alice
+- `CH007_DLG043` -> `SH003` speaker=alice
+- `CH007_DLG044` -> `SH004` speaker=the_hatter
+- `CH007_DLG045` -> `SH004` speaker=unresolved
+- `CH007_DLG046` -> `SH005` speaker=the_hatter
+- `CH007_DLG047` -> `SH005` speaker=unresolved
+- `CH007_DLG048` -> `SH005` speaker=the_hatter
+- `CH007_DLG049` -> `SH006` speaker=alice
+- `CH007_DLG050` -> `SH006` speaker=alice
+- `CH007_DLG051` -> `SH007` speaker=the_hatter
+- `CH007_DLG052` -> `SH007` speaker=march_hare
+- `CH007_DLG053` -> `SH008` speaker=alice
+- `CH007_DLG054` -> `SH008` speaker=unresolved

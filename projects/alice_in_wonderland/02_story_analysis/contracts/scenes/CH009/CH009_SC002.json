@@ -1,0 +1,391 @@
+{
+  "scene_id": "CH009_SC002",
+  "chapter_id": "CH009",
+  "scene_title": "SC002",
+  "purpose": "To introduce the Queen's terrifying authority and its arbitrary nature.",
+  "summary": "The Queen of Hearts makes a sudden, startling appearance. She presents the Duchess with an ultimatum; the Duchess chooses to depart immediately to avoid execution.",
+  "emotional_arc": "From calm walking to sudden terror and abrupt departure.",
+  "production_intent": "Establish the Queen of Hearts as a sudden, arbitrary force of authority through high-contrast movement and interaction with the Duchess.",
+  "scene_short_description": "A calm walk is interrupted by a sudden arrival and an ultimatum leading to a hasty departure.",
+  "scene_primary_scale_story_point": "The Queen's authority dictates the physical scale of the interaction.",
+  "scene_required_anchor_catalog": [
+    "The path/garden entrance"
+  ],
+  "scene_start_state": "The Duchess walks calmly through the garden entrance.",
+  "scene_end_state": "The Duchess departs immediately to avoid execution.",
+  "dominant_action_line": "The Queen interrupts a calm walk with an ultimatum, forcing the Duchess to flee.",
+  "scene_spatial_layout": [
+    "The path/garden entrance serves as the primary stage for the encounter."
+  ],
+  "character_spatial_map": [
+    "The Duchess moves through the frame before being intercepted.",
+    "The Queen of Hearts enters suddenly into the Duchess's space."
+  ],
+  "environment_subzones": [
+    "The path/garden entrance"
+  ],
+  "scene_event_chain": [
+    "event 1: The Duchess walks calmly along the path.",
+    "event 2: The Queen of Hearts makes a sudden, startling appearance.",
+    "event 3: The Queen presents an ultimatum to the Duchess.",
+    "event 4: The Duchess departs immediately to avoid execution."
+  ],
+  "entry_vectors": [
+    "The Duchess enters via the garden path.",
+    "The Queen ofs Hearts enters through a sudden movement into the frame."
+  ],
+  "exit_vectors": [
+    "The Duchess exits the scene via rapid departure."
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: Sudden interruption of motion.",
+    "BT002 -> BT003: Tension of the ultimatum.",
+    "BT003 -> BT004: Abrupt flight."
+  ],
+  "characters_required": [
+    {
+      "label": "Alice",
+      "canonical_id": "alice",
+      "display_name": "Alice",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH009/alice.md",
+      "notes": "Direct registry match for 'alice'."
+    },
+    {
+      "label": "The Duchess",
+      "canonical_id": "the_duchess",
+      "display_name": "The Duchess",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH009/the_duchess.md",
+      "notes": "Direct registry match for 'the_duchess'."
+    },
+    {
+      "label": "The Queen of Hearts",
+      "canonical_id": "the_queen_of_hearts",
+      "display_name": "the_queen_of_hearts",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH009/the_queen_of_hearts.md",
+      "notes": "Direct registry match for 'the_queen_of_hearts'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "The path/garden entrance",
+      "canonical_id": null,
+      "display_name": "The path/garden entrance",
+      "status": "review",
+      "entity_kind": "environment",
+      "resolution_score": 8,
+      "source_path": "",
+      "notes": "Low-confidence environment match requires review."
+    }
+  ],
+  "continuity_constraints": [
+    "Suddenness of movement for the Queen's entrance.",
+    "Costume/prop consistency for the Queen."
+  ],
+  "visual_coverage_families": [
+    "Wide: The arrival of the Queen.",
+    "Medium: The interaction between thely Queen and the Duchess."
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "The Duchess walks through the garden entrance",
+      "purpose": "",
+      "action_start": "The Duchess begins walking",
+      "action_end": "The Duchess is interrupted",
+      "active_subjects": [
+        "the_duchess"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "The path/garden entrance",
+      "blocking_hint": "Walking along the path",
+      "environment_subzone": "The path/garden entrance",
+      "continuity_focus": "Smooth walking motion",
+      "coverage_hint": "Medium shot of the Duchess",
+      "coverage_priority": "low",
+      "handoff_to_next": "Interruption by Queen"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "The Queen makes a sudden appearance",
+      "purpose": "",
+      "action_start": "The Queen enters the frame",
+      "action_end": "The Queen is established in position",
+      "active_subjects": [
+        "the_queen_of_hearts"
+      ],
+      "passive_subjects": [
+        "the_duchess"
+      ],
+      "spatial_context": "The path/garden entrance",
+      "blocking_hint": "Queen cuts off the Duchess's path",
+      "environment_subzone": "The path/garden entrance",
+      "continuity_focus": "Suddenness of movement",
+      "coverage_hint": "Wide shot showing both characters",
+      "coverage_priority": "high",
+      "handoff_to_next": "Ultimatum delivery"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "The Queen presents an ultimatum",
+      "purpose": "",
+      "action_start": "The Queen speaks to the Duchess",
+      "action_end": "The Duchess receives the command",
+      "active_subjects": [
+        "the_queen_of_hearts"
+      ],
+      "passive_subjects": [
+        "the_duchess"
+      ],
+      "spatial_context": "The path/garden entrance",
+      "blocking_hint": "Queen stands dominant over the Duchess",
+      "environment_subzone": "The path/garden entrance",
+      "continuity_focus": "Costume and prop consistency for Queen",
+      "coverage_hint": "Medium shot of interaction",
+      "coverage_priority": "medium",
+      "handoff_to_next": "Decision to flee"
+    },
+    {
+      "beat_id": "BT004",
+      "summary": "The Duchess departs immediately",
+      "purpose": "",
+      "action_start": "The Duchess turns to leave",
+      "action_end": "The Duchess is out of frame",
+      "active_subjects": [
+        "the_duchess"
+      ],
+      "passive_subjects": [
+        "the_queen_of_hearts"
+      ],
+      "spatial_context": "The path/garden entrance",
+      "blocking_hint": "Duchess flees the Queen's presence",
+      "environment_subzone": "The path/garden entrance",
+      "continuity_focus": "Suddenness of movement",
+      "coverage_hint": "Wide or medium shot of departure",
+      "coverage_priority": "medium",
+      "handoff_to_next": "Scene end"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish calm state",
+      "planned_shot_moment_summary": "The Duchess walks through the garden entrance",
+      "primary_subject_seed": "the_duchess",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "The path/garden entrance",
+      "planned_shot_required_anchor_1": "The path/garden entrance",
+      "planned_shot_scale_proof_detail": "natural human scale",
+      "start_state_seed": "walking motion",
+      "end_state_seed": "interrupted motion",
+      "action_seed": "walking -> sudden stop",
+      "blocking_seed": [
+        "walking through the frame"
+      ],
+      "shot_size": "medium_full",
+      "camera_angle": "eye_level",
+      "lens_family": "normal",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "profile_left"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "introduce threat",
+      "planned_shot_moment_summary": "The Queen appears suddenly",
+      "primary_subject_seed": "the_queen_of_hearts",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "The path/garden entrance",
+      "planned_shot_required_anchor_1": "The path/garden entrance",
+      "planned_shot_scale_proof_detail": "sudden presence",
+      "start_state_seed": "Queen enters frame",
+      "end_state_seed": "Queen stands still",
+      "action_seed": "appearing in the Duchess's path",
+      "blocking_seed": [
+        "interposing between camera and Duchess"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "low_angle",
+      "lens_family": "wide",
+      "camera_motion": "pan",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "hard_directional",
+      "primary_subject_angle": "front"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "convey authority",
+      "planned_shot_moment_summary": "The Queen delivers the ultimatum",
+      "primary_subject_seed": "the_queen_of_hearts",
+      "secondary_subjects_seed": [
+        "the_duchess"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "The path/garden entrance",
+      "planned_shot_required_anchor_1": "The path/garden entrance",
+      "planned_shot_scale_proof_detail": "heightened authority",
+      "start_state_seed": "Queen speaking",
+      "end_state_seed": "Duchess reacting",
+      "action_seed": "confrontation",
+      "blocking_seed": [
+        "tightly framed interaction"
+      ],
+      "shot_size": "medium",
+      "camera_angle": "eye_level",
+      "lens_family": "normal",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "high_contrast_ceremonial",
+      "primary_subject_angle": "front_three_quarter_left"
+    },
+    {
+      "planned_shot_id": "SH004",
+      "beat_id": "BT004",
+      "narrative_function": "resolve tension via flight",
+      "planned_shot_moment_summary": "The Duchess flees the scene",
+      "primary_subject_seed": "the_ducuss",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "The path/garden entrance",
+      "planned_shot_required_anchor_1": "The path/garden entrance",
+      "planned_shot_scale_proof_detail": "rapid movement",
+      "start_state_seed": "Duchess turns",
+      "end_state_seed": "Duchess exits frame",
+      "action_seed": "running away",
+      "blocking_seed": [
+        "moving away from the Queen"
+      ],
+      "shot_size": "medium_full",
+      "camera_angle": "eye_level",
+      "lens_family": "wide",
+      "camera_motion": "pan",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "profile_right"
+    }
+  ],
+  "unresolved_questions": [
+    "Resolve The path/garden entrance -> The path/garden entrance"
+  ],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH009",
+      "scene_id": "CH009_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH009",
+      "scene_id": "CH009_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH009",
+      "scene_id": "CH009_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH009",
+      "scene_id": "CH009_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH009",
+      "scene_id": "CH009_SC002"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH009",
+      "source_path": "C:\\FilmCreator\\projects\\alice_in_wonderland\\02_story_analysis\\chapter_analysis\\CH009_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH008",
+      "source_path": "projects/alice_in_wonderland/01_source/chapters/CH008_chapter_viii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH006",
+      "source_path": "projects/alice_in_wonderland/01_source/chapters/CH006_chapter_vi.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH009",
+      "source_path": "projects/alice_in_wonderland/01_source/chapters/CH009_chapter_ix.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH009",
+      "canonical_id": "alice"
+    }
+  ],
+  "evidence_summary": [
+    "[CH009_SC002] Purpose: To introduce the Queen's terrifying authority and its arbitrary nature.",
+    "[CH009_SC002] Summary: The Queen of Hearts makes a sudden, startling appearance. She presents the Duchess with an ultimatum; the Duchess chooses to depart immediately to avoid execution.",
+    "[CH009_SC002] Emotional arc: From calm walking to sudden terror and abrupt departure.",
+    "[CH009_SC002] Coverage: Wide: The arrival of the Queen. Medium: The interaction between the Queen and the Duchess.",
+    "[CH009_SC002] Continuity: Suddenness of movement, costume/prop consistency for the Queen.",
+    "[CH009] Chapter summary: **Setting:** A path leading away from the kitchen; a croquet-ground with players/soldiers; a sunny area where a Gryphon sleeps; a rocky ledge where the Mock Turtle sits. **Characters:** * **Alice:** Curious, polite bu...",
+    "[CH008] CHAPTER VIII. (book index hit)",
+    "[CH006] CHAPTER VI. (book index hit)",
+    "[CH009] CHAPTER IX. (book index hit)",
+    "Character alice: Alice is a young girl characterized by extreme, sudden changes in physical scale. Her size fluctuates between the stature of a small child (approximately two feet tall) and colossal proportions reaching up to nine feet or even nearly two mi..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH009_SC002\n\n## Production Intent\nEstablish the Queen of Hearts as a sudden, arbitrary force of authority through high-contrast movement and interaction with the Duchess.\n\n## Required Cast\n- Alice (alice)\n- The Duchess (the_duchess)\n- The Queen of Hearts (the_queen_of_hearts)\n\n## Required Environments\n- The path/garden entrance\n\n## Continuity Constraints\n- Suddenness of movement for the Queen's entrance.\n- Costume/prop consistency for the Queen.\n\n## Beat List\n- BT001: The Duchess walks through the garden entrance.\n- BT002: The Queen makes a sudden appearance.\n- BT003: The Queen presents an ultimatum.\n- BT004: The Duchess departs immediately.",
+  "metadata": {
+    "artifact_id": "CH009_SC002_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "37af568c43a9dc727a1c141561c8fafabd1b9c79",
+    "created_at_utc": "2026-04-28T00:38:59.287294+00:00",
+    "updated_at_utc": "2026-04-28T00:38:59.287294+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH009_SC002",
+        "version": "abce424fc97c160c445c073f9c426860c4669a05"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH009_SC002",
+        "version": "8bb5cb27d258e54cf1d4f304decbd11ac3a74f0b"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH009_SC002",
+        "version": "bbda90355829c49a358f521387b8ccb6afa35f66"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-28T00:39:44.134990+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "37af568c43a9dc727a1c141561c8fafabd1b9c79"
+      }
+    ]
+  }
+}

@@ -1,0 +1,321 @@
+{
+  "scene_id": "CH001_SC004",
+  "chapter_id": "CH001",
+  "scene_title": "SC004",
+  "purpose": "Execute the primary physical transformation and the escalating conflict of scale.",
+  "summary": "Alice drinks from a \"DRINK ME\" bottle, shrinking to ten inches tall. She realizes she has left the key on top of the high glass table and struggles to climb it. In desperation, she finds an \"EAT ME\" cake. After eating it, she expects another change in size, but her height remains unchanged, leaving her in a state of confusion.",
+  "emotional_arc": "Wonder $\\rightarrow$ Panic/Despair $\\rightarrow$ Uncertain Hope.",
+  "production_intent": "Execute the primary physical transformation and the escalating conflict of scale.",
+  "scene_short_description": "A tiny girl struggles with a massive glass table before eating a mysterious cake.",
+  "scene_primary_scale_story_point": "Alice shrinks to ten inches tall relative to the environment.",
+  "scene_required_anchor_catalog": [
+    "glass_table",
+    "drink_me_bottle",
+    "eat_me_cake"
+  ],
+  "scene_start_state": "Alice is at her full child stature, holding a bottle.",
+  "scene_end_state": "Alice stands ten inches tall, looking at the cake in confusion.",
+  "dominant_action_line": "Shrinking through consumption and attempting to scale an obstacle.",
+  "scene_spatial_layout": [
+    "The hall contains a high glass table as a vertical barrier.",
+    "The floor is the primary plane for the miniature perspective."
+  ],
+  "character_spatial_map": [
+    "Alice moves from standing height to ten inches tall.",
+    "Alice approaches the base of the glass table."
+  ],
+  "environment_subzones": [
+    "lamp_lit_hall_floor",
+    "glass_table_surface"
+  ],
+  "scene_event_chain": [
+    "event 1: Alice drinks from the \"DRINK ME\" bottle.",
+    "event s2: Alice shrinks to ten inches tall and realizes the key is on the high table.",
+    "event 3: Alice struggles to climb the glass table.",
+    "event 4: Alice eats the \"EAT ME\" cake and waits for a change that does not come."
+  ],
+  "entry_vectors": [
+    "The Hallway floor level"
+  ],
+  "exit_vectors": [
+    "The Hallway floor level"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: Physical shrinkage transition",
+    "BT002 -> BT003: Scaling the obstacle",
+    "BT003 -> BT004: Consumption and expectation"
+  ],
+  "characters_required": [
+    {
+      "label": "Alice",
+      "canonical_id": "alice",
+      "display_name": "Alice",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH001/alice.md",
+      "notes": "Direct registry match for 'alice'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "The Hallway (near the glass table)",
+      "canonical_id": "lamp_lit_hallway",
+      "display_name": "lamp_lit_hallway",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 78,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/environment_breakdowns/chapters/CH001/lamp_lit_hallway.md",
+      "notes": "Chapter-local environment alias match for 'The Hallway (near the glass table)' (key_overlap=1, label_overlap=3, context_overlap=4)."
+    }
+  ],
+  "continuity_constraints": [
+    "Alice must maintain an exact height of ten inches after shrinking",
+    "Visual distinction between liquid and cake textures",
+    "Physical sensation/reaction to flavor must be visible"
+  ],
+  "visual_coverage_families": [
+    "Extreme close-ups of labels (DRINK ME, EAT ME)",
+    "Low-angle shots looking up at the glass table from a ten-inch perspective",
+    "Wide shots showing Alice's small stature in the large hall"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "Alice drinks from the bottle",
+      "purpose": "",
+      "action_start": "Alice lifts the bottle to her lips",
+      "action_end": "Alice reaches ten inches height",
+      "active_subjects": [
+        "alice"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "lamp_lit_hall_floor",
+      "blocking_hint": "Standing alone",
+      "environment_subzone": "lamp_lit_hall_floor",
+      "continuity_focus": "Shrinkage scale check",
+      "coverage_hint": "Extreme close-up to wide",
+      "coverage_priority": "high",
+      "handoff_to_next": "The physical size change"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "The struggle for the key",
+      "purpose": "",
+      "action_start": "Alice looks up at the table top",
+      "action_end": "Alice attempts to climb",
+      "active_subjects": [
+        "alice"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "glass_table_surface",
+      "blocking_hint": "At base of table",
+      "environment_subzone": "glass_table_surface",
+      "continuity_focus": "Ten inch height vs table legs",
+      "coverage_hint": "Low-angle shot",
+      "coverage_priority": "medium",
+      "handoff_to_next": "The physical obstacle"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "The cake consumption",
+      "purpose": "",
+      "action_start": "Alice finds the cake",
+      "action_end": "Alice eats and waits for change",
+      "active_subjects": [
+        "alice"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "lamp_lit_hall_floor",
+      "blocking_hint": "Near table base",
+      "environment_subzone": "lamp_lit_hall_floor",
+      "continuity_focus": "No height change after eating",
+      "coverage_hint": "Close-up on face/cake",
+      "coverage_priority": "high",
+      "handoff_to_next": "The uncertain hope"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish scale shift",
+      "planned_shot_moment_summary": "Alice drinks from bottle",
+      "primary_subject_seed": "alice",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "lamp_lit_hall_floor",
+      "planned_shot_required_anchor_1": "drink_me_bottle",
+      "planned_shot_scale_proof_detail": "Alice shrinking to ten inches",
+      "start_state_seed": "Full height Alice",
+      "end_state_seed": "Ten inch Alice",
+      "action_seed": "Drinking and shrinking",
+      "blocking_seed": [
+        "Standing position"
+      ],
+      "shot_size": "medium_close",
+      "camera_angle": "eye_level",
+      "lens_family": "normal",
+      "camera_motion": "none",
+      "zoom_behavior": "subtle_in",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front_three_quarter_left"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "establish obstacle",
+      "planned_shot_moment_summary": "Alice looks up at the table",
+      "primary_subject_seed": "alice",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "glass_table_surface",
+      "planned_shot_required_anchor_1": "glass_table",
+      "planned_shot_scale_proof_detail": "Table height vs ten inch Alice",
+      "start_state_seed": "Ten inch Alice on floor",
+      "end_state_seed": "Looking upward",
+      "action_seed": "Struggling to climb",
+      "blocking_seed": [
+        "At base of table"
+      ],
+      "shot_size": "low_angle",
+      "camera_angle": "low_angle",
+      "lens_family": "wide",
+      "camera_motion": "none",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "profile_left"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "resolve tension/confusion",
+      "planned_shot_moment_summary": "Alice eats the cake",
+      "primary_subject_seed": "alice",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "lamp_lit_hall_floor",
+      "planned_shot_required_anchor_1": "eat_me_cake",
+      "planned_shot_scale_proof_detail": "No change in height after eating",
+      "start_state_seed": "Climbing attempt",
+      "end_state_seed": "Eating cake",
+      "action_seed": "Consuming cake",
+      "blocking_seed": [
+        "Sitting/standing near table base"
+      ],
+      "shot_size": "close_up",
+      "camera_angle": "eye_level",
+      "lens_family": "portrait",
+      "camera_motion": "none",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front"
+    }
+  ],
+  "unresolved_questions": [],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH001",
+      "scene_id": "CH001_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH001",
+      "scene_id": "CH001_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH001",
+      "scene_id": "CH001_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH001",
+      "scene_id": "CH001_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH001",
+      "scene_id": "CH001_SC004"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH001",
+      "source_path": "C:\\FilmCreator\\projects\\alice_in_wonderland\\02_story_analysis\\chapter_analysis\\CH001_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH001",
+      "source_path": "projects/alice_in_wonderland/01_source/chapters/CH001_chapter_i.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH004",
+      "source_path": "projects/alice_in_wonderland/01_source/chapters/CH004_chapter_iv.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH012",
+      "source_path": "projects/alice_in_wonderland/01_source/chapters/CH012_chapter_xii.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH001",
+      "canonical_id": "alice"
+    }
+  ],
+  "evidence_summary": [
+    "[CH001_SC004] Purpose: Execute the primary physical transformation and the escalating conflict of scale.",
+    "[CH001_SC004] Summary: Alice drinks from a \"DRINK ME\" bottle, shrinking to ten inches tall. She realizes she has left the key on top of the high glass table and struggles to climb it. In desperation, she finds an \"EAT ME\" cake. After eating it, she expects...",
+    "[CH001_SC004] Emotional arc: Wonder $\\rightarrow$ Panic/Despair $\\rightarrow$ Uncertain Hope.",
+    "[CH001_SC004] Coverage: Extreme close-ups of the labels (\"DRINK ME\", \"EAT ME\"); Low-angle shots looking up at the table from Alice's new perspective; Wide shot showing her small stature in the large hall.",
+    "[CH001_SC004] Continuity: The exact height of Alice after shrinking; The visual distinction between the liquid and the cake; The physical sensation of the \"flavor\" described.",
+    "[CH001] Chapter summary: **Setting:** - A riverbank (sunny, hot day). - A large rabbit-hole under a hedge. - A deep vertical well/tunnel lined with cupboards, bookshelves, maps, and pictures. - A long, low hall lit by a row of hanging lamps,...",
+    "[CH001] CHAPTER I. (book index hit)",
+    "[CH004] CHAPTER IV. (book index hit)",
+    "[CH012] CHAPTER XII. (book index hit)",
+    "Character alice: Alice is a young girl characterized by extreme, sudden changes in physical scale. Her size fluctuates between the stature of a small child (approximately two feet tall) and colossal proportions reaching up to nine feet or even nearly two mi..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH001_SC004\n\n## Production Intent\nExecute the primary physical transformation and the escalating conflict of scale.\n\n## Required Cast\n- Alice (Ten inches tall)\n\n## Required Environments\n- The Hallway (lamp_lit_hall)\n- Glass Table surface/legs\n\n## Continuity Constraints\n- Alice's height must be exactly ten inches post-shrink.\n- Visual distinction between liquid and cake.\n- Physical sensation of flavor must be visible in reaction.\n\n## Beat List\n- BT001: Alice drinks from the \"DRINK ME\" bottle to shrink.\n- BT002: Alice struggles to climb the high glass table for the key.\n- BT003: Alice eats the \"EAT ME\" cake and waits for a change in size.",
+  "metadata": {
+    "artifact_id": "CH001_SC004_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "a096c22a4d96c1306b63f141531c4fd4ce005f08",
+    "created_at_utc": "2026-04-28T00:30:04.440128+00:00",
+    "updated_at_utc": "2026-04-28T00:30:04.440128+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH001_SC004",
+        "version": "4998cfa7240a4f764b0124ccac46d90317014275"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH001_SC004",
+        "version": "88e92b1a3472106303c7fcc407c25124224ffdd0"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH001_SC004",
+        "version": "60f1472cf6211b82cbf4a9ef279e438a6bfd49ef"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-28T00:30:44.144088+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "a096c22a4d96c1306b63f141531c4fd4ce005f08"
+      }
+    ]
+  }
+}
