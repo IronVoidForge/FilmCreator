@@ -187,8 +187,36 @@ def parse_packet_record(record_lines: list[str]) -> PacketRecord:
         index += 1
     record_type = fields.get("type", "")
     if not record_type:
+        inferred_type = infer_record_type(fields=fields, sections=sections)
+        if inferred_type:
+            fields["type"] = inferred_type
+            record_type = inferred_type
+    if not record_type:
         raise LMStudioError("Packet record is missing required field 'type'.")
     return PacketRecord(fields=fields, sections=sections)
+
+
+def infer_record_type(*, fields: dict[str, str], sections: dict[str, str]) -> str:
+    lowered_fields = {key.lower(): str(value).strip().lower() for key, value in fields.items()}
+    section_names = {key.lower() for key in sections}
+    if "scene_id" in lowered_fields:
+        return "scene"
+    if (
+        "canonical_character_id" in lowered_fields
+        or "character_type_hint" in lowered_fields
+        or "morphology_hint" in lowered_fields
+        or "scale_hint" in lowered_fields
+    ):
+        return "character"
+    if any(key in lowered_fields for key in {"geography", "lighting", "atmosphere", "anchors", "role"}):
+        return "environment"
+    if "character_index_markdown" in section_names:
+        return "character"
+    if "environment_index_markdown" in section_names:
+        return "environment"
+    if "scene_index_markdown" in section_names:
+        return "scene"
+    return ""
 
 
 def collect_implicit_markdown_block(lines: list[str], start_index: int) -> tuple[list[str], int]:

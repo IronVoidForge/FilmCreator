@@ -225,6 +225,29 @@ def test_parse_packet_document_ignores_bare_section_name_before_matching_section
     assert packet.records[0].fields["scene_id"] == "SC001"
 
 
+def test_parse_packet_document_inferrs_character_record_type_when_missing() -> None:
+    response = "\n".join(
+        [
+            "[[FILMCREATOR_PACKET]]",
+            "task: character_extraction",
+            "version: 1",
+            "[[FILMCREATOR_RECORD]]",
+            "asset_id: alice",
+            "canonical_character_id: alice",
+            "character_type_hint: human",
+            "[[SECTION markdown]]",
+            "# Alice",
+            "[[/SECTION]]",
+            "[[/FILMCREATOR_RECORD]]",
+            "[[/FILMCREATOR_PACKET]]",
+        ]
+    )
+
+    packet = packet_parser.parse_packet_document(response, expected_task="character_extraction")
+
+    assert packet.records[0].fields["type"] == "character"
+
+
 def test_extract_character_records_from_index_markdown_salvages_heading_blocks() -> None:
     markdown = "\n".join(
         [

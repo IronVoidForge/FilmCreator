@@ -326,6 +326,7 @@ class _TaskAttempt:
     status: str
     log_path: str
     message: str
+    raw_response: str = ""
 
 
 def analyze_chapter(*, project_slug: str, chapter: str | None = None) -> StoryAnalysisSummary:
@@ -1469,6 +1470,29 @@ def _scene_brief_markdown(scene_path: Path) -> str:
 
 
 def _call_packet_task(*, client: LMStudioClient, project_dir: Path, task_name: str, system_prompt: str, user_prompt: str, degraded_user_prompt: str) -> _PacketDocument:
+    packet, attempts = _call_packet_task_with_attempts(
+        client=client,
+        project_dir=project_dir,
+        task_name=task_name,
+        system_prompt=system_prompt,
+        user_prompt=user_prompt,
+        degraded_user_prompt=degraded_user_prompt,
+    )
+    if packet is not None:
+        return packet
+    failure_path = _write_authoring_failure_artifact(project_dir=project_dir, task_name=task_name, asset_id=None, reason="; ".join(f"{attempt.kind}:{attempt.status}:{attempt.message}" for attempt in attempts))
+    raise LMStudioError(f"Authoring task '{task_name}' failed after retries. Failure artifact: {repo_relative(failure_path)}")
+
+
+def _call_packet_task_with_attempts(
+    *,
+    client: LMStudioClient,
+    project_dir: Path,
+    task_name: str,
+    system_prompt: str,
+    user_prompt: str,
+    degraded_user_prompt: str,
+) -> tuple[_PacketDocument | None, list[_TaskAttempt]]:
     task_started = time.perf_counter()
     print(f"[authoring] Task {task_name} started...")
     attempts: list[_TaskAttempt] = []
@@ -1482,13 +1506,12 @@ def _call_packet_task(*, client: LMStudioClient, project_dir: Path, task_name: s
                 packet = _parse_packet_document(result.text, expected_task=task_name)
                 elapsed = time.perf_counter() - task_started
                 print(f"[authoring] Task {task_name} finished in {elapsed:.1f}s")
-                return packet
+                return packet, attempts
             except LMStudioError as exc:
-                attempts.append(_TaskAttempt(kind=kind, status="parse_failed", log_path=repo_relative(log_path), message=str(exc)))
+                attempts.append(_TaskAttempt(kind=kind, status="parse_failed", log_path=repo_relative(log_path), message=str(exc), raw_response=result.text))
                 continue
-        attempts.append(_TaskAttempt(kind=kind, status=result.status, log_path=repo_relative(log_path), message=result.error_message or "Unspecified LM Studio authoring failure."))
-    failure_path = _write_authoring_failure_artifact(project_dir=project_dir, task_name=task_name, asset_id=None, reason="; ".join(f"{attempt.kind}:{attempt.status}:{attempt.message}" for attempt in attempts))
-    raise LMStudioError(f"Authoring task '{task_name}' failed after retries. Failure artifact: {repo_relative(failure_path)}")
+        attempts.append(_TaskAttempt(kind=kind, status=result.status, log_path=repo_relative(log_path), message=result.error_message or "Unspecified LM Studio authoring failure.", raw_response=result.text))
+    return None, attempts
 
 
 def _call_record_extraction_with_chunked_fallback(
@@ -1506,26 +1529,67 @@ def _call_record_extraction_with_chunked_fallback(
 ) -> tuple[_PacketDocument, list[str]]:
     warnings: list[str] = []
     full_packet: _PacketDocument | None = None
-    try:
-        full_packet = _call_packet_task(
+    full_packet, full_attempts = _call_packet_task_with_attempts(
+        client=client,
+        project_dir=project_dir,
+        task_name=task_name,
+        system_prompt=authoring_prompts.analysis_system_prompt(),
+        user_prompt=prompt_builder(
+            project_slug=project_slug,
+            chapter_source=chapter_source,
+            chapter_summary=chapter_summary_markdown,
+        ),
+        degraded_user_prompt=degraded_prompt_builder(
+            project_slug=project_slug,
+            chapter_source=chapter_source,
+            chapter_summary=chapter_summary_markdown,
+            degraded=True,
+        ),
+    )
+    if full_packet is None:
+        warnings.append(
+            f"{task_name} full chapter pass failed: "
+            + "; ".join(f"{attempt.kind}:{attempt.status}:{attempt.message}" for attempt in full_attempts)
+        )
+        repair_packet, repair_warnings = _repair_record_extraction_packet(
             client=client,
             project_dir=project_dir,
+            project_slug=project_slug,
+            chapter_source=chapter_source,
+            chapter_summary_markdown=chapter_summary_markdown,
             task_name=task_name,
-            system_prompt=authoring_prompts.analysis_system_prompt(),
-            user_prompt=prompt_builder(
-                project_slug=project_slug,
-                chapter_source=chapter_source,
-                chapter_summary=chapter_summary_markdown,
-            ),
-            degraded_user_prompt=degraded_prompt_builder(
-                project_slug=project_slug,
-                chapter_source=chapter_source,
-                chapter_summary=chapter_summary_markdown,
-                degraded=True,
-            ),
+            record_type=record_type,
+            index_section_name=index_section_name,
+            existing_index_markdown="",
+            prior_attempts=full_attempts,
         )
-    except LMStudioError as exc:
-        warnings.append(f"{task_name} full chapter pass failed: {exc}")
+        warnings.extend(repair_warnings)
+        if repair_packet is not None:
+            repair_records, repair_record_warnings, repair_index_markdown = _extract_usable_records_from_packet(
+                packet=repair_packet,
+                record_type=record_type,
+                index_section_name=index_section_name,
+            )
+            warnings.extend(repair_record_warnings)
+            if repair_records:
+                if not repair_index_markdown.strip():
+                    repair_index_markdown = _synthesize_record_index_markdown(
+                        chapter_id=chapter_source.chapter_id,
+                        record_type=record_type,
+                        records=repair_records,
+                    )
+                    warnings.append(
+                        f"{task_name} repair pass omitted {index_section_name}; synthesized an index from explicit records."
+                    )
+                warnings.append(f"{task_name} recovered usable {record_type} records from a focused repair pass before chunking.")
+                return (
+                    _PacketDocument(
+                        metadata=dict(repair_packet.metadata),
+                        sections={index_section_name: repair_index_markdown},
+                        records=repair_records,
+                    ),
+                    warnings,
+                )
     else:
         full_records, full_record_warnings, full_index_markdown = _extract_usable_records_from_packet(
             packet=full_packet,
@@ -1564,6 +1628,7 @@ def _call_record_extraction_with_chunked_fallback(
             record_type=record_type,
             index_section_name=index_section_name,
             existing_index_markdown=full_index_markdown,
+            prior_attempts=[],
         )
         warnings.extend(repair_warnings)
         if repair_packet is not None:
@@ -1702,8 +1767,10 @@ def _repair_record_extraction_packet(
     record_type: str,
     index_section_name: str,
     existing_index_markdown: str,
+    prior_attempts: list[_TaskAttempt],
 ) -> tuple[_PacketDocument | None, list[str]]:
     warnings: list[str] = []
+    repair_focus = _record_repair_focus(prior_attempts)
     candidate_summaries = _record_repair_candidate_summaries(
         project_slug=project_slug,
         chapter_id=chapter_source.chapter_id,
@@ -1720,6 +1787,8 @@ def _repair_record_extraction_packet(
         existing_index_markdown=existing_index_markdown,
         chapter_markdown=chapter_source.full_markdown,
         candidate_summaries=candidate_summaries,
+        prior_response=_best_attempt_raw_response(prior_attempts),
+        repair_focus=repair_focus,
     )
     try:
         repair_packet = _call_packet_task(
@@ -1738,6 +1807,8 @@ def _repair_record_extraction_packet(
                 existing_index_markdown=existing_index_markdown,
                 chapter_markdown=chapter_source.full_markdown,
                 candidate_summaries=candidate_summaries,
+                prior_response=_best_attempt_raw_response(prior_attempts),
+                repair_focus=repair_focus,
                 degraded=True,
             ),
         )
@@ -1745,6 +1816,25 @@ def _repair_record_extraction_packet(
         warnings.append(f"{task_name} focused repair pass failed: {exc}")
         return None, warnings
     return repair_packet, warnings
+
+
+def _best_attempt_raw_response(attempts: list[_TaskAttempt]) -> str:
+    best = ""
+    for attempt in attempts:
+        if attempt.raw_response and len(attempt.raw_response) > len(best):
+            best = attempt.raw_response
+    return best
+
+
+def _record_repair_focus(attempts: list[_TaskAttempt]) -> str:
+    messages = " ".join(attempt.message for attempt in attempts if attempt.status == "parse_failed").lower()
+    if "missing required field 'type'" in messages:
+        return "missing_type"
+    if "missing required field" in messages:
+        return "missing_required_field"
+    if "expected 'key: value' packet line" in messages:
+        return "bad_packet_header"
+    return "general_structure"
 
 
 def _call_chapter_summary_with_chunked_fallback(
@@ -2095,6 +2185,8 @@ def _record_extraction_repair_prompt(
     existing_index_markdown: str,
     chapter_markdown: str,
     candidate_summaries: list[str] | None = None,
+    prior_response: str = "",
+    repair_focus: str = "general_structure",
     degraded: bool = False,
 ) -> str:
     try:
@@ -2113,6 +2205,28 @@ def _record_extraction_repair_prompt(
         "- do not invent new record types",
         "- return a valid FilmCreator packet using the requested task name",
     ]
+    if repair_focus == "missing_type":
+        requirements.extend(
+            [
+                f"- every explicit {record_label} record must include a literal line type: {record_label}",
+                "- do not omit the type line even if all other fields are present",
+                "- keep the record content the same and only repair the missing structural field when possible",
+            ]
+        )
+    elif repair_focus == "missing_required_field":
+        requirements.extend(
+            [
+                "- add any missing required packet fields but do not rewrite already-correct content",
+                "- prefer preserving prior wording over inventing new details",
+            ]
+        )
+    elif repair_focus == "bad_packet_header":
+        requirements.extend(
+            [
+                "- after [[FILMCREATOR_PACKET]], write only valid metadata lines such as task: ... and version: ... or immediately open the required top-level [[SECTION ...]] block",
+                f"- do not output a bare line that only says {index_section_name}",
+            ]
+        )
     if degraded:
         requirements = [
             f"- keep the repair concise and emit only the missing explicit {record_label} records",
@@ -2133,6 +2247,7 @@ def _record_extraction_repair_prompt(
             "",
             "Requirements:",
             *requirements,
+            *( ["", "Prior malformed response to repair structurally (preserve content where possible):", prior_response] if prior_response.strip() else [] ),
             "",
             "Chapter summary:",
             chapter_summary,
