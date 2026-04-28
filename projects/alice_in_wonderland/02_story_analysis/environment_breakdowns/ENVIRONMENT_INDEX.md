@@ -1,3 +1,0 @@
-- [woods_edge_and_exterior](woods_edge_and_exterior)
-- [duchess_kitchen_interior](duchess_kitchen_interior)
-- [enchanted_woods_pathway](enchanted_woods_pathway)
