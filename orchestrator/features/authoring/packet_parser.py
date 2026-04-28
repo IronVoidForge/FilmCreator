@@ -69,8 +69,8 @@ def parse_packet_document(response: str, *, expected_task: str | None = None) ->
 def extract_packet_body(response: str) -> str:
     cleaned = sanitize_llm_text(response)
     lines = cleaned.splitlines()
-    start_index = next((index for index, line in enumerate(lines) if line.strip() == PACKET_START_TAG), -1)
-    end_index = next((index for index in range(len(lines) - 1, -1, -1) if lines[index].strip() == PACKET_END_TAG), -1)
+    start_index = next((index for index, line in enumerate(lines) if normalize_structural_packet_tag(line.strip()) == PACKET_START_TAG), -1)
+    end_index = next((index for index in range(len(lines) - 1, -1, -1) if normalize_structural_packet_tag(lines[index].strip()) == PACKET_END_TAG), -1)
     if start_index == -1 or end_index == -1 or end_index <= start_index:
         start = cleaned.find(PACKET_START_TAG)
         end = cleaned.rfind(PACKET_END_TAG)
@@ -120,13 +120,14 @@ def parse_packet_body(packet_body: str) -> PacketDocument:
     index = 0
     while index < len(lines):
         stripped = lines[index].strip()
+        normalized_tag = normalize_structural_packet_tag(stripped)
         if not stripped:
             index += 1
             continue
-        if stripped == SECTION_END_TAG:
+        if normalized_tag == SECTION_END_TAG:
             index += 1
             continue
-        if stripped == RECORD_START_TAG:
+        if normalized_tag == RECORD_START_TAG:
             record_lines, index = collect_tagged_block(lines, index, RECORD_START_TAG, RECORD_END_TAG, fallback_start_tag=RECORD_START_TAG)
             records.append(parse_packet_record(record_lines))
             continue
@@ -154,10 +155,11 @@ def parse_packet_record(record_lines: list[str]) -> PacketRecord:
     index = 0
     while index < len(record_lines):
         stripped = record_lines[index].strip()
+        normalized_tag = normalize_structural_packet_tag(stripped)
         if not stripped:
             index += 1
             continue
-        if stripped == SECTION_END_TAG:
+        if normalized_tag == SECTION_END_TAG:
             index += 1
             continue
         section_match = SECTION_TAG_PATTERN.fullmatch(stripped)
@@ -184,11 +186,12 @@ def collect_implicit_markdown_block(lines: list[str], start_index: int) -> tuple
     index = start_index
     while index < len(lines):
         stripped = lines[index].strip()
+        normalized_tag = normalize_structural_packet_tag(stripped)
         if not stripped:
             body.append(lines[index])
             index += 1
             continue
-        if stripped in {PACKET_START_TAG, PACKET_END_TAG, RECORD_START_TAG, RECORD_END_TAG}:
+        if normalized_tag in {PACKET_START_TAG, PACKET_END_TAG, RECORD_START_TAG, RECORD_END_TAG}:
             break
         if SECTION_TAG_PATTERN.fullmatch(stripped):
             break
@@ -208,15 +211,16 @@ def collect_tagged_block(
     fallback_start_tag: str | None = None,
     fallback_stop_any_tag: bool = False,
 ) -> tuple[list[str], int]:
-    if lines[start_index].strip() != start_tag:
+    if normalize_structural_packet_tag(lines[start_index].strip()) != start_tag:
         raise LMStudioError(f"Expected start tag '{start_tag}' but found '{lines[start_index].strip()}'.")
     body: list[str] = []
     index = start_index + 1
     while index < len(lines):
         stripped = lines[index].strip()
-        if stripped == end_tag:
+        normalized_tag = normalize_structural_packet_tag(stripped)
+        if normalized_tag == end_tag:
             return body, index + 1
-        if fallback_start_tag is not None and stripped == fallback_start_tag:
+        if fallback_start_tag is not None and normalized_tag == fallback_start_tag:
             return body, index
         if fallback_stop_any_tag and is_structural_packet_tag(stripped):
             return body, index
@@ -226,10 +230,33 @@ def collect_tagged_block(
 
 
 def is_structural_packet_tag(stripped: str) -> bool:
+    normalized_tag = normalize_structural_packet_tag(stripped)
     return (
-        stripped in {PACKET_START_TAG, PACKET_END_TAG, RECORD_START_TAG, RECORD_END_TAG, SECTION_END_TAG}
+        normalized_tag in {PACKET_START_TAG, PACKET_END_TAG, RECORD_START_TAG, RECORD_END_TAG, SECTION_END_TAG}
         or SECTION_TAG_PATTERN.fullmatch(stripped) is not None
     )
+
+
+def normalize_structural_packet_tag(stripped: str) -> str | None:
+    if not stripped.startswith("[[") or not stripped.endswith("]]"):
+        return None
+    if stripped in {PACKET_START_TAG, PACKET_END_TAG, RECORD_START_TAG, RECORD_END_TAG, SECTION_END_TAG}:
+        return stripped
+    lowered = stripped.lower()
+    if SECTION_TAG_PATTERN.fullmatch(stripped):
+        return stripped
+    core = lowered[2:-2].strip()
+    normalized_core = re.sub(r"[^a-z/]+", "", core)
+    if not normalized_core:
+        return None
+    is_end = "/" in normalized_core or normalized_core.startswith("end")
+    if "section" in normalized_core:
+        return SECTION_END_TAG if is_end else None
+    if "packet" in normalized_core:
+        return PACKET_END_TAG if is_end else PACKET_START_TAG
+    if "record" in normalized_core:
+        return RECORD_END_TAG if is_end else RECORD_START_TAG
+    return None
 
 
 def clean_section_text(value: str) -> str:
