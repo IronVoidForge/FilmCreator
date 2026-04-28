@@ -1,0 +1,390 @@
+{
+  "scene_id": "CH007_SC001",
+  "chapter_id": "CH007",
+  "scene_title": "CH007_SC001",
+  "purpose": "",
+  "summary": "Alice approaches a tea party under a tree where the March Hare, Hatter, and Dormouse are crowded together. Despite ample space, they shout \"No room!\" at her. Alice ignores them and sits down, leading to a series of rude social exchanges regarding wine and invitations.",
+  "emotional_arc": "Curiosity to irritation.",
+  "production_intent": "Establish the chaotic social dynamic of the tea party through high-density table clutter and erratic character movements. The scene relies on the contrast between Alice's standard child scale and the crowded, cramped arrangement of the trio at the table.",
+  "scene_short_description": "A young girl approaches a crowded table under a tree where three figures sit tightly packed.",
+  "scene_primary_scale_story_point": "Alice maintains standard child scale against the cramped, cluttered tea party setting.",
+  "scene_required_anchor_catalog": [
+    "large_table",
+    "tree_trunk"
+  ],
+  "scene_start_state": "Alice approaches the table from a distance; the trio is huddled together.",
+  "scene_end_state": "Alice sits at the table amidst rude social exchanges.",
+  "dominant_action_line": "Alice navigates the group's refusal of space to join the tea party.",
+  "scene_spatial_layout": [
+    "Large table positioned under a tree in front of a house.",
+    "The trio is crowded into one section of the table despite available space."
+  ],
+  "character_spatial_map": [
+    "alice: approaching from periphery toward the table.",
+    "the_hatter: seated at the crowded table.",
+    "the_march_hare: seated at the crowded table.",
+    "the_dormouse: seated at the crowded table."
+  ],
+  "environment_subzones": [
+    "tea_party_glade_table",
+    "tea_party_glade_under_tree"
+  ],
+  "scene_event_chain": [
+    "event 1: alice approaches the tea party under the tree.",
+    "event 2: the_hatter, the_march_hare, and the_dormouse shout \"No room!\" at alice.",
+    "event 3: alice ignores the shouting and sits down at the table.",
+    "event 4: the trio engages in rude social exchanges regarding wine and invitations."
+  ],
+  "entry_vectors": [
+    "tea_party_glade_periphery"
+  ],
+  "exit_vectors": [
+    "tea_party_glade_periphery"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: verbal confrontation",
+    "BT002 -> BT003: physical occupation of space",
+    "BT003 -> BT004: social friction escalation"
+  ],
+  "characters_required": [
+    {
+      "label": "Alice",
+      "canonical_id": "alice",
+      "display_name": "alice",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH007/alice.md",
+      "notes": "Direct registry match for 'alice'."
+    },
+    {
+      "label": "The Hatter",
+      "canonical_id": "the_hatter",
+      "display_name": "the_hatter",
+      "status": "canonical",
+      "entity_kind": "group",
+      "resolution_score": 138,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH007/the_hatter.md",
+      "notes": "Direct registry match for 'the_hatter'."
+    },
+    {
+      "label": "The March Hare",
+      "canonical_id": "the_march_hare",
+      "display_name": "the_march_hare",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH007/the_march_hare.md",
+      "notes": "Direct registry match for 'the_march_hare'."
+    },
+    {
+      "label": "The Dormouse",
+      "canonical_id": "the_dormouse",
+      "display_name": "the_dormouse",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH007/the_dormouse.md",
+      "notes": "Direct registry match for 'the_dormouse'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "A large table under a tree in front of a house",
+      "canonical_id": "tea_party_glade",
+      "display_name": "tea_party_glade",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 54,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/environment_breakdowns/chapters/CH007/tea_party_glade.md",
+      "notes": "Chapter-local environment alias match for 'A large table under a tree in front of a house' (key_overlap=0, label_overlap=3, context_overlap=4)."
+    }
+  ],
+  "continuity_constraints": [
+    "Precise placement of tea-things, bread-and-butter, and milk-jug on the crowded table."
+  ],
+  "visual_coverage_families": [
+    "Wide shots of the crowded table",
+    "Medium close-ups of the trio's erratic movements",
+    "Reaction shots of Alice's growing frustration"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "alice approaches the tea party",
+      "purpose": "",
+      "action_start": "alice walking toward table",
+      "action_end": "alice reaches table edge",
+      "active_subjects": [
+        "alice"
+      ],
+      "passive_subjects": [
+        "the_hatter",
+        "the_march_hare",
+        "the_dormouse"
+      ],
+      "spatial_context": "tea_party_glade_under_tree",
+      "blocking_hint": "alice moves from periphery to table | subzone=tea_party_glade_under_tree",
+      "environment_subzone": "",
+      "continuity_focus": "none",
+      "coverage_hint": "wide shots of the crowded table",
+      "coverage_priority": "medium",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "the trio shouts \"No room!\"",
+      "purpose": "",
+      "action_start": "trio notices alice",
+      "action_end": "shouting ceases",
+      "active_subjects": [
+        "the_hatter",
+        "the_march_hare",
+        "the_dormouse"
+      ],
+      "passive_subjects": [
+        "alice"
+      ],
+      "spatial_context": "tea_party_glade_table",
+      "blocking_hint": "trio huddled together at table | subzone=tea_party_glade_table",
+      "environment_subzone": "",
+      "continuity_focus": "placement of tea-things",
+      "coverage_hint": "medium close-ups of trio's erratic movements",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "alice sits down",
+      "purpose": "",
+      "action_start": "alice ignores shouting",
+      "action_end": "alice is seated at table",
+      "active_subjects": [
+        "alice"
+      ],
+      "passive_subjects": [
+        "the_hatter",
+        "the_march_hare",
+        "the_dormouse"
+      ],
+      "spatial_context": "tea_party_glade_table",
+      "blocking_hint": "alice pushes into space | subzone=tea_party_glade_table",
+      "environment_subzone": "",
+      "continuity_focus": "placement of bread-and-butter and milk-jug",
+      "coverage_hint": "reaction shots of alice's frustration",
+      "coverage_priority": "medium",
+      "handoff_to_next": "BT004"
+    },
+    {
+      "beat_id": "BT004",
+      "summary": "rude social exchanges occur",
+      "purpose": "",
+      "action_start": "dialogue regarding wine/invitations begins",
+      "action_end": "scene end",
+      "active_subjects": [
+        "alice",
+        "the_hatter",
+        "the_march_hare",
+        "the_dormouse"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "tea_party_glade_table",
+      "blocking_hint": "characters interacting across table | subzone=tea_party_glade_table",
+      "environment_subzone": "",
+      "continuity_focus": "tea-things placement",
+      "coverage_hint": "reaction shots of alice's growing frustration",
+      "coverage_priority": "high",
+      "handoff_to_next": "end"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish setting and approach",
+      "planned_shot_moment_summary": "alice walking toward the table",
+      "primary_subject_seed": "alice",
+      "secondary_subjects_seed": [
+        "the_hatter",
+        "the_march_hare",
+        "the_dormouse"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "tea_party_glade_under_tree",
+      "planned_shot_required_anchor_1": "tree_trunk",
+      "planned_shot_scale_proof_detail": "standard child height vs tree/table",
+      "start_state_seed": "alice in distance",
+      "end_state_seed": "alice approaching table edge",
+      "action_seed": "walking",
+      "blocking_seed": [
+        "approach from periphery"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "eye_level",
+      "lens_family": "wide",
+      "camera_motion": "track",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front_three_quarter_right"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "establish conflict",
+      "planned_shot_moment_summary": "the trio shouting \"No room!\"",
+      "primary_subject_seed": "the_hatter",
+      "secondary_subjects_seed": [
+        "the_march_hare",
+        "the_dormouse"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "tea_party_glade_table",
+      "planned_shot_required_anchor_1": "large_table",
+      "planned_shot_scale_proof_detail": "cluttered table density",
+      "start_state_seed": "trio huddled",
+      "end_state_seed": "trio shouting",
+      "action_seed": "shouting",
+      "blocking_seed": [
+        "erratic movement at table"
+      ],
+      "shot_size": "medium_close",
+      "camera_angle": "eye_level",
+      "lens_family": "normal",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "character resolve",
+      "planned_shot_moment_summary": "alice sitting down despite protest",
+      "primary_subject_seed": "alice",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "tea_party_glade_table",
+      "planned_shot_required_anchor_1": "large_table",
+      "planned_shot_scale_proof_detail": "alice vs tea-things",
+      "start_state_seed": "alice standing",
+      "end_state_seed": "alice seated",
+      "action_seed": "sitting",
+      "blocking_seed": [
+        "moving into the crowded space"
+      ],
+      "shot_size": "medium",
+      "camera_angle": "eye_level",
+      "lens_family": "normal",
+      "camera_motion": "push_in",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front_three_quarter_left"
+    }
+  ],
+  "unresolved_questions": [],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH007",
+      "scene_id": "CH007_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH007",
+      "scene_id": "CH007_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH007",
+      "scene_id": "CH007_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH007",
+      "scene_id": "CH007_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH007",
+      "scene_id": "CH007_SC001"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH007",
+      "source_path": "C:\\FilmCreator\\projects\\alice_in_wonderland\\02_story_analysis\\chapter_analysis\\CH007_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH007",
+      "source_path": "projects/alice_in_wonderland/01_source/chapters/CH007_chapter_vii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH005",
+      "source_path": "projects/alice_in_wonderland/01_source/chapters/CH005_chapter_v.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH006",
+      "source_path": "projects/alice_in_wonderland/01_source/chapters/CH006_chapter_vi.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH007",
+      "canonical_id": "alice"
+    }
+  ],
+  "evidence_summary": [
+    "[CH007_SC001] Purpose:",
+    "[CH007_SC001] Summary: Alice approaches a tea party under a tree where the March Hare, Hatter, and Dormouse are crowded together. Despite ample space, they shout \"No room!\" at her. Alice ignores them and sits down, leading to a series of rude social exchang...",
+    "[CH007_SC001] Emotional arc: Curiosity to irritation.",
+    "[CH007_SC001] Coverage: Wide shots of the crowded table Medium close-ups of the trio's erratic movements Reaction shots of Alice's growing frustration",
+    "[CH007_SC001] Continuity: Placement of tea-things, bread-and-butter, and milk-jug on the crowded table.",
+    "[CH007] Chapter summary: **Setting:** * A large table set out under a tree in front of a house. * The table is crowded with tea-things (tea, bread-and-butter, milk-jug). * Later: A wooded area containing a tree with a door built into it. * Fi...",
+    "[CH007] CHAPTER VII. (book index hit)",
+    "[CH005] CHAPTER V. (book index hit)",
+    "[CH006] CHAPTER VI. (book index hit)",
+    "Character alice: Alice is a young human girl characterized by extreme and rapid physical instability regarding her scale. She fluctuates between being a standard-sized child, shrinking to approximately ten inches in height, and growing to over nine feet tal..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH007_SC001\n\n## Production Intent\nEstablish the chaotic social dynamic of the tea party through high-density table clutter and erratic character movements. The scene relies on the contrast between Alice's standard child scale and the crowded, cramped arrangement of the trio at the table.\n\n## Required Cast\n- alice\n- the_hatter\n- the_march_hare\n- the_dormouse\n\n## Required Environments\n- tea_party_glade (Large table under a tree in front of a house)\n\n## Continuity Constraints\n- Precise placement of tea-things, bread-and-butter, and milk-jug on the crowded table.\n\n## Beat List\n- BT001: alice approaches the tea party\n- BT002: the trio shouts \"No room!\"\n- BT003: alice sits down\n- BT004: rude social exchanges occur",
+  "metadata": {
+    "artifact_id": "CH007_SC001_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "2572375fe7491ef20778f6a1f2bfcd9b4744474c",
+    "created_at_utc": "2026-04-28T04:45:02.674953+00:00",
+    "updated_at_utc": "2026-04-28T04:45:02.674953+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH007_SC001",
+        "version": "45f6e6464072152cf3bc0da2fee556938b0caff8"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH007_SC001",
+        "version": "6aef67d480c1a2da2e779ff7813ec55ca0a05007"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH007_SC001",
+        "version": "d96178fa39f88a5a2c46eb7fa5e3dbd5336ecf7e"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-28T04:45:35.080624+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "2572375fe7491ef20778f6a1f2bfcd9b4744474c"
+      }
+    ]
+  }
+}

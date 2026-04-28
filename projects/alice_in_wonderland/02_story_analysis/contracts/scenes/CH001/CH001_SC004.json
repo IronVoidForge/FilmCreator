@@ -1,0 +1,383 @@
+{
+  "scene_id": "CH001_SC004",
+  "chapter_id": "CH001",
+  "scene_title": "CH001_SC004",
+  "purpose": "",
+  "summary": "Alice drinks from a 'DRINK ME' bottle on a glass table, shrinking to ten inches tall and becoming unable to reach the golden key left on top of the table. After attempting to climb the slippery table leg and failing, she finds and eats an 'EAT ME' cake found in a glass box under the table to trigger another transformation.",
+  "emotional_arc": "Hope to despair to desperate experimentation.",
+  "production_intent": "Execute a rapid scale transition from standard child height to ten inches tall. The sequence relies on the visual relationship between Alice and the glass table surface, specifically her inability to reach the golden key atop the table after shrinking.",
+  "scene_short_description": "A girl drinks from a bottle and shrinks to ten inches beside a massive glass table.",
+  "scene_primary_scale_story_point": "Alice transitions from standard child scale to ten inches tall.",
+  "scene_required_anchor_catalog": [
+    "Glass tabletop (upper plane)",
+    "Table leg (vertical climbing surface)",
+    "Glass box (under-table storage)"
+  ],
+  "scene_start_state": "Alice stands at full height next to the glass table holding a bottle labeled DRINK ME.",
+  "scene_end_state": "Alice consumes an EAT ME cake found in a glass box under the table.",
+  "dominant_action_line": "Alice drinks, shrinks, fails to climb, and finds new food.",
+  "scene_spatial_layout": [
+    "Vertical hierarchy between tabletop and floor",
+    "Sub-table storage area (Small Passage/under table)"
+  ],
+  "character_spatial_map": [
+    "alice at eye-level with table initially",
+    "alice at floor-level relative to table after shrinking"
+  ],
+  "environment_subzones": [
+    "hall_of_doors (tabletop surface)",
+    "Small Passage (floor level/under table)"
+  ],
+  "scene_event_chain": [
+    "event 1: Alice drinks from the DRINK ME bottle.",
+    "event 2: Alice shrinks to ten inches tall.",
+    "event 3: Alice attempts to climb the slippery glass table leg and fails.",
+    "event 4: Alice finds and eats an EAT ME cake in a glass box under the table."
+  ],
+  "entry_vectors": [
+    "alice approaches glass table"
+  ],
+  "exit_vectors": [
+    "alice consumes cake"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: physical shrinkage transition",
+    "BT002 -> BT003: scale shift from tabletop to floor",
+    "BT003 -> BT004: movement from table leg to under-table zone"
+  ],
+  "characters_required": [
+    {
+      "label": "Alice",
+      "canonical_id": "alice",
+      "display_name": "alice",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH001/alice.md",
+      "notes": "Direct registry match for 'alice'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "The Glass Table",
+      "canonical_id": "hall_of_doors",
+      "display_name": "hall_of_doors",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 44,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/environment_breakdowns/chapters/CH001/hall_of_doors.md",
+      "notes": "Chapter-local environment alias match for 'The Glass Table' (key_overlap=0, label_overlap=2, context_overlap=4)."
+    },
+    {
+      "label": "Small Passage",
+      "canonical_id": null,
+      "display_name": "Small Passage",
+      "status": "review",
+      "entity_kind": "environment",
+      "resolution_score": 8,
+      "source_path": "",
+      "notes": "Low-confidence environment match requires review."
+    }
+  ],
+  "continuity_constraints": [
+    "Vertical distance between Alice's eye level and the table surface must scale proportionally with her height",
+    "The golden key must remain visible on the glass tabletop from the new ten-inch perspective"
+  ],
+  "visual_coverage_families": [
+    "Extreme close-ups of labels (DRINK ME, EAT ME)",
+    "Scale-shift shots (eye-level to floor-level transitions)",
+    "Macro shots of cake and currants"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "Alice drinks the DRINK ME bottle",
+      "purpose": "",
+      "action_start": "Alice brings bottle to lips",
+      "action_end": "Bottle is empty",
+      "active_subjects": [
+        "alice"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "hall_of_doors at table height",
+      "blocking_hint": "standing upright",
+      "environment_subzone": "hall_of_doors",
+      "continuity_focus": "bottle label visibility",
+      "coverage_hint": "extreme close-up on label",
+      "coverage_priority": "high",
+      "handoff_to_next": "Alice begins to shrink"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "Alice shrinks to ten inches",
+      "purpose": "",
+      "action_start": "Alice's scale begins to reduce",
+      "action_end": "Alice is ten inches tall",
+      "active_subjects": [
+        "alice"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "hall_of_doors floor level",
+      "blocking_hint": "shrinking in place",
+      "environment_subzone": "hall_of_doors",
+      "continuity_focus": "height relative to table edge",
+      "coverage_hint": "scale-shift shot",
+      "coverage_priority": "high",
+      "handoff_to_next": "Alice realizes she cannot reach the key"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "Alice fails to climb the table",
+      "purpose": "",
+      "action_start": "Alice touches table leg",
+      "action_end": "Alice slides down the leg",
+      "active_subjects": [
+        "alice"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "base of glass table",
+      "blocking_hint": "climbing attempt at table leg",
+      "environment_subzone": "hall_of_doors",
+      "continuity_focus": "slippery texture of glass",
+      "coverage_hint": "medium shot",
+      "coverage_priority": "medium",
+      "handoff_to_next": "Alice searches the floor"
+    },
+    {
+      "beat_id": "BT004",
+      "summary": "Alice finds and eats the cake",
+      "purpose": "",
+      "action_start": "Alice discovers glass box",
+      "action_end": "Alice consumes EAT ME cake",
+      "active_subjects": [
+        "alice"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "under table area",
+      "blocking_hint": "crawling/searching under table",
+      "environment_subzone": "Small Passage",
+      "continuity_focus": "EAT ME label visibility",
+      "coverage_hint": "macro shot of cake",
+      "coverage_priority": "high",
+      "handoff_to_next": "Alice undergoes second transformation"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish cause",
+      "planned_shot_moment_summary": "Alice drinks from the bottle",
+      "primary_subject_seed": "alice",
+      "secondary_subjects_seed": [
+        "DRINK ME label"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "hall_of_doors",
+      "planned_shot_required_anchor_1": "glass tabletop",
+      "planned_shot_scale_proof_detail": "standard child height",
+      "start_state_seed": "Alice holding bottle",
+      "end_state_seed": "Bottle empty",
+      "action_seed": "drinking",
+      "blocking_seed": [
+        "standing at table"
+      ],
+      "shot_size": "close_up",
+      "camera_angle": "eye_level",
+      "lens_family": "normal",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "soft_even",
+      "primary_subject_angle": "front_three_quarter_left"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "show transformation",
+      "planned_shot_moment_summary": "Alice shrinks rapidly",
+      "primary_subject_seed": "alice",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "hall_of_doors",
+      "planned_shot_required_anchor_1": "glass tabletop",
+      "planned_shot_scale_proof_detail": "ten inch height relative to table edge",
+      "start_state_seed": "Full size Alice",
+      "end_state_seed": "Ten inch Alice",
+      "action_seed": "shrinking",
+      "blocking_seed": [
+        "standing near table leg"
+      ],
+      "shot_size": "full",
+      "camera_angle": "low_angle",
+      "lens_family": "wide",
+      "camera_motion": "push_in",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "soft_even",
+      "primary_subject_angle": "front"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "establish obstacle",
+      "planned_shot_moment_summary": "Alice looks up at the golden key",
+      "primary_subject_seed": "alice",
+      "secondary_subjects_seed": [
+        "golden key"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "hall_of_doors",
+      "planned_shot_required_anchor_1": "glass tabletop",
+      "planned_shot_scale_proof_detail": "key appears massive/distant",
+      "start_state_seed": "Alice on floor",
+      "end_state_seed": "Alice looking up",
+      "action_seed": "looking up at table top",
+      "blocking_seed": [
+        "at base of table leg"
+      ],
+      "shot_size": "medium_close",
+      "camera_angle": "low_angle",
+      "lens_family": "wide",
+      "camera_motion": "tilt",
+      "zoom_behavior": "none",
+      "focus_strategy": "rack_focus",
+      "lighting_style": "soft_even",
+      "primary_subject_angle": "profile_right"
+    },
+    {
+      "planned_shot_id": "SH004",
+      "beat_id": "BT004",
+      "narrative_function": "provide solution",
+      "planned_shot_moment_summary": "Alice finds the cake",
+      "primary_subject_seed": "alice",
+      "secondary_subjects_seed": [
+        "EAT ME label"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "Small Passage",
+      "planned_shot_required_anchor_1": "glass box",
+      "planned_shot_scale_proof_detail": "macro scale of currants/cake",
+      "start_state_seed": "Alice searching floor",
+      "end_state_seed": "Alice eating cake",
+      "action_seed": "eating cake",
+      "blocking_seed": [
+        "under table"
+      ],
+      "shot_size": "extreme_close_up",
+      "camera_angle": "eye_level",
+      "lens_family": "macro",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "soft_even",
+      "primary_subject_angle": "front"
+    }
+  ],
+  "unresolved_questions": [
+    "Resolve Small Passage -> Small Passage"
+  ],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH001",
+      "scene_id": "CH001_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH001",
+      "scene_id": "CH001_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH001",
+      "scene_id": "CH001_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH001",
+      "scene_id": "CH001_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH001",
+      "scene_id": "CH001_SC004"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH001",
+      "source_path": "C:\\FilmCreator\\projects\\alice_in_wonderland\\02_story_analysis\\chapter_analysis\\CH001_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH001",
+      "source_path": "projects/alice_in_wonderland/01_source/chapters/CH001_chapter_i.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH004",
+      "source_path": "projects/alice_in_wonderland/01_source/chapters/CH004_chapter_iv.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH012",
+      "source_path": "projects/alice_in_wonderland/01_source/chapters/CH012_chapter_xii.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH001",
+      "canonical_id": "alice"
+    }
+  ],
+  "evidence_summary": [
+    "[CH001_SC004] Purpose:",
+    "[CH001_SC004] Summary: Alice drinks from a 'DRINK ME' bottle on a glass table, shrinking to ten inches tall and becoming unable to reach the golden key left on top of the table. After attempting to climb the slippery table leg and failing, she finds and eat...",
+    "[CH001_SC004] Emotional arc: Hope to despair to desperate experimentation.",
+    "[CH001_SC004] Coverage: Extreme close-ups of the labels (\"DRINK ME\", \"EAT ME\") Scale-shift shots (camera moving from eye-level to floor-level) Macro shots of the cake/currants",
+    "[CH001_SC004] Continuity: The height of the table relative to Alice's changing size The visibility of the golden key on top of the table from her new perspective",
+    "[CH001] Chapter summary: **Location: Riverbank** - **Characters:** Alice, Sister (off-screen/passive). - **Events:** Alice sits by a riverbank on a hot day; she expresses boredom with her sister's book (no pictures or conversations). - **Visu...",
+    "[CH001] CHAPTER I. (book index hit)",
+    "[CH004] CHAPTER IV. (book index hit)",
+    "[CH012] CHAPTER XII. (book index hit)",
+    "Character alice: Alice is a young human girl characterized by extreme and rapid physical instability regarding her scale. She fluctuates between being a standard-sized child, shrinking to approximately ten inches in height, and growing to over nine feet tal..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH001_SC004\n\n## Production Intent\nExecute a rapid scale transition from standard child height to ten inches tall. The sequence relies on the visual relationship between Alice and the glass table surface, specifically her inability to reach the golden key atop the table after shrinking.\n\n## Required Cast\n- alice (young human girl, extreme physical instability regarding scale)\n\n## Required Environments\n- hall_of_doors (contains glass table, tabletop, and table leg)\n- Small Passage (under-table floor area/glass box location)\n\n## Continuity Constraints\n- Vertical distance between Alice's eye level and the table surface must scale proportionally with her height.\n- The golden key must remain visible on the glass tabletop from the new ten-inch perspective.\n- Labels \"DRINK ME\" and \"EAT ME\" must be legible during close-ups.\n\n## Beat List\n- BT001: Alice drinks the DRINK ME bottle.\n- BT002: Alice shrinks to ten inches tall.\n- BT003: Alice fails to climb the table leg.\n- BT004: Alice finds and eats the EAT ME cake in a glass box.",
+  "metadata": {
+    "artifact_id": "CH001_SC004_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "d2a7ba8cac1755328b6f544ff63bcbbb7ca2b5da",
+    "created_at_utc": "2026-04-28T04:34:45.374766+00:00",
+    "updated_at_utc": "2026-04-28T04:34:45.374766+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH001_SC004",
+        "version": "8d30a379e32ec38aa15bf70daa14e044a48f831c"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH001_SC004",
+        "version": "5940e3e661ae415e1d5fc6811aaa34c66d35b14a"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH001_SC004",
+        "version": "4a4017128144546095418b51dacdabc24b18d097"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-28T04:35:18.932759+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "d2a7ba8cac1755328b6f544ff63bcbbb7ca2b5da"
+      }
+    ]
+  }
+}

@@ -1,0 +1,350 @@
+{
+  "scene_id": "CH005_SC003",
+  "chapter_id": "CH005",
+  "scene_title": "CH005_SC003",
+  "purpose": "",
+  "summary": "Alice eats the opposite side of the mushroom to counteract her shrinking, causing her neck to elongate into a serpent-like shape. While navigating the treetops with her long neck, she is attacked by a Pigeon that mistakes her for a snake.",
+  "emotional_arc": "Panic to defensive indignation",
+  "production_intent": "Alice consumes the opposite side of a mushroom to stabilize her size, resulting in extreme neck elongation. She must navigate the forest canopy while managing her new serpent-like anatomy before being attacked by a pigeon that perceives her as a predator.",
+  "scene_short_description": "A girl with an elongated serpent-like neck navigates treetops before a bird attacks.",
+  "scene_primary_scale_story_point": "Alice's head is separated from her body by extreme vertical distance within the canopy.",
+  "scene_required_anchor_catalog": [
+    "tree_branch_cluster",
+    "mushroom_remnant"
+  ],
+  "scene_start_state": "Alice consumes the mushroom side to counteract shrinking.",
+  "scene_end_state": "Alice reacts with indignation to a pigeon attack.",
+  "dominant_action_line": "Alice eats, elongates, climbs, and defends against a bird.",
+  "scene_spatial_layout": [
+    "vertical hierarchy between body and head",
+    "dense foliage layer providing concealment and obstruction"
+  ],
+  "character_spatial_map": [
+    "alice: body located on lower branches; head located in upper canopy",
+    "pigeon: aerial approach from above the canopy"
+  ],
+  "environment_subzones": [
+    "forest_canopy",
+    "treetop_foliage"
+  ],
+  "scene_event_chain": [
+    "event 1: Alice eats the opposite side of the mushroom",
+    "event 2: Alice's neck elongates into a serpent-like shape",
+    "event 3: Alice navigates through the treetops using her long neck",
+    "event 4: A Pigeon attacks Alice, mistaking her for a snake"
+  ],
+  "entry_vectors": [
+    "mushroom_clearing_access"
+  ],
+  "exit_vectors": [
+    "canopy_descent"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: physical transformation trigger",
+    "BT002 -> BT003: movement into new environment",
+    "BT003 -> BT004: sudden external threat arrival"
+  ],
+  "characters_required": [
+    {
+      "label": "Alice",
+      "canonical_id": "alice",
+      "display_name": "alice",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH005/alice.md",
+      "notes": "Direct registry match for 'alice'."
+    },
+    {
+      "label": "Pigeon",
+      "canonical_id": "pigeon",
+      "display_name": "pigeon",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH005/pigeon.md",
+      "notes": "Direct registry match for 'pigeon'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "Forest Canopy / Treetops",
+      "canonical_id": "forest_canopy",
+      "display_name": "forest_canopy",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 138,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/environment_breakdowns/chapters/CH005/forest_canopy.md",
+      "notes": "Direct registry match for 'forest_canopy'."
+    }
+  ],
+  "continuity_constraints": [
+    "The length and flexibility of Alice's neck",
+    "The position of Alice's head relative to the leaves"
+  ],
+  "visual_coverage_families": [
+    "POV shots from the treetop height",
+    "wide shots showing the absurd length of the neck",
+    "bird's eye view of the Pigeon's attack"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "Alice eats the opposite side of the mushroom",
+      "purpose": "",
+      "action_start": "Alice brings mushroom to mouth",
+      "action_end": "Mushroom is consumed",
+      "active_subjects": [
+        "alice"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "mushroom clearing/canopy edge",
+      "blocking_hint": "Alice seated near mushroom remnant",
+      "environment_subzone": "forest_canopy",
+      "continuity_focus": "mushroom side selection",
+      "coverage_hint": "close_up on mouth/mushroom",
+      "coverage_priority": "high",
+      "handoff_to_next": "physical transformation begins"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "Alice's neck elongates into a serpent-like shape",
+      "purpose": "",
+      "action_start": "Neck begins to stretch",
+      "action_end": "Neck reaches maximum length",
+      "active_subjects": [
+        "alice"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "vertical space of canopy",
+      "blocking_hint": "Alice's body remains stationary while head rises",
+      "environment_subzone": "forest_canopy",
+      "continuity_focus": "neck flexibility and length",
+      "coverage_hint": "wide shot showing scale",
+      "coverage_priority": "high",
+      "handoff_to_next": "navigation through trees"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "Alice navigates the treetops with her long neck",
+      "purpose": "",
+      "action_start": "Alice moves head through leaves",
+      "action_end": "Alice reaches a stable treetop position",
+      "active_subjects": [
+        "alice"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "dense foliage",
+      "blocking_hint": "Head weaving between branches",
+      "environment_subzone": "forest_canopy",
+      "continuity_focus": "head position relative to leaves",
+      "coverage_hint": "POV shots from height",
+      "coverage_priority": "medium",
+      "handoff_to_next": "pigeon attack"
+    },
+    {
+      "beat_id": "BT004",
+      "summary": "A Pigeon attacks Alice, mistaking her for a snake",
+      "purpose": "",
+      "action_start": "Pigeon dives from above",
+      "action_end": "Alice reacts with indignation",
+      "active_subjects": [
+        "pigeon",
+        "alice"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "upper canopy",
+      "blocking_hint": "Pigeon swoops toward the elongated neck",
+      "environment_subzone": "forest_canopy",
+      "continuity_focus": "pigeon's flight path vs neck position",
+      "coverage_hint": "bird's eye view of attack",
+      "coverage_priority": "high",
+      "handoff_to_next": "end of scene"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish transformation",
+      "planned_shot_moment_summary": "Alice bites the mushroom side",
+      "primary_subject_seed": "alice",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "forest_canopy",
+      "planned_shot_required_anchor_1": "mushroom_remnant",
+      "planned_shot_scale_proof_detail": "size of mushroom vs Alice's mouth",
+      "start_state_seed": "Alice holding mushroom",
+      "end_state_seed": "Alice swallowing",
+      "action_seed": "eating",
+      "blocking_seed": [
+        "seated near mushroom"
+      ],
+      "shot_size": "close_up",
+      "camera_angle": "eye_level",
+      "lens_family": "normal",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front_three_quarter_left"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "show scale absurdity",
+      "planned_shot_moment_summary": "Neck stretches upward through leaves",
+      "primary_subject_seed": "alice",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "forest_canopy",
+      "planned_shot_required_anchor_1": "tree_branch_cluster",
+      "planned_shot_scale_proof_detail": "neck length relative to tree height",
+      "start_state_seed": "Alice's neck at normal length",
+      "end_state_seed": "neck fully elongated",
+      "action_seed": "stretching",
+      "blocking_seed": [
+        "vertical movement through foliage"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "low_angle",
+      "lens_family": "ultra_wide",
+      "camera_motion": "tilt",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "profile_right"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT004",
+      "narrative_function": "depict attack",
+      "planned_shot_moment_summary": "Pigeon dives at Alice's head",
+      "primary_subject_seed": "pigeon",
+      "secondary_subjects_seed": [
+        "alice"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "forest_canopy",
+      "planned_shot_required_anchor_1": "tree_branch_cluster",
+      "planned_shot_scale_proof_detail": "pigeon size vs elongated neck",
+      "start_state_seed": "Pigeon circling",
+      "end_state_seed": "Pigeon striking",
+      "action_seed": "diving attack",
+      "blocking_seed": [
+        "aerial descent"
+      ],
+      "shot_size": "medium_full",
+      "camera_angle": "overhead",
+      "lens_family": "wide",
+      "camera_motion": "track",
+      "zoom_behavior": "none",
+      "focus_strategy": "rack_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front"
+    }
+  ],
+  "unresolved_questions": [],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH005",
+      "scene_id": "CH005_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH005",
+      "scene_id": "CH005_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH005",
+      "scene_id": "CH005_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH005",
+      "scene_id": "CH005_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH005",
+      "scene_id": "CH005_SC003"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH005",
+      "source_path": "C:\\FilmCreator\\projects\\alice_in_wonderland\\02_story_analysis\\chapter_analysis\\CH005_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH005",
+      "source_path": "projects/alice_in_wonderland/01_source/chapters/CH005_chapter_v.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH004",
+      "source_path": "projects/alice_in_wonderland/01_source/chapters/CH004_chapter_iv.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH008",
+      "source_path": "projects/alice_in_wonderland/01_source/chapters/CH008_chapter_viii.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH005",
+      "canonical_id": "alice"
+    }
+  ],
+  "evidence_summary": [
+    "[CH005_SC003] Purpose:",
+    "[CH005_SC003] Summary: Alice eats the opposite side of the mushroom to counteract her shrinking, causing her neck to elongate into a serpent-like shape. While navigating the treetops with her long neck, she is attacked by a Pigeon that mistakes her for a sn...",
+    "[CH005_SC003] Emotional arc: Panic to defensive indignation",
+    "[CH005_SC003] Coverage: POV shots from the treetop height wide shots showing the absurd length of the neck bird's eye view of the Pigeon's attack",
+    "[CH005_SC003] Continuity: The length and flexibility of Alice's neck the position of her head relative to the leaves",
+    "[CH005] Chapter summary: **Location: Mushroom Clearing / Forest Canopy** **Characters:** * **Alice:** A young girl experiencing rapid physical instability (size changes, neck elongation). * **Caterpillar:** A languid, hookah-smoking insect si...",
+    "[CH005] CHAPTER V. (book index hit)",
+    "[CH004] CHAPTER IV. (book index hit)",
+    "[CH008] CHAPTER VIII. (book index hit)",
+    "Character alice: Alice is a young human girl characterized by extreme and rapid physical instability regarding her scale. She fluctuates between being a standard-sized child, shrinking to approximately ten inches in height, and growing to over nine feet tal..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH005_SC003\n\n## Production Intent\nAlice consumes the opposite side of a mushroom to stabilize her size, resulting in extreme neck elongation. She must navigate the forest canopy while managing her new serpent-like anatomy before being attacked by a pigeon that perceives her as a predator.\n\n## Required Cast\n- alice: Young girl with rapid scale instability and elongated neck.\n- pigeon: Bird attacking Alice due to mistaken identity.\n\n## Required Environments\n- forest_canopy: Dense treetop environment with foliage for navigation and concealment.\n\n## Continuity Constraints\n- Neck length and flexibility must remain consistent during movement.\n- Head position must be accurately placed relative to surrounding leaves/branches.\n- Scale relationship between Alice's head, body, and the Pigeon.\n\n## Beat List\n- BT001: Alice eats the opposite side of the mushroom.\n- BT002: Alice's neck elongates into a serpent-like shape.\n- BT003: Alice navigates the treetops with her long neck.\n- BT004: A Pigeon attacks Alice, mistaking her for a snake.",
+  "metadata": {
+    "artifact_id": "CH005_SC003_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "ae609cf994d8be32dc1ff1630b724d97cf961dc7",
+    "created_at_utc": "2026-04-28T04:43:53.317460+00:00",
+    "updated_at_utc": "2026-04-28T04:43:53.317460+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH005_SC003",
+        "version": "25c494d625e6cb0674253ada1acca7bdf17a90ad"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH005_SC003",
+        "version": "36abe9499acffb8acbd64dff42b5dbc41d5559f9"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH005_SC003",
+        "version": "6a0798969d6d6fe019e68514d75ec748f4b0178a"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-28T04:44:23.558633+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "ae609cf994d8be32dc1ff1630b724d97cf961dc7"
+      }
+    ]
+  }
+}

@@ -1,0 +1,361 @@
+{
+  "scene_id": "CH004_SC004",
+  "chapter_id": "CH004",
+  "scene_title": "CH004_SC004",
+  "purpose": "",
+  "summary": "Alice wanders into a thick wood, encounters an enormous puppy, and distracts it with a stick. She eventually finds a large mushroom where the Blue Caterpillar is smoking a hookah.",
+  "emotional_arc": "Exhaustion to Surprise/Awe",
+  "production_intent": "Establish a sense of scale and disorientation as Alice transitions from physical exhaustion to wonder. The sequence must emphasize the massive size of the puppy and the subsequent discovery of the oversized mushroom environment.",
+  "scene_short_description": "A girl wanders through dense woods, distracts a giant dog, and finds a smoking caterpillar.",
+  "scene_primary_scale_story_point": "Alice is small relative to the puppy and the mushroom.",
+  "scene_required_anchor_catalog": [
+    "large mushroom",
+    "stick"
+  ],
+  "scene_start_state": "Alice walking through thick vegetation looking exhausted.",
+  "scene_end_state": "Alice staring up at the Blue Caterpillar on a mushroom.",
+  "dominant_action_line": "Alice navigates the woods, manages a giant puppy with a stick, and discovers the caterpillar.",
+  "scene_spatial_layout": [
+    "Dense forest floor with limited visibility",
+    "Open clearing containing a large mushroom"
+  ],
+  "character_spatial_map": [
+    "alice moves through thick_woods center-frame",
+    "enormous_puppy occupies foreground or midground to dwarf alice",
+    "blue_caterpillar is positioned atop the large mushroom"
+  ],
+  "environment_subzones": [
+    "thick_woods (dense foliage)",
+    "mushroom area (clearing)"
+  ],
+  "scene_event_chain": [
+    "event 1: alice wanders through the thick woods",
+    "event 2: enormous_puppy appears and confronts alice",
+    "event 3: alice uses a stick to distract enormous_puppy",
+    "event 4: alice discovers blue_caterpillar smoking on a large mushroom"
+  ],
+  "entry_vectors": [
+    "forest path entry"
+  ],
+  "exit_vectors": [
+    "toward the mushroom clearing"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: encounter transition",
+    "BT002 -> BT003: distraction action",
+    "BT003 -> BT004: discovery reveal"
+  ],
+  "characters_required": [
+    {
+      "label": "Alice",
+      "canonical_id": "alice",
+      "display_name": "alice",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH004/alice.md",
+      "notes": "Direct registry match for 'alice'."
+    },
+    {
+      "label": "Enormous Puppy",
+      "canonical_id": "enormous_puppy",
+      "display_name": "enormous_puppy",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH004/enormous_puppy.md",
+      "notes": "Direct registry match for 'enormous_puppy'."
+    },
+    {
+      "label": "Blue Caterpillar",
+      "canonical_id": "blue_caterpillar",
+      "display_name": "blue_caterpillar",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH004/blue_caterpillar.md",
+      "notes": "Direct registry match for 'blue_caterpillar'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "The Thick Wood (Mushroom area)",
+      "canonical_id": "thick_woods",
+      "display_name": "thick_woods",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 68,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/environment_breakdowns/chapters/CH004/thick_woods.md",
+      "notes": "Chapter-local environment alias match for 'The Thick Wood (Mushroom area)' (key_overlap=1, label_overlap=2, context_overlap=4)."
+    }
+  ],
+  "continuity_constraints": [
+    "The physical length and thickness of the stick used for the puppy",
+    "The scale relationship between Alice and the large mushroom"
+  ],
+  "visual_coverage_families": [
+    "Tracking shots of Alice walking through the woods",
+    "Extreme close-ups of the puppy's features",
+    "Low-angle reveal of the Caterpillar on the mushroom"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "alice wanders through the thick woods",
+      "purpose": "",
+      "action_start": "alice walking through foliage",
+      "action_end": "alice stops in a clearing",
+      "active_subjects": [
+        "alice"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "thick_woods",
+      "blocking_hint": "walking path",
+      "environment_subzone": "thick_woods",
+      "continuity_focus": "alice's exhaustion level",
+      "coverage_hint": "tracking shot",
+      "coverage_priority": "medium",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "enormous_puppy encounters alice",
+      "purpose": "",
+      "action_start": "puppy enters frame",
+      "action_end": "puppy looms over alice",
+      "active_subjects": [
+        "enormous_puppy",
+        "alice"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "thick_woods",
+      "blocking_hint": "puppy in foreground",
+      "environment_subzone": "thick_woods",
+      "continuity_focus": "puppy scale vs alice",
+      "coverage_hint": "extreme close-ups",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "alice distracts the puppy with a stick",
+      "purpose": "",
+      "action_start": "alice grabs stick",
+      "action_end": "puppy follows stick away",
+      "active_subjects": [
+        "alice",
+        "enormous_puppy"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "thick_woods",
+      "blocking_hint": "alice moving away from puppy",
+      "environment_subzone": "thick_woods",
+      "continuity_focus": "stick size/length",
+      "coverage_hint": "medium shot",
+      "coverage_priority": "medium",
+      "handoff_to_next": "BT004"
+    },
+    {
+      "beat_id": "BT004",
+      "summary": "alice finds the blue caterpillar",
+      "purpose": "",
+      "action_start": "alice sees mushroom",
+      "action_end": "alice stares at caterpillar",
+      "active_subjects": [
+        "alice",
+        "blue_caterpillar"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "mushroom area",
+      "blocking_hint": "alice looking up",
+      "environment_subzone": "mushroom area",
+      "continuity_focus": "mushroom scale vs alice",
+      "coverage_hint": "low-angle reveal",
+      "coverage_priority": "high",
+      "handoff_to_next": "end_of_scene"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish character state",
+      "planned_shot_moment_summary": "alice walking through woods",
+      "primary_subject_seed": "alice",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "thick_woods",
+      "planned_shot_required_anchor_1": "foliage",
+      "planned_shot_scale_proof_detail": "alice height vs trees",
+      "start_state_seed": "alice entering frame",
+      "end_state_seed": "alice moving deeper",
+      "action_seed": "walking",
+      "blocking_seed": [
+        "center path"
+      ],
+      "shot_size": "medium_full",
+      "camera_angle": "eye_level",
+      "lens_family": "normal",
+      "camera_motion": "track",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front_three_quarter_right"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "establish threat scale",
+      "planned_shot_moment_summary": "puppy features close up",
+      "primary_subject_seed": "enormous_puppy",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "thick_woods",
+      "planned_shot_required_anchor_1": "puppy nose",
+      "planned_shot_scale_proof_detail": "puppy size vs alice",
+      "start_state_seed": "puppy enters frame",
+      "end_state_seed": "puppy sniffing",
+      "action_seed": "sniffing/looming",
+      "blocking_seed": [
+        "foreground"
+      ],
+      "shot_size": "extreme_close_up",
+      "camera_angle": "low_angle",
+      "lens_family": "telephoto",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "profile_left"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT004",
+      "narrative_function": "reveal new environment/character",
+      "planned_shot_moment_summary": "caterpillar reveal",
+      "primary_subject_seed": "blue_caterpillar",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "mushroom area",
+      "planned_shot_required_anchor_1": "large mushroom",
+      "planned_shot_scale_proof_detail": "alice vs mushroom height",
+      "start_state_seed": "camera tilts up",
+      "end_state_seed": "caterpillar visible",
+      "action_seed": "smoking hookah",
+      "blocking_seed": [
+        "atop mushroom"
+      ],
+      "shot_size": "medium_close",
+      "camera_angle": "low_angle",
+      "lens_family": "wide",
+      "camera_motion": "tilt",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front"
+    }
+  ],
+  "unresolved_questions": [],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH004",
+      "scene_id": "CH004_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH004",
+      "scene_id": "CH004_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH004",
+      "scene_id": "CH004_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH004",
+      "scene_id": "CH004_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH004",
+      "scene_id": "CH004_SC004"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH004",
+      "source_path": "C:\\FilmCreator\\projects\\alice_in_wonderland\\02_story_analysis\\chapter_analysis\\CH004_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH004",
+      "source_path": "projects/alice_in_wonderland/01_source/chapters/CH004_chapter_iv.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH005",
+      "source_path": "projects/alice_in_wonderland/01_source/chapters/CH005_chapter_v.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH006",
+      "source_path": "projects/alice_in_wonderland/01_source/chapters/CH006_chapter_vi.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH004",
+      "canonical_id": "alice"
+    }
+  ],
+  "evidence_summary": [
+    "[CH004_SC004] Purpose:",
+    "[CH004_SC004] Summary: Alice wanders into a thick wood, encounters an enormous puppy, and distracts it with a stick. She eventually finds a large mushroom where the Blue Caterpillar is smoking a hookah.",
+    "[CH004_SC004] Emotional arc: Exhaustion to Surprise/Awe",
+    "[CH004_SC004] Coverage: Tracking shots of Alice walking through the woods Extreme close-ups of the puppy's features Low-angle reveal of the Caterpillar on the mushroom",
+    "[CH004_SC004] Continuity: The size of the stick used for the puppy The scale of the mushroom relative to Alice",
+    "[CH004] Chapter summary: **Setting: The White Rabbit's House** * **Location:** A neat little house with a brass plate reading \"W. RABBIT.\" * **Interior Subzones:** * A tidy upstairs room containing a table by a window, a looking-glass, and a...",
+    "[CH004] CHAPTER IV. (book index hit)",
+    "[CH005] CHAPTER V. (book index hit)",
+    "[CH006] CHAPTER VI. (book index hit)",
+    "Character alice: Alice is a young human girl characterized by extreme and rapid physical instability regarding her scale. She fluctuates between being a standard-sized child, shrinking to approximately ten inches in height, and growing to over nine feet tal..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH004_SC004\n\n## Production Intent\nEstablish a sense of scale and disorientation as Alice transitions from physical exhaustion to wonder. The sequence must emphasize the massive size of the puppy and the subsequent discovery of the oversized mushroom environment.\n\n## Required Cast\n- alice\n- enormous_puppy\n- blue_caterpillar\n\n## Required Environments\n- thick_woods (including mushroom area)\n\n## Continuity Constraints\n- The physical length and thickness of the stick used for the puppy\n- The scale relationship between Alice and the large mushroom\n\n## Beat List\n- BT001: alice wanders through the thick woods\n- BT002: enormous_puppy encounters alice\n- BT003: alice distracts the puppy with a stick\n- BT004: alice finds the blue caterpillar",
+  "metadata": {
+    "artifact_id": "CH004_SC004_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "384fad1a6d31ecbf8838d497a281d8ceb657337c",
+    "created_at_utc": "2026-04-28T04:42:10.848472+00:00",
+    "updated_at_utc": "2026-04-28T04:42:10.848472+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH004_SC004",
+        "version": "5647dd611172c11f3ca479daf4480ef1b60a8f34"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH004_SC004",
+        "version": "7bebd059d3461d3f8ad5ebba841a50983d49b6ae"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH004_SC004",
+        "version": "59fb485c8d4e7d22457babf528704f85b720d994"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-28T04:42:39.171524+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "384fad1a6d31ecbf8838d497a281d8ceb657337c"
+      }
+    ]
+  }
+}

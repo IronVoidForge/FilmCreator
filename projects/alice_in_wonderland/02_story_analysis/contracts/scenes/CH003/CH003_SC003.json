@@ -1,0 +1,387 @@
+{
+  "scene_id": "CH003_SC003",
+  "chapter_id": "CH003",
+  "scene_title": "CH003_SC003",
+  "purpose": "",
+  "summary": "The Dodo leads a formal presentation where Alice is awarded a thimble as a prize. Following this, the group settles into a ring to listen to the Mouse begin a \"long and sad tale.\"",
+  "emotional_arc": "From formal ceremony to somber expectation.",
+  "production_intent": "Execute a formal award ceremony transitioning into a communal storytelling circle. The sequence requires precise handling of the thimble prop and manages the scale shift between Alice and the avian cast within the circular race-course area.",
+  "scene_short_description": "A formal award ceremony for a small prize followed by a gathering to hear a tale.",
+  "scene_primary_scale_story_point": "Alice's physical scale relative to the birds and the thimble prop.",
+  "scene_required_anchor_catalog": [
+    "thimble",
+    "caucus_race_course center"
+  ],
+  "scene_start_state": "The Dodo stands before the group preparing for a formal presentation.",
+  "scene_end_state": "The group is seated in a ring, focused on the Mouse.",
+  "dominant_action_line": "The Dodo presents a prize to Alice, then the group settles into a circle for storytelling.",
+  "scene_spatial_layout": [
+    "circular arrangement within the caucus_race_course",
+    "central focus point for the award presentation"
+  ],
+  "character_spatial_map": [
+    "the_dodo leads at the front of the assembly",
+    "alice is positioned to receive the prize",
+    "mouse, various_birds form a surrounding ring"
+  ],
+  "environment_subzones": [
+    "race_course_center",
+    "outer_ring_perimeter"
+  ],
+  "scene_event_chain": [
+    "event 1: the_dodo leads the formal presentation ceremony",
+    "event 2: alice receives the thimble as a prize",
+    "event 3: the group settles into a ring formation",
+    "event 4: mouse begins a long and sad tale"
+  ],
+  "entry_vectors": [
+    "central race-course approach"
+  ],
+  "exit_vectors": [
+    "radial movement toward the ring center"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: award delivery",
+    "BT002 -> BT003: group reorganization"
+  ],
+  "characters_required": [
+    {
+      "label": "Alice",
+      "canonical_id": "alice",
+      "display_name": "alice",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH003/alice.md",
+      "notes": "Direct registry match for 'alice'."
+    },
+    {
+      "label": "The Mouse",
+      "canonical_id": "mouse",
+      "display_name": "mouse",
+      "status": "canonical",
+      "entity_kind": "group",
+      "resolution_score": 138,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH003/mouse.md",
+      "notes": "Direct registry match for 'mouse'."
+    },
+    {
+      "label": "The Dodo",
+      "canonical_id": "the_dodo",
+      "display_name": "the_dodo",
+      "status": "canonical",
+      "entity_kind": "group",
+      "resolution_score": 138,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH003/the_dodo.md",
+      "notes": "Direct registry match for 'the_dodo'."
+    },
+    {
+      "label": "Various Birds",
+      "canonical_id": "various_birds",
+      "display_name": "various_birds",
+      "status": "canonical",
+      "entity_kind": "group",
+      "resolution_score": 138,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH003/various_birds.md",
+      "notes": "Direct registry match for 'various_birds'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "Circular race-course area",
+      "canonical_id": "caucus_race_course",
+      "display_name": "caucus_race_course",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 102,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/environment_breakdowns/chapters/CH003/caucus_race_course.md",
+      "notes": "Chapter-local environment alias match for 'Circular race-course area' (key_overlap=2, label_overlap=3, context_overlap=4)."
+    }
+  ],
+  "continuity_constraints": [
+    "Alice must maintain possession of the thimble after it is awarded"
+  ],
+  "visual_coverage_families": [
+    "Low angle shots of the Dodo leading the presentation",
+    "Close-ups of the thimble",
+    "Medium shot of the group settling into a ring"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "the_dodo leads formal presentation",
+      "purpose": "",
+      "action_start": "the_dodo begins speaking to the group",
+      "action_end": "presentation reaches the award stage",
+      "active_subjects": [
+        "the_dodo",
+        "various_birds"
+      ],
+      "passive_subjects": [
+        "alice"
+      ],
+      "spatial_context": "caucus_race_course center",
+      "blocking_hint": "dodo at front of assembly",
+      "environment_subzone": "race_course_center",
+      "continuity_focus": "ceremonial posture",
+      "coverage_hint": "low angle shots",
+      "coverage_priority": "high",
+      "handoff_to_next": "the award delivery"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "alice receives the thimble prize",
+      "purpose": "",
+      "action_start": "thimble is presented to alice",
+      "action_end": "alice holds the thimble",
+      "active_subjects": [
+        "alice",
+        "the_dodo"
+      ],
+      "passive_subjects": [
+        "various_birds"
+      ],
+      "spatial_context": "race_course_center",
+      "blocking_hint": "central focus on hands/prize",
+      "environment_subzone": "race_course_center",
+      "continuity_focus": "thimble in alice possession",
+      "coverage_hint": "close-ups of thimble",
+      "coverage_priority": "high",
+      "handoff_to_next": "group transition"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "the group settles into a ring",
+      "purpose": "",
+      "action_start": "birds and alice move toward each other",
+      "action_end": "a circular formation is complete",
+      "active_subjects": [
+        "various_birds",
+        "alice",
+        "mouse"
+      ],
+      "passive_subjects": [
+        "the_dodo"
+      ],
+      "spatial_context": "caucus_race_course center",
+      "blocking_hint": "circular seating arrangement",
+      "environment_subzone": "outer_ring_perimeter",
+      "continuity_focus": "thimble remains with alice",
+      "coverage_hint": "medium shot of group",
+      "coverage_priority": "medium",
+      "handoff_to_next": "storytelling start"
+    },
+    {
+      "beat_id": "BT004",
+      "summary": "mouse begins the tale",
+      "purpose": "",
+      "action_start": "mouse starts speaking",
+      "action_end": "group is silent and listening",
+      "active_subjects": [
+        "mouse"
+      ],
+      "passive_subjects": [
+        "alice",
+        "various_birds"
+      ],
+      "spatial_context": "center of the ring",
+      "blocking_hint": "mouse at center or focal point",
+      "environment_subzone": "race_course_center",
+      "continuity_focus": "somber mood established",
+      "coverage_hint": "medium shot",
+      "coverage_priority": "medium",
+      "handoff_to_next": "end scene"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish authority",
+      "planned_shot_moment_summary": "the_dodo leading the ceremony",
+      "primary_subject_seed": "the_dodo",
+      "secondary_subjects_seed": [
+        "various_birds",
+        "alice"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "race_course_center",
+      "planned_shot_required_anchor_1": "caucus_race_course center",
+      "planned_shot_scale_proof_detail": "alice height vs dodo",
+      "start_state_seed": "dodo standing tall",
+      "end_state_seed": "dodo gesturing to alice",
+      "action_seed": "the_dodo conducts the ceremony",
+      "blocking_seed": [
+        "dodo at head of group"
+      ],
+      "shot_size": "medium_full",
+      "camera_angle": "low_angle",
+      "lens_family": "wide",
+      "camera_motion": "pan",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "high_contrast_ceremonial",
+      "primary_subject_angle": "front_three_quarter_right"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "highlight prize",
+      "planned_shot_moment_summary": "the thimble being awarded",
+      "primary_subject_seed": "thimble",
+      "secondary_subjects_seed": [
+        "alice"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "race_course_center",
+      "planned_shot_required_anchor_1": "thimble",
+      "planned_shot_scale_proof_detail": "thimble size in alice hand",
+      "start_state_seed": "thimble held by dodo",
+      "end_state_seed": "thimble in alice possession",
+      "action_seed": "alice takes the thimble",
+      "blocking_seed": [
+        "close proximity of hands"
+      ],
+      "shot_size": "close_up",
+      "camera_angle": "eye_level",
+      "lens_family": "portrait",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "soft_even",
+      "primary_subject_angle": "front"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "establish group unity",
+      "planned_shot_moment_summary": "the birds and alice settling into a ring",
+      "primary_subject_seed": "various_birds",
+      "secondary_subjects_seed": [
+        "alice",
+        "mouse"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "outer_ring_perimeter",
+      "planned_shot_required_anchor_1": "caucus_race_course center",
+      "planned_shot_scale_proof_detail": "group diameter",
+      "start_state_seed": "scattered group",
+      "end_state_seed": "seated ring",
+      "action_seed": "the group settles into a ring",
+      "blocking_seed": [
+        "circular movement toward center"
+      ],
+      "shot_size": "medium",
+      "camera_angle": "eye_level",
+      "lens_family": "wide",
+      "camera_motion": "track",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front_three_quarter_left"
+    }
+  ],
+  "unresolved_questions": [],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH003",
+      "scene_id": "CH003_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH003",
+      "scene_id": "CH003_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH003",
+      "scene_id": "CH003_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH003",
+      "scene_id": "CH003_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH003",
+      "scene_id": "CH003_SC003"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH003",
+      "source_path": "C:\\FilmCreator\\projects\\alice_in_wonderland\\02_story_analysis\\chapter_analysis\\CH003_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH012",
+      "source_path": "projects/alice_in_wonderland/01_source/chapters/CH012_chapter_xii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH003",
+      "source_path": "projects/alice_in_wonderland/01_source/chapters/CH003_chapter_iii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH006",
+      "source_path": "projects/alice_in_wonderland/01_source/chapters/CH006_chapter_vi.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH003",
+      "canonical_id": "alice"
+    }
+  ],
+  "evidence_summary": [
+    "[CH003_SC003] Purpose:",
+    "[CH003_SC003] Summary: The Dodo leads a formal presentation where Alice is awarded a thimble as a prize. Following this, the group settles into a ring to listen to the Mouse begin a \"long and sad tale.\"",
+    "[CH003_SC003] Emotional arc: From formal ceremony to somber expectation.",
+    "[CH003_SC003] Coverage: Low angle shots of the Dodo leading the presentation Close-ups of the thimble Medium shot of the group settling into a ring",
+    "[CH003_SC003] Continuity: The presence of the thimble in Alice's hand/possession",
+    "[CH003] Chapter summary: **Location:** A riverbank; a circular race-course area nearby. **Characters:** - Alice (human girl) - The Mouse (authoritative, prone to offense) - The Lory (sulky, older bird) - The Duck (literal-minded) - The Dodo (...",
+    "[CH012] CHAPTER XII. (book index hit)",
+    "[CH003] CHAPTER III. (book index hit)",
+    "[CH006] CHAPTER VI. (book index hit)",
+    "Character alice: Alice is a young human girl characterized by extreme and rapid physical instability regarding her scale. She fluctuates between being a standard-sized child, shrinking to approximately ten inches in height, and growing to over nine feet tal..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH003_SC003\n\n## Production Intent\nExecute a formal award ceremony transitioning into a communal storytelling circle. The sequence requires precise handling of the thimble prop and manages the scale shift between Alice and the avian cast within the circular race-course area.\n\n## Required Cast\n- alice\n- mouse\n- the_dodo\n- various_birds\n\n## Required Environments\n- caucus_race_course\n\n## Continuity Constraints\n- Alice must maintain possession of the thimble after it is awarded\n\n## Beat List\n- BT001: the_dodo leads formal presentation\n- BT002: alice receives the thimble prize\n- BT003: the group settles into a ring\n- BT004: mouse begins the tale",
+  "metadata": {
+    "artifact_id": "CH003_SC003_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "0d81f6d5bdde506a404a839e19b0b61c3b36dc67",
+    "created_at_utc": "2026-04-28T04:39:11.538436+00:00",
+    "updated_at_utc": "2026-04-28T04:39:11.538436+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH003_SC003",
+        "version": "f3704001a2c819d18d65750a2829d47b738c047a"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH003_SC003",
+        "version": "89111103a38457f99b7550f0ef1f6a34121fa269"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH003_SC003",
+        "version": "40acb8182d8bfef396392e756d28e21662330e06"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-28T04:39:41.279011+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "0d81f6d5bdde506a404a839e19b0b61c3b36dc67"
+      }
+    ]
+  }
+}

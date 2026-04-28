@@ -1,0 +1,406 @@
+{
+  "scene_id": "CH003_SC002",
+  "chapter_id": "CH003",
+  "scene_title": "CH003_SC002",
+  "purpose": "",
+  "summary": "The Dodo proposes a 'Caucus-race' to solve the problem of being wet. The animals run in a disorganized circle for thirty minutes. Once dry, the Dodo declares everyone winners, and Alice distributes comfits as prizes.",
+  "emotional_arc": "From chaotic energy to celebratory absurdity.",
+  "production_intent": "Execute a high-energy transition from wet, disorganized movement to a structured but absurd celebratory event. The sequence requires managing the visual shift of character textures from soaked to dry and tracking the depletion of comfits in Alice's container during the prize distribution.",
+  "scene_short_description": "Animals run in a disorganized circle around a riverbank course to dry off.",
+  "scene_primary_scale_story_point": "alice fluctuates between ten inches and nine feet; animals must be scaled relative to her current height.",
+  "scene_required_anchor_catalog": [
+    "alice's comfit box",
+    "caucus_race_course perimeter"
+  ],
+  "scene_start_state": "The animals are wet and gathered at the edge of the caucus_race_course.",
+  "scene_end_state": "Alice distributes prizes while animals react to eating them.",
+  "dominant_action_line": "The Dodo initiates a race that results in everyone winning and receiving comfits.",
+  "scene_spatial_layout": [
+    "circular movement pattern within the caucus_race_course",
+    "central distribution point for Alice and her box"
+  ],
+  "character_spatial_map": [
+    "the_dodo leads or directs from the course edge",
+    "various_birds and crabs move in a disorganized circle",
+    "alice remains stationary near the center/edge to distribute prizes"
+  ],
+  "environment_subzones": [
+    "caucus_race_course interior",
+    "riverbank edge"
+  ],
+  "scene_event_chain": [
+    "event 1: the_dodo proposes the Caucus-race to solve being wet",
+    "event 2: various_birds and crabs run in a disorganized circle for thirty minutes",
+    "event 3: the_dodo declares everyone winners once they are dry",
+    "event 4: alice distributes comfits from her box to the animals"
+  ],
+  "entry_vectors": [
+    "riverbank approach"
+  ],
+  "exit_vectors": [
+    "caucus_race_course perimeter"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: transition from proposal to kinetic movement",
+    "BT002 -> BT003: transition from running/wetness to standing/dryness",
+    "BT003 -> BT004: transition from declaration to prize distribution"
+  ],
+  "characters_required": [
+    {
+      "label": "Alice",
+      "canonical_id": "alice",
+      "display_name": "alice",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH003/alice.md",
+      "notes": "Direct registry match for 'alice'."
+    },
+    {
+      "label": "The Dodo",
+      "canonical_id": "the_dodo",
+      "display_name": "the_dodo",
+      "status": "canonical",
+      "entity_kind": "group",
+      "resolution_score": 138,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH003/the_dodo.md",
+      "notes": "Direct registry match for 'the_dodo'."
+    },
+    {
+      "label": "The Eaglet",
+      "canonical_id": "the_eaglet",
+      "display_name": "the_eaglet",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH003/the_eaglet.md",
+      "notes": "Direct registry match for 'the_eaglet'."
+    },
+    {
+      "label": "Various Birds",
+      "canonical_id": "various_birds",
+      "display_name": "various_birds",
+      "status": "canonical",
+      "entity_kind": "group",
+      "resolution_score": 138,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH003/various_birds.md",
+      "notes": "Direct registry match for 'various_birds'."
+    },
+    {
+      "label": "Crabs",
+      "canonical_id": "crabs",
+      "display_name": "crabs",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH003/crabs.md",
+      "notes": "Direct registry match for 'crabs'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "Circular race-course area",
+      "canonical_id": "caucus_race_course",
+      "display_name": "caucus_race_course",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 102,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/environment_breakdowns/chapters/CH003/caucus_race_course.md",
+      "notes": "Chapter-local environment alias match for 'Circular race-course area' (key_overlap=2, label_overlap=3, context_overlap=4)."
+    }
+  ],
+  "continuity_constraints": [
+    "Transition from wet to dry textures on characters",
+    "The amount of comfits remaining in Alice's box"
+  ],
+  "visual_coverage_families": [
+    "Tracking shots of running animals",
+    "Wide shot of circular course",
+    "Medium shots of Alice distributing comfits and animal physical reactions"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "the_dodo proposes the Caucus-race",
+      "purpose": "",
+      "action_start": "the_dodo speaks to the wet animals",
+      "action_end": "animals accept the proposal",
+      "active_subjects": [
+        "the_dodo",
+        "alice",
+        "various_birds"
+      ],
+      "passive_subjects": [
+        "crabs"
+      ],
+      "spatial_context": "riverbank edge",
+      "blocking_hint": "group gathered around the_dodo",
+      "environment_subzone": "riverbank edge",
+      "continuity_focus": "characters are visibly wet",
+      "coverage_hint": "medium shot",
+      "coverage_priority": "high",
+      "handoff_to_next": "the animals begin running"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "animals run in a disorganized circle",
+      "purpose": "",
+      "action_start": "running begins",
+      "action_end": "thirty minutes of running concludes",
+      "active_subjects": [
+        "various_birds",
+        "crabs",
+        "the_eaglet"
+      ],
+      "passive_subjects": [
+        "the_dodo",
+        "alice"
+      ],
+      "spatial_context": "caucus_race_course interior",
+      "blocking_hint": "disorganized circular path",
+      "environment_subzone": "caucus_race_course interior",
+      "continuity_focus": "transition from wet to dry textures",
+      "coverage_hint": "tracking shots/wide shot",
+      "coverage_priority": "medium",
+      "handoff_to_next": "animals stop running and are dry"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "the_dodo declares winners",
+      "purpose": "",
+      "action_start": "the_dodo speaks",
+      "action_end": "winners declared",
+      "active_subjects": [
+        "the_dodo"
+      ],
+      "passive_subjects": [
+        "various_birds",
+        "crabs",
+        "alice"
+      ],
+      "spatial_context": "caucus_race_course interior",
+      "blocking_hint": "animals standing still",
+      "environment_subzone": "caucus_race_course interior",
+      "continuity_focus": "characters are now dry",
+      "coverage_hint": "wide shot",
+      "coverage_priority": "low",
+      "handoff_to_next": "alice begins distribution"
+    },
+    {
+      "beat_id": "BT004",
+      "summary": "alice distributes comfits",
+      "purpose": "",
+      "action_start": "alice reaches into box",
+      "action_end": "comfits distributed and animals react",
+      "active_subjects": [
+        "alice",
+        "various_birds",
+        "crabs"
+      ],
+      "passive_subjects": [
+        "the_dodo"
+      ],
+      "spatial_context": "riverbank edge",
+      "blocking_hint": "alice at center with box, animals approaching",
+      "environment_subzone": "riverbank edge",
+      "continuity_focus": "depletion of comfits in alice's box",
+      "coverage_hint": "medium shots of reactions",
+      "coverage_priority": "high",
+      "handoff_to_next": "scene end"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish intent",
+      "planned_shot_moment_summary": "the_dodo proposes the race",
+      "primary_subject_seed": "the_dodo",
+      "secondary_subjects_seed": [
+        "alice",
+        "various_birds"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "riverbank edge",
+      "planned_shot_required_anchor_1": "caucus_race_course perimeter",
+      "planned_shot_scale_proof_detail": "alice height vs the_dodo",
+      "start_state_seed": "animals looking wet",
+      "end_state_seed": "animals ready to run",
+      "action_seed": "the_dodo speaks",
+      "blocking_seed": [
+        "the_dodo center",
+        "others surrounding"
+      ],
+      "shot_size": "medium",
+      "camera_angle": "eye_level",
+      "lens_family": "normal",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front_three_quarter_right"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "depict chaos",
+      "planned_shot_moment_summary": "animals running in circles",
+      "primary_subject_seed": "various_birds",
+      "secondary_subjects_seed": [
+        "crabs",
+        "the_eaglet"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "caucus_race_course interior",
+      "planned_shot_required_anchor_1": "caucus_race_course perimeter",
+      "planned_shot_scale_proof_detail": "animal size relative to course [[CH003]]",
+      "start_state_seed": "running begins",
+      "end_state_seed": "animals stop running",
+      "action_seed": "disorganized circular running",
+      "blocking_seed": [
+        "circular movement pattern"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "eye_level",
+      "lens_family": "ultra_wide",
+      "camera_motion": "track",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "profile_left"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT004",
+      "narrative_function": "conclude scene",
+      "planned_shot_moment_summary": "alice handing out comfits",
+      "primary_subject_seed": "alice",
+      "secondary_subjects_seed": [
+        "various_birds",
+        "crabs"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "riverbank edge",
+      "planned_shot_required_anchor_1": "alice's comfit box",
+      "planned_shot_scale_proof_detail": "comfit size vs alice fingers",
+      "start_state_seed": "animals gathered dry",
+      "end_state_seed": "comfits distributed",
+      "action_seed": "alice hands out prizes",
+      "blocking_seed": [
+        "alice stationary",
+        "animals approaching her box"
+      ],
+      "shot_size": "medium_close",
+      "camera_angle": "eye_level",
+      "lens_family": "portrait",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "soft_even",
+      "primary_subject_angle": "front"
+    }
+  ],
+  "unresolved_questions": [],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH003",
+      "scene_id": "CH003_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH003",
+      "scene_id": "CH003_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH003",
+      "scene_id": "CH003_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH003",
+      "scene_id": "CH003_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH003",
+      "scene_id": "CH003_SC002"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH003",
+      "source_path": "C:\\FilmCreator\\projects\\alice_in_wonderland\\02_story_analysis\\chapter_analysis\\CH003_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH003",
+      "source_path": "projects/alice_in_wonderland/01_source/chapters/CH003_chapter_iii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH002",
+      "source_path": "projects/alice_in_wonderland/01_source/chapters/CH002_chapter_ii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH012",
+      "source_path": "projects/alice_in_wonderland/01_source/chapters/CH012_chapter_xii.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH003",
+      "canonical_id": "alice"
+    }
+  ],
+  "evidence_summary": [
+    "[CH003_SC002] Purpose:",
+    "[CH003_SC002] Summary: The Dodo proposes a 'Caucus-race' to solve the problem of being wet. The animals run in a disorganized circle for thirty minutes. Once dry, the Dodo declares everyone winners, and Alice distributes comfits as prizes.",
+    "[CH003_SC002] Emotional arc: From chaotic energy to celebratory absurdity.",
+    "[CH003_SC002] Coverage: Tracking shots of the running animals Wide shot of the circular course Medium shots of Alice distributing comfits and the birds' physical reactions (choking/struggling)",
+    "[CH003_SC002] Continuity: Transition from wet to dry textures on characters The amount of comfits remaining in Alice's box",
+    "[CH003] Chapter summary: **Location:** A riverbank; a circular race-course area nearby. **Characters:** - Alice (human girl) - The Mouse (authoritative, prone to offense) - The Lory (sulky, older bird) - The Duck (literal-minded) - The Dodo (...",
+    "[CH003] CHAPTER III. (book index hit)",
+    "[CH002] CHAPTER II. (book index hit)",
+    "[CH012] CHAPTER XII. (book index hit)",
+    "Character alice: Alice is a young human girl characterized by extreme and rapid physical instability regarding her scale. She fluctuates between being a standard-sized child, shrinking to approximately ten inches in height, and growing to over nine feet tal..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH003_SC002\n\n## Production Intent\nExecute a high-energy transition from wet, disorganized movement to a structured but absurd celebratory event. The sequence requires managing the visual shift of character textures from soaked to dry and tracking the depletion of comfits in Alice's container during the prize distribution.\n\n## Required Cast\n- alice\n- the_dodo\n- the_eaglet\n- various_birds\n- crabs\n\n## Required Environments\n- caucus_race_course\n- riverbank edge\n\n## Continuity Constraints\n- Transition from wet to dry textures on characters\n- The amount of comfits remaining in Alice's box\n\n## Beat List\n- BT001: the_dodo proposes the Caucus-race\n- BT002: animals run in a disorganized circle\n- BT003: the_dodo declares winners\n- BT004: alice distributes comfits",
+  "metadata": {
+    "artifact_id": "CH003_SC002_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "5f5894c57d5e7c4ff751908a0c9b50f649f1f984",
+    "created_at_utc": "2026-04-28T04:38:34.813724+00:00",
+    "updated_at_utc": "2026-04-28T04:38:34.813724+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH003_SC002",
+        "version": "a5c34c9b097d22cf6c24b41292064e171893b421"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH003_SC002",
+        "version": "2d4a7690a13c2d98b3a03297bbfa5e88175c3d10"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH003_SC002",
+        "version": "40acb8182d8bfef396392e756d28e21662330e06"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-28T04:39:06.544074+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "5f5894c57d5e7c4ff751908a0c9b50f649f1f984"
+      }
+    ]
+  }
+}

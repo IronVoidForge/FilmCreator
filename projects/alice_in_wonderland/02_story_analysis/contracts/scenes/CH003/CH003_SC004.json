@@ -1,0 +1,396 @@
+{
+  "scene_id": "CH003_SC004",
+  "chapter_id": "CH003",
+  "scene_title": "CH003_SC004",
+  "purpose": "",
+  "summary": "Alice misunderstands the Mouse's 'tale' as its physical 'tail,' leading to an insult that drives the Mouse away. When Alice mentions her cat Dinah, the assembled birds panic and flee, leaving Alice crying alone on the riverbank.",
+  "emotional_arc": "From intellectual confusion to social tension, then sudden panic, ending in isolation/sadness.",
+  "production_intent": "Alice's verbal misunderstanding of the Mouse's tale causes a social rupture. The tension escalates from an insult to a mass exodus of birds triggered by the mention of a cat, leaving Alice in total isolation on the riverbank.",
+  "scene_short_description": "A misunderstanding leads to an insult, causing a crowd of birds to flee in panic.",
+  "scene_primary_scale_story_point": "Alice is at a small-scale height (approx ten inches) relative to the riverbank environment.",
+  "scene_required_anchor_catalog": [
+    "riverbank_assembly edge",
+    "mouse's position on ground"
+  ],
+  "scene_start_state": "Alice and the Mouse are engaged in conversation amidst an assembly of birds and crabs.",
+  "scene_end_state": "Alice sits alone crying on the empty riverbank.",
+  "dominant_action_line": "Alice insults the Mouse, mentions a cat, and watches the crowd flee.",
+  "scene_spatial_layout": [
+    "circular gathering around the central characters",
+    "open space for bird flight paths"
+  ],
+  "character_spatial_map": [
+    "alice is positioned near the mouse",
+    "mouse is centered in the social group",
+    "various_birds are perched or hovering around the perimeter"
+  ],
+  "environment_subzones": [
+    "riverbank_assembly center",
+    "riverbank_assembly periphery"
+  ],
+  "scene_event_chain": [
+    "event 1: Alice misinterprets the Mouse's tale as a physical tail",
+    "event 2: Alice insults the Mouse",
+    "event 3: Alice mentions her cat Dinah",
+    "event 4: various_birds panic and fly away, leaving Alice alone"
+  ],
+  "entry_vectors": [
+    "N/A (characters are already assembled)"
+  ],
+  "exit_vectors": [
+    "various_birds exit via upward flight paths",
+    "mouse exits following the insult"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: verbal misunderstanding to social offense",
+    "BT002 -> BT003: insult to mention of predator",
+    "BT003 -> BT004: mention of cat to mass exodus"
+  ],
+  "characters_required": [
+    {
+      "label": "Alice",
+      "canonical_id": "alice",
+      "display_name": "alice",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH003/alice.md",
+      "notes": "Direct registry match for 'alice'."
+    },
+    {
+      "label": "The Mouse",
+      "canonical_id": "mouse",
+      "display_name": "mouse",
+      "status": "canonical",
+      "entity_kind": "group",
+      "resolution_score": 138,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH003/mouse.md",
+      "notes": "Direct registry match for 'mouse'."
+    },
+    {
+      "label": "Old Crab",
+      "canonical_id": null,
+      "display_name": "Old Crab",
+      "status": "review",
+      "entity_kind": "individual",
+      "resolution_score": 16,
+      "source_path": "",
+      "notes": "Low-confidence character match requires review."
+    },
+    {
+      "label": "Young Crab",
+      "canonical_id": null,
+      "display_name": "Young Crab",
+      "status": "review",
+      "entity_kind": "individual",
+      "resolution_score": 16,
+      "source_path": "",
+      "notes": "Low-confidence character match requires review."
+    },
+    {
+      "label": "Various Birds (Magpie, Canary)",
+      "canonical_id": "various_birds",
+      "display_name": "various_birds",
+      "status": "canonical",
+      "entity_kind": "group",
+      "resolution_score": 138,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH003/various_birds.md",
+      "notes": "Direct registry match for 'various_birds'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "Riverbank",
+      "canonical_id": "riverbank_assembly",
+      "display_name": "riverbank_assembly",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 70,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/environment_breakdowns/chapters/CH003/riverbank_assembly.md",
+      "notes": "Chapter-local environment alias match for 'Riverbank' (key_overlap=1, label_overlap=1, context_overlap=4)."
+    }
+  ],
+  "continuity_constraints": [
+    "Precise exit paths and flight trajectories for various_birds",
+    "Alice's scale relative to the riverbank environment"
+  ],
+  "visual_coverage_families": [
+    "Close-ups of Mouse's offended expression",
+    "Rapid cuts of various_birds flying in divergent directions",
+    "Wide shot of Alice's growing solitude",
+    "Close-up on Alice's face as she cries"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "Alice misunderstands the Mouse's tale",
+      "purpose": "",
+      "action_start": "Alice listens to Mouse",
+      "action_end": "Alice identifies the 'tail'",
+      "active_subjects": [
+        "alice",
+        "mouse"
+      ],
+      "passive_subjects": [
+        "various_birds"
+      ],
+      "spatial_context": "riverbank_assembly center",
+      "blocking_hint": "Alice and Mouse face each other closely",
+      "environment_subzone": "riverbank_assembly center",
+      "continuity_focus": "Alice scale height",
+      "coverage_hint": "close-up on Alice's confusion",
+      "coverage_priority": "medium",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "The insult drives the Mouse away",
+      "purpose": "",
+      "action_start": "Alice delivers insult",
+      "action_end": "Mouse departs",
+      "active_subjects": [
+        "alice",
+        "mouse"
+      ],
+      "passive_subjects": [
+        "various_birds"
+      ],
+      "spatial_context": "riverbank_assembly center",
+      "blocking_hint": "Mouse moves away from Alice",
+      "environment_subzone": "riverbank_assembly center",
+      "continuity_focus": "Mouse exit path",
+      "coverage_hint": "close-up on Mouse's offended expression",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "Mention of Dinah triggers panic",
+      "purpose": "",
+      "action_start": "Alice mentions the cat",
+      "action_end": "Birds begin to fly",
+      "active_subjects": [
+        "alice",
+        "various_birds"
+      ],
+      "passive_subjects": [
+        "mouse"
+      ],
+      "spatial_context": "riverbank_assembly periphery",
+      "blocking_hint": "Birds react to the word 'cat'",
+      "environment_subzone": "riverbank_assembly periphery",
+      "continuity_focus": "Bird flight paths",
+      "coverage_hint": "rapid cuts of birds flying away",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT004"
+    },
+    {
+      "beat_id": "BT004",
+      "summary": "Alice is left alone crying",
+      "purpose": "",
+      "action_start": "Last bird leaves",
+      "action_end": "Alice weeps in solitude",
+      "active_subjects": [
+        "alice"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "riverbank_assembly center",
+      "blocking_hint": "Alice sits isolated on the bank",
+      "environment_subzone": "riverbank_assembly center",
+      "continuity_focus": "Empty riverbank space",
+      "coverage_hint": "wide shot of Alice's growing solitude and close-up on her face",
+      "coverage_priority": "high",
+      "handoff_to_next": "END"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish misunderstanding",
+      "planned_shot_moment_summary": "Alice realizes the word 'tale' vs 'tail'",
+      "primary_subject_seed": "alice",
+      "secondary_subjects_seed": [
+        "mouse"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "riverbank_assembly center",
+      "planned_shot_required_anchor_1": "mouse's position on ground",
+      "planned_shot_scale_proof_detail": "alice at ten inch height",
+      "start_state_seed": "Alice looking confused",
+      "end_state_seed": "Alice pointing or reacting to the tail",
+      "action_seed": "Alice speaks the misunderstanding",
+      "blocking_seed": [
+        "Alice leans toward mouse"
+      ],
+      "shot_size": "medium_close",
+      "camera_angle": "eye_level",
+      "lens_family": "normal",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front_three_quarter_left"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT003",
+      "narrative_function": "trigger panic",
+      "planned_shot_moment_summary": "Alice mentions Dinah the cat",
+      "primary_subject_seed": "alice",
+      "secondary_subjects_seed": [
+        "various_birds"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "riverbank_assembly periphery",
+      "planned_shot_required_anchor_1": "riverbank_assembly edge",
+      "planned_shot_scale_proof_detail": "various_birds relative to Alice",
+      "start_state_seed": "Alice speaking calmly",
+      "end_state_seed": "Birds taking flight",
+      "action_seed": "Birds scatter in different directions",
+      "blocking_seed": [
+        "Birds erupt from perches"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "high_angle",
+      "lens_family": "wide",
+      "camera_motion": "pan",
+      "zoom_behavior": "none",
+      "focus_strategy": "environment_priority",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT004",
+      "narrative_function": "conclude isolation",
+      "planned_shot_moment_summary": "Alice is left alone crying",
+      "primary_subject_seed": "alice",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "riverbank_assembly center",
+      "planned_shot_required_anchor_1": "mouse's position on ground",
+      "planned_shot_scale_proof_detail": "Alice small against wide riverbank",
+      "start_state_seed": "Birds gone, silence",
+      "end_state_seed": "Alice weeping",
+      "action_seed": "Alice cries",
+      "blocking_seed": [
+        "Alice sits alone"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "eye_level",
+      "lens_family": "ultra_wide",
+      "camera_motion": "pull_back",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front_three_quarter_right"
+    }
+  ],
+  "unresolved_questions": [
+    "Resolve Old Crab -> Old Crab",
+    "Resolve Young Crab -> Young Crab"
+  ],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH003",
+      "scene_id": "CH003_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH003",
+      "scene_id": "CH003_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH003",
+      "scene_id": "CH003_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH003",
+      "scene_id": "CH003_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH003",
+      "scene_id": "CH003_SC004"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH003",
+      "source_path": "C:\\FilmCreator\\projects\\alice_in_wonderland\\02_story_analysis\\chapter_analysis\\CH003_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH003",
+      "source_path": "projects/alice_in_wonderland/01_source/chapters/CH003_chapter_iii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH002",
+      "source_path": "projects/alice_in_wonderland/01_source/chapters/CH002_chapter_ii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH012",
+      "source_path": "projects/alice_in_wonderland/01_source/chapters/CH012_chapter_xii.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH003",
+      "canonical_id": "alice"
+    }
+  ],
+  "evidence_summary": [
+    "[CH003_SC004] Purpose:",
+    "[CH003_SC004] Summary: Alice misunderstands the Mouse's 'tale' as its physical 'tail,' leading to an insult that drives the Mouse away. When Alice mentions her cat Dinah, the assembled birds panic and flee, leaving Alice crying alone on the riverbank.",
+    "[CH003_SC004] Emotional arc: From intellectual confusion to social tension, then sudden panic, ending in isolation/sadness.",
+    "[CH003_SC004] Coverage: Close-ups of the Mouse's offended expression rapid cuts of birds flying away in different directions wide shot of Alice's growing solitude close-up on Alice's face as she cries",
+    "[CH003_SC004] Continuity: The movement and exit paths of the various bird characters",
+    "[CH003] Chapter summary: **Location:** A riverbank; a circular race-course area nearby. **Characters:** - Alice (human girl) - The Mouse (authoritative, prone to offense) - The Lory (sulky, older bird) - The Duck (literal-minded) - The Dodo (...",
+    "[CH003] CHAPTER III. (book index hit)",
+    "[CH002] CHAPTER II. (book index hit)",
+    "[CH012] CHAPTER XII. (book index hit)",
+    "Character alice: Alice is a young human girl characterized by extreme and rapid physical instability regarding her scale. She fluctuates between being a standard-sized child, shrinking to approximately ten inches in height, and growing to over nine feet tal..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH003_SC004\n\n## Production Intent\nAlice's verbal misunderstanding of the Mouse's tale causes a social rupture. The tension escalates from an insult to a mass exodus of birds triggered by the mention of a cat, leaving Alice in total isolation on the riverbank.\n\n## Required Cast\n- alice (young human girl, approx 10 inches)\n- mouse (authoritative, prone to offense)\n- various_birds (Magpie, Canary, etc.)\n- Old Crab\n- Young Crab\n\n## Required Environments\n- riverbank_assembly (riverbank with circular race-course nearby)\n\n## Continuity Constraints\n- Precise exit paths and flight trajectories for various_birds.\n- Alice's scale height (approx 10 inches) relative to the environment.\n\n## Beat List\n- BT001: Alice misunderstands the Mouse's tale.\n- BT002: The insult drives the Mouse away.\n- BT003: Mention of Dinah triggers panic.\n- BT004: Alice is left alone crying.",
+  "metadata": {
+    "artifact_id": "CH003_SC004_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "ad514958c4146100f6359ceb8b6e96e48fe91cd6",
+    "created_at_utc": "2026-04-28T04:39:47.590197+00:00",
+    "updated_at_utc": "2026-04-28T04:39:47.590197+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH003_SC004",
+        "version": "de4ee466199238b10612f36c51ef3c3b699e98d2"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH003_SC004",
+        "version": "dc34121e5660473863974f9d648c20118e76fc45"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH003_SC004",
+        "version": "394ad22b58f58109a2672bfdccd38411804e6597"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-28T04:40:19.215944+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "ad514958c4146100f6359ceb8b6e96e48fe91cd6"
+      }
+    ]
+  }
+}

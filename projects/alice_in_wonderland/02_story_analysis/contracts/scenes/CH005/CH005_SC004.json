@@ -1,0 +1,339 @@
+{
+  "scene_id": "CH005_SC004",
+  "chapter_id": "CH005",
+  "scene_title": "CH005_SC004",
+  "purpose": "",
+  "summary": "Alice stabilizes her size by nibbling alternating pieces of the mushroom. Once back to normal, she discovers a small house and decides to shrink herself down once more to approach it safely.",
+  "emotional_arc": "Relief to calculated caution",
+  "production_intent": "Alice manages her physical scale by consuming mushroom fragments to reach a stable human height before intentionally shrinking again to navigate toward a discovered structure.",
+  "scene_short_description": "A girl stabilizes her height with a mushroom before shrinking to approach a small house.",
+  "scene_primary_scale_story_point": "Alice transitions from unstable scale to standard child scale, then to nine-inch scale.",
+  "scene_required_anchor_catalog": [
+    "mushroom",
+    "small_house"
+  ],
+  "scene_start_state": "Alice is physically unstable and holding a mushroom in the clearing.",
+  "scene_end_state": "Alice is nine inches tall, looking toward the house with caution.",
+  "dominant_action_line": "Alice nibbles the mushroom to stabilize her size, discovers a house, and shrinks herself down.",
+  "scene_spatial_layout": [
+    "open forest clearing containing the mushroom",
+    "distant small house visible from the clearing"
+  ],
+  "character_spatial_map": [
+    "alice is centered in the clearing during height stabilization",
+    "alice moves toward the direction of the house after shrinking"
+  ],
+  "environment_subzones": [
+    "small_house_clearing/mushroom_zone",
+    "small_house_clearing/house_viewpoint"
+  ],
+  "scene_event_chain": [
+    "event 1: Alice nibbles alternating pieces of the mushroom",
+    "event 2: Alice reaches a stable standard human size",
+    "event 3: Alice discovers a small house in the distance",
+    "event 4: Alice nibbles the mushroom again to shrink to nine inches"
+  ],
+  "entry_vectors": [
+    "forest path into clearing"
+  ],
+  "exit_vectors": [
+    "path toward the small house"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: physical stabilization achieved",
+    "BT002 -> BT003: visual discovery of structure",
+    "BT003 -> BT004: intentional scale reduction"
+  ],
+  "characters_required": [
+    {
+      "label": "Alice",
+      "canonical_id": "alice",
+      "display_name": "alice",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH005/alice.md",
+      "notes": "Direct registry match for 'alice'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "Forest Clearing",
+      "canonical_id": "small_house_clearing",
+      "display_name": "small_house_clearing",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 80,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/environment_breakdowns/chapters/CH005/small_house_clearing.md",
+      "notes": "Chapter-local environment alias match for 'Forest Clearing' (key_overlap=1, label_overlap=2, context_overlap=4)."
+    }
+  ],
+  "continuity_constraints": [
+    "Final scale of Alice must be exactly nine inches relative to the environment and the house",
+    "Alternating nibbles on mushroom pieces must correspond to size fluctuations"
+  ],
+  "visual_coverage_families": [
+    "Medium shots of Alice tuning her height",
+    "Wide shot revealing the small house",
+    "Low-angle shot as she shrinks again"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "Alice nibbles the mushroom to stabilize size",
+      "purpose": "",
+      "action_start": "Alice takes a piece of mushroom",
+      "action_end": "Alice reaches standard height",
+      "active_subjects": [
+        "alice"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "small_house_clearing/mushroom_zone",
+      "blocking_hint": "Alice is positioned over the mushroom",
+      "environment_subzone": "mushroom_zone",
+      "continuity_focus": "alternating pieces nibbled",
+      "coverage_hint": "medium shots of tuning height",
+      "coverage_priority": "high",
+      "handoff_to_next": "stabilized Alice"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "Alice reaches normal size",
+      "purpose": "",
+      "action_start": "Height stops fluctuating",
+      "action_end": "Alice stands at standard child scale",
+      "active_subjects": [
+        "alice"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "small_house_clearing/mushroom_zone",
+      "blocking_hint": "Alice stands upright",
+      "environment_subzone": "mushroom_zone",
+      "continuity_focus": "standard human scale",
+      "coverage_hint": "medium shot",
+      "coverage_priority": "medium",
+      "handoff_to_next": "discovery of house"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "Alice discovers the small house",
+      "purpose": "",
+      "action_start": "Alice looks toward horizon",
+      "action_end": "Alice identifies the house structure",
+      "active_subjects": [
+        "alice"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "small_house_clearing/house_viewpoint",
+      "blocking_hint": "Alice turns to face the distance",
+      "environment_subzone": "house_viewpoint",
+      "continuity_focus": "house visibility in background",
+      "coverage_hint": "wide shot revealing house",
+      "coverage_priority": "high",
+      "handoff_to_next": "decision to shrink"
+    },
+    {
+      "beat_id": "BT004",
+      "summary": "Alice shrinks to approach safely",
+      "purpose": "",
+      "action_start": "Alice nibbles mushroom again",
+      "action_end": "Alice is nine inches tall",
+      "active_subjects": [
+        "alice"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "small_house_clearing/mushroom_zone",
+      "blocking_hint": "Alice crouches or sits near mushroom",
+      "environment_subzone": "mushroom_zone",
+      "continuity_focus": "final scale of nine inches",
+      "coverage_hint": "low-angle shot as she shrinks",
+      "coverage_priority": "high",
+      "handoff_to_next": "nine inch Alice approaching house"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish physical instability and control",
+      "planned_shot_moment_summary": "Alice nibbling the mushroom",
+      "primary_subject_seed": "alice",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "small_house_clearing/mushroom_zone",
+      "planned_shot_required_anchor_1": "mushroom",
+      "planned_shot_scale_proof_detail": "height fluctuations relative to forest floor",
+      "start_state_seed": "unstable height",
+      "end_state_seed": "standard child height",
+      "action_seed": "nibbling alternating pieces",
+      "blocking_seed": [
+        "seated or crouching near mushroom"
+      ],
+      "shot_size": "medium",
+      "camera_angle": "eye_level",
+      "lens_family": "normal",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front_three_quarter_left"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT003",
+      "narrative_function": "reveal new objective",
+      "planned_shot_moment_summary": "Alice spots the house",
+      "primary_subject_seed": "alice",
+      "secondary_subjects_seed": [
+        "small_house"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "small_house_clearing/house_viewpoint",
+      "planned_shot_required_anchor_1": "small_house",
+      "planned_shot_scale_proof_detail": "house size relative to clearing",
+      "start_state_seed": "looking around",
+      "end_state_seed": "staring at house",
+      "action_seed": "turning head toward distance",
+      "blocking_seed": [
+        "standing in clearing"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "eye_level",
+      "lens_family": "wide",
+      "camera_motion": "pan",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "profile_right"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT004",
+      "narrative_function": "establish new scale for approach",
+      "planned_shot_moment_summary": "Alice shrinks to nine inches",
+      "primary_subject_seed": "alice",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "small_house_clearing/mushroom_zone",
+      "planned_shot_required_anchor_1": "mushroom",
+      "planned_shot_scale_proof_detail": "nine inch height relative to grass/mushroom",
+      "start_state_seed": "standard child size",
+      "end_state_seed": "nine inch height",
+      "action_seed": "shrinking downward",
+      "blocking_seed": [
+        "near mushroom"
+      ],
+      "shot_size": "medium_close",
+      "camera_angle": "low_angle",
+      "lens_family": "wide",
+      "camera_motion": "push_in",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front"
+    }
+  ],
+  "unresolved_questions": [],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH005",
+      "scene_id": "CH005_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH005",
+      "scene_id": "CH005_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH005",
+      "scene_id": "CH005_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH005",
+      "scene_id": "CH005_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH005",
+      "scene_id": "CH005_SC004"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH005",
+      "source_path": "C:\\FilmCreator\\projects\\alice_in_wonderland\\02_story_analysis\\chapter_analysis\\CH005_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH004",
+      "source_path": "projects/alice_in_wonderland/01_source/chapters/CH004_chapter_iv.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH005",
+      "source_path": "projects/alice_in_wonderland/01_source/chapters/CH005_chapter_v.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH001",
+      "source_path": "projects/alice_in_wonderland/01_source/chapters/CH001_chapter_i.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH005",
+      "canonical_id": "alice"
+    }
+  ],
+  "evidence_summary": [
+    "[CH005_SC004] Purpose:",
+    "[CH005_SC004] Summary: Alice stabilizes her size by nibbling alternating pieces of the mushroom. Once back to normal, she discovers a small house and decides to shrink herself down once more to approach it safely.",
+    "[CH005_SC004] Emotional arc: Relief to calculated caution",
+    "[CH005_SC004] Coverage: Medium shots of Alice 'tuning' her height Wide shot revealing the small house Low-angle shot as she shrinks again",
+    "[CH005_SC004] Continuity: The final scale of Alice (nine inches) relative to the environment and the house",
+    "[CH005] Chapter summary: **Location: Mushroom Clearing / Forest Canopy** **Characters:** * **Alice:** A young girl experiencing rapid physical instability (size changes, neck elongation). * **Caterpillar:** A languid, hookah-smoking insect si...",
+    "[CH004] CHAPTER IV. (book index hit)",
+    "[CH005] CHAPTER V. (book index hit)",
+    "[CH001] CHAPTER I. (book index hit)",
+    "Character alice: Alice is a young human girl characterized by extreme and rapid physical instability regarding her scale. She fluctuates between being a standard-sized child, shrinking to approximately ten inches in height, and growing to over nine feet tal..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH005_SC004\n\n## Production Intent\nAlice manages her physical scale by consuming mushroom fragments to reach a stable human height before intentionally shrinking again to navigate toward a discovered structure.\n\n## Required Cast\n- alice (young girl, fluctuating scale)\n\n## Required Environments\n- small_house_clearing (forest clearing with mushroom and distant house)\n\n## Continuity Constraints\n- Alice must alternate nibbling pieces of the mushroom.\n- Final height must be exactly nine inches relative to environmental anchors.\n- Scale transition: Unstable -> Standard Child -> Nine Inches.\n\n## Beat List\n- BT001: Alice nibbles the mushroom to stabilize size.\n- BT002: Alice reaches normal size.\n- BT003: Alice discovers the small house.\n- BT004: Alice shrinks to approach safely.",
+  "metadata": {
+    "artifact_id": "CH005_SC004_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "cd8132d286c91d364acbed0b417750ea3664ebbc",
+    "created_at_utc": "2026-04-28T04:44:28.038795+00:00",
+    "updated_at_utc": "2026-04-28T04:44:28.038795+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH005_SC004",
+        "version": "cb3be61a49c730f8184e16d69b3e42fa3dfd6eb2"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH005_SC004",
+        "version": "d0ff66e52748cd26fd2865bb22f7f7a9671feb44"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH005_SC004",
+        "version": "9ea2a465323da5136d976c4b4ceb0e3252f3177d"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-28T04:44:57.270275+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "cd8132d286c91d364acbed0b417750ea3664ebbc"
+      }
+    ]
+  }
+}

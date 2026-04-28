@@ -1,0 +1,353 @@
+{
+  "scene_id": "CH005_SC002",
+  "chapter_id": "CH005",
+  "scene_title": "CH005_SC002",
+  "purpose": "",
+  "summary": "The Caterpillar departs after explaining that different sides of the mushroom cause different growth effects; Alice tests this by eating a piece from one side, causing her to shrink rapidly.",
+  "emotional_arc": "Curiosity to physical distress",
+  "production_intent": "The scene establishes the physical mechanics of scale instability through a direct cause-and-effect interaction with the environment. The Caterpillar provides the exposition regarding mushroom properties before departing, leaving Alice to execute a high-risk experiment that results in rapid physical shrinking.",
+  "scene_short_description": "A languid insect departs a clearing, leaving a young girl to experiment with a large mushroom.",
+  "scene_primary_scale_story_point": "Alice transitions from standard human scale to approximately ten inches in height.",
+  "scene_required_anchor_catalog": [
+    "mushroom_clearing_mushroom",
+    "caterpillar_hookah"
+  ],
+  "scene_start_state": "Caterpillar explains the mushroom properties while smoking; Alice listens with curiosity.",
+  "scene_end_state": "Alice is physically distressed and significantly shrunken on the ground.",
+  "dominant_action_line": "Alice eats a piece of the mushroom and shrinks rapidly.",
+  "scene_spatial_layout": [
+    "Mushroom serves as the central vertical axis for scale comparison.",
+    "Caterpillar occupies an elevated or seated position relative to Alice."
+  ],
+  "character_spatial_map": [
+    "alice: standing near the mushroom base.",
+    "caterpillar: positioned near the mushroom cap/hookah."
+  ],
+  "environment_subzones": [
+    "mushroom_clearing_mushroom_base",
+    "mushroom_clearing_canopy"
+  ],
+  "scene_event_chain": [
+    "event 1: caterpillar explains that different sides of the mushroom cause different growth effects.",
+    "event 2: caterpillar departs the clearing.",
+    "event 3: alice eats a piece from one specific side of the mushroom.",
+    "event 4: alice shrinks rapidly, experiencing physical distress."
+  ],
+  "entry_vectors": [
+    "mushroom_clearing_pathway"
+  ],
+  "exit_vectors": [
+    "mushroom_clearing_pathway"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: caterpillar moves away from the center.",
+    "BT002 -> BT003: alice reaches for the mushroom texture.",
+    "BT003 -> BT004: rapid physical scale shift occurs."
+  ],
+  "characters_required": [
+    {
+      "label": "Alice",
+      "canonical_id": "alice",
+      "display_name": "alice",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH005/alice.md",
+      "notes": "Direct registry match for 'alice'."
+    },
+    {
+      "label": "Caterpillar",
+      "canonical_id": "caterpillar",
+      "display_name": "caterpillar",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH005/caterpillar.md",
+      "notes": "Direct registry match for 'caterpillar'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "Mushroom Clearing",
+      "canonical_id": "mushroom_clearing",
+      "display_name": "mushroom_clearing",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 138,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/environment_breakdowns/chapters/CH005/mushroom_clearing.md",
+      "notes": "Direct registry match for 'mushroom_clearing'."
+    }
+  ],
+  "continuity_constraints": [
+    "The specific side of the mushroom being eaten",
+    "Alice's height transition from standard child to ten inches"
+  ],
+  "visual_coverage_families": [
+    "Extreme close-ups of mushroom texture",
+    "Medium shot of Alice eating",
+    "Rapid movement/shaky cam for shrinking effect"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "caterpillar explains mushroom growth effects",
+      "purpose": "",
+      "action_start": "caterpillar speaks about sides of the mushroom",
+      "action_end": "explanation concludes",
+      "active_subjects": [
+        "caterpillar",
+        "alice"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "mushroom_clearing_mushroom_base",
+      "blocking_hint": "caterpillar near hookah, alice listening",
+      "environment_subzone": "mushroom_clearing_mushroom_base",
+      "continuity_focus": "caterpillar's presence",
+      "coverage_hint": "medium shot",
+      "coverage_priority": "medium",
+      "handoff_to_next": "caterpillar departs"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "caterpillar departs the clearing",
+      "purpose": "",
+      "action_start": "caterpillar moves away from mushroom",
+      "action_end": "caterpillar is out of frame/distance",
+      "active_subjects": [
+        "caterpillar"
+      ],
+      "passive_subjects": [
+        "alice"
+      ],
+      "spatial_context": "mushroom_clearing",
+      "blocking_hint": "caterpillar exits stage left or right",
+      "environment_subzone": "mushroom_clearing",
+      "continuity_focus": "alice alone at mushroom",
+      "coverage_hint": "wide",
+      "coverage_priority": "low",
+      "handoff_to_next": "alice approaches mushroom"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "alice eats a piece of the mushroom",
+      "purpose": "",
+      "action_start": "alice reaches for mushroom side",
+      "action_end": "alice swallows the piece",
+      "active_subjects": [
+        "alice"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "mushroom_clearing_mushroom_base",
+      "blocking_hint": "alice hunched over mushroom texture",
+      "environment_subzone": "mushroom_clearing_mushroom_base",
+      "continuity_focus": "the specific side of the mushroom being eaten",
+      "coverage_hint": "extreme close-up",
+      "coverage_priority": "high",
+      "handoff_to_next": "shrinking begins"
+    },
+    {
+      "beat_id": "BT004",
+      "summary": "alice shrinks rapidly",
+      "purpose": "",
+      "action_start": "alice feels physical change",
+      "action_end": "alice reaches ten inch height in distress",
+      "active_subjects": [
+        "alice"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "mushroom_clearing_mushroom_base",
+      "blocking_hint": "alice shrinking toward the ground",
+      "environment_subzone": "mushroom_clearing_mushroom_base",
+      "continuity_focus": "alice's height transition",
+      "coverage_hint": "handheld/shaky cam",
+      "coverage_priority": "high",
+      "handoff_to_next": "scene end"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "exposition",
+      "planned_shot_moment_summary": "caterpillar explains mushroom properties",
+      "primary_subject_seed": "caterpillar",
+      "secondary_subjects_seed": [
+        "alice"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "mushroom_clearing_mushroom_base",
+      "planned_shot_required_anchor_1": "caterpillar_hookah",
+      "planned_shot_scale_proof_detail": "standard child vs insect",
+      "start_state_seed": "caterpillar speaking",
+      "end_state_seed": "caterpillar finishes explanation",
+      "action_seed": "caterpillar gestures or smokes",
+      "blocking_seed": [
+        "caterpillar seated",
+        "alice standing"
+      ],
+      "shot_size": "medium_close",
+      "camera_angle": "eye_level",
+      "lens_family": "normal",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front_three_quarter_left"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT003",
+      "narrative_function": "interaction",
+      "planned_shot_moment_summary": "alice bites the mushroom",
+      "primary_subject_seed": "alice",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "mushroom_clearing_mushroom_base",
+      "planned_shot_required_anchor_1": "mushroom_clearing_mushroom",
+      "planned_shot_scale_proof_detail": "mushroom texture vs finger size",
+      "start_state_seed": "alice touching mushroom",
+      "end_state_seed": "alice swallowing piece",
+      "action_seed": "alice eats a piece of the mushroom side",
+      "blocking_seed": [
+        "alice leaning over mushroom"
+      ],
+      "shot_size": "extreme_close_up",
+      "camera_angle": "low_angle",
+      "lens_family": "macro",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "profile_left"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT004",
+      "narrative_function": "consequence",
+      "planned_shot_moment_summary": "alice shrinks rapidly",
+      "primary_subject_seed": "alice",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "mushroom_clearing_mushroom_base",
+      "planned_shot_required_anchor_1": "mushroom_clearing_mushroom",
+      "planned_shot_scale_proof_detail": "alice shrinking to ten inches",
+      "start_state_seed": "alice standing normal height",
+      "end_state_seed": "alice at ten inch height",
+      "action_seed": "alice shrinks rapidly with physical distress",
+      "blocking_seed": [
+        "alice collapsing/shrinking in place"
+      ],
+      "shot_size": "medium",
+      "camera_angle": "eye_level",
+      "lens_family": "wide",
+      "camera_motion": "handheld",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front"
+    }
+  ],
+  "unresolved_questions": [],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH005",
+      "scene_id": "CH005_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH005",
+      "scene_id": "CH005_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH005",
+      "scene_id": "CH005_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH005",
+      "scene_id": "CH005_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH005",
+      "scene_id": "CH005_SC002"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH005",
+      "source_path": "C:\\FilmCreator\\projects\\alice_in_wonderland\\02_story_analysis\\chapter_analysis\\CH005_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH005",
+      "source_path": "projects/alice_in_wonderland/01_source/chapters/CH005_chapter_v.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH007",
+      "source_path": "projects/alice_in_wonderland/01_source/chapters/CH007_chapter_vii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH010",
+      "source_path": "projects/alice_in_wonderland/01_source/chapters/CH010_chapter_x.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH005",
+      "canonical_id": "alice"
+    }
+  ],
+  "evidence_summary": [
+    "[CH005_SC002] Purpose:",
+    "[CH005_SC002] Summary: The Caterpillar departs after explaining that different sides of the mushroom cause different growth effects; Alice tests this by eating a piece from one side, causing her to shrink rapidly.",
+    "[CH005_SC002] Emotional arc: Curiosity to physical distress",
+    "[CH005_SC002] Coverage: Extreme close-ups of mushroom texture Medium shot of Alice eating Rapid movement/shaky cam for the shrinking effect",
+    "[CH005_SC002] Continuity: The specific side of the mushroom being eaten Alice's height transition",
+    "[CH005] Chapter summary: **Location: Mushroom Clearing / Forest Canopy** **Characters:** * **Alice:** A young girl experiencing rapid physical instability (size changes, neck elongation). * **Caterpillar:** A languid, hookah-smoking insect si...",
+    "[CH005] CHAPTER V. (book index hit)",
+    "[CH007] CHAPTER VII. (book index hit)",
+    "[CH010] CHAPTER X. (book index hit)",
+    "Character alice: Alice is a young human girl characterized by extreme and rapid physical instability regarding her scale. She fluctuates between being a standard-sized child, shrinking to approximately ten inches in height, and growing to over nine feet tal..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH005_SC002\n\n## Production Intent\nThe scene establishes the physical mechanics of scale instability through a direct cause-and-effect interaction with the environment. The Caterpillar provides the exposition regarding mushroom properties before departing, leaving Alice to execute a high-risk experiment that results in rapid physical shrinking.\n\n## Required Cast\n- alice: Young girl, undergoes extreme scale shift (standard child to 10 inches).\n- caterpillar: Languid insect, hookah smoker.\n\n## Required Environments\n- mushroom_clearing: Featuring a large mushroom with distinct sides/growth effects.\n\n## Continuity Constraints\n- The specific side of the mushroom being eaten must be visually consistent.\n- Alice's height transition must follow a rapid downward trajectory to 10 inches.\n\n## Beat List\n- BT001: caterpillar explains mushroom growth effects.\n- BT002: caterpillar departs the clearing.\n- BT003: alice eats a piece of the mushroom.\n- BT004: alice shrinks rapidly.",
+  "metadata": {
+    "artifact_id": "CH005_SC002_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "268f54bdea417a06878662b91fbd761377282629",
+    "created_at_utc": "2026-04-28T04:43:17.472733+00:00",
+    "updated_at_utc": "2026-04-28T04:43:17.472733+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH005_SC002",
+        "version": "4666314a0a715c24ce40bacc67e9026acf899a2f"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH005_SC002",
+        "version": "f7389338d2d1dd1e68c5754f0f2ecc198963a68e"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH005_SC002",
+        "version": "0b9165e47cbd98fabec3d9f62562f4d0254a8875"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-28T04:43:48.456753+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "268f54bdea417a06878662b91fbd761377282629"
+      }
+    ]
+  }
+}

@@ -1,0 +1,470 @@
+{
+  "scene_id": "CH002_SC001",
+  "chapter_id": "CH002",
+  "scene_title": "CH002_SC001",
+  "purpose": "",
+  "summary": "Alice, now giant-sized, hits her head on the ceiling and finds a golden key but cannot fit through the garden door. She cries, creating a pool of tears, meets the White Rabbit who flees, and eventually shrinks to two feet tall due to the Rabbit's fan. After falling into her own pool of tears, she encounters a Mouse and a group of animals, leading them toward the shore.",
+  "emotional_arc": "Confusion to frustration to despair to social anxiety",
+  "production_intent": "Establish the extreme physical instability of alice through rapid scale shifts. The sequence moves from a giant-sized presence in the hall to a miniature state within a pool of tears, requiring precise management of water levels and object scaling relative to the character.",
+  "scene_short_description": "A giant girl hits her head, finds a key, shrinks, and falls into a pool of tears.",
+  "scene_primary_scale_story_point": "alice fluctuates from over nine feet tall to two feet tall.",
+  "scene_required_anchor_catalog": [
+    "garden door",
+    "golden key",
+    "white_rabbit's fan",
+    "the_pool_of_tears surface"
+  ],
+  "scene_start_state": "alice is giant-sized, head pressed against the ceiling of the_hall.",
+  "scene_end_state": "alice leads a group of animals toward the shore of the_pool_of_tears.",
+  "dominant_action_line": "alice navigates extreme size shifts and environmental hazards caused by her own tears.",
+  "scene_spatial_layout": [
+    "verticality is emphasized in the_hall due to giant scale",
+    "horizontal expansion of water in the_pool_of_tears"
+  ],
+  "character_spatial_map": [
+    "alice occupies the center of the_hall at extreme height",
+    "white_rabbit enters and exits quickly from the periphery",
+    "mouse and animals emerge from within the_pool_of_tears"
+  ],
+  "environment_subzones": [
+    "the_hall (giant scale)",
+    "garden door subzone",
+    "the_pool_of_tears"
+  ],
+  "scene_event_chain": [
+    "event 1: alice hits her head on the ceiling and finds a golden key",
+    "event 2: alice cries, creating a growing pool of tears",
+    "event 3: white_rabbit appears with gloves and fan and flees",
+    "event 4: alice shrinks to two feet tall and falls into the pool of tears",
+    "event 5: alice meets mouse and animals and leads them toward the shore"
+  ],
+  "entry_vectors": [
+    "alice enters via growth spurt in the_hall"
+  ],
+  "exit_vectors": [
+    "alice moves toward the shore of the_pool_of_tears"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: scale frustration to emotional release",
+    "BT002 -> BT003: environmental change to character encounter",
+    "BT003 -> BT004: physical shrinking to immersion",
+    "BT004 -> BT005: immersion to social interaction"
+  ],
+  "characters_required": [
+    {
+      "label": "Alice",
+      "canonical_id": "alice",
+      "display_name": "alice",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH002/alice.md",
+      "notes": "Direct registry match for 'alice'."
+    },
+    {
+      "label": "White Rabbit",
+      "canonical_id": "white_rabbit",
+      "display_name": "white_rabbit",
+      "status": "canonical",
+      "entity_kind": "group",
+      "resolution_score": 138,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH002/white_rabbit.md",
+      "notes": "Direct registry match for 'white_rabbit'."
+    },
+    {
+      "label": "Mouse",
+      "canonical_id": "mouse",
+      "display_name": "mouse",
+      "status": "canonical",
+      "entity_kind": "group",
+      "resolution_score": 138,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH002/mouse.md",
+      "notes": "Direct registry match for 'mouse'."
+    },
+    {
+      "label": "Duck",
+      "canonical_id": "the_duck",
+      "display_name": "the_duck",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 186,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH003/the_duck.md",
+      "notes": "asset id exactly matches canonical id | query matches alias 'duck'"
+    },
+    {
+      "label": "Dodo",
+      "canonical_id": "the_dodo",
+      "display_name": "the_dodo",
+      "status": "canonical",
+      "entity_kind": "group",
+      "resolution_score": 186,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH003/the_dodo.md",
+      "notes": "asset id exactly matches canonical id | query matches alias 'dodo'"
+    },
+    {
+      "label": "Lory",
+      "canonical_id": "the_lory",
+      "display_name": "the_lory",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 186,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH003/the_lory.md",
+      "notes": "asset id exactly matches canonical id | query matches alias 'lory'"
+    },
+    {
+      "label": "Eaglet",
+      "canonical_id": "the_eaglet",
+      "display_name": "the_eaglet",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 186,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH003/the_eaglet.md",
+      "notes": "asset id exactly matches canonical id | query matches alias 'eaglet'"
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "The Hall (Giant Scale)",
+      "canonical_id": "the_hall",
+      "display_name": "the_hall",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 138,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/environment_breakdowns/chapters/CH002/the_hall.md",
+      "notes": "Direct registry match for 'the_hall'."
+    },
+    {
+      "label": "The Pool of Tears",
+      "canonical_id": "the_pool_of_tears",
+      "display_name": "the_pool_of_tears",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 138,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/environment_breakdowns/chapters/CH002/the_pool_of_tears.md",
+      "notes": "Direct registry match for 'the_pool_of_tears'."
+    }
+  ],
+  "continuity_constraints": [
+    "Alice's height relative to ceiling and table",
+    "Physical size of the golden key",
+    "Water level in the pool of tears",
+    "Presence/location of white_rabbit's gloves and fan",
+    "Alice's physical scale during shrinking process"
+  ],
+  "visual_coverage_families": [
+    "Extreme low angle looking up at head/ceiling",
+    "Extreme high angle looking down at distant feet",
+    "POV shots through keyhole",
+    "Wide shots of growing pool of tears",
+    "Medium shots of character interactions",
+    "Close-ups of objects (key, gloves, fan)"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "alice hits head and finds key",
+      "purpose": "",
+      "action_start": "alice bumps ceiling",
+      "action_end": "alice holds golden key",
+      "active_subjects": [
+        "alice"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "the_hall",
+      "blocking_hint": "alice center, looking up",
+      "environment_subzone": "the_hall",
+      "continuity_focus": "height of alice vs ceiling",
+      "coverage_hint": "extreme low angle",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "alice cries and creates pool",
+      "purpose": "",
+      "action_start": "tears fall from eyes",
+      "action_end": "water covers floor",
+      "active_subjects": [
+        "alice"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "the_hall floor",
+      "blocking_hint": "wide shot of growing water",
+      "environment_subzone": "the_hall",
+      "continuity_focus": "water level rising",
+      "coverage_hint": "wide shots of pool",
+      "coverage_priority": "medium",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "white_rabbit appears and flees",
+      "purpose": "",
+      "action_start": "white_rabbit enters frame",
+      "action_end": "white_rabbit disappears",
+      "active_subjects": [
+        "white_rabbit",
+        "alice"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "the_hall near alice",
+      "blocking_hint": "rabbit moves past alice",
+      "environment_subzone": "the_hall",
+      "continuity_focus": "presence of fan and gloves",
+      "coverage_hint": "medium shots",
+      "coverage_priority": "medium",
+      "handoff_to_next": "BT004"
+    },
+    {
+      "beat_id": "BT004",
+      "summary": "alice shrinks and falls into tears",
+      "purpose": "",
+      "action_start": "alice begins shrinking",
+      "action_end": "alice hits water surface",
+      "active_subjects": [
+        "alice"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "the_pool_of_tears",
+      "blocking_hint": "vertical descent",
+      "environment_subzone": "the_pool_of_tears",
+      "continuity_focus": "alice scale shift to two feet",
+      "coverage_hint": "high angle looking down",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT005"
+    },
+    {
+      "beat_id": "BT005",
+      "summary": "alice meets animals and moves to shore",
+      "purpose": "",
+      "action_start": "alice surfaces in water",
+      "action_end": "alice leads group toward shore",
+      "active_subjects": [
+        "alice",
+        "mouse",
+        "the_duck",
+        "the_dodo",
+        "the_lory",
+        "the_eaglet"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "the_pool_of_tears edge",
+      "blocking_hint": "group moving together",
+      "environment_subzone": "the_pool_of_tears",
+      "continuity_focus": "animal group presence",
+      "coverage_hint": "medium shots of interaction",
+      "coverage_priority": "medium",
+      "handoff_to_next": "end_scene"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish scale",
+      "planned_shot_moment_summary": "alice hits ceiling",
+      "primary_subject_seed": "alice",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "the_hall",
+      "planned_shot_required_anchor_1": "ceiling",
+      "planned_shot_scale_proof_detail": "head touching ceiling",
+      "start_state_seed": "alice looking up",
+      "end_state_seed": "alice hitting head",
+      "action_seed": "alice bumps head against ceiling",
+      "blocking_seed": [
+        "center hall"
+      ],
+      "shot_size": "extreme_low_angle",
+      "camera_angle": "low_angle",
+      "lens_family": "ultra_wide",
+      "camera_motion": "tilt",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "show consequence of emotion",
+      "planned_shot_moment_summary": "tears forming pool",
+      "primary_subject_seed": "alice",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "the_hall",
+      "planned_shot_required_anchor_1": "floor",
+      "planned_shot_scale_proof_detail": "water level rising",
+      "start_state_seed": "alice crying",
+      "end_state_seed": "pool forms",
+      "action_seed": "tears flood the floor",
+      "blocking_seed": [
+        "wide shot of feet and water"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "eye_level",
+      "lens_family": "wide",
+      "camera_motion": "pull_back",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "soft_even",
+      "primary_subject_angle": "front_three_quarter_left"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "introduce catalyst for shrinking",
+      "planned_shot_moment_summary": "rabbit appears with fan",
+      "primary_subject_seed": "white_rabbit",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "the_hall",
+      "planned_shot_required_anchor_1": "fan",
+      "planned_shot_scale_proof_detail": "rabbit size vs alice",
+      "start_state_seed": "rabbit enters",
+      "end_state_seed": "rabbit flees",
+      "action_seed": "white_rabbit uses fan near alice",
+      "blocking_seed": [
+        "rabbit moves across frame"
+      ],
+      "shot_size": "medium",
+      "camera_angle": "eye_level",
+      "lens_family": "normal",
+      "camera_motion": "pan",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "soft_even",
+      "primary_subject_angle": "profile_left"
+    },
+    {
+      "planned_shot_id": "SH004",
+      "beat_id": "BT004",
+      "narrative_function": "execute scale shift",
+      "planned_shot_moment_summary": "alice shrinks and falls",
+      "primary_subject_seed": "alice",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "the_pool_of_tears",
+      "planned_shot_required_anchor_1": "water surface",
+      "planned_shot_scale_proof_detail": "alice is two feet tall",
+      "start_state_seed": "alice shrinking",
+      "end_state_seed": "alice hits water",
+      "action_seed": "alice falls into the pool of tears",
+      "blocking_seed": [
+        "vertical drop into water"
+      ],
+      "shot_size": "full",
+      "camera_angle": "high_angle",
+      "lens_family": "wide",
+      "camera_motion": "crane",
+      "zoom_behavior": "none",
+      "focus_strategy": "rack_focus",
+      "lighting_style": "soft_even",
+      "primary_subject_angle": "front"
+    }
+  ],
+  "unresolved_questions": [],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH002",
+      "scene_id": "CH002_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH002",
+      "scene_id": "CH002_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH002",
+      "scene_id": "CH002_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH002",
+      "scene_id": "CH002_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH002",
+      "scene_id": "CH002_SC001"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH002",
+      "source_path": "C:\\FilmCreator\\projects\\alice_in_wonderland\\02_story_analysis\\chapter_analysis\\CH002_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH002",
+      "source_path": "projects/alice_in_wonderland/01_source/chapters/CH002_chapter_ii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH001",
+      "source_path": "projects/alice_in_wonderland/01_source/chapters/CH001_chapter_i.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH012",
+      "source_path": "projects/alice_in_wonderland/01_source/chapters/CH012_chapter_xii.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH002",
+      "canonical_id": "alice"
+    }
+  ],
+  "evidence_summary": [
+    "[CH002_SC001] Purpose:",
+    "[CH002_SC001] Summary: Alice, now giant-sized, hits her head on the ceiling and finds a golden key but cannot fit through the garden door. She cries, creating a pool of tears, meets the White Rabbit who flees, and eventually shrinks to two feet tall due to...",
+    "[CH002_SC001] Emotional arc: Confusion to frustration to despair to social anxiety",
+    "[CH002_SC001] Coverage: Extreme low angle looking up at Alice's head/ceiling Extreme high angle looking down at her distant feet POV shots through the keyhole Wide shots of the growing pool of tears Medium shots of character interactions (Rabbit, Mouse) Clo...",
+    "[CH002_SC001] Continuity: Alice's height relative to ceiling and table Size of the golden key Water level in the pool of tears Presence/location of the White Rabbit's gloves and fan Alice's physical scale during shrinking process",
+    "[CH002] Chapter summary: **Location: The Hall / The Garden Door Subzone** * **Visual State:** Alice is giant (over nine feet tall). Her feet are distant and small from her perspective. * **Event:** Alice experiences a growth spurt/size shift,...",
+    "[CH002] CHAPTER II. (book index hit)",
+    "[CH001] CHAPTER I. (book index hit)",
+    "[CH012] CHAPTER XII. (book index hit)",
+    "Character alice: Alice is a young human girl characterized by extreme and rapid physical instability regarding her scale. She fluctuates between being a standard-sized child, shrinking to approximately ten inches in height, and growing to over nine feet tal..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH002_SC001\n\n## Production Intent\nEstablish the extreme physical instability of alice through rapid scale shifts. The sequence moves from a giant-sized presence in the hall to a miniature state within a pool of tears, requiring precise management of water levels and object scaling relative to the character.\n\n## Required Cast\n- alice\n- white_rabbit\n- mouse\n- the_duck\n- the_dodo\n- the_lory\n- the_eaglet\n\n## Required Environments\n- the_hall\n- the_pool_of_tears\n\n## Continuity Constraints\n- Alice's height relative to ceiling and table\n- Physical size of the golden key\n- Water level in the pool of tears\n- Presence/location of white_rabbit's gloves and fan\n- Alice's physical scale during shrinking process\n\n## Beat List\n- BT001: alice hits head and finds key\n- BT002: alice cries and creates pool\n- BT003: white_rabbit appears and flees\n- BT004: alice shrinks and falls into tears\n- BT005: alice meets animals and moves to shore",
+  "metadata": {
+    "artifact_id": "CH002_SC001_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "b357dcb531280c47674f7e9297cbf0c97c253ccf",
+    "created_at_utc": "2026-04-28T04:35:28.105381+00:00",
+    "updated_at_utc": "2026-04-28T04:35:28.105381+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH002_SC001",
+        "version": "c61de754ec2086c59483fb5a823da4b7a3b88121"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH002_SC001",
+        "version": "2cdbc6bc225cea62c19b9ff71b9e7460d9d63c8b"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH002_SC001",
+        "version": "741c6461102098eacec8927885ac59abb6a1ed2e"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-28T04:36:05.008798+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "b357dcb531280c47674f7e9297cbf0c97c253ccf"
+      }
+    ]
+  }
+}

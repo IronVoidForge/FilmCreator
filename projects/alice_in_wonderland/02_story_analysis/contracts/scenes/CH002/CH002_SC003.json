@@ -1,0 +1,350 @@
+{
+  "scene_id": "CH002_SC003",
+  "chapter_id": "CH002",
+  "scene_title": "CH002_SC003",
+  "purpose": "",
+  "summary": "Alice attempts to verify her identity through math and poetry but fails, leading to a sense of lost self. After shrinking to two feet tall, she runs toward the garden door but slips and falls into the large pool of tears she previously created.",
+  "emotional_arc": "Existential dread to physical vulnerability.",
+  "production_intent": "Alice undergoes a psychological crisis through failed recitation of math and poetry, followed by a physical scale shift to two feet tall. The sequence concludes with a high-stakes movement toward the garden door that results in a slip into the pool of tears.",
+  "scene_short_description": "A tiny girl fails to remember herself before falling into a large pool of tears.",
+  "scene_primary_scale_story_point": "Alice is approximately 2 feet tall relative to the hall furniture.",
+  "scene_required_anchor_catalog": [
+    "glass table",
+    "golden key",
+    "garden door",
+    "pool of tears"
+  ],
+  "scene_start_state": "Alice stands in the hall attempting to recite math and poetry.",
+  "scene_end_state": "Alice is submerged or splashing in the pool of tears.",
+  "dominant_action_line": "Alice recites, shrinks, runs, slips, and falls.",
+  "scene_spatial_layout": [
+    "The Hall contains a glass table with a golden key.",
+    "A path leads from the hall area toward the garden door.",
+    "The pool of tears sits in the path of movement."
+  ],
+  "character_spatial_map": [
+    "Alice moves from the vicinity of the glass table toward the garden door."
+  ],
+  "environment_subzones": [
+    "the_hall",
+    "the_pool_of_tears"
+  ],
+  "scene_event_chain": [
+    "event 1: Alice recites math and poetry to verify her identity.",
+    "event 2: Alice fails her recitation and experiences a loss of self.",
+    "event 3: Alice shrinks to two feet tall.",
+    "event 4: Alice runs toward the garden door, slips, and falls into the pool of tears."
+  ],
+  "entry_vectors": [
+    "Hall interior"
+  ],
+  "exit_vectors": [
+    "Into the pool of tears"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: internal realization/failure",
+    "BT002 -> BT003: physical transformation",
+    "BT003 -> BT004: sudden kinetic accident"
+  ],
+  "characters_required": [
+    {
+      "label": "Alice",
+      "canonical_id": "alice",
+      "display_name": "alice",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH002/alice.md",
+      "notes": "Direct registry match for 'alice'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "The Hall (Small Scale)",
+      "canonical_id": "the_hall",
+      "display_name": "the_hall",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 138,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/environment_breakdowns/chapters/CH002/the_hall.md",
+      "notes": "Direct registry match for 'the_hall'."
+    },
+    {
+      "label": "The Pool",
+      "canonical_id": "the_pool_of_tears",
+      "display_name": "the_pool_of_tears",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 70,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/environment_breakdowns/chapters/CH002/the_pool_of_tears.md",
+      "notes": "Chapter-local environment alias match for 'The Pool' (key_overlap=1, label_overlap=1, context_overlap=4)."
+    }
+  ],
+  "continuity_constraints": [
+    "Alice height must be approximately 2 feet",
+    "Golden key position on glass table must remain consistent"
+  ],
+  "visual_coverage_families": [
+    "Close-ups on Alice's face during recitation",
+    "POV shots of the table/key from a small perspective",
+    "Wide shot of the slip and fall into the water"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "Alice recites math and poetry",
+      "purpose": "",
+      "action_start": "Alice begins reciting",
+      "action_end": "Recitation fails",
+      "active_subjects": [
+        "alice"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "the_hall",
+      "blocking_hint": "standing near glass table",
+      "environment_subzone": "the_hall",
+      "continuity_focus": "standard child scale",
+      "coverage_hint": "close-ups on face",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "Alice fails to verify identity",
+      "purpose": "",
+      "action_start": "Alice stops reciting",
+      "action_end": "Alice realizes she has lost her sense of self",
+      "active_subjects": [
+        "alice"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "the_hall",
+      "blocking_hint": "standing still",
+      "environment_subzone": "the_hall",
+      "continuity_focus": "existential dread",
+      "coverage_hint": "close-ups on face",
+      "coverage_priority": "medium",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "Alice shrinks to two feet tall",
+      "purpose": "",
+      "action_start": "Physical scale shift begins",
+      "action_end": "Alice is 2 feet tall",
+      "active_subjects": [
+        "alice"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "the_hall",
+      "blocking_hint": "near glass table/key",
+      "environment_subzone": "the_hall",
+      "continuity_focus": "Alice height approx 2 feet",
+      "coverage_hint": "POV shots of table/key",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT004"
+    },
+    {
+      "beat_id": "BT004",
+      "summary": "Alice runs, slips, and falls into the pool",
+      "purpose": "",
+      "action_start": "Alice begins running toward garden door",
+      "action_end": "Alice falls into the pool of tears",
+      "active_subjects": [
+        "alice"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "path between hall and garden door",
+      "blocking_hint": "running then slipping",
+      "environment_subzone": "the_pool_of_tears",
+      "continuity_focus": "physical vulnerability",
+      "coverage_hint": "wide shot of slip/fall",
+      "coverage_priority": "high",
+      "handoff_to_next": "end_of_scene"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish identity crisis",
+      "planned_shot_moment_summary": "Alice reciting math and poetry",
+      "primary_subject_seed": "alice",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "the_hall",
+      "planned_shot_required_anchor_1": "glass table",
+      "planned_shot_scale_proof_detail": "standard child scale",
+      "start_state_seed": "Alice speaking",
+      "end_state_seed": "Alice stops speaking",
+      "action_seed": "recitation",
+      "blocking_seed": [
+        "standing near table"
+      ],
+      "shot_size": "close_up",
+      "camera_angle": "eye_level",
+      "lens_family": "portrait",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "soft_even",
+      "primary_subject_angle": "front_three_quarter_left"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT003",
+      "narrative_function": "establish scale shift",
+      "planned_shot_moment_summary": "Alice looking at the world from 2 feet height",
+      "primary_subject_seed": "alice",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "the_hall",
+      "planned_shot_required_anchor_1": "golden key",
+      "planned_shot_scale_proof_detail": "Alice is 2 feet tall",
+      "start_state_seed": "Alice shrinking",
+      "end_state_seed": "Alice standing small",
+      "action_seed": "shrinking",
+      "blocking_seed": [
+        "near glass table"
+      ],
+      "shot_size": "medium_full",
+      "camera_angle": "low_angle",
+      "lens_family": "wide",
+      "camera_motion": "push_in",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "soft_even",
+      "primary_subject_angle": "front"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT004",
+      "narrative_function": "climax/accident",
+      "planned_shot_moment_summary": "Alice slipping and falling into water",
+      "primary_subject_seed": "alice",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "the_pool_of_tears",
+      "planned_shot_required_anchor_1": "garden door",
+      "planned_shot_scale_proof_detail": "Alice is 2 feet tall",
+      "start_state_seed": "Alice running",
+      "end_state_seed": "Alice hitting water",
+      "action_seed": "slip and fall",
+      "blocking_seed": [
+        "running toward door",
+        "then falling into pool"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "eye_level",
+      "lens_family": "ultra_wide",
+      "camera_motion": "track",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "profile_left"
+    }
+  ],
+  "unresolved_questions": [],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH002",
+      "scene_id": "CH002_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH002",
+      "scene_id": "CH002_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH002",
+      "scene_id": "CH002_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH002",
+      "scene_id": "CH002_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH002",
+      "scene_id": "CH002_SC003"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH002",
+      "source_path": "C:\\FilmCreator\\projects\\alice_in_wonderland\\02_story_analysis\\chapter_analysis\\CH002_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH004",
+      "source_path": "projects/alice_in_wonderland/01_source/chapters/CH004_chapter_iv.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH002",
+      "source_path": "projects/alice_in_wonderland/01_source/chapters/CH002_chapter_ii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH012",
+      "source_path": "projects/alice_in_wonderland/01_source/chapters/CH012_chapter_xii.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH002",
+      "canonical_id": "alice"
+    }
+  ],
+  "evidence_summary": [
+    "[CH002_SC003] Purpose:",
+    "[CH002_SC003] Summary: Alice attempts to verify her identity through math and poetry but fails, leading to a sense of lost self. After shrinking to two feet tall, she runs toward the garden door but slips and falls into the large pool of tears she previousl...",
+    "[CH002_SC003] Emotional arc: Existential dread to physical vulnerability.",
+    "[CH002_SC003] Coverage: Close-ups on Alice's face during recitation POV shots of the table/key from a small perspective Wide shot of the slip and fall into the water",
+    "[CH002_SC003] Continuity: Alice's height (approx 2 feet) Position of the golden key on the glass table",
+    "[CH002] Chapter summary: **Location: The Hall / The Garden Door Subzone** * **Visual State:** Alice is giant (over nine feet tall). Her feet are distant and small from her perspective. * **Event:** Alice experiences a growth spurt/size shift,...",
+    "[CH004] CHAPTER IV. (book index hit)",
+    "[CH002] CHAPTER II. (book index hit)",
+    "[CH012] CHAPTER XII. (book index hit)",
+    "Character alice: Alice is a young human girl characterized by extreme and rapid physical instability regarding her scale. She fluctuates between being a standard-sized child, shrinking to approximately ten inches in height, and growing to over nine feet tal..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH002_SC003\n\n## Production Intent\nEstablish Alice's identity crisis through failed recitation, followed by a physical scale shift to 2 feet tall. The scene transitions from existential dread to physical vulnerability as she runs toward the garden door and falls into the pool of tears.\n\n## Required Cast\n- alice (young human girl, fluctuating scale)\n\n## Required Environments\n- the_hall (containing glass table and golden key)\n- the_pool_of_tears (large body of water in path to garden door)\n\n## Continuity Constraints\n- Alice height: ~2 feet during movement/fall.\n- Golden key position on glass table must be consistent relative to Alice's scale.\n\n## Beat List\n- BT001: Recitation of math and poetry.\n- BT002: Failure of recitation and loss of self.\n- BT003: Shrinking to 2 feet tall.\n- BT004: Running toward garden door, slipping, and falling into the pool.",
+  "metadata": {
+    "artifact_id": "CH002_SC003_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "53a2a7fbd3d82d2c06970e856e2887d68a616e89",
+    "created_at_utc": "2026-04-28T04:36:48.502507+00:00",
+    "updated_at_utc": "2026-04-28T04:36:48.502507+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH002_SC003",
+        "version": "b38e9d2693a508865f2c375c8e3431cde82714da"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH002_SC003",
+        "version": "159d9a1e58157b0fe300849add79dfd48dc45661"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH002_SC003",
+        "version": "f3c61de52b93f1a6a08f06d4512c8db61fa4c291"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-28T04:37:18.157542+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "53a2a7fbd3d82d2c06970e856e2887d68a616e89"
+      }
+    ]
+  }
+}

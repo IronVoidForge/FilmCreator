@@ -1,0 +1,358 @@
+{
+  "scene_id": "CH005_SC001",
+  "chapter_id": "CH005",
+  "scene_title": "CH005_SC001",
+  "purpose": "",
+  "summary": "Alice confronts the Caterpillar atop a mushroom. They engage in a tense, surreal dialogue about who she is and her changing size, punctuated by the Caterpillar's hookah smoking and Alice's failed recitation of poetry.",
+  "emotional_arc": "Confusion to frustration",
+  "production_intent": "Establish the surreal power dynamic between a physically unstable Alice and a languid Caterpillar. The scene relies on height differentials and scale fluctuations to emphasize Alice's loss of control, using hookah smoke as a rhythmic visual element.",
+  "scene_short_description": "A small girl confronts a large insect atop a tall mushroom in a forest clearing.",
+  "scene_primary_scale_story_point": "Alice fluctuates between ten inches and nine feet in height.",
+  "scene_required_anchor_catalog": [
+    "Mushroom cap",
+    "Hookah pipe"
+  ],
+  "scene_start_state": "Alice stands at the base of the mushroom looking up at the Caterpillar.",
+  "scene_end_state": "Alice expresses visible frustration following a failed recitation.",
+  "dominant_action_line": "Alice attempts to assert her identity while the Caterpillar smokes and questions her.",
+  "scene_spatial_layout": [
+    "Vertical hierarchy with Caterpillar elevated on mushroom cap",
+    "Open clearing surrounding the central mushroom structure"
+  ],
+  "character_spatial_map": [
+    "caterpillar positioned atop the mushroom cap",
+    "alice positioned at the base or climbing the stem"
+  ],
+  "environment_subzones": [
+    "mushroom_cap",
+    "mushroom_stem",
+    "forest_floor"
+  ],
+  "scene_event_chain": [
+    "event 1: Alice confronts the Caterpillar regarding her identity.",
+    "event 2: The Caterpillar smokes the hookah and questions Alice's size changes.",
+    "event 3: Alice attempts to recite poetry to prove her stability.",
+    "event 4: Alice fails the recitation and experiences rising frustration."
+  ],
+  "entry_vectors": [
+    "forest_floor approach"
+  ],
+  "exit_vectors": [
+    "mushroom_clearing departure"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: interrogation shift",
+    "BT002 -> BT003: performance attempt",
+    "BT003 -> BT004: failure realization"
+  ],
+  "characters_required": [
+    {
+      "label": "Alice",
+      "canonical_id": "alice",
+      "display_name": "alice",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH005/alice.md",
+      "notes": "Direct registry match for 'alice'."
+    },
+    {
+      "label": "Caterpillar",
+      "canonical_id": "caterpillar",
+      "display_name": "caterpillar",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH005/caterpillar.md",
+      "notes": "Direct registry match for 'caterpillar'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "Mushroom Clearing",
+      "canonical_id": "mushroom_clearing",
+      "display_name": "mushroom_clearing",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 138,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/environment_breakdowns/chapters/CH005/mushroom_clearing.md",
+      "notes": "Direct registry match for 'mushroom_clearing'."
+    }
+  ],
+  "continuity_constraints": [
+    "Smoke patterns from hookah",
+    "Alice physical scale relative to the mushroom"
+  ],
+  "visual_coverage_families": [
+    "Close-ups on Caterpillar face and hookah",
+    "Medium shots of Alice reaction",
+    "Wide shot establishing mushroom height"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "Alice confronts the Caterpillar",
+      "purpose": "",
+      "action_start": "Alice approaches mushroom",
+      "action_end": "Alice asks who she is",
+      "active_subjects": [
+        "alice",
+        "caterpillar"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "mushroom_clearing",
+      "blocking_hint": "Alice at base looking up",
+      "environment_subzone": "mushroom_stem",
+      "continuity_focus": "Alice scale relative to stem",
+      "coverage_hint": "wide shot",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "The Caterpillar questions Alice's identity and size",
+      "purpose": "",
+      "action_start": "Caterpillar exhales smoke",
+      "action_end": "Caterpillar finishes questioning",
+      "active_subjects": [
+        "caterpillar",
+        "alice"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "mushroom_cap",
+      "blocking_hint": "Caterpillar seated on cap",
+      "environment_subzone": "mushroom_cap",
+      "continuity_focus": "Smoke patterns from hookah",
+      "coverage_hint": "close-ups on face/hookah",
+      "coverage_priority": "medium",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "Alice attempts to recite poetry",
+      "purpose": "",
+      "action_start": "Alice begins speaking poem",
+      "action_end": "Alice stops mid-recitation",
+      "active_subjects": [
+        "alice"
+      ],
+      "passive_subjects": [
+        "caterpillar"
+      ],
+      "spatial_context": "mushroom_clearing",
+      "blocking_hint": "Alice looking up at cap",
+      "environment_subzone": "mushroom_stem",
+      "continuity_focus": "Alice physical instability/size change",
+      "coverage_hint": "medium shots of Alice",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT004"
+    },
+    {
+      "beat_id": "BT004",
+      "summary": "Alice experiences frustration",
+      "purpose": "",
+      "action_start": "Alice stops speaking",
+      "action_end": "Alice shows visible anger/confusion",
+      "active_subjects": [
+        "alice"
+      ],
+      "passive_subjects": [
+        "caterpillar"
+      ],
+      "spatial_context": "mushroom_clearing",
+      "blocking_hint": "Alice looking up in frustration",
+      "environment_subzone": "mushroom_stem",
+      "continuity_focus": "Alice scale",
+      "coverage_hint": "medium shots of Alice",
+      "coverage_priority": "medium",
+      "handoff_to_next": "end_of_scene"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish scale",
+      "planned_shot_moment_summary": "Alice looks up at the mushroom",
+      "primary_subject_seed": "alice",
+      "secondary_subjects_seed": [
+        "caterpillar"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "mushroom_stem",
+      "planned_shot_required_anchor_1": "mushroom_stem",
+      "planned_shot_scale_proof_detail": "Alice height vs mushroom stem",
+      "start_state_seed": "Alice standing still",
+      "end_state_seed": "Alice speaking",
+      "action_seed": "Alice looks up",
+      "blocking_seed": [
+        "Alice at base of stem"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "low_angle",
+      "lens_family": "wide",
+      "camera_motion": "tilt",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front_three_quarter_left"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "character detail",
+      "planned_shot_moment_summary": "Caterpillar exhales smoke",
+      "primary_subject_seed": "caterpillar",
+      "secondary_subjects_seed": [
+        "hookah"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "mushroom_cap",
+      "planned_shot_required_anchor_1": "hookah",
+      "planned_shot_scale_proof_detail": "Caterpillar size relative to hookah",
+      "start_state_seed": "Caterpillar inhaling",
+      "end_state_seed": "Smoke cloud fills frame",
+      "action_seed": "Caterpillar exhales",
+      "blocking_seed": [
+        "Caterpillar seated on cap"
+      ],
+      "shot_size": "close_up",
+      "camera_angle": "eye_level",
+      "lens_family": "portrait",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "subtle_in",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "backlit",
+      "primary_subject_angle": "profile_right"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "emotional reaction",
+      "planned_shot_moment_summary": "Alice fails her poem",
+      "primary_subject_seed": "alice",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "mushroom_stem",
+      "planned_shot_required_anchor_1": "mushroom_stem",
+      "planned_shot_scale_proof_detail": "Alice neck elongation/size shift",
+      "start_state_seed": "Alice speaking poetry",
+      "end_state_seed": "Alice stops mid-sentence",
+      "action_seed": "Alice stammers",
+      "blocking_seed": [
+        "Alice looking upward"
+      ],
+      "shot_size": "medium_close",
+      "camera_angle": "low_angle",
+      "lens_family": "normal",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front"
+    }
+  ],
+  "unresolved_questions": [],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH005",
+      "scene_id": "CH005_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH005",
+      "scene_id": "CH005_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH005",
+      "scene_id": "CH005_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH005",
+      "scene_id": "CH005_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH005",
+      "scene_id": "CH005_SC001"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH005",
+      "source_path": "C:\\FilmCreator\\projects\\alice_in_wonderland\\02_story_analysis\\chapter_analysis\\CH005_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH005",
+      "source_path": "projects/alice_in_wonderland/01_source/chapters/CH005_chapter_v.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH004",
+      "source_path": "projects/alice_in_wonderland/01_source/chapters/CH004_chapter_iv.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH003",
+      "source_path": "projects/alice_in_wonderland/01_source/chapters/CH003_chapter_iii.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH005",
+      "canonical_id": "alice"
+    }
+  ],
+  "evidence_summary": [
+    "[CH005_SC001] Purpose:",
+    "[CH005_SC001] Summary: Alice confronts the Caterpillar atop a mushroom. They engage in a tense, surreal dialogue about who she is and her changing size, punctuated by the Caterpillar's hookah smoking and Alice's failed recitation of poetry.",
+    "[CH005_SC001] Emotional arc: Confusion to frustration",
+    "[CH005_SC001] Coverage: Close-ups on Caterpillar's face/hookah medium shots of Alice's reaction wide shot establishing the mushroom height",
+    "[CH005_SC001] Continuity: Smoke patterns from hookah Alice's physical scale relative to the mushroom",
+    "[CH005] Chapter summary: **Location: Mushroom Clearing / Forest Canopy** **Characters:** * **Alice:** A young girl experiencing rapid physical instability (size changes, neck elongation). * **Caterpillar:** A languid, hookah-smoking insect si...",
+    "[CH005] CHAPTER V. (book index hit)",
+    "[CH004] CHAPTER IV. (book index hit)",
+    "[CH003] CHAPTER III. (book index hit)",
+    "Character alice: Alice is a young human girl characterized by extreme and rapid physical instability regarding her scale. She fluctuates between being a standard-sized child, shrinking to approximately ten inches in height, and growing to over nine feet tal..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH005_SC001\n\n## Production Intent\nEstablish the surreal power dynamic between a physically unstable Alice and a languid Caterpillar. The scene relies on height differentials and scale fluctuations to emphasize Alice's loss of control, using hookah smoke as a rhythmic visual element.\n\n## Required Cast\n- alice: Young girl with rapid physical instability (size/neck elongation).\n- caterpillar: Languid, hookah-smoking insect.\n\n## Required Environments\n- mushroom_clearing: Forest setting featuring a large mushroom structure.\n\n## Continuity Constraints\n- Smoke patterns from hookah must remain consistent between shots.\n- Alice's scale relative to the mushroom stem and cap must reflect her current size state (10 inches to 9 feet).\n\n## Beat List\n- BT001: Alice confronts the Caterpillar regarding her identity.\n- BT002: The Caterpillar smokes and questions Alice's changing size.\n- BT003: Alice attempts to recite poetry to prove herself.\n- BT004: Alice fails the recitation and experiences rising frustration.",
+  "metadata": {
+    "artifact_id": "CH005_SC001_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "fcdc6f949ef543968947c25626ba125eec504d2c",
+    "created_at_utc": "2026-04-28T04:42:43.718819+00:00",
+    "updated_at_utc": "2026-04-28T04:42:43.718819+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH005_SC001",
+        "version": "1595ca656e3dbc5cccb14653fe1e98c7e06b6ac1"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH005_SC001",
+        "version": "f7389338d2d1dd1e68c5754f0f2ecc198963a68e"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH005_SC001",
+        "version": "0b9165e47cbd98fabec3d9f62562f4d0254a8875"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-28T04:43:13.018321+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "fcdc6f949ef543968947c25626ba125eec504d2c"
+      }
+    ]
+  }
+}

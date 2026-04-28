@@ -1,0 +1,384 @@
+{
+  "scene_id": "CH002_SC002",
+  "chapter_id": "CH002",
+  "scene_title": "CH002_SC002",
+  "purpose": "",
+  "summary": "Alice cries, creating a pool of tears. The White Rabbit rushes past, dropping his gloves and fan. Alice picks up the fan to cool herself, which causes her to shrink rapidly to two feet tall. She realizes the fan is the cause and drops it.",
+  "emotional_arc": "Distress to panic/realization.",
+  "production_intent": "Establish the physical consequence of Alice's emotional distress through a rapid scale shift. The sequence requires precise coordination between rising water levels and the character's shrinking height to maintain the logic of her environment.",
+  "scene_short_description": "A crying girl creates a pool of tears as a rabbit rushes past, dropping items.",
+  "scene_primary_scale_story_point": "Alice shrinks from standard child size to two feet tall.",
+  "scene_required_anchor_catalog": [
+    "the_hall floor (water level)",
+    "white_rabbit's fan"
+  ],
+  "scene_start_state": "Alice is crying in the hall, creating a growing pool of tears.",
+  "scene_end_state": "Alice stands two feet tall, having dropped the fan in realization.",
+  "dominant_action_line": "Alice cries, the Rabbit drops items, Alice uses the fan and shrinks.",
+  "scene_spatial_layout": [
+    "Open floor space of the hall accumulating water",
+    "Path of movement for the White Rabbit"
+  ],
+  "character_spatial_map": [
+    "alice is centered in the growing pool",
+    "white_rabbit moves rapidly across the frame"
+  ],
+  "environment_subzones": [
+    "the_hall (pool area)"
+  ],
+  "scene_event_chain": [
+    "event 1: Alice cries and creates a pool of tears.",
+    "event 2: White Rabbit rushes past, dropping gloves and a fan.",
+    "event 3: Alice picks up the fan to cool herself.",
+    "event 4: Alice shrinks rapidly to two feet tall and drops the fan."
+  ],
+  "entry_vectors": [
+    "white_rabbit enters via rapid movement across the hall"
+  ],
+  "exit_vectors": [
+    "alice remains in the hall at a reduced scale"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: Rabbit's sudden intrusion",
+    "BT002 -> BT003: Alice's reaction to dropped items",
+    "BT003 -> BT004: Physical transformation/shrinkage"
+  ],
+  "characters_required": [
+    {
+      "label": "Alice",
+      "canonical_id": "alice",
+      "display_name": "alice",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH002/alice.md",
+      "notes": "Direct registry match for 'alice'."
+    },
+    {
+      "label": "White Rabbit",
+      "canonical_id": "white_rabbit",
+      "display_name": "white_rabbit",
+      "status": "canonical",
+      "entity_kind": "group",
+      "resolution_score": 138,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH002/white_rabbit.md",
+      "notes": "Direct registry match for 'white_rabbit'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "The Hall (Pool of Tears)",
+      "canonical_id": "the_hall",
+      "display_name": "the_hall",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 138,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/environment_breakdowns/chapters/CH002/the_hall.md",
+      "notes": "Direct registry match for 'the_hall'."
+    }
+  ],
+  "continuity_constraints": [
+    "Water level in the hall relative to Alice's feet",
+    "Size of the fan relative to Alice's changing height",
+    "Presence and position of gloves and fan on the floor"
+  ],
+  "visual_coverage_families": [
+    "Wide shots showing the growing pool",
+    "Medium shots of the Rabbit's frantic movement",
+    "Time-lapse or rapid scale-change shots for Alice shrinking"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "Alice cries and creates a pool of tears",
+      "purpose": "",
+      "action_start": "Alice begins weeping",
+      "action_end": "Water forms a visible pool around Alice",
+      "active_subjects": [
+        "alice"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "the_hall floor",
+      "blocking_hint": "Alice is stationary in the center",
+      "environment_subzone": "the_hall",
+      "continuity_focus": "water level height",
+      "coverage_hint": "wide shots of growing pool",
+      "coverage_priority": "high",
+      "handoff_to_next": "Rabbit's entrance"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "White Rabbit rushes past and drops items",
+      "purpose": "",
+      "action_start": "White Rabbit enters frame",
+      "action_end": "Gloves and fan land in the hall",
+      "active_subjects": [
+        "white_rabbit"
+      ],
+      "passive_subjects": [
+        "alice"
+      ],
+      "spatial_context": "the_hall floor",
+      "blocking_hint": "Rabbit moves across Alice's field of view",
+      "environment_subzone": "the_hall",
+      "continuity_focus": "position of gloves and fan",
+      "coverage_hint": "medium shots of Rabbit movement",
+      "coverage_priority": "medium",
+      "handoff_to_next": "Alice interacting with items"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "Alice picks up the fan and cools herself",
+      "purpose": "",
+      "action_start": "Alice reaches for the fan",
+      "action_end": "Alice begins fanning herself",
+      "active_subjects": [
+        "alice"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "the_hall floor near the pool",
+      "blocking_hint": "Alice leans toward the dropped items",
+      "environment_subzone": "the_hall",
+      "continuity_focus": "fan size relative to Alice's hands",
+      "coverage_hint": "medium shots",
+      "coverage_priority": "high",
+      "handoff_to_next": "The shrinking process"
+    },
+    {
+      "beat_id": "BT004",
+      "summary": "Alice shrinks and drops the fan",
+      "purpose": "",
+      "action_start": "Alice begins to shrink",
+      "action_end": "Alice reaches two feet tall and drops the fan",
+      "active_subjects": [
+        "alice"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "the_hall floor",
+      "blocking_hint": "Alice's scale changes rapidly in place",
+      "environment_subzone": "the_hall",
+      "continuity_focus": "final height of Alice (two feet)",
+      "coverage_hint": "time-lapse/rapid scale shots",
+      "coverage_priority": "high",
+      "handoff_to_next": "End of scene"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish environment and distress",
+      "planned_shot_moment_summary": "Alice crying in the growing pool",
+      "primary_subject_seed": "alice",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "the_hall",
+      "planned_shot_required_anchor_1": "the_hall floor",
+      "planned_shot_scale_proof_detail": "water level rising around Alice's feet",
+      "start_state_seed": "Alice weeping",
+      "end_state_seed": "pool expands",
+      "action_seed": "Alice cries",
+      "blocking_seed": [
+        "Alice seated/kneeling in center"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "eye_level",
+      "lens_family": "wide",
+      "camera_motion": "pull_back",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front_three_quarter_left"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "introduce catalyst/chaos",
+      "planned_shot_moment_summary": "Rabbit rushes past dropping items",
+      "primary_subject_seed": "white_rabbit",
+      "secondary_subjects_seed": [
+        "gloves",
+        "fan"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "the_hall",
+      "planned_shot_required_anchor_1": "the_hall floor",
+      "planned_shot_scale_proof_detail": "items hitting the water surface",
+      "start_state_seed": "Rabbit enters frame",
+      "end_state_seed": "Rabbit exits frame",
+      "action_seed": "Rabbit drops gloves and fan",
+      "blocking_seed": [
+        "Rabbit runs across Alice's midground"
+      ],
+      "shot_size": "medium",
+      "camera_angle": "eye_level",
+      "lens_family": "normal",
+      "camera_motion": "pan",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "profile_right"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "trigger scale shift",
+      "planned_shot_moment_summary": "Alice uses fan and shrinks",
+      "primary_subject_seed": "alice",
+      "secondary_subjects_seed": [
+        "fan"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "the_hall",
+      "planned_shot_required_anchor_1": "white_rabbit's fan",
+      "planned_shot_scale_proof_detail": "fan becomes massive relative to Alice",
+      "start_state_seed": "Alice picks up fan",
+      "end_state_seed": "Alice reaches two feet tall",
+      "action_seed": "Alice fans herself and shrinks",
+      "blocking_seed": [
+        "Alice seated",
+        "shrinking in place"
+      ],
+      "shot_size": "medium_full",
+      "camera_angle": "low_angle",
+      "lens_family": "wide",
+      "camera_motion": "push_in",
+      "zoom_behavior": "strong_in",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front"
+    },
+    {
+      "planned_shot_id": "SH004",
+      "beat_id": "BT004",
+      "narrative_function": "conclude realization",
+      "planned_shot_moment_summary": "Alice drops the fan in panic",
+      "primary_subject_seed": "alice",
+      "secondary_subjects_seed": [
+        "fan"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "the_hall",
+      "planned_shot_required_anchor_1": "white_rabbit's fan",
+      "planned_shot_scale_proof_detail": "fan hits floor near two-foot Alice",
+      "start_state_seed": "Alice realizes cause",
+      "end_state_seed": "Alice drops fan",
+      "action_seed": "Alice drops the fan",
+      "blocking_seed": [
+        "Alice recoils from fan"
+      ],
+      "shot_size": "medium_close",
+      "camera_angle": "eye_level",
+      "lens_family": "normal",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front"
+    }
+  ],
+  "unresolved_questions": [],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH002",
+      "scene_id": "CH002_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH002",
+      "scene_id": "CH002_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH002",
+      "scene_id": "CH002_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH002",
+      "scene_id": "CH002_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH002",
+      "scene_id": "CH002_SC002"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH002",
+      "source_path": "C:\\FilmCreator\\projects\\alice_in_wonderland\\02_story_analysis\\chapter_analysis\\CH002_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH002",
+      "source_path": "projects/alice_in_wonderland/01_source/chapters/CH002_chapter_ii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH004",
+      "source_path": "projects/alice_in_wonderland/01_source/chapters/CH004_chapter_iv.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH007",
+      "source_path": "projects/alice_in_wonderland/01_source/chapters/CH007_chapter_vii.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH002",
+      "canonical_id": "alice"
+    }
+  ],
+  "evidence_summary": [
+    "[CH002_SC002] Purpose:",
+    "[CH002_SC002] Summary: Alice cries, creating a pool of tears. The White Rabbit rushes past, dropping his gloves and fan. Alice picks up the fan to cool herself, which causes her to shrink rapidly to two feet tall. She realizes the fan is the cause and drops...",
+    "[CH002_SC002] Emotional arc: Distress to panic/realization.",
+    "[CH002_SC002] Coverage: Wide shots showing the growing pool Medium shots of the Rabbit's frantic movement Time-lapse or rapid scale-change shots for Alice shrinking",
+    "[CH002_SC002] Continuity: Water level in the hall Size of the fan relative to Alice's changing height Presence of the gloves and fan on the floor",
+    "[CH002] Chapter summary: **Location: The Hall / The Garden Door Subzone** * **Visual State:** Alice is giant (over nine feet tall). Her feet are distant and small from her perspective. * **Event:** Alice experiences a growth spurt/size shift,...",
+    "[CH002] CHAPTER II. (book index hit)",
+    "[CH004] CHAPTER IV. (book index hit)",
+    "[CH007] CHAPTER VII. (book index hit)",
+    "Character alice: Alice is a young human girl characterized by extreme and rapid physical instability regarding her scale. She fluctuates between being a standard-sized child, shrinking to approximately ten inches in height, and growing to over nine feet tal..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH002_SC002\n\n## Production Intent\nEstablish the physical consequence of Alice's emotional distress through a rapid scale shift. The sequence requires precise coordination between rising water levels and the character's shrinking height to maintain the logic of her environment.\n\n## Required Cast\n- alice (young human girl, extreme scale instability)\n- white_rabbit (frantic movement)\n\n## Required Environments\n- the_hall (pool area with accumulating water)\n\n## Continuity Constraints\n- Water level in the hall relative to Alice's feet\n- Size of the fan relative to Alice's changing height\n- Presence and position of gloves and fan on the floor\n\n## Beat List\n- BT001: Alice cries and creates a pool of tears.\n- BT002: White Rabbit rushes past, dropping gloves and a fan.\n- BT003: Alice picks up the fan to cool herself.\n- BT004: Alice shrinks rapidly to two feet tall and drops the fan.",
+  "metadata": {
+    "artifact_id": "CH002_SC002_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "e0e93b0087e5380347678747d18c02fb9f68fbab",
+    "created_at_utc": "2026-04-28T04:36:10.335595+00:00",
+    "updated_at_utc": "2026-04-28T04:36:10.335595+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH002_SC002",
+        "version": "27d91d109ba376fd235f78429f0fbe222b1ae77d"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH002_SC002",
+        "version": "5ba563fa60365edac59c902270dc70dc79f04d39"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH002_SC002",
+        "version": "4a1cbbbfccd5146bb633171671493218828b1cd6"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-28T04:36:43.380667+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "e0e93b0087e5380347678747d18c02fb9f68fbab"
+      }
+    ]
+  }
+}

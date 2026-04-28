@@ -1,0 +1,384 @@
+{
+  "scene_id": "CH004_SC002",
+  "chapter_id": "CH004",
+  "scene_title": "CH004_SC002",
+  "purpose": "",
+  "summary": "Alice drinks from an unlabeled bottle and undergoes a rapid growth spurt, expanding until her head hits the ceiling and her limbs obstruct the window and chimney. The White Rabbit attempts to enter through the window but is nearly caught by Alice's hand.",
+  "emotional_arc": "Wonder to Panic/Chaos",
+  "production_intent": "Execute a rapid physical scale transition for alice where she expands from child-size to over nine feet tall within the confines of white_rabbit_house. The sequence must visually communicate the obstruction of architectural features including the window and chimney as her limbs expand into the room's volume.",
+  "scene_short_description": "A child drinks from a bottle and rapidly expands until she fills the upstairs room.",
+  "scene_primary_scale_story_point": "alice grows from standard child scale to over nine feet tall.",
+  "scene_required_anchor_catalog": [
+    "window",
+    "chimney",
+    "table"
+  ],
+  "scene_start_state": "alice holds an unlabeled bottle in the tidy upstairs room.",
+  "scene_end_state": "alice's limbs obstruct the window and chimney while white_rabbit attempts entry.",
+  "dominant_action_line": "alice drinks, grows rapidly, and fills the architectural boundaries of the room.",
+  "scene_spatial_layout": [
+    "tight upstairs room with a table by a window",
+    "vertical space constrained by ceiling height"
+  ],
+  "character_spatial_map": [
+    "alice starts at table level",
+    "alice expands upward toward ceiling and outward toward window/chimney",
+    "white_rabbit approaches from outside the window"
+  ],
+  "environment_subzones": [
+    "table area",
+    "window",
+    "chimney"
+  ],
+  "scene_event_chain": [
+    "event 1: alice drinks from the unlabeled bottle",
+    "event 2: alice undergoes a rapid growth spurt",
+    "event 3: alice's head hits the ceiling and limbs obstruct the window and chimney",
+    "event 4: white_rabbit attempts to enter through the window and is nearly caught by alice's hand"
+  ],
+  "entry_vectors": [
+    "window (white_rabbit)"
+  ],
+  "exit_vectors": [
+    "Subjects exit or hand off toward the next story beat."
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: physical expansion trigger",
+    "BT002 -> BT003: architectural obstruction",
+    "BT003 -> BT004: external character interaction"
+  ],
+  "characters_required": [
+    {
+      "label": "Alice",
+      "canonical_id": "alice",
+      "display_name": "alice",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH004/alice.md",
+      "notes": "Direct registry match for 'alice'."
+    },
+    {
+      "label": "White Rabbit",
+      "canonical_id": "white_rabbit",
+      "display_name": "white_rabbit",
+      "status": "canonical",
+      "entity_kind": "group",
+      "resolution_score": 138,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH004/white_rabbit.md",
+      "notes": "Direct registry match for 'white_rabbit'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "White Rabbit's House (Upstairs Room)",
+      "canonical_id": "white_rabbit_house",
+      "display_name": "white_rabbit_house",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 146,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/environment_breakdowns/chapters/CH004/white_rabbit_house.md",
+      "notes": "Chapter-local environment alias match for 'White Rabbit's House (Upstairs Room)' (key_overlap=3, label_overlap=5, context_overlap=4)."
+    }
+  ],
+  "continuity_constraints": [
+    "Scale of alice's body parts relative to furniture and openings",
+    "Positioning of limbs in window and chimney"
+  ],
+  "visual_coverage_families": [
+    "Low-angle shots to emphasize Alice's growth",
+    "Wide shots showing limbs obstructing architecture",
+    "Handheld camera for the Rabbit's frantic window attempt"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "alice drinks from unlabeled bottle",
+      "purpose": "",
+      "action_start": "alice brings bottle to mouth",
+      "action_end": "bottle is emptied",
+      "active_subjects": [
+        "alice"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "at table in white_rabbit_house",
+      "blocking_hint": "seated at table",
+      "environment_subzone": "table area",
+      "continuity_focus": "bottle position and contents",
+      "coverage_hint": "medium_close",
+      "coverage_priority": "high",
+      "handoff_to_next": "trigger for growth"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "alice undergoes rapid growth spurt",
+      "purpose": "",
+      "action_start": "alice begins to expand",
+      "action_end": "alice reaches ceiling height",
+      "active_subjects": [
+        "alice"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "upstairs room",
+      "blocking_hint": "vertical expansion from table to ceiling",
+      "environment_subzone": "table area",
+      "continuity_focus": "scale relative to furniture",
+      "coverage_hint": "low-angle wide",
+      "coverage_priority": "high",
+      "handoff_to_next": "physical obstruction of room"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "alice's limbs obstruct window and chimney",
+      "purpose": "",
+      "action_start": "limbs reach toward walls",
+      "action_end": "window and chimney are blocked by body parts",
+      "active_subjects": [
+        "alice"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "room boundaries",
+      "blocking_hint": "limbs pressing against architecture",
+      "environment_subzone": "window, chimney",
+      "continuity_focus": "limb placement in openings",
+      "coverage_hint": "wide",
+      "coverage_priority": "medium",
+      "handoff_to_next": "external character encounter"
+    },
+    {
+      "beat_id": "BT004",
+      "summary": "white_rabbit attempts window entry",
+      "purpose": "",
+      "action_start": "white_rabbit approaches window",
+      "action_end": "white_rabbit nearly caught by alice's hand",
+      "active_subjects": [
+        "white_rabbit",
+        "alice"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "window area",
+      "blocking_hint": "rabbit at window vs giant limb movement",
+      "environment_subzone": "window",
+      "continuity_focus": "scale of rabbit vs alice's hand",
+      "coverage_hint": "handheld",
+      "coverage_priority": "medium",
+      "handoff_to_next": "end of scene"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish scale and action",
+      "planned_shot_moment_summary": "alice drinks from bottle",
+      "primary_subject_seed": "alice",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "table area",
+      "planned_shot_required_anchor_1": "table",
+      "planned_shot_scale_proof_detail": "standard child height",
+      "start_state_seed": "alice holding bottle",
+      "end_state_seed": "bottle empty",
+      "action_seed": "alice drinks",
+      "blocking_seed": [
+        "seated at table"
+      ],
+      "shot_size": "medium_close",
+      "camera_angle": "eye_level",
+      "lens_family": "normal",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "soft_even",
+      "primary_subject_angle": "front_three_quarter_left"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "emphasize growth scale",
+      "planned_shot_moment_summary": "alice expands upward",
+      "primary_subject_seed": "alice",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "table area",
+      "planned_shot_required_anchor_1": "ceiling",
+      "planned_shot_scale_proof_detail": "head hitting ceiling",
+      "start_state_seed": "alice at table height",
+      "end_state_seed": "alice head against ceiling",
+      "action_seed": "alice grows rapidly",
+      "blocking_seed": [
+        "standing/expanding vertically"
+      ],
+      "shot_size": "low_angle_wide",
+      "camera_angle": "low_angle",
+      "lens_family": "ultra_wide",
+      "camera_motion": "push_in",
+      "zoom_behavior": "subtle_in",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "soft_even",
+      "primary_subject_angle": "front"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "show environmental obstruction",
+      "planned_shot_moment_summary": "limbs block window and chimney",
+      "primary_subject_seed": "alice",
+      "secondary_subjects_seed": [
+        "window",
+        "chimney"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "window",
+      "planned_shot_required_anchor_1": "window",
+      "planned_shot_scale_proof_detail": "limbs obstructing window frame",
+      "start_state_seed": "limbs moving toward walls",
+      "end_state_seed": "limbs blocking openings",
+      "action_seed": "limbs expand into architecture",
+      "blocking_seed": [
+        "filling room volume"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "eye_level",
+      "lens_family": "wide",
+      "camera_motion": "pan",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "soft_even",
+      "primary_subject_angle": "profile_left"
+    },
+    {
+      "planned_shot_id": "SH004",
+      "beat_id": "BT004",
+      "narrative_function": "introduce external conflict/chaos",
+      "planned_shot_moment_summary": "rabbit attempts window entry",
+      "primary_subject_seed": "white_rabbit",
+      "secondary_subjects_seed": [
+        "alice's hand"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "window",
+      "planned_shot_required_anchor_1": "window",
+      "planned_shot_scale_proof_detail": "rabbit vs giant hand",
+      "start_state_seed": "rabbit at window",
+      "end_state_seed": "rabbit nearly caught",
+      "action_seed": "white_rabbit tries to enter while alice's hand moves near him",
+      "blocking_seed": [
+        "rabbit at window",
+        "alice's hand in frame"
+      ],
+      "shot_size": "medium_close",
+      "camera_angle": "eye_level",
+      "lens_family": "normal",
+      "camera_motion": "handheld",
+      "zoom_behavior": "none",
+      "focus_strategy": "rack_focus",
+      "lighting_style": "soft_even",
+      "primary_subject_angle": "front_three_quarter_right"
+    }
+  ],
+  "unresolved_questions": [],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH004",
+      "scene_id": "CH004_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH004",
+      "scene_id": "CH004_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH004",
+      "scene_id": "CH004_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH004",
+      "scene_id": "CH004_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH004",
+      "scene_id": "CH004_SC002"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH004",
+      "source_path": "C:\\FilmCreator\\projects\\alice_in_wonderland\\02_story_analysis\\chapter_analysis\\CH004_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH004",
+      "source_path": "projects/alice_in_wonderland/01_source/chapters/CH004_chapter_iv.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH012",
+      "source_path": "projects/alice_in_wonderland/01_source/chapters/CH012_chapter_xii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH005",
+      "source_path": "projects/alice_in_wonderland/01_source/chapters/CH005_chapter_v.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH004",
+      "canonical_id": "alice"
+    }
+  ],
+  "evidence_summary": [
+    "[CH004_SC002] Purpose:",
+    "[CH004_SC002] Summary: Alice drinks from an unlabeled bottle and undergoes a rapid growth spurt, expanding until her head hits the ceiling and her limbs obstruct the window and chimney. The White Rabbit attempts to enter through the window but is nearly cau...",
+    "[CH004_SC002] Emotional arc: Wonder to Panic/Chaos",
+    "[CH004_SC002] Coverage: Low-angle shots to emphasize Alice's growth Wide shots showing limbs obstructing architecture Handheld camera for the Rabbit's frantic window attempt",
+    "[CH004_SC002] Continuity: Scale of Alice's body parts relative to furniture and openings Positioning of limbs in window and chimney",
+    "[CH004] Chapter summary: **Setting: The White Rabbit's House** * **Location:** A neat little house with a brass plate reading \"W. RABBIT.\" * **Interior Subzones:** * A tidy upstairs room containing a table by a window, a looking-glass, and a...",
+    "[CH004] CHAPTER IV. (book index hit)",
+    "[CH012] CHAPTER XII. (book index hit)",
+    "[CH005] CHAPTER V. (book index hit)",
+    "Character alice: Alice is a young human girl characterized by extreme and rapid physical instability regarding her scale. She fluctuates between being a standard-sized child, shrinking to approximately ten inches in height, and growing to over nine feet tal..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH004_SC002\n\n## Production Intent\nExecute a rapid physical scale transition for alice where she expands from child-size to over nine feet tall within the confines of white_rabbit_house. The sequence must visually communicate the obstruction of architectural features including the window and chimney as her limbs expand into the room's volume.\n\n## Required Cast\n- alice (rapidly scaling human girl)\n- white_rabbit (small animal character)\n\n## Required Environments\n- white_rabbit_house (upstairs room with table, window, and chimney)\n\n## Continuity Constraints\n- Scale of alice's body parts relative to furniture and openings\n- Positioning of limbs in window and chimney\n\n## Beat List\n- BT001: alice drinks from unlabeled bottle\n- BT002: alice undergoes rapid growth spurt\n- BT003: alice's limbs obstruct window and chimney\n- BT004: white_rabbit attempts window entry",
+  "metadata": {
+    "artifact_id": "CH004_SC002_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "0e5925cb7db2d549d068bd6dbbb1785833a22123",
+    "created_at_utc": "2026-04-28T04:40:55.690871+00:00",
+    "updated_at_utc": "2026-04-28T04:40:55.690871+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH004_SC002",
+        "version": "fdace1388da8a21cee3ecf86fce811c12dabda68"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH004_SC002",
+        "version": "6269725376de05e8b11e05080b5e09706a678fa8"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH004_SC002",
+        "version": "136f9f346d8f3cd79ecd98565a7e88c995c76951"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-28T04:41:27.367949+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "0e5925cb7db2d549d068bd6dbbb1785833a22123"
+      }
+    ]
+  }
+}

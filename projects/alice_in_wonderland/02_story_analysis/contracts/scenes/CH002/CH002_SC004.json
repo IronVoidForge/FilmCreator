@@ -1,0 +1,388 @@
+{
+  "scene_id": "CH002_SC004",
+  "chapter_id": "CH002",
+  "scene_title": "CH002_SC004",
+  "purpose": "",
+  "summary": "Alice encounters a Mouse in the pool. Her attempts at polite conversation (using French and mentioning her cat) offend the Mouse. A crowd of various animals joins the pool, and Alice leads them all swimming toward the shore.",
+  "emotional_arc": "Social awkwardness to communal movement.",
+  "production_intent": "Alice navigates a social encounter with a Mouse while submerged in the pool of tears. The interaction shifts from awkward dialogue to a large-scale communal swim as various animals join her to reach the shore.",
+  "scene_short_description": "A girl swims in a pool of tears encountering a mouse before leading an animal procession.",
+  "scene_primary_scale_story_point": "Alice is small enough to be submerged and interact with a Mouse within the liquid environment.",
+  "scene_required_anchor_catalog": [
+    "the_pool_of_tears surface",
+    "the_pool_of_tears shore"
+  ],
+  "scene_start_state": "alice is swimming in the_pool_of_tears encountering the mouse.",
+  "scene_end_state": "alice leads a wide procession of various other animals swimming toward the shore.",
+  "dominant_action_line": "Alice attempts polite conversation with the Mouse, offends him, and then leads a crowd of animals to the shore.",
+  "scene_spatial_layout": [
+    "submerged within the_pool_of_tears",
+    "movement directed from deep water toward the shore"
+  ],
+  "character_spatial_map": [
+    "alice is positioned near the mouse initially",
+    "various other animals surround alice in a group formation during the procession"
+  ],
+  "environment_subzones": [
+    "the_pool_of_tears submerged zone",
+    "the_pool_of_tears surface",
+    "the_pool_of_tears shore"
+  ],
+  "scene_event_chain": [
+    "event 1: alice encounters the mouse in the_pool_of_tears",
+    "event 2: alice speaks French and mentions her cat to the mouse",
+    "event 3: the mouse becomes offended by the conversation",
+    "event 4: various other animals join the pool and alice leads them swimming toward the shore"
+  ],
+  "entry_vectors": [
+    "submerged entry into the_pool_of_tears"
+  ],
+  "exit_vectors": [
+    "swimming toward the shore"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: dialogue exchange",
+    "BT002 -> BT003: emotional reaction/offense",
+    "BT003 -> BT004: crowd arrival and movement"
+  ],
+  "characters_required": [
+    {
+      "label": "Alice",
+      "canonical_id": "alice",
+      "display_name": "alice",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH002/alice.md",
+      "notes": "Direct registry match for 'alice'."
+    },
+    {
+      "label": "Mouse",
+      "canonical_id": "mouse",
+      "display_name": "mouse",
+      "status": "canonical",
+      "entity_kind": "group",
+      "resolution_score": 138,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH002/mouse.md",
+      "notes": "Direct registry match for 'mouse'."
+    },
+    {
+      "label": "Duck",
+      "canonical_id": "the_duck",
+      "display_name": "the_duck",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 186,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH003/the_duck.md",
+      "notes": "asset id exactly matches canonical id | query matches alias 'duck'"
+    },
+    {
+      "label": "Dodo",
+      "canonical_id": "the_dodo",
+      "display_name": "the_dodo",
+      "status": "canonical",
+      "entity_kind": "group",
+      "resolution_score": 186,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH003/the_dodo.md",
+      "notes": "asset id exactly matches canonical id | query matches alias 'dodo'"
+    },
+    {
+      "label": "Lory",
+      "canonical_id": "the_lory",
+      "display_name": "the_lory",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 186,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH003/the_lory.md",
+      "notes": "asset id exactly matches canonical id | query matches alias 'lory'"
+    },
+    {
+      "label": "Eaglet",
+      "canonical_id": "the_eaglet",
+      "display_name": "the_eaglet",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 186,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH003/the_eaglet.md",
+      "notes": "asset id exactly matches canonical id | query matches alias 'eaglet'"
+    },
+    {
+      "label": "various other animals",
+      "canonical_id": null,
+      "display_name": "various other animals",
+      "status": "review",
+      "entity_kind": "individual",
+      "resolution_score": 16,
+      "source_path": "",
+      "notes": "Low-confidence character match requires review."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "The Pool (Submerged/Swimming)",
+      "canonical_id": "the_pool_of_tears",
+      "display_name": "the_pool_of_tears",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 68,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/environment_breakdowns/chapters/CH002/the_pool_of_tears.md",
+      "notes": "Chapter-local environment alias match for 'The Pool (Submerged/Swimming)' (key_overlap=1, label_overlap=2, context_overlap=4)."
+    }
+  ],
+  "continuity_constraints": [
+    "Water clarity and depth",
+    "character placement within the swimming group"
+  ],
+  "visual_coverage_families": [
+    "Underwater shots",
+    "medium shots of animal interactions",
+    "wide tracking shot of the procession of animals swimming toward the shore"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "alice encounters the mouse",
+      "purpose": "",
+      "action_start": "alice swims into frame near the mouse",
+      "action_end": "alice and mouse are face to face",
+      "active_subjects": [
+        "alice",
+        "mouse"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "the_pool_of_tears submerged zone",
+      "blocking_hint": "close proximity in water",
+      "environment_subzone": "the_pool_of_tears submerged zone",
+      "continuity_focus": "water clarity",
+      "coverage_hint": "medium shot",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "alice attempts polite conversation",
+      "purpose": "",
+      "action_start": "alice speaks French and mentions her cat",
+      "action_end": "conversation concludes",
+      "active_subjects": [
+        "alice",
+        "mouse"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "the_pool_of_tears submerged zone",
+      "blocking_hint": "stationary interaction",
+      "environment_subzone": "the_pool_of_tears submerged zone",
+      "continuity_focus": "character placement",
+      "coverage_hint": "medium shots of animal interactions",
+      "coverage_priority": "medium",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "the mouse is offended",
+      "purpose": "",
+      "action_start": "mouse reacts to alice's words",
+      "action_end": "mouse shows offense",
+      "active_subjects": [
+        "mouse"
+      ],
+      "passive_subjects": [
+        "alice"
+      ],
+      "spatial_context": "the_pool_of_tears submerged zone",
+      "blocking_hint": "mouse pulls away or reacts",
+      "environment_subzone": "the_pool_of_tears submerged zone",
+      "continuity_focus": "character placement",
+      "coverage_hint": "medium shot",
+      "coverage_priority": "medium",
+      "handoff_to_next": "BT004"
+    },
+    {
+      "beat_id": "BT004",
+      "summary": "the animal procession begins",
+      "purpose": "",
+      "action_start": "various other animals enter the pool",
+      "action_end": "alice leads the crowd toward the shore",
+      "active_subjects": [
+        "alice",
+        "various other animals",
+        "the_duck",
+        "the_dodo",
+        "the_lory",
+        "the_eaglet"
+      ],
+      "passive_subjects": [
+        "mouse"
+      ],
+      "spatial_context": "the_pool_of_tears moving toward shore",
+      "blocking_hint": "wide group swimming in formation",
+      "environment_subzone": "the_pool_of_tears submerged zone",
+      "continuity_focus": "character placement within the swimming group",
+      "coverage_hint": "wide tracking shot",
+      "coverage_priority": "high",
+      "handoff_to_next": "end of scene"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish encounter",
+      "planned_shot_moment_summary": "alice finds the mouse in the water",
+      "primary_subject_seed": "alice",
+      "secondary_subjects_seed": [
+        "mouse"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "the_pool_of_tears submerged zone",
+      "planned_shot_required_anchor_1": "the_pool_of_tears surface",
+      "planned_shot_scale_proof_detail": "alice and mouse are similarly scaled for interaction",
+      "start_state_seed": "alice swimming through water",
+      "end_state_seed": "alice stops near the mouse",
+      "action_seed": "swimming encounter",
+      "blocking_seed": [
+        "alice approaches mouse"
+      ],
+      "shot_size": "medium",
+      "camera_angle": "eye_level",
+      "lens_family": "normal",
+      "camera_motion": "track",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front_three_quarter_right"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT004",
+      "narrative_function": "establish scale of group",
+      "planned_shot_moment_summary": "the mass of animals swims toward shore",
+      "primary_subject_seed": "various other animals",
+      "secondary_subjects_seed": [
+        "alice"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "the_pool_of_tears submerged zone",
+      "planned_shot_required_anchor_1": "the_pool_of_tears shore",
+      "planned_shot_scale_proof_detail": "large crowd vs individual characters",
+      "start_state_seed": "animals entering water",
+      "end_state_seed": "procession moving toward shore",
+      "action_seed": "swimming procession",
+      "blocking_seed": [
+        "wide formation of animals following alice"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "eye_level",
+      "lens_family": "ultra_wide",
+      "camera_motion": "track",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "profile_left"
+    }
+  ],
+  "unresolved_questions": [
+    "Resolve various other animals -> various other animals"
+  ],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH002",
+      "scene_id": "CH002_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH002",
+      "scene_id": "CH002_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH002",
+      "scene_id": "CH002_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH002",
+      "scene_id": "CH002_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH002",
+      "scene_id": "CH002_SC004"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH002",
+      "source_path": "C:\\FilmCreator\\projects\\alice_in_wonderland\\02_story_analysis\\chapter_analysis\\CH002_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH002",
+      "source_path": "projects/alice_in_wonderland/01_source/chapters/CH002_chapter_ii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH003",
+      "source_path": "projects/alice_in_wonderland/01_source/chapters/CH003_chapter_iii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH012",
+      "source_path": "projects/alice_in_wonderland/01_source/chapters/CH012_chapter_xii.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH002",
+      "canonical_id": "alice"
+    }
+  ],
+  "evidence_summary": [
+    "[CH002_SC004] Purpose:",
+    "[CH002_SC004] Summary: Alice encounters a Mouse in the pool. Her attempts at polite conversation (using French and mentioning her cat) offend the Mouse. A crowd of various animals joins the pool, and Alice leads them all swimming toward the shore.",
+    "[CH002_SC004] Emotional arc: Social awkwardness to communal movement.",
+    "[CH002_SC004] Coverage: Underwater shots medium shots of animal interactions wide tracking shot of the procession of animals swimming toward the shore",
+    "[CH002_SC004] Continuity: Water clarity and depth character placement within the swimming group",
+    "[CH002] Chapter summary: **Location: The Hall / The Garden Door Subzone** * **Visual State:** Alice is giant (over nine feet tall). Her feet are distant and small from her perspective. * **Event:** Alice experiences a growth spurt/size shift,...",
+    "[CH002] CHAPTER II. (book index hit)",
+    "[CH003] CHAPTER III. (book index hit)",
+    "[CH012] CHAPTER XII. (book index hit)",
+    "Character alice: Alice is a young human girl characterized by extreme and rapid physical instability regarding her scale. She fluctuates between being a standard-sized child, shrinking to approximately ten inches in height, and growing to over nine feet tal..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH002_SC004\n\n## Production Intent\nAlice navigates a social encounter with a Mouse while submerged in the pool of tears. The interaction shifts from awkward dialogue to a large-scale communal swim as various animals join her to reach the shore.\n\n## Required Cast\n- alice\n- mouse\n- the_duck\n- the_dodo\n- the_lory\n- the_eaglet\n- various other animals\n\n## Required Environments\n- the_pool_of_tears (submerged, surface, and shore)\n\n## Continuity Constraints\n- Water clarity and depth must remain consistent.\n- Character placement within the swimming group must be maintained during wide tracking shots.\n\n## Beat List\n- BT001: alice encounters the mouse\n- BT002: alice attempts polite conversation (French/cat mention)\n- BT003: the mouse is offended\n- BT004: the animal procession begins toward the shore",
+  "metadata": {
+    "artifact_id": "CH002_SC004_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "9d03ae25070fb029d8c41b1f0027b892b346d2cc",
+    "created_at_utc": "2026-04-28T04:37:25.576034+00:00",
+    "updated_at_utc": "2026-04-28T04:37:25.576034+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH002_SC004",
+        "version": "2608f5fa2f56dd0ed9f0bdc0f3125965ba34e68b"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH002_SC004",
+        "version": "31a5a65609ab0f0c20e5397a896df98daa53d223"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH002_SC004",
+        "version": "3b7ec9e203ce2269fcdd0d881529f2aeb95d0a80"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-28T04:37:54.855668+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "9d03ae25070fb029d8c41b1f0027b892b346d2cc"
+      }
+    ]
+  }
+}

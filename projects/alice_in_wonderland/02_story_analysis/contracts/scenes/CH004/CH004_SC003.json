@@ -1,0 +1,414 @@
+{
+  "scene_id": "CH004_SC003",
+  "chapter_id": "CH004",
+  "scene_title": "CH004_SC003",
+  "purpose": "",
+  "summary": "A crowd of animals attempts to clear the chimney, resulting in Bill the Lizard being kicked down by Alice. The Rabbit orders pebbles to be thrown at the house; they hit Alice and turn into cakes. Alice eats a cake, shrinks, and escapes the house.",
+  "emotional_arc": "Aggression to Relief",
+  "production_intent": "A chaotic sequence of animal crowd movement and physical scale shifts. The scene transitions from a high-tension chimney blockage to a rapid transformation event where projectiles become food, facilitating Alice's escape through size reduction.",
+  "scene_short_description": "A crowd attempts to clear a chimney, leading to a projectile transformation and a shrinking girl.",
+  "scene_primary_scale_story_point": "Alice shrinks from standard child size toward ten inches in height.",
+  "scene_required_anchor_catalog": [
+    "White Rabbit's House Chimney",
+    "Window ledge"
+  ],
+  "scene_start_state": "The crowd of animals is gathered at the base of the chimney attempting to clear it.",
+  "scene_end_state": "Alice has shrunk and escaped the house.",
+  "dominant_action_line": "Animals attempt chimney clearance, pebbles turn into cakes upon hitting Alice, Alice eats a cake and shrinks.",
+  "scene_spatial_layout": [
+    "Vertical axis between chimney interior and exterior ground",
+    "Horizontal axis of the crowd surrounding the house base"
+  ],
+  "character_spatial_map": [
+    "the_crowd: clustered at the base of white_rabbit_house",
+    "alice: positioned near window/interior transition point",
+    "Bill (Lizard): descending from chimney"
+  ],
+  "environment_subzones": [
+    "white_rabbit_house chimney",
+    "white_rabbit_house window"
+  ],
+  "scene_event_chain": [
+    "event 1: the_crowd attempts to clear the chimney",
+    "event 2: Alice kicks Bill (Lizard) down the chimney",
+    "event 3: white_rabbit orders pebbles to be thrown at the house",
+    "event 4: pebbles hit Alice and transform into cakes",
+    "event 5: Alice eats a cake and shrinks to escape"
+  ],
+  "entry_vectors": [
+    "chimney descent"
+  ],
+  "exit_vectors": [
+    "window escape"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: physical expulsion",
+    "BT002 -> BT003: command/order",
+    "BT003 -> BT004: magical transformation",
+    "BT004 -> BT005: consumption and scale shift"
+  ],
+  "characters_required": [
+    {
+      "label": "Alice",
+      "canonical_id": "alice",
+      "display_name": "alice",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH004/alice.md",
+      "notes": "Direct registry match for 'alice'."
+    },
+    {
+      "label": "White Rabbit",
+      "canonical_id": "white_rabbit",
+      "display_name": "white_rabbit",
+      "status": "canonical",
+      "entity_kind": "group",
+      "resolution_score": 138,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH004/white_rabbit.md",
+      "notes": "Direct registry match for 'white_rabbit'."
+    },
+    {
+      "label": "Bill (Lizard)",
+      "canonical_id": null,
+      "display_name": "Bill (Lizard)",
+      "status": "review",
+      "entity_kind": "individual",
+      "resolution_score": 16,
+      "source_path": "",
+      "notes": "Low-confidence character match requires review."
+    },
+    {
+      "label": "Pat",
+      "canonical_id": "pat",
+      "display_name": "pat",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH004/pat.md",
+      "notes": "Direct registry match for 'pat'."
+    },
+    {
+      "label": "The Crowd",
+      "canonical_id": "the_crowd",
+      "display_name": "the_crowd",
+      "status": "canonical",
+      "entity_kind": "group",
+      "resolution_score": 138,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH004/the_crowd.md",
+      "notes": "Direct registry match for 'the_crowd'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "White Rabbit's House (Exterior/Chimney/Window)",
+      "canonical_id": "white_rabbit_house",
+      "display_name": "white_rabbit_house",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 158,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/environment_breakdowns/chapters/CH004/white_rabbit_house.md",
+      "notes": "Chapter-local environment alias match for 'White Rabbit's House (Exterior/Chimney/Window)' (key_overlap=3, label_overlap=5, context_overlap=4)."
+    }
+  ],
+  "continuity_constraints": [
+    "Pebble count must match cake count during transformation",
+    "Alice's height must decrease incrementally/rapidly following cake consumption"
+  ],
+  "visual_coverage_families": [
+    "High-angle shots of the crowd outside",
+    "POV shots from inside the chimney",
+    "Medium shots of the pebble-to-cake transformation"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "the_crowd attempts to clear the chimney",
+      "purpose": "",
+      "action_start": "animals gathered at chimney base",
+      "action_end": "chimney cleared or blocked",
+      "active_subjects": [
+        "the_crowd"
+      ],
+      "passive_subjects": [
+        "white_rabbit_house"
+      ],
+      "spatial_context": "exterior house base",
+      "blocking_hint": "crowded cluster around structure",
+      "environment_subzone": "white_rabbit_house chimney",
+      "continuity_focus": "crowd density",
+      "coverage_hint": "high-angle crowd shot",
+      "coverage_priority": "medium",
+      "handoff_to_next": "Bill (Lizard) is kicked"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "Alice kicks Bill (Lizard) down the chimney",
+      "purpose": "",
+      "action_start": "Alice reaches into chimney",
+      "action_end": "Bill (Lizard) falls",
+      "active_subjects": [
+        "alice",
+        "Bill (Lizard)"
+      ],
+      "passive_subjects": [
+        "the_crowd"
+      ],
+      "spatial_context": "chimney/window interface",
+      "blocking_hint": "Alice leaning into structure",
+      "environment_subzone": "white_rabbit_house chimney",
+      "continuity_focus": "Bill's position in chimney",
+      "coverage_hint": "POV from inside chimney",
+      "coverage_priority": "high",
+      "handoff_to_next": "White Rabbit gives order"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "white_rabbit orders pebbles to be thrown",
+      "purpose": "",
+      "action_start": "white_rabbit shouts command",
+      "action_end": "pebbles are in flight",
+      "active_subjects": [
+        "white_rabbit",
+        "the_crowd"
+      ],
+      "passive_subjects": [
+        "alice"
+      ],
+      "spatial_context": "exterior house base",
+      "blocking_hint": "Rabbit directing crowd",
+      "environment_subzone": "white_rabbit_house exterior",
+      "continuity_focus": "pebble count",
+      "coverage_hint": "wide shot of crowd action",
+      "coverage_priority": "low",
+      "handoff_to_next": "Pebbles hit Alice"
+    },
+    {
+      "beat_id": "BT004",
+      "summary": "pebbles transform into cakes upon hitting Alice",
+      "purpose": "",
+      "action_start": "pebbles strike Alice",
+      "action_end": "cakes land near Alice",
+      "active_subjects": [
+        "alice"
+      ],
+      "passive_subjects": [
+        "the_crowd"
+      ],
+      "spatial_context": "window/Alice interface",
+      "blocking_hint": "Alice recoiling from impact",
+      "environment_subzone": "white_rabbit_house window",
+      "continuity_focus": "pebble-to-cake visual match",
+      "coverage_hint": "medium shot of transformation",
+      "coverage_priority": "high",
+      "handoff_to_next": "Alice eats cake"
+    },
+    {
+      "beat_id": "BT005",
+      "summary": "Alice eats a cake and shrinks to escape",
+      "purpose": "",
+      "action_start": "Alice picks up cake",
+      "action_end": "Alice exits house via shrinking",
+      "active_subjects": [
+        "alice"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "window ledge",
+      "blocking_hint": "Alice seated/crouched at window",
+      "environment_subzone": "white_rabbit_house window",
+      "continuity_focus": "Alice's height reduction scale",
+      "coverage_hint": "medium shot of Alice [[/SECTION]]",
+      "coverage_priority": "",
+      "handoff_to_next": ""
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish chaos",
+      "planned_shot_moment_summary": "animals struggling at chimney base",
+      "primary_subject_seed": "the_crowd",
+      "secondary_subjects_seed": [
+        "white_rabbit_house"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "white_rabbit_house chimney",
+      "planned_shot_required_anchor_1": "white_rabbit_house chimney",
+      "planned_shot_scale_proof_detail": "standard crowd scale",
+      "start_state_seed": "crowd gathered",
+      "end_state_seed": "chimney cleared/blocked",
+      "action_seed": "animals pushing and pulling at the structure",
+      "blocking_seed": [
+        "tight cluster around house base"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "high_angle",
+      "lens_family": "wide",
+      "camera_motion": "pan",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front_three_quarter_left"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT004",
+      "narrative_function": "show transformation",
+      "planned_shot_moment_summary": "pebbles hitting Alice and turning to cakes",
+      "primary_subject_seed": "alice",
+      "secondary_subjects_seed": [
+        "pebbles/cakes"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "white_rabbit_house window",
+      "planned_shot_required_anchor_1": "window ledge",
+      "planned_shot_scale_proof_detail": "Alice's height vs pebbles",
+      "start_state_seed": "pebbles in flight",
+      "end_state_seed": "cakes on surface",
+      "action_seed": "pebbles strike Alice and morph into cakes",
+      "blocking_seed": [
+        "Alice near window edge"
+      ],
+      "shot_size": "medium",
+      "camera_angle": "eye_level",
+      "lens_family": "normal",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "subtle_in",
+      "focus_strategy": "rack_focus",
+      "lighting_style": "soft_even",
+      "primary_subject_angle": "front"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT005",
+      "narrative_function": "conclude escape",
+      "planned_shot_moment_summary": "Alice shrinking and exiting",
+      "primary_subject_seed": "alice",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "white_rabbit_house window",
+      "planned_shot_required_anchor_1": "window ledge",
+      "planned_shot_scale_proof_detail": "Alice height reduction to 10 inches",
+      "start_state_seed": "Alice eating cake",
+      "end_state_seed": "Alice small enough to escape",
+      "action_seed": "Alice eats and shrinks rapidly",
+      "blocking_seed": [
+        "Alice at window sill"
+      ],
+      "shot_size": "medium_close",
+      "camera_angle": "eye_level",
+      "lens_family": "portrait",
+      "camera_motion": "push_in",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "soft_even",
+      "primary_subject_angle": "profile_left"
+    }
+  ],
+  "unresolved_questions": [
+    "Resolve Bill (Lizard) -> Bill (Lizard)"
+  ],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH004",
+      "scene_id": "CH004_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH004",
+      "scene_id": "CH004_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH004",
+      "scene_id": "CH004_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH004",
+      "scene_id": "CH004_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH004",
+      "scene_id": "CH004_SC003"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH004",
+      "source_path": "C:\\FilmCreator\\projects\\alice_in_wonderland\\02_story_analysis\\chapter_analysis\\CH004_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH004",
+      "source_path": "projects/alice_in_wonderland/01_source/chapters/CH004_chapter_iv.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH011",
+      "source_path": "projects/alice_in_wonderland/01_source/chapters/CH011_chapter_xi.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH012",
+      "source_path": "projects/alice_in_wonderland/01_source/chapters/CH012_chapter_xii.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH004",
+      "canonical_id": "alice"
+    }
+  ],
+  "evidence_summary": [
+    "[CH004_SC003] Purpose:",
+    "[CH004_SC003] Summary: A crowd of animals attempts to clear the chimney, resulting in Bill the Lizard being kicked down by Alice. The Rabbit orders pebbles to be thrown at the house; they hit Alice and turn into cakes. Alice eats a cake, shrinks, and escape...",
+    "[CH004_SC003] Emotional arc: Aggression to Relief",
+    "[CH004_SC003] Coverage: High-angle shots of the crowd outside POV shots from inside the chimney Medium shots of the pebble-to-cake transformation",
+    "[CH004_SC003] Continuity: The number and appearance of the pebbles vs. the cakes Alice's height during the shrinking process",
+    "[CH004] Chapter summary: **Setting: The White Rabbit's House** * **Location:** A neat little house with a brass plate reading \"W. RABBIT.\" * **Interior Subzones:** * A tidy upstairs room containing a table by a window, a looking-glass, and a...",
+    "[CH004] CHAPTER IV. (book index hit)",
+    "[CH011] CHAPTER XI. (book index hit)",
+    "[CH012] CHAPTER XII. (book index hit)",
+    "Character alice: Alice is a young human girl characterized by extreme and rapid physical instability regarding her scale. She fluctuates between being a standard-sized child, shrinking to approximately ten inches in height, and growing to over nine feet tal..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH004_SC003\n\n## Production Intent\nA chaotic sequence of animal crowd movement and physical scale shifts. The scene transitions from a high-tension chimney blockage to a rapid transformation event where projectiles become food, facilitating Alice's escape through size reduction.\n\n## Required Cast\n- alice\n- white_rabbit\n- Bill (Lizard)\n- pat\n- the_crowd\n\n## Required Environments\n- white_rabbit_house (Chimney, Window, Exterior)\n\n## Continuity Constraints\n- Pebble count must match cake count during transformation.\n- Alice's height must decrease incrementally/rapidly following cake consumption (target: ~10 inches).\n\n## Beat List\n- BT001: the_crowd attempts to clear the chimney\n- BT002: Alice kicks Bill (Lizard) down the chimney\n- BT003: white_rabbit orders pebbles to be thrown\n- BT004: pebbles transform into cakes upon hitting Alice\n- BT005: Alice eats a cake and shrinks to escape",
+  "metadata": {
+    "artifact_id": "CH004_SC003_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "e794e671278eadfa3aa5d577829df3ab046b3775",
+    "created_at_utc": "2026-04-28T04:41:33.074430+00:00",
+    "updated_at_utc": "2026-04-28T04:41:33.074430+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH004_SC003",
+        "version": "c395b0fd910622e5aeb18ad70eb1a544183884af"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH004_SC003",
+        "version": "e8ee423c5166c3407d2beec59abec18da15bfc87"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH004_SC003",
+        "version": "06073de57ef1364fe8badb639c52cde83c752915"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-28T04:42:05.978417+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "e794e671278eadfa3aa5d577829df3ab046b3775"
+      }
+    ]
+  }
+}

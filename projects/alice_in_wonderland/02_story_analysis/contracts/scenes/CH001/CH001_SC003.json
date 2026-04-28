@@ -1,0 +1,377 @@
+{
+  "scene_id": "CH001_SC003",
+  "chapter_id": "CH001",
+  "scene_title": "CH001_SC003",
+  "purpose": "",
+  "summary": "Alice explores a long, lamp-lit passage filled with locked doors. She finds a tiny golden key on a glass table and discovers a small door behind a curtain that leads to a beautiful garden. However, she realizes she is far too large to fit through the opening.",
+  "emotional_arc": "Wonder to frustration/disappointment.",
+  "production_intent": "Alice navigates a lamp-lit corridor of oversized doors to locate a miniature entrance. The sequence relies on precise scale shifts between the character, a glass table with a tiny key, and a small door hidden behind a curtain. Visuals must emphasize the verticality of the hall versus the micro-scale of the discovery.",
+  "scene_short_description": "A girl explores a long lamp-lit hallway filled with massive locked doors.",
+  "scene_primary_scale_story_point": "Alice's physical size relative to the tiny key and the small garden door.",
+  "scene_required_anchor_catalog": [
+    "glass table",
+    "curtain",
+    "small door"
+  ],
+  "scene_start_state": "Alice walking through a long, lamp-lit passage of tall doors.",
+  "scene_end_state": "Alice standing before a small door, unable to fit through it.",
+  "dominant_action_line": "Alice finds a key and discovers a hidden garden entrance that is too small for her.",
+  "scene_spatial_layout": [
+    "Linear corridor arrangement",
+    "Glass table positioned within the passage",
+    "Small door located behind a curtain"
+  ],
+  "character_spatial_map": [
+    "alice moves through the center of the hall",
+    "alice approaches the glass table",
+    "alice kneels or leans near the curtain"
+  ],
+  "environment_subzones": [
+    "lamp_lit_passage",
+    "glass_table_zone",
+    "curtain_door_niche"
+  ],
+  "scene_event_chain": [
+    "event 1: Alice walks through the long passage of locked doors.",
+    "event 2: Alice finds a tiny golden key on a glass table.",
+    "event 3: Alice discovers a small door behind a curtain.",
+    "event 4: Alice realizes she is too large to fit through the opening."
+  ],
+  "entry_vectors": [
+    "hall_of_doors corridor"
+  ],
+  "exit_vectors": [
+    "hall_of_doors corridor"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: discovery of object",
+    "BT002 -> BT003: movement to new location",
+    "BT003 -> BT004: realization of scale conflict"
+  ],
+  "characters_required": [
+    {
+      "label": "Alice",
+      "canonical_id": "alice",
+      "display_name": "alice",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH001/alice.md",
+      "notes": "Direct registry match for 'alice'."
+    },
+    {
+      "label": "White Rabbit (briefly)",
+      "canonical_id": "white_rabbit",
+      "display_name": "white_rabbit",
+      "status": "canonical",
+      "entity_kind": "group",
+      "resolution_score": 138,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH001/white_rabbit.md",
+      "notes": "Direct registry match for 'white_rabbit'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "The Long Passage / Hall of Doors",
+      "canonical_id": "hall_of_doors",
+      "display_name": "hall_of_doors",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 138,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/environment_breakdowns/chapters/CH001/hall_of_doors.md",
+      "notes": "Direct registry match for 'hall_of_doors'."
+    }
+  ],
+  "continuity_constraints": [
+    "Scale relationship between Alice, the glass table, the golden key, and the small door"
+  ],
+  "visual_coverage_families": [
+    "Low-angle shots emphasizing door height",
+    "Close-ups of golden key and tiny lock",
+    "Wide shots of garden through small door"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "Alice explores the passage",
+      "purpose": "",
+      "action_start": "alice walking through hall",
+      "action_end": "alice reaches glass table",
+      "active_subjects": [
+        "alice"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "hall_of_doors",
+      "blocking_hint": "walking down center of corridor",
+      "environment_subzone": "lamp_lit_passage",
+      "continuity_focus": "door height consistency",
+      "coverage_hint": "low-angle wide",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT002"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "Alice finds the key",
+      "purpose": "",
+      "action_start": "alice reaches for table",
+      "action_end": "alice holds tiny golden key",
+      "active_subjects": [
+        "alice"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "glass_table_zone",
+      "blocking_hint": "leaning over glass table",
+      "environment_subzone": "glass_table_zone",
+      "continuity_focus": "key size vs finger scale",
+      "coverage_hint": "close-up/insert",
+      "coverage_priority": "high",
+      "handoff_to_next": "BT003"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "Alice discovers the small door",
+      "purpose": "",
+      "action_start": "alice moves to curtain",
+      "action_end": "curtain is pulled back to reveal garden",
+      "active_subjects": [
+        "alice"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "curtain_door_niche",
+      "blocking_hint": "standing by wall/curtain",
+      "environment_subzone": "curtain_door_niche",
+      "continuity_focus": "garden visibility through small opening",
+      "coverage_hint": "wide shot of garden",
+      "coverage_priority": "medium",
+      "handoff_to_next": "BT004"
+    },
+    {
+      "beat_id": "BT004",
+      "summary": "Alice realizes she is too large",
+      "purpose": "",
+      "action_start": "alice looks at the door frame",
+      "action_end": "alice shows frustration",
+      "active_subjects": [
+        "alice"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "curtain_door_niche",
+      "blocking_hint": "standing next to small door",
+      "environment_subzone": "curtain_door_niche",
+      "continuity_focus": "scale of alice vs door opening",
+      "coverage_hint": "medium shot",
+      "coverage_priority": "high",
+      "handoff_to_next": "end_of_scene"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish environment",
+      "planned_shot_moment_summary": "Alice walking through the hall",
+      "primary_subject_seed": "alice",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "lamp_lit_passage",
+      "planned_shot_required_anchor_1": "locked doors",
+      "planned_shot_scale_proof_detail": "height of doors vs alice",
+      "start_state_seed": "alice entering frame",
+      "end_state_seed": "alice approaching table",
+      "action_seed": "walking",
+      "blocking_seed": [
+        "center corridor"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "low_angle",
+      "lens_family": "wide",
+      "camera_motion": "track",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "profile_left"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "reveal key",
+      "planned_shot_moment_summary": "Alice spots the key on the table",
+      "primary_subject_seed": "golden key",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "glass_table_zone",
+      "planned_shot_required_anchor_1": "glass table",
+      "planned_shot_scale_proof_detail": "key size vs table surface",
+      "start_state_seed": "close on table",
+      "end_state_seed": "close on key",
+      "action_seed": "hand reaching for key",
+      "blocking_seed": [
+        "at glass table"
+      ],
+      "shot_size": "extreme_close_up",
+      "camera_angle": "eye_level",
+      "lens_family": "telephoto",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "soft_even",
+      "primary_subject_angle": "front"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "reveal garden",
+      "planned_shot_moment_summary": "Alice pulls back the curtain",
+      "primary_subject_seed": "alice",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "curtain_door_niche",
+      "planned_shot_required_anchor_1": "small door",
+      "planned_shot_scale_proof_detail": "garden view through small opening",
+      "start_state_seed": "hand on curtain",
+      "end_state_seed": "view of garden",
+      "action_seed": "pulling curtain",
+      "blocking_seed": [
+        "at curtain"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "eye_level",
+      "lens_family": "wide",
+      "camera_motion": "push_in",
+      "zoom_behavior": "none",
+      "focus_strategy": "rack_focus",
+      "lighting_style": "backlit",
+      "primary_subject_angle": "rear_three_quarter_left"
+    },
+    {
+      "planned_shot_id": "SH004",
+      "beat_id": "BT004",
+      "narrative_function": "convey frustration",
+      "planned_shot_moment_summary": "Alice realizes she cannot fit",
+      "primary_subject_seed": "alice",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "curtain_door_niche",
+      "planned_shot_required_anchor_1": "small door",
+      "planned_shot_scale_proof_detail": "alice's body vs small door frame",
+      "start_state_seed": "looking at door",
+      "end_state_seed": "frustrated expression",
+      "action_seed": "standing still/staring",
+      "blocking_seed": [
+        "beside small door"
+      ],
+      "shot_size": "medium_full",
+      "camera_angle": "low_angle",
+      "lens_family": "normal",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "soft_even",
+      "primary_subject_angle": "front_three_quarter_right"
+    }
+  ],
+  "unresolved_questions": [],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH001",
+      "scene_id": "CH001_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH001",
+      "scene_id": "CH001_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH001",
+      "scene_id": "CH001_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH001",
+      "scene_id": "CH001_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH001",
+      "scene_id": "CH001_SC003"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH001",
+      "source_path": "C:\\FilmCreator\\projects\\alice_in_wonderland\\02_story_analysis\\chapter_analysis\\CH001_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH001",
+      "source_path": "projects/alice_in_wonderland/01_source/chapters/CH001_chapter_i.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH004",
+      "source_path": "projects/alice_in_wonderland/01_source/chapters/CH004_chapter_iv.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH007",
+      "source_path": "projects/alice_in_wonderland/01_source/chapters/CH007_chapter_vii.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH001",
+      "canonical_id": "alice"
+    }
+  ],
+  "evidence_summary": [
+    "[CH001_SC003] Purpose:",
+    "[CH001_SC003] Summary: Alice explores a long, lamp-lit passage filled with locked doors. She finds a tiny golden key on a glass table and discovers a small door behind a curtain that leads to a beautiful garden. However, she realizes she is far too large to...",
+    "[CH001_SC003] Emotional arc: Wonder to frustration/disappointment.",
+    "[CH001_SC003] Coverage: Low-angle shots to emphasize the height of the doors Close-ups of the golden key and the tiny lock Wide shot of the garden through the small door",
+    "[CH001_SC003] Continuity: The size relationship between the key, the table, and the small door",
+    "[CH001] Chapter summary: **Location: Riverbank** - **Characters:** Alice, Sister (off-screen/passive). - **Events:** Alice sits by a riverbank on a hot day; she expresses boredom with her sister's book (no pictures or conversations). - **Visu...",
+    "[CH001] CHAPTER I. (book index hit)",
+    "[CH004] CHAPTER IV. (book index hit)",
+    "[CH007] CHAPTER VII. (book index hit)",
+    "Character alice: Alice is a young human girl characterized by extreme and rapid physical instability regarding her scale. She fluctuates between being a standard-sized child, shrinking to approximately ten inches in height, and growing to over nine feet tal..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH001_SC003\n\n## Production Intent\nAlice navigates a lamp-lit corridor of oversized doors to locate a miniature entrance. The sequence relies on precise scale shifts between the character, a glass table with a tiny key, and a small door hidden behind a curtain. Visuals must emphasize the verticality of the hall versus the micro-scale of the discovery.\n\n## Required Cast\n- alice (young human girl, extreme physical instability/scale fluctuation)\n\n## Required Environments\n- hall_of_doors (long, lamp-lit passage with locked doors)\n- glass_table_zone (contains a glass table and tiny golden key)\n- curtain_door_niche (contains a curtain and a small door leading to a garden)\n\n## Continuity Constraints\n- Scale relationship: Alice vs. Doors\n- Scale relationship: Tiny golden key vs. Glass table surface\n- Scale relationship: Alice vs. Small door opening\n- Visual continuity of the garden through the small door\n\n## Beat List\n- BT001: Alice explores the passage\n- BT002: Alice finds the key\n- BT003: Alice discovers the small door\n- BT004: Alice realizes she is too large",
+  "metadata": {
+    "artifact_id": "CH001_SC003_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "3fc66ccf81c4713a100b833f93af8682a806955a",
+    "created_at_utc": "2026-04-28T04:34:06.283190+00:00",
+    "updated_at_utc": "2026-04-28T04:34:06.283190+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH001_SC003",
+        "version": "964a46511192b190799e3207f668914f25844457"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH001_SC003",
+        "version": "67f06bdec7b71b32d7fde9b390a234c47e73ec8a"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH001_SC003",
+        "version": "b86024e95f825691d0070575bc0869f1a8229413"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-28T04:34:39.329195+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "3fc66ccf81c4713a100b833f93af8682a806955a"
+      }
+    ]
+  }
+}

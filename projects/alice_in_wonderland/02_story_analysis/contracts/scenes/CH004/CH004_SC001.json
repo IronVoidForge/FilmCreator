@@ -1,0 +1,324 @@
+{
+  "scene_id": "CH004_SC001",
+  "chapter_id": "CH004",
+  "scene_title": "CH004_SC001",
+  "purpose": "",
+  "summary": "The White Rabbit frantically searches his upstairs room for lost gloves and a fan, mistaking Alice for his housemaid Mary Ann. While exploring the tidy room, Alice discovers an unlabeled bottle.",
+  "emotional_arc": "Confusion to Curiosity",
+  "production_intent": "Establish the frantic energy of white_rabbit through rapid movement and searching, contrasted against alice's quiet exploration of a tidy domestic space. The scene relies on scale shifts to emphasize the discovery of the unlabeled bottle.",
+  "scene_short_description": "A frantic rabbit searches a tidy upstairs room while a young girl discovers an unlabeled bottle.",
+  "scene_primary_scale_story_point": "Alice's physical size relative to the unlabeled bottle and furniture.",
+  "scene_required_anchor_catalog": [
+    "table by window",
+    "looking-glass"
+  ],
+  "scene_start_state": "white_rabbit is frantically searching the room for gloves and a fan.",
+  "scene_end_state": "alice holds or observes an unlabeled bottle discovered in the tidy room.",
+  "dominant_action_line": "white_rabbit searches for lost items while alice explores the environment.",
+  "scene_spatial_layout": [
+    "Tidy upstairs room with window-side table",
+    "Looking-glass positioned within the room"
+  ],
+  "character_spatial_map": [
+    "white_rabbit moves erratically through the center and perimeter of the room",
+    "alice moves through the subzones near the furniture"
+  ],
+  "environment_subzones": [
+    "window area with table",
+    "looking-glass zone",
+    "general tidy floor space"
+  ],
+  "scene_event_chain": [
+    "event 1: white_rabbit frantically searches for lost gloves and a fan",
+    "event 2: white_rabbit mistakes alice for Mary Ann",
+    "event 3: alice explores the tidy room",
+    "event 4: alice discovers an unlabeled bottle"
+  ],
+  "entry_vectors": [
+    "white_rabbit enters via upstairs room access"
+  ],
+  "exit_vectors": [
+    "alice exits after discovering the bottle"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: frantic movement to verbal misidentification",
+    "BT002 -> BT003: verbal confusion to quiet exploration",
+    "BT003 -> BT004: exploration to object discovery"
+  ],
+  "characters_required": [
+    {
+      "label": "Alice",
+      "canonical_id": "alice",
+      "display_name": "alice",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH004/alice.md",
+      "notes": "Direct registry match for 'alice'."
+    },
+    {
+      "label": "White Rabbit",
+      "canonical_id": "white_rabbit",
+      "display_name": "white_rabbit",
+      "status": "canonical",
+      "entity_kind": "group",
+      "resolution_score": 138,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH004/white_rabbit.md",
+      "notes": "Direct registry match for 'white_rabbit'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "White Rabbit's House (Upstairs Room)",
+      "canonical_id": "white_rabbit_house",
+      "display_name": "white_rabbit_house",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 146,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/environment_breakdowns/chapters/CH004/white_rabbit_house.md",
+      "notes": "Chapter-local environment alias match for 'White Rabbit's House (Upstairs Room)' (key_overlap=3, label_overlap=5, context_overlap=4)."
+    }
+  ],
+  "continuity_constraints": [
+    "Bottle size relative to alice scale",
+    "Fixed placement of table and looking-glass"
+  ],
+  "visual_coverage_families": [
+    "Close-ups of white_rabbit frantic movements",
+    "Medium shots of alice exploring the tidy room",
+    "Insert shots of the unlabeled bottle"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "white_rabbit searches for lost items",
+      "purpose": "",
+      "action_start": "white_rabbit moves frantically through room",
+      "action_end": "gloves and fan remain unfound",
+      "active_subjects": [
+        "white_rabbit"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "tidy upstairs room",
+      "blocking_hint": "wide erratic paths",
+      "environment_subzone": "general tidy floor space",
+      "continuity_focus": "placement of gloves/fan if seen",
+      "coverage_hint": "close-ups of frantic movements",
+      "coverage_priority": "high",
+      "handoff_to_next": "white_rabbit speaks to alice"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "white_rabbit mistakes alice for Mary Ann",
+      "purpose": "",
+      "action_start": "white_rabbit spots alice",
+      "action_end": "white_rabbit addresses alice as housemaid",
+      "active_subjects": [
+        "white_rabbit",
+        "alice"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "near table/looking-glass",
+      "blocking_hint": "white_rabbit stops near alice",
+      "environment_subzone": "window area with table",
+      "continuity_focus": "alice's current scale",
+      "coverage_hint": "medium shots",
+      "coverage_priority": "medium",
+      "handoff_to_next": "alice begins exploring"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "alice explores the tidy room",
+      "purpose": "",
+      "action_start": "alice walks through room",
+      "action_end": "alice approaches furniture",
+      "active_subjects": [
+        "alice"
+      ],
+      "passive_subjects": [
+        "white_rabbit"
+      ],
+      "spatial_context": "tidy upstairs room",
+      "blocking_hint": "slow walking vs rabbit's fast movement",
+      "environment_subzone": "looking-glass zone",
+      "continuity_focus": "table and looking-glass placement",
+      "coverage_hint": "medium shots of alice",
+      "coverage_priority": "medium",
+      "handoff_to_next": "alice finds object"
+    },
+    {
+      "beat_id": "BT004",
+      "summary": "alice discovers an unlabeled bottle",
+      "purpose": "",
+      "action_start": "alice eyes the table/floor",
+      "action_end": "alice identifies the unlabeled bottle",
+      "active_subjects": [
+        "alice"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "near table",
+      "blocking_hint": "alice leans in toward object",
+      "environment_subzone": "window area with table",
+      "continuity_focus": "bottle size relative to alice",
+      "coverage_hint": "insert shots of bottle",
+      "coverage_priority": "high",
+      "handoff_to_next": "end scene"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish chaos",
+      "planned_shot_moment_summary": "white_rabbit searching for gloves",
+      "primary_subject_seed": "white_rabbit",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "general tidy floor space",
+      "planned_shot_required_anchor_1": "table by window",
+      "planned_shot_scale_proof_detail": "rabbit size vs room furniture",
+      "start_state_seed": "white_rabbit moving quickly",
+      "end_state_seed": "white_rabbit looking under items",
+      "action_seed": "searching",
+      "blocking_seed": [
+        "erratic movement across room"
+      ],
+      "shot_size": "medium_close",
+      "camera_angle": "eye_level",
+      "lens_family": "normal",
+      "camera_motion": "handheld",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front_three_quarter_right"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT004",
+      "narrative_function": "reveal discovery",
+      "planned_shot_moment_summary": "alice finds the bottle",
+      "primary_subject_seed": "alice",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "window area with table",
+      "planned_shot_required_anchor_1": "table by window",
+      "planned_shot_scale_proof_detail": "bottle size vs alice height",
+      "start_state_seed": "alice walking near table",
+      "end_state_seed": "alice spotting bottle",
+      "action_seed": "discovering bottle",
+      "blocking_seed": [
+        "standing near table"
+      ],
+      "shot_size": "insert_detail",
+      "camera_angle": "eye_level",
+      "lens_family": "normal",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front"
+    }
+  ],
+  "unresolved_questions": [],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH004",
+      "scene_id": "CH004_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH004",
+      "scene_id": "CH004_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH004",
+      "scene_id": "CH004_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH004",
+      "scene_id": "CH004_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH004",
+      "scene_id": "CH004_SC001"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH004",
+      "source_path": "C:\\FilmCreator\\projects\\alice_in_wonderland\\02_story_analysis\\chapter_analysis\\CH004_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH004",
+      "source_path": "projects/alice_in_wonderland/01_source/chapters/CH004_chapter_iv.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH002",
+      "source_path": "projects/alice_in_wonderland/01_source/chapters/CH002_chapter_ii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH007",
+      "source_path": "projects/alice_in_wonderland/01_source/chapters/CH007_chapter_vii.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH004",
+      "canonical_id": "alice"
+    }
+  ],
+  "evidence_summary": [
+    "[CH004_SC001] Purpose:",
+    "[CH004_SC001] Summary: The White Rabbit frantically searches his upstairs room for lost gloves and a fan, mistaking Alice for his housemaid Mary Ann. While exploring the tidy room, Alice discovers an unlabeled bottle.",
+    "[CH004_SC001] Emotional arc: Confusion to Curiosity",
+    "[CH004_SC001] Coverage: Close-ups of the Rabbit's frantic movements Medium shots of Alice exploring the tidy room Insert shots of the unlabeled bottle",
+    "[CH004_SC001] Continuity: The size of the bottle relative to Alice The placement of the table and looking-glass",
+    "[CH004] Chapter summary: **Setting: The White Rabbit's House** * **Location:** A neat little house with a brass plate reading \"W. RABBIT.\" * **Interior Subzones:** * A tidy upstairs room containing a table by a window, a looking-glass, and a...",
+    "[CH004] CHAPTER IV. (book index hit)",
+    "[CH002] CHAPTER II. (book index hit)",
+    "[CH007] CHAPTER VII. (book index hit)",
+    "Character alice: Alice is a young human girl characterized by extreme and rapid physical instability regarding her scale. She fluctuates between being a standard-sized child, shrinking to approximately ten inches in height, and growing to over nine feet tal..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH004_SC001\n\n## Production Intent\nEstablish the frantic energy of white_rabbit through rapid movement and searching, contrasted against alice's quiet exploration of a tidy domestic space. The scene relies on scale shifts to emphasize the discovery of the unlabeled bottle.\n\n## Required Cast\n- alice\n- white_rabbit\n\n## Required Environments\n- white_rabbit_house (Upstairs Room)\n\n## Continuity Constraints\n- Bottle size relative to alice scale\n- Fixed placement of table and looking-glass\n\n## Beat List\n- BT001: white_rabbit searches for lost items\n- BT002: white_rabbit mistakes alice for Mary Ann\n- BT003: alice explores the tidy room\n- BT004: alice discovers an unlabeled bottle",
+  "metadata": {
+    "artifact_id": "CH004_SC001_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "9b051ada6169d491fc3f698697573f1f99fd7bea",
+    "created_at_utc": "2026-04-28T04:40:23.976729+00:00",
+    "updated_at_utc": "2026-04-28T04:40:23.976729+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH004_SC001",
+        "version": "dccacd0351b1971a44bc26d2fb036efd256bf6e3"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH004_SC001",
+        "version": "6269725376de05e8b11e05080b5e09706a678fa8"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH004_SC001",
+        "version": "136f9f346d8f3cd79ecd98565a7e88c995c76951"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-28T04:40:50.518998+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "9b051ada6169d491fc3f698697573f1f99fd7bea"
+      }
+    ]
+  }
+}

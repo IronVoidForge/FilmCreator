@@ -1,0 +1,380 @@
+{
+  "scene_id": "CH003_SC001",
+  "chapter_id": "CH003",
+  "scene_title": "CH003_SC001",
+  "purpose": "",
+  "summary": "A group of bedraggled animals and birds gather on a riverbank, visibly uncomfortable from being wet. Alice engages in a brief, sulky argument with the Lory regarding its age before the Mouse attempts to dry everyone by reciting historical text.",
+  "emotional_arc": "From discomfort/irritation to awkward intellectualism.",
+  "production_intent": "Establish a group of wet, shivering animals gathered on the riverbank. The scene transitions from physical discomfort and interpersonal friction between Alice and the Lory into a structured, intellectual attempt by the Mouse to dry the group through recitation.",
+  "scene_short_description": "Bedraggled animals gather on a riverbank, shivering and arguing before a formal recitation begins.",
+  "scene_primary_scale_story_point": "Alice's scale relative to the small animal group must be established as potentially unstable.",
+  "scene_required_anchor_catalog": [
+    "riverbank_edge",
+    "circular_assembly_zone"
+  ],
+  "scene_start_state": "A group of wet, shivering animals and birds are gathered in a circle on the riverbank.",
+  "scene_end_state": "The Mouse is reciting historical text to the assembled group.",
+  "dominant_action_line": "Animals gather and argue while wet, then listen to the Mouse's recitation.",
+  "scene_spatial_layout": [
+    "Circular formation of animals on the bank",
+    "Riverbank edge serves as the boundary for the assembly"
+  ],
+  "character_spatial_map": [
+    "alice: positioned within or near the animal circle",
+    "mouse: central/authoritative position within the group",
+    "the_lory: part of the circular arrangement, facing Alice",
+    "the_duck: part of the circular arrangement",
+    "various_birds: scattered around the perimeter of the circle"
+  ],
+  "environment_subzones": [
+    "riverbank_assembly",
+    "water_edge"
+  ],
+  "scene_event_chain": [
+    "event 1: animals and birds gather on the riverbank while visibly wet and uncomfortable",
+    "event 2: alice engages in a sulky argument with the_lory regarding its age",
+    "event 3: mouse attempts to dry everyone by reciting historical text"
+  ],
+  "entry_vectors": [
+    "Subjects inherit entry logic from the prior scene or chapter transition."
+  ],
+  "exit_vectors": [
+    "Subjects exit or hand off toward the next story beat."
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: shift from physical discomfort to verbal conflict",
+    "BT002 -> BT003: shift from argument to formal recitation"
+  ],
+  "characters_required": [
+    {
+      "label": "Alice",
+      "canonical_id": "alice",
+      "display_name": "alice",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH003/alice.md",
+      "notes": "Direct registry match for 'alice'."
+    },
+    {
+      "label": "The Mouse",
+      "canonical_id": "mouse",
+      "display_name": "mouse",
+      "status": "canonical",
+      "entity_kind": "group",
+      "resolution_score": 138,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH003/mouse.md",
+      "notes": "Direct registry match for 'mouse'."
+    },
+    {
+      "label": "The Lory",
+      "canonical_id": "the_lory",
+      "display_name": "the_lory",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH003/the_lory.md",
+      "notes": "Direct registry match for 'the_lory'."
+    },
+    {
+      "label": "The Duck",
+      "canonical_id": "the_duck",
+      "display_name": "the_duck",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH003/the_duck.md",
+      "notes": "Direct registry match for 'the_duck'."
+    },
+    {
+      "label": "Various Birds",
+      "canonical_id": "various_birds",
+      "display_name": "various_birds",
+      "status": "canonical",
+      "entity_kind": "group",
+      "resolution_score": 138,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH003/various_birds.md",
+      "notes": "Direct registry match for 'various_birds'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "Riverbank",
+      "canonical_id": "riverbank_assembly",
+      "display_name": "riverbank_assembly",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 70,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/environment_breakdowns/chapters/CH003/riverbank_assembly.md",
+      "notes": "Chapter-local environment alias match for 'Riverbank' (key_overlap=1, label_overlap=1, context_overlap=4)."
+    }
+  ],
+  "continuity_constraints": [
+    "Wetness levels of fur and feathers must remain consistent across shots",
+    "Character positions within the circle must be maintained"
+  ],
+  "visual_coverage_families": [
+    "Wide shots of the wet group",
+    "Medium close-ups of individual animal reactions (shivering, sulking)",
+    "Close-ups of the Mouse reciting"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "animals gather while wet and uncomfortable",
+      "purpose": "",
+      "action_start": "animals shivering on bank",
+      "action_end": "group is assembled in circle",
+      "active_subjects": [
+        "the_duck",
+        "the_lory",
+        "various_birds"
+      ],
+      "passive_subjects": [
+        "alice"
+      ],
+      "spatial_context": "riverbank_assembly",
+      "blocking_hint": "circular formation near water",
+      "environment_subzone": "riverbank_assembly",
+      "continuity_focus": "wetness levels of fur/feathers",
+      "coverage_hint": "wide shots",
+      "coverage_priority": "medium",
+      "handoff_to_next": "the_lory and alice interact"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "alice argues with the lory about age",
+      "purpose": "",
+      "action_start": "alice speaks sulkily",
+      "action_end": "argument ceases",
+      "active_subjects": [
+        "alice",
+        "the_lory"
+      ],
+      "passive_subjects": [
+        "mouse",
+        "the_duck"
+      ],
+      "spatial_context": "within the circle",
+      "blocking_hint": "alice and lory facing each other",
+      "environment_subzone": "riverbank_assembly",
+      "continuity_focus": "character positions in circle",
+      "coverage_hint": "medium close-ups",
+      "coverage_priority": "high",
+      "handoff_to_next": "mouse takes control"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "mouse recites historical text to dry group",
+      "purpose": "",
+      "action_start": "mouse begins recitation",
+      "action_end": "recitation continues",
+      "active_subjects": [
+        "mouse"
+      ],
+      "passive_subjects": [
+        "alice",
+        "the_lory",
+        "the_duck",
+        "various_birds"
+      ],
+      "spatial_context": "center of assembly",
+      "blocking_hint": "animals listening to mouse",
+      "environment_subzone": "riverbank_assembly",
+      "continuity_focus": "wetness levels remain constant",
+      "coverage_hint": "close-ups of mouse",
+      "coverage_priority": "high",
+      "handoff_to_next": "scene continues with recitation"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish environment and state",
+      "planned_shot_moment_summary": "animals shivering in a circle",
+      "primary_subject_seed": "various_birds",
+      "secondary_subjects_seed": [
+        "the_duck",
+        "the_lory"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "riverbank_assembly",
+      "planned_shot_required_anchor_1": "riverbank_edge",
+      "planned_shot_scale_proof_detail": "alice_size_relative_to_birds",
+      "start_state_seed": "wet animals shivering",
+      "end_state_seed": "animals settled in circle",
+      "action_seed": "shivering and gathering",
+      "blocking_seed": [
+        "circular formation"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "eye_level",
+      "lens_family": "wide",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front_three_quarter_left"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "character conflict",
+      "planned_shot_moment_summary": "alice arguing with the lory",
+      "primary_subject_seed": "alice",
+      "secondary_subjects_seed": [
+        "the_lory"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "riverbank_assembly",
+      "planned_shot_required_anchor_1": "circular_assembly_zone",
+      "planned_shot_scale_proof_detail": "alice_height_fluctuation",
+      "start_state_seed": "sulky expression",
+      "end_state_seed": "argument concludes",
+      "action_seed": "arguing about age",
+      "blocking_seed": [
+        "face to face within circle"
+      ],
+      "shot_size": "medium_close",
+      "camera_angle": "eye_level",
+      "lens_family": "portrait",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "profile_left"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "resolve tension through ritual",
+      "planned_shot_moment_summary": "mouse reciting text",
+      "primary_subject_seed": "mouse",
+      "secondary_subjects_seed": [
+        "various_birds"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "riverbank_assembly",
+      "planned_shot_required_anchor_1": "circular_assembly_zone",
+      "planned_shot_scale_proof_detail": "mouse_scale_to_alice",
+      "start_state_seed": "mouse begins speaking",
+      "end_state_seed": "recitation continues",
+      "action_seed": "reciting historical text",
+      "blocking_seed": [
+        "mouse at center of attention"
+      ],
+      "shot_size": "close_up",
+      "camera_angle": "eye_level",
+      "lens_family": "portrait",
+      "camera_motion": "push_in",
+      "zoom_behavior": "subtle_in",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front"
+    }
+  ],
+  "unresolved_questions": [],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH003",
+      "scene_id": "CH003_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH003",
+      "scene_id": "CH003_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH003",
+      "scene_id": "CH003_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH003",
+      "scene_id": "CH003_SC001"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH003",
+      "scene_id": "CH003_SC001"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH003",
+      "source_path": "C:\\FilmCreator\\projects\\alice_in_wonderland\\02_story_analysis\\chapter_analysis\\CH003_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH011",
+      "source_path": "projects/alice_in_wonderland/01_source/chapters/CH011_chapter_xi.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH012",
+      "source_path": "projects/alice_in_wonderland/01_source/chapters/CH012_chapter_xii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH003",
+      "source_path": "projects/alice_in_wonderland/01_source/chapters/CH003_chapter_iii.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH003",
+      "canonical_id": "alice"
+    }
+  ],
+  "evidence_summary": [
+    "[CH003_SC001] Purpose:",
+    "[CH003_SC001] Summary: A group of bedraggled animals and birds gather on a riverbank, visibly uncomfortable from being wet. Alice engages in a brief, sulky argument with the Lory regarding its age before the Mouse attempts to dry everyone by reciting histor...",
+    "[CH003_SC001] Emotional arc: From discomfort/irritation to awkward intellectualism.",
+    "[CH003_SC001] Coverage: Wide shots of the wet group Medium close-ups of individual animal reactions (shivering, sulking) Close-ups of the Mouse reciting",
+    "[CH003_SC001] Continuity: Wetness levels of fur and feathers Position of characters in the circle",
+    "[CH003] Chapter summary: **Location:** A riverbank; a circular race-course area nearby. **Characters:** - Alice (human girl) - The Mouse (authoritative, prone to offense) - The Lory (sulky, older bird) - The Duck (literal-minded) - The Dodo (...",
+    "[CH011] CHAPTER XI. (book index hit)",
+    "[CH012] CHAPTER XII. (book index hit)",
+    "[CH003] CHAPTER III. (book index hit)",
+    "Character alice: Alice is a young human girl characterized by extreme and rapid physical instability regarding her scale. She fluctuates between being a standard-sized child, shrinking to approximately ten inches in height, and growing to over nine feet tal..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH003_SC001\n\n## Production Intent\nEstablish a group of wet, shivering animals gathered on the riverbank. The scene transitions from physical discomfort and interpersonal friction between Alice and the Lory into a structured, intellectual attempt by the Mouse to dry the group through recitation.\n\n## Required Cast\n- alice\n- mouse\n- the_lory\n- the_duck\n- various_birds\n\n## Required Environments\n- riverbank_assembly\n\n## Continuity Constraints\n- Wetness levels of fur and feathers must remain consistent across shots\n- Position of characters in the circle must be maintained\n\n## Beat List\n- BT001: animals gather while wet and uncomfortable\n- BT002: alice argues with the lory about age\n- BT003: mouse recites historical text to dry group",
+  "metadata": {
+    "artifact_id": "CH003_SC001_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "1dbf08f1c1a72fd632ad8c4c45a12267d3afd180",
+    "created_at_utc": "2026-04-28T04:38:00.208759+00:00",
+    "updated_at_utc": "2026-04-28T04:38:00.208759+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH003_SC001",
+        "version": "efe9d1059725c2101f9deeb04af65b06cdcb001d"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH003_SC001",
+        "version": "4efff635f946ea1a012e548916052a8ea183d54a"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH003_SC001",
+        "version": "394ad22b58f58109a2672bfdccd38411804e6597"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-28T04:38:29.346968+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "1dbf08f1c1a72fd632ad8c4c45a12267d3afd180"
+      }
+    ]
+  }
+}
