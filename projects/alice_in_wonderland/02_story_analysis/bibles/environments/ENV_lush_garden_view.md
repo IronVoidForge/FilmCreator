@@ -14,17 +14,17 @@
 
 ## Visual Bible
 
-A vibrant botanical vista featuring sunlit flowerbeds and sparkling fountains. The scene is viewed through a small aperture, framing the lush floral garden.
+A vibrant floral garden characterized by sunlit flowerbeds and lush botanical vistas. The scene features sparkling fountains within a rich, verdant landscape.
 
-- layout_notes: Viewed through a small aperture; contains flowerbeds and fountains.
+- layout_notes: Viewed through a small aperture.
 - lighting: Sunlit.
 - mood: Vibrant.
-- recurring_elements: vibrant floral garden, sunlit flowerbeds, sparkling fountains
+- recurring_elements: vibrant floral garden, sunlit flowerbeds, sparkling fountains, lush botanical vista
 
 ## Continuity
 
 - constraints: Must be framed as seen through a small aperture.
-- unresolved_ambiguities: Specific geometry of the aperture is not defined., Exact botanical composition remains unstated.
+- unresolved_ambiguities: Specific spatial geometry of the aperture is not defined., Exact botanical composition remains unspecified.
 
 ## Evidence Summary
 
@@ -41,5 +41,5 @@ A vibrant botanical vista featuring sunlit flowerbeds and sparkling fountains. T
 - artifact_id: `ENV_lush_garden_view`
 - status: `generated`
 - source_fingerprint: `8a31bfc76da04fb94210fc229dd69bacb8885cf1`
-- created_at_utc: `2026-04-28T00:25:59.758102+00:00`
-- updated_at_utc: `2026-04-28T00:25:59.758102+00:00`
+- created_at_utc: `2026-04-28T02:40:27.601414+00:00`
+- updated_at_utc: `2026-04-28T02:40:27.601414+00:00`

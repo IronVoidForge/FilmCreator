@@ -17,12 +17,12 @@ _GENERIC_CHARACTER_LABELS = {
     "unknown_companion",
     "friend_body",
     "prisoner",
-    "human_female_prisoner",
+    "female_prisoner",
+    "male_prisoner",
     "captive",
     "guard",
+    "leader",
     "chieftain",
-    "martian",
-    "martian_leader",
     "young_warrior",
     "watch_dog",
     "watch_thing",
@@ -120,7 +120,7 @@ def is_generic_character_label(value: str) -> bool:
     normalized = normalize_alias_token(value)
     return normalized in _GENERIC_CHARACTER_LABELS or any(
         token in normalized.split("_")
-        for token in {"narrator", "prisoner", "captive", "guard", "companion", "warrior", "chieftain", "martian"}
+        for token in {"narrator", "prisoner", "captive", "guard", "companion", "warrior", "chieftain", "leader"}
     )
 
 

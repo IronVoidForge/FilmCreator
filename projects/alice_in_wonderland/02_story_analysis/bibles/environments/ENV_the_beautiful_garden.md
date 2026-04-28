@@ -9,12 +9,12 @@
 ## Identity
 
 - display_name: the_beautiful_garden
-- environment_type: garden
+- environment_type: environment
 - chapter_mentions: CH007
 
 ## Visual Bible
 
-No specific visual details are currently available in the provided source material.
+No specific visual details are currently available for this environment.
 
 - layout_notes: Unknown.
 - lighting: Unknown.
@@ -24,7 +24,7 @@ No specific visual details are currently available in the provided source materi
 ## Continuity
 
 - constraints: []
-- unresolved_ambiguities: Visual characteristics are currently unextracted from the source.
+- unresolved_ambiguities: Visual characteristics are currently unextracted from the source material.
 
 ## Evidence Summary
 
@@ -35,5 +35,5 @@ No specific visual details are currently available in the provided source materi
 - artifact_id: `ENV_the_beautiful_garden`
 - status: `generated`
 - source_fingerprint: `f44c6ae45c3e59ff5406a061f4417b07c9c94571`
-- created_at_utc: `2026-04-28T00:26:45.031726+00:00`
-- updated_at_utc: `2026-04-28T00:26:45.031726+00:00`
+- created_at_utc: `2026-04-28T02:41:08.520099+00:00`
+- updated_at_utc: `2026-04-28T02:41:08.520099+00:00`

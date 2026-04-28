@@ -19,9 +19,9 @@
 - physical_build: Human-scale mass with a quadrupedal frame.
 - origin_or_historical_context: unknown
 - movement_language: unknown
-The March Hare is a human-scale quadruped entity. Due to the limited provided evidence, its specific visual appearance remains largely undefined beyond its scale and morphological classification as a quadruped.
+The March Hare is a human-scale quadruped entity. Due to the limited provided evidence, its specific visual appearance remains largely undefined beyond its scale and morphological type.
 
-- physical_traits: Human-scale mass
+- physical_traits: Human-scale dimension
 - costume_signature: unknown
 - distinguishing_features: Quadruped morphology
 - state_variants: quadrupeds
@@ -36,7 +36,7 @@ The March Hare is a human-scale quadruped entity. Due to the limited provided ev
 ## Continuity
 
 - continuity_constraints: Maintain human-scale quadruped morphology.
-- unresolved_ambiguities: Specific visual appearance of the quadruped form is not defined., Age and movement language are currently unknown.
+- unresolved_ambiguities: Specific visual appearance of the quadruped form is not defined in provided evidence., Age and movement language are currently unknown.
 
 ## Evidence Summary
 
@@ -49,5 +49,5 @@ The March Hare is a human-scale quadruped entity. Due to the limited provided ev
 - artifact_id: `CHAR_march_hare`
 - status: `generated`
 - source_fingerprint: `57bbc764086ba984f1c60defb5818b9c75ac662b`
-- created_at_utc: `2026-04-28T00:23:30.863538+00:00`
-- updated_at_utc: `2026-04-28T00:23:30.863538+00:00`
+- created_at_utc: `2026-04-28T02:38:19.150173+00:00`
+- updated_at_utc: `2026-04-28T02:38:19.150173+00:00`

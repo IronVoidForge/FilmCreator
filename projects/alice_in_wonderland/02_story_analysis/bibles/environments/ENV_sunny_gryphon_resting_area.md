@@ -9,12 +9,12 @@
 ## Identity
 
 - display_name: sunny_gryphon_resting_area
-- environment_type: Transit setting / brief moment of respite
+- environment_type: Transit setting / brief respite location
 - chapter_mentions: CH009
 
 ## Visual Bible
 
-The environment serves as a transit setting used for brief moments of respite. Specific physical characteristics are currently being held under its canonical ID.
+The environment serves as a transit setting used for brief moments of respite. Specific physical characteristics are currently being held under the extracted canonical ID.
 
 - layout_notes: Spatial layout is defined by its role as a transitionary space.
 - lighting: Unknown
@@ -39,5 +39,5 @@ The environment serves as a transit setting used for brief moments of respite. S
 - artifact_id: `ENV_sunny_gryphon_resting_area`
 - status: `generated`
 - source_fingerprint: `e5fe1a36e46a4edd8dc8f0da3ec60078ff9b4a54`
-- created_at_utc: `2026-04-28T00:27:17.819349+00:00`
-- updated_at_utc: `2026-04-28T00:27:17.819349+00:00`
+- created_at_utc: `2026-04-28T02:41:38.320215+00:00`
+- updated_at_utc: `2026-04-28T02:41:38.320215+00:00`

@@ -16,27 +16,27 @@
 
 - identity_baseline: A figure constructed entirely of cardboard.
 - age_presence: unknown
-- physical_build: Flat, rigid, or structured mass composed of cardboard material.
+- physical_build: Flat, rigid, or planar due to being made of cardboard; lacks organic mass.
 - origin_or_historical_context: unknown
-- movement_language: Likely stiff or constrained due to the physical properties of cardboard.
-The Knave is a figure defined by his material composition, being made entirely of cardboard. This physical makeup suggests a rigid or structured form that would be highly susceptible to water, rendering him physically incapable of swimming.
+- movement_language: Likely stiff or awkward; physically incapable of swimming.
+The Knave is a singular entity made entirely of cardboard. This composition dictates a rigid, planar physical build that lacks traditional organic mass or the ability to swim effectively in water.
 
-- physical_traits: Physically incapable of swimming due to material composition
-- costume_signature: Entirely made of cardboard.
-- distinguishing_features: Composed entirely of cardboard
-- state_variants: Dry (standard), Wet (incapable of swimming/water-resistant issues)
+- physical_traits: Incapable of swimming
+- costume_signature: A figure composed entirely of cardboard material.
+- distinguishing_features: Entirely composed of cardboard
+- state_variants: Dry (standard), Wet/Saturated (vulnerable state)
 
 ## Behavioral Bible
 
 - personality: unknown
 - role: unknown
 - voice_notes: unknown
-- relationship_notes: Associated with The King, Associated with The White Rabbit, Associated with Alice, [[/section]]
+- relationship_notes: Associated with The King, Associated with The White Rabbit, Associated with Alice
 
 ## Continuity
 
-- continuity_constraints: Must maintain a cardboard material aesthetic.
-- unresolved_ambiguities: Specific dimensions or thickness of the cardboard structure., Exact visual texture (corrugated vs. smooth).
+- continuity_constraints: Must maintain a cardboard material composition.
+- unresolved_ambiguities: Specific dimensions or scale of the figure are unknown., Exact visual texture of the cardboard (corrugated vs. flat) is unstated.
 
 ## Evidence Summary
 
@@ -50,5 +50,5 @@ The Knave is a figure defined by his material composition, being made entirely o
 - artifact_id: `CHAR_the_knave`
 - status: `generated`
 - source_fingerprint: `498fc252c05c3e125d45bfede432ffafcffc6221`
-- created_at_utc: `2026-04-28T00:25:23.713288+00:00`
-- updated_at_utc: `2026-04-28T00:25:23.713288+00:00`
+- created_at_utc: `2026-04-28T02:39:55.606865+00:00`
+- updated_at_utc: `2026-04-28T02:39:55.606865+00:00`

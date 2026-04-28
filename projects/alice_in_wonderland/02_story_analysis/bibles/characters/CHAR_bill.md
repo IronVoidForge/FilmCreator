@@ -19,24 +19,24 @@
 - physical_build: small scale; lizard morphology
 - origin_or_historical_context: unknown
 - movement_language: prone to being knocked over when the jury box tips.
-Bill is a small-scale lizard serving as a juror in a courtroom setting. He possesses the physical characteristics of a lizard and is subject to the physical chaos of the jury box, which can tip over him or result in ink being spilled upon his body.
+Bill is a small-scale lizard serving as a juror within a courtroom setting. He possesses the physical characteristics of a lizard and is subject to the physical chaos of the jury box, specifically being knocked over when the box tips or becoming stained by spilled ink.
 
 - physical_traits: Lizard morphology
 - costume_signature: unknown
 - distinguishing_features: Lizard anatomy
-- state_variants: Juror (clothed/seated), Wounded (ink-stained)
+- state_variants: Juror (standard), Ink-stained (wounded/soiled)
 
 ## Behavioral Bible
 
 - personality: unknown
 - role: Juror
 - voice_notes: unknown
-- relationship_notes: []
+- relationship_notes: Serves as a juror in a legal proceeding.
 
 ## Continuity
 
-- continuity_constraints: Must maintain lizard morphology., Visual state must account for potential ink stains or being knocked over.
-- unresolved_ambiguities: Specific species of lizard is not defined., Exact clothing/costume is not specified.
+- continuity_constraints: Must maintain lizard morphology consistent with the scale of a jury box.
+- unresolved_ambiguities: Specific species or color of the lizard is not defined., The exact era or setting cues for his attire are unknown.
 
 ## Evidence Summary
 
@@ -54,5 +54,5 @@ Bill is a small-scale lizard serving as a juror in a courtroom setting. He posse
 - artifact_id: `CHAR_bill`
 - status: `generated`
 - source_fingerprint: `0cd0fafb2ef8df0eabceabdb3e0c0aac977f4307`
-- created_at_utc: `2026-04-28T00:24:57.716042+00:00`
-- updated_at_utc: `2026-04-28T00:24:57.716042+00:00`
+- created_at_utc: `2026-04-28T02:39:33.110634+00:00`
+- updated_at_utc: `2026-04-28T02:39:33.110634+00:00`

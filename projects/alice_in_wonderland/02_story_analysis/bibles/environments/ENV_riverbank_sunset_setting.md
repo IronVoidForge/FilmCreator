@@ -14,7 +14,7 @@
 
 ## Visual Bible
 
-The environment serves as a secondary real-world setting. Specific topographical or atmospheric details are currently being held under the canonical ID, awaiting further extraction from source text.
+The environment serves as a secondary real-world setting. Specific topographical or atmospheric details are currently being held under the canonical ID for further extraction.
 
 - layout_notes: Spatial layout is not yet defined in the provided evidence.
 - lighting: Unknown.
@@ -24,7 +24,7 @@ The environment serves as a secondary real-world setting. Specific topographical
 ## Continuity
 
 - constraints: Must maintain identity as a real-world setting
-- unresolved_ambiguities: Specific visual characteristics of the riverbank are not yet detailed., The relationship between the physical geography and the "sunset" descriptor is unestablished in current evidence.
+- unresolved_ambiguities: Specific visual characteristics of the riverbank are not yet established., The relationship between the physical geography and the "sunset" descriptor is unverified in current evidence.
 
 ## Evidence Summary
 
@@ -39,5 +39,5 @@ The environment serves as a secondary real-world setting. Specific topographical
 - artifact_id: `ENV_riverbank_sunset_setting`
 - status: `generated`
 - source_fingerprint: `e4108d48e133d748b8d84e53de094c4254a764ce`
-- created_at_utc: `2026-04-28T00:27:44.684416+00:00`
-- updated_at_utc: `2026-04-28T00:27:44.684416+00:00`
+- created_at_utc: `2026-04-28T02:42:02.829102+00:00`
+- updated_at_utc: `2026-04-28T02:42:02.829102+00:00`

@@ -13,6 +13,7 @@ from ..common import (
     read_json,
     repo_relative,
     replace_tokens,
+    validate_project_slug,
     validate_clip_id,
     validate_scene_id,
     write_json,
@@ -78,7 +79,7 @@ LAST_VIDEO_FRAME_ASSET_CODE = "VL"
 
 
 def _project_path(project_slug: str) -> Path:
-    return PROJECTS_ROOT / project_slug
+    return PROJECTS_ROOT / validate_project_slug(project_slug)
 
 
 def _load_template(name: str, replacements: dict[str, str]) -> dict[str, Any]:

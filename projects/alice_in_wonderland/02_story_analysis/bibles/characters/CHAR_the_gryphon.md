@@ -36,7 +36,7 @@ The Gryphon is a human-scale entity characterized by its winged morphology. Whil
 ## Continuity
 
 - continuity_constraints: Maintain human-scale proportions despite winged morphology.
-- unresolved_ambiguities: Specific biological mass and frame are not defined in the source text., Exact visual appearance of wings and body is unknown.
+- unresolved_ambiguities: Specific biological mass and frame are not defined in the source text., Visual age and movement language remain unknown.
 
 ## Evidence Summary
 
@@ -49,5 +49,5 @@ The Gryphon is a human-scale entity characterized by its winged morphology. Whil
 - artifact_id: `CHAR_the_gryphon`
 - status: `generated`
 - source_fingerprint: `f70dabc3987e4be0689841c4d0060259644547d7`
-- created_at_utc: `2026-04-28T00:24:06.725869+00:00`
-- updated_at_utc: `2026-04-28T00:24:06.725869+00:00`
+- created_at_utc: `2026-04-28T02:38:50.259073+00:00`
+- updated_at_utc: `2026-04-28T02:38:50.259073+00:00`

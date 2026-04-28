@@ -1,9 +1,13 @@
 from __future__ import annotations
 
 import json
+from hashlib import sha256
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
+
+from .core.validation import validate_project_slug
+from .delete_safety import resolve_project_target, validate_project_relative_path, remove_path_within_project
 
 
 PRESERVED_PATHS = [
@@ -94,6 +98,7 @@ class CleanupExecutionSummary:
 
 
 def create_cleanup_plan(project_slug: str, *, scope: str, repo_root: Path | None = None) -> CleanupPlanSummary:
+    project_slug = validate_project_slug(project_slug)
     if scope not in CLEANUP_SCOPES:
         raise ValueError(f"Unsupported cleanup scope: {scope}")
     root = (repo_root or Path.cwd()).resolve()
@@ -104,30 +109,33 @@ def create_cleanup_plan(project_slug: str, *, scope: str, repo_root: Path | None
     targets: list[dict[str, Any]] = []
     scope_config = CLEANUP_SCOPES[scope]
     for relative in scope_config["dirs"]:
-        absolute = project_root / Path(relative)
+        normalized = validate_project_relative_path(relative)
+        absolute = resolve_project_target(project_root=project_root, relative_path=normalized)
         targets.append(
             {
-                "path": str(absolute),
-                "relative_path": relative.replace("\\", "/"),
+                "relative_path": normalized,
                 "kind": "dir",
                 "exists": absolute.exists(),
             }
         )
     for relative in scope_config["files"]:
-        absolute = project_root / Path(relative)
+        normalized = validate_project_relative_path(relative)
+        absolute = resolve_project_target(project_root=project_root, relative_path=normalized)
         targets.append(
             {
-                "path": str(absolute),
-                "relative_path": relative.replace("\\", "/"),
+                "relative_path": normalized,
                 "kind": "file",
                 "exists": absolute.exists(),
             }
         )
 
     plan_path = _cleanup_plan_path(project_root)
+    plan_signature = _cleanup_plan_signature(project_slug=project_slug, project_root=project_root, scope=scope, targets=targets)
     plan_payload = {
         "project_slug": project_slug,
+        "project_root": str(project_root),
         "scope": scope,
+        "signature": plan_signature,
         "targets": targets,
         "preserved": PRESERVED_PATHS,
     }
@@ -144,6 +152,7 @@ def create_cleanup_plan(project_slug: str, *, scope: str, repo_root: Path | None
 
 
 def execute_cleanup_plan(project_slug: str, *, repo_root: Path | None = None) -> CleanupExecutionSummary:
+    project_slug = validate_project_slug(project_slug)
     root = (repo_root or Path.cwd()).resolve()
     project_root = root / "projects" / project_slug
     plan_path = _cleanup_plan_path(project_root)
@@ -151,10 +160,26 @@ def execute_cleanup_plan(project_slug: str, *, repo_root: Path | None = None) ->
         raise FileNotFoundError(f"Cleanup plan not found: {plan_path}")
 
     payload = json.loads(plan_path.read_text(encoding="utf-8"))
+    if str(payload.get("project_slug") or "").strip() != project_slug:
+        raise ValueError("Cleanup plan project slug does not match the requested project.")
+    planned_project_root = Path(str(payload.get("project_root") or "")).resolve()
+    if planned_project_root != project_root.resolve():
+        raise ValueError(f"Cleanup plan project root mismatch: {planned_project_root} != {project_root.resolve()}")
     scope = str(payload.get("scope") or "").strip()
     targets = payload.get("targets", [])
+    signature = str(payload.get("signature") or "").strip()
     if not isinstance(targets, list):
         raise ValueError("Cleanup plan targets are invalid.")
+    if scope not in CLEANUP_SCOPES:
+        raise ValueError(f"Cleanup plan scope is invalid: {scope}")
+
+    expected_targets = _expected_scope_targets(project_root=project_root, scope=scope)
+    actual_targets = _normalized_plan_targets(targets)
+    if actual_targets != expected_targets:
+        raise ValueError("Cleanup plan targets do not exactly match the allowed scope targets.")
+    expected_signature = _cleanup_plan_signature(project_slug=project_slug, project_root=project_root, scope=scope, targets=targets)
+    if signature != expected_signature:
+        raise ValueError("Cleanup plan signature mismatch. Refusing to execute a tampered cleanup plan.")
 
     deleted: list[str] = []
     skipped_missing: list[str] = []
@@ -163,27 +188,21 @@ def execute_cleanup_plan(project_slug: str, *, repo_root: Path | None = None) ->
     for target in targets:
         if not isinstance(target, dict):
             continue
-        raw_path = target.get("path")
+        relative_path = target.get("relative_path")
         kind = target.get("kind")
-        if not isinstance(raw_path, str) or kind not in {"dir", "file"}:
+        if not isinstance(relative_path, str) or kind not in {"dir", "file"}:
             continue
-        absolute = Path(raw_path).resolve()
-        _ensure_within(project_root, absolute)
+        absolute = resolve_project_target(project_root=project_root, relative_path=relative_path)
         if not absolute.exists():
             skipped_missing.append(str(absolute))
             continue
-        if kind == "dir":
-            for child in sorted(absolute.iterdir(), reverse=True):
-                _remove_path(child)
-            absolute.rmdir()
-        else:
-            absolute.unlink()
+        remove_path_within_project(absolute, project_root=project_root)
         deleted.append(str(absolute))
 
     for target in targets:
-        if not isinstance(target, dict) or not isinstance(target.get("path"), str):
+        if not isinstance(target, dict) or not isinstance(target.get("relative_path"), str):
             continue
-        absolute = Path(target["path"]).resolve()
+        absolute = resolve_project_target(project_root=project_root, relative_path=target["relative_path"])
         if absolute.exists():
             verification_failed.append(str(absolute))
 
@@ -228,17 +247,53 @@ def _cleanup_plan_path(project_root: Path) -> Path:
     return project_root / "02_story_analysis" / "cleanup" / "last_cleanup_plan.json"
 
 
-def _ensure_within(project_root: Path, target: Path) -> None:
-    project_root = project_root.resolve()
-    target = target.resolve()
-    if project_root not in target.parents and target != project_root:
-        raise ValueError(f"Cleanup target escapes project root: {target}")
+def _expected_scope_targets(*, project_root: Path, scope: str) -> set[tuple[str, str]]:
+    scope_config = CLEANUP_SCOPES[scope]
+    expected: set[tuple[str, str]] = set()
+    for relative in scope_config["dirs"]:
+        normalized = validate_project_relative_path(relative)
+        resolve_project_target(project_root=project_root, relative_path=normalized)
+        expected.add((normalized, "dir"))
+    for relative in scope_config["files"]:
+        normalized = validate_project_relative_path(relative)
+        resolve_project_target(project_root=project_root, relative_path=normalized)
+        expected.add((normalized, "file"))
+    return expected
 
 
-def _remove_path(path: Path) -> None:
-    if path.is_dir():
-        for child in sorted(path.iterdir(), reverse=True):
-            _remove_path(child)
-        path.rmdir()
-    else:
-        path.unlink()
+def _normalized_plan_targets(targets: list[dict[str, Any]]) -> set[tuple[str, str]]:
+    normalized: set[tuple[str, str]] = set()
+    for target in targets:
+        if not isinstance(target, dict):
+            raise ValueError("Cleanup plan target entry is invalid.")
+        relative_path = target.get("relative_path")
+        kind = target.get("kind")
+        if not isinstance(relative_path, str) or kind not in {"dir", "file"}:
+            raise ValueError("Cleanup plan target entry is missing required fields.")
+        normalized.add((validate_project_relative_path(relative_path), kind))
+    return normalized
+
+
+def _cleanup_plan_signature(
+    *,
+    project_slug: str,
+    project_root: Path,
+    scope: str,
+    targets: list[dict[str, Any]],
+) -> str:
+    canonical_targets = [
+        {
+            "relative_path": validate_project_relative_path(str(target.get("relative_path", ""))),
+            "kind": str(target.get("kind", "")),
+        }
+        for target in targets
+        if isinstance(target, dict)
+    ]
+    canonical_targets.sort(key=lambda item: (item["relative_path"], item["kind"]))
+    payload = {
+        "project_slug": project_slug,
+        "project_root": str(project_root.resolve()),
+        "scope": scope,
+        "targets": canonical_targets,
+    }
+    return sha256(json.dumps(payload, sort_keys=True).encode("utf-8")).hexdigest()

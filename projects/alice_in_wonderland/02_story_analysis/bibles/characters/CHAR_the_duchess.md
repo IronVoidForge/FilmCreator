@@ -19,24 +19,24 @@
 - physical_build: unknown
 - origin_or_historical_context: unknown
 - movement_language: unknown
-The visual identity of the Duchess is currently undefined within the provided evidence. While identified as a human-scale individual, specific physical descriptions, age, build, and costume details are not present in the source text to establish a stable visual profile.
+The visual identity of the Duchess is currently undefined within the provided evidence. While identified as a human-scale individual, specific physical traits, age, and costume details remain unestablished in the source text.
 
 - physical_traits: unknown
 - costume_signature: unknown
-- distinguishing_features: unknown
-- state_variants: unknown
+- distinguishing_features: none known
+- state_variants: none known
 
 ## Behavioral Bible
 
 - personality: unknown
 - role: unknown
 - voice_notes: unknown
-- relationship_notes: associated with Alice (per entity associations), associated with The Queen of Hearts (per entity associations)
+- relationship_notes: associated with Alice (inferred), associated with The Queen of Hearts (inferred)
 
 ## Continuity
 
-- continuity_constraints: maintain identity as a singular individual entity per resolution logic
-- unresolved_ambiguities: physical appearance is entirely unstated in provided evidence, age and build are unknown, costume and movement language are unknown
+- continuity_constraints: maintain identity as a singular individual entity
+- unresolved_ambiguities: physical appearance is entirely unstated in provided evidence, age and build are unknown, movement and costume are unknown
 
 ## Evidence Summary
 
@@ -49,5 +49,5 @@ The visual identity of the Duchess is currently undefined within the provided ev
 - artifact_id: `CHAR_the_duchess`
 - status: `generated`
 - source_fingerprint: `028ca3e83d6c404fc1eef8ff945c29ba2b1fedc7`
-- created_at_utc: `2026-04-28T00:23:54.916491+00:00`
-- updated_at_utc: `2026-04-28T00:23:54.916491+00:00`
+- created_at_utc: `2026-04-28T02:38:40.251068+00:00`
+- updated_at_utc: `2026-04-28T02:38:40.251068+00:00`

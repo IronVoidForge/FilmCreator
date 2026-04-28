@@ -15,6 +15,7 @@ from ..prompt_package import PromptPackage, parse_prompt_package
 from ..comfy_client import ComfyClient
 from ..settings import RuntimeSettings, load_runtime_settings
 from ..registry_loader import get_workflow, load_registry
+from ..delete_safety import remove_path_within_project
 
 
 STAGE_DIR_BY_STAGE = {
@@ -623,17 +624,26 @@ def _stage_input_refs(prepared) -> None:
 
 
 def _cleanup_staged_files(prepared, comfy_outputs: list[dict[str, str]]) -> None:
+    project_root = create_project(prepared.project_slug).resolve()
     for staged_name in prepared.comfy_input_refs.values():
         path = prepared.settings.comfy_input_dir / Path(staged_name)
-        if path.exists():
-            path.unlink()
-        _remove_empty_parents(path.parent, prepared.settings.comfy_input_dir)
+        try:
+            if path.exists():
+                remove_path_within_project(path, project_root=project_root)
+            if path.parent.resolve() == project_root or project_root in path.parent.resolve().parents:
+                _remove_empty_parents(path.parent, prepared.settings.comfy_input_dir)
+        except ValueError:
+            continue
 
     for output in comfy_outputs:
         path = _resolve_comfy_output_source(prepared, output)
-        if path.exists():
-            path.unlink()
-        _remove_empty_parents(path.parent, prepared.settings.comfy_output_dir)
+        try:
+            if path.exists():
+                remove_path_within_project(path, project_root=project_root)
+            if path.parent.resolve() == project_root or project_root in path.parent.resolve().parents:
+                _remove_empty_parents(path.parent, prepared.settings.comfy_output_dir)
+        except ValueError:
+            continue
 
 
 def _resolve_comfy_output_source(prepared, output: dict[str, str]) -> Path:

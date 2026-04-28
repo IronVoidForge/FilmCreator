@@ -218,8 +218,8 @@ def _derive_book_visual_context(context: dict[str, Any]) -> str:
         descriptors.extend(["speculative adventure", "non-modern unfamiliar-world culture"])
     else:
         descriptors.append("classic adventure visual style")
-    if any(term in digest for term in ["arizona", "desert", "mountain", "cave", "frontier"]):
-        descriptors.extend(["frontier desert realism", "weathered rock and dry wilderness terrain"])
+    if any(term in digest for term in ["desert", "mountain", "cave", "cliff", "wilderness"]):
+        descriptors.extend(["terrain-specific natural realism", "weathered rock and readable landscape depth"])
     if any(term in digest for term in ["sword", "warrior", "harness", "tribal", "chieftain"]):
         descriptors.extend(["non-modern clothing", "weathered natural materials", "tribal or gladiatorial costume logic"])
     if len(descriptors) < 5:

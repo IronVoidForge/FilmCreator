@@ -50,7 +50,7 @@ def _iter_environment_files(environment_files: Iterable[Path]) -> list[Path]:
 def _character_entity_kind(asset_id: str, source_markdown: str) -> tuple[str, str]:
     normalized = asset_id.lower()
     markdown = source_markdown.lower()
-    if any(token in normalized for token in ["warriors", "females", "soldiers", "guards", "martians"]):
+    if any(token in normalized for token in ["warriors", "soldiers", "guards", "children", "villagers", "crowd", "group"]):
         return "group", "Detected plural/group-like character asset."
     if any(label == normalized or normalized.startswith(f"{label}_") for label in GENERIC_CHARACTER_LABELS):
         return "provisional_role", "Generic role-based character remains provisional."
@@ -60,14 +60,7 @@ def _character_entity_kind(asset_id: str, source_markdown: str) -> tuple[str, st
 
 
 def _character_resolution(asset_id: str, source_markdown: str) -> tuple[str, str, str, str]:
-    if asset_id in {"carter", "john_carter", "johncarter"}:
-        return "john_carter", "canonical", "individual", "Resolved known Carter alias to john_carter."
-
     entity_kind, entity_reason = _character_entity_kind(asset_id, source_markdown)
-    if asset_id == "earthling_woman":
-        return asset_id, "provisional", "provisional_role", (
-            "Earthling woman is still a role-like placeholder and should not yet be treated as a strong canonical named identity."
-        )
     if entity_kind == "provisional_role":
         return asset_id, "provisional", entity_kind, "Generic or role-based character remains provisional pending clarification."
     return asset_id, "canonical", entity_kind, f"No competing canonical alias detected; kept extracted asset id. {entity_reason}"

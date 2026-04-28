@@ -1415,16 +1415,14 @@ def _derive_scene_event_chain(summary: str, beats: list[SceneBeat]) -> list[str]
 
 def _default_primary_subject_seed(summary: str) -> str:
     lowered = summary.lower()
-    if "narrator" in lowered:
+    if any(token in lowered for token in ["narrator", "first-person", "voiceover", "voice-over"]):
         return "The Narrator"
-    if "john carter" in lowered:
-        return "John Carter"
-    if "chieftain" in lowered:
-        return "The Chieftain"
-    if "tars tarkas" in lowered:
-        return "Tars Tarkas"
-    if "martian warrior" in lowered:
-        return "Martian Warrior"
+    if any(token in lowered for token in ["queen", "king", "princess", "prince", "duchess", "duke"]):
+        return "the central authority figure"
+    if any(token in lowered for token in ["group", "crowd", "villagers", "soldiers", "guards", "children"]):
+        return "the key group in the scene"
+    if any(token in lowered for token in ["creature", "animal", "beast", "monster"]):
+        return "the primary creature in the scene"
     return "primary scene subject"
 
 

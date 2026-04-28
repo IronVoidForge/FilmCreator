@@ -1,60 +1,58 @@
 # Character Bible Review Queue
 
 - `alice`
-  - Specific clothing/costume details are not provided in the source text.
-  - Exact movement style during scale shifts is unknown.
+  - Specific clothing or costume details are not provided in the source evidence.
+  - Precise movement language is not established due to scale variance.
 - `alices_sister`
   - Specific age, build, and clothing are not provided in the source text.
-  - The exact relationship to Alice is visually unstated beyond the identifier.
+  - The exact relationship to Alice is visually unstated beyond their connection.
 - `bill`
-  - Specific species of lizard is not defined.
-  - Exact clothing/costume is not specified.
+  - Specific species or color of the lizard is not defined.
+  - The exact era or setting cues for his attire are unknown.
 - `dinah`
-  - Specific breed, color, or coat pattern is not described in the provided text.
-  - Physical presence on screen is implied through mention but her exact visual state is unstated.
+  - Specific breed, color, or coat pattern is not established.
+  - Physical presence on screen is implied via mention rather than direct visual description.
 - `dormouse`
-  - Specific species or visual appearance of the animal is not defined.
-  - The exact nature of being "arm-in-arm" with the March Hare (physical interaction vs. carried).
+  - Specific species or visual appearance of the animal is not defined in the text.
+  - The exact nature of its movement when awake vs. asleep.
 - `group_animals`
-  - specific species composition is not detailed beyond "various animals and birds."
-  - exact scale of the collective mass relative to the pool is unknown.
+  - Specific species composition is not defined beyond "various animals and birds."
+  - The exact nature of their interaction within the pool is unknown.
 - `march_hare`
-  - Specific visual appearance of the quadruped form is not defined.
+  - Specific visual appearance of the quadruped form is not defined in provided evidence.
   - Age and movement language are currently unknown.
 - `the_duchess`
   - physical appearance is entirely unstated in provided evidence
   - age and build are unknown
-  - costume and movement language are unknown
+  - movement and costume are unknown
 - `the_gryphon`
   - Specific biological mass and frame are not defined in the source text.
-  - Exact visual appearance of wings and body is unknown.
+  - Visual age and movement language remain unknown.
 - `the_hatter`
   - specific physical appearance (age, build, features) is currently unstated in provided evidence
-  - costume and era cues are not yet established
+  - costume and movement language are not yet established
 - `the_king`
-  - Specific physical build, age, and era are not established in current evidence.
-  - Exact nature of "bumbling" (is it physical clumsiness or mental fumbling?).
+  - Specific physical build, age, and era are not defined in current evidence.
+  - The exact nature of his "bumbling" (is it clumsy movement or mental fumbling?) remains to be seen.
 - `the_king_of_hearts`
-  - visual appearance (age, build, features) is entirely unrecorded
-  - costume and movement language are unknown
-  - specific personality traits are not yet established in the provided evidence
+  - visual appearance (build, age, features) is entirely unrecorded
+  - movement and mannerisms are unknown
+  - costume and historical context are unknown
 - `the_knave`
-  - Specific dimensions or thickness of the cardboard structure.
-  - Exact visual texture (corrugated vs. smooth).
+  - Specific dimensions or scale of the figure are unknown.
+  - Exact visual texture of the cardboard (corrugated vs. flat) is unstated.
 - `the_mock_turtle`
-  - physical appearance is not described in the provided text
-  - scale and size relative to other characters are unknown
-  - specific morphological features are unstated
+  - physical appearance and scale are entirely unstated in provided evidence
+  - morphological structure (hybrid vs singular) is unknown
 - `the_mouse`
   - specific morphology (mammalian vs. other) is not defined
   - exact size/scale remains unquantified
 - `the_queen`
-  - Physical appearance (build, age, features) is currently unestablished.
+  - Physical appearance (build, age, features) is currently unestablished in provided evidence.
   - Costume and historical setting are unknown.
-  - Movement language is not yet defined.
 - `the_queen_of_hearts`
-  - visual identity (age, build, costume) is entirely unstated in current evidence
-  - movement and personality are currently unknown
+  - Specific physical appearance (age, build, features) is not present in the provided evidence.
+  - Costume and movement language are currently undefined.
 - `white_rabbit`
-  - Specifics of the "splendid attire" are not detailed.
-  - Exact age or stage of life is unknown due to quadrupedal nature.
+  - Specifics of the "splendid attire" (e.g., Victorian vs. fantastical).
+  - Exact biological/anatomical blend between animal and humanoid behavior.

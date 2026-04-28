@@ -9,22 +9,22 @@
 ## Identity
 
 - display_name: seaside_dance_floor
-- environment_type: Social/Interaction setting
+- environment_type: Social/Dance setting
 - chapter_mentions: CH010
 
 ## Visual Bible
 
-The environment serves as a primary setting for social interaction and the Lobster Quadrille. Specific physical characteristics of the terrain or coastal features are currently undefined in the available records.
+A coastal space serving as a primary setting for social interaction and the Lobster Quadrille. Specific physical geometry is currently undefined beyond its role as a dance floor.
 
-- layout_notes: Spatial layout is centered around social interaction and dance.
+- layout_notes: Functionally serves as a stage for movement and social engagement.
 - lighting: Unknown
-- mood: Unknown
-- recurring_elements: Social interaction, The Lobster Quadrille
+- mood: Social/Interactive
+- recurring_elements: Lobster Quadrille (social interaction)
 
 ## Continuity
 
-- constraints: Physical geometry remains unestablished
-- unresolved_ambiguities: Specific visual geography of the seaside location is not yet defined., The exact physical boundaries of the "dance floor" are unknown.
+- constraints: Spatial boundaries are not yet established in the source text.
+- unresolved_ambiguities: Specific physical geography or coastline features are unstated., The exact scale of the dance floor relative to its surroundings is unknown.
 
 ## Evidence Summary
 
@@ -39,5 +39,5 @@ The environment serves as a primary setting for social interaction and the Lobst
 - artifact_id: `ENV_seaside_dance_floor`
 - status: `generated`
 - source_fingerprint: `305f3a6ecddf910832295215e39638c7ec516bb3`
-- created_at_utc: `2026-04-28T00:27:26.670931+00:00`
-- updated_at_utc: `2026-04-28T00:27:26.670931+00:00`
+- created_at_utc: `2026-04-28T02:41:46.465756+00:00`
+- updated_at_utc: `2026-04-28T02:41:46.465756+00:00`

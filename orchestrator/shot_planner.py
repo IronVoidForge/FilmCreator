@@ -2230,8 +2230,8 @@ camera_package_description: <single compact camera package clause>
 camera_description: <camera note>
 composition: <composition note>
 characters_in_frame:
-- john_carter
-- tars_tarkas
+- primary_subject_id
+- secondary_subject_id
 environment: <environment reference or label>
 environment_subzone: <specific playable subzone inside the environment>
 subject_blocking:

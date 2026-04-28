@@ -13,6 +13,7 @@ from .authoring import PromptWriteSummary, write_prompts
 from .core.paths import ensure_dir, repo_relative
 from .core.validation import validate_clip_id, validate_scene_id
 from .lmstudio_client import LMStudioClient, LMStudioError
+from .delete_safety import find_project_root, remove_path_within_project
 from .prompt_package import PromptPackage, write_prompt_package
 from .scaffold import create_clip, create_project, create_scene
 from .settings import load_runtime_settings
@@ -829,7 +830,7 @@ def plan_scene(*, project_slug: str, scene_id: str) -> ScenePlanningSummary:
 
     stale_scene_path = project_dir / "02_story_analysis" / "scene_breakdowns" / f"{scene_id}_airship_attack_and_captive_reveal.md"
     if stale_scene_path.exists():
-        stale_scene_path.unlink()
+        remove_path_within_project(stale_scene_path, project_root=project_dir.resolve())
 
     _print_saved_artifacts(
         f"[authoring] Saved scene planning artifacts for {scene_id}:",
@@ -2485,7 +2486,7 @@ def _reconcile_manual_character_description_placeholders(*, project_dir: Path, a
             continue
         if _is_generated_manual_placeholder(path) and not _manual_description_has_user_content(path):
             try:
-                path.unlink(missing_ok=True)
+                remove_path_within_project(path, project_root=project_dir.resolve(), missing_ok=True)
             except PermissionError:
                 continue
     for asset_id, reason in active_requests.items():
@@ -3035,11 +3036,14 @@ def _markdown_bundle(*, directory: Path, exclude_names: set[str]) -> str:
 def _prune_markdown_dir(directory: Path, *, keep_names: set[str]) -> None:
     if not directory.exists():
         return
+    project_root = find_project_root(directory)
+    if project_root is None:
+        raise ValueError(f"Refusing to prune markdown outside a project directory: {directory}")
     for path in directory.glob("*.md"):
         if path.name in keep_names:
             continue
         try:
-            path.unlink(missing_ok=True)
+            remove_path_within_project(path, project_root=project_root, missing_ok=True)
         except PermissionError:
             continue
 

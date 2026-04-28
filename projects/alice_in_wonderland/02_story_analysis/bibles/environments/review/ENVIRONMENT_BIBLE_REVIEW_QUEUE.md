@@ -1,41 +1,41 @@
 # Environment Bible Review Queue
 
 - `lamp_lit_hallway`
-  - Specific placement of the glass pedestal table relative to the doors is unconfirmed.
-  - Exact number or arrangement of locked doors is not specified.
+  - Specific placement or quantity of the glass pedestal table relative to the rows of doors is unstated.
+  - The exact scale of the "low" ceiling vs the length of the hall.
 - `lush_garden_view`
-  - Specific geometry of the aperture is not defined.
-  - Exact botanical composition remains unstated.
+  - Specific spatial geometry of the aperture is not defined.
+  - Exact botanical composition remains unspecified.
 - `rabbit_hole_tunnel`
-  - The exact scale of the vertical shaft relative to the floating objects is unconfirmed.
-  - The relationship between the "subterranean library" and the physical structure of the shaft is not fully defined.
+  - The exact scale of the shaft relative to the objects is unconfirmed.
+  - Whether the "floating" nature of objects is a physical property or an optical illusion within the descent.
 - `riverbank_setting`
-  - Specific geographical boundaries or scale of the riverbank are not defined.
-  - The exactness of the "slow-moving" current vs. the "shimmering" surface is visually dependent on light interaction.
+  - Specific topographical boundaries of the bank are not defined.
+  - The exact scale of the river relative to the bank is unstated.
 - `the_hall_and_pool`
-  - Lighting and atmosphere are currently unextracted.
-  - Spatial layout and physical dimensions are not yet defined in the provided evidence.
+  - Lighting and atmosphere are not yet defined in the source evidence.
+  - Specific spatial layout remains unextracted.
 - `tea_party_table_setting`
-  - Specific visual details of the tea party elements are not yet extracted from the source.
+  - Specific visual details are currently held under the extracted canonical ID.
 - `the_beautiful_garden`
-  - Visual characteristics are currently unextracted from the source.
+  - Visual characteristics are currently unextracted from the source material.
 - `wooded_path_and_hall`
-  - Specific visual characteristics of the wooded path and hall are not yet described in the provided evidence.
+  - Specific visual characteristics of the "wooded path" and "hall" are not yet detailed in the provided evidence.
 - `croquet_ground_field`
-  - Specific physical dimensions and terrain of the field.
-  - Visual manifestations of "chaotic play" vs "authority".
+  - Specific physical dimensions and terrain of the field are unstated.
+  - Precise visual aesthetic (color, texture, scale) is currently unknown.
 - `rocky_ledge_seaography_site`
-  - Specific physical geography and visual composition are not yet defined.
-  - The exact relationship between the "rocky ledge" and "seaography site" is unclarified in current evidence.
+  - Physical geography and visual composition are not yet defined.
+  - The specific relationship between the "rocky ledge" and "seaography" is visually unestablished in current evidence.
 - `sunny_gryphon_resting_area`
   - Specific visual geometry and terrain are not yet defined in the provided evidence.
   - The exact physical boundaries of the area remain unknown.
 - `seaside_dance_floor`
-  - Specific visual geography of the seaside location is not yet defined.
-  - The exact physical boundaries of the "dance floor" are unknown.
+  - Specific physical geography or coastline features are unstated.
+  - The exact scale of the dance floor relative to its surroundings is unknown.
 - `courtroom_jury_box_setting`
-  - Specific physical geometry and layout of the jury box are not yet established.
-  - Visual texture and lighting cues remain undefined in current evidence.
+  - Specific physical geometry and visual texture of the jury box are not yet defined.
+  - The relationship between the courtroom setting and its fantasy elements is unstated.
 - `riverbank_sunset_setting`
-  - Specific visual characteristics of the riverbank are not yet detailed.
-  - The relationship between the physical geography and the "sunset" descriptor is unestablished in current evidence.
+  - Specific visual characteristics of the riverbank are not yet established.
+  - The relationship between the physical geography and the "sunset" descriptor is unverified in current evidence.

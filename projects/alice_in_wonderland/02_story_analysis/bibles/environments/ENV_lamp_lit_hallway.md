@@ -14,7 +14,7 @@
 
 ## Visual Bible
 
-A long, low interior hallway characterized by rows of locked doors. The space is illuminated by hanging oil lamps that cast a warm amber glow throughout the corridor. A glass pedestal table serves as a notable feature within the hall.
+A long, low interior hall characterized by rows of locked doors. The space is illuminated by hanging oil lamps that cast a warm amber glow throughout the corridor. A glass pedestal table serves as a notable feature within the hall.
 
 - layout_notes: Long and low interior geometry with rows of doors.
 - lighting: Warm amber glow from hanging oil lamps.
@@ -24,7 +24,7 @@ A long, low interior hallway characterized by rows of locked doors. The space is
 ## Continuity
 
 - constraints: Low ceiling height, Linear, elongated path
-- unresolved_ambiguities: Specific placement of the glass pedestal table relative to the doors is unconfirmed., Exact number or arrangement of locked doors is not specified.
+- unresolved_ambiguities: Specific placement or quantity of the glass pedestal table relative to the rows of doors is unstated., The exact scale of the "low" ceiling vs the length of the hall.
 
 ## Evidence Summary
 
@@ -41,5 +41,5 @@ A long, low interior hallway characterized by rows of locked doors. The space is
 - artifact_id: `ENV_lamp_lit_hallway`
 - status: `generated`
 - source_fingerprint: `5750e4f4f74a8a74883adf1dff7bf8f31d4bfe7a`
-- created_at_utc: `2026-04-28T00:25:49.309345+00:00`
-- updated_at_utc: `2026-04-28T00:25:49.309345+00:00`
+- created_at_utc: `2026-04-28T02:40:17.973429+00:00`
+- updated_at_utc: `2026-04-28T02:40:17.973429+00:00`

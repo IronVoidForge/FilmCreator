@@ -5,45 +5,45 @@
   "purpose": "Establish the goal (the garden) and the immediate obstacle (the locked doors).",
   "summary": "Alice lands on a heap of sticks and leaves. She follows the Rabbit into a long, lamp-lit hall filled with many locked doors. She discovers a tiny golden key on a glass table and finds a small door hidden behind a curtain. The key works, revealing a glimpse of a lush garden, but she is too large to enter.",
   "emotional_arc": "Disorientation $\\rightarrow$ Discovery $\\rightarrow$ Frustration/Longing.",
-  "production_intent": "Establish the physical scale of Alice relative to her environment and define the central conflict between her size and the locked doors.",
-  "scene_short_description": "A girl follows a rabbit into a lamp-lit hall of locked doors and finds a tiny key.",
-  "scene_primary_scale_story_point": "Alice is roughly two feet tall compared to the massive hall but much larger than the small door.",
+  "production_intent": "Establish the physical scale of Alice relative to her environment and define the central goal of reaching the garden through a series of locked doors.",
+  "scene_short_description": "A girl follows a rabbit into a lamp-lit hall of locked doors to find a hidden garden.",
+  "scene_primary_scale_story_point": "Alice is physically large compared to the tiny door and key.",
   "scene_required_anchor_catalog": [
     "glass table",
-    "curtain",
-    "small door"
+    "small door/curtain"
   ],
-  "scene_start_state": "Alice lands on a heap of sticks and leaves in a dark, vertical space.",
-  "scene_end_state": "Alice stands before the tiny door, looking at the garden through the opening.",
-  "dominant_action_line": "Following the rabbit leads to finding a key that reveals a beautiful but inaccessible garden.",
+  "scene_start_state": "Alice lands on a heap of sticks and leaves in a dark environment.",
+  "scene_end_state": "Alice stands before a small door, looking at the garden through the opening.",
+  "dominant_action_line": "Following the rabbit leads to finding a key that reveals a distant goal.",
   "scene_spatial_layout": [
     "A long, low hall lit by hanging lamps",
-    "Verticality of the initial landing area"
+    "A vertical well/tunnel structure leading into the hall"
   ],
   "character_spatial_map": [
-    "Alice moves from the floor toward the glass table and curtain",
-    "The White Rabbit moves through the hall as a fleeting guide"
+    "Alice moves from the tunnel toward the glass table and curtain",
+    "The White Rabbit moves ahead of Alice as a fleeting guide"
   ],
   "environment_subzones": [
     "lamp_lit_hallway",
-    "small_door_area"
+    "small_door_curtain_zone",
+    "lush_garden_view"
   ],
   "scene_event_chain": [
-    "event 1: Alice lands on a heap of sticks and leaves.",
-    "event 2: Alice follows the white rabbit into the long, lamp-lit hall.",
+    "event 1: Alice lands on the heap of sticks and leaves.",
+    "event 2: The White Rabbit leads Alice into the long, lamp-lit hall.",
     "event 3: Alice finds a tiny golden key on a glass table.",
     "event 4: Alice discovers a small door behind a curtain and unlocks it to see the garden."
   ],
   "entry_vectors": [
-    "The Rabbit's path through the hall"
+    "rabbit_path"
   ],
   "exit_vectors": [
-    "Through the small door opening"
+    "through_small_door"
   ],
   "beat_transition_map": [
-    "BT001 -> BT002: Movement from landing to following",
-    "BT002 -> BT003: Discovery of the key",
-    "BT003 -> BT004: Unlocking the door"
+    "BT001 -> BT002: The Rabbit leads her deeper into the hall.",
+    "BT002 -> BT003: Discovery of the key on the table.",
+    "BT003 -> BT004: Unlocking the door to reveal the garden."
   ],
   "characters_required": [
     {
@@ -90,87 +90,89 @@
     }
   ],
   "continuity_constraints": [
-    "Alice's physical scale relative to the door size",
-    "Lighting transition from dark hall to bright garden view"
+    "Alice's physical scale relative to the small door",
+    "Lighting transition from dark hallway to bright garden view"
   ],
   "visual_coverage_families": [
-    "Low-angle shots of the hall",
-    "Close-ups of the golden key and lock",
-    "Macro shots of the garden through the opening"
+    "Low-angle hall shots",
+    "Close-up key and lock mechanics",
+    "Macro garden views through door openings"
   ],
   "beat_list": [
     {
       "beat_id": "BT001",
-      "summary": "Alice lands on the heap",
+      "summary": "The Arrival",
       "purpose": "",
-      "action_start": "falling onto sticks",
-      "action_end": "settling on debris",
+      "action_start": "Alice lands on sticks and leaves",
+      "action_end": "Alice stands in the hall",
       "active_subjects": [
         "alice"
       ],
-      "passive_subjects": [],
-      "spatial_context": "the landing area",
+      "passive_subjects": [
+        "white_rabbit"
+      ],
+      "spatial_context": "the well/tunnel entrance",
       "blocking_hint": "low to ground",
       "environment_subzone": "lamp_lit_hallway",
-      "continuity_focus": "scale of height vs floor",
+      "continuity_focus": "scale of landing vs tunnel",
       "coverage_hint": "wide shot",
       "coverage_priority": "medium",
-      "handoff_to_next": "movement toward the hall"
+      "handoff_to_next": "The Rabbit leads her away."
     },
     {
       "beat_id": "BT002",
-      "summary": "The Rabbit leads Alice through the hall",
+      "summary": "The Pursuit",
       "purpose": "",
-      "action_start": "Alice rising from landing",
-      "action_end": "walking through doors",
+      "action_start": "White Rabbit runs through the hall",
+      "action_end": "Alice follows him into the hall depth",
       "active_subjects": [
-        "alice",
-        "white_rabbit"
+        "white_rabbit",
+        "alice"
       ],
       "passive_subjects": [],
-      "spatial_context": "long hallway with many doors",
-      "blocking_hint": "moving through a corridor of doors",
+      "spatial_context": "long hallway :: many doors",
+      "blocking_hint": "moving through hall :: following path",
       "environment_subzone": "lamp_lit_hallway",
-      "continuity_focus": "the scale of the hall vs Alice",
+      "continuity_focus": "movement flow",
       "coverage_hint": "low-angle tracking",
-      "coverage_priority": "high",
-      "handoff_to_next": "discovery of the table"
+      "coverage_priority": "medium",
+      "handoff_to_next": "The Rabbit disappears into the hall."
     },
     {
       "beat_id": "BT003",
-      "summary": "The golden key is found",
+      "summary": "The Discovery",
       "purpose": "",
-      "action_start": "Alice spotting the key",
-      "action_end": "lifting the key from the glass table",
+      "action_start": "Alice approaches the glass table",
+      "action_end": "Alice holds the golden key",
       "active_subjects": [
         "alice"
       ],
       "passive_subjects": [],
-      "spatial_context": "near a glass table",
-      "blocking_hint": "leaning over the table surface",
+      "spatial_context": "the glass table area",
+      "blocking_hint": "bending over table",
       "environment_subzone": "glass_table",
-      "continuity_focus": "size of key vs hand",
-      "coverage_hint": "close-up",
+      "continuity_focus": "size of key vs Alice's hands",
+      "coverage_hint": "close-up :: insert shot",
       "coverage_priority": "high",
-      "handoff_to_next": "approaching the curtain"
+      "handoff_to_next": "Alice moves toward the curtain."
     },
     {
       "beat_id": "BT004",
-      "summary": "The small door is unlocked",
+      "summary": "The Obstacle",
       "purpose": "",
-      "action_start": "Alice finding the door behind a curtain",
-      "action_end": "peering through the opening to the garden",
+      "action_start": "Alice finds the door behind a curtain",
+      "action_end": "The garden is revealed through the opening",
       "active_subjects": [
         "alice"
       ],
       "passive_subjects": [],
-      "spatial_context": "the small door/curtain area",
-      "blocking_hint": "kneeling at the wall/door",
-      "environment_subzone": "small_door_area",
-      "continuity_focus": "extreme scale difference between Alice and the tiny door vs the bright garden view",
-      "coverage_hint": "macro/medium-close",
-      "coverage_priority": "critical",
-      "handoff_to_next": "visual of the lush garden"
+      "spatial_context": "the small door :: curtain area",
+      "blocking_hint": "kneeling at the door",
+      "environment_subzone": "small_door_curtain_zone",
+      "continuity_focus": "lighting transition from dark hall to bright garden",
+      "coverage_hint": "macro shot of opening",
+      "coverage_priority": "high",
+      "handoff_to_next": "The visual tension of her size vs the door."
     }
   ],
   "planned_shots": [
@@ -186,69 +188,40 @@
       "subject_visibility": "on_screen",
       "narration_mode": "none",
       "environment_subzone": "lamp_lit_hallway",
-      "planned_shot_required_anchor_1": "sticks/leaves",
-      "planned_shot_scale_proof_detail": "child-sized height",
-      "start_state_seed": "falling motion",
-      "end_state_seed": "landing",
-      "action_seed": "landing on debris",
+      "planned_shot_required_anchor_1": "well_tunnel",
+      "planned_shot_scale_proof_detail": "large_scale_relative_to_environment",
+      "start_state_seed": "falling/landing",
+      "end_state_seed": "standing in hall",
+      "action_seed": "Alice lands on sticks and leaves",
       "blocking_seed": [
-        "low to ground"
+        "low-angle landing"
       ],
       "shot_size": "wide",
       "camera_angle": "low_angle",
       "lens_family": "wide",
-      "camera_motion": "none",
+      "camera_motion": "locked_off",
       "zoom_behavior": "none",
       "focus_strategy": "deep_focus",
-      "lighting_style": "dim_ambient",
-      "primary_subject_angle": "front_three_quarter_left"
+      "lighting_style": "low_key_night",
+      "primary_subject_angle": "front"
     },
     {
       "planned_shot_id": "SH002",
-      "beat_id": "BT002",
-      "narrative_function": "establish movement",
-      "planned_shot_moment_summary": "Alice follows the rabbit",
-      "primary_subject_seed": "alice",
-      "secondary_subjects_seed": [
-        "white_rabbit"
-      ],
-      "subject_visibility": "on_screen",
-      "narration_mode": "none",
-      "environment_subzone": "lamp_lit_hallway",
-      "planned_shot_required_anchor_1": "hanging_lamps",
-      "planned_shot_scale_proof_detail": "tall hall vs small girl",
-      "start_state_seed": "walking",
-      "end_state_seed": "walking",
-      "action_seed": "following the fleeting rabbit",
-      "blocking_seed": [
-        "walking through hall"
-      ],
-      "shot_size": "medium_full",
-      "camera_angle": "low_angle",
-      "lens_family": "wide",
-      "camera_motion": "track",
-      "zoom_behavior": "none",
-      "focus_strategy": "deep_focus",
-      "lighting_style": "dim_ambient",
-      "primary_subject_angle": "profile_right"
-    },
-    {
-      "planned_shot_id": "SH003",
       "beat_id": "BT003",
-      "narrative_function": "reveal object",
-      "planned_shot_moment_summary": "Alice finds the key",
+      "narrative_function": "object reveal",
+      "planned_shot_moment_summary": "finding the key",
       "primary_subject_seed": "alice",
       "secondary_subjects_seed": [],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
       "environment_subzone": "glass_table",
       "planned_shot_required_anchor_1": "glass_table",
-      "planned_shot_scale_proof_detail": "tiny key in hand",
-      "start_state_seed": "reaching",
-      "end_state_seed": "grasping",
-      "action_seed": "picking up golden key",
+      "planned_shot_scale_proof_detail": "tiny_key_vs_large_hands",
+      "start_state_seed": "reaching for table",
+      "end_state_seed": "grasping key",
+      "action_seed": "Alice picks up a tiny golden key from the glass table",
       "blocking_seed": [
-        "bending over table"
+        "close-up on hands"
       ],
       "shot_size": "close_up",
       "camera_angle": "eye_level",
@@ -256,35 +229,35 @@
       "camera_motion": "none",
       "zoom_behavior": "subtle_in",
       "focus_strategy": "shallow_subject",
-      "lighting_style": "hard_directional",
+      "lighting_style": "diffuse_ambient",
       "primary_subject_angle": "front_three_quarter_left"
     },
     {
-      "planned_shot_id": "SH004",
+      "planned_shot_id": "SH003",
       "beat_id": "BT004",
-      "narrative_function": "reveal goal/obstacle",
-      "planned_shot_moment_summary": "The door opens to the garden",
-      "primary_subject_seed": "alice",
+      "narrative_function": "goal reveal",
+      "planned_shot_moment_summary": "looking through the door",
+      "primary_subject_seed": "lush_garden_view",
       "secondary_subjects_seed": [],
       "subject_visibility": "on_screen",
       "narration_mode": "none",
-      "environment_subzone": "small_door_area",
+      "environment_subzone": "small_door_curtain_zone",
       "planned_shot_required_anchor_1": "small_door",
-      "planned_shot_scale_proof_detail": "Alice vs tiny door opening",
-      "start_state_seed": "inserting key",
-      "end_state_seed": "looking through",
-      "action_seed": "unlocking and peering through the door",
+      "planned_shot_scale_proof_detail": "macro_scale_of_garden",
+      "start_state_seed": "key in lock",
+      "end_state_seed": "view of garden",
+      "action_seed": "The key turns and the door opens to reveal a glimpse of the garden",
       "blocking_seed": [
-        "kneeling at curtain"
+        "stationary :: focus on opening"
       ],
-      "shot_size": "medium_close",
-      "camera_angle": "low_angle",
-      "lens_family": "wide",
+      "shot_size": "extreme_close_up",
+      "camera_angle": "eye_level",
+      "lens_family": "telephoto",
       "camera_motion": "none",
       "zoom_behavior": "none",
       "focus_strategy": "rack_focus",
       "lighting_style": "high_contrast_ceremonial",
-      "primary_subject_angle": "profile_right"
+      "primary_subject_angle": "front"
     }
   ],
   "unresolved_questions": [],
@@ -350,16 +323,16 @@
     "[CH001] CHAPTER I. (book index hit)",
     "[CH004] CHAPTER IV. (book index hit)",
     "[CH002] CHAPTER II. (book index hit)",
-    "Character alice: Alice is a young girl characterized by extreme, sudden changes in physical scale. Her size fluctuates between the stature of a small child (approximately two feet tall) and colossal proportions reaching up to nine feet or even nearly two mi..."
+    "Character alice: Alice is a young girl characterized by extreme, sudden fluctuations in physical scale. Her size varies dramatically between being approximately two feet tall and reaching colossal heights of nine feet or even nearly two miles. Despite these..."
   ],
-  "storyboard_markdown": "# Scene Contract: CH0s03\n\n## Production Intent\nEstablish the physical scale of Alice relative to her environment and define the central conflict between her size and the locked doors.\n\n## Required Cast\n- alice (young girl, variable scale)\n- white_rabbit (fleeting presence)\n\n## Required Environments\n- lamp_lit_hallway (long hall with many doors/hanging lamps)\n- glass_table (area for key discovery)\n- small_door_area (curtain and tiny door)\n- lush_garden_view (visible through the door)\n\n## Continuity Constraints\n- Alice's physical scale relative to the door size\n- Lighting transition from dark hall to bright garden view\n\n## Beat List\n- BT001: Alice lands on a heap of sticks and leaves.\n- BT002: The White Rabbit leads Alice into the long, lamp-lit hall.\n- BT003: Alice discovers a tiny golden key on a glass table.\n- BT004: Alice unlocks the small door behind the curtain to reveal the garden.\n[/SECTION]",
+  "storyboard_markdown": "# Scene Contract: CH001_SC003\n\n## Production Intent\nEstablish the physical scale of Alice relative to her environment and define the central goal of reaching the garden through a series of locked doors.\n\n## Required Cast\n- alice (young girl, variable size)\n- white_rabbit (fleeting guide)\n\n## Required Environments\n- lamp_lit_hallway (long, low hall with hanging lamps)\n- glass_table (area for key discovery)\n- small_door_curtain_zone (the obstacle/goal area)\n- lush_garden_view (visible through the door)\n\n## Continuity Constraints\n- Alice's physical scale relative to the tiny golden key and the small door.\n- The lighting transition from the dark, lamp-lit hall to the bright garden view.\n\n## Beat List\n- BT001: Arrival on sticks/leaves.\n- BT002: Following the White Rabbit through the hall.\n- BT003: Finding the golden key on the glass table.\n- BT004: Unlocking the small door to reveal the garden.",
   "metadata": {
     "artifact_id": "CH001_SC003_SCENE_CONTRACT",
     "artifact_type": "scene_contract",
     "status": "generated",
-    "source_fingerprint": "8c1dccb356d7eff4815bf1ff386bf3adfb3566a1",
-    "created_at_utc": "2026-04-28T00:29:18.033602+00:00",
-    "updated_at_utc": "2026-04-28T00:29:18.033602+00:00",
+    "source_fingerprint": "3476b08f029d207e51a9d2ce6780d20b55d641ee",
+    "created_at_utc": "2026-04-28T02:43:28.193796+00:00",
+    "updated_at_utc": "2026-04-28T02:43:28.193796+00:00",
     "upstream_dependencies": [
       {
         "dependency_type": "scene_breakdown",
@@ -381,9 +354,9 @@
     "manual_overrides": {},
     "revision_history": [
       {
-        "timestamp_utc": "2026-04-28T00:30:04.418618+00:00",
+        "timestamp_utc": "2026-04-28T02:44:08.342506+00:00",
         "action": "synthesized",
-        "source_fingerprint": "8c1dccb356d7eff4815bf1ff386bf3adfb3566a1"
+        "source_fingerprint": "3476b08f029d207e51a9d2ce6780d20b55d641ee"
       }
     ]
   }

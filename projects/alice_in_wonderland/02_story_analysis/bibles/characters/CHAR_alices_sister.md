@@ -17,9 +17,9 @@
 - identity_baseline: A human figure existing in the real world.
 - age_presence: unknown
 - physical_build: unknown
-- origin_or_historical_context: Real-world setting context.
+- origin_or_historical_context: The setting is the "real world."
 - movement_language: unknown
-A human figure situated in a real-world environment, observed watching a sunset. Due to limited visual evidence, specific physical dimensions and attire remain undefined.
+A human figure existing within a real-world environment. Due to limited visual evidence, specific physical dimensions and attire remain undefined, though she is observed in a moment of quiet observation during a sunset.
 
 - physical_traits: human morphology
 - costume_signature: unknown
@@ -35,8 +35,8 @@ A human figure situated in a real-world environment, observed watching a sunset.
 
 ## Continuity
 
-- continuity_constraints: Must maintain a real-world setting presence.
-- unresolved_ambiguities: Specific age, build, and clothing are not provided in the source text., The exact relationship to Alice is visually unstated beyond the identifier.
+- continuity_constraints: Must remain a human figure in the real world.
+- unresolved_ambiguities: Specific age, build, and clothing are not provided in the source text., The exact relationship to Alice is visually unstated beyond their connection.
 
 ## Evidence Summary
 
@@ -50,5 +50,5 @@ A human figure situated in a real-world environment, observed watching a sunset.
 - artifact_id: `CHAR_alices_sister`
 - status: `generated`
 - source_fingerprint: `b7ea4be4274c7c2ab4dceb344dab9f56474dd56b`
-- created_at_utc: `2026-04-28T00:22:08.633927+00:00`
-- updated_at_utc: `2026-04-28T00:22:08.633927+00:00`
+- created_at_utc: `2026-04-28T02:37:09.376468+00:00`
+- updated_at_utc: `2026-04-28T02:37:09.376468+00:00`

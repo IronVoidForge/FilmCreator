@@ -17,6 +17,7 @@ from .chapter_selection import any_chapter_matches, chapter_matches, parse_chapt
 from .core.json_io import read_json, write_json
 from .features.authoring.packet_parser import parse_packet_document
 from .lmstudio_client import LMStudioClient
+from .delete_safety import remove_path_within_project
 from .scaffold import create_project
 from .settings import load_runtime_settings
 from .visual_fallbacks import load_visual_fallbacks
@@ -509,12 +510,11 @@ def _character_profile(base_fields: dict[str, Any], evidence_summary: list[str],
     full_text = " ".join(part for part in [hard_text, soft_text] if part).strip()
 
     entity_kind = str(base_fields.get("entity_kind", "")).strip().lower()
-    singular_named_role = any(token in hard_text for token in ["chieftain", "leader", "princess", "officer", "jeddak", "noblewoman"])
-    explicit_human = any(token in hard_text for token in ["human male", "human female", "earthling", "american frontier", "confederate", "john carter"])
-    explicit_creature = any(token in hard_text for token in ["calot", "ape", "hound", "watchdog", "watch dog", "creature", "beast", "thoat"])
+    singular_named_role = any(token in hard_text for token in ["leader", "princess", "officer", "noblewoman", "queen", "king", "duchess", "duke", "captain"])
+    explicit_human = any(token in hard_text for token in ["human male", "human female", "human", "person", "girl", "boy", "woman", "man"])
+    explicit_creature = any(token in hard_text for token in ["ape", "hound", "watchdog", "watch dog", "creature", "beast", "animal", "rabbit", "lion", "bird", "cat", "dog"])
     explicit_creature_anatomy = any(token in full_text for token in ["four arms", "four-armed", "multiple tusks", "canine-like anatomy", "animal", "primate silhouette", "hound"])
-    explicit_green = "green martian" in hard_text or "thark" in hard_text or "green skin" in hard_text
-    explicit_red = "red-skinned" in hard_text or "red martian" in hard_text or "helium" in hard_text or "red skin" in hard_text
+    explicit_nonhuman_humanoid = any(token in full_text for token in ["green skin", "red skin", "blue skin", "four arms", "four-armed", "multiple tusks", "nonhuman humanoid", "humanoid nonhuman", "alien humanoid"])
     explicit_collective = entity_kind in {"collective", "group"} or canonical_id.strip().lower() in {"warriors", "guardsmen", "horde", "family", "court"}
     feminine_coded = any(token in full_text for token in ["princess", "noblewoman", "woman", "mother", "female", " her ", " she "])
     masculine_coded = any(token in full_text for token in ["officer", "chieftain", "warrior", "man", "father", "male", " his ", " he "])
@@ -523,19 +523,12 @@ def _character_profile(base_fields: dict[str, Any], evidence_summary: list[str],
         resolved_profile_class = "human_individual"
     elif explicit_collective:
         resolved_profile_class = "collective_group"
+    elif explicit_nonhuman_humanoid:
+        resolved_profile_class = "nonhuman_humanoid_individual"
     elif entity_kind == "individual" and singular_named_role:
-        if explicit_green:
-            resolved_profile_class = "green_martian_individual"
-        elif explicit_red:
-            resolved_profile_class = "red_martian_individual"
-        else:
-            resolved_profile_class = "unknown_individual"
+        resolved_profile_class = "unknown_individual"
     elif explicit_creature and explicit_creature_anatomy:
         resolved_profile_class = "creature_individual"
-    elif explicit_green:
-        resolved_profile_class = "green_martian_individual"
-    elif explicit_red:
-        resolved_profile_class = "red_martian_individual"
     elif entity_kind == "individual" and explicit_creature_anatomy and explicit_creature:
         resolved_profile_class = "creature_individual"
     else:
@@ -546,15 +539,16 @@ def _character_profile(base_fields: dict[str, Any], evidence_summary: list[str],
         conflicts.append("profile_conflict_human_vs_creature")
     if entity_kind == "individual" and explicit_collective:
         conflicts.append("profile_conflict_individual_vs_collective")
-    if explicit_green and explicit_red:
-        conflicts.append("profile_conflict_green_vs_red_martian")
+    if explicit_human and explicit_nonhuman_humanoid:
+        conflicts.append("profile_conflict_human_vs_nonhuman_humanoid")
 
     return {
         "entity_kind": entity_kind,
         "resolved_profile_class": resolved_profile_class,
-        "is_green_martian": resolved_profile_class == "green_martian_individual",
-        "is_red_martian": resolved_profile_class == "red_martian_individual",
-        "is_nonhuman": resolved_profile_class in {"green_martian_individual", "red_martian_individual", "creature_individual"},
+        "is_green_martian": False,
+        "is_red_martian": False,
+        "is_nonhuman": resolved_profile_class in {"nonhuman_humanoid_individual", "creature_individual"},
+        "is_nonhuman_humanoid": resolved_profile_class == "nonhuman_humanoid_individual",
         "is_creature": resolved_profile_class == "creature_individual",
         "is_collective": resolved_profile_class == "collective_group",
         "is_feminine_coded": feminine_coded,
@@ -764,64 +758,43 @@ def _character_specific_generated_default(
         }
         if field_name in feminine_defaults:
             return feminine_defaults[field_name]
-    if profile_class == "green_martian_individual":
-        green_defaults = {
-            "height": "towering over a human frame",
-            "build": "massive war-ready Martian build",
-            "skin_tone": "deep green skin",
-            "hair_color": "scalp mostly bare or minimally haired",
-            "hair_style": "minimal or tightly kept scalp hair",
-            "eye_color": "hard-set eyes adapted to a harsh martial life",
-            "face_shape": "severe planar Martian facial structure",
-            "facial_hair": "typically none",
-            "costume_materials": "hides, leather, metal fittings, and war gear",
-            "posture": "upright, dominant, and imposing",
-            "expression_tendency": "stern, martial self-command",
-            "voice_or_presence_notes": "presence reads as severe, disciplined, and intimidating",
-            "physical_build": "enormous frame built for combat and intimidation",
-            "movement_language": "deliberate, forceful movement with command authority",
-            "sex": "male-coded Thark warrior",
-            "age_range": "battle-hardened adult",
+    if profile_class == "nonhuman_humanoid_individual":
+        nonhuman_humanoid_defaults = {
+            "height": "humanoid scale with visibly nonhuman proportions",
+            "build": "nonhuman humanoid build suited to the species",
+            "skin_tone": "species-specific nonhuman skin coloration",
+            "hair_color": "evidence-supported natural hair or scalp coloring",
+            "hair_style": "species-appropriate grooming or exposed scalp",
+            "eye_color": "striking nonhuman or species-specific eyes",
+            "face_shape": "distinctive humanoid facial structure with nonhuman cues",
+            "facial_hair": "none unless the source supports visible facial hair",
+            "costume_materials": "context-appropriate textiles, leathers, metals, or ceremonial materials",
+            "posture": "upright posture with distinctive species bearing",
+            "expression_tendency": "controlled, readable expression shaped by nonhuman features",
+            "voice_or_presence_notes": "presence reads as clearly humanoid but not fully human",
+            "physical_build": "species-specific humanoid silhouette with nonhuman anatomy",
+            "movement_language": "deliberate movement shaped by nonhuman anatomy",
+            "sex": "visually ambiguous unless the source supports a clear reading",
+            "age_range": "adult",
         }
-        if field_name in green_defaults:
-            return green_defaults[field_name]
-    if profile_class == "red_martian_individual" and profile["is_feminine_coded"]:
-        red_feminine_defaults = {
-            "height": "tall graceful humanoid stature",
-            "build": "slender noble athletic build",
-            "skin_tone": "clear red Martian skin",
-            "hair_color": "dark richly toned hair",
-            "hair_style": "long formal hair arranged with noble precision",
-            "eye_color": "dark expressive eyes",
-            "face_shape": "refined symmetrical features",
-            "facial_hair": "none",
-            "costume_materials": "fine silks, jewelry metals, and noble textiles",
-            "posture": "poised upright noble posture",
-            "expression_tendency": "composed, intelligent, emotionally lucid",
-            "voice_or_presence_notes": "presence reads as regal, intelligent, and emotionally resonant",
-            "physical_build": "elegant high-born silhouette",
-            "movement_language": "graceful controlled movement with courtly bearing",
-            "sex": "female",
-            "age_range": "young adult",
-        }
-        if field_name in red_feminine_defaults:
-            return red_feminine_defaults[field_name]
+        if field_name in nonhuman_humanoid_defaults:
+            return nonhuman_humanoid_defaults[field_name]
     if profile_class == "human_individual" and profile["is_masculine_coded"]:
         human_defaults = {
-            "height": "tall frontier-soldier stature",
-            "build": "lean battle-tested human build",
-            "skin_tone": "sun-weathered human skin",
-            "hair_color": "dark sun-faded hair",
-            "hair_style": "short practical frontier cut",
-            "eye_color": "dark steady eyes",
-            "face_shape": "weathered angular face",
-            "facial_hair": "clean-shaven or short field stubble",
-            "costume_materials": "worn cloth, leather, cavalry gear, and salvaged materials",
-            "posture": "upright, self-possessed, and ready",
-            "expression_tendency": "steady, capable, restrained intensity",
-            "voice_or_presence_notes": "presence reads as direct, capable, and frontier-hardened",
-            "physical_build": "lean but durable soldier's frame",
-            "movement_language": "economical military movement with confident balance",
+            "height": "adult human stature",
+            "build": "capable adult human build",
+            "skin_tone": "human skin tone suited to the canon context",
+            "hair_color": "human hair color suited to the canon context",
+            "hair_style": "neat era-appropriate hairstyle",
+            "eye_color": "steady human eyes",
+            "face_shape": "human facial structure",
+            "facial_hair": "none unless the source supports visible facial hair",
+            "costume_materials": "context-appropriate human clothing materials",
+            "posture": "upright and composed",
+            "expression_tendency": "restrained, readable human emotion",
+            "voice_or_presence_notes": "presence reads as capable and grounded",
+            "physical_build": "adult human silhouette",
+            "movement_language": "controlled, intentional human movement",
             "sex": "male",
             "age_range": "adult",
         }
@@ -946,8 +919,8 @@ def _rewrite_character_generated_fields(
             set_direct(field_name, "none", "identity_cue_conflict_grooming")
         elif cues["is_collective_coded"] and field_name == "facial_hair" and any(token in normalized for token in ["stubble", "beard", "mustache", "moustache", "clean-shaven"]):
             replace(field_name, "identity_cue_conflict_group_vs_individual")
-        elif profile["resolved_profile_class"] == "green_martian_individual" and field_name in {"skin_tone", "hair_color", "hair_style", "facial_hair"}:
-            if any(token in normalized for token in ["light-to-medium", "dark brown", "short hair", "stubble", "clean-shaven"]):
+        elif profile["resolved_profile_class"] == "nonhuman_humanoid_individual" and field_name in {"skin_tone", "hair_color", "hair_style", "facial_hair", "face_shape"}:
+            if any(token in normalized for token in ["light-to-medium", "dark brown", "short hair", "stubble", "clean-shaven", "human facial structure", "frontier"]):
                 replace(field_name, f"identity_cue_conflict_species_{field_name}")
         elif profile["resolved_profile_class"] == "creature_individual" and field_name in {"hair_style", "face_shape", "facial_hair", "skin_tone", "hair_color"}:
             if any(token in normalized for token in ["short hair", "angular face", "clean-shaven", "stubble", "dark brown", "light-to-medium"]):
@@ -2092,10 +2065,8 @@ def _llm_complete_generated_fields(
     if entity_type == CHARACTER_ENTITY_TYPE:
         profile = _character_profile(base_fields, evidence_summary, canonical_id, display_name)
         profile_lines = []
-        if profile["is_green_martian"]:
-            profile_lines.append("- Species cue: green Martian / Thark. Do not default to generic human coloring, hair, or facial hair.")
-        if profile["is_red_martian"]:
-            profile_lines.append("- Species cue: red Martian. Use red Martian humanoid cues where supported by the canon.")
+        if profile.get("is_nonhuman_humanoid"):
+            profile_lines.append("- Species cue: humanoid but nonhuman. Do not default to fully human skin, hair, or facial-hair assumptions.")
         if profile["is_creature"]:
             profile_lines.append("- Entity cue: creature/beast. Do not fill with human portrait assumptions.")
         if profile["is_collective"]:
@@ -2103,7 +2074,7 @@ def _llm_complete_generated_fields(
         if profile["is_feminine_coded"]:
             profile_lines.append("- Gender cue: feminine-coded. Do not emit masculine defaults like stubble or male-coded grooming.")
         if profile["is_human"]:
-            profile_lines.append("- Identity cue: human/Earthling. Human military/frontier defaults are acceptable only if they match the canon.")
+            profile_lines.append("- Identity cue: human. Use only context-appropriate human defaults that match the canon.")
         character_profile_lines = "\n".join(profile_lines)
 
     system = (
@@ -2307,30 +2278,30 @@ def _best_effort_generated_value(
         "character": {
             "height": "average-tall",
             "build": "lean athletic build",
-            "skin_tone": "weathered light-to-medium skin",
-            "hair_color": "dark brown",
-            "hair_style": "practical short hair",
-            "eye_color": "dark eyes",
-            "face_shape": "angular face",
-            "facial_hair": "clean-shaven or light stubble",
-            "costume_materials": "worn cloth, leather, and practical field materials",
-            "posture": "upright and ready",
-            "expression_tendency": "focused and self-controlled",
-            "voice_or_presence_notes": "firm, direct presence",
+            "skin_tone": "human skin tone suited to the canon context",
+            "hair_color": "human hair color suited to the canon context",
+            "hair_style": "context-appropriate hairstyle",
+            "eye_color": "human eye color suited to the canon context",
+            "face_shape": "human facial structure",
+            "facial_hair": "none unless supported by the source",
+            "costume_materials": "context-appropriate clothing materials",
+            "posture": "upright readable posture",
+            "expression_tendency": "clear readable emotion",
+            "voice_or_presence_notes": "grounded readable presence",
             "physical_build": "lean athletic build",
-            "movement_language": "decisive, efficient movement",
-            "sex": "male",
+            "movement_language": "controlled intentional movement",
+            "sex": "visually ambiguous unless supported by the source",
             "age_range": "adult",
         },
         "environment": {
-            "scale": "monumental scale",
-            "geography": "dry open Martian terrain",
-            "architecture": "ancient stone and ceremonial architecture",
-            "pathways": "broad processional paths and stairs",
-            "materials": "stone, metal, and weathered architectural surfaces",
-            "weather_or_atmosphere": "dry thin air with still heat",
-            "foreground_midground_background": "anchored foreground details, readable midground action, deep background structures",
-            "depth_cues": "strong scale contrast and layered architectural depth",
+            "scale": "story-supported scale",
+            "geography": "location-appropriate terrain or floor plane",
+            "architecture": "source-compatible built or natural structures",
+            "pathways": "readable routes, thresholds, or circulation paths",
+            "materials": "visible materials supported by the setting context",
+            "weather_or_atmosphere": "source-compatible ambient air and weather conditions",
+            "foreground_midground_background": "layered spatial composition with readable foreground, midground, and background",
+            "depth_cues": "clear spatial depth and scale relationships",
         },
         "scene": {
             "key_items": ["weapons", "costume details", "set dressing"],
@@ -3781,7 +3752,10 @@ def clear_descriptor_artifacts(
             warnings.append(f"Skipped unsafe target: {resolved}")
             continue
         if target.exists():
-            shutil.rmtree(target, onerror=on_rm_error)
+            try:
+                remove_path_within_project(target, project_root=project_root)
+            except Exception as exc:
+                on_rm_error(shutil.rmtree, str(target), (type(exc), exc, None))
             if not target.exists():
                 removed_paths.append(str(target))
             else:

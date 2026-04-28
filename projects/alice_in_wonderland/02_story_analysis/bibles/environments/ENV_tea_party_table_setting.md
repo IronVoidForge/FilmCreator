@@ -14,17 +14,17 @@
 
 ## Visual Bible
 
-The environment is defined by the specific table setting used during a tea party. Detailed physical characteristics are currently being held under its canonical ID.
+The environment is currently defined by its canonical ID, with specific physical details awaiting extraction from source documentation.
 
-- layout_notes: N/A
-- lighting: Unknown
-- mood: Unknown
+- layout_notes: Unknown.
+- lighting: Unknown.
+- mood: Unknown.
 - recurring_elements: None identified
 
 ## Continuity
 
-- constraints: Must adhere to the specific table setting parameters of CH007
-- unresolved_ambiguities: Specific visual details of the tea party elements are not yet extracted from the source.
+- constraints: Must align with the tea party theme as per canonical ID
+- unresolved_ambiguities: Specific visual details are currently held under the extracted canonical ID.
 
 ## Evidence Summary
 
@@ -35,5 +35,5 @@ The environment is defined by the specific table setting used during a tea party
 - artifact_id: `ENV_tea_party_table_setting`
 - status: `generated`
 - source_fingerprint: `35ade4a5dd1c12b039a05466967c49209ae1bf40`
-- created_at_utc: `2026-04-28T00:26:37.618369+00:00`
-- updated_at_utc: `2026-04-28T00:26:37.618369+00:00`
+- created_at_utc: `2026-04-28T02:41:01.965042+00:00`
+- updated_at_utc: `2026-04-28T02:41:01.965042+00:00`

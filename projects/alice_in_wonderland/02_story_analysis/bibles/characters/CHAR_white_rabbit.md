@@ -14,29 +14,29 @@
 
 ## Visual Bible
 
-- identity_baseline: A small, quadrupedal rabbit possessing sentience and wearing elaborate clothing.
+- identity_baseline: A small, quadrupedal rabbit possessing human-like sentience and social standing.
 - age_presence: unknown
 - physical_build: Small-scale quadrupedal frame.
 - origin_or_historical_context: unknown
-- movement_language: Hurried and respectful.
-The White Rabbit is a small, sentient quadrupedal rabbit characterized by its hurried manner and respectful bearing. It wears splendid, formal attire that contrasts with its animal morphology, presenting as a figure of some importance within a court setting.
+- movement_language: Hurried and respectful; characterized by a sense of urgency or formal presentation.
+The White Rabbit is a small, quadrupedal animal with human-like sentience. He is characterized by his "splendid attire," suggesting a formal or high-status role within his environment. His movement is defined by a hurried, urgent manner, occasionally shifting into a respectful posture when presenting evidence to the court.
 
-- physical_traits: Small scale, Quadrupedal
-- costume_signature: Splendid attire suitable for a formal figure.
-- distinguishing_features: Quadrupedal rabbit anatomy
-- state_variants: Dressed in splendid attire, Presenting evidence to court
+- physical_traits: Small scale, Quadrupedal morphology
+- costume_signature: Splendid attire suitable for a rabbit.
+- distinguishing_features: Quadrupedal anatomy, Small scale
+- state_variants: Dressed in splendid attire, Presenting evidence to the court
 
 ## Behavioral Bible
 
-- personality: Hurried and respectful.
-- role: A figure who presents evidence to the court.
+- personality: Hurried and respectful; prone to urgency.
+- role: A figure who presents evidence or serves within a court setting.
 - voice_notes: unknown
-- relationship_notes: Associated with Alice, Associated with The King, Associated with The Knave, Associated with Bill, Associated with The Duchess
+- relationship_notes: Associated with Alice, Associated with the King, Associated with the Knave, Associated with Bill, Associated with The Duchess
 
 ## Continuity
 
-- continuity_constraints: Maintain the contrast between animal morphology and sophisticated attire.
-- unresolved_ambiguities: Specifics of the "splendid attire" are not detailed., Exact age or stage of life is unknown due to quadrupedal nature.
+- continuity_constraints: Maintain the scale of a small quadrupedal rabbit., Ensure attire remains "splendid" yet functional for movement.
+- unresolved_ambiguities: Specifics of the "splendid attire" (e.g., Victorian vs. fantastical)., Exact biological/anatomical blend between animal and humanoid behavior.
 
 ## Evidence Summary
 
@@ -51,5 +51,5 @@ The White Rabbit is a small, sentient quadrupedal rabbit characterized by its hu
 - artifact_id: `CHAR_white_rabbit`
 - status: `generated`
 - source_fingerprint: `47d46053b5414e0cc25797d8ad86bd24af6303e6`
-- created_at_utc: `2026-04-28T00:22:35.528001+00:00`
-- updated_at_utc: `2026-04-28T00:22:35.528001+00:00`
+- created_at_utc: `2026-04-28T02:37:31.541358+00:00`
+- updated_at_utc: `2026-04-28T02:37:31.541358+00:00`

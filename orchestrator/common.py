@@ -5,7 +5,7 @@ from typing import Any
 
 from .core.json_io import read_json, write_json
 from .core.paths import PROJECTS_ROOT, REGISTRY_PATH, ROOT, TEMPLATES_ROOT, ensure_dir, repo_relative
-from .core.validation import CLIP_ID_PATTERN, SCENE_ID_PATTERN, validate_clip_id, validate_scene_id
+from .core.validation import CLIP_ID_PATTERN, PROJECT_SLUG_PATTERN, SCENE_ID_PATTERN, validate_clip_id, validate_project_slug, validate_scene_id
 
 
 def replace_tokens(payload: Any, replacements: dict[str, str]) -> Any:
@@ -33,6 +33,8 @@ __all__ = [
     "replace_tokens",
     "SCENE_ID_PATTERN",
     "CLIP_ID_PATTERN",
+    "PROJECT_SLUG_PATTERN",
     "validate_scene_id",
     "validate_clip_id",
+    "validate_project_slug",
 ]

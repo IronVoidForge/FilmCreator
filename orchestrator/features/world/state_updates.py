@@ -89,12 +89,12 @@ def _is_generic_character_label(value: str) -> bool:
         "unknown_companion",
         "friend_body",
         "prisoner",
-        "human_female_prisoner",
+        "female_prisoner",
+        "male_prisoner",
         "captive",
         "guard",
+        "leader",
         "chieftain",
-        "martian",
-        "martian_leader",
         "young_warrior",
         "watch_dog",
         "watch_thing",
@@ -106,7 +106,7 @@ def _is_generic_character_label(value: str) -> bool:
     }
     return normalized in generic_labels or any(
         token in normalized.split("_")
-        for token in {"narrator", "prisoner", "captive", "guard", "companion", "warrior", "chieftain", "martian"}
+        for token in {"narrator", "prisoner", "captive", "guard", "companion", "warrior", "chieftain", "leader"}
     )
 
 

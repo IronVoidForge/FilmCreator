@@ -14,17 +14,17 @@
 
 ## Visual Bible
 
-The environment serves as a primary setting within the narrative. Specific physical characteristics and spatial dimensions remain to be established through further extraction.
+The environment serves as a primary setting within the narrative. Specific spatial details and visual characteristics are currently being held under its canonical ID.
 
 - layout_notes: Unknown
 - lighting: Unknown
 - mood: Unknown
-- recurring_elements: []
+- recurring_elements: None identified
 
 ## Continuity
 
-- constraints: []
-- unresolved_ambiguities: Lighting and atmosphere are currently unextracted., Spatial layout and physical dimensions are not yet defined in the provided evidence.
+- constraints: Visual data is currently minimal
+- unresolved_ambiguities: Lighting and atmosphere are not yet defined in the source evidence., Specific spatial layout remains unextracted.
 
 ## Evidence Summary
 
@@ -42,5 +42,5 @@ The environment serves as a primary setting within the narrative. Specific physi
 - artifact_id: `ENV_the_hall_and_pool`
 - status: `generated`
 - source_fingerprint: `61eca4e014a57d904429a0088f092d3be1cbfd45`
-- created_at_utc: `2026-04-28T00:26:29.708819+00:00`
-- updated_at_utc: `2026-04-28T00:26:29.708819+00:00`
+- created_at_utc: `2026-04-28T02:40:54.650742+00:00`
+- updated_at_utc: `2026-04-28T02:40:54.650742+00:00`

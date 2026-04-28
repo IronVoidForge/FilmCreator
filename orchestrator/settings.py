@@ -6,6 +6,7 @@ from pathlib import Path
 
 
 DEFAULT_LLM_MODEL = "gemma-4-26b-a4b-it"
+DEFAULT_LMSTUDIO_TIMEOUT_SECONDS = 300.0
 STARTUP_LLM_MODELS = (
     "gemma-4-26b-a4b-it-uncensored.i1",
     "supergemma4-26b-uncensored-fast-v2",
@@ -37,6 +38,6 @@ def load_runtime_settings() -> RuntimeSettings:
         keep_staged_files=os.environ.get("FILMCREATOR_KEEP_STAGED_FILES", "").lower() in {"1", "true", "yes"},
         lmstudio_base_url=os.environ.get("FILMCREATOR_LMSTUDIO_BASE_URL", "http://127.0.0.1:1234/v1").rstrip("/"),
         lmstudio_model=os.environ.get("FILMCREATOR_LMSTUDIO_MODEL") or DEFAULT_LLM_MODEL,
-        lmstudio_timeout_seconds=float(os.environ.get("FILMCREATOR_LMSTUDIO_TIMEOUT_SECONDS", "120.0")),
+        lmstudio_timeout_seconds=float(os.environ.get("FILMCREATOR_LMSTUDIO_TIMEOUT_SECONDS", str(DEFAULT_LMSTUDIO_TIMEOUT_SECONDS))),
         shot_coverage_density=os.environ.get("FILMCREATOR_SHOT_COVERAGE_DENSITY", "medium").strip().lower() or "medium",
     )

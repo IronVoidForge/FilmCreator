@@ -35,8 +35,8 @@ The character is a human-scale, bipedal individual. Due to the current level of 
 
 ## Continuity
 
-- continuity_constraints: maintain humanoid bipedal morphology as per taxonomy
-- unresolved_ambiguities: specific physical appearance (age, build, features) is currently unstated in provided evidence, costume and era cues are not yet established
+- continuity_constraints: maintain humanoid bipedal morphology as per entity taxonomy
+- unresolved_ambiguities: specific physical appearance (age, build, features) is currently unstated in provided evidence, costume and movement language are not yet established
 
 ## Evidence Summary
 
@@ -49,5 +49,5 @@ The character is a human-scale, bipedal individual. Due to the current level of 
 - artifact_id: `CHAR_the_hatter`
 - status: `generated`
 - source_fingerprint: `20a2a13e381c9fcc89445825c22871b4ff7db381`
-- created_at_utc: `2026-04-28T00:23:42.563066+00:00`
-- updated_at_utc: `2026-04-28T00:23:42.563066+00:00`
+- created_at_utc: `2026-04-28T02:38:29.471242+00:00`
+- updated_at_utc: `2026-04-28T02:38:29.471242+00:00`

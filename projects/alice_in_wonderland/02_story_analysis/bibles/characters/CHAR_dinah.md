@@ -19,24 +19,24 @@
 - physical_build: Small quadrupedal feline frame.
 - origin_or_historical_context: unknown
 - movement_language: unknown
-Dinah is a cat belonging to Alice. She possesses a small, quadrupedal feline frame characteristic of a domestic pet. While specific breed or color details are not provided in the text, she is visually established as an animal companion.
+Dinah is a small, quadrupedal cat belonging to Alice. As an animal entity, her visual identity is defined by feline morphology and scale. Specific breed or color details are not provided in the current evidence, leaving her appearance as a standard domestic-style cat.
 
-- physical_traits: Quadrupedal morphology, Small scale
+- physical_traits: Quadrupedal anatomy, Small scale
 - costume_signature: natural fur
 - distinguishing_features: []
-- state_variants: Natural (unclothed)
+- state_variants: Natural (unclothed), --------------------------------------------------
 
 ## Behavioral Bible
 
 - personality: unknown
-- role: Alice's pet / companion
+- role: Alice's pet
 - voice_notes: unknown
 - relationship_notes: Belonging to Alice (pet)
 
 ## Continuity
 
-- continuity_constraints: Must remain visually consistent as a cat.
-- unresolved_ambiguities: Specific breed, color, or coat pattern is not described in the provided text., Physical presence on screen is implied through mention but her exact visual state is unstated.
+- continuity_constraints: Must remain a cat in scale and morphology.
+- unresolved_ambiguities: Specific breed, color, or coat pattern is not established., Physical presence on screen is implied via mention rather than direct visual description.
 
 ## Evidence Summary
 
@@ -54,5 +54,5 @@ Dinah is a cat belonging to Alice. She possesses a small, quadrupedal feline fra
 - artifact_id: `CHAR_dinah`
 - status: `generated`
 - source_fingerprint: `06efae8ad82a4a2de6662c1fbcf33ab75f898ff0`
-- created_at_utc: `2026-04-28T00:22:21.059891+00:00`
-- updated_at_utc: `2026-04-28T00:22:21.059891+00:00`
+- created_at_utc: `2026-04-28T02:37:20.044468+00:00`
+- updated_at_utc: `2026-04-28T02:37:20.044468+00:00`

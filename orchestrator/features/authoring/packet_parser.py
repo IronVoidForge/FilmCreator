@@ -8,6 +8,7 @@ from pathlib import Path
 from ...core.paths import ensure_dir, repo_relative
 from ...core.validation import validate_clip_id, validate_scene_id
 from ...lmstudio_client import LMStudioError
+from ...delete_safety import find_project_root, remove_path_within_project
 
 PACKET_START_TAG = "[[FILMCREATOR_PACKET]]"
 PACKET_END_TAG = "[[/FILMCREATOR_PACKET]]"
@@ -246,6 +247,10 @@ def normalize_structural_packet_tag(stripped: str) -> str | None:
     if SECTION_TAG_PATTERN.fullmatch(stripped):
         return stripped
     core = lowered[2:-2].strip()
+    if core.startswith("section "):
+        return None
+    if core.startswith("/section") or core in {"end_section", "endsection", "esection"}:
+        return SECTION_END_TAG
     normalized_core = re.sub(r"[^a-z/]+", "", core)
     if not normalized_core:
         return None
@@ -909,11 +914,14 @@ def markdown_bundle(*, directory: Path, exclude_names: set[str]) -> str:
 def prune_markdown_dir(directory: Path, *, keep_names: set[str]) -> None:
     if not directory.exists():
         return
+    project_root = find_project_root(directory)
+    if project_root is None:
+        raise ValueError(f"Refusing to prune markdown outside a project directory: {directory}")
     for path in directory.glob("*.md"):
         if path.name in keep_names:
             continue
         try:
-            path.unlink(missing_ok=True)
+            remove_path_within_project(path, project_root=project_root, missing_ok=True)
         except PermissionError:
             continue
 

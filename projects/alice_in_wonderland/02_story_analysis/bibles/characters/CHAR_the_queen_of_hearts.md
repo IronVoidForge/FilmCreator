@@ -14,14 +14,14 @@
 
 ## Visual Bible
 
-- identity_baseline: human-scale bipedal figure
+- identity_baseline: human-scale bipedal figure.
 - age_presence: unknown
 - physical_build: unknown
 - origin_or_historical_context: unknown
 - movement_language: unknown
-The Queen of Hearts is a human-scale bipedal individual with no established visual history in the provided records. Due to the lack of descriptive physical data, her appearance remains an empty canvas awaiting specific characterization.
+The Queen of Hearts is a human-scale bipedal individual. Due to limited visual evidence, her specific physical build, age, and costume remain undefined.
 
-- physical_traits: human morphology
+- physical_traits: bipedal morphology
 - costume_signature: unknown
 - distinguishing_features: []
 - state_variants: []
@@ -35,8 +35,8 @@ The Queen of Hearts is a human-scale bipedal individual with no established visu
 
 ## Continuity
 
-- continuity_constraints: maintain bipedal, human-scale morphology as per taxonomy
-- unresolved_ambiguities: visual identity (age, build, costume) is entirely unstated in current evidence, movement and personality are currently unknown
+- continuity_constraints: Maintain human scale and bipedal morphology.
+- unresolved_ambiguities: Specific physical appearance (age, build, features) is not present in the provided evidence., Costume and movement language are currently undefined.
 
 ## Evidence Summary
 
@@ -49,5 +49,5 @@ The Queen of Hearts is a human-scale bipedal individual with no established visu
 - artifact_id: `CHAR_the_queen_of_hearts`
 - status: `generated`
 - source_fingerprint: `97face1634c84d2450e8e47ce3f3e696fd37818e`
-- created_at_utc: `2026-04-28T00:24:46.205907+00:00`
-- updated_at_utc: `2026-04-28T00:24:46.205907+00:00`
+- created_at_utc: `2026-04-28T02:39:23.306345+00:00`
+- updated_at_utc: `2026-04-28T02:39:23.306345+00:00`

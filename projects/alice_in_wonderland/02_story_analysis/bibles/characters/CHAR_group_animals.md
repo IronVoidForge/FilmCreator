@@ -16,27 +16,27 @@
 
 - identity_baseline: A diverse collection of various animals and birds.
 - age_presence: unknown
-- physical_build: variable; a collective mass of different biological forms.
+- physical_build: Variable; comprised of multiple distinct biological forms including avian and aquatic species.
 - origin_or_historical_context: unknown
-- movement_language: swimming in a pool.
-The group consists of various animals and birds appearing together as a collective entity. They are characterized by their presence within a pool, where they are seen swimming. Because the group is composed of diverse species, their visual identity is defined by a heterogeneous mix of biological forms rather than a singular uniform shape.
+- movement_language: Swimming in a pool.
+The group consists of a diverse collection of various animals and birds. They are visually defined by their collective presence as they swim within a pool environment.
 
-- physical_traits: aquatic/swimming context
-- costume_signature: natural animal/bird plumage, fur, or scales.
-- distinguishing_features: diverse species composition (birds and animals), aquatic environment context
-- state_variants: swimming in a pool
+- physical_traits: Various animal types, Various bird types
+- costume_signature: natural biological textures (feathers, scales, fur)
+- distinguishing_features: Diverse mix of fauna, Aquatic/avian composition
+- state_variants: Swimming in a pool
 
 ## Behavioral Bible
 
 - personality: unknown
 - role: unknown
 - voice_notes: unknown
-- relationship_notes: associated with Alice
+- relationship_notes: Associated with Alice
 
 ## Continuity
 
-- continuity_constraints: must maintain the distinction between various animal and bird species within the group.
-- unresolved_ambiguities: specific species composition is not detailed beyond "various animals and birds.", exact scale of the collective mass relative to the pool is unknown.
+- continuity_constraints: Must maintain the collective identity of various animals and birds.
+- unresolved_ambiguities: Specific species composition is not defined beyond "various animals and birds.", The exact nature of their interaction within the pool is unknown.
 
 ## Evidence Summary
 
@@ -50,5 +50,5 @@ The group consists of various animals and birds appearing together as a collecti
 - artifact_id: `CHAR_group_animals`
 - status: `generated`
 - source_fingerprint: `0e83fdbe785b07784f41e5bda0cf33bcc4ba43d7`
-- created_at_utc: `2026-04-28T00:22:50.649701+00:00`
-- updated_at_utc: `2026-04-28T00:22:50.649701+00:00`
+- created_at_utc: `2026-04-28T02:37:45.426140+00:00`
+- updated_at_utc: `2026-04-28T02:37:45.426140+00:00`

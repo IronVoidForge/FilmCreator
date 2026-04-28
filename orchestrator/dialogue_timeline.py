@@ -379,6 +379,21 @@ def _role_based_speaker_guess(
 ) -> DialogueSpeaker | None:
     normalized = " ".join(_normalize_text(context).lower().split())
 
+    def matching_scene_ids(token_groups: list[tuple[str, ...]]) -> list[str]:
+        matches: list[str] = []
+        for target in scene_character_ids:
+            lowered_target = target.lower()
+            if any(any(token in lowered_target for token in token_group) for token_group in token_groups):
+                matches.append(target)
+        return matches
+
+    def unique_match(target_ids: list[str]) -> list[str]:
+        seen: list[str] = []
+        for target_id in target_ids:
+            if target_id not in seen:
+                seen.append(target_id)
+        return seen if len(seen) == 1 else []
+
     def find_by_id(target_ids: list[str], *, confidence: float, method: str, notes: str) -> DialogueSpeaker | None:
         for target_id in target_ids:
             for entry in lexicon:
@@ -397,9 +412,9 @@ def _role_based_speaker_guess(
         return None
 
     if "prisoner" in normalized or "captive" in normalized:
-        prisoner_targets = [target for target in scene_character_ids if "dejah_thoris" in target.lower() or "prisoner" in target.lower()]
+        prisoner_targets = matching_scene_ids([("prisoner", "captive", "hostage", "detainee")])
         guessed = find_by_id(
-            prisoner_targets,
+            unique_match(prisoner_targets),
             confidence=0.48,
             method="role_hint",
             notes="Attributed from prisoner/captive wording in the surrounding context.",
@@ -409,20 +424,30 @@ def _role_based_speaker_guess(
 
     if re.search(r"\b(i|me|my)\b", normalized):
         guessed = find_by_id(
-            [target for target in scene_character_ids if target.lower() == "john_carter"],
+            unique_match(matching_scene_ids([("narrator", "protagonist", "observer", "speaker")])),
             confidence=0.42,
             method="first_person_hint",
-            notes="First-person narration suggests John Carter as the speaker.",
+            notes="First-person wording suggests the line belongs to the scene's narrator-like speaker.",
         )
         if guessed:
             return guessed
 
     if re.search(r"\b(she|her)\b", normalized):
         guessed = find_by_id(
-            [target for target in scene_character_ids if any(token in target.lower() for token in ["dejah_thoris", "sola"])],
+            unique_match(matching_scene_ids([("queen", "princess", "duchess", "woman", "girl", "mother", "sister", "female")])),
             confidence=0.38,
             method="gendered_role_hint",
-            notes="Context suggests a female speaker, but the source wording is still ambiguous.",
+            notes="Context suggests a feminine-coded speaker, but the source wording is still ambiguous.",
+        )
+        if guessed:
+            return guessed
+
+    if re.search(r"\b(he|him|his)\b", normalized):
+        guessed = find_by_id(
+            unique_match(matching_scene_ids([("king", "prince", "duke", "man", "boy", "father", "brother", "male")])),
+            confidence=0.38,
+            method="gendered_role_hint",
+            notes="Context suggests a masculine-coded speaker, but the source wording is still ambiguous.",
         )
         if guessed:
             return guessed

@@ -14,17 +14,17 @@
 
 ## Visual Bible
 
-A deep, vertical shaft or well descending into the earth. The space functions as a subterranean transit route containing elements of a library, including dusty bookshelves and wall-mounted cupboards. Household objects appear to float within the shaft.
+A deep, vertical shaft or well descending into the earth. The space functions as a subterranean transit route containing elements of a library, including dusty bookshelves and wall-mounted cupboards. Objects may appear to be floating within the shaft.
 
 - layout_notes: Deep vertical geometry; contains shelving/cupboards mounted to the walls.
-- lighting: Unknown.
-- mood: Unknown.
-- recurring_elements: Wall-mounted cupboards, Dusty bookshelves, Floating household objects
+- lighting: Unknown
+- mood: Unknown
+- recurring_elements: Vertical shaft / well structure, Wall-mounted cupboards and bookshelves, Floating household objects
 
 ## Continuity
 
-- constraints: Vertical descent orientation, Must accommodate both library and transit functions
-- unresolved_ambiguities: The exact scale of the vertical shaft relative to the floating objects is unconfirmed., The relationship between the "subterranean library" and the physical structure of the shaft is not fully defined.
+- constraints: Must maintain verticality for transit, Spatial relationship between shelving and the central void
+- unresolved_ambiguities: The exact scale of the shaft relative to the objects is unconfirmed., Whether the "floating" nature of objects is a physical property or an optical illusion within the descent.
 
 ## Evidence Summary
 
@@ -41,5 +41,5 @@ A deep, vertical shaft or well descending into the earth. The space functions as
 - artifact_id: `ENV_rabbit_hole_tunnel`
 - status: `generated`
 - source_fingerprint: `46998291a39dc2e585f4e0711c39a23d4f9a79ba`
-- created_at_utc: `2026-04-28T00:26:09.097616+00:00`
-- updated_at_utc: `2026-04-28T00:26:09.097616+00:00`
+- created_at_utc: `2026-04-28T02:40:36.235654+00:00`
+- updated_at_utc: `2026-04-28T02:40:36.235654+00:00`

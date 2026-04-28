@@ -21,7 +21,7 @@
 - movement_language: unknown
 The King of Hearts is a human-scale individual whose specific physical appearance, age, and attire remain unestablished in the current records. While identified as an individual entity within a royal context, there are no recorded visual descriptors for his build, movement, or costume.
 
-- physical_traits: bipedal morphology
+- physical_traits: human scale
 - costume_signature: unknown
 - distinguishing_features: []
 - state_variants: []
@@ -35,8 +35,8 @@ The King of Hearts is a human-scale individual whose specific physical appearanc
 
 ## Continuity
 
-- continuity_constraints: maintain human scale and bipedal morphology
-- unresolved_ambiguities: visual appearance (age, build, features) is entirely unrecorded, costume and movement language are unknown, specific personality traits are not yet established in the provided evidence
+- continuity_constraints: maintain human-scale morphology as per taxonomy
+- unresolved_ambiguities: visual appearance (build, age, features) is entirely unrecorded, movement and mannerisms are unknown, costume and historical context are unknown
 
 ## Evidence Summary
 
@@ -49,5 +49,5 @@ The King of Hearts is a human-scale individual whose specific physical appearanc
 - artifact_id: `CHAR_the_king_of_hearts`
 - status: `generated`
 - source_fingerprint: `8ee0a5f4aacea85998af9e5617242bdab13f81cc`
-- created_at_utc: `2026-04-28T00:24:19.737476+00:00`
-- updated_at_utc: `2026-04-28T00:24:19.737476+00:00`
+- created_at_utc: `2026-04-28T02:39:00.870185+00:00`
+- updated_at_utc: `2026-04-28T02:39:00.870185+00:00`

@@ -26,7 +26,7 @@ from .production_pipeline import (
 )
 from .production_run_state import persist_run_summary
 from .production_status import format_production_status, get_production_status
-from .settings import DEFAULT_LLM_MODEL, STARTUP_LLM_MODELS
+from .settings import DEFAULT_LLM_MODEL, DEFAULT_LMSTUDIO_TIMEOUT_SECONDS, STARTUP_LLM_MODELS
 
 
 InputFn = Callable[[str], str]
@@ -39,6 +39,7 @@ class PipelineMenuState:
     chapters: str | None = None
     mode: str = "resume"
     lmstudio_model: str = DEFAULT_LLM_MODEL
+    lmstudio_timeout_seconds: float = DEFAULT_LMSTUDIO_TIMEOUT_SECONDS
     character_reference_limit: int = 1
     environment_reference_limit: int = 1
     last_cleanup_scope: str | None = None
@@ -59,6 +60,7 @@ def run_pipeline_menu(
         chapters=initial_chapters,
         mode=initial_mode,
         lmstudio_model=os.environ.get("FILMCREATOR_LMSTUDIO_MODEL") or DEFAULT_LLM_MODEL,
+        lmstudio_timeout_seconds=float(os.environ.get("FILMCREATOR_LMSTUDIO_TIMEOUT_SECONDS", str(DEFAULT_LMSTUDIO_TIMEOUT_SECONDS))),
     )
     root = projects_root or (Path.cwd() / "projects")
     if prompt_on_start:
@@ -108,9 +110,11 @@ def _select_startup_scope(state: PipelineMenuState, projects_root: Path, input_f
     chapters = input_fn("Chapters to run, e.g. 2-3 or 22-25 [Enter for ALL]: ").strip()
     state.chapters = chapters or None
     _select_model_on_startup(state, input_fn, output_fn)
+    _select_timeout_on_startup(state, input_fn, output_fn)
     output_fn(f"Project set to: {state.project_slug}")
     output_fn(f"Chapters set to: {state.chapters or 'ALL'}")
     output_fn(f"Model set to: {state.lmstudio_model}")
+    output_fn(f"LM Studio timeout: {state.lmstudio_timeout_seconds:g}s")
 
 
 def _select_startup_project(state: PipelineMenuState, projects_root: Path, input_fn: InputFn, output_fn: OutputFn) -> None:
@@ -166,6 +170,22 @@ def _select_model_on_startup(state: PipelineMenuState, input_fn: InputFn, output
 
 def _apply_runtime_model(state: PipelineMenuState) -> None:
     os.environ["FILMCREATOR_LMSTUDIO_MODEL"] = state.lmstudio_model
+    os.environ["FILMCREATOR_LMSTUDIO_TIMEOUT_SECONDS"] = f"{state.lmstudio_timeout_seconds:g}"
+
+
+def _select_timeout_on_startup(state: PipelineMenuState, input_fn: InputFn, output_fn: OutputFn) -> None:
+    raw = input_fn(f"LM Studio timeout seconds [Enter for {state.lmstudio_timeout_seconds:g}]: ").strip()
+    if not raw:
+        return
+    try:
+        parsed = float(raw)
+    except ValueError:
+        output_fn(f"Invalid timeout. Keeping: {state.lmstudio_timeout_seconds:g}s")
+        return
+    if parsed <= 0:
+        output_fn(f"Invalid timeout. Keeping: {state.lmstudio_timeout_seconds:g}s")
+        return
+    state.lmstudio_timeout_seconds = parsed
 
 
 def _write_main_menu(state: PipelineMenuState, output_fn: OutputFn) -> None:
@@ -175,6 +195,7 @@ def _write_main_menu(state: PipelineMenuState, output_fn: OutputFn) -> None:
     output_fn(f"Chapters: {state.chapters or 'ALL'}")
     output_fn(f"Mode:     {state.mode}")
     output_fn(f"Model:    {state.lmstudio_model}")
+    output_fn(f"Timeout:  {state.lmstudio_timeout_seconds:g}s")
     output_fn("")
     output_fn("1. Select project")
     output_fn("2. Select chapters / ALL")

@@ -35,8 +35,8 @@ The visual identity of the mock turtle is currently undefined within the provide
 
 ## Continuity
 
-- continuity_constraints: maintain creature morphology as per taxonomy
-- unresolved_ambiguities: physical appearance is not described in the provided text, scale and size relative to other characters are unknown, specific morphological features are unstated
+- continuity_constraints: maintain creature morphology as the primary type
+- unresolved_ambiguities: physical appearance and scale are entirely unstated in provided evidence, morphological structure (hybrid vs singular) is unknown
 
 ## Evidence Summary
 
@@ -49,5 +49,5 @@ The visual identity of the mock turtle is currently undefined within the provide
 - artifact_id: `CHAR_the_mock_turtle`
 - status: `generated`
 - source_fingerprint: `645fdcd499ea4260686f301a4336b90dc60c1315`
-- created_at_utc: `2026-04-28T00:24:32.924955+00:00`
-- updated_at_utc: `2026-04-28T00:24:32.924955+00:00`
+- created_at_utc: `2026-04-28T02:39:12.196955+00:00`
+- updated_at_utc: `2026-04-28T02:39:12.196955+00:00`

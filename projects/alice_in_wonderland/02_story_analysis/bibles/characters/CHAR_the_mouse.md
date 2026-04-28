@@ -50,5 +50,5 @@ The mouse is a small-scale creature characterized by its ability to swim within 
 - artifact_id: `CHAR_the_mouse`
 - status: `generated`
 - source_fingerprint: `e30ab62a2f000b5cbab691a4ce0768de2865a6d6`
-- created_at_utc: `2026-04-28T00:23:03.336359+00:00`
-- updated_at_utc: `2026-04-28T00:23:03.337359+00:00`
+- created_at_utc: `2026-04-28T02:37:55.943260+00:00`
+- updated_at_utc: `2026-04-28T02:37:55.943260+00:00`

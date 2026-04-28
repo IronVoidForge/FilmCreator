@@ -19,24 +19,24 @@
 - physical_build: unknown
 - origin_or_historical_context: unknown
 - movement_language: unknown
-The Queen is a temperamental and furious ruler defined by sudden outbursts of anger. Due to limited physical evidence, her specific biological build, age, or costume remain unestablished, though she carries the weight of an authoritative figure prone to emotional volatility.
+The Queen is a temperamental and furious ruler defined by sudden outbursts of anger. Due to limited visual data, her specific physical build, age, and costume remain unestablished, though she carries the weight of an authoritative figure prone to emotional volatility.
 
-- physical_traits: known for sudden outbursts of anger
+- physical_traits: tendency for sudden anger
 - costume_signature: unknown
 - distinguishing_features: []
-- state_variants: fury/outburst state
+- state_variants: variant 1 (furious/outburst)
 
 ## Behavioral Bible
 
-- personality: Temperamental and furious; prone to sudden outbursts of anger.
+- personality: Temperamental and furious; known for sudden outbursts of anger.
 - role: Ruler
 - voice_notes: unknown
 - relationship_notes: Associated with The King, Associated with Alice, Associated with Bill the Lizard
 
 ## Continuity
 
-- continuity_constraints: Maintain the character's temperamental nature as a primary driver of presence.
-- unresolved_ambiguities: Physical appearance (build, age, features) is currently unestablished., Costume and historical setting are unknown., Movement language is not yet defined.
+- continuity_constraints: Maintain the character's temperamental nature as a core driver of presence.
+- unresolved_ambiguities: Physical appearance (build, age, features) is currently unestablished in provided evidence., Costume and historical setting are unknown.
 
 ## Evidence Summary
 
@@ -50,5 +50,5 @@ The Queen is a temperamental and furious ruler defined by sudden outbursts of an
 - artifact_id: `CHAR_the_queen`
 - status: `generated`
 - source_fingerprint: `baf64c58150dfbd1e28b0a54a12f5a82fdebb775`
-- created_at_utc: `2026-04-28T00:25:36.127428+00:00`
-- updated_at_utc: `2026-04-28T00:25:36.127428+00:00`
+- created_at_utc: `2026-04-28T02:40:06.405706+00:00`
+- updated_at_utc: `2026-04-28T02:40:06.405706+00:00`
