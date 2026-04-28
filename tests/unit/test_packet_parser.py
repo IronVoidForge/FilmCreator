@@ -181,6 +181,23 @@ def test_parse_packet_document_accepts_malformed_record_end_tags_from_logs() -> 
     assert packet.records[0].fields["asset_id"] == "alice"
 
 
+def test_parse_packet_record_ignores_stray_closing_record_tag() -> None:
+    record = packet_parser.parse_packet_record(
+        [
+            "type: scene",
+            "scene_id: SC001",
+            "[[/FILMCREATOR_RECORD]]",
+            "[[SECTION markdown]]",
+            "# SC001",
+            "[[/SECTION]]",
+        ]
+    )
+
+    assert record.fields["type"] == "scene"
+    assert record.fields["scene_id"] == "SC001"
+    assert record.sections["markdown"] == "# SC001"
+
+
 def test_parse_packet_document_accepts_end_section_variants_from_logs() -> None:
     response = "\n".join(
         [

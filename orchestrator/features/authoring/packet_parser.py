@@ -169,7 +169,7 @@ def parse_packet_record(record_lines: list[str]) -> PacketRecord:
         if not stripped:
             index += 1
             continue
-        if normalized_tag == SECTION_END_TAG:
+        if normalized_tag in {SECTION_END_TAG, RECORD_END_TAG, PACKET_END_TAG}:
             index += 1
             continue
         section_match = SECTION_TAG_PATTERN.fullmatch(stripped)

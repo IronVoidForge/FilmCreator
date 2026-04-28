@@ -1,0 +1,389 @@
+{
+  "scene_id": "CH007_SC003",
+  "chapter_id": "CH007",
+  "scene_title": "CH007_SC003",
+  "purpose": "",
+  "summary": "The Dormouse is pinched awake and tells a dreamlike story about three sisters living at the bottom of a treacle-well. Alice attempts to apply logic to the story, which only heightens the sense of nonsense.",
+  "emotional_arc": "Boredom to surreal disorientation.",
+  "production_intent": "Establish a transition from tea-party boredom to surreal disorientation through the Dormouse's narrative. The scene relies on tight character proximity and physical interaction (pinching) to trigger the story delivery.",
+  "scene_short_description": "Characters gathered around a crowded tea table under a large tree.",
+  "scene_primary_scale_story_point": "Alice is at standard child scale relative to the tea table and characters.",
+  "scene_required_anchor_catalog": [
+    "tea_party_glade_table",
+    "tea_party_glade_tree"
+  ],
+  "scene_start_state": "The Dormouse is asleep amidst the tea-things; the others are in a state of boredom.",
+  "scene_end_state": "Alice expresses logical confusion as the Dormouse finishes the surreal tale.",
+  "dominant_action_line": "A character pinches the Dormouse, triggering a nonsensical story about treacle-well sisters.",
+  "scene_spatial_layout": [
+    "Circular arrangement around the tea table",
+    "Characters leaning inward toward the center of the table"
+  ],
+  "character_spatial_map": [
+    "alice: seated opposite or adjacent to the Dormouse",
+    "the_hatter: positioned near the tea-things",
+    "the_march_hare: positioned near the Dormouse",
+    "the_dormouse: slumped/asleep on or near the tea table"
+  ],
+  "environment_subzones": [
+    "tea_party_glade_table",
+    "tea_party_glade_tree"
+  ],
+  "scene_event_chain": [
+    "event 1: a character pinches the_dormouse to wake them",
+    "event 2: the_dormouse begins telling the story of the three sisters",
+    "event 3: the_dormouse describes the bottom of the treacle-well",
+    "event 4: alice attempts to apply logic to the sisters' situation"
+  ],
+  "entry_vectors": [
+    "tea_party_glade_table (seated)"
+  ],
+  "exit_vectors": [
+    "tea_party_glade_table (standing/leaving)"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: physical stimulus to verbal response",
+    "BT002 -> BT003: narrative progression to logical confrontation"
+  ],
+  "characters_required": [
+    {
+      "label": "Alice",
+      "canonical_id": "alice",
+      "display_name": "alice",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH007/alice.md",
+      "notes": "Direct registry match for 'alice'."
+    },
+    {
+      "label": "The Hatter",
+      "canonical_id": "the_hatter",
+      "display_name": "the_hatter",
+      "status": "canonical",
+      "entity_kind": "group",
+      "resolution_score": 138,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH007/the_hatter.md",
+      "notes": "Direct registry match for 'the_hatter'."
+    },
+    {
+      "label": "The March Hare",
+      "canonical_id": "the_march_hare",
+      "display_name": "the_march_hare",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH007/the_march_hare.md",
+      "notes": "Direct registry match for 'the_march_hare'."
+    },
+    {
+      "label": "The Dormouse",
+      "canonical_id": "the_dormouse",
+      "display_name": "the_dormouse",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH007/the_dormouse.md",
+      "notes": "Direct registry match for 'the_dormouse'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "Under the tree at the tea table",
+      "canonical_id": "tea_party_glade",
+      "display_name": "tea_party_glade",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 78,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/environment_breakdowns/chapters/CH007/tea_party_glade.md",
+      "notes": "Chapter-local environment alias match for 'Under the tree at the tea table' (key_overlap=1, label_overlap=3, context_overlap=4)."
+    }
+  ],
+  "continuity_constraints": [
+    "Physical positioning of characters as they lean in or pinch the Dormouse",
+    "Maintaining tea-table clutter density during character movement"
+  ],
+  "visual_coverage_families": [
+    "Close-ups of the sleepy/pinched Dormouse",
+    "Over-the-shoulder shots of Alice questioning the story"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "the Dormouse is pinched awake",
+      "purpose": "",
+      "action_start": "the_dormouse is asleep",
+      "action_end": "the_dormouse jolts awake",
+      "active_subjects": [
+        "the_march_hare",
+        "the_dormouse"
+      ],
+      "passive_subjects": [
+        "alice",
+        "the_hatter"
+      ],
+      "spatial_context": "tea_party_glade_table",
+      "blocking_hint": "characters leaning into the table center",
+      "environment_subzone": "tea_party_glade_table",
+      "continuity_focus": "pinch location on Dormouse",
+      "coverage_hint": "close-up",
+      "coverage_priority": "high",
+      "handoff_to_next": "the_dormouse is now awake and vocal"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "the Dormouse tells the story of the three sisters",
+      "purpose": "",
+      "action_start": "the_dormouse begins speaking",
+      "action_end": "the description of the sisters is complete",
+      "active_subjects": [
+        "the_dormouse"
+      ],
+      "passive_subjects": [
+        "alice",
+        "the_hatter",
+        "the_march_hare"
+      ],
+      "spatial_context": "tea_party_glade_table",
+      "blocking_hint": "the_dormouse remains slumped near tea-things",
+      "environment_subzone": "tea_party_glade_table",
+      "continuity_focus": "maintaining sleepy demeanor while speaking",
+      "coverage_hint": "close-up",
+      "coverage_priority": "medium",
+      "handoff_to_next": "the story moves to the treacle-well detail"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "the Dormouse describes the treacle-well",
+      "purpose": "",
+      "action_start": "mention of the well",
+      "action_end": "description of the bottom of the well",
+      "active_subjects": [
+        "the_dormouse"
+      ],
+      "passive_subjects": [
+        "alice",
+        "the_hatter",
+        "the_march_hare"
+      ],
+      "spatial_context": "tea_party_glade_table",
+      "blocking_hint": "static positioning",
+      "environment_subzone": "tea_party_glade_table",
+      "continuity_focus": "dreamlike tone",
+      "coverage_hint": "close-up",
+      "coverage_priority": "low",
+      "handoff_to_next": "the story concludes"
+    },
+    {
+      "beat_id": "BT004",
+      "summary": "alice attempts to apply logic",
+      "purpose": "",
+      "action_start": "alice speaks a question",
+      "action_end": "alice expresses disorientation",
+      "active_subjects": [
+        "alice"
+      ],
+      "passive_subjects": [
+        "the_dormouse",
+        "the_hatter",
+        "the_march_hare"
+      ],
+      "spatial_context": "tea_party_glade_table",
+      "blocking_hint": "alice leaning in to question",
+      "environment_subzone": "tea_party_glade_table",
+      "continuity_focus": "shift from boredom to disorientation",
+      "coverage_hint": "over-the-shoulder",
+      "coverage_priority": "medium",
+      "handoff_to_next": "scene end"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "trigger action",
+      "planned_shot_moment_summary": "the pinch occurs",
+      "primary_subject_seed": "the_dormouse",
+      "secondary_subjects_seed": [
+        "the_march_hare"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "tea_party_glade_table",
+      "planned_shot_required_anchor_1": "tea_party_glade_table",
+      "planned_shot_scale_proof_detail": "standard child scale",
+      "start_state_seed": "dormouse sleeping",
+      "end_state_seed": "dormouse startled",
+      "action_seed": "pinch to the ear/body",
+      "blocking_seed": [
+        "leaning in toward center"
+      ],
+      "shot_size": "close_up",
+      "camera_angle": "eye_level",
+      "lens_family": "portrait",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front_three_quarter_right"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "narrative delivery",
+      "planned_shot_moment_summary": "the story begins",
+      "primary_subject_seed": "the_dormouse",
+      "secondary_subjects_seed": [
+        "alice"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "tea_party_glade_table",
+      "planned_shot_required_anchor_1": "tea_party_glade_table",
+      "planned_shot_scale_proof_detail": "standard child scale",
+      "start_state_seed": "dormouse awake",
+      "end_state_seed": "dormouse speaking",
+      "action_seed": "telling the treacle-well story",
+      "blocking_seed": [
+        "slumped against tea-things"
+      ],
+      "shot_size": "close_up",
+      "camera_angle": "eye_level",
+      "lens_family": "portrait",
+      "camera_motion": "subtle_in",
+      "zoom_behavior": "subtle_in",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "profile_left"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT004",
+      "narrative_function": "reaction/conflict",
+      "planned_shot_moment_summary": "alice questions the logic",
+      "primary_subject_seed": "alice",
+      "secondary_subjects_seed": [
+        "the_dormouse"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "tea_party_glade_table",
+      "planned_shot_required_anchor_1": "tea_party_glade_table",
+      "planned_shot_scale_proof_detail": "standard child scale",
+      "start_state_seed": "alice listening",
+      "end_state_seed": "alice questioning",
+      "action_seed": "applying logic to the nonsense",
+      "blocking_seed": [
+        "leaning forward over table"
+      ],
+      "shot_size": "medium_close",
+      "camera_angle": "eye_level",
+      "lens_family": "normal",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front_three_quarter_left"
+    }
+  ],
+  "unresolved_questions": [],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH007",
+      "scene_id": "CH007_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH007",
+      "scene_id": "CH007_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH007",
+      "scene_id": "CH007_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH007",
+      "scene_id": "CH007_SC003"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH007",
+      "scene_id": "CH007_SC003"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH007",
+      "source_path": "C:\\FilmCreator\\projects\\alice_in_wonderland\\02_story_analysis\\chapter_analysis\\CH007_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH007",
+      "source_path": "projects/alice_in_wonderland/01_source/chapters/CH007_chapter_vii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH011",
+      "source_path": "projects/alice_in_wonderland/01_source/chapters/CH011_chapter_xi.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH003",
+      "source_path": "projects/alice_in_wonderland/01_source/chapters/CH003_chapter_iii.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH007",
+      "canonical_id": "alice"
+    }
+  ],
+  "evidence_summary": [
+    "[CH007_SC003] Purpose:",
+    "[CH007_SC003] Summary: The Dormouse is pinched awake and tells a dreamlike story about three sisters living at the bottom of a treacle-well. Alice attempts to apply logic to the story, which only heightens the sense of nonsense.",
+    "[CH007_SC003] Emotional arc: Boredom to surreal disorientation.",
+    "[CH007_SC003] Coverage: Close-ups of the sleepy/pinched Dormouse Over-the-shoulder shots of Alice questioning the story",
+    "[CH007_SC003] Continuity: Physical positioning of characters as they lean in or pinch the Dormouse",
+    "[CH007] Chapter summary: **Setting:** * A large table set out under a tree in front of a house. * The table is crowded with tea-things (tea, bread-and-butter, milk-jug). * Later: A wooded area containing a tree with a door built into it. * Fi...",
+    "[CH007] CHAPTER VII. (book index hit)",
+    "[CH011] CHAPTER XI. (book index hit)",
+    "[CH003] CHAPTER III. (book index hit)",
+    "Character alice: Alice is a young human girl characterized by extreme and rapid physical instability regarding her scale. She fluctuates between being a standard-sized child, shrinking to approximately ten inches in height, and growing to over nine feet tal..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH007_SC003\n\n## Production Intent\nEstablish a transition from tea-party boredom to surreal disorientation through the Dormouse's narrative. The scene relies on tight character proximity and physical interaction (pinching) to trigger the story delivery.\n\n## Required Cast\n- alice\n- the_hatter\n- the_march_hare\n- the_dormouse\n\n## Required Environments\n- tea_party_glade_table\n- tea_party_glade_tree\n\n## Continuity Constraints\n- Physical positioning of characters as they lean in or pinch the Dormouse\n- Maintaining tea-table clutter density during character movement\n\n## Beat List\n- BT001: the Dormouse is pinched awake\n- BT002: the Dormouse tells the story of the three sisters\n- BT003: the Dormouse describes the treacle-well\n- BT004: alice attempts to apply logic",
+  "metadata": {
+    "artifact_id": "CH007_SC003_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "b196f4d25b859c5541395f83ba255c2b263d5acd",
+    "created_at_utc": "2026-04-28T04:46:19.198331+00:00",
+    "updated_at_utc": "2026-04-28T04:46:19.198331+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH007_SC003",
+        "version": "2a796a049a5c78e4e9e852092bda75036cbe4a0f"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH007_SC003",
+        "version": "6aef67d480c1a2da2e779ff7813ec55ca0a05007"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH007_SC003",
+        "version": "9bc450fbfaf4f0d3730568d626bbb8bb44ab398b"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-28T04:46:52.018138+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "b196f4d25b859c5541395f83ba255c2b263d5acd"
+      }
+    ]
+  }
+}

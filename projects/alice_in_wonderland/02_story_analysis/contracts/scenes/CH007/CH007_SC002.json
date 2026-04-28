@@ -1,0 +1,370 @@
+{
+  "scene_id": "CH007_SC002",
+  "chapter_id": "CH007",
+  "scene_title": "CH007_SC002",
+  "purpose": "",
+  "summary": "The Hatter poses an unanswerable riddle about a raven and a writing-desk. He demonstrates his broken watch, which shows the date but not the time, blaming 'butter' for its inaccuracy. He explains that he quarreled with Time personified, resulting in a perpetual tea-time at six o'clock.",
+  "emotional_arc": "Confusion to absurdity.",
+  "production_intent": "Establish the surreal logic of the tea party through a sequence of non-sequitur riddles and broken mechanical objects. The performance must transition from Alice's confusion to the group's shared absurdity, anchored by the physical demonstration of a malfunctioning watch.",
+  "scene_short_description": "A crowded tea table under a tree where riddles are posed and watches are dipped in tea.",
+  "scene_primary_scale_story_point": "Alice's scale relative to the large, crowded tea table and the Hatter.",
+  "scene_required_anchor_catalog": [
+    "The broken watch",
+    "The tea cups"
+  ],
+  "scene_start_state": "The Hatter poses a riddle about a raven and a writing-desk.",
+  "scene_end_state": "The Hatter explains his quarrel with Time, resulting in perpetual six o'clock.",
+  "dominant_action_line": "The Hatter uses a broken watch to explain the concept of eternal tea-time.",
+  "scene_spatial_layout": [
+    "Crowded table setting under a tree canopy",
+    "Tight grouping around tea-things (bread-and-butter, milk-jug)"
+  ],
+  "character_spatial_map": [
+    "the_hatter positioned centrally near the watch",
+    "the_march_hare adjacent to the tea service",
+    "alice observing from the edge of the table cluster"
+  ],
+  "environment_subzones": [
+    "tea_party_glade_table",
+    "tea_party_glade_under_tree"
+  ],
+  "scene_event_chain": [
+    "event 1: the_hatter poses a riddle about a raven and a writing-desk",
+    "event 2: the_hatter produces his broken watch to demonstrate its failure",
+    "event 3: the_march_hare dips the watch into a tea cup",
+    "event 4: the_hatter explains his quarrel with Time personified"
+  ],
+  "entry_vectors": [
+    "tea_party_glade_table (seated)"
+  ],
+  "exit_vectors": [
+    "tea_party_glade_under_tree (standing/moving away)"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: riddle failure to physical demonstration",
+    "BT002 -> BT003: watch reveal to tea immersion",
+    "BT003 -> BT004: mechanical absurdity to narrative explanation"
+  ],
+  "characters_required": [
+    {
+      "label": "Alice",
+      "canonical_id": "alice",
+      "display_name": "alice",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH007/alice.md",
+      "notes": "Direct registry match for 'alice'."
+    },
+    {
+      "label": "The Hatter",
+      "canonical_id": "the_hatter",
+      "display_name": "the_hatter",
+      "status": "canonical",
+      "entity_kind": "group",
+      "resolution_score": 138,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH007/the_hatter.md",
+      "notes": "Direct registry match for 'the_hatter'."
+    },
+    {
+      "label": "The March Hare",
+      "canonical_id": "the_march_hare",
+      "display_name": "the_march_hare",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH007/the_march_hare.md",
+      "notes": "Direct registry match for 'the_march_hare'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "Under the tree at the tea table",
+      "canonical_id": "tea_party_glade",
+      "display_name": "tea_party_glade",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 78,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/environment_breakdowns/chapters/CH007/tea_party_glade.md",
+      "notes": "Chapter-local environment alias match for 'Under the tree at the tea table' (key_overlap=1, label_overlap=3, context_overlap=4)."
+    }
+  ],
+  "continuity_constraints": [
+    "The physical state/appearance of the broken watch (date visible, time missing)",
+    "The liquid level in the various tea cups throughout the interaction"
+  ],
+  "visual_coverage_families": [
+    "Extreme close-ups of the watch and the Hatter's face",
+    "Medium shots of the March Hare interacting with tea and the watch"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "the_hatter poses a riddle about a raven and a writing-desk",
+      "purpose": "",
+      "action_start": "the_hatter speaks the riddle",
+      "action_end": "riddle is completed",
+      "active_subjects": [
+        "the_hatter"
+      ],
+      "passive_subjects": [
+        "alice",
+        "the_march_hare"
+      ],
+      "spatial_context": "tea_party_glade_table",
+      "blocking_hint": "the_hatter leans toward alice",
+      "environment_subzone": "tea_party_glade_table",
+      "continuity_focus": "tea cup levels",
+      "coverage_hint": "medium close up",
+      "coverage_priority": "high",
+      "handoff_to_next": "the_hatter reaches for watch"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "the_hatter demonstrates the broken watch",
+      "purpose": "",
+      "action_start": "the_hatter holds up the watch",
+      "action_end": "watch face is visible to audience",
+      "active_subjects": [
+        "the_hatter"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "tea_party_glade_table",
+      "blocking_hint": "handheld focus on watch",
+      "environment_subzone": "tea_party_glade_table",
+      "continuity_focus": "watch shows date but no time",
+      "coverage_hint": "extreme close up",
+      "coverage_priority": "high",
+      "handoff_to_next": "the_march_hare reaches for the watch"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "the_march_hare dips the watch into tea",
+      "purpose": "",
+      "action_start": "the_march_hare moves watch toward cup",
+      "action_end": "watch is submerged in liquid",
+      "active_subjects": [
+        "the_march_hare"
+      ],
+      "passive_subjects": [
+        "the_hatter"
+      ],
+      "spatial_context": "tea_party_glade_table",
+      "blocking_hint": "reaching across the table surface",
+      "environment_subzone": "tea_party_glade_table",
+      "continuity_focus": "tea level displacement/splashes",
+      "coverage_hint": "medium shot",
+      "coverage_priority": "medium",
+      "handoff_to_next": "the_hatter begins explanation"
+    },
+    {
+      "beat_id": "BT004",
+      "summary": "the_hatter explains his quarrel with Time",
+      "purpose": "",
+      "action_start": "the_hatter speaks of the quarrel",
+      "action_end": "explanation of perpetual six o'clock is finished",
+      "active_subjects": [
+        "the_hatter"
+      ],
+      "passive_subjects": [
+        "alice",
+        "the_march_hare"
+      ],
+      "spatial_context": "tea_party_glade_table",
+      "blocking_hint": "the_hatter gestures broadly",
+      "environment_subzone": "tea_party_glade_table",
+      "continuity_focus": "none",
+      "coverage_hint": "medium close up",
+      "coverage_priority": "low",
+      "handoff_to_next": "scene end"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish riddle",
+      "planned_shot_moment_summary": "the_hatter asks the raven question",
+      "primary_subject_seed": "the_hatter",
+      "secondary_subjects_seed": [
+        "alice",
+        "the_march_hare"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "tea_party_glade_table",
+      "planned_shot_required_anchor_1": "tea_party_glade_table",
+      "planned_shot_scale_proof_detail": "standard child height",
+      "start_state_seed": "the_hatter speaking",
+      "end_state_seed": "riddle posed",
+      "action_seed": "the_hatter leans forward",
+      "blocking_seed": [
+        "seated at table"
+      ],
+      "shot_size": "medium_close_up",
+      "camera_angle": "eye_level",
+      "lens_family": "portrait",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front_three_quarter_right"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "demonstrate broken object",
+      "planned_shot_moment_summary": "close up of watch face showing date but no time",
+      "primary_subject_seed": "the_hatter",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "tea_party_glade_table",
+      "planned_shot_required_anchor_1": "the_broken_watch",
+      "planned_shot_scale_proof_detail": "macro detail",
+      "start_state_seed": "watch held up",
+      "end_state_seed": "watch shown to camera",
+      "action_seed": "the_hatter rotates watch",
+      "blocking_seed": [
+        "handheld object focus"
+      ],
+      "shot_size": "extreme_close_up",
+      "camera_angle": "eye_level",
+      "lens_family": "telephoto",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "hard_directional",
+      "primary_subject_angle": "front"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT003",
+      "narrative_function": "physical absurdity",
+      "planned_shot_moment_summary": "the_march_hare dips watch into tea",
+      "primary_subject_seed": "the_march_hare",
+      "secondary_subjects_seed": [
+        "the_broken_watch"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "none",
+      "environment_subzone": "tea_party_glade_table",
+      "planned_shot_required_anchor_1": "the_tea_cups",
+      "planned_shot_scale_proof_detail": "liquid level interaction",
+      "start_state_seed": "watch near cup",
+      "end_state_seed": "watch submerged in tea",
+      "action_seed": "the_march_hare dips watch into tea",
+      "blocking_seed": [
+        "reaching across table"
+      ],
+      "shot_size": "medium",
+      "camera_angle": "eye_level",
+      "lens_family": "normal",
+      "camera_motion": "pan",
+      "zoom_behavior": "none",
+      "focus_strategy": "rack_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "profile_left"
+    }
+  ],
+  "unresolved_questions": [],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH007",
+      "scene_id": "CH007_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH007",
+      "scene_id": "CH007_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH007",
+      "scene_id": "CH007_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH007",
+      "scene_id": "CH007_SC002"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH007",
+      "scene_id": "CH007_SC002"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH007",
+      "source_path": "C:\\FilmCreator\\projects\\alice_in_wonderland\\02_story_analysis\\chapter_analysis\\CH007_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH007",
+      "source_path": "projects/alice_in_wonderland/01_source/chapters/CH007_chapter_vii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH011",
+      "source_path": "projects/alice_in_wonderland/01_source/chapters/CH011_chapter_xi.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH012",
+      "source_path": "projects/alice_in_wonderland/01_source/chapters/CH012_chapter_xii.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH007",
+      "canonical_id": "alice"
+    }
+  ],
+  "evidence_summary": [
+    "[CH007_SC002] Purpose:",
+    "[CH007_SC002] Summary: The Hatter poses an unanswerable riddle about a raven and a writing-desk. He demonstrates his broken watch, which shows the date but not the time, blaming 'butter' for its inaccuracy. He explains that he quarreled with Time personifie...",
+    "[CH007_SC002] Emotional arc: Confusion to absurdity.",
+    "[CH007_SC002] Coverage: Extreme close-ups of the watch and the Hatter's face medium shots of the March Hare dipping the watch into tea",
+    "[CH007_SC002] Continuity: The state/appearance of the watch The level of tea in the cups",
+    "[CH007] Chapter summary: **Setting:** * A large table set out under a tree in front of a house. * The table is crowded with tea-things (tea, bread-and-butter, milk-jug). * Later: A wooded area containing a tree with a door built into it. * Fi...",
+    "[CH007] CHAPTER VII. (book index hit)",
+    "[CH011] CHAPTER XI. (book index hit)",
+    "[CH012] CHAPTER XII. (book index hit)",
+    "Character alice: Alice is a young human girl characterized by extreme and rapid physical instability regarding her scale. She fluctuates between being a standard-sized child, shrinking to approximately ten inches in height, and growing to over nine feet tal..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH007_SC002\n\n## Production Intent\nEstablish the surreal logic of the tea party through a sequence of non-sequitur riddles and broken mechanical objects. The performance must transition from Alice's confusion to the group's shared absurdity, anchored by the physical demonstration of a malfunctioning watch.\n\n## Required Cast\n- alice\n- the_hatter\n- the_march_hare\n\n## Required Environments\n- tea_party_glade (specifically the table area)\n\n## Continuity Constraints\n- The state/appearance of the broken watch (must show date, but no time).\n- The level of tea in the cups must remain consistent except during the dipping action.\n\n## Beat List\n- BT001: Riddle about a raven and a writing-desk.\n- BT002: Demonstration of the broken watch showing only the date.\n- BT003: The March Hare dips the watch into the tea.\n- BT004: Explanation of the quarrel with Time and perpetual six o'clock.",
+  "metadata": {
+    "artifact_id": "CH007_SC002_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "b371b6f9b397565cab556c8a0e4752092d20ecb3",
+    "created_at_utc": "2026-04-28T04:45:40.274078+00:00",
+    "updated_at_utc": "2026-04-28T04:45:40.274078+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH007_SC002",
+        "version": "fc53740246fef253ebe44a82172aec6ff48c27e8"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH007_SC002",
+        "version": "b1e7d98c2f811079b118270e705396070541d5a4"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH007_SC002",
+        "version": "9bc450fbfaf4f0d3730568d626bbb8bb44ab398b"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-28T04:46:14.171163+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "b371b6f9b397565cab556c8a0e4752092d20ecb3"
+      }
+    ]
+  }
+}

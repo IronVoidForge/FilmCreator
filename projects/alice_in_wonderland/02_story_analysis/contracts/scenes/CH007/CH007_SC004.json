@@ -1,0 +1,382 @@
+{
+  "scene_id": "CH007_SC004",
+  "chapter_id": "CH007",
+  "scene_title": "CH007_SC004",
+  "purpose": "",
+  "summary": "The tea party descends into chaos as characters rotate seats to find clean cups; Alice encounters spilled milk at her new seat and, after an insult from the Hatter, decides to leave the madness behind.",
+  "emotional_arc": "Frustration to decisive dismissal.",
+  "production_intent": "The tea party transitions from a seated gathering to a chaotic rotation of characters seeking clean utensils. Alice moves through the shifting seating arrangement, encounters physical mess, and reacts to verbal hostility by exiting the group.",
+  "scene_short_description": "Characters rotate seats around a crowded tea table under a large tree.",
+  "scene_primary_scale_story_point": "Alice maintains standard child scale relative to the tea table and characters.",
+  "scene_required_anchor_catalog": [
+    "tea_table",
+    "teapot"
+  ],
+  "scene_start_state": "The characters are seated at the tea_party_glade table crowded with bread, milk, and tea.",
+  "scene_end_state": "Alice walks away from the table into the glade.",
+  "dominant_action_line": "Characters rotate seats to find clean cups amidst spilled liquids.",
+  "scene_spatial_layout": [
+    "Circular seating arrangement around a central tea_table",
+    "Table positioned under a large tree canopy"
+  ],
+  "character_spatial_map": [
+    "alice sits at the edge of the table group",
+    "the_hatter, the_march_hare, and the_dormouse occupy rotating positions around the table"
+  ],
+  "environment_subzones": [
+    "tea_table_surface",
+    "under_tree_canopy"
+  ],
+  "scene_event_chain": [
+    "event 1: characters rotate seats to find clean cups",
+    "event 2: alice moves to a new seat and finds spilled milk on the table",
+    "event 3: the_hatter insults alice",
+    "event 4: alice stands up and walks away from the tea party"
+  ],
+  "entry_vectors": [
+    "tea_party_glade perimeter"
+  ],
+  "exit_vectors": [
+    "tea_party_glade towards wooded area"
+  ],
+  "beat_transition_map": [
+    "BT001 -> BT002: physical movement/seat change",
+    "BT002 -> BT003: verbal confrontation",
+    "BT003 -> BT004: decisive exit"
+  ],
+  "characters_required": [
+    {
+      "label": "Alice",
+      "canonical_id": "alice",
+      "display_name": "alice",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH007/alice.md",
+      "notes": "Direct registry match for 'alice'."
+    },
+    {
+      "label": "The Hatter",
+      "canonical_id": "the_hatter",
+      "display_name": "the_hatter",
+      "status": "canonical",
+      "entity_kind": "group",
+      "resolution_score": 138,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH007/the_hatter.md",
+      "notes": "Direct registry match for 'the_hatter'."
+    },
+    {
+      "label": "The March Hare",
+      "canonical_id": "the_march_hare",
+      "display_name": "the_march_hare",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH007/the_march_hare.md",
+      "notes": "Direct registry match for 'the_march_hare'."
+    },
+    {
+      "label": "The Dormouse",
+      "canonical_id": "the_dormouse",
+      "display_name": "the_dormouse",
+      "status": "canonical",
+      "entity_kind": "individual",
+      "resolution_score": 138,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/character_breakdowns/chapters/CH007/the_dormouse.md",
+      "notes": "Direct registry match for 'the_dormouse'."
+    }
+  ],
+  "environments_required": [
+    {
+      "label": "Under the tree at the tea table",
+      "canonical_id": "tea_party_glade",
+      "display_name": "tea_party_glade",
+      "status": "canonical",
+      "entity_kind": "environment",
+      "resolution_score": 78,
+      "source_path": "projects/alice_in_wonderland/02_story_analysis/environment_breakdowns/chapters/CH007/tea_party_glade.md",
+      "notes": "Chapter-local environment alias match for 'Under the tree at the tea table' (key_overlap=1, label_overlap=3, context_overlap=4)."
+    }
+  ],
+  "continuity_constraints": [
+    "Spilled milk on the table surface",
+    "Specific seat assignments after rotation",
+    "Dormouse being stuffed into a teapot"
+  ],
+  "visual_coverage_families": [
+    "Tracking shots of characters moving seats",
+    "Wide shot of Alice walking away from the table"
+  ],
+  "beat_list": [
+    {
+      "beat_id": "BT001",
+      "summary": "characters rotate seats to find clean cups",
+      "purpose": "",
+      "action_start": "characters begin moving from current chairs",
+      "action_end": "all characters have shifted positions",
+      "active_subjects": [
+        "the_hatter",
+        "the_march_hare",
+        "the_dormouse"
+      ],
+      "passive_subjects": [
+        "alice"
+      ],
+      "spatial_context": "tea_table_surface",
+      "blocking_hint": "circular movement around table edge",
+      "environment_subzone": "tea_table_surface",
+      "continuity_focus": "track specific seat assignments post-rotation",
+      "coverage_hint": "tracking shots",
+      "coverage_priority": "high",
+      "handoff_to_next": "alice finds her new seat"
+    },
+    {
+      "beat_id": "BT002",
+      "summary": "alice encounters spilled milk at her new seat",
+      "purpose": "",
+      "action_start": "alice sits down",
+      "action_end": "alice observes the spill",
+      "active_subjects": [
+        "alice"
+      ],
+      "passive_subjects": [],
+      "spatial_context": "tea_table_surface",
+      "blocking_hint": "alice seated at table edge",
+      "environment_subzone": "tea_table_surface",
+      "continuity_focus": "milk must be visible on table surface near alice",
+      "coverage_hint": "medium close up",
+      "coverage_priority": "medium",
+      "handoff_to_next": "the_hatter insults alice"
+    },
+    {
+      "beat_id": "BT003",
+      "summary": "the_hatter insults alice",
+      "purpose": "",
+      "action_start": "the_hatter speaks",
+      "action_end": "insult is delivered",
+      "active_subjects": [
+        "the_hatter"
+      ],
+      "passive_subjects": [
+        "alice"
+      ],
+      "spatial_context": "tea_table_surface",
+      "blocking_hint": "the_hatter leaning toward alice",
+      "environment_subzone": "tea_table_surface",
+      "continuity_focus": "none",
+      "coverage_hint": "medium close up",
+      "coverage_priority": "medium",
+      "handoff_to_next": "alice decides to leave"
+    },
+    {
+      "beat_id": "BT004",
+      "summary": "alice walks away from the table",
+      "purpose": "",
+      "action_start": "alice stands up",
+      "action_end": "alice is out of frame/distance",
+      "active_subjects": [
+        "alice"
+      ],
+      "passive_subjects": [
+        "the_hatter",
+        "the_march_hare",
+        "the_dormouse"
+      ],
+      "spatial_context": "tea_party_glade",
+      "blocking_hint": "alice moves away from table center",
+      "environment_subzone": "under_tree_canopy",
+      "continuity_focus": "none",
+      "coverage_hint": "wide shot",
+      "coverage_priority": "high",
+      "handoff_to_next": "scene end"
+    }
+  ],
+  "planned_shots": [
+    {
+      "planned_shot_id": "SH001",
+      "beat_id": "BT001",
+      "narrative_function": "establish chaos",
+      "planned_shot_moment_summary": "characters shifting positions",
+      "primary_subject_seed": "the_march_hare",
+      "secondary_subjects_seed": [
+        "the_hatter",
+        "the_dormouse"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "tea_table_surface",
+      "planned_shot_required_anchor_1": "tea_table",
+      "planned_shot_scale_proof_detail": "standard child scale",
+      "start_state_seed": "seated group",
+      "end_state_seed": "shifting group",
+      "action_seed": "characters slide along the table to new seats",
+      "blocking_seed": [
+        "circular rotation around table"
+      ],
+      "shot_size": "medium_full",
+      "camera_angle": "eye_level",
+      "lens_family": "wide",
+      "camera_motion": "track",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front_three_quarter_left"
+    },
+    {
+      "planned_shot_id": "SH002",
+      "beat_id": "BT002",
+      "narrative_function": "reveal conflict",
+      "planned_shot_moment_summary": "alice sees the milk",
+      "primary_subject_seed": "alice",
+      "secondary_subjects_seed": [],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "tea_table_surface",
+      "planned_shot_required_anchor_1": "tea_table",
+      "planned_shot_scale_proof_detail": "standard child scale",
+      "start_state_seed": "approaching seat",
+      "end_state_seed": "staring at mess",
+      "action_seed": "alice encounters spilled milk at her new position",
+      "blocking_seed": [
+        "alice settles into a chair"
+      ],
+      "shot_size": "medium_close",
+      "camera_angle": "eye_level",
+      "lens_family": "normal",
+      "camera_motion": "locked_off",
+      "zoom_behavior": "none",
+      "focus_strategy": "shallow_subject",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "front"
+    },
+    {
+      "planned_shot_id": "SH003",
+      "beat_id": "BT004",
+      "narrative_function": "resolve scene",
+      "planned_shot_moment_summary": "alice leaves the table",
+      "primary_subject_seed": "alice",
+      "secondary_subjects_seed": [
+        "the_hatter"
+      ],
+      "subject_visibility": "on_screen",
+      "narration_mode": "in_scene_speaker",
+      "environment_subzone": "under_tree_canopy",
+      "planned_shot_required_anchor_1": "tea_table",
+      "planned_shot_scale_proof_detail": "standard child scale",
+      "start_state_seed": "standing up from table",
+      "end_state_seed": "walking into distance",
+      "action_seed": "alice walks away from the madness",
+      "blocking_seed": [
+        "alice turns her back to the table and exits frame"
+      ],
+      "shot_size": "wide",
+      "camera_angle": "eye_level",
+      "lens_family": "wide",
+      "camera_motion": "pull_back",
+      "zoom_behavior": "none",
+      "focus_strategy": "deep_focus",
+      "lighting_style": "diffuse_ambient",
+      "primary_subject_angle": "back"
+    }
+  ],
+  "unresolved_questions": [],
+  "evidence_refs": [
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH007",
+      "scene_id": "CH007_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH007",
+      "scene_id": "CH007_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH007",
+      "scene_id": "CH007_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH007",
+      "scene_id": "CH007_SC004"
+    },
+    {
+      "source": "scene_breakdown",
+      "chapter_id": "CH007",
+      "scene_id": "CH007_SC004"
+    },
+    {
+      "source": "chapter_summary",
+      "chapter_id": "CH007",
+      "source_path": "C:\\FilmCreator\\projects\\alice_in_wonderland\\02_story_analysis\\chapter_analysis\\CH007_summary.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH011",
+      "source_path": "projects/alice_in_wonderland/01_source/chapters/CH011_chapter_xi.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH007",
+      "source_path": "projects/alice_in_wonderland/01_source/chapters/CH007_chapter_vii.md"
+    },
+    {
+      "source": "book_index",
+      "chapter_id": "CH008",
+      "source_path": "projects/alice_in_wonderland/01_source/chapters/CH008_chapter_viii.md"
+    },
+    {
+      "source": "character_bible",
+      "chapter_id": "CH007",
+      "canonical_id": "alice"
+    }
+  ],
+  "evidence_summary": [
+    "[CH007_SC004] Purpose:",
+    "[CH007_SC004] Summary: The tea party descends into chaos as characters rotate seats to find clean cups; Alice encounters spilled milk at her new seat and, after an insult from the Hatter, decides to leave the madness behind.",
+    "[CH007_SC004] Emotional arc: Frustration to decisive dismissal.",
+    "[CH007_SC004] Coverage: Tracking shots of characters moving seats Wide shot of Alice walking away from the table",
+    "[CH007_SC004] Continuity: Spilled milk on the table Specific seat assignments after rotation Dormouse being stuffed into a teapot",
+    "[CH007] Chapter summary: **Setting:** * A large table set out under a tree in front of a house. * The table is crowded with tea-things (tea, bread-and-butter, milk-jug). * Later: A wooded area containing a tree with a door built into it. * Fi...",
+    "[CH011] CHAPTER XI. (book index hit)",
+    "[CH007] CHAPTER VII. (book index hit)",
+    "[CH008] CHAPTER VIII. (book index hit)",
+    "Character alice: Alice is a young human girl characterized by extreme and rapid physical instability regarding her scale. She fluctuates between being a standard-sized child, shrinking to approximately ten inches in height, and growing to over nine feet tal..."
+  ],
+  "storyboard_markdown": "# Scene Contract: CH007_SC004\n\n## Production Intent\nThe tea party transitions from a seated gathering to a chaotic rotation of characters seeking clean utensils. Alice moves through the shifting seating arrangement, encounters physical mess, and reacts to verbal hostility by exiting the group.\n\n## Required Cast\n- alice\n- the_hatter\n- the_march_hare\n- the_dormouse\n\n## Required Environments\n- tea_party_glade\n\n## Continuity Constraints\n- Spilled milk on the table surface\n- Specific seat assignments after rotation\n- Dormouse being stuffed into a teapot\n\n## Beat List\n- BT001: characters rotate seats to find clean cups\n- BT002: alice encounters spilled milk at her new seat\n- BT003: the_hatter insults alice\n- BT004: alice walks away from the table",
+  "metadata": {
+    "artifact_id": "CH007_SC004_SCENE_CONTRACT",
+    "artifact_type": "scene_contract",
+    "status": "generated",
+    "source_fingerprint": "23ecef512176780a08bdb913bcca4ab0777ae27d",
+    "created_at_utc": "2026-04-28T04:46:57.013563+00:00",
+    "updated_at_utc": "2026-04-28T04:46:57.013563+00:00",
+    "upstream_dependencies": [
+      {
+        "dependency_type": "scene_breakdown",
+        "dependency_id": "CH007_SC004",
+        "version": "837dd79046b59c51e14e1261dcee2990e039a420"
+      },
+      {
+        "dependency_type": "character_resolutions",
+        "dependency_id": "CH007_SC004",
+        "version": "6aef67d480c1a2da2e779ff7813ec55ca0a05007"
+      },
+      {
+        "dependency_type": "environment_resolutions",
+        "dependency_id": "CH007_SC004",
+        "version": "9bc450fbfaf4f0d3730568d626bbb8bb44ab398b"
+      }
+    ],
+    "locked_fields": {},
+    "manual_overrides": {},
+    "revision_history": [
+      {
+        "timestamp_utc": "2026-04-28T04:47:27.309949+00:00",
+        "action": "synthesized",
+        "source_fingerprint": "23ecef512176780a08bdb913bcca4ab0777ae27d"
+      }
+    ]
+  }
+}
