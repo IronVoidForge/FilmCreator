@@ -4,10 +4,18 @@
 dodo
 
 # Why This Needs Clarification
-The character is not fully identified from this chapter alone.
+Potential existing identity matches detected:
+- alice (score 10; chapters: CH001; aliases: -) Example context: CH001 1-3: Down the Rabbit-Hole Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing to do: once or twice she had peeped into the book her sister ...
+- alice_s_sister (score 10; chapters: CH001; aliases: -)
+- white_rabbit (score 10; chapters: CH001; aliases: -)
 
 # Question
-This character is named but lacks a stable visual description. Can you find a description from another source chapter, or should FilmCreator generate a reusable film-wide description?
+This character may match one of the existing canonical identities above. Can you inspect the candidate chapter descriptions and confirm whether FilmCreator should merge into one of them, or keep this as a new canonical character?
+
+# Candidate Matches
+- alice (score 10; chapters: CH001; aliases: -) Example context: CH001 1-3: Down the Rabbit-Hole Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing to do: once or twice she had peeped into the book her sister ...
+- alice_s_sister (score 10; chapters: CH001; aliases: -)
+- white_rabbit (score 10; chapters: CH001; aliases: -)
 
 # Guidance
 - answer briefly and concretely

@@ -4,10 +4,15 @@
 dinah
 
 # Why This Needs Clarification
-The character is not fully identified from this chapter alone.
+"Only a verbal reference exists."
 
 # Question
-This character is named but lacks a stable visual description. Can you find a description from another source chapter, or should FilmCreator generate a reusable film-wide description?
+"What does Dinah look like (color, breed, size)?"
+
+# Candidate Matches
+- alice (score 10; chapters: CH001; aliases: -) Example context: CH001 1-3: Down the Rabbit-Hole Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing to do: once or twice she had peeped into the book her sister ...
+- alice_s_sister (score 10; chapters: CH001; aliases: -) Example context: CH001 10-12: Presently she began again. “I wonder if I shall fall right _through_ the earth! How funny it’ll seem to come out among the people that walk with their heads downward! The Antipathi...
+- white_rabbit (score 10; chapters: CH001; aliases: -) Example context: CH001 10-12: Presently she began again. “I wonder if I shall fall right _through_ the earth! How funny it’ll seem to come out among the people that walk with their heads downward! The Antipathi...
 
 # Guidance
 - answer briefly and concretely
